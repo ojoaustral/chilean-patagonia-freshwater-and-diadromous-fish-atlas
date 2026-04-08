@@ -1,0 +1,822 @@
+decimalLongitude,decimalLatitude,Site_ID,ODBC:FishGIS_metaDatabase AllFish_Ref_ID,ODBC:FishGIS_metaDatabase AllFish_Author,ODBC:FishGIS_metaDatabase AllFish_OLD_SITE_ID,ODBC:FishGIS_metaDatabase AllFish_Site_Name,ODBC:FishGIS_metaDatabase AllFish_Notes,ODBC:FishGIS_metaDatabase AllFish_Site_Precision,ODBC:FishGIS_metaDatabase AllFish_Years,ODBC:FishGIS_metaDatabase AllFish_Species,ODBC:FishGIS_metaDatabase AllFish_Abund_Percent
+-73.16185,-37.14087,"1","1","Basulto del Campo, S.","63.01",Río Chivilingo,,approximate,"1903",Salmo trutta,?
+-70.48440,-32.85796,"2","1","Basulto del Campo, S.","63.02",Río Aconcagua,,"General; Aconcagua river.","1907",?,?
+-70.73605,-33.90194,"3","1","Basulto del Campo, S.","63.03",Río Angostura,,"General; Angostura river.","1907",?,?
+-70.76098,-33.83556,"4","1","Basulto del Campo, S.","63.04",Río Paine,,"Approximate; Paine river.","1907",?,?
+-70.97234,-34.61627,"5","1","Basulto del Campo, S.","63.05",Río Tinguiririca,,"General; Tinguiririca river.","1907",?,?
+-72.35559,-38.47443,"6","1","Basulto del Campo, S.","63.06",Río Cautín,,"General; Cautin river.","1907",?,?
+-73.00270,-38.74329,"7","1","Basulto del Campo, S.","63.07",Río Imperial,,"General; Imperial River.","1907",?,?
+-72.66588,-38.97788,"8","1","Basulto del Campo, S.","63.08",Río Tolten,,"Approximate; Tolten river near Pitrufquen.","1907",?,?
+-71.19702,-34.71356,"9","1","Basulto del Campo, S.","63.09",Estero de Chimbarongo,,"Approximate; Estero Chimbarongo.","1910",?,?
+-70.28485,-32.92810,"10","1","Basulto del Campo, S.","63.10",Río Blanco,,"Approximate; Blanco river.","1912, 1913, 1914, 1915, 1916",,?
+-70.25505,-32.90213,"11","1","Basulto del Campo, S.","63.11",Río Aconcagua,,"Approximate; Blanco river.","1912, 1913, 1914, 1915, 1916",,?
+-70.29009,-32.92240,"12","1","Basulto del Campo, S.","63.12",Río Blanco,,Approximate,"1912",Salvelinus fontinalis,?
+-72.40108,-38.50685,"13","1","Basulto del Campo, S.","63.13",Río Cautín,,General,"1912",Salmo salar,?
+-72.42592,-39.08842,"14","1","Basulto del Campo, S.","63.14",Río Toltén,,General,"1912",Salmo salar,?
+-72.86623,-39.81240,"15","1","Basulto del Campo, S.","63.15",Río Calle-Calle,,General,"1912",Salmo salar,?
+-73.02677,-40.32459,"16","1","Basulto del Campo, S.","63.16",Río Bueno,,General,"1912",Salmo salar,?
+-72.42929,-41.14823,"17","1","Basulto del Campo, S.","63.17",Río Petrohué,,General,"1932",Salvelinus fontinalis,?
+-71.94293,-41.63285,"18","1","Basulto del Campo, S.","63.18",Río Manso,,General,"1932",Salvelinus fontinalis,?
+-72.09055,-41.70779,"19","1","Basulto del Campo, S.","63.19",Río Puelo,,General,"1932",Salvelinus fontinalis,?
+-72.94168,-43.62392,"20","1","Basulto del Campo, S.","63.20",Bahía Tic-Toc,,Approximate,"1931",Oncorhynchus tshawytscha,?
+-72.70839,-44.74037,"21","1","Basulto del Campo, S.","63.21",Río Cisnes,,Approximate,"1941",Salmo salar,?
+-72.08807,-34.74437,"22","1","Basulto del Campo, S.","63.22",Llico,,Approximate,"1938",Salmo salar,?
+-72.41107,-51.73711,"23","1","Basulto del Campo, S.","63.23",Nearby Pto. Natales,,General,"1986",Oncorhynchus keta,?
+-71.97437,-46.28580,"24","1","Basulto del Campo, S.","63.24","Pto. Ibañez, Lago General Carrera",,General,"1989",Oncorhynchus masou,?
+-72.15183,-45.64443,"25","2","Behnke, Robert J.; illustrated by  Joseph R. Tomelleri; froreword by Thomas McGuane.","01.01","Río Simpson, near Coihaique, about 50 km from the mouth of the river.",,,"2001",Oncorhynchus tshawytscha,?
+-72.78084,-41.26186,"26","3","Wood, Jonathan D.","02.01",Site 1: Río Pescado,,,"1997",Oncorhynchus mykiss,"100"
+-72.78084,-41.26186,"26","3","Wood, Jonathan D.","02.01",Site 1: Río Pescado,,,"1997",Oncorhynchus mykiss,"100"
+-72.60836,-41.23239,"27","3","Wood, Jonathan D.","02.02",Site 2: Río Molina.,,,"1997",Oncorhynchus kisutch,"33,33"
+-72.60836,-41.23239,"27","3","Wood, Jonathan D.","02.02",Site 2: Río Molina.,,,"1997",Oncorhynchus kisutch,"33,33"
+-72.56329,-41.17417,"28","3","Wood, Jonathan D.","02.03",Site 3: Río Blanco II.,,,"1997",Oncorhynchus kisutch,"11,76"
+-72.56329,-41.17417,"28","3","Wood, Jonathan D.","02.03",Site 3: Río Blanco II.,,,"1997",Oncorhynchus kisutch,"11,76"
+-72.64620,-41.07091,"29","3","Wood, Jonathan D.","02.04",Site 4: Río La Antartica.,,,"1997",Brachygalaxias bullocki,"1,23"
+-72.64620,-41.07091,"29","3","Wood, Jonathan D.","02.04",Site 4: Río La Antartica.,,,"1997",Brachygalaxias bullocki,"1,23"
+-72.64917,-41.06725,"30","3","Wood, Jonathan D.","02.05",Site 5: Río Las Cantarias,,,"1997",Galaxias platei,"3,57"
+-72.64917,-41.06725,"30","3","Wood, Jonathan D.","02.05",Site 5: Río Las Cantarias,,,"1997",Galaxias platei,"3,57"
+-72.67273,-41.00889,"31","3","Wood, Jonathan D.","02.06",Site 6: Río Las Cascales II,,,"1997",Galaxias platei,"7,5"
+-72.67273,-41.00889,"31","3","Wood, Jonathan D.","02.06",Site 6: Río Las Cascales II,,,"1997",Galaxias platei,"7,5"
+-72.81671,-40.96353,"32","3","Wood, Jonathan D.","02.07",Site 7: Río Playa Maiténes,,,"1997",Galaxias platei,"0,85"
+-72.81671,-40.96353,"32","3","Wood, Jonathan D.","02.07",Site 7: Río Playa Maiténes,,,"1997",Galaxias platei,"0,85"
+-72.92200,-41.03064,"33","3","Wood, Jonathan D.","02.08",Site 8: Río Quillanto,,,"1997",Galaxias maculatus,"1,47"
+-72.92200,-41.03064,"33","3","Wood, Jonathan D.","02.08",Site 8: Río Quillanto,,,"1997",Galaxias maculatus,"1,47"
+-72.96165,-41.40441,"34","3","Wood, Jonathan D.","02.09",Site 9: Río Negro,,,"1997",Cheirodon australe,"3,95"
+-72.96165,-41.40441,"34","3","Wood, Jonathan D.","02.09",Site 9: Río Negro,,,"1997",Cheirodon australe,"3,95"
+-73.17260,-41.46184,"35","3","Wood, Jonathan D.","02.10",Site 10: Río Chaquihua,,,"1997",Pygidium (Trichomycterus) aerolatum,"19,44"
+-73.17260,-41.46184,"35","3","Wood, Jonathan D.","02.10",Site 10: Río Chaquihua,,,"1997",Pygidium (Trichomycterus) aerolatum,"19,44"
+-72.77706,-41.43988,"36","3","Wood, Jonathan D.","02.11",Site 11: Río Ñanco,,,"1997",Velesia sp.,"0,7"
+-72.77706,-41.43988,"36","3","Wood, Jonathan D.","02.11",Site 11: Río Ñanco,,,"1997",Velesia sp.,"0,7"
+-72.74245,-41.52607,"37","3","Wood, Jonathan D.","02.12",Site 12: Río Quillaipe,,,"1997",Aplochiton taeniatus,"2,22"
+-72.74245,-41.52607,"37","3","Wood, Jonathan D.","02.12",Site 12: Río Quillaipe,,,"1997",Aplochiton taeniatus,"2,22"
+-72.54216,-41.20278,"38","4","Sanzana, José del Carmen","42.01","Lago Llanquihue, Ensenada.",,Approximate.,"2001",Percichthys trucha,"11,99"
+-72.84895,-41.12353,"39","4","Sanzana, José del Carmen","44.01","Lago Llanquihue: October 1998, Totoral; March 1999, Tto. Phillipi.",Samplings from FIP-97 38 cited in Sanzana 2002.,The position of the point is not accurate.,"1998, 1999",Percichthys trucha,"1,48"
+-72.83384,-41.12325,"40","4","Sanzana, José del Carmen","45.01","Lago Llanquihue: Pto. Oscuro, Pto. Phillipi, Ba. Rincones, Ensenada, Maullín.",Samplings from Soto et al 1997 (FNDR report) cited in Sanzana 2002.,The position of the point is not accurate.,1995-1997,Percichthys trucha,"9,52"
+-72.82250,-41.12303,"41","4","Sanzana, José del Carmen","46.01",Lago Llanquihue: Pto. Oscuro and Pto. Phillipi.,Samplings from Soto et al 1993 (FNDR report) cited in Sanzana 2002.,The position of the point is not accurate.,1992-1993,Percichthys trucha,"9,6"
+-72.46221,-41.18372,"42","5",Fernando Jara S. & Doris Soto B.,"10.01",Laguna Los Patos,,The position of the point is not accurate.,"1996",Salvelinus fontinalis,"6,67"
+-72.26158,-40.23208,"43","6",Doris Soto B.and Ivan Arismendi V.,"04.01",Río Calcurrupe,,The position of the point is not accurate.,"2000",z Indetermined (see note),"57,14"
+-72.26158,-40.23208,"43","6",Doris Soto B.and Ivan Arismendi V.,"04.01",Río Calcurrupe,,The position of the point is not accurate.,"2000",z Indetermined (see note),"57,14"
+-72.23788,-40.30157,"44","6",Doris Soto B.and Ivan Arismendi V.,"04.02",Río Epulafquén,,The position of the point is not accurate.,"1999",Percichthys trucha,"8,33"
+-72.23788,-40.30157,"44","6",Doris Soto B.and Ivan Arismendi V.,"04.02",Río Epulafquén,,The position of the point is not accurate.,"1999",Percichthys trucha,"8,33"
+-72.23689,-40.33138,"45","6",Doris Soto B.and Ivan Arismendi V.,"04.03",Río Riñinahue,,The position of the point is not accurate.,"1999",Oncorhynchus mykiss,"100"
+-72.23689,-40.33138,"45","6",Doris Soto B.and Ivan Arismendi V.,"04.03",Río Riñinahue,,The position of the point is not accurate.,"1999",Oncorhynchus mykiss,"100"
+-72.50808,-40.27110,"46","6",Doris Soto B.and Ivan Arismendi V.,"04.04",Lago Ranco,,The position of the point is not accurate.,"1999",Salmo salar,"20"
+-72.60285,-40.79366,"47","6",Doris Soto B.and Ivan Arismendi V.,"04.05",Lago Rupanco,,The position of the point is not accurate.,"1999, 2000",Percichthys trucha,"12,93"
+-72.46245,-40.88842,"48","6",Doris Soto B.and Ivan Arismendi V.,"04.06",Río Bonito,,The position of the point is not accurate.,"2000",Galaxias platei,"4,2"
+-72.46245,-40.88842,"48","6",Doris Soto B.and Ivan Arismendi V.,"04.06",Río Bonito,,The position of the point is not accurate.,"2000",Galaxias platei,"4,2"
+-72.33871,-40.89424,"49","6",Doris Soto B.and Ivan Arismendi V.,"04.07",Río Nalcas,,The position of the point is not accurate.,"2000",Salmo salar,"0,8"
+-72.33871,-40.89424,"49","6",Doris Soto B.and Ivan Arismendi V.,"04.07",Río Nalcas,,The position of the point is not accurate.,"2000",Salmo salar,"0,8"
+-73.30168,-40.33376,"50","6",Doris Soto B.and Ivan Arismendi V.,"04.08",Río Bueno,,The position of the point is not accurate.,"2000",Cyprinus carpio,"60,56"
+-72.48111,-40.88574,"51","6",Doris Soto B.and Ivan Arismendi V.,"04.09",Río Piedras Negras,Two sampling sites from the same river were pooled.,The position of the point is not accurate.,"2000",Galaxias platei,"0,3"
+-72.48111,-40.88574,"51","6",Doris Soto B.and Ivan Arismendi V.,"04.09",Río Piedras Negras,Two sampling sites from the same river were pooled.,The position of the point is not accurate.,"2000",Galaxias platei,"0,3"
+-72.33083,-40.92029,"52","6",Doris Soto B.and Ivan Arismendi V.,"04.10",Río Cabrito,,The point was located based in coordinates although the river's name do not correspond.,"2000",Oncorhynchus tshawytscha,"4,8"
+-72.33083,-40.92029,"52","6",Doris Soto B.and Ivan Arismendi V.,"04.10",Río Cabrito,,The point was located based in coordinates although the river's name do not correspond.,"2000",Oncorhynchus tshawytscha,"4,8"
+-73.44139,-40.32203,"53","6",Doris Soto B.and Ivan Arismendi V.,"04.11",Río Pucopio,,The position of the point is not accurate.,"1999, 2000",Galaxias platei,"57,7"
+-73.44139,-40.32203,"53","6",Doris Soto B.and Ivan Arismendi V.,"04.11",Río Pucopio,,The position of the point is not accurate.,"1999, 2000",Galaxias platei,"57,7"
+-72.61759,-40.30411,"54","6",Doris Soto B.and Ivan Arismendi V.,"04.12",Río Ignao,,The position of the point is not accurate.,"2000",Lamprey,"0,4"
+-72.61759,-40.30411,"54","6",Doris Soto B.and Ivan Arismendi V.,"04.12",Río Ignao,,The position of the point is not accurate.,"2000",Lamprey,"0,4"
+-73.53243,-40.29837,"55","6",Doris Soto B.and Ivan Arismendi V.,"04.13",Río Cainalhue,,The position of the point is not accurate.,"2000",Lamprey,"10,3"
+-73.53243,-40.29837,"55","6",Doris Soto B.and Ivan Arismendi V.,"04.13",Río Cainalhue,,The position of the point is not accurate.,"2000",Lamprey,"10,3"
+-73.28719,-40.29782,"56","6",Doris Soto B.and Ivan Arismendi V.,"04.14",Río Bueno,,The position of the point based on reported coordinates although do not correspond to Río Bueno.,"2000",Cyprinus carpio,"1,3"
+-73.28719,-40.29782,"56","6",Doris Soto B.and Ivan Arismendi V.,"04.14",Río Bueno,,The position of the point based on reported coordinates although do not correspond to Río Bueno.,"2000",Cyprinus carpio,"1,3"
+-73.10374,-40.36612,"57","6",Doris Soto B.and Ivan Arismendi V.,"04.15",Río Tramaihue,,The position of the point indicates the approximate position of the river.,"2000",Lamprey,"1,8"
+-73.10374,-40.36612,"57","6",Doris Soto B.and Ivan Arismendi V.,"04.15",Río Tramaihue,,The position of the point indicates the approximate position of the river.,"2000",Lamprey,"1,8"
+-72.47477,-41.96528,"59","6",Doris Soto B.and Ivan Arismendi V.,"04.17",Río Cuchildeo,,,"2000",Lamprey,"0,72"
+-72.47477,-41.96528,"59","6",Doris Soto B.and Ivan Arismendi V.,"04.17",Río Cuchildeo,,,"2000",Lamprey,"0,72"
+-72.50077,-41.95095,"60","6",Doris Soto B.and Ivan Arismendi V.,"04.18",Río Cuchildeo-afluente,,,"1999, 2000",Salmo trutta,"100"
+-72.50077,-41.95095,"60","6",Doris Soto B.and Ivan Arismendi V.,"04.18",Río Cuchildeo-afluente,,,"1999, 2000",Salmo trutta,"100"
+-72.39183,-41.89703,"61","6",Doris Soto B.and Ivan Arismendi V.,"04.19",Río Negro-afluente,,"The position of the point is not accurate; coordinates were not reported.","2000",Oncorhynchus kisutch,"1,29"
+-72.39183,-41.89703,"61","6",Doris Soto B.and Ivan Arismendi V.,"04.19",Río Negro-afluente,,"The position of the point is not accurate; coordinates were not reported.","2000",Oncorhynchus kisutch,"1,29"
+-72.55918,-41.98041,"62","6",Doris Soto B.and Ivan Arismendi V.,"04.20",Río Pichicolo,,,"2000",Galaxias maculatus,"7,03"
+-72.55918,-41.98041,"62","6",Doris Soto B.and Ivan Arismendi V.,"04.20",Río Pichicolo,,,"2000",Galaxias maculatus,"7,03"
+-72.54370,-40.62935,"63","6",Doris Soto B.and Ivan Arismendi V.,"04.21",Puente 1,,,"1999",Oncorhynchus mykiss,"100"
+-72.54370,-40.62935,"63","6",Doris Soto B.and Ivan Arismendi V.,"04.21",Puente 1,,,"1999",Oncorhynchus mykiss,"100"
+-72.35430,-40.63934,"64","6",Doris Soto B.and Ivan Arismendi V.,"04.22",Río Taique,,The position of the point is based on coordinates.,"1999",Salmo salar,"66,67"
+-72.35430,-40.63934,"64","6",Doris Soto B.and Ivan Arismendi V.,"04.22",Río Taique,,The position of the point is based on coordinates.,"1999",Salmo salar,"66,67"
+-72.49399,-40.62464,"65","6",Doris Soto B.and Ivan Arismendi V.,"04.23",Río Mantilhue,,The position of the point is based on coordinates.,"1999",Salmo trutta,"75"
+-72.49399,-40.62464,"65","6",Doris Soto B.and Ivan Arismendi V.,"04.23",Río Mantilhue,,The position of the point is based on coordinates.,"1999",Salmo trutta,"75"
+-72.40058,-40.63990,"66","6",Doris Soto B.and Ivan Arismendi V.,"04.24",Lago Puyehue,Only reported the samplings not included in Soto 2002 (FIP 2000-24),The position of the point is not accurate.,"1999, 2000",Percichthys trucha,"25,34"
+-72.36029,-40.29618,"67","6",Doris Soto B.and Ivan Arismendi V.,"04.25",Lago Ranco,Only samplings not reported in Soto 2002 (FIP 2000-24) are reported in this record.,Not accurate,"1999, 2000",Percichthys trucha,"0,85"
+-72.41175,-43.19760,"68","6",Doris Soto B.and Ivan Arismendi V.,"04.26",Lago Yecho,Only samplings not reported in Soto 2002 (FIP 2000-24) are reported in this record.,Not accurate.,"2001",Salmo salar,"7,41"
+-72.25175,-40.15292,"69","6",Doris Soto B.and Ivan Arismendi V.,"04.27",Río Caunahue,Only samplings not reported in Soto 2002 (FIP 2000-24) are reported in this record.,,"2001",Oncorhynchus mykiss,"100"
+-72.25175,-40.15292,"69","6",Doris Soto B.and Ivan Arismendi V.,"04.27",Río Caunahue,Only samplings not reported in Soto 2002 (FIP 2000-24) are reported in this record.,,"2001",Oncorhynchus mykiss,"100"
+-72.23548,-40.33060,"70","6",Doris Soto B.and Ivan Arismendi V.,"04.28",Río Collico,,,"1999, 2000",Oncorhynchus mykiss,"100"
+-72.23548,-40.33060,"70","6",Doris Soto B.and Ivan Arismendi V.,"04.28",Río Collico,,,"1999, 2000",Oncorhynchus mykiss,"100"
+-72.26966,-40.33806,"71","6",Doris Soto B.and Ivan Arismendi V.,"04.29",Río Futangue,See description of site in Pag. 38.,"Approximate, based on coordenates.","2000",Aplochiton taeniatus,"27,93"
+-72.26966,-40.33806,"71","6",Doris Soto B.and Ivan Arismendi V.,"04.29",Río Futangue,See description of site in Pag. 38.,"Approximate, based on coordenates.","2000",Aplochiton taeniatus,"27,93"
+-72.43971,-40.32284,"72","6",Doris Soto B.and Ivan Arismendi V.,"04.30",Río Iculpe,,"Approximate, based on coordenates.","2000",Aplochiton taeniatus,"0,60"
+-72.43971,-40.32284,"72","6",Doris Soto B.and Ivan Arismendi V.,"04.30",Río Iculpe,,"Approximate, based on coordenates.","2000",Aplochiton taeniatus,"0,60"
+-72.32187,-40.32962,"73","6",Doris Soto B.and Ivan Arismendi V.,"04.31",Río Pitreño,,"Approximate, based on coordenates.","1999, 2000, 2001",Aplochiton taeniatus,"2,42"
+-72.32187,-40.32962,"73","6",Doris Soto B.and Ivan Arismendi V.,"04.31",Río Pitreño,,"Approximate, based on coordenates.","1999, 2000, 2001",Aplochiton taeniatus,"2,42"
+-72.24051,-40.33910,"74","6",Doris Soto B.and Ivan Arismendi V.,"04.32",Río Lado Puente Collico,,Based on coordenates.,"1999, 2000, 2001",Aplochiton taeniatus,"0,38"
+-72.24051,-40.33910,"74","6",Doris Soto B.and Ivan Arismendi V.,"04.32",Río Lado Puente Collico,,Based on coordenates.,"1999, 2000, 2001",Aplochiton taeniatus,"0,38"
+-72.33202,-40.69897,"75","6",Doris Soto B.and Ivan Arismendi V.,"04.33",Río Chanlelfu,,"Not accurate, just referential.","2000",Oncorhynchus tshawytscha,"0,72"
+-72.33202,-40.69897,"75","6",Doris Soto B.and Ivan Arismendi V.,"04.33",Río Chanlelfu,,"Not accurate, just referential.","2000",Oncorhynchus tshawytscha,"0,72"
+-72.31108,-40.69777,"76","6",Doris Soto B.and Ivan Arismendi V.,"04.34",Río Manzano,,Based on coordenates.,"1999, 2000",Oncorhynchus mykiss,"100"
+-72.31108,-40.69777,"76","6",Doris Soto B.and Ivan Arismendi V.,"04.34",Río Manzano,,Based on coordenates.,"1999, 2000",Oncorhynchus mykiss,"100"
+-72.23809,-40.66476,"77","6",Doris Soto B.and Ivan Arismendi V.,"04.35",Río Gol-Gol,Additional samplings reported in record of Soto 2002 (FIP 2000-24). No native fish found.,Not accurate.,"2000",Salmo trutta,"18,52"
+-72.23809,-40.66476,"77","6",Doris Soto B.and Ivan Arismendi V.,"04.35",Río Gol-Gol,Additional samplings reported in record of Soto 2002 (FIP 2000-24). No native fish found.,Not accurate.,"2000",Salmo trutta,"18,52"
+-72.41515,-40.62379,"78","6",Doris Soto B.and Ivan Arismendi V.,"04.36",Río Lican,"Additional samplings are reported in Soto 2002 (FIP 2000-24, but without details on native species.",Based on coordenates.,"1999, 2000, 2001",z Indetermined (see note),"0,26"
+-72.41515,-40.62379,"78","6",Doris Soto B.and Ivan Arismendi V.,"04.36",Río Lican,"Additional samplings are reported in Soto 2002 (FIP 2000-24, but without details on native species.",Based on coordenates.,"1999, 2000, 2001",z Indetermined (see note),"0,26"
+-72.43297,-40.72027,"79","6",Doris Soto B.and Ivan Arismendi V.,"04.37",Estero Ñilque,,Approximate.,"1999, 2000",Galaxias platei,"0,24"
+-72.43297,-40.72027,"79","6",Doris Soto B.and Ivan Arismendi V.,"04.37",Estero Ñilque,,Approximate.,"1999, 2000",Galaxias platei,"0,24"
+-72.40693,-40.71628,"80","6",Doris Soto B.and Ivan Arismendi V.,"04.38",Río Pescadero,,Based on coordinates.,"1999, 2000",Percichthys trucha,"17,72"
+-72.40693,-40.71628,"80","6",Doris Soto B.and Ivan Arismendi V.,"04.38",Río Pescadero,,Based on coordinates.,"1999, 2000",Percichthys trucha,"17,72"
+-72.31407,-40.32289,"81","7","Soto, D.","03.01",Lago Ranco,,The position of the point is approximate.,"2000, 2001",Percichthys trucha,"1,81"
+-72.25151,-40.14920,"82","7","Soto, D.","03.02",Río Caunahue,,,"2001",Oncorhynchus mykiss,"100"
+-72.25151,-40.14920,"82","7","Soto, D.","03.02",Río Caunahue,,,"2001",Oncorhynchus mykiss,"100"
+-72.32137,-40.32961,"83","7","Soto, D.","03.05",Río Pitreño,Only relative abundance of salmonids are reported here. For details on salmonids and native species in the period 18 Nov 1999 and 09 May 2001 see record of Soto and Arismendi 2001 (FNDR). Details of native species caught in the period 28 Jun 2001 to 30 No,"Approximate, based on coordenates.","2000, 2001",Oncorhynchus tshawytscha,"0,9"
+-72.32137,-40.32961,"83","7","Soto, D.","03.05",Río Pitreño,Only relative abundance of salmonids are reported here. For details on salmonids and native species in the period 18 Nov 1999 and 09 May 2001 see record of Soto and Arismendi 2001 (FNDR). Details of native species caught in the period 28 Jun 2001 to 30 No,"Approximate, based on coordenates.","2000, 2001",Oncorhynchus tshawytscha,"0,9"
+-72.40029,-40.64855,"84","7","Soto, D.","03.06",Lago Puyehue,,The position of the point is approximate.,"2000, 2001",Percichthys trucha,"14,43"
+-72.24316,-40.66599,"85","7","Soto, D.","03.08",Río Gol-Gol,No native fish found.,The position of the point is not accurate.,"2001",Salmo trutta,"21"
+-72.24316,-40.66599,"85","7","Soto, D.","03.08",Río Gol-Gol,No native fish found.,The position of the point is not accurate.,"2001",Salmo trutta,"21"
+-72.41430,-40.62172,"86","7","Soto, D.","03.11",Río Lican,Only relative abundance of salmonids reported although native species were also caught. See record of Soto and Arismandi 2001 (FNDR) for details on salmonids and native species for the period August 1999 to May 2001.,,"2000, 2001",?,?
+-72.41430,-40.62172,"86","7","Soto, D.","03.11",Río Lican,Only relative abundance of salmonids reported although native species were also caught. See record of Soto and Arismandi 2001 (FNDR) for details on salmonids and native species for the period August 1999 to May 2001.,,"2000, 2001",?,?
+-72.62394,-41.22011,"87","7","Soto, D.","03.12",Lago Llanquihue,,The position of the point is approximate.,"2000, 2001",Percichthys trucha,"11,99"
+-72.62050,-41.22983,"88","7","Soto, D.","03.13",Río Blanco,Only relative abundance of salmonids reported although native species were also caught. For details on native species abundances for some months see Soto and Arismandi 2001 (FNDR).,,"2001",Oncorhynchus tshawytscha,"1,8"
+-72.62050,-41.22983,"88","7","Soto, D.","03.13",Río Blanco,Only relative abundance of salmonids reported although native species were also caught. For details on native species abundances for some months see Soto and Arismandi 2001 (FNDR).,,"2001",Oncorhynchus tshawytscha,"1,8"
+-73.00195,-41.25822,"89","7","Soto, D.","03.14",Río Maullín,Only relative abundance of salmonids reported although native species composed 67.1% of the fishing (see Soto and Arismandi 2001 (FNDR)).,The position of the point is not accurate.,"2000, 2001",Oncorhynchus mykiss,"100"
+-73.00195,-41.25822,"89","7","Soto, D.","03.14",Río Maullín,Only relative abundance of salmonids reported although native species composed 67.1% of the fishing (see Soto and Arismandi 2001 (FNDR)).,The position of the point is not accurate.,"2000, 2001",Oncorhynchus mykiss,"100"
+-72.76991,-41.27106,"90","7","Soto, D.","03.15",Río Pescado,,,"2001",Oncorhynchus tshawytscha,"0,2"
+-72.76991,-41.27106,"90","7","Soto, D.","03.15",Río Pescado,,,"2001",Oncorhynchus tshawytscha,"0,2"
+-73.00181,-41.25957,"91","7","Soto, D.","03.16",Río Maullín,,The position of the point is not accurate.,"2001",Percichthys trucha,"6,7"
+-72.43206,-43.17613,"92","7","Soto, D.","03.17",Lago Yelcho,,The position of the point is approximate.,"2001",Oncorhynchus tshawytscha,"0,5"
+-72.25224,-39.69574,"93","7","Soto, D.","03.18",Lago Panguipulli,,The position of the point is not accurate.,"2000",Salmo salar,"100"
+-72.46283,-41.18385,"94","7","Soto, D.","03.19",Laguna Los Patos,,The position of the point is not accurate.,"2000, 2001",Oncorhynchus tshawytscha,"31,2"
+-72.46283,-41.18385,"94","7","Soto, D.","03.19",Laguna Los Patos,,The position of the point is not accurate.,"2000, 2001",Oncorhynchus tshawytscha,"31,2"
+-72.38705,-41.12001,"95","7","Soto, D.","03.20",Lago Todos Los Santos,,The position of the point is not accurate.,"2000",Salmo salar,"57,9"
+-72.59523,-41.23216,"96","7","Soto, D.","03.24",Río Tepú,,,"2000, 2001",?,?
+-72.59523,-41.23216,"96","7","Soto, D.","03.24",Río Tepú,,,"2000, 2001",?,?
+-72.36269,-43.33927,"97","7","Soto, D.","03.25",Río Café,,"The position of the point is not accurate; it is based on general figure.","2000, 2001",Salmo trutta,"11"
+-72.36269,-43.33927,"97","7","Soto, D.","03.25",Río Café,,"The position of the point is not accurate; it is based on general figure.","2000, 2001",Salmo trutta,"11"
+-72.44188,-43.12616,"98","7","Soto, D.","03.26",Río Fierro,,"The position of the point is not accurate; it is based on general figure.","2000, 2001",Salmo trutta,"29"
+-72.44188,-43.12616,"98","7","Soto, D.","03.26",Río Fierro,,"The position of the point is not accurate; it is based on general figure.","2000, 2001",Salmo trutta,"29"
+-72.39943,-43.30142,"99","7","Soto, D.","03.27",Río Puente Naranjo 2,,"The position of the point is not accurate; it is based on general figure.","2000, 2001",Oncorhynchus mykiss,"100"
+-72.39943,-43.30142,"99","7","Soto, D.","03.27",Río Puente Naranjo 2,,"The position of the point is not accurate; it is based on general figure.","2000, 2001",Oncorhynchus mykiss,"100"
+-72.75105,-39.86281,"100","7","Soto, D.","03.28",Río Quinchilcas,,,"2000, 2001",Salmo trutta,"9,5"
+-72.75105,-39.86281,"100","7","Soto, D.","03.28",Río Quinchilcas,,,"2000, 2001",Salmo trutta,"9,5"
+-72.48376,-40.76696,"101","8","Campos, Hugo, José Arenas, Wadimir Steffen, Gloria Agüero, Lorena Villalobos and Gastón Gonzales","36.01",Río Pescadero Grande,Hiporithron.,,"1984, 1985",Trichomycterus areolatus,"4,6"
+-72.48376,-40.76696,"101","8","Campos, Hugo, José Arenas, Wadimir Steffen, Gloria Agüero, Lorena Villalobos and Gastón Gonzales","36.01",Río Pescadero Grande,Hiporithron.,,"1984, 1985",Trichomycterus areolatus,"4,6"
+-72.43282,-40.77986,"102","8","Campos, Hugo, José Arenas, Wadimir Steffen, Gloria Agüero, Lorena Villalobos and Gastón Gonzales","36.02",Río El Encanto,Hiporithron.,The position of the point is approximate.,"1984, 1985",Trichomycterus areolatus,"6,3"
+-72.43282,-40.77986,"102","8","Campos, Hugo, José Arenas, Wadimir Steffen, Gloria Agüero, Lorena Villalobos and Gastón Gonzales","36.02",Río El Encanto,Hiporithron.,The position of the point is approximate.,"1984, 1985",Trichomycterus areolatus,"6,3"
+-72.42057,-40.78938,"103","8","Campos, Hugo, José Arenas, Wadimir Steffen, Gloria Agüero, Lorena Villalobos and Gastón Gonzales","36.03",Río Trafun,,The position of the point is approximate.,"1984, 1985",Oncorhynchus mykiss,"100"
+-72.42057,-40.78938,"103","8","Campos, Hugo, José Arenas, Wadimir Steffen, Gloria Agüero, Lorena Villalobos and Gastón Gonzales","36.03",Río Trafun,,The position of the point is approximate.,"1984, 1985",Oncorhynchus mykiss,"100"
+-72.53828,-40.86661,"104","8","Campos, Hugo, José Arenas, Wadimir Steffen, Gloria Agüero, Lorena Villalobos and Gastón Gonzales","36.04",Río Chacay,,The position of the point is approximate.,"1984, 1985",Trichomycterus areolatus,"13,7"
+-72.53828,-40.86661,"104","8","Campos, Hugo, José Arenas, Wadimir Steffen, Gloria Agüero, Lorena Villalobos and Gastón Gonzales","36.04",Río Chacay,,The position of the point is approximate.,"1984, 1985",Trichomycterus areolatus,"13,7"
+-72.46931,-40.88909,"105","8","Campos, Hugo, José Arenas, Wadimir Steffen, Gloria Agüero, Lorena Villalobos and Gastón Gonzales","36.05",Río Las Truchas,,The position of the point is approximate.,"1984, 1985",Trichomycterus areolatus,"8,9"
+-72.46931,-40.88909,"105","8","Campos, Hugo, José Arenas, Wadimir Steffen, Gloria Agüero, Lorena Villalobos and Gastón Gonzales","36.05",Río Las Truchas,,The position of the point is approximate.,"1984, 1985",Trichomycterus areolatus,"8,9"
+-72.40605,-40.91457,"106","8","Campos, Hugo, José Arenas, Wadimir Steffen, Gloria Agüero, Lorena Villalobos and Gastón Gonzales","36.06",Río Bonito,Mesorithron.,The position of the point is not accurate.,"1984, 1985",Percichthys trucha,"0,508905852"
+-72.40605,-40.91457,"106","8","Campos, Hugo, José Arenas, Wadimir Steffen, Gloria Agüero, Lorena Villalobos and Gastón Gonzales","36.06",Río Bonito,Mesorithron.,The position of the point is not accurate.,"1984, 1985",Percichthys trucha,"0,508905852"
+-72.34114,-40.90626,"107","8","Campos, Hugo, José Arenas, Wadimir Steffen, Gloria Agüero, Lorena Villalobos and Gastón Gonzales","36.07",Río El Callao,Epirithron.,The position of the point is not accurate.,"1984, 4986",Salmo trutta,"16,2055336"
+-72.34114,-40.90626,"107","8","Campos, Hugo, José Arenas, Wadimir Steffen, Gloria Agüero, Lorena Villalobos and Gastón Gonzales","36.07",Río El Callao,Epirithron.,The position of the point is not accurate.,"1984, 4986",Salmo trutta,"16,2055336"
+-72.33998,-40.90062,"108","8","Campos, Hugo, José Arenas, Wadimir Steffen, Gloria Agüero, Lorena Villalobos and Gastón Gonzales","36.08",Río Nalcas,Epirithron. The table catchments is missing in my copy of the report (C. Correa),The position of the point is not accurate.,"1984, 1985",Galaxias platei,"0,4"
+-72.33998,-40.90062,"108","8","Campos, Hugo, José Arenas, Wadimir Steffen, Gloria Agüero, Lorena Villalobos and Gastón Gonzales","36.08",Río Nalcas,Epirithron. The table catchments is missing in my copy of the report (C. Correa),The position of the point is not accurate.,"1984, 1985",Galaxias platei,"0,4"
+-72.57452,-40.86115,"109","8","Campos, Hugo, José Arenas, Wadimir Steffen, Gloria Agüero, Lorena Villalobos and Gastón Gonzales","36.09",Río Negro alto,,The position of the point is not accurate.,"1984, 1985",Galaxias platei,"4,1"
+-72.57452,-40.86115,"109","8","Campos, Hugo, José Arenas, Wadimir Steffen, Gloria Agüero, Lorena Villalobos and Gastón Gonzales","36.09",Río Negro alto,,The position of the point is not accurate.,"1984, 1985",Galaxias platei,"4,1"
+-72.67928,-40.80918,"110","8","Campos, Hugo, José Arenas, Wadimir Steffen, Gloria Agüero, Lorena Villalobos and Gastón Gonzales","36.10",Río Negro bajo,,The position of the point is not accurate.,"1984, 1985",Galaxias platei,"1,666666667"
+-72.67928,-40.80918,"110","8","Campos, Hugo, José Arenas, Wadimir Steffen, Gloria Agüero, Lorena Villalobos and Gastón Gonzales","36.10",Río Negro bajo,,The position of the point is not accurate.,"1984, 1985",Galaxias platei,"1,666666667"
+-72.26664,-40.89152,"111","8","Campos, Hugo, José Arenas, Wadimir Steffen, Gloria Agüero, Lorena Villalobos and Gastón Gonzales","36.11",Río Blanco,,The position of the point is not accurate.,"1984, 1985",Trichomycterus areolatus,"5,2"
+-72.26664,-40.89152,"111","8","Campos, Hugo, José Arenas, Wadimir Steffen, Gloria Agüero, Lorena Villalobos and Gastón Gonzales","36.11",Río Blanco,,The position of the point is not accurate.,"1984, 1985",Trichomycterus areolatus,"5,2"
+-72.47973,-40.88355,"112","8","Campos, Hugo, José Arenas, Wadimir Steffen, Gloria Agüero, Lorena Villalobos and Gastón Gonzales","36.12",Río Piedras Negras,,The position of the point is not accurate.,"1984, 1985",Trichomycterus areolatus,"7,6"
+-72.47973,-40.88355,"112","8","Campos, Hugo, José Arenas, Wadimir Steffen, Gloria Agüero, Lorena Villalobos and Gastón Gonzales","36.12",Río Piedras Negras,,The position of the point is not accurate.,"1984, 1985",Trichomycterus areolatus,"7,6"
+-72.64527,-40.79865,"113","8","Campos, Hugo, José Arenas, Wadimir Steffen, Gloria Agüero, Lorena Villalobos and Gastón Gonzales","36.13",Lago Rupanco,,The position of the point is not accurate.,"1984, 1985",Aplochiton taeniatus,"1,85"
+-72.63931,-40.79876,"114","8","Campos, Hugo, José Arenas, Wadimir Steffen, Gloria Agüero, Lorena Villalobos and Gastón Gonzales","36.14",Lago Rupanco,,The position of the point is not accurate.,"1984, 1985",Galaxias maculatus,"42,5"
+-68.29298,-21.57745,"115","9","Martínez, Ginger; Nelson Bugueño e Irma Vila","11.01",Vertientes del Salar de Ascotán,,The position of the point is not accurate.,1999 (?),Orestias ascotanensis,?
+-70.06845,-53.95527,"116","10","Vila, Irma; Leopoldo Fuentes, Marcelo Saavedra","09.01","Río Cóndor, cauce central y afluentes.",,The position of the point is not accurate.,"1995",Galaxias maculatus,?
+-70.06845,-53.95527,"116","10","Vila, Irma; Leopoldo Fuentes, Marcelo Saavedra","09.01","Río Cóndor, cauce central y afluentes.",,The position of the point is not accurate.,"1995",Galaxias maculatus,?
+-69.80318,-53.68642,"117","10","Vila, Irma; Leopoldo Fuentes, Marcelo Saavedra","09.02","Río Bueno, cauce central y afluentes.",,,"1995",Oncorhynchus mykiss,"100"
+-69.80318,-53.68642,"117","10","Vila, Irma; Leopoldo Fuentes, Marcelo Saavedra","09.02","Río Bueno, cauce central y afluentes.",,,"1995",Oncorhynchus mykiss,"100"
+-68.67287,-53.98592,"118","10","Vila, Irma; Leopoldo Fuentes, Marcelo Saavedra","09.03","Río Rasmunssen, cauce central y afluentes.",,The position of the point is not accurate.,"1995",Salmo trutta,?
+-68.67287,-53.98592,"118","10","Vila, Irma; Leopoldo Fuentes, Marcelo Saavedra","09.03","Río Rasmunssen, cauce central y afluentes.",,The position of the point is not accurate.,"1995",Salmo trutta,?
+-68.85548,-53.98113,"119","10","Vila, Irma; Leopoldo Fuentes, Marcelo Saavedra","09.04","Valle Castor, cauce central y afluentes.",,The position of the point is not accurate.,"1995",Salmo trutta,?
+-68.85548,-53.98113,"119","10","Vila, Irma; Leopoldo Fuentes, Marcelo Saavedra","09.04","Valle Castor, cauce central y afluentes.",,The position of the point is not accurate.,"1995",Salmo trutta,?
+-71.23893,-31.71813,"120","11","Comte S., Irma Vila","12.01",Río Choapa (brazo),"Only B. microlepidotus is mentioned. (same survey reported in Comte, S., and I. Vila. 1992. Journal of Fish Biology 41:971-981.)",The position of the point is approximate.,"1982, 1984",Basilichthys microlepidotus,?
+-71.23893,-31.71813,"120","11","Comte S., Irma Vila","12.01",Río Choapa (brazo),"Only B. microlepidotus is mentioned. (same survey reported in Comte, S., and I. Vila. 1992. Journal of Fish Biology 41:971-981.)",The position of the point is approximate.,"1982, 1984",Basilichthys microlepidotus,?
+-72.21622,-45.49326,"121","12",CORFO-IFOP,"60.01",Río Simpson,,"Not accurate; somewere in the Simpson River.","1984",Oncorhynchus masou,?
+-72.01994,-52.68588,"122","12",CORFO-IFOP,"60.02",Río Prat,,"Not accurate; somewere in the Prat River.","1986",Oncorhynchus keta,?
+-72.45548,-46.64234,"123","12",CORFO-IFOP,"60.03",Lago General Carrera,,"Not accurate; somewere in the General Carrera Lake.","1989",Oncorhynchus masou,?
+-72.26949,-45.48320,"124","13",Edwin Niklitschek and Eduardo Aedo,"05.01",Río Simpson,,,"2000, 2001",Salmo trutta,"51,43"
+-71.91679,-45.81854,"125","13",Edwin Niklitschek and Eduardo Aedo,"05.02",Río Blanco (Aysen),,,"2001",Oncorhynchus tshawytscha,"36,36"
+-71.78287,-45.83935,"126","13",Edwin Niklitschek and Eduardo Aedo,"05.03",Río Huemules,,,"2001",Salmo trutta,"40"
+-72.08335,-45.57516,"127","13",Edwin Niklitschek and Eduardo Aedo,"05.04",Río Simpson,,,"2001",Oncorhynchus mykiss,"100"
+-72.76028,-45.69517,"128","13",Edwin Niklitschek and Eduardo Aedo,"05.05",Arroyo Cea,,Position of the point is based on coordinates only.,"2001",Oncorhynchus kisutch,"10,17"
+-72.19077,-46.16147,"129","13",Edwin Niklitschek and Eduardo Aedo,"05.06",Lago Las Ardillas,,,"2001",Salmo salar,"3,57"
+-72.68563,-46.46062,"130","13",Edwin Niklitschek and Eduardo Aedo,"05.07",Arroyo Murta,,,"2001",Oncorhynchus mykiss,"100"
+-72.71300,-46.47491,"131","13",Edwin Niklitschek and Eduardo Aedo,"05.08",Bahía Murta,,,"2001",Salmo trutta,"27,88"
+-71.97163,-46.28321,"132","13",Edwin Niklitschek and Eduardo Aedo,"05.09",Río Ibañez,,,"2001",Salmo trutta,"35,29"
+-71.65194,-44.62831,"133","13",Edwin Niklitschek and Eduardo Aedo,"05.10",Río Cisnes (Tapera),,,"2001",Oncorhynchus tshawytscha,"1,44"
+-72.49460,-41.44194,"134","14",Gonzalo Gajardo,"14.01",Lago Chapo,,The position of the point is not accurate.,1997 (?),Salmo salar,?
+-73.65074,-42.38315,"135","14",Gonzalo Gajardo,"14.02",Dalcahue,,The position of the point is not accurate.,1997 (?),Salmo salar,?
+-72.64283,-40.65502,"136","14",Gonzalo Gajardo,"14.03",Pilmaiquén,,The position of the point is not accurate.,1997 (?),Oncorhynchus mykiss,?
+-72.40354,-40.71488,"137","14",Gonzalo Gajardo,"14.04",Pescadero,,,1997 (?),Oncorhynchus mykiss,?
+-72.77576,-40.64580,"138","14",Gonzalo Gajardo,"14.05",Huillín,,The position of the point is not accurate.,1997 (?),Oncorhynchus mykiss,?
+-73.11150,-41.75788,"139","15",Doris Soto and Fernando Jara,"13.01",Calbuco,,The position of the point is not accurate.,1995-1996,Oncorhynchus tshawytscha,"1,39"
+-73.48566,-41.82911,"140","15",Doris Soto and Fernando Jara,"13.02",Hueihue,,The position of the point is not accurate.,1995-1996,Oncorhynchus tshawytscha,"0,49"
+-73.72415,-42.58196,"141","15",Doris Soto and Fernando Jara,"13.03",Canal Lemuy,,The position of the point is not accurate.,1995-1996,Oncorhynchus tshawytscha,"0,53"
+-72.59794,-42.04103,"142","15",Doris Soto and Fernando Jara,"13.04",Pichicolo,,The position of the point is not accurate.,1995-1996,Oncorhynchus tshawytscha,"6,74"
+-72.72125,-44.70790,"143","15",Doris Soto and Fernando Jara,"13.05",Pto. Cisnes,,The position of the point is not accurate.,1995-1996,Salmo salar,"1,04"
+-72.83693,-45.47359,"144","15",Doris Soto and Fernando Jara,"13.06",Pto. Chacabuco,,The position of the point is not accurate.,1995-1996,Salmo salar,"3,46"
+-72.80285,-45.45417,"145","16","Zama, Akira and Eduardo Cárdenas G.","37.01",Ensenada Baja,,The position of the point is not accurate.,"1980",Galaxias maculatus,
+-72.71702,-45.40587,"146","16","Zama, Akira and Eduardo Cárdenas G.","37.02",Río Aysen,,The position of the point is approximate.,"1980",Aplochiton taeniatus,
+-72.08838,-45.57624,"147","16","Zama, Akira and Eduardo Cárdenas G.","37.03",Río Claro,Does not know what region,Ambiguous,"1978",Aplochiton zebra,
+-72.06869,-45.54818,"148","16","Zama, Akira and Eduardo Cárdenas G.","37.04",Río Simpson (Coyhaique),,The position of the point is not accurate.,"1980",Hatcheria macraei,
+-72.14431,-45.50018,"149","16","Zama, Akira and Eduardo Cárdenas G.","37.05",Río Simpson (Huichalao),,The position of the point is approximate.,"1981, 1982",Hatcheria macraei,
+-72.45992,-45.41774,"150","16","Zama, Akira and Eduardo Cárdenas G.","37.06",Río Aysén (Puerto Piedra),,,1981-1982 (?),Geotria australis,
+-73.24177,-45.24658,"151","16","Zama, Akira and Eduardo Cárdenas G.","37.07",Puerto Pérez (tidepool),,"The position of the point is not accurate; should be at Pto. Piedra.","1982",Galaxias maculatus,
+-72.80007,-45.45759,"152","16","Zama, Akira and Eduardo Cárdenas G.","37.08",Arrollo Pajarones (Ensenada Baja),,The position of the point is not accurate.,"1981",Salmo trutta,
+-72.79406,-45.45129,"153","16","Zama, Akira and Eduardo Cárdenas G.","37.09",Río El Salto (desembocadura),,,"1982",Oncorhynchus kisutch,
+-73.29885,-47.47356,"154","16","Zama, Akira and Eduardo Cárdenas G.","37.10",Laguna Ventisquero (estero Ventisquero),,,"1982",Aplochiton marinus,
+-73.12040,-48.14281,"155","16","Zama, Akira and Eduardo Cárdenas G.","37.11",Laguna Quetro,,,"1982",Aplochiton zebra,
+-73.52067,-45.16155,"156","16","Zama, Akira and Eduardo Cárdenas G.","37.12",Puerto Aguirre,,,"1980",Galaxias maculatus,
+-71.85398,-45.66646,"157","16","Zama, Akira and Eduardo Cárdenas G.","37.13",Lago Pollux,,The position of the point is not accurate.,"1975",Galaxias platei,
+-72.72904,-45.46757,"158","16","Zama, Akira and Eduardo Cárdenas G.","37.14",Lago Riesco,,,"1980",Galaxias platei,
+-71.96482,-46.24045,"159","16","Zama, Akira and Eduardo Cárdenas G.","37.15",Lago Don Poli,,"The position of the point is not accurate; it should be at Don Poli Lagoon.","1984",Galaxias platei,
+-72.58243,-47.31257,"160","16","Zama, Akira and Eduardo Cárdenas G.","37.16",Lago Esmeralda,,,"1983",Odontesthes bonariensis,
+-72.45022,-47.28029,"161","16","Zama, Akira and Eduardo Cárdenas G.","37.17",Lago Maldonado,,The point should be at Maldonado Lagoon.,"1983",Percichthys trucha,
+-71.92711,-46.30439,"162","16","Zama, Akira and Eduardo Cárdenas G.","37.18",Lago General Carrera (Pto. Ibañez),,The position of the point is not accurate.,"1982",Percichthys trucha,
+-71.94613,-45.66398,"163","16","Zama, Akira and Eduardo Cárdenas G.","37.19",Lago Frío,,,1981-1982 (?),Oncorhynchus mykiss,
+-71.62297,-46.51134,"164","17",Misuo Sakai and Ambrosio C. Espinós,"43.01","Lago General Carrera, near Río Los Antiguos, Argentina.",,,"1990",Percichthys trucha,"1,89"
+-70.38904,-33.37514,"165","18",Paul C. Rizzo et al.,"15.01",Río Molina,,The position of the point is not accurate.,2001 (?),Percichthys trucha,?
+-70.73296,-34.72932,"166","19",M & P Ltda.,"16.01",Río Tinguiririca,,,"2002",Trichomycterus areolatus,?
+-70.56114,-34.82603,"167","19",M & P Ltda.,"16.02",Río Azufre,,,"2002",Trichomycterus areolatus,?
+-73.11112,-36.85630,"168","20","Scasso, F. & H. Campos","17.01",Laguna Grande de San Pedro,"Laguna Grande of  San Pedro classified as eutrophic (Parra et al., 1989b).",The position of the point is not accurate.,1993-1994,Carassius carassius,?
+-73.08890,-36.84634,"169","20","Scasso, F. & H. Campos","17.02",Laguna Chica de San Pedro,"Laguna Chica of San Pedro classified as mesotrophic (Parra et al., 1989a)",The position of the point is not accurate.,1993-1994,Nematogenys inermis,?
+-71.27485,-38.78807,"170","20","Scasso, F. & H. Campos","17.03",Lago Icalma,"Lake classified as oligotrophic (Parra et al., 1993)",The position of the point is not accurate.,1993-1994,Percichthys trucha,?
+-73.11000,-36.85636,"171","21","Scasso, F.   & H. Campos","35.01",Laguna Grande de San Pedro,,,"1993, 1994",Percichthys trucha,
+-73.08763,-36.84875,"172","21","Scasso, F.   & H. Campos","35.02",Laguna Chica de San Pedro,,,"1993, 1994",Nematogenys inermis,
+-72.99049,-36.87581,"173","22","Evelyn Habit, Pedro Victoriano & Amadora Rodríguez-Ruiz","18.01",Estero Nonguen (estación 1),Rithron habitat.,,"1999, 2000",Nematogenys inermis,"3,33"
+-72.99049,-36.87581,"173","22","Evelyn Habit, Pedro Victoriano & Amadora Rodríguez-Ruiz","18.01",Estero Nonguen (estación 1),Rithron habitat.,,"1999, 2000",Nematogenys inermis,"3,33"
+-72.99773,-36.85929,"174","22","Evelyn Habit, Pedro Victoriano & Amadora Rodríguez-Ruiz","18.02",Estero Nonguen (estación 2),,,"1999",Basilichthys australis,"4,04"
+-72.99773,-36.85929,"174","22","Evelyn Habit, Pedro Victoriano & Amadora Rodríguez-Ruiz","18.02",Estero Nonguen (estación 2),,,"1999",Basilichthys australis,"4,04"
+-73.00828,-36.84725,"175","22","Evelyn Habit, Pedro Victoriano & Amadora Rodríguez-Ruiz","18.03",Estero Nonguen (estación 3),,,"1999",Galaxias maculatus,"16,67"
+-73.00828,-36.84725,"175","22","Evelyn Habit, Pedro Victoriano & Amadora Rodríguez-Ruiz","18.03",Estero Nonguen (estación 3),,,"1999",Galaxias maculatus,"16,67"
+-73.00661,-36.83177,"176","22","Evelyn Habit, Pedro Victoriano & Amadora Rodríguez-Ruiz","18.04",Estero Nonguen (estación 4),Potamon habitat.,,"1999, 2000",Galaxias maculatus,"11,59"
+-73.00661,-36.83177,"176","22","Evelyn Habit, Pedro Victoriano & Amadora Rodríguez-Ruiz","18.04",Estero Nonguen (estación 4),Potamon habitat.,,"1999, 2000",Galaxias maculatus,"11,59"
+-73.01687,-36.81994,"177","22","Evelyn Habit, Pedro Victoriano & Amadora Rodríguez-Ruiz","18.05",Estero Nonguen (estación 5),,,"1999",Galaxias maculatus,"6,14"
+-73.01687,-36.81994,"177","22","Evelyn Habit, Pedro Victoriano & Amadora Rodríguez-Ruiz","18.05",Estero Nonguen (estación 5),,,"1999",Galaxias maculatus,"6,14"
+-69.35553,-18.34328,"178","23","Friedmann, Claudio and seven colaborators.","20.01","Río Lauca, pozo 5 y 9.",,,"1996",Trichomycterus sp. 3,?
+-69.33553,-18.28106,"179","23","Friedmann, Claudio and seven colaborators.","20.02","Río Lauca, pozo 5 y 9.",,,"1996",Trichomycterus sp. 3,?
+-71.89209,-37.35158,"180","24",Electrowatt Ingenieros Consultores (Chile) S.A.,"19.01","Ríos Laja y Rucue (estaciones B, C y D)",Three sampling stations were pooled due to their proximity.,,"1995",Basilichthys australis,"0,65"
+-71.89209,-37.35158,"180","24",Electrowatt Ingenieros Consultores (Chile) S.A.,"19.01","Ríos Laja y Rucue (estaciones B, C y D)",Three sampling stations were pooled due to their proximity.,,"1995",Basilichthys australis,"0,65"
+-71.67542,-37.31716,"181","24",Electrowatt Ingenieros Consultores (Chile) S.A.,"19.02",Río Laja (estación A),,The position of the point is approximate.,"1995",Trichomycterus areolatus,"77,78"
+-71.67542,-37.31716,"181","24",Electrowatt Ingenieros Consultores (Chile) S.A.,"19.02",Río Laja (estación A),,The position of the point is approximate.,"1995",Trichomycterus areolatus,"77,78"
+-71.79763,-37.34281,"182","24",Electrowatt Ingenieros Consultores (Chile) S.A.,"19.03",Río Rucue (estación E),,The position of the point is approximate.,"1995",Percilia irwini,"18,75"
+-71.79763,-37.34281,"182","24",Electrowatt Ingenieros Consultores (Chile) S.A.,"19.03",Río Rucue (estación E),,The position of the point is approximate.,"1995",Percilia irwini,"18,75"
+-71.72988,-37.37607,"183","24",Electrowatt Ingenieros Consultores (Chile) S.A.,"19.04",Río Rucue (estación F),,The position of the point is approximate.,"1995",Diplomystes nahuelbutaensis,"8"
+-71.72988,-37.37607,"183","24",Electrowatt Ingenieros Consultores (Chile) S.A.,"19.04",Río Rucue (estación F),,The position of the point is approximate.,"1995",Diplomystes nahuelbutaensis,"8"
+-72.92370,-37.16639,"184","25","Campos, H., V. Ruiz, J.F. Gavilan y F. Alay","54.01","Río Biobio; Santa Juana area.",,"The position of the point is not accurate; it represents the whole area.",1990-1992,Percichthys melanops,?
+-72.92370,-37.16639,"184","25","Campos, H., V. Ruiz, J.F. Gavilan y F. Alay","54.01","Río Biobio; Santa Juana area.",,"The position of the point is not accurate; it represents the whole area.",1990-1992,Percichthys melanops,?
+-72.59310,-37.54105,"185","25","Campos, H., V. Ruiz, J.F. Gavilan y F. Alay","54.02","Río Biobio; Negrete area.",Between Negrete and Nacimiento an intensive sampling was performed.,The position of the point is not accurate.,1990-1992,Trichomycterus areolatus,?
+-72.59310,-37.54105,"185","25","Campos, H., V. Ruiz, J.F. Gavilan y F. Alay","54.02","Río Biobio; Negrete area.",Between Negrete and Nacimiento an intensive sampling was performed.,The position of the point is not accurate.,1990-1992,Trichomycterus areolatus,?
+-72.00861,-37.67195,"186","25","Campos, H., V. Ruiz, J.F. Gavilan y F. Alay","54.03","Río Biobio; Santa Barbara area.",,"The position of the point is not accurate; it represents the whole area.",1990-1992,Percichthys trucha,?
+-72.00861,-37.67195,"186","25","Campos, H., V. Ruiz, J.F. Gavilan y F. Alay","54.03","Río Biobio; Santa Barbara area.",,"The position of the point is not accurate; it represents the whole area.",1990-1992,Percichthys trucha,?
+-71.30088,-37.35083,"187","25","Campos, H., V. Ruiz, J.F. Gavilan y F. Alay","54.04",Laguna de la Laja.,,"The position of the point is not accurate; it represents the whole area.",1990-1992,Trichomycterus areolatus,?
+-71.30088,-37.35083,"187","25","Campos, H., V. Ruiz, J.F. Gavilan y F. Alay","54.04",Laguna de la Laja.,,"The position of the point is not accurate; it represents the whole area.",1990-1992,Trichomycterus areolatus,?
+-71.26757,-38.68349,"188","25","Campos, H., V. Ruiz, J.F. Gavilan y F. Alay","54.05",Laguna Galletué.,,"The position of the point is not accurate; it represents the whole area.",1990-1992,Percichthys trucha,?
+-71.26757,-38.68349,"188","25","Campos, H., V. Ruiz, J.F. Gavilan y F. Alay","54.05",Laguna Galletué.,,"The position of the point is not accurate; it represents the whole area.",1990-1992,Percichthys trucha,?
+-71.26831,-38.78078,"189","25","Campos, H., V. Ruiz, J.F. Gavilan y F. Alay","54.06",Laguna Icalma.,,"The position of the point is not accurate; it represents the whole area.",1990-1992,Percichthys trucha,?
+-71.26831,-38.78078,"189","25","Campos, H., V. Ruiz, J.F. Gavilan y F. Alay","54.06",Laguna Icalma.,,"The position of the point is not accurate; it represents the whole area.",1990-1992,Percichthys trucha,?
+-71.96735,-37.23924,"190","26","Habit, Evelyn.","21.01",Río Huépil (estación 1).,Rithron habitat with riffles and pools. .,,"1994",Trichomycterus sp.,"43,39"
+-71.96735,-37.23924,"190","26","Habit, Evelyn.","21.01",Río Huépil (estación 1).,Rithron habitat with riffles and pools. .,,"1994",Trichomycterus sp.,"43,39"
+-72.12112,-37.10806,"191","26","Habit, Evelyn.","21.02",Río Itata (estación 2).,Rithron habitat with an area of pools.,,"1993, 1994",Percichthys trucha,"0,557176634"
+-72.12112,-37.10806,"191","26","Habit, Evelyn.","21.02",Río Itata (estación 2).,Rithron habitat with an area of pools.,,"1993, 1994",Percichthys trucha,"0,557176634"
+-72.41571,-36.75020,"192","26","Habit, Evelyn.","21.03",Río Itata (estación 3).,Potamon habitat.,,"1993, 1994",Cauque itatanum,"0,31121372"
+-72.41571,-36.75020,"192","26","Habit, Evelyn.","21.03",Río Itata (estación 3).,Potamon habitat.,,"1993, 1994",Cauque itatanum,"0,31121372"
+-71.94590,-37.31883,"193","27","Habit, Evelyn","22.01",Canal Cruz del Ciprés del río Huépil (estación 1).,Values of relative abundance inferred from a bar chart. Irrigation channel.,The position of the point is approximate.,"1994",Trichomycterus sp.,"28,5"
+-71.94590,-37.31883,"193","27","Habit, Evelyn","22.01",Canal Cruz del Ciprés del río Huépil (estación 1).,Values of relative abundance inferred from a bar chart. Irrigation channel.,The position of the point is approximate.,"1994",Trichomycterus sp.,"28,5"
+-72.00442,-37.17431,"194","27","Habit, Evelyn","22.02",Canal Zañartu (estación 2).,"Values of relative abundance inferred from a bar chart. The Zañartu channel starts its course from the Laja river passing to the Itata's basin through the Huépil river; irrigation channel. .",The position of the point is approximate.,"1993, 1994",Percichthys trucha,"0,7578125"
+-72.00442,-37.17431,"194","27","Habit, Evelyn","22.02",Canal Zañartu (estación 2).,"Values of relative abundance inferred from a bar chart. The Zañartu channel starts its course from the Laja river passing to the Itata's basin through the Huépil river; irrigation channel. .",The position of the point is approximate.,"1993, 1994",Percichthys trucha,"0,7578125"
+-72.39812,-36.85076,"195","27","Habit, Evelyn","22.03",Canal Quillón (estación 3).,Values of relative abundance inferred from a bar chart. Irrigation channel.,The position of the point is approximate.,"1993, 1994",Galaxias maculatus,"0,582938389"
+-72.39812,-36.85076,"195","27","Habit, Evelyn","22.03",Canal Quillón (estación 3).,Values of relative abundance inferred from a bar chart. Irrigation channel.,The position of the point is approximate.,"1993, 1994",Galaxias maculatus,"0,582938389"
+-72.09889,-36.89425,"196","27","Habit, Evelyn","22.04",Canal El Roble (estación 4).,Values of relative abundance inferred from a bar chart. Irrigation channel.,The position of the point is approximate.,"1993",Galaxias maculatus,"2"
+-72.09889,-36.89425,"196","27","Habit, Evelyn","22.04",Canal El Roble (estación 4).,Values of relative abundance inferred from a bar chart. Irrigation channel.,The position of the point is approximate.,"1993",Galaxias maculatus,"2"
+-70.83559,-31.54553,"197","28",Ministerio de Obras Públicas (MOP) y Consultora Gran Vía.,"23.01","Río Illapel (estación 1, 2 y 3)",,The position of the point is not accurate.,"1999",Oncorhynchus mykiss,"100"
+-70.96220,-31.87002,"198","29",SRK y MN Ingenieros Lda.,"24.01",Estero Camisas (estación 2 y 3),,The position of the point is not accurate.,"1996",Gambusia affinis,?
+-71.39640,-38.09689,"199","30",Electrowatt Ingenieros Consultores S.A.,"25.01",Río Lomin,,,1994-1995,Salmo trutta,"53,33"
+-71.39640,-38.09689,"199","30",Electrowatt Ingenieros Consultores S.A.,"25.01",Río Lomin,,,1994-1995,Salmo trutta,"53,33"
+-71.43050,-38.06051,"200","30",Electrowatt Ingenieros Consultores S.A.,"25.02",Río Quepuca,,,1994-1995,Salmo trutta,"25"
+-71.43050,-38.06051,"200","30",Electrowatt Ingenieros Consultores S.A.,"25.02",Río Quepuca,,,1994-1995,Salmo trutta,"25"
+-71.41918,-38.08426,"201","30",Electrowatt Ingenieros Consultores S.A.,"25.03",Estero Lepoy,,,1994-1995,Salmo trutta,"44,44"
+-71.41918,-38.08426,"201","30",Electrowatt Ingenieros Consultores S.A.,"25.03",Estero Lepoy,,,1994-1995,Salmo trutta,"44,44"
+-71.44959,-38.04561,"202","30",Electrowatt Ingenieros Consultores S.A.,"25.04",Estero El Lleuque,,,1994-1995,Oncorhynchus mykiss,"100"
+-71.45112,-38.04948,"203","30",Electrowatt Ingenieros Consultores S.A.,"25.05",Biobio (aguas arriba estero Lieuque),,,1994-1995,Salmo trutta,"100"
+-71.51969,-37.99361,"204","30",Electrowatt Ingenieros Consultores S.A.,"25.06",Biobio (caberna de máquinas),,,1994-1995,Oncorhynchus mykiss,"100"
+-71.51969,-37.99361,"204","30",Electrowatt Ingenieros Consultores S.A.,"25.06",Biobio (caberna de máquinas),,,1994-1995,Oncorhynchus mykiss,"100"
+-71.45686,-38.21072,"205","30",Electrowatt Ingenieros Consultores S.A.,"25.07",Río Lolco (aguas arriba Casa de Lolco),,,"1994",Salmo trutta,"25"
+-71.41144,-38.11265,"206","30",Electrowatt Ingenieros Consultores S.A.,"25.08",Río Lolco (bajo),,,"1994",Salmo trutta,"66,67"
+-71.41166,-38.11939,"207","30",Electrowatt Ingenieros Consultores S.A.,"25.09",Río Lolco (Baños de Lolco),,,"1994",Diplomystes nahuelbutaensis,"16,67"
+-71.42105,-38.13015,"208","30",Electrowatt Ingenieros Consultores S.A.,"25.10",Río Villicura (junta río Lolco),,,"1994",Diplomystes nahuelbutaensis,"28,57"
+-71.53115,-38.16809,"209","30",Electrowatt Ingenieros Consultores S.A.,"25.11",Río Villicura (cola embalse),,,1994-1995,Salmo trutta,"91,67"
+-71.37062,-38.10674,"210","30",Electrowatt Ingenieros Consultores S.A.,"25.12",Estero Piedras Paradas,,,"1994",Salmo trutta,"83,33"
+-71.96718,-34.12388,"211","31",EIA,"34.01",Lago Topocalma,,,"2000",Stellifer minor,"1"
+-71.26700,-34.99235,"212","32",ESSAM S.A. y Universidad de Talca,"26.01",Estero Guaiquillo,,The position of the point is approximate.,2001 (?),Tenca tenca,?
+-71.16332,-35.72318,"213","33",Tecnologías y Servicios Ambientales TASAM S.A.,"27.01","Entre 0 y 200 m hacia abajo de Bocatoma Maule, Central Pehuence (Sitios 1 y 2 agrupados)",,,"1995",Basilichthys australis,"74,63"
+-70.90707,-35.79858,"214","33",Tecnologías y Servicios Ambientales TASAM S.A.,"27.02",Sitio 4,,,1995 (?),Basilichthys australis,"20"
+-70.94418,-35.81881,"215","33",Tecnologías y Servicios Ambientales TASAM S.A.,"27.03",Sitio 5,,,1995 (?),Oncorhynchus mykiss,"100"
+-70.75568,-35.81479,"216","33",Tecnologías y Servicios Ambientales TASAM S.A.,"27.04",Rúo arriba de Cental Curillinque (Sitio 6),,"The position of the point should be reviewed; it should be relocated in the river Maule upstream from the Curillinque central.",1995 (?),Salmo trutta,"6,67"
+-71.50128,-52.23821,"217","34","Estai, E.","47.01",Río San José,No comments about whether other fishes were also sampled.,,"1998",Salmo trutta,100?
+-71.50128,-52.23821,"217","34","Estai, E.","47.01",Río San José,No comments about whether other fishes were also sampled.,,"1998",Salmo trutta,100?
+-71.41201,-52.18261,"218","34","Estai, E.","47.02","Río Penitente, La Holla.",No comments about whether other fishes were also sampled.,,"1996, 1997, 1998",Salmo trutta,100?
+-71.41201,-52.18261,"218","34","Estai, E.","47.02","Río Penitente, La Holla.",No comments about whether other fishes were also sampled.,,"1996, 1997, 1998",Salmo trutta,100?
+-71.42460,-52.05776,"219","34","Estai, E.","47.03","Río Penitente, Acantilado.",No comments about whether other fishes were also sampled.,,"1997",Salmo trutta,100?
+-71.42460,-52.05776,"219","34","Estai, E.","47.03","Río Penitente, Acantilado.",No comments about whether other fishes were also sampled.,,"1997",Salmo trutta,100?
+-71.62611,-52.21571,"220","34","Estai, E.","47.04","Río Penitente, Corral las Nieves.",No comments about whether other fishes were also sampled.,,"1997",Salmo trutta,100?
+-71.48307,-52.19625,"221","34","Estai, E.","47.05","Río Penitente, Palermo.",No comments about whether other fishes were also sampled.,,"1997, 1998, 1999",Salmo trutta,100?
+-71.48307,-52.19625,"221","34","Estai, E.","47.05","Río Penitente, Palermo.",No comments about whether other fishes were also sampled.,,"1997, 1998, 1999",Salmo trutta,100?
+-71.53757,-52.15145,"222","34","Estai, E.","47.06",Chorrillo (arrollo) s/n..,No comments about whether other fishes were also sampled.,,"1997, 1998, 1999",Salmo trutta,100?
+-71.53757,-52.15145,"222","34","Estai, E.","47.06",Chorrillo (arrollo) s/n..,No comments about whether other fishes were also sampled.,,"1997, 1998, 1999",Salmo trutta,100?
+-71.40578,-52.22581,"223","34","Estai, E.","47.07","Río Penitente, La Invernada.",No comments about whether other fishes were also sampled.,,"1997, 1998",Salmo trutta,100?
+-71.38706,-52.11319,"224","34","Estai, E.","47.08","Río Penitente, La Invernada.",No comments about whether other fishes were also sampled.,,"1997, 1998, 1999",Salmo trutta,100?
+-71.38706,-52.11319,"224","34","Estai, E.","47.08","Río Penitente, La Invernada.",No comments about whether other fishes were also sampled.,,"1997, 1998, 1999",Salmo trutta,100?
+-71.41841,-32.62980,"225","35","Dazarola, G.","48.01",Río Maitencillo,,The position of the point is approximate.,1969-1970,Cyprinus carpio,?
+-71.36504,-32.58854,"226","35","Dazarola, G.","48.02",Río Maitencillo,,The position of the point is approximate.,1969-1970,Cyprinus carpio,?
+-71.48282,-32.74705,"227","35","Dazarola, G.","48.03",Ventanas,,The position of the point is approximate.,1969-1970,Basilichthys regia laticlavia,?
+-71.44471,-32.73832,"228","35","Dazarola, G.","48.04",Ventanas,,The position of the point is approximate.,1969-1970,Basilichthys regia laticlavia,?
+-71.50578,-32.88249,"229","35","Dazarola, G.","48.05",Mantagua,,The position of the point is approximate.,1969-1970,Basilichthys regia laticlavia,?
+-71.45925,-32.85892,"230","35","Dazarola, G.","48.06",Mantagua,,The position of the point is approximate.,1969-1970,Mugil cephalus,?
+-71.50264,-32.92047,"231","35","Dazarola, G.","48.07",Río Aconcagua,,The position of the point is approximate.,1969-1970,Basilichthys regia laticlavia,?
+-71.39053,-32.95481,"232","35","Dazarola, G.","48.08",Estero Limache,,The position of the point is approximate.,1969-1970,Carassius carassius,?
+-71.14978,-33.02409,"233","35","Dazarola, G.","48.09",Estero Limache,,The position of the point is approximate.,1969-1970,Carassius carassius,?
+-71.42744,-32.92013,"234","35","Dazarola, G.","48.10",Aconcagua,,The position of the point is approximate.,1969-1970,Carassius carassius,?
+-71.24137,-32.83571,"235","35","Dazarola, G.","48.11",Aconcagua,,The position of the point is approximate.,1969-1970,Carassius carassius,?
+-71.20345,-32.72390,"236","35","Dazarola, G.","48.12",Nogales,,The position of the point is approximate.,1969-1970,Carassius carassius,?
+-70.88295,-32.78871,"237","35","Dazarola, G.","48.13",Aconcagua,,The position of the point is approximate.,1969-1970,Carassius carassius,?
+-70.69932,-32.77098,"238","35","Dazarola, G.","48.14",Aconcagua,,The position of the point is approximate.,1969-1970,Basisichthys microlepidotus,?
+-70.52770,-32.83755,"239","35","Dazarola, G.","48.15",Aconcagua,,The position of the point is approximate.,1969-1970,Salmo trutta,?
+-70.41750,-32.86203,"240","35","Dazarola, G.","48.16",Aconcagua,,The position of the point is approximate.,1969-1970,Salmo trutta,?
+-70.30793,-32.62163,"241","35","Dazarola, G.","48.17",Colorado,,The position of the point is approximate.,1969-1970,Salmo trutta,?
+-70.22092,-32.88974,"242","35","Dazarola, G.","48.18",Juncal,,The position of the point is approximate.,1969-1970,Salmo trutta,?
+-70.26609,-32.96303,"243","35","Dazarola, G.","48.19",Río Blanco,,The position of the point is approximate.,1969-1970,Salmo trutta,?
+-70.17362,-32.84151,"244","35","Dazarola, G.","48.20",Ojos de Agua,,The position of the point is approximate.,1969-1970,Salvelinus fontinalis,?
+-70.62874,-32.52748,"245","35","Dazarola, G.","48.21",Putaendo,,The position of the point is approximate.,1969-1970,Salmo trutta,?
+-71.47188,-33.06606,"246","35","Dazarola, G.","48.22",Marga-marga,,The position of the point is approximate.,1969-1970,Carassius carassius,?
+-71.32567,-33.14724,"247","35","Dazarola, G.","48.23",Marga-marga,,The position of the point is approximate.,1969-1970,Carassius carassius,?
+-71.49150,-33.28962,"248","35","Dazarola, G.","48.24",Casablanca,,The position of the point is approximate.,1969-1970,Carassius carassius,?
+-71.53098,-33.15289,"249","35","Dazarola, G.","48.25",Peñuelas,,The position of the point is approximate.,1969-1970,Basilichthys bonaerensis,?
+-71.57866,-33.38988,"250","35","Dazarola, G.","48.26",San Jerónimo,,The position of the point is approximate.,1969-1970,Basilichthys bonaerensis,?
+-71.12847,-33.31470,"251","35","Dazarola, G.","48.27",Puangue,,The position of the point is approximate.,1969-1970,Salmo trutta,?
+-71.06536,-33.42176,"252","35","Dazarola, G.","48.28",Puangue,,The position of the point is approximate.,1969-1970,Basisichthys microlepidotus,?
+-71.25172,-33.57976,"253","35","Dazarola, G.","48.29",Puangue,,The position of the point is approximate.,1969-1970,Cheirodon pisciculatus,?
+-72.51411,-38.69057,"254","36","Golusda, P.","61.01",Río Cautín,,"General; Río Cautín.",c.a. 1890,Percichthys trucha,?
+-70.13442,-32.81602,"255","36","Golusda, P.","61.02",Laguna del Inca,,,1927 (year of the publication),Salvelinus fontinalis,?
+-70.19794,-32.87413,"256","36","Golusda, P.","61.03",Río Aconcagua alto,,"Appriximate; upper Aconcagua river.",1927 (year of the publication),Salvelinus fontinalis,?
+-70.27013,-32.95378,"257","36","Golusda, P.","61.04",Río Blanco,,,1927 (year of the publication),Salvelinus fontinalis,?
+-72.44353,-38.67067,"258","36","Golusda, P.","61.05",Río Cautín,,,1927 (year of the publication),Percichthys trucha,?
+-73.04623,-36.91179,"259","37","Oliver, C.","59.01",Biobio river near Concepción,,Not accurate (lower Biobio River),1949 (year of the publication),Oncorhynchus mykiss,
+-73.08583,-36.87767,"260","37","Oliver, C.","59.02",Province of Concepción (no specific place reported),,General,1949 (year of the publication),Coregonus clupeaformis,
+-73.10856,-36.85182,"261","37","Oliver, C.","59.03",Lagunas de San Pedro,,,1949 (year of the publication),Salvelinus namaycush,
+-68.30402,-21.50328,"262","38",Geotécnica consultores.,"28.01",Springs and pools of the Salar de Ascotan,,The position of the point is not is not accurate.,"1994",Orestias ascotanensis,
+-71.94485,-38.42264,"263","39","Campos, H.","49.01",Río Dillo (c.a. 480m above sea level (table 1) and 35 km from its origin ( fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Oncorhynchus mykiss,48 % of all specimens collected in rhithron type rivers. Present in 80% of the rivers studied.
+-71.94485,-38.42264,"263","39","Campos, H.","49.01",Río Dillo (c.a. 480m above sea level (table 1) and 35 km from its origin ( fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Oncorhynchus mykiss,48 % of all specimens collected in rhithron type rivers. Present in 80% of the rivers studied.
+-71.93382,-38.46680,"264","39","Campos, H.","49.02",Río Cautin (c.a. 480m above sea level (table 1) and 57 km from its origin ( fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Oncorhynchus mykiss,48 % of all specimens collected in rhithron type rivers. Present in 80% of the rivers studied.
+-71.93382,-38.46680,"264","39","Campos, H.","49.02",Río Cautin (c.a. 480m above sea level (table 1) and 57 km from its origin ( fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Oncorhynchus mykiss,48 % of all specimens collected in rhithron type rivers. Present in 80% of the rivers studied.
+-72.19355,-38.54191,"265","39","Campos, H.","49.03",Río Muco (c.a. 230m above sea level (table 1) and 32 km from its origin (fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Percilia gillissi,9 % of all specimens collected in rhithron type rivers. Present in 20% of the rivers studied.
+-72.19355,-38.54191,"265","39","Campos, H.","49.03",Río Muco (c.a. 230m above sea level (table 1) and 32 km from its origin (fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Percilia gillissi,9 % of all specimens collected in rhithron type rivers. Present in 20% of the rivers studied.
+-71.63109,-39.45024,"266","39","Campos, H.","49.04",Río Cavisañi (c.a. 750m above sea level (fig. 2) and 6km from its origin (fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Oncorhynchus mykiss,48 % of all specimens collected in rhithron type rivers. Present in 80% of the rivers studied.
+-71.63109,-39.45024,"266","39","Campos, H.","49.04",Río Cavisañi (c.a. 750m above sea level (fig. 2) and 6km from its origin (fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Oncorhynchus mykiss,48 % of all specimens collected in rhithron type rivers. Present in 80% of the rivers studied.
+-71.77345,-39.40676,"267","39","Campos, H.","49.05",Río Palguin (c.a. 700m above sea level (fig. 2) and 6km from its origin (fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Trichomycterus areolatus,16.5 % of all specimens collected in rhithron type rivers. Present in 27% of the rivers studied.
+-71.77345,-39.40676,"267","39","Campos, H.","49.05",Río Palguin (c.a. 700m above sea level (fig. 2) and 6km from its origin (fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Trichomycterus areolatus,16.5 % of all specimens collected in rhithron type rivers. Present in 27% of the rivers studied.
+-72.19452,-39.17373,"268","39","Campos, H.","49.06",Río Pedregoso (c.a. 300m above sea level (fig. 2) and > 40km from its origin (?) (fig. 2)),Rhithron type river.,The position of the point is not accurate.,1979-1980,Trichomycterus areolatus,16.5 % of all specimens collected in rhithron type rivers. Present in 27% of the rivers studied.
+-72.19452,-39.17373,"268","39","Campos, H.","49.06",Río Pedregoso (c.a. 300m above sea level (fig. 2) and > 40km from its origin (?) (fig. 2)),Rhithron type river.,The position of the point is not accurate.,1979-1980,Trichomycterus areolatus,16.5 % of all specimens collected in rhithron type rivers. Present in 27% of the rivers studied.
+-71.82344,-39.25797,"269","39","Campos, H.","49.07","Río Liucura (c.a. 300m above sea level (table 1, fig. 2) and 35km from its origin (fig. 2))",Rhithron type river.,The position of the point is approximate.,1979-1980,Trichomycterus areolatus,16.5 % of all specimens collected in rhithron type rivers. Present in 27% of the rivers studied.
+-71.82344,-39.25797,"269","39","Campos, H.","49.07","Río Liucura (c.a. 300m above sea level (table 1, fig. 2) and 35km from its origin (fig. 2))",Rhithron type river.,The position of the point is approximate.,1979-1980,Trichomycterus areolatus,16.5 % of all specimens collected in rhithron type rivers. Present in 27% of the rivers studied.
+-72.22067,-39.33750,"270","39","Campos, H.","49.08",Río Voipir (c.a. 300m above sea level (fig. 2) and > 40km from its origin (?) (fig. 2)),Rhithron type river.,The position of the point is not accurate.,1979-1980,Trichomycterus areolatus,16.5 % of all specimens collected in rhithron type rivers. Present in 27% of the rivers studied.
+-72.22067,-39.33750,"270","39","Campos, H.","49.08",Río Voipir (c.a. 300m above sea level (fig. 2) and > 40km from its origin (?) (fig. 2)),Rhithron type river.,The position of the point is not accurate.,1979-1980,Trichomycterus areolatus,16.5 % of all specimens collected in rhithron type rivers. Present in 27% of the rivers studied.
+-72.06809,-38.95243,"271","39","Campos, H.","49.09",Río Allipen (c.a. 290m above sea level (table 1) and 70km from its origin (fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Salmo trutta,6.2% of all specimens collected in rhithron type rivers. Present in 30% of the rivers studied.
+-72.06809,-38.95243,"271","39","Campos, H.","49.09",Río Allipen (c.a. 290m above sea level (table 1) and 70km from its origin (fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Salmo trutta,6.2% of all specimens collected in rhithron type rivers. Present in 30% of the rivers studied.
+-71.89994,-39.70496,"272","39","Campos, H.","49.10",Río Cua-cua (c.a. 230m above sea level (table 1) and 25km from its origin (fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Aplochiton zebra,18.5 % of all specimens collected in rhithron type rivers. Present in 23% of the rivers studied.
+-71.89994,-39.70496,"272","39","Campos, H.","49.10",Río Cua-cua (c.a. 230m above sea level (table 1) and 25km from its origin (fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Aplochiton zebra,18.5 % of all specimens collected in rhithron type rivers. Present in 23% of the rivers studied.
+-72.13412,-39.76167,"273","39","Campos, H.","49.11",Río Puñir (c.a. 210m above sea level (table 1) and 18km from its origin (?) (fig. 2)),Rhithron type river.,The position of the point not accurate.,1979-1980,Percilia gillissi,9 % of all specimens collected in rhithron type rivers. Present in 20% of the rivers studied.
+-72.13412,-39.76167,"273","39","Campos, H.","49.11",Río Puñir (c.a. 210m above sea level (table 1) and 18km from its origin (?) (fig. 2)),Rhithron type river.,The position of the point not accurate.,1979-1980,Percilia gillissi,9 % of all specimens collected in rhithron type rivers. Present in 20% of the rivers studied.
+-71.95402,-39.57892,"274","39","Campos, H.","49.14",Río Llancahue (c.a. 260m above sea level (table 1) and 25km from its origin (fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Aplochiton zebra,18.5 % of all specimens collected in rhithron type rivers. Present in 23% of the rivers studied.
+-71.95402,-39.57892,"274","39","Campos, H.","49.14",Río Llancahue (c.a. 260m above sea level (table 1) and 25km from its origin (fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Aplochiton zebra,18.5 % of all specimens collected in rhithron type rivers. Present in 23% of the rivers studied.
+-72.11777,-39.77906,"275","39","Campos, H.","49.15",Río Reca (c.a. 130m above sea level (table 1) and 18km from its origin (fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Trichomycterus areolatus,16.5 % of all specimens collected in rhithron type rivers. Present in 27% of the rivers studied.
+-72.11777,-39.77906,"275","39","Campos, H.","49.15",Río Reca (c.a. 130m above sea level (table 1) and 18km from its origin (fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Trichomycterus areolatus,16.5 % of all specimens collected in rhithron type rivers. Present in 27% of the rivers studied.
+-72.34531,-40.11495,"276","39","Campos, H.","49.17",Río Quimán (c.a. 100m above sea level (table 1) and 10km from its origin (fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Aplochiton zebra,18.5 % of all specimens collected in rhithron type rivers. Present in 23% of the rivers studied.
+-72.34531,-40.11495,"276","39","Campos, H.","49.17",Río Quimán (c.a. 100m above sea level (table 1) and 10km from its origin (fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Aplochiton zebra,18.5 % of all specimens collected in rhithron type rivers. Present in 23% of the rivers studied.
+-72.34667,-40.89204,"277","39","Campos, H.","49.18",Río Callao (c.a. 180m above sea level (table 1) and 12km from its origin (?) (fig. 2)),Rhithron type river.,The position of the point is not accurate.,1979-1980,Aplochiton zebra,18.5 % of all specimens collected in rhithron type rivers. Present in 23% of the rivers studied.
+-72.34667,-40.89204,"277","39","Campos, H.","49.18",Río Callao (c.a. 180m above sea level (table 1) and 12km from its origin (?) (fig. 2)),Rhithron type river.,The position of the point is not accurate.,1979-1980,Aplochiton zebra,18.5 % of all specimens collected in rhithron type rivers. Present in 23% of the rivers studied.
+-72.12398,-40.20905,"278","39","Campos, H.","49.19",Río Curinilahue (c.a. 110m above sea level (table 1) and 22km from its origin (fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Trichomycterus areolatus,16.5 % of all specimens collected in rhithron type rivers. Present in 27% of the rivers studied.
+-72.12398,-40.20905,"278","39","Campos, H.","49.19",Río Curinilahue (c.a. 110m above sea level (table 1) and 22km from its origin (fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Trichomycterus areolatus,16.5 % of all specimens collected in rhithron type rivers. Present in 27% of the rivers studied.
+-72.42917,-40.89661,"279","39","Campos, H.","49.20",Río Bonito (c.a. 190m above sea level (table 1) and 26km from its origin (fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Percilia gillissi,9 % of all specimens collected in rhithron type rivers. Present in 20% of the rivers studied.
+-72.42917,-40.89661,"279","39","Campos, H.","49.20",Río Bonito (c.a. 190m above sea level (table 1) and 26km from its origin (fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Percilia gillissi,9 % of all specimens collected in rhithron type rivers. Present in 20% of the rivers studied.
+-72.11728,-40.65599,"280","39","Campos, H.","49.22",Río Gol-gol (c.a. 22km from its origin (fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Aplochiton zebra,18.5 % of all specimens collected in rhithron type rivers. Present in 23% of the rivers studied.
+-72.11728,-40.65599,"280","39","Campos, H.","49.22",Río Gol-gol (c.a. 22km from its origin (fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Aplochiton zebra,18.5 % of all specimens collected in rhithron type rivers. Present in 23% of the rivers studied.
+-72.33384,-40.70145,"281","39","Campos, H.","49.23",Río Chanlelfu (c.a. 240m above sea level (table 1) and 42km from its origin (?) (fig. 2)),Rhithron type river.,The position of the point is not accurate.,1979-1980,Oncorhynchus mykiss,48 % of all specimens collected in rhithron type rivers. Present in 80% of the rivers studied.
+-72.33384,-40.70145,"281","39","Campos, H.","49.23",Río Chanlelfu (c.a. 240m above sea level (table 1) and 42km from its origin (?) (fig. 2)),Rhithron type river.,The position of the point is not accurate.,1979-1980,Oncorhynchus mykiss,48 % of all specimens collected in rhithron type rivers. Present in 80% of the rivers studied.
+-72.73440,-40.46197,"282","39","Campos, H.","49.25",Río Cuyaima (c.a. 100m above sea level (table 1) and 50km from its origin (?) (fig. 2)),Rhithron type river.,The position of the point is not accurate.,1979-1980,Oncorhynchus mykiss,48 % of all specimens collected in rhithron type rivers. Present in 80% of the rivers studied.
+-72.73440,-40.46197,"282","39","Campos, H.","49.25",Río Cuyaima (c.a. 100m above sea level (table 1) and 50km from its origin (?) (fig. 2)),Rhithron type river.,The position of the point is not accurate.,1979-1980,Oncorhynchus mykiss,48 % of all specimens collected in rhithron type rivers. Present in 80% of the rivers studied.
+-72.62064,-41.22900,"283","39","Campos, H.","49.27",Río Blanco (south) (c.a. 90m above sea level (table 1) and 13km from its origin (fig. 2)),Rhithron type river.,The position of the point is not accurate.,1979-1980,Oncorhynchus mykiss,48 % of all specimens collected in rhithron type rivers. Present in 80% of the rivers studied.
+-72.62064,-41.22900,"283","39","Campos, H.","49.27",Río Blanco (south) (c.a. 90m above sea level (table 1) and 13km from its origin (fig. 2)),Rhithron type river.,The position of the point is not accurate.,1979-1980,Oncorhynchus mykiss,48 % of all specimens collected in rhithron type rivers. Present in 80% of the rivers studied.
+-72.75768,-41.27929,"284","39","Campos, H.","49.28",Río Sur (c.a. 150m above sea level (table 1) and 14km from its origin (fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Salmo trutta,6.2% of all specimens collected in rhithron type rivers. Present in 30% of the rivers studied.
+-72.75768,-41.27929,"284","39","Campos, H.","49.28",Río Sur (c.a. 150m above sea level (table 1) and 14km from its origin (fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Salmo trutta,6.2% of all specimens collected in rhithron type rivers. Present in 30% of the rivers studied.
+-72.59509,-41.23143,"285","39","Campos, H.","49.29",Río Tepu (c.a. 90m above sea level (table 1) and 16km from its origin (fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Galaxias platei,
+-72.59509,-41.23143,"285","39","Campos, H.","49.29",Río Tepu (c.a. 90m above sea level (table 1) and 16km from its origin (fig. 2)),Rhithron type river.,The position of the point is approximate.,1979-1980,Galaxias platei,
+-73.07236,-38.73746,"286","39","Campos, H.","49.30","Río Imperial (c.a. 15 m above sea level (table 1), potamon)",Potamon type river.,The position of the point is not accurate.,1979-1980,Galaxias maculatus,?
+-73.08546,-39.01535,"287","39","Campos, H.","49.31","Río Tolten (c.a. 2 m above sea level (table 1), potamon)",Potamon type river.,The position of the point is not accurate.,1979-1980,Galaxias maculatus,?
+-73.26076,-39.83192,"288","39","Campos, H.","49.32","Río Valdivia (c.a. 2 m above sea level (table 1), potamon)",Potamon type river.,The position of the point is not accurate.,1979-1980,Cheirodon australe,?
+-73.19291,-40.34853,"289","39","Campos, H.","49.33","Río Bueno (c.a. 20 m above sea level (table 1), potamon)",Potamon type river.,The position of the point is not accurate.,1979-1980,Galaxias maculatus,?
+-73.33124,-41.50568,"290","39","Campos, H.","49.34","Río Maullin (c.a. 7 m above sea level (table 1), potamon)",Potamon type river.,The position of the point is not accurate.,1979-1980,Galaxias maculatus,?
+-73.13926,-39.72902,"291","39","Campos, H.","49.35","Wetlands of Río Cayumapu (c.a. 7 m above sea level (table 1), potamon)",Wetland.,The position of the point is not accurate.,1979-1980,Brachygalaxias bullocki,?
+-73.22936,-39.87985,"292","39","Campos, H.","49.36","Wetlands of Río Cayumapu (c.a. 7 m above sea level (table 1), potamon)",Wetland.,The position of the point is not accurate.,1979-1980,Gambusia affinis holbrooki,?
+-71.72058,-37.77056,"293","40","Ruiz, VH., MT López, HI Moyano y M Man","29.01",Rañilhuenco (estación 1),"Same data published in: Ruiz, VH. and T. Berra 1994. Ichthyol. Exlor. Freshwaters 5(1): 5-18.",,1988-1990,Diplomystes nahuelbutaensis,"13,11"
+-71.67872,-37.82772,"294","40","Ruiz, VH., MT López, HI Moyano y M Man","29.02",Queuco (desembocadura del río Queuco en el Biobío) (estación 2),"Same data published in: Ruiz, VH. and T. Berra 1994. Ichthyol. Exlor. Freshwaters 5(1): 5-18.",,1988-1990,Percichthys trucha,"33,33"
+-71.66205,-37.86976,"295","40","Ruiz, VH., MT López, HI Moyano y M Man","29.03",Balseadero Callaqui (estación 3),"Same data published in: Ruiz, VH. and T. Berra 1994. Ichthyol. Exlor. Freshwaters 5(1): 5-18.",The position of the point is approximate.,1988-1990,Cheirodon galusdae,"14,29"
+-71.61867,-37.89551,"296","40","Ruiz, VH., MT López, HI Moyano y M Man","29.04",Pangue (estación 4),"Same data published in: Ruiz, VH. and T. Berra 1994. Ichthyol. Exlor. Freshwaters 5(1): 5-18.",The position of the point is approximate.,1988-1990,Basilichthys australis,"62,5"
+-71.56925,-37.95277,"297","40","Ruiz, VH., MT López, HI Moyano y M Man","29.05",Ralco (estación 5),"Same data published in: Ruiz, VH. and T. Berra 1994. Ichthyol. Exlor. Freshwaters 5(1): 5-18.",The position of the point is approximate.,1988-1990,Trichomycterus areolatus,"17,07"
+-71.46621,-38.04682,"298","40","Ruiz, VH., MT López, HI Moyano y M Man","29.06",El Saltillo (entre Ralco y Lepoy) (estación 6),"Same data published in: Ruiz, VH. and T. Berra 1994. Ichthyol. Exlor. Freshwaters 5(1): 5-18.",The position of the point is approximate.,1988-1990,Oncorhynchus mykiss,"100"
+-71.39711,-38.09797,"299","40","Ruiz, VH., MT López, HI Moyano y M Man","29.07",Lomín (estación 7),"Same data published in: Ruiz, VH. and T. Berra 1994. Ichthyol. Exlor. Freshwaters 5(1): 5-18.",,1988-1990,Bullockia maldonadoi,"12,5"
+-71.23281,-38.43366,"300","40","Ruiz, VH., MT López, HI Moyano y M Man","29.08",La Junta (Desembocadura río Lonquimay en el Biobío) (estación 8),"Same data published in: Ruiz, VH. and T. Berra 1994. Ichthyol. Exlor. Freshwaters 5(1): 5-18.",,1988-1990,Bullockia maldonadoi,"5,81"
+-71.27714,-38.68564,"301","40","Ruiz, VH., MT López, HI Moyano y M Man","29.09",Lago Galletué (estación 9),"Same data published in: Ruiz, VH. and T. Berra 1994. Ichthyol. Exlor. Freshwaters 5(1): 5-18.",,1988-1990,Trichomycterus areolatus,"4"
+-71.28263,-38.80043,"302","40","Ruiz, VH., MT López, HI Moyano y M Man","29.10",Lago Icalma (estación 10),"Same data published in: Ruiz, VH. and T. Berra 1994. Ichthyol. Exlor. Freshwaters 5(1): 5-18.",,1988-1990,Aplochiton zebra,"8,7"
+-71.56965,-33.68589,"303","41",Urzúa et al.,"40.01",Between Cuncumén and Tejas Verdes.,,The position of the point is not accurate.,"1969, 1970",Basilichthys australis,?
+-71.07985,-33.70867,"304","42",Moreno y Moran,"41.01",Río Maipo (?),Specific sampling sites and collection dates were not reported.,,1986 (?),Pygidium (Trichomycterus) aerolatum,?
+-70.39968,-34.36935,"305","43",Geotécnica Consultores,"58.01",Río Cipreses (site 9),,Doublecheck,"1994",Oncorhynchus mykiss,"100"
+-70.39968,-34.36935,"305","43",Geotécnica Consultores,"58.01",Río Cipreses (site 9),,Doublecheck,"1994",Oncorhynchus mykiss,"100"
+-70.40187,-34.33918,"306","43",Geotécnica Consultores,"58.02",Río Cipreses (site 11),,,"1994; 1995",Salmo trutta,"50"
+-70.40187,-34.33918,"306","43",Geotécnica Consultores,"58.02",Río Cipreses (site 11),,,"1994; 1995",Salmo trutta,"50"
+-70.40148,-34.33395,"307","43",Geotécnica Consultores,"58.03",Río Cipreses (site 12),,,"1994; 1995",Trichomycterus areolatus,"96"
+-70.40148,-34.33395,"307","43",Geotécnica Consultores,"58.03",Río Cipreses (site 12),,,"1994; 1995",Trichomycterus areolatus,"96"
+-70.40705,-34.32878,"308","43",Geotécnica Consultores,"58.04",Río Cipreses (site 13),,,"1994; 1995",Trichomycterus areolatus,"85,7"
+-70.40705,-34.32878,"308","43",Geotécnica Consultores,"58.04",Río Cipreses (site 13),,,"1994; 1995",Trichomycterus areolatus,"85,7"
+-70.32448,-34.38037,"309","43",Geotécnica Consultores,"58.05",Río Cortadral (site 4),,,"1995",Salmo trutta,"46,7"
+-70.32448,-34.38037,"309","43",Geotécnica Consultores,"58.05",Río Cortadral (site 4),,,"1995",Salmo trutta,"46,7"
+-70.32296,-34.37649,"310","43",Geotécnica Consultores,"58.06",Río Cortadral (site 5),,,"1995",Salvelinus fontinalis,"2,6"
+-70.32296,-34.37649,"310","43",Geotécnica Consultores,"58.06",Río Cortadral (site 5),,,"1995",Salvelinus fontinalis,"2,6"
+-70.89536,-33.63283,"311","44",Capella J.,"53.01","Aguas Claras, Peñaflor (33°37´S, 70°51´W).",,The position of the point is approximate.,"1990",Basilichthys australis,?
+-72.63255,-39.37688,"312","45",Celulosa Arauco y Constitución S.A.,"30.01",Estación 1: a la salida de ciudad de Loncoche,,,"1995",Geotria australis,"25,43859649"
+-72.63255,-39.37688,"312","45",Celulosa Arauco y Constitución S.A.,"30.01",Estación 1: a la salida de ciudad de Loncoche,,,"1995",Geotria australis,"25,43859649"
+-72.81490,-39.48046,"313","45",Celulosa Arauco y Constitución S.A.,"30.02","Estación 2: a la salida de la ciudad de Lanco, 2 km más abajo de puente Negro.",,,"1995",Geotria australis,"5,357142857"
+-72.81490,-39.48046,"313","45",Celulosa Arauco y Constitución S.A.,"30.02","Estación 2: a la salida de la ciudad de Lanco, 2 km más abajo de puente Negro.",,,"1995",Geotria australis,"5,357142857"
+-72.89117,-39.55756,"314","45",Celulosa Arauco y Constitución S.A.,"30.03",Estación 3: sector Rucaco (sitio del proyecto).,,,"1995",Geotria australis,"12"
+-72.89117,-39.55756,"314","45",Celulosa Arauco y Constitución S.A.,"30.03",Estación 3: sector Rucaco (sitio del proyecto).,,,"1995",Geotria australis,"12"
+-72.95246,-39.54621,"315","45",Celulosa Arauco y Constitución S.A.,"30.04",Estación 4: antes de la ciudad de San José de la Mariquina.,,,"1995",Geotria australis,"8"
+-72.95246,-39.54621,"315","45",Celulosa Arauco y Constitución S.A.,"30.04",Estación 4: antes de la ciudad de San José de la Mariquina.,,,"1995",Geotria australis,"8"
+-72.97813,-39.54729,"316","45",Celulosa Arauco y Constitución S.A.,"30.05",Estación 5: después de la ciudad de San José de la Mariquina.,,,"1995",Geotria australis,"14,28571429"
+-72.97813,-39.54729,"316","45",Celulosa Arauco y Constitución S.A.,"30.05",Estación 5: después de la ciudad de San José de la Mariquina.,,,"1995",Geotria australis,"14,28571429"
+-73.18187,-39.65378,"317","45",Celulosa Arauco y Constitución S.A.,"30.06",Estación 6: al ingreso del humedal río Cruces.,,,"1995",Cyprinus carpio,"1,315789474"
+-73.18187,-39.65378,"317","45",Celulosa Arauco y Constitución S.A.,"30.06",Estación 6: al ingreso del humedal río Cruces.,,,"1995",Cyprinus carpio,"1,315789474"
+-73.19550,-39.71912,"318","45",Celulosa Arauco y Constitución S.A.,"30.07",Estación 7: en el medio del humedal río Cruces.,,,"1995",Tinca tinca,"0,892857143"
+-73.19550,-39.71912,"318","45",Celulosa Arauco y Constitución S.A.,"30.07",Estación 7: en el medio del humedal río Cruces.,,,"1995",Tinca tinca,"0,892857143"
+-71.96793,-37.29701,"319","46","Habit, E., P. Victoriano, O. Parra","31.01",Río Laja en Tucapel (sitio 1),"The paper only reports three native species that were translocated upstream in the Laja River during a management program; thus additional species that might have been caught were omitted.",,"2001",Percilia irwini,64.09 (see note)
+-71.96793,-37.29701,"319","46","Habit, E., P. Victoriano, O. Parra","31.01",Río Laja en Tucapel (sitio 1),"The paper only reports three native species that were translocated upstream in the Laja River during a management program; thus additional species that might have been caught were omitted.",,"2001",Percilia irwini,64.09 (see note)
+-72.00013,-37.25254,"320","46","Habit, E., P. Victoriano, O. Parra","31.02",Río Laja en Cruz de Piedra (sitio 2),"The paper only reports three native species that were translocated upstream in the Laja River during a management program; thus additional species that might have been caught were omitted.",,"2001",Percilia irwini,69.55 (see note)
+-72.00013,-37.25254,"320","46","Habit, E., P. Victoriano, O. Parra","31.02",Río Laja en Cruz de Piedra (sitio 2),"The paper only reports three native species that were translocated upstream in the Laja River during a management program; thus additional species that might have been caught were omitted.",,"2001",Percilia irwini,69.55 (see note)
+-72.06280,-37.18975,"321","46","Habit, E., P. Victoriano, O. Parra","31.03",Río Laja en Siberia (sitio 3),"The paper only reports three native species that were translocated upstream in the Laja River during a management program; thus additional species that might have been caught were omitted.",,"2001",Percilia irwini,1.99 (see note)
+-72.06280,-37.18975,"321","46","Habit, E., P. Victoriano, O. Parra","31.03",Río Laja en Siberia (sitio 3),"The paper only reports three native species that were translocated upstream in the Laja River during a management program; thus additional species that might have been caught were omitted.",,"2001",Percilia irwini,1.99 (see note)
+-72.15020,-37.17949,"322","46","Habit, E., P. Victoriano, O. Parra","31.04",Río Laja en El Roble (sitio 4),"The paper only reports three native species that were translocated upstream in the Laja River during a management program; thus additional species that might have been caught were omitted.",,"2001",Percilia irwini,42.63 (see note)
+-72.15020,-37.17949,"322","46","Habit, E., P. Victoriano, O. Parra","31.04",Río Laja en El Roble (sitio 4),"The paper only reports three native species that were translocated upstream in the Laja River during a management program; thus additional species that might have been caught were omitted.",,"2001",Percilia irwini,42.63 (see note)
+-72.01165,-37.17742,"323","47","Habit, Evelyn","32.01","Río Huépil, previo a la confluencia con el río Cholguan (estaión 1)",Only Percilia guillisi was analyzed in this study.,,"1994, 1995",Percilia gillissi,
+-72.01165,-37.17742,"323","47","Habit, Evelyn","32.01","Río Huépil, previo a la confluencia con el río Cholguan (estaión 1)",Only Percilia guillisi was analyzed in this study.,,"1994, 1995",Percilia gillissi,
+-72.07005,-37.15763,"324","47","Habit, Evelyn","32.02","Río Itata, sector de Cholguán (estación 2)",Only Percilia guillisi was analyzed in this study. September and December's samplings yielded no caught.,,"1994, 1995",Percilia gillissi,
+-72.07005,-37.15763,"324","47","Habit, Evelyn","32.02","Río Itata, sector de Cholguán (estación 2)",Only Percilia guillisi was analyzed in this study. September and December's samplings yielded no caught.,,"1994, 1995",Percilia gillissi,
+-73.02648,-36.74218,"325","48","Ruiz, Victor H.","33.01",Estuario y desembocadura de río Andalien (estacion 1),"Estuary. In spring/summer, wide sand banks are formed and occupied by sea birds.",,"1986",Oncorhynchus mykiss,"0,722021661"
+-73.04441,-36.76462,"326","48","Ruiz, Victor H.","33.02",Río Andalien frente a Carriel Sur (estación 1-2),Estuary.,,"1986",Percichthys trucha,"1,061007958"
+-73.03980,-36.77837,"327","48","Ruiz, Victor H.","33.03",Río Andalien a 500m de la antigua estación de ferrocarríl Cosmito (estación 2),Potamon.,The position of the point is not accurate.,"1986",Mugil cephalus,"51,9379845"
+-73.02979,-36.79873,"328","48","Ruiz, Victor H.","33.04",Río Andalien entre puentes carretero y ferroviario del camino a Penco (estación 3),Potamon. It is observed a great anthropogenic influence (pollution).,,"1986",Percilia irwini,"23,63636364"
+-73.01724,-36.81668,"329","48","Ruiz, Victor H.","33.05",Río Andalien en desembocadura con Estero Nonguén (estación 4),Potamon. It is observed a great anthropogenic influence (pollution). (15 m above the level of the sea),,"1986",Trichomycterus areolatus,"0,900900901"
+-72.98832,-36.81025,"330","48","Ruiz, Victor H.","33.06",Estero Ulloas (estación 5).,Potamon.,,"1986",Gambusia affinis,?
+-72.94252,-36.79766,"331","48","Ruiz, Victor H.","33.07","Río Andalien, 13 km antes de Chaminávida (estación 6)",Potamon.,,"1986",Trichomycterus areolatus,"9,871244635"
+-72.80686,-36.88276,"332","48","Ruiz, Victor H.","33.08",Estero Cangrejillo (estación 7),Potamon. (See table III of Ruiz 1993),,"1986",Percilia gillissi,?
+-72.92124,-36.82972,"333","48","Ruiz, Victor H.","33.09","Estero Queule, junto a puente 1 (camino a bulnes) (estación 8)",Potamon. Samplings yielded no captures.,,"1986",no capture,
+-72.90852,-36.82562,"334","48","Ruiz, Victor H.","33.10","Estero Chaminavida, entre puente y desembocadura con río Andalien (estación 9)",Potamon.,,"1986",Trichomycterus areolatus,"2,18579235"
+-72.88911,-36.81753,"335","48","Ruiz, Victor H.","33.11","Río Andalien, cercanías del puente 5 camino a Bulnes (estación 9-10).",Rithron.,,"1986",Trichomycterus areolatus,"55,17241379"
+-72.85595,-36.81662,"336","48","Ruiz, Victor H.","33.12","Río Andalien, a 4.2 km de la cabecera del río (estación 10)",Rithron.,,"1986",Trichomycterus areolatus,"2,523659306"
+-72.80154,-36.76690,"337","48","Ruiz, Victor H.","33.13","Estro Poñén, a 1.5 km de su nacimiento (estación 11)",Rithron.,,"1986",Trichomycterus areolatus,"13,95348837"
+-72.80351,-36.82175,"338","48","Ruiz, Victor H.","33.14","Estero Curapalihue, 5.45 km al noreste de su nacimiento (estación 12)",Rithron.,,"1986",Trichomycterus areolatus,"7,878787879"
+-72.78644,-36.81630,"339","48","Ruiz, Victor H.","33.15",Estero Paso Ancho a 6.75 km del nacimiento del río Andalien (estación 13),Rithron.,,"1986",Trichomycterus areolatus,"15,625"
+-70.08886,-34.08676,"340","49","Duarte W., R. Feito, C. Jara, C. Moreno y  AE Orellana","38.01",Río Maipo en Puente de Tierra,,,"1969",Salmo trutta,?
+-70.21894,-33.93599,"341","49","Duarte W., R. Feito, C. Jara, C. Moreno y  AE Orellana","38.02",El Extravío (afluente del R. Maipo),,,"1968",Salmo trutta,?
+-70.20477,-33.84262,"342","49","Duarte W., R. Feito, C. Jara, C. Moreno y  AE Orellana","38.03",Río Maipo en Las Melosas,,,1968-1969,Salmo trutta,?
+-70.17026,-33.81315,"343","49","Duarte W., R. Feito, C. Jara, C. Moreno y  AE Orellana","38.04",El Volcán (afluente del R. Maipo),,,1968-1969,no capture,?
+-70.08223,-33.64945,"344","49","Duarte W., R. Feito, C. Jara, C. Moreno y  AE Orellana","38.05",El Yeso (afluente del R. Maipo),,,1968-1969,Salmo trutta,?
+-70.36824,-33.74384,"345","49","Duarte W., R. Feito, C. Jara, C. Moreno y  AE Orellana","38.06",Estero Coyanco (afluente del R. Maipo),,,"1969",Trichomycterus areolatus,?
+-70.35739,-33.66127,"346","49","Duarte W., R. Feito, C. Jara, C. Moreno y  AE Orellana","38.07",Río Maipo en El Toyo,,,"1968",Trichomycterus areolatus,?
+-70.36442,-33.62488,"347","49","Duarte W., R. Feito, C. Jara, C. Moreno y  AE Orellana","38.08",Las Monjas (afluente del R. Maipo),,"The position of the point is not accurate; should be at Las Monjas.",1968-1969,Trichomycterus areolatus,?
+-70.40289,-33.53639,"348","49","Duarte W., R. Feito, C. Jara, C. Moreno y  AE Orellana","38.09",El Manzano (afluente del R. Maipo),,,1968-1969,Trichomycterus areolatus,?
+-70.46621,-33.59068,"349","49","Duarte W., R. Feito, C. Jara, C. Moreno y  AE Orellana","38.10",Río Maipo en La Obra,,,1968-1969,Trichomycterus areolatus,?
+-70.53005,-33.70353,"350","49","Duarte W., R. Feito, C. Jara, C. Moreno y  AE Orellana","38.11",Estero Clarillo (afluente del R. Maipo),,,"1968",Trichomycterus areolatus,?
+-70.57153,-33.62504,"351","49","Duarte W., R. Feito, C. Jara, C. Moreno y  AE Orellana","38.12",Río Maipo en Pirque,,,"1968",no capture,?
+-70.79643,-33.83834,"352","49","Duarte W., R. Feito, C. Jara, C. Moreno y  AE Orellana","38.13",Angostura (afluente del R. Maipo),,,"1969",Nematogenys inermis,?
+-70.92283,-33.75928,"353","49","Duarte W., R. Feito, C. Jara, C. Moreno y  AE Orellana","38.14",Río Maipo en Isla de Maipo,,,1968-1969,Gambusia affinis,?
+-70.86830,-33.28093,"354","49","Duarte W., R. Feito, C. Jara, C. Moreno y  AE Orellana","38.15",Lampa (afluente del R. Maipo),,,"1969",Gambusia affinis,?
+-70.84150,-33.38628,"355","49","Duarte W., R. Feito, C. Jara, C. Moreno y  AE Orellana","38.16",Pudahuel (afluente del R. Maipo),,,"1969",Ictalurus nebulosus,?
+-70.90716,-33.60051,"356","49","Duarte W., R. Feito, C. Jara, C. Moreno y  AE Orellana","38.17",Peñaflor (afluente del R. Maipo),,,"1969",Gambusia affinis,?
+-70.93549,-33.65743,"357","49","Duarte W., R. Feito, C. Jara, C. Moreno y  AE Orellana","38.18",Talagante (afluente del R. Maipo),,,1968-1969,Gambusia affinis,?
+-71.20630,-33.71276,"358","49","Duarte W., R. Feito, C. Jara, C. Moreno y  AE Orellana","38.19",Río Maipo en Chocalán,,,1968-1969,Gambusia affinis,?
+-71.33616,-33.66114,"359","49","Duarte W., R. Feito, C. Jara, C. Moreno y  AE Orellana","38.20",Puangue (afluente del R. Maipo),,,1968-1969,Gambusia affinis,?
+-71.45161,-33.78542,"360","49","Duarte W., R. Feito, C. Jara, C. Moreno y  AE Orellana","38.21",Río Maipo en Cuncumén,,,1968-1969,Gambusia affinis,?
+-71.60584,-33.62819,"361","49","Duarte W., R. Feito, C. Jara, C. Moreno y  AE Orellana","38.22",Río Maipo en Tejas Verdes,,,1968-1969,Odontesthes (cauque) De Buen,?
+-72.98062,-45.21126,"362","50",Centro de Ecología Aplicada Ltda.,"07.01",Lago Meullín at the drainage.,,,"2001",Galaxias platei,"100"
+-73.02396,-45.30376,"363","50",Centro de Ecología Aplicada Ltda.,"07.02",Río Cuervo upstream from Río Marta,,,"2001",Galaxias platei,"100"
+-73.04489,-45.34709,"364","50",Centro de Ecología Aplicada Ltda.,"07.03",Río Cuervo down stream from Río Marta,,,"2001",Oncorhynchus tshawytscha,"100"
+-73.05435,-45.35349,"365","50",Centro de Ecología Aplicada Ltda.,"07.04",Río Cuervo down stream from Río Marta,,,"2001",,"92,4"
+-72.82930,-45.11141,"366","50",Centro de Ecología Aplicada Ltda.,"08.01",Lago Youlton en Ensenada Barrientos (SLAY-2),,,2000 (?),Galaxias platei,"100"
+-72.82930,-45.11141,"366","50",Centro de Ecología Aplicada Ltda.,"08.01",Lago Youlton en Ensenada Barrientos (SLAY-2),,,2000 (?),Galaxias platei,"100"
+-72.91149,-45.14790,"367","50",Centro de Ecología Aplicada Ltda.,"08.02",Lago Youlton frente a Laguna Quetro (SLAY-3),,,2000 (?),Galaxias platei,"100"
+-72.85770,-45.08349,"368","50",Centro de Ecología Aplicada Ltda.,"08.03",Lago Youlton aguas abajo Estero Capillan (SLY-2),,,2000 (?),Galaxias platei,"100"
+-72.97011,-45.14140,"369","50",Centro de Ecología Aplicada Ltda.,"08.04",Lago Youlton en desembocadura (SLY-1),,,2000 (?),Galaxias platei,"100"
+-72.97011,-45.14140,"369","50",Centro de Ecología Aplicada Ltda.,"08.04",Lago Youlton en desembocadura (SLY-1),,,2000 (?),Galaxias platei,"100"
+-72.97382,-45.16812,"370","50",Centro de Ecología Aplicada Ltda.,"08.05",Lago Youlton en desembocadura Lago Youlton (SRME-1),,,2000 (?),Galaxias platei,"100"
+-72.96376,-45.56128,"371","50",Centro de Ecología Aplicada Ltda.,"08.06",Lago Condor (SLCO-7),,,2000 (?),Aplochiton zebra,"0,93"
+-72.96376,-45.56128,"371","50",Centro de Ecología Aplicada Ltda.,"08.06",Lago Condor (SLCO-7),,,2000 (?),Aplochiton zebra,"0,93"
+-72.96792,-45.59743,"372","50",Centro de Ecología Aplicada Ltda.,"08.07",Lago Condor (SLCO-2),,,2000 (?),Aplochiton zebra,"23,53"
+-72.96792,-45.59743,"372","50",Centro de Ecología Aplicada Ltda.,"08.07",Lago Condor (SLCO-2),,,2000 (?),Aplochiton zebra,"23,53"
+-72.67735,-45.49821,"373","50",Centro de Ecología Aplicada Ltda.,"08.08",Lago Riesco en desembocadura (SLR-1),,,2000 (?),Galaxias maculatus,"50"
+-72.67735,-45.49821,"373","50",Centro de Ecología Aplicada Ltda.,"08.08",Lago Riesco en desembocadura (SLR-1),,,2000 (?),Galaxias maculatus,"50"
+-72.51029,-45.79312,"374","50",Centro de Ecología Aplicada Ltda.,"08.09",Lago Caro en cubeta oriente (SRB-9),,The position of the point is not accurate.,2000 (?),Aplochiton zebra,"28"
+-72.17475,-45.77066,"375","50",Centro de Ecología Aplicada Ltda.,"08.10",Lago Elizalde en cubeta Oriente (SRB-10),,,2000 (?),Galaxias platei,"11,11"
+-72.58969,-45.42742,"376","50",Centro de Ecología Aplicada Ltda.,"08.11",Río Blanco abajo en desembocadura (SRB-1),,,2000 (?),Geotria australis,"3,33"
+-72.58969,-45.42742,"376","50",Centro de Ecología Aplicada Ltda.,"08.11",Río Blanco abajo en desembocadura (SRB-1),,,2000 (?),Geotria australis,"3,33"
+-72.61971,-45.47016,"377","50",Centro de Ecología Aplicada Ltda.,"08.12",Río Blanco abajo en sector de balseo (SRB-2),,,2000 (?),Galaxias maculatus,"16,67"
+-72.61971,-45.47016,"377","50",Centro de Ecología Aplicada Ltda.,"08.12",Río Blanco abajo en sector de balseo (SRB-2),,,2000 (?),Galaxias maculatus,"16,67"
+-72.66490,-45.54027,"378","50",Centro de Ecología Aplicada Ltda.,"08.13","Río Blanco abajo en ""El Perdido"" (SRB-3)",,,2000 (?),Salmo trutta,"100"
+-72.66490,-45.54027,"378","50",Centro de Ecología Aplicada Ltda.,"08.13","Río Blanco abajo en ""El Perdido"" (SRB-3)",,,2000 (?),Salmo trutta,"100"
+-72.61708,-45.58148,"379","50",Centro de Ecología Aplicada Ltda.,"08.14",Río Blanco arriba antes de los rápidos (SRB-4),,,2000 (?),Salmo trutta,"100"
+-72.61708,-45.58148,"379","50",Centro de Ecología Aplicada Ltda.,"08.14",Río Blanco arriba antes de los rápidos (SRB-4),,,2000 (?),Salmo trutta,"100"
+-72.60481,-45.64964,"380","50",Centro de Ecología Aplicada Ltda.,"08.15","Río Blanco arriba, bajo Río Bongo (SRB-5)",,,2000 (?),Salmo trutta,"95,45"
+-72.60481,-45.64964,"380","50",Centro de Ecología Aplicada Ltda.,"08.15","Río Blanco arriba, bajo Río Bongo (SRB-5)",,,2000 (?),Salmo trutta,"95,45"
+-72.59777,-45.69026,"381","50",Centro de Ecología Aplicada Ltda.,"08.16","Río Blanco arriba, 4 -5 Km arriba de Río Bongo (SRB-6)",,,2000 (?),Salmo trutta,"95,45"
+-72.87521,-45.47904,"382","50",Centro de Ecología Aplicada Ltda.,"08.17",Río Candelaria en Desembocadura (SRP-5),,,2000 (?),Eleginops maclovinus,"66,67"
+-72.83725,-45.48985,"383","50",Centro de Ecología Aplicada Ltda.,"08.18",Estero Dingle arriba (SRP-4),,,2000 (?),Oncorhynchus mykiss,"100"
+-72.83725,-45.48985,"383","50",Centro de Ecología Aplicada Ltda.,"08.18",Estero Dingle arriba (SRP-4),,,2000 (?),Oncorhynchus mykiss,"100"
+-71.96713,-46.54432,"384","51",E.C. Rowe & Asoc.,"06.01",Laguna Verde,"After the Hudson volcano eruption, another sampling was performed without captures.",,"1991",Galaxias platei,"100"
+-71.83762,-46.49019,"385","51",E.C. Rowe & Asoc.,"06.02",Lago General Carrera (Bahía Jara),,,"1991",Odontesthes bonariensis,"100"
+-71.34747,-32.96764,"386","52",Gasoducto Gasandes S.A.,"39.01",Estero Limache (estación 16),,The position of the point is approximate.,"1996",Cnesterodon desenmaculatus,?
+-71.34747,-32.96764,"386","52",Gasoducto Gasandes S.A.,"39.01",Estero Limache (estación 16),,The position of the point is approximate.,"1996",Cnesterodon desenmaculatus,?
+-71.17586,-33.18668,"387","52",Gasoducto Gasandes S.A.,"39.02",Estero Puange 3 (estación 13),,The position of the point is approximate.,"1996",Carassius sp.,?
+-71.17586,-33.18668,"387","52",Gasoducto Gasandes S.A.,"39.02",Estero Puange 3 (estación 13),,The position of the point is approximate.,"1996",Carassius sp.,?
+-71.16234,-33.22822,"388","52",Gasoducto Gasandes S.A.,"39.03",Estero Puange 2 (estación 12),,The position of the point is approximate.,"1996",Carassius sp.,?
+-71.16234,-33.22822,"388","52",Gasoducto Gasandes S.A.,"39.03",Estero Puange 2 (estación 12),,The position of the point is approximate.,"1996",Carassius sp.,?
+-71.12702,-33.27155,"389","52",Gasoducto Gasandes S.A.,"39.04",Estero Puange 1 (estación 11),,The position of the point is approximate.,"1996",Cheirodon pisciculatus,?
+-71.12702,-33.27155,"389","52",Gasoducto Gasandes S.A.,"39.04",Estero Puange 1 (estación 11),,The position of the point is approximate.,"1996",Cheirodon pisciculatus,?
+-70.85501,-33.34101,"390","52",Gasoducto Gasandes S.A.,"39.05",Estero Carén 1 (estación 8),,The position of the point is approximate.,"1996",Percilia gillissi,?
+-70.85501,-33.34101,"390","52",Gasoducto Gasandes S.A.,"39.05",Estero Carén 1 (estación 8),,The position of the point is approximate.,"1996",Percilia gillissi,?
+-72.08337,-45.57520,"391","53","Torres, P. Cubillos, V., Aedo, E., Silva, R., Garrido, O. y Aedo, J.E.","57.01","Río Claro and Río Simpson, to the west of Coyhaique.",,,"1992",Oncorhynchus kisutch,?
+-72.08245,-45.57214,"392","54","Torres, P., E.  Aedo, L. Figueroa, I. Siegmund, R. Silva, N. Navarrete, S. Puga, F. Marín y E. Aedo","50.01","Río Simpson (west of Coyhaique, 300 m above sea level)",,,"1994",Oncorhynchus kisutch,?
+-71.93998,-39.28131,"393","55","Colihueque, N., N. Vergara and M. Parraguez","55.01",Río Claro,"The years of sighting, and prescence of raibow trout in river Pichil and Huilma, was communicated personally by Nelson Colihueque.",,1999-2000,Salmo trutta,?
+-71.93998,-39.28131,"393","55","Colihueque, N., N. Vergara and M. Parraguez","55.01",Río Claro,"The years of sighting, and prescence of raibow trout in river Pichil and Huilma, was communicated personally by Nelson Colihueque.",,1999-2000,Salmo trutta,?
+-72.20817,-39.60003,"394","55","Colihueque, N., N. Vergara and M. Parraguez","55.02",Río Zahuil,"The years of sighting, and prescence of raibow trout in river Pichil and Huilma, was communicated personally by Nelson Colihueque.",,1999-2000,Salmo trutta,?
+-72.20817,-39.60003,"394","55","Colihueque, N., N. Vergara and M. Parraguez","55.02",Río Zahuil,"The years of sighting, and prescence of raibow trout in river Pichil and Huilma, was communicated personally by Nelson Colihueque.",,1999-2000,Salmo trutta,?
+-73.23591,-40.73148,"395","55","Colihueque, N., N. Vergara and M. Parraguez","55.03",Río Huilma,"The years of sighting, and prescence of raibow trout in river Pichil and Huilma, was communicated personally by Nelson Colihueque.",,1999-2000,Oncorhynchus mykiss,?
+-73.23591,-40.73148,"395","55","Colihueque, N., N. Vergara and M. Parraguez","55.03",Río Huilma,"The years of sighting, and prescence of raibow trout in river Pichil and Huilma, was communicated personally by Nelson Colihueque.",,1999-2000,Oncorhynchus mykiss,?
+-73.00530,-40.75520,"396","55","Colihueque, N., N. Vergara and M. Parraguez","55.04",Río Chanchán,"The years of sighting, and prescence of raibow trout in river Pichil and Huilma, was communicated personally by Nelson Colihueque.",,1999-2000,Salmo trutta,?
+-73.00530,-40.75520,"396","55","Colihueque, N., N. Vergara and M. Parraguez","55.04",Río Chanchán,"The years of sighting, and prescence of raibow trout in river Pichil and Huilma, was communicated personally by Nelson Colihueque.",,1999-2000,Salmo trutta,?
+-72.95873,-40.71093,"397","55","Colihueque, N., N. Vergara and M. Parraguez","55.05",Río Pichil,"The years of sighting, and prescence of raibow trout in river Pichil and Huilma, was communicated personally by Nelson Colihueque.",,1999-2000,Oncorhynchus mykiss,?
+-72.95873,-40.71093,"397","55","Colihueque, N., N. Vergara and M. Parraguez","55.05",Río Pichil,"The years of sighting, and prescence of raibow trout in river Pichil and Huilma, was communicated personally by Nelson Colihueque.",,1999-2000,Oncorhynchus mykiss,?
+-72.27143,-41.38046,"398","56","Vila, I., E. Zeiss and H. Gibson","51.01",Río Del Este,,The position of the point is not accurate.,1969-1970,Salmo trutta,?
+-72.68816,-40.78743,"399","56","Vila, I., E. Zeiss and H. Gibson","51.02",Río Rahue,,,"1970",Salmo trutta,?
+-72.10350,-39.26094,"400","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.01",Lago Villarrica,"Sampling effort replicated in Lake Rupanco (see valume ""III Antecedentes limnológicos hoya Lago Rupanco""",Not accurate. (not specified),"1984, 1985",Salmo trutta,"1,9"
+-72.04768,-39.29695,"401","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.02",Lake Villarrica (littoral),"Sampling effort replicated in Lake Rupanco (see valume ""III Antecedentes limnológicos hoya Lago Rupanco""",Not accurate (not specified),"1984, 1985",Oncorhynchus mykiss,?
+-72.11095,-39.32244,"402","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.03",Río Huichatio,"Parallel sampling were also done in tributaries of Lake Rupanco  (see valume ""III Antecedentes limnológicos hoya Lago Rupanco""",Not accurate.,"1984, 1985",Trichomycterus areolatus,"3,5"
+-72.11095,-39.32244,"402","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.03",Río Huichatio,"Parallel sampling were also done in tributaries of Lake Rupanco  (see valume ""III Antecedentes limnológicos hoya Lago Rupanco""",Not accurate.,"1984, 1985",Trichomycterus areolatus,"3,5"
+-72.10172,-39.30528,"403","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.04",Río Molco,"Parallel sampling were also done in tributaries of Lake Rupanco  (see valume ""III Antecedentes limnológicos hoya Lago Rupanco""",Not accurte,"1984, 1985",Aplochiton zebra,"3,6"
+-72.10172,-39.30528,"403","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.04",Río Molco,"Parallel sampling were also done in tributaries of Lake Rupanco  (see valume ""III Antecedentes limnológicos hoya Lago Rupanco""",Not accurte,"1984, 1985",Aplochiton zebra,"3,6"
+-72.11752,-39.32523,"404","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.05",Río Chehuilco,Triburarie of Molco River.,Not accurate,"1984, 1985",Oncorhynchus mykiss,"100"
+-72.11752,-39.32523,"404","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.05",Río Chehuilco,Triburarie of Molco River.,Not accurate,"1984, 1985",Oncorhynchus mykiss,"100"
+-72.06929,-39.31187,"405","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.06",Río Correntoso,"Parallel sampling were also done in tributaries of Lake Rupanco  (see valume ""III Antecedentes limnológicos hoya Lago Rupanco""",Not accurate.,"1984, 1985",Trichomycterus areolatus,"6,7"
+-72.06929,-39.31187,"405","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.06",Río Correntoso,"Parallel sampling were also done in tributaries of Lake Rupanco  (see valume ""III Antecedentes limnológicos hoya Lago Rupanco""",Not accurate.,"1984, 1985",Trichomycterus areolatus,"6,7"
+-71.77637,-39.39777,"406","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.07",Río Palguin Alto,,Not accurate,"1984, 1985",Oncorhynchus mykiss,"100"
+-71.77637,-39.39777,"406","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.07",Río Palguin Alto,,Not accurate,"1984, 1985",Oncorhynchus mykiss,"100"
+-71.55390,-39.43999,"407","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.08",Río Trancura,,Not accurate.,"1984, 1985",Trichomycterus areolatus,"19,4"
+-71.55390,-39.43999,"407","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.08",Río Trancura,,Not accurate.,"1984, 1985",Trichomycterus areolatus,"19,4"
+-71.43324,-39.27179,"408","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.09",Río Maichin,,Not Accurate,"1984, 1985",Percilia gillissi,"8,3"
+-71.43324,-39.27179,"408","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.09",Río Maichin,,Not Accurate,"1984, 1985",Percilia gillissi,"8,3"
+-71.83241,-39.25892,"409","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.10",Río Liucura Bajo,,Not accurate,"1984, 1985",Trichomycterus areolatus,"28,3"
+-71.83241,-39.25892,"409","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.10",Río Liucura Bajo,,Not accurate,"1984, 1985",Trichomycterus areolatus,"28,3"
+-71.77908,-39.28125,"410","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.11",Río Coilaco,,Not accurate,"1984, 1985",Aplochiton zebra,"0,6"
+-71.77908,-39.28125,"410","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.11",Río Coilaco,,Not accurate,"1984, 1985",Aplochiton zebra,"0,6"
+-71.69148,-39.21915,"411","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.12",Río Liucura Alto,,Not accurate,"1984, 1985",Oncorhynchus mykiss,"100"
+-71.69148,-39.21915,"411","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.12",Río Liucura Alto,,Not accurate,"1984, 1985",Oncorhynchus mykiss,"100"
+-71.75705,-39.33471,"412","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.13",Río Palguín Bajo,,Not accurate,"1984, 1985",Trichomycterus areolatus,"1,3"
+-71.75705,-39.33471,"412","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.13",Río Palguín Bajo,,Not accurate,"1984, 1985",Trichomycterus areolatus,"1,3"
+-71.61142,-39.22284,"413","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.14",Río Llancalil,,Not accurate.,"1984, 1985",Oncorhynchus mykiss,"100"
+-71.61142,-39.22284,"413","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.14",Río Llancalil,,Not accurate.,"1984, 1985",Oncorhynchus mykiss,"100"
+-71.52716,-39.55597,"414",,,,,,,,,
+-71.52716,-39.55597,"414",,,,,,,,,
+-71.86325,-39.32195,"415","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.16",Río Turbio,"Based on Table 3, review the full report.",Not accurate,"1984, 1985",Salmo trutta,"50"
+-71.86325,-39.32195,"415","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.16",Río Turbio,"Based on Table 3, review the full report.",Not accurate,"1984, 1985",Salmo trutta,"50"
+-72.00262,-39.29288,"416","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.17",Río Candelaria,Double check river name (assumed to be Candelaria because of the village upstream.,Not accurate,"1984, 1985",Trichomycterus areolatus,"3,8"
+-72.00262,-39.29288,"416","57","Campos, H., J. Arenas, W. Steffen, G. Agüero, L. Villalobos, and G. Gonzales","339.17",Río Candelaria,Double check river name (assumed to be Candelaria because of the village upstream.,Not accurate,"1984, 1985",Trichomycterus areolatus,"3,8"
+-71.70133,-43.17037,"417","58","Grosman, F.","52.01","Río Futaleufu (Argentina, 140 to 155 km from the mouth of the river, 350 to 400 m above sea level)",,,"1989, 1990",Oncorhynchus tshawytscha,?
+-71.72320,-43.56500,"418","58","Grosman, F.","52.02","Río Palena (Argentina, 160 to 190 km from the mouth of the river, 350 m above sea level)",,,"1989, 1990",Oncorhynchus tshawytscha,?
+-73.93454,-42.67055,"419","59","Torres, P., Ruiz, E., Rebolledo, C., Mira, A., Cubillos, V., Navarrete, N., Gesche, W.,
+Montefusco, A., Valdés, L. y Alberdi, A.","56.01",Lago Huillinco,,The position of the point is not accurate.,"1989",Eleginops maclovinus,"10,53"
+-73.79812,-42.79697,"420","59","Torres, P., Ruiz, E., Rebolledo, C., Mira, A., Cubillos, V., Navarrete, N., Gesche, W.,
+Montefusco, A., Valdés, L. y Alberdi, A.","56.02",Lago Natri,,The position of the point is not accurate.,"1989",Galaxias maculatus,"45,45"
+-68.46314,-22.31569,"421","60","Faúndez, V., Blanco G.,Vázquez E. & Sánchez J.A.","62.01",N1 Salado,,"Approximate; based on a general map.",1994-1995,Salmo trutta,?
+-68.46314,-22.31569,"421","60","Faúndez, V., Blanco G.,Vázquez E. & Sánchez J.A.","62.01",N1 Salado,,"Approximate; based on a general map.",1994-1995,Salmo trutta,?
+-70.07067,-30.11442,"422","60","Faúndez, V., Blanco G.,Vázquez E. & Sánchez J.A.","62.02",N2 La Laguna,,"Approximate; based on a general map.",1994-1995,Salmo trutta,?
+-70.07067,-30.11442,"422","60","Faúndez, V., Blanco G.,Vázquez E. & Sánchez J.A.","62.02",N2 La Laguna,,"Approximate; based on a general map.",1994-1995,Salmo trutta,?
+-70.38830,-30.14866,"423","60","Faúndez, V., Blanco G.,Vázquez E. & Sánchez J.A.","62.03",N3 Cohiguas,,"Approximate; based on a general map.",1994-1995,Salmo trutta,?
+-70.38830,-30.14866,"423","60","Faúndez, V., Blanco G.,Vázquez E. & Sánchez J.A.","62.03",N3 Cohiguas,,"Approximate; based on a general map.",1994-1995,Salmo trutta,?
+-70.47603,-30.32610,"424","60","Faúndez, V., Blanco G.,Vázquez E. & Sánchez J.A.","62.04",N4 Claro,,"Approximate; based on a general map.",1994-1995,Salmo trutta,?
+-70.47603,-30.32610,"424","60","Faúndez, V., Blanco G.,Vázquez E. & Sánchez J.A.","62.04",N4 Claro,,"Approximate; based on a general map.",1994-1995,Salmo trutta,?
+-70.08493,-33.67132,"425","60","Faúndez, V., Blanco G.,Vázquez E. & Sánchez J.A.","62.05",N5 Yeso,,"General; based on a general map.",1994-1995,Salmo trutta,?
+-70.08493,-33.67132,"425","60","Faúndez, V., Blanco G.,Vázquez E. & Sánchez J.A.","62.05",N5 Yeso,,"General; based on a general map.",1994-1995,Salmo trutta,?
+-72.18630,-39.75332,"426","60","Faúndez, V., Blanco G.,Vázquez E. & Sánchez J.A.","62.06",N6 Panguipulli,,"General; based on a general map.",1994-1995,Salmo trutta,?
+-72.18630,-39.75332,"426","60","Faúndez, V., Blanco G.,Vázquez E. & Sánchez J.A.","62.06",N6 Panguipulli,,"General; based on a general map.",1994-1995,Salmo trutta,?
+-71.55356,-44.56116,"427","60","Faúndez, V., Blanco G.,Vázquez E. & Sánchez J.A.","62.07",N7 La Cascada,,"General; based on a general map.",1994-1995,Salmo trutta,?
+-71.55356,-44.56116,"427","60","Faúndez, V., Blanco G.,Vázquez E. & Sánchez J.A.","62.07",N7 La Cascada,,"General; based on a general map.",1994-1995,Salmo trutta,?
+-72.79707,-42.85197,"428","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.01",Río Santa Bárbara,,,"1984",Geotria australis,"13,33"
+-72.79707,-42.85197,"428","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.01",Río Santa Bárbara,,,"1984",Geotria australis,"13,33"
+-72.34913,-42.97810,"429","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.02",Río Vuelta y Vuelta,,"Approximate, based on coordinates.","1984",Oncorhynchus mykiss,"100"
+-72.34913,-42.97810,"429","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.02",Río Vuelta y Vuelta,,"Approximate, based on coordinates.","1984",Oncorhynchus mykiss,"100"
+-72.48200,-43.02064,"430","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.03",Río Amarillo,,,"1984",Aplochiton zebra,"50"
+-72.48200,-43.02064,"430","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.03",Río Amarillo,,,"1984",Aplochiton zebra,"50"
+-72.42803,-43.17589,"431","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.04","Lago Yelcho, Pto. Cárdenas",,,"1984",Galaxias platei,"0,13"
+-72.42803,-43.17589,"431","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.04","Lago Yelcho, Pto. Cárdenas",,,"1984",Galaxias platei,"0,13"
+-72.33651,-43.57171,"432","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.05",Río Frío,,,"1984",Aplochiton zebra,"3"
+-72.33651,-43.57171,"432","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.05",Río Frío,,,"1984",Aplochiton zebra,"3"
+-72.33433,-43.57939,"433","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.06",Afluente Río Frío,,,"1984",Salvelinus fontinalis,"100"
+-72.33433,-43.57939,"433","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.06",Afluente Río Frío,,,"1984",Salvelinus fontinalis,"100"
+-72.36158,-43.79185,"434","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.07",Río Aura (i.e. Río Laura?),"The site's coordinates cited by Campos et al (1984) correspond to a stream called Estero Pampita which is 5 km to the south from this point. Nevertheless, the Estero Laura--similar to ""Aura""--,which crosses the road, seems to be the correct sampling site.",Approximate,"1984",Aplochiton zebra,"93,75"
+-72.36158,-43.79185,"434","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.07",Río Aura (i.e. Río Laura?),"The site's coordinates cited by Campos et al (1984) correspond to a stream called Estero Pampita which is 5 km to the south from this point. Nevertheless, the Estero Laura--similar to ""Aura""--,which crosses the road, seems to be the correct sampling site.",Approximate,"1984",Aplochiton zebra,"93,75"
+-72.49877,-44.18894,"435","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.08",Río Los Césares,,,"1984",Salmo trutta,"98,18"
+-72.49877,-44.18894,"435","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.08",Río Los Césares,,,"1984",Salmo trutta,"98,18"
+-72.50609,-44.23328,"436","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.09",Lago Risopatrón,,,"1984",Geotria australis,"17,39"
+-72.50609,-44.23328,"436","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.09",Lago Risopatrón,,,"1984",Geotria australis,"17,39"
+-72.57784,-44.32480,"437","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.10",Río Pascua (Puyuhuapi),"Approximate, based on coordinates",,"1984",Galaxias maculatus,"43,24"
+-72.57784,-44.32480,"437","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.10",Río Pascua (Puyuhuapi),"Approximate, based on coordinates",,"1984",Galaxias maculatus,"43,24"
+-72.42222,-44.56857,"438","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.11",Río Queulat,,,"1984",Oncorhynchus mykiss,"100"
+-72.42222,-44.56857,"438","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.11",Río Queulat,,,"1984",Oncorhynchus mykiss,"100"
+-72.41754,-44.63582,"439","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.12",Río Cascadas,,,"1984",Salmo trutta,"100"
+-72.41754,-44.63582,"439","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.12",Río Cascadas,,,"1984",Salmo trutta,"100"
+-72.52794,-44.69697,"440","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.13",Río Cisnes bajo,,,"1984",Salmo trutta,"100"
+-72.52794,-44.69697,"440","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.13",Río Cisnes bajo,,,"1984",Salmo trutta,"100"
+-72.21903,-44.83653,"441","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.14",Río Brigida,"Approximate, position based on coordinates only.",,"1984",Salmo trutta,"100"
+-72.21903,-44.83653,"441","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.14",Río Brigida,"Approximate, position based on coordinates only.",,"1984",Salmo trutta,"100"
+-72.11995,-45.02803,"442","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.15",Lago Pedro Aguirre Cerda,,,"1984",Galaxias platei,"97,56"
+-72.11995,-45.02803,"442","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.15",Lago Pedro Aguirre Cerda,,,"1984",Galaxias platei,"97,56"
+-72.12888,-45.16264,"443","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.16",Río Ñirehuao,,,"1984",Hatcheria macraei,"7,14"
+-72.12888,-45.16264,"443","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.16",Río Ñirehuao,,,"1984",Hatcheria macraei,"7,14"
+-72.41295,-45.43213,"444","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.17",Lago Risopatrón,,,"1984",Geotria australis,"5,26"
+-72.41295,-45.43213,"444","61","Campos, H., J. Arenas, C. Jara, T. Gonser y R. Prins","64.17",Lago Risopatrón,,,"1984",Geotria australis,"5,26"
+-72.85459,-41.27807,"445","62","Campos, H.","355.01",La Poza,Only A. taeniatus reported. Large schools of A. taeniatus were observed spawning.,Approximate,"1967, 1968",Aplochiton taeniatus,
+-72.72290,-41.21507,"446","62","Campos, H.","355.02",Los Riscos,Only A. taeniatus reported. Large schools of A. taeniatus were observed spawning.,Not accurate,"1967, 1968",Aplochiton taeniatus,
+-72.53960,-41.20444,"447","62","Campos, H.","355.03",Ensenada,Only A. taeniatus reported. Large schools of A. taeniatus were observed spawning.,Not accurate,"1967, 1968",Aplochiton taeniatus,
+-72.63913,-41.08785,"448","62","Campos, H.","355.04",Cascada,Only A. taeniatus reported. Large schools of A. taeniatus were observed spawning.,Not Accurate,"1967, 1968",Aplochiton taeniatus,
+-73.60315,-42.44238,"449","63","Reyes, X.","65.01",Curaco de Velez,,The position of the point is not accurate.,"1982",Oncorhynchus tshawytscha,?
+-72.34163,-40.64232,"450","64","Cassigoli, J.","768.01","Lago Puyehe, Bahia Taique",,Ok,"1998, 1999",Galaxias maculatus,"6,15"
+-73.03246,-41.21179,"451","64","Cassigoli, J.","768.02","Lago Llanquihue, Bahia Phillipi (Totoral)",,Ok,"1998, 1999",Percichthys trucha,"33,33"
+-72.39810,-41.11996,"452","64","Cassigoli, J.","768.03","Lago Todos Los Santos, Petrohue",,Ok,"1998, 1999",Galaxias platei,"1,59"
+-72.86379,-41.12310,"453","65","Soto, D., H. Campos, W. Steffen, R. Palma, P. Neira, G. Aguero, R. Arriagada, and D. Aviles.","769.01",Lago Llanquihue,This entry is based on a table which does not contain much details.,Not accurate. Review report.,"1992, 1993",z Indetermined (see note),"1,87"
+-72.52600,-37.57980,"467","67","Habit, E., M. C. Belk, R. Cary Tuckfield, and O. Parra","939.01",Station 1: Negrete (Zone 1),Rithral. CPUE / zone available for eight species.,Approximate,"2003",Percichthys melanops,
+-72.52600,-37.57980,"467","67","Habit, E., M. C. Belk, R. Cary Tuckfield, and O. Parra","939.01",Station 1: Negrete (Zone 1),Rithral. CPUE / zone available for eight species.,Approximate,"2003",Percichthys melanops,
+-72.58795,-37.55923,"468","67","Habit, E., M. C. Belk, R. Cary Tuckfield, and O. Parra","939.02",Station 2: Puente Coigue (Zone 1),Rithral. CPUE / zone available for eight species.,Accurate,"2003",Diplomystes nahuelbutaensis,
+-72.58795,-37.55923,"468","67","Habit, E., M. C. Belk, R. Cary Tuckfield, and O. Parra","939.02",Station 2: Puente Coigue (Zone 1),Rithral. CPUE / zone available for eight species.,Accurate,"2003",Diplomystes nahuelbutaensis,
+-72.60674,-37.51934,"469","67","Habit, E., M. C. Belk, R. Cary Tuckfield, and O. Parra","939.03",Station 3: Santa Fé (Zone 2),Hyporithral. CPUE / zone available for eight species.,Approximate,"2003",Percichthys melanops,
+-72.60674,-37.51934,"469","67","Habit, E., M. C. Belk, R. Cary Tuckfield, and O. Parra","939.03",Station 3: Santa Fé (Zone 2),Hyporithral. CPUE / zone available for eight species.,Approximate,"2003",Percichthys melanops,
+-72.66391,-37.48869,"470","67","Habit, E., M. C. Belk, R. Cary Tuckfield, and O. Parra","939.04",Station 4: Nacimiento (Zone 2),Hyporithral. CPUE / zone available for eight species.,Approximate,"2003",Percichthys melanops,
+-72.66391,-37.48869,"470","67","Habit, E., M. C. Belk, R. Cary Tuckfield, and O. Parra","939.04",Station 4: Nacimiento (Zone 2),Hyporithral. CPUE / zone available for eight species.,Approximate,"2003",Percichthys melanops,
+-72.67789,-37.36599,"471","67","Habit, E., M. C. Belk, R. Cary Tuckfield, and O. Parra","939.05",Station 5: Downstream the confluence of River Vergara  (Zone 3),Potamon. CPUE / zone available for eight species.,Approximate,"2003",Mugil cephalus,
+-72.67789,-37.36599,"471","67","Habit, E., M. C. Belk, R. Cary Tuckfield, and O. Parra","939.05",Station 5: Downstream the confluence of River Vergara  (Zone 3),Potamon. CPUE / zone available for eight species.,Approximate,"2003",Mugil cephalus,
+-72.76007,-37.22070,"472","67","Habit, E., M. C. Belk, R. Cary Tuckfield, and O. Parra","939.06",Station 6: Downstream the confluence of the Laja River  (Zone 3),Potamon. CPUE / zone available for eight species.,Approximate,"2003",Mugil cephalus,
+-72.76007,-37.22070,"472","67","Habit, E., M. C. Belk, R. Cary Tuckfield, and O. Parra","939.06",Station 6: Downstream the confluence of the Laja River  (Zone 3),Potamon. CPUE / zone available for eight species.,Approximate,"2003",Mugil cephalus,
+-72.92805,-37.17127,"473","67","Habit, E., M. C. Belk, R. Cary Tuckfield, and O. Parra","939.07",Station 7: Santa Juana (Zone 4),Potamon. CPUE / zone available for eight species.,Approximate,"2003",Gambusia holbrooki,
+-72.92805,-37.17127,"473","67","Habit, E., M. C. Belk, R. Cary Tuckfield, and O. Parra","939.07",Station 7: Santa Juana (Zone 4),Potamon. CPUE / zone available for eight species.,Approximate,"2003",Gambusia holbrooki,
+-73.06677,-36.84651,"474","67","Habit, E., M. C. Belk, R. Cary Tuckfield, and O. Parra","939.08",Station 8: Concepción (Zone 4),Potamon. CPUE / zone available for eight species.,Approximate,"2003",Gambusia holbrooki,
+-73.06677,-36.84651,"474","67","Habit, E., M. C. Belk, R. Cary Tuckfield, and O. Parra","939.08",Station 8: Concepción (Zone 4),Potamon. CPUE / zone available for eight species.,Approximate,"2003",Gambusia holbrooki,
+-72.01428,-38.22399,"475","68","Gutiérrez, J. M","943.01",Estación 1,,,"2002, 2003",Oncorhynchus mykiss,"63,9"
+-72.01428,-38.22399,"475","68","Gutiérrez, J. M","943.01",Estación 1,,,"2002, 2003",Oncorhynchus mykiss,"63,9"
+-72.09471,-38.22953,"476","68","Gutiérrez, J. M","943.02",Estación 2,,,"2002, 2003",Trichomycterus areolatus,"5,3"
+-72.09471,-38.22953,"476","68","Gutiérrez, J. M","943.02",Estación 2,,,"2002, 2003",Trichomycterus areolatus,"5,3"
+-72.09400,-38.23748,"477","68","Gutiérrez, J. M","943.03",Estación 3,,,"2002, 2003",Oncorhynchus mykiss,"65,9"
+-72.09400,-38.23748,"477","68","Gutiérrez, J. M","943.03",Estación 3,,,"2002, 2003",Oncorhynchus mykiss,"65,9"
+-72.14962,-38.22206,"478","68","Gutiérrez, J. M","943.04",Estación 4,,,"2002, 2003",Oncorhynchus mykiss,"44,9"
+-72.14962,-38.22206,"478","68","Gutiérrez, J. M","943.04",Estación 4,,,"2002, 2003",Oncorhynchus mykiss,"44,9"
+-72.30550,-38.24263,"479","68","Gutiérrez, J. M","943.05",Estación 5,,Accurate,"2002, 2003",Galaxias maculatus,"8,86"
+-72.30550,-38.24263,"479","68","Gutiérrez, J. M","943.05",Estación 5,,Accurate,"2002, 2003",Galaxias maculatus,"8,86"
+-73.50935,-39.99437,"480","69","Steffen, W.","966.01",Río Chaihuín,,,"2005",Aplochiton taeniatus,
+-73.62576,-40.01942,"481","69","Steffen, W.","966.02",Río Colún,,,"2005",Aplochiton taeniatus,
+-73.65287,-40.06656,"482","69","Steffen, W.","966.03",Lago Weste,,,"2005",Galaxias platei,
+-72.95085,-45.13768,"483","70","Soto, D., I. Arismendi, J. González, J. Sanzana, F. Jara, C. Jara, E. Guzman, and A. Lara","971.01",Yulton-Meullin Lakes,"""Only in a set of two connected lakes, Yulton-Meullin [...] did we not find any salmon or trout. In these lakes we found the largest population of native species, Galaxias platei, ""puye grande"" and also Aplochyton zebra, ""peladilla"".",Not accurate.,Not specified (between 1990 and 2005),Galaxias platei,
+-71.96795,-46.24541,"484","71","Sakai, M., R. Aguirrebeña, and A. Nagasawa","973.01",Lagoon Don Poli,The Lagoon is considered isolated because of the small size of the outlet.,,"1987",Galaxias platei,54?
+-72.51311,-41.42701,"485","72","Villalobos, L., S. Woelfl, O. Parra, and H. Campos","985.01",Lago Chapo,,Specific location not specified.,1986-1987,Percichthys trucha,"30"
+-72.55481,-41.42324,"486","72","Villalobos, L., S. Woelfl, O. Parra, and H. Campos","985.02","Lago Chapo, littoral zone.",,Specific location not specified.,1986-1987,Percichthys trucha,"57,3"
+-73.14040,-39.79702,"487","73","Campos, H.","990.01",Río Calle Calle,Only G. maculatus collected for analyses was reported.,Not accurate. Locality not specified.,"1972",Galaxias maculatus,
+-72.22479,-39.71367,"488","73","Campos, H.","990.02",Lago Panguipulli,Only G. maculatus collected for analyses was reported.,Not accurate. Locality not specified.,"1972",Galaxias maculatus,
+-72.33636,-39.81720,"489","73","Campos, H.","990.03",Lago Riñihue,Only G. platei collected for analyses was reported.,Not accurate. Locality not specified. Fishing was at 100-300 m of depth.,"1972",Galaxias platei,
+-73.26289,-39.79779,"490","73","Campos, H.","990.04","Small lake at Saval, Valdivia.",Only B. bullocki collected for analyses was reported.,Not accurate.,"1972",Brachygalaxias bullocki,
+-77.49056,-37.94528,"491","74","Dyer, B.","1040.001",Aerodromo,Unspecified survey target and methods.,,?,Basilichthys australis,
+-70.33201,-18.45348,"492","74","Dyer, B.","1040.002","Arica, at Liserilla.  Region I.",Unspecified survey target and methods.,,"1988",Odontesthes regia,
+-73.77277,-42.48319,"493","74","Dyer, B.","1040.005","Castro, at port, Prov. Chiloe, X Region, Pacific Region",Unspecified survey target and methods.,,"1990",Odontesthes regia,
+-73.33825,-37.48146,"494","74","Dyer, B.","1040.007","Curanilahue, R. Descabezado	 Region VIII, R. Curanilahue drainage",Unspecified survey target and methods.,,"1994",Percilia gillissi,
+-71.65234,-33.27335,"495","74","Dyer, B.","1040.009","Est. Casablanca, at Tunquen, 20 km N of Algarrobo and 5 km from river mouth, on Algarrobo - Quintay road, Region V","Unspecified survey target and methods. Remarks: Orig. #: 29, sta. I",,"1986",z Indetermined (see note),
+-71.42231,-32.62336,"496","74","Dyer, B.","1040.010","Est. Catapilco, app. 200 m upstream from Catapilco bridge, on road betw. Catapilco and Maitencillo, Region IV","Unspecified survey target and methods. Remarks: Orig. #: 13, sta. III",,"1986",Basilichthys microlepidotus,
+-73.33267,-40.58322,"497","74","Dyer, B.","1040.011","Est. Forrahue, under Forrahue bridge of Osorno-Puaucho road, ca. 1.5 km W of road branch to Parrones, Region X	 *","Unspecified survey target and methods. Remarks: Orig. #: 17, sta. I.  * R. Rahue drainage",,"1986",Trichomycterus areolatus,
+-72.33243,-35.27331,"498","74","Dyer, B.","1040.012","Est. Junquillar, app. 10 km N of Constitucion on road to Putu, at Quilleico farm, Region VII","Unspecified survey target and methods. Remarks: Orig. #: 27, sta. III",,"1986",Percilia gillissi,
+-72.62459,-32.17998,"499","74","Dyer, B.","1040.013","Est. Limache, Limache, Prov. Quillota, Region V	 Rio Aconcagua",Unspecified survey target and methods.,,"1983",z Indetermined (see note),
+-72.90250,-36.42329,"500","74","Dyer, B.","1040.014","Est. Los Perales, app. 2 km S of Itata River (Vegas de Itata) on road to Dichato, Region VIII	 E. Perales dr.","Unspecified survey target and methods. Remarks: Orig. #: 25, sta. II",,"1986",Odontesthes mauleanum,
+-72.85249,-36.38329,"501","74","Dyer, B.","1040.015","Est. Mela, at Mela bridge, on Cobquecura - Boca Itata road, Region VIII","Unspecified survey target and methods. Remarks: Orig. #: 25, sta. IV",,"1986",z Indetermined (see note),
+-72.62638,-32.59971,"502","74","Dyer, B.","1040.016","Est. Puangue, Curacavi, Prov. Melipilla, Metropolitan Region, Rio Maipo drainage",Unspecified survey target and methods.,,"1983",z Indetermined (see note),
+-71.52233,-32.88336,"503","74","Dyer, B.","1040.017","Est. Quintero, 1300 m upstream from river mouth, at Punta Piedras, Region V","Unspecified survey target and methods. Remarks: Orig. #: 13, sta. VIII",,"1986",Odontesthes mauleanum,
+-71.48232,-32.85336,"504","74","Dyer, B.","1040.018","Est. Quintero, 300 m upstream from Santa Julia bridge, on Con-Con - Quintero road, Region V","Unspecified survey target and methods. Remarks: Orig. #: 13, sta. VII",,"1986",Basilichthys microlepidotus,
+-71.45232,-32.83336,"505","74","Dyer, B.","1040.019","Est. Quintero, under Valle Alegre bridge, Region V","Unspecified survey target and methods. Remarks: Orig. #: 13, sta. VI",,"1986",Basilichthys microlepidotus,
+-71.43232,-32.63336,"506","74","Dyer, B.","1040.020","Estero Catapilco at La Laguna, Maitencillo, ca. 250 m downstream from Lagunas bridge, Region V","Unspecified survey target and methods. Remarks: Orig. #: 13, sta. IV",,"1986",Odontesthes mauleanum,
+-71.50226,-30.25338,"507","74","Dyer, B.","1040.021","Estero Tongoy, Quebrada Camarones, 100 m downstream from bridge and 1.5 km from river mouth, Tongoy, Region IV	 *","Unspecified survey target and methods. Remarks: Orig. #: 11, sta. II.  * Est. Tongoy drainage",,"1986",Odontesthes mauleanum,
+-71.50232,-32.75336,"508","74","Dyer, B.","1040.022","Estero Ventanas, 1 km upstream from Ventanas bridge, Region V","Unspecified survey target and methods. Remarks: Orig. #: 13, sta. V",,"1986",Odontesthes mauleanum,
+-72.03240,-34.57333,"509","74","Dyer, B.","1040.023","Estero Vichuquen, under Uraco bridge, Vichuquen, Region VII","Unspecified survey target and methods. Remarks: Orig. #: 27, sta. V",,"1986",z Indetermined (see note),
+-71.32224,-29.82339,"510","74","Dyer, B.","1040.024","Estuary Punta Teatinos, Quebrada Las Barrancas, at river mouth, La Serena, Region IV	 Rio Las Barrancas drainage","Unspecified survey target and methods. Remarks: Orig. #: 10, sta. I.  Sandy bottom & filamentous algae.",,"1986",Odontesthes mauleanum,
+-81.65052,-42.03081,"511","74","Dyer, B.","1040.026","Isla Robinson Crusoe, Juan Fernandez Islands, Cumberland Bay",Unspecified survey target and methods.,,,Odontesthes gracilis,
+-81.75670,-41.65799,"512","74","Dyer, B.","1040.027",Juan Fernandez Island,Unspecified survey target and methods.,,"1936",Odontesthes gracilis,
+-77.19909,-37.83442,"513","74","Dyer, B.","1040.028",La Cantera,Unspecified survey target and methods.,,,z Indetermined (see note),
+-72.25292,-47.25316,"514","74","Dyer, B.","1040.029","Lago Cochrane, approximately 1 km East of Rancho 'La Gauchita' (Mondelo family) at Pescadero de Las Truchas, a *","Unspecified survey target and methods. Remarks: * small bay, Prov. Capitan Prat, XI Region	 Rio Baker drainage",,"1990",Odontesthes hatcheri,
+-72.25292,-47.25316,"515","74","Dyer, B.","1040.030","Lago Cochrane, Prov. Capitan Prat, XI Region	 Rio Baker drainage",Unspecified survey target and methods. Remarks: specimens collected under floating debris and junco accumulated along shore,,"1990",Galaxias platei,
+-72.67265,-41.02323,"516","74","Dyer, B.","1040.031","Lago Llanquihue, Pto. Klocker, in small protected lagoon, Region X	 Rio Maullin drainage","Unspecified survey target and methods. Remarks: Orig. #: 19, sta. I",,"1986",Odontesthes mauleanum,
+-72.60294,-47.33315,"517","74","Dyer, B.","1040.032","Laguna Esmeralda, about 5 km South of Cochrane on road to Puerto Yungay, Prov. Capitan Prat, XI Region	 Rio Baker dr.","Unspecified survey target and methods. Remarks: L. Esmeralda is one of 3 lakes S of Cochrane known as 'Sector Tres Lagos', together with L. Juncal and L. Chacabuco.",,"1990",Odontesthes hatcheri,
+-71.68285,-46.53318,"518","74","Dyer, B.","1040.033","Lake General Carrera, Bahia Jara, 17 km W of Chile Chico, at mouth of Arroyo or Estero Bano, Prov. General Carrera,*","Unspecified survey target and methods. Remarks: * XI Region	 Rio Baker drainage",,"1990",Odontesthes hatcheri,
+-72.39573,-39.80974,"519","74","Dyer, B.","1040.034","Lake Rinihue, Prov. Valdivia, Region X",Unspecified survey target and methods.,,"1975",Diplomystes camposensis,
+-70.42208,-23.08345,"520","74","Dyer, B.","1040.035","Mejillones	 Region II",Unspecified survey target and methods.,,"1991",Odontesthes regia,
+-71.68326,-53.08308,"521","74","Dyer, B.","1040.039","Punta Arenas, fish market (ex. Coop. Pescadores), Prov. Magallanes, XII Region	 Straits of Magellan","Unspecified survey target and methods. Remarks: said to be from Cabeza Grande, near Porvenir, opposite Punta Arenas, Tierra del Fuego",,"1990",Odontesthes smitti,
+-73.77277,-42.55319,"522","74","Dyer, B.","1040.042","Punta Peuque, opposite Rauco, Seno de Castro, Prov. Chiloe, X Region",Unspecified survey target and methods.,,"1990",Odontesthes regia,
+-71.55226,-30.30338,"523","74","Dyer, B.","1040.043","Quebrada Pachingo, at Tangue, river mouth, Tongoy, Region IV	 Est. Pachingo drainage","Unspecified survey target and methods. Remarks: Orig. #: 11, sta. II.",,"1986",Odontesthes mauleanum,
+-72.55184,-37.68413,"524","74","Dyer, B.","1040.049","R. Bio-Bio at Colhue, Region VIII",Unspecified survey target and methods.,Not accurate.,"1919",Odontesthes mauleanum,
+-72.18250,-37.53329,"525","74","Dyer, B.","1040.050","R. Coreo at Coreo bridge (San Jose de Coreo), on Sta. Barbara-Los Angeles Rd., Region VIII	 R. Duqueco->R. Bio-Bio dr.",Unspecified survey target and methods. Remarks: Orig. #: 24 sta. II,,"1986",Galaxias maculatus,
+-72.84681,-32.98674,"526","74","Dyer, B.","1040.051","R. Rapel, Las Balsas, Rapel Reservoir, Prov. Cardenal Caro/ Cachapoal, VI Region	 R. Rapel drainage",Unspecified survey target and methods. Remarks: *Cachapoal,,,Odontesthes bonariensis,
+-71.52233,-32.92336,"527","74","Dyer, B.","1040.052","Rio Aconcagua, Con-Con, 100 m upriver from mouth, Region V	 Rio Aconcagua drainage","Unspecified survey target and methods. Remarks: Orig. #: 29, sta. II",,"1986",Odontesthes mauleanum,
+-72.25255,-39.03327,"528","74","Dyer, B.","1040.053","Rio Allipen at confluence of Rio Curaco, near bridge 5 km S of Los Laureles on road to Pto. Corrales (L. Colico), *","Unspecified survey target and methods. Remarks: Orig. #: 22 sta. II    * Region IX	 Rio Tolten drainage",,"1986",Diplomystes nahuelbutaensis,
+-72.47256,-39.02326,"529","74","Dyer, B.","1040.054","Rio Allipen ca. 150 m upstream from Allipen bridge of road betw. Freire and Villarrica Lake, Region IX	 R. Tolten dr.","Unspecified survey target and methods. Remarks: Orig. #: 22, sta. II",,"1986",Basilichthys australis,
+-72.58252,-37.55328,"530","74","Dyer, B.","1040.055","Rio Bio-Bio at Coihue, 1 km upstream from Coihue bridge, Region VIII	 Rio Bio-Bio drainage","Unspecified survey target and methods. Remarks: Orig. #: 24, sta. III",,"1986",Basilichthys australis,
+-71.11309,-38.71372,"531","74","Dyer, B.","1040.056",Rio Biobio near Marimenuco,Unspecified survey target and methods.,,"1963",Trichomycterus areolatus,
+-71.10248,-38.67330,"532","74","Dyer, B.","1040.057","Rio Biobio, ca Marimenuco",Unspecified survey target and methods. Remarks: Orig.#48,,"1963",Trichomycterus areolatus,
+-72.00249,-37.65329,"533","74","Dyer, B.","1040.058","Rio Bio-Bio, near Quilaco bridge, 3 km upstream from Santa Barbara, Region VIII	 Rio Bio-Bio drainage","Unspecified survey target and methods. Remarks: Orig. #: 24, sta. I",,"1986",Basilichthys australis,
+-73.23263,-39.80324,"534","74","Dyer, B.","1040.059","Rio Calle-Calle, Valdivia, 200 m upstream from the Calle-Calle bridge, Region X	 Rio Valdivia drainage","Unspecified survey target and methods. Remarks: Orig. #: 21, sta. I",,"1986",Galaxias maculatus,
+-71.23228,-31.73337,"535","74","Dyer, B.","1040.060",Rio Choapa (road between Illapel and Los Vilos),Unspecified survey target and methods. Remarks: Orig.#18,,"1963",Trichomycterus areolatus,
+-71.55230,-31.62337,"536","74","Dyer, B.","1040.061","Rio Choapa, at river mouth, Region IV	 Rio Choapa drainage","Unspecified survey target and methods. Remarks: Orig. #: 12, sta. II",,"1986",Basilichthys microlepidotus,
+-72.58402,-31.44366,"537","74","Dyer, B.","1040.062","Rio Choapa, Salamanca, Prov. Choapa, Region IV",Unspecified survey target and methods.,,"1983",Basilichthys microlepidotus,
+-71.53229,-31.60337,"538","74","Dyer, B.","1040.063","Rio Choapa, under Huentelauquen bridge	 Rio Choapa drainage, Region IV","Unspecified survey target and methods. Remarks: Orig. #: 12, sta. III",,"1986",Basilichthys microlepidotus,
+-73.77268,-40.45322,"539","74","Dyer, B.","1040.064","Rio Chorotraiguen, at river mouth 1 km N of Pucatrihue, Region X	 Rio Chorotraiguen drainage","Unspecified survey target and methods. Remarks: Orig. #: 18, sta. I",,"1986",Odontesthes mauleanum,
+-72.78248,-36.10329,"540","74","Dyer, B.","1040.065","Rio Cobquecura, 5 km upstream from Cobquecura city, at El Molino farm, Region VIII: Rio Cobquecura drainage","Unspecified survey target and methods. Remarks: Orig. #: 26, sta. II",,"1986",z Indetermined (see note),
+-71.28224,-29.90339,"541","74","Dyer, B.","1040.066","Rio Elqui, 200 m downstream & 500 m upstream from Libertadores bridge, La Serena, Region IV	 Rio Elqui drainage","Unspecified survey target and methods. Remarks: Orig. #: 10, sta. II",,"1986",Basilichthys microlepidotus,
+-70.87226,-31.57338,"542","74","Dyer, B.","1040.067","Rio Illapel, Caren, Hacienda Illapel, 800 m",Unspecified survey target and methods. Remarks: Orig.#16,,"1963",Trichomycterus areolatus,
+-72.83249,-36.42329,"543","74","Dyer, B.","1040.068","Rio Itata, Boca Itata (N shore), 1 km up from river mouth, Region VIII	 Rio Itata drainage","Unspecified survey target and methods. Remarks: Orig. #: 25, sta. III",,"1986",z Indetermined (see note),
+-71.53231,-32.43336,"544","74","Dyer, B.","1040.069","Rio La Ligua, 200 m upstream from Pullalli Panam bridge, Region V	 Rio La Ligua drainage","Unspecified survey target and methods. Remarks: Orig. #: 13, sta. II",,"1986",Basilichthys microlepidotus,
+-72.53833,-37.23571,"545","74","Dyer, B.","1040.070","Rio Laja, Puente Perales	 Region VIII, Biobio drainage",Unspecified survey target and methods.,Accurate,"1994",Cheirodon galusdae,
+-71.96195,-37.30965,"546","74","Dyer, B.","1040.071","Rio Laja, Tucapel	 Region VIII	 Biobio drainage",Unspecified survey target and methods.,,"1994",Percilia gillissi,
+-71.50227,-30.62338,"547","74","Dyer, B.","1040.072","Rio Limari & Estero Punitaqui confluence, Region IV	 Rio Limari drainage","Unspecified survey target and methods. Remarks: Orig. #: 11, sta. III",,"1986",Basilichthys microlepidotus,
+-71.72228,-30.73337,"548","74","Dyer, B.","1040.073","Rio Limari at river mouth, Caleta Toro, Region IV	 Rio Limari drainage","Unspecified survey target and methods. Remarks: Orig. #: 12, sta. I",,"1986",Odontesthes regia,
+-71.81761,-39.25677,"549","74","Dyer, B.","1040.074","Rio Liocura, 5 km E Lago Caburgua","Unspecified survey target and methods. Remarks: River depth 2 m, temp. 15 C, bottom rocky, water clear, little silt and algae",,"1980",Trichomycterus areolatus,
+-69.53202,-21.65347,"550","74","Dyer, B.","1040.075","Rio Loa at Martincho, ca. 1 mi upstream (south) from Quillagua town bridge	 Region II","Unspecified survey target and methods. Remarks: Orig. #: 6, sta. I	 7, sta. I.  * with nightlight",,"1986",z Indetermined (see note),
+-69.55202,-21.60347,"551","74","Dyer, B.","1040.076","Rio Loa opposite Aduana Quillagua, ca. 300 m downstream (n0rth) from Panam bridge	 Region I.","Unspecified survey target and methods. Remarks: Orig. #: 7, sta. II",,"1986",z Indetermined (see note),
+-70.07204,-21.42347,"552","74","Dyer, B.","1040.077","Rio Loa, 1.5 km upstream from river mouth, border of Arica-Iquique Provs.	 Regions I-II","Unspecified survey target and methods. Remarks: Orig. #: 8, sta. I",,"1988",Mugil cephalus,
+-73.36836,-28.89593,"553","74","Dyer, B.","1040.078","Rio Loa, Sloman dam, downriver near Quillagua, Prov. Tocopilla, Region II",Unspecified survey target and methods.,,"1987",z Indetermined (see note),
+-72.58245,-35.58331,"554","74","Dyer, B.","1040.079","Rio Loanco, at Santa Ana bridge, 35 km S of Constitucion along coastal road, Region VII	 Rio Loanco drainage","Unspecified survey target and methods. Remarks: Orig. #: 27, sta. I",,"1986",Odontesthes mauleanum,
+-73.51837,-32.40066,"555","74","Dyer, B.","1040.080","Rio Maipo, Tejas Verdes, 500 m upriver from Llo-Lleo, Prov. San Antonio, Region V",Unspecified survey target and methods.,,"1987",z Indetermined (see note),
+-72.68253,-37.78328,"556","74","Dyer, B.","1040.081","Rio Malleco, Angol, at Malleco or Vergara No. 2 bridge *, Region IX	 Rio Bio-Bio drainage","Unspecified survey target and methods. Remarks: Orig. #: 23, sta. II.  * which is alongside railway bridge going north.",,"1986",Trichomycterus chiltoni,
+-70.92232,-33.60336,"557","74","Dyer, B.","1040.082","Rio Mapocho at Penaflor, 25 km by rail from Santiago, Prov. Talagante, Metropolitana Region	 Rio Maipo drainage",Unspecified survey target and methods. Remarks: Elev. 407 m.,,"1919",z Indetermined (see note),
+-71.42233,-33.05336,"558","74","Dyer, B.","1040.083","Rio Marga-Marga, 200 m (ca Villa Alemana)",Unspecified survey target and methods. Remarks: Orig.#5,,"1963",Trichomycterus areolatus,
+-72.61083,-32.91753,"559","74","Dyer, B.","1040.084","Rio Marga-Marga, 200 m (ca. Villa Alemana)",Unspecified survey target and methods. Remarks: Orig. No.:  5,,"1963",z Indetermined (see note),
+-72.13242,-35.08332,"560","74","Dyer, B.","1040.085","Rio Mataquito, near Huelon, 21 km downstream from Licanten at ex Balsadero, on Huelon-Chanquiuque road, Region VII","Unspecified survey target and methods. Remarks: Orig. #: 27, sta. IV",,"1986",Basilichthys australis,
+-72.42244,-35.35331,"561","74","Dyer, B.","1040.086","Rio Maule at Constitucion, N shore on road to Putu, Region VII	 Rio Maule drainage","Unspecified survey target and methods. Remarks: Orig. #: 27, sta. II",,"1986",Odontesthes regia,
+-71.37231,-32.37336,"562","74","Dyer, B.","1040.087","Rio Petorca, 100 m downstream from Longotoma Panam bridge, at little dam, Region V	 Rio Petorca drainage","Unspecified survey target and methods. Remarks: Orig. #: 13, sta. I",,"1986",Basilichthys microlepidotus,
+-72.67326,-30.80654,"563","74","Dyer, B.","1040.088","Rio Petorca, Longotoma",Unspecified survey target and methods. Remarks: Orig.#20,,"1963",Basilichthys microlepidotus,
+-72.50256,-38.85327,"564","74","Dyer, B.","1040.089","Rio Quepe at Momberg bridge, 17 km SE of Temuco's Plaza de Armas, on road to Cunco, Region IX	 Rio Imperial drainage",Unspecified survey target and methods. Remarks: Orig. #: 23 sta. I,,"1986",Diplomystes nahuelbutaensis,
+-73.23262,-39.40324,"565","74","Dyer, B.","1040.090","Rio Queule, 2 km upstream from river mouth, Region IX	 Rio Queule drainage","Unspecified survey target and methods. Remarks: Orig. #: 21, sta. II",,"1986",Odontesthes mauleanum,
+-73.07474,-31.91940,"566","74","Dyer, B.","1040.091","Rio Quilimari near Guanguali, Prov. Choapa, Region IV",Unspecified survey target and methods.,,"1984",Basilichthys microlepidotus,
+-71.52231,-32.12336,"567","74","Dyer, B.","1040.092","Rio Quilimari, 1 km upstream from river mouth, 400 m up from Panam bridge, Region IV	 Rio Quilimari drainage","Unspecified survey target and methods. Remarks: Orig. #: 12, sta. IV",,"1986",Basilichthys microlepidotus,
+-73.21522,-31.49153,"568","74","Dyer, B.","1040.093","Rio Quilimari, Guanguali, Prov. Choapa, Region IV",Unspecified survey target and methods.,,"1984",Basilichthys microlepidotus,
+-73.15563,-40.58428,"569","74","Dyer, B.","1040.094",Rio Rahue 250m Osorno,Unspecified survey target and methods. Remarks: Orig.#21,,"1963",Brachygalaxias bullocki,
+-72.95265,-40.73323,"570","74","Dyer, B.","1040.095","Rio Rahue at Cancura bridge, Cancura, Region X, R. Bueno drainage",Unspecified survey target and methods. Remarks: no field notes found.,,"1986",Trichomycterus areolatus,
+-72.83248,-36.17329,"571","74","Dyer, B.","1040.096","Rio Taucu, 5 km S of Cobquecura, Region VIII	 Rio Taucu drainage","Unspecified survey target and methods. Remarks: Orig. #: 26, sta. I",,"1986",Odontesthes mauleanum,
+-73.03259,-39.03325,"572","74","Dyer, B.","1040.097","Rio Tolten 7 km downstream from Comuy	 Rio Tolten drainage, Region IX",Unspecified survey target and methods. Remarks: Orig. #: 21 sta. III,,"1986",Basilichthys australis,
+-73.73268,-40.53322,"573","74","Dyer, B.","1040.098","Rio Tranallaquin or Contaco, 1 km upstream from river mouth, near Manzano bridge, Region X	 Rio Contaco drainage","Unspecified survey target and methods. Remarks: Orig. #: 17, sta. II",,"1986",Odontesthes mauleanum,
+-68.67302,-52.67317,"574","74","Dyer, B.","1040.099","Straits of Magellan, Tierra del Fuego Island, near Estancia Catalina 'NNE' from Cerro Sombrero, Region XII",Unspecified survey target and methods. Remarks: web leaded type,,"1987",Odontesthes nigricans,
+-70.23205,-22.08346,"575","74","Dyer, B.","1040.101","Tocopilla	 Region II",Unspecified survey target and methods.,,"1992",Odontesthes regia,
+-72.68093,-33.91787,"576","74","Dyer, B.","1040.102",Trib to Rio Putagan,Unspecified survey target and methods.,,"1980",z Indetermined (see note),
+-72.67065,-34.03585,"577","74","Dyer, B.","1040.103",Tributary to Rio Putagan,Unspecified survey target and methods.,,"1980",Cheirodon galusdae,
+-73.24634,-39.82196,"578","74","Dyer, B.","1040.104","Valdivia market, Region X	 R. Valdivia drainage",Unspecified survey target and methods.,,"1986",Odontesthes regia,
+-73.15516,-33.40901,"579","74","Dyer, B.","1040.105","Valparaiso Bay, Region V",Unspecified survey target and methods.,,,Odontesthes regia,
+-72.57354,-33.25683,"580","74","Dyer, B.","1040.106","Valparaison, Region V",Unspecified survey target and methods.,,,Odontesthes regia,
+-72.16608,-39.26026,"581","74","Dyer, B.","1040.107",Villarrica,"Unspecified survey target and methods. Remarks: Orig.#31	 Prov. Osorno on label presumed an error.",,"1963",Percilia gillissi,
+-71.65831,-35.42602,"582","75","Busse, K.","1045.01","Fundo Porvenir, Talca","Type locality. Only G. othei reported. Swamps, productive pools.",Not accurate,"1981",Brachygalaxias gothei,
+-72.34917,-39.71046,"583","76","Busse, K.","1046.01",Small tributary in Playa Monje (Lake Panguipulli),Only A. zebra reported.,Not Accurate,"1995",Aplochiton zebra,
+-67.70586,-54.94430,"584","77","M, Moorman","1053.01",Bronces 1,,GPS waypoint,"2005",Salvelinus fontinalis,"26,87"
+-67.71147,-54.94864,"585","77","M, Moorman","1053.02",Bronces 2,no fish was caught,GPS waypoint,"2005",,
+-67.46843,-54.93987,"586","77","M, Moorman","1053.03",Cascada 1,no fish was caught,GPS waypoint,"2005",,
+-67.46900,-54.93906,"587","77","M, Moorman","1053.04",Cascada 2,,GPS waypoint,"2005",Salvelinus fontinalis,"46,38"
+-68.05193,-55.18086,"588","77","M, Moorman","1053.05",Douglas 1,,GPS waypoint,"2005",Salvelinus fontinalis,"24,14"
+-68.10906,-55.17387,"589","77","M, Moorman","1053.06",Douglas 2,,GPS waypoint,"2005",Salvelinus fontinalis,"8,98"
+-67.78388,-54.92486,"590","77","M, Moorman","1053.07",Estrella 1,,GPS waypoint,"2005",Salvelinus fontinalis,"98,46"
+-68.08535,-54.90611,"591","77","M, Moorman","1053.08",Fajarones 1,,GPS waypoint,"2005",Salvelinus fontinalis,"22,45"
+-67.50248,-54.93871,"592","77","M, Moorman","1053.09",Guanaco 1,,GPS waypoint,"2005",Salvelinus fontinalis,"96,08"
+-67.85158,-54.91596,"593","77","M, Moorman","1053.10",Guerrico 1,,GPS waypoint,"2005",Oncorhynchus mykiss,"89,66"
+-67.85274,-54.92067,"594","77","M, Moorman","1053.11",Guerrico 2,,GPS waypoint,"2005",Oncorhynchus mykiss,"100"
+-68.33883,-55.01228,"595","77","M, Moorman","1053.12",Hoste 1,no fish was caught,GPS waypoint,"2005",,
+-68.37854,-54.98422,"596","77","M, Moorman","1053.13",Hoste 2,,GPS waypoint,"2005",Salvelinus fontinalis,"25,00"
+-68.59137,-54.94829,"597","77","M, Moorman","1053.14",Hoste 3,,GPS waypoint,"2005",Galaxias maculatus,"100"
+-68.59641,-54.94567,"598","77","M, Moorman","1053.15",Hoste 4,Directly downstream from a beaverdam.,GPS waypoint,"2005",Salvelinus fontinalis,"15,05"
+-68.56876,-54.94831,"599","77","M, Moorman","1053.16",Hoste 5,,GPS waypoint,"2005",Salvelinus fontinalis,"9,71"
+-68.22110,-54.97786,"600","77","M, Moorman","1053.17",Inutil 1,No fish was caught.,GPS waypoint,"2005",,
+-68.11217,-54.91196,"601","77","M, Moorman","1053.18",Lum 1,,GPS waypoint,"2005",Salvelinus fontinalis,"6,71"
+-68.00168,-54.90850,"602","77","M, Moorman","1053.19",Meijillones 1,,GPS waypoint,"2005",Salvelinus fontinalis,"72,73"
+-67.99198,-54.90810,"603","77","M, Moorman","1053.20",Meijillones 2,,GPS waypoint,"2005",Salvelinus fontinalis,"37,78"
+-67.62656,-54.94182,"604","77","M, Moorman","1053.21",Micalvi 1,,GPS waypoint,"2005",Galaxias maculatus,"100"
+-67.42338,-54.93103,"605","77","M, Moorman","1053.22",Pitufos 1,,GPS waypoint,"2005",Salvelinus fontinalis,"85,00"
+-67.26850,-55.02430,"606","77","M, Moorman","1053.23",Pollollo,,GPS waypoint,"2005",Salvelinus fontinalis,"38,46"
+-67.52653,-54.93740,"607","77","M, Moorman","1053.24",Pt Truco 1,,GPS waypoint,"2005",Salvelinus fontinalis,"100"
+-67.66071,-54.94488,"608","77","M, Moorman","1053.25",Robalo 1,,GPS waypoint,"2005",Salvelinus fontinalis,"860,9"
+-67.64697,-54.95521,"609","77","M, Moorman","1053.26",Robalo 2,no fish was caught. Right above a waterfall and dam.,GPS waypoint,"2005",,
+-67.64984,-54.95707,"610","77","M, Moorman","1053.27",Robalo 3,no fish was caught. Right above a waterfall and dam.,GPS waypoint,"2005",,
+-67.60429,-54.94230,"611","77","M, Moorman","1053.28",Ukika 1,,GPS waypoint,"2005",Salvelinus fontinalis,"77,68"
+-68.14999,-55.04984,"612","77","M, Moorman","1053.29",Wulaia 1,,GPS waypoint,"2005",Galaxias maculatus,"97,22"
+-68.21963,-54.97774,"613","77","M, Moorman","1053.30",Inutil at estuary,M. Moorman personal communication.,,"2006",Galaxias maculatus,

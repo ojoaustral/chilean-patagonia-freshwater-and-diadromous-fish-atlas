@@ -1,0 +1,17 @@
+This dataset corresponds to 
+
+Habit, E., Contreras, L., Dyer, B.S., Correa, C., Naretto, J., Contreras, V., Amaya, L., and Villagran. 2023. Fauna Íctica Nativa Continental de Chile. Ministerio del Medio Ambiente de Chile, Occurrence dataset https://doi.org/10.15468/cxb957 accessed via GBIF.org on 2025-10-17.
+
+
+Citation: GBIF.org (17 October 2025) GBIF Occurrence Download  https://doi.org/10.15468/dl.g7dr3v
+
+Log of actions:
+On 2024-04-18, se bajo 0193603-240321170329656.csv de GBIF.
+Se encontró este conjunto de datos en la sección "Publishers", donde se realizó una búsqueda (https://www.gbif.org/publisher/search?q=) para el "Ministerio del Medio Ambiente de Chile".
+El Ministerio del Medio Ambiente tiene 23 set de datos en GBIF. Se seleccionó el conjunto de datos llamado: "Fauna Íctica Nativa Continental de Chile" https://www.gbif.org/dataset/45c3d8d2-7352-4dd1-aefd-c21e0b6b004e.
+En la sección Download de este conjunto de datos, seleccionamos la opción "GBIF annotated archive (Recommended)", y se bajo la versión "SIMPLE" de la base de datos. Existe la versión "Darwin Core Archive", pero  al parecer, la versión simple contiene toda la información que necesitemos. Este conjunto de datos tiene 5363 registros, igual que la base de datos del MMA que ya habíamos consolidado. 
+
+Este procedimiento se repitió el 2025-10-17, y el archivo resultante fue 0030526-251009101135966.csv que luego fue renombrado  GBIF_MMA.csv. 
+
+
+

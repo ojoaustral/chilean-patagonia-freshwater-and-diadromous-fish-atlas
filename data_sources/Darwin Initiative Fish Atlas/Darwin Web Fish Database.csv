@@ -1,0 +1,908 @@
+"This database is one of the products of the following grants: Carlos García de Leániz (PI), Gonzalo Gajardo, et al. Department for Environment Food and Rural Affairs (DEFRA, UK). Darwin Initiative Grants 15020 (2006-2009) and EIDPO041 (2010-2012).",,,,,,,,,,,,,
+Watershed,Location,Station,Latitude,Longitude,Date,Day,Month,Year,Species,Collected by,n.genotyped,n.not.genotyped,n.individuals
+EB,E. Brook - Falklands,EB3,-51.65468056,-58.24191389,2016-08-07,16,8,2007,Salmo trutta,,,11,11
+EB,E. Brook - Falklands,EB5,-51.65468056,-58.24191389,2018-08-07,18,8,2007,Salmo trutta,,,20,20
+HHS,Half way house stream- Falklands,HHS,-52.00760833,-59.27906389,2008-08-07,8,8,2007,Aplochiton zebra,,,7,7
+HHS,Half way house stream- Falklands,HHS,-52.00760833,-59.27906389,2009-08-07,9,8,2007,Aplochiton zebra,,,17,17
+HHS,Half way house stream- Falklands,HHS,-52.00760833,-59.27906389,2009-08-07,9,8,2007,Galaxias maculatus,,,32,32
+HHS,Half way house stream- Falklands,HHS,-52.00760833,-59.27906389,2010-08-07,10,8,2007,Aplochiton zebra,,,7,7
+PBA,Peat Banks Arroyo-Falklands,PBA10,-52.02428889,-59.33548611,2008-08-07,8,8,2007,Aplochiton zebra,,,2,2
+PBA,Peat Banks Arroyo-Falklands,PBA4,-52.02428889,-59.33548611,2007-08-07,7,8,2007,Aplochiton zebra,,,4,4
+PBA,Peat Banks Arroyo-Falklands,PBA5,-52.02428889,-59.33548611,2007-08-07,7,8,2007,Aplochiton zebra,,,3,3
+PBA,Peat Banks Arroyo-Falklands,PBA6,-52.02428889,-59.33548611,2008-08-07,8,8,2007,Aplochiton zebra,,,6,6
+PBA,Peat Banks Arroyo-Falklands,PBA7,-52.02428889,-59.33548611,2008-08-07,8,8,2007,Aplochiton zebra,,,1,1
+PBA,Peat Banks Arroyo-Falklands,PBAI,-52.02428889,-59.33548611,2008-08-07,8,8,2007,Aplochiton zebra,,,1,1
+PBA,Peat Banks Arroyo-Falklands,PBAI3,-52.02428889,-59.33548611,2007-08-07,7,8,2007,Aplochiton zebra,,,12,12
+Río Aisén,Río Blanco,RB1,-45.80816,-71.92325,2012-04-07,12,4,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,4,4
+Río Aisén,Río Blanco,RB2,-45.81461,-71.91913,2012-04-07,12,4,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,1,1
+Río Aisén,Rio Emperador Guillermo,REG3,-45.261675,-72.249275,2011-04-07,11,4,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,14,14
+Río Aisén,Rio Emperador Guillermo,REG3,-45.261675,-72.249275,2011-04-07,11,4,2007,Salmo trutta,"Kyle Young, Jane McDonald",,64,64
+Río Aisén,Rio Emperador Guillermo,REG3,-45.261675,-72.249275,2014-04-07,14,4,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,6,6
+Río Aisén,Rio Emperador Guillermo,REG3,-45.261675,-72.249275,2014-04-07,14,4,2007,Salmo trutta,"Kyle Young, Jane McDonald",,6,6
+Río Aisén,Rio Maniguales,RM1,-45.35217,-72.46136,39178,6,4,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,18,18
+Río Aisén,Rio Maniguales,RM1,-45.35217,-72.46136,39178,6,4,2007,Salmo trutta,"Kyle Young, Jane McDonald",,16,16
+Río Aisén,Rio Maniguales,RM2,-45.30132,-72.34696,39179,7,4,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,47,47
+Río Aisén,Rio Maniguales,RM2,-45.30132,-72.34696,39179,7,4,2007,Salmo trutta,"Kyle Young, Jane McDonald",,16,16
+Río Aisén,Rio Maniguales,RM5,-44.99793,-72.09755,39182,10,4,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,1,1
+Río Aisén,Rio Maniguales,RM5,-44.99793,-72.09755,39182,10,4,2007,Oncorhynchus tshawytscha,"Kyle Young, Jane McDonald",,46,46
+Río Aisén,Rio Maniguales,RM5,-44.99793,-72.09755,39182,10,4,2007,Salmo trutta,"Kyle Young, Jane McDonald",,73,73
+Río Aisén,Rio Maniguales,RM6,-45.10112,-72.149,39182,10,4,2007,Oncorhynchus tshawytscha,"Kyle Young, Jane McDonald",,86,86
+Río Aisén,Rio Maniguales,RM6,-45.10112,-72.149,39182,10,4,2007,Salmo trutta,"Kyle Young, Jane McDonald",,28,28
+Río Aisén,Rio Pollux 1,RP1,-45.6899,-72.08307,2012-04-07,12,4,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,2,2
+Río Aisén,Río Richards 1,ER1,-45.30511,-71.77826,2014-04-07,14,4,2007,Salmo trutta,"Kyle Young, Jane McDonald",,23,23
+Río Aisén,Río Simpsom 1,RS1,-45.72424,-72.09756,2012-04-07,12,4,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,7,7
+Río Aitoy/Aiguy,Rio Aitoy/Aiguy,RAI,-42.75721,-73.56533,2018-05-07,18,5,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,12,12
+Río Aitoy/Aiguy,Rio Aitoy/Aiguy,RIA1,-42.75721,-73.56533,2011-02-08,11,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,40,40
+Río Aitoy/Aiguy,Rio Aitoy/Aiguy,RIA1,-42.75721,-73.56533,2011-02-08,11,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,15,15
+Río Aitoy/Aiguy,Rio Aitoy/Aiguy,RIA3,-42.76641,-73.56625,2011-02-08,11,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,71,71
+Río Alcatebu,Rio Alcatebu,RA,-43.0293,-73.64211,2016-05-07,16,5,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,17,17
+Río Alcatebu,Rio Alcatebu,RA,-43.0293,-73.64211,2016-05-07,16,5,2007,Salmo trutta,"Kyle Young, Jane McDonald",,5,5
+Río Aucar,Río Aucar,RAU1,-42.1665,-73.48266,2007-11-07,7,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,143,143
+Río Aucar,Río Aucar,RAU1,-42.1665,-73.48266,2007-11-07,7,11,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,2,2
+Río Aucar,Río Aucar,RAU1,-42.1665,-73.48266,2007-11-07,7,11,2007,Salmo salar,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,15,15
+Río Aucar,Río Aucar,RAU1,-42.1665,-73.48266,2013-02-08,13,2,2008,Salmo salar,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,40,40
+Río Aucar,Río Aucar,RAU2,-42.16696,-73.48392,2007-11-07,7,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,103,103
+Río Aucar,Río Aucar,RAU2,-42.16696,-73.48392,2007-11-07,7,11,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,4,4
+Río Aucar,Río Aucar,RAU2,-42.16696,-73.48392,2007-11-07,7,11,2007,Salmo salar,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,72,72
+Río Aucar,Río Aucar,RAU3,-42.16696,-73.48392,39533,26,3,2008,Salmo salar,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,35,35
+Río Aucar,Río Aucar,RAU4,-42.16948,-73.48678,2007-11-07,7,11,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,13,13
+Río Bueno, MultiExport-Lago Rupanco,MELR,-40.85021389,-72.50480556,39736,15,10,2008,Salmo salar,,,120,120
+Río Bueno,Aqua Chile Rupanco,ACR,-40.81465833,-72.47077222,39230,28,5,2007,Salmo salar,,,5,5
+Río Bueno,Aqua Chile Rupanco,ACR,-40.81465833,-72.47077222,39262,29,6,2007,Salmo salar,,,51,51
+Río Bueno,Aqua Chile Rupanco,ACR,-40.81465833,-72.47077222,39371,16,10,2007,Salmo salar,,,12,12
+Río Bueno,Aqua Chile Rupanco,ACR,-40.81465833,-72.47077222,39392,6,11,2007,Salmo salar,,,16,16
+Río Bueno,Lago Maihue,LMAI,-40.2776,-72.04204444,15/12/88,15,12,1988,Oncorhynchus mykiss,Angler,,1,1
+Río Bueno,Lago Puyehue,LP,-40.68298333,-72.46075833,39293,30,7,2007,Oncorhynchus mykiss,,,20,20
+Río Bueno,Lago Puyehue,LP,-40.68298333,-72.46075833,39310,16,8,2007,Oncorhynchus mykiss,,,20,20
+Río Bueno,Lago Puyehue,LP,-40.68298333,-72.46075833,39381,26,10,2007,Oncorhynchus mykiss,,,16,16
+Río Bueno,Lago Ranco,LRAN,-40.13771111,-72.25274722,16/03/84,16,3,1984,Oncorhynchus mykiss,Angler,,1,1
+Río Bueno,Lago Ranco,LRAN,-40.22838889,-72.320775,17/02/97,17,2,1997,Oncorhynchus kisutch,Angler,,1,1
+Río Bueno,Lago Rupanco,LR,-40.81804167,-72.48393889,08/05/83,8,5,1983,Oncorhynchus mykiss,Angler,,2,2
+Río Bueno,Laguna de Chaca,LMAI,-40.2776,-72.04204444,13/12/88,13,12,1988,Oncorhynchus mykiss,Angler,,1,1
+Río Bueno,Marine Harvest - Lago puyehue,MHLP,-40.68298333,-72.46075833,39209,7,5,2007,Salmo salar,,,9,9
+Río Bueno,Marine Harvest - Lago puyehue,MHLP,-40.68298333,-72.46075833,39216,14,5,2007,Salmo salar,,,3,3
+Río Bueno,Marine Harvest - Lago puyehue,MHLP,-40.68298333,-72.46075833,39218,16,5,2007,Salmo salar,,,5,5
+Río Bueno,Marine Harvest - Lago puyehue,MHLP,-40.68298333,-72.46075833,39371,16,10,2007,Salmo salar,,,12,12
+Río Bueno,Marine Harvest - Lago puyehue,MHLP,-40.68298333,-72.46075833,39392,6,11,2007,Salmo salar,,,16,16
+Río Bueno,Nalca,RNC22,-40.89397222,-72.33863889,39911,8,4,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda",,6,6
+Río Bueno,Ñilque,RÑIL,-40.784,-72.43465,39855,11,2,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,33,33
+Río Bueno,Ñilque,RÑIL,-40.784,-72.43465,39855,11,2,2009,Salmo trutta,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,36,36
+Río Bueno,Pescadero,RP55,-40.71371,-72.40508,39856,12,2,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,68,68
+Río Bueno,Pescadero,RP55,-40.71371,-72.40508,39856,12,2,2009,Oncorhynchus tshawytscha,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,12,12
+Río Bueno,Pescadero,RP55,-40.71371,-72.40508,39856,12,2,2009,Percichthys trucha,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,1,1
+Río Bueno,Pescadero,RP55,-40.71371,-72.40508,39856,12,2,2009,Salmo trutta,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,14,14
+Río Bueno,PichiChanlelfu,RCHF,-40.42156,-72.1858,39856,12,2,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,1,1
+Río Bueno,PichiChanlelfu,RCHF,-40.42156,-72.1858,39856,12,2,2009,Salmo salar,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,38,38
+Río Bueno,PichiChanlelfu,RCHF,-40.42156,-72.1858,39856,12,2,2009,Salmo trutta,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,59,59
+Río Bueno,Piedras Negras 3,RPN20,-40.88808333,-72.46694444,39910,7,4,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda",,23,23
+Río Bueno,Piedras Negras 3,RPN20,-40.88808333,-72.46694444,39910,7,4,2009,Oncorhynchus tshawytscha,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda",,6,6
+Río Bueno,Piedras Negras 3,RPN20,-40.88808333,-72.46694444,39910,7,4,2009,Salmo salar,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda",,3,3
+Río Bueno,Piedras Negras 3,RPN20,-40.88808333,-72.46694444,39910,7,4,2009,Salmo trutta,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda",,8,8
+Río Bueno,Piscicultura Cuinco,PC,-40.19652636,-72.62577336,2008-01-09,8,1,2009,Oncorhynchus mykiss,"Patricia Beristain, LZ, AC",,50,50
+Río Bueno,Piscicultura Cuinco,PCA,-40.19652636,-72.62577336,39826,13,1,2009,Oncorhynchus mykiss,,,30,30
+Río Bueno,Piscicultura Río Pescadero,PP,-40.71548611,-72.40154444,2013-11-08,13,11,2008,Salmo salar,"Patricia Beristain, DI",,50,50
+Río Bueno,Río Blanco,RBLA,-40.21637222,-72.00465278,29/03/90,29,3,1990,Salmo trutta,Angler,,1,1
+Río Bueno,Río Blanco - Rup,RBL21,-40.89125,-72.26605556,39911,8,4,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda",,62,62
+Río Bueno,Río Blanco - Rup,RBL21,-40.89125,-72.26605556,39911,8,4,2009,Percichthys trucha,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda",,1,1
+Río Bueno,Río Blanco - Rup,RBL21,-40.89125,-72.26605556,39911,8,4,2009,Salmo trutta,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda",,5,5
+Río Bueno,Río Bonito,RBO18,-40.886,-72.46430556,39910,7,4,2009,Galaxias maculatus,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda",,1,1
+Río Bueno,Río Bonito,RBO18,-40.886,-72.46430556,39910,7,4,2009,Galaxias platei,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda",,11,11
+Río Bueno,Río Bonito,RBO18,-40.886,-72.46430556,39910,7,4,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda",,20,20
+Río Bueno,Río Bonito,RBO18,-40.886,-72.46430556,39910,7,4,2009,Oncorhynchus tshawytscha,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda",,6,6
+Río Bueno,Río Bonito,RBO18,-40.886,-72.46430556,39910,7,4,2009,Percilia gillissi,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda",,12,12
+Río Bueno,Río Bonito,RBO18,-40.886,-72.46430556,39910,7,4,2009,Salmo trutta,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda",,20,20
+Río Bueno,Río Bonito,RBO18,-40.886,-72.46430556,39910,7,4,2009,Trichomycterus areolatus,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda",,1,1
+Río Bueno,Río Cainalhue,RCAI7,-40.32057222,-73.44981667,39940,7,5,2009,Galaxias maculatus,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,43,43
+Río Bueno,Río Cainalhue,RCAI7,-40.32057222,-73.44981667,39940,7,5,2009,Geotria australis,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,7,7
+Río Bueno,Río Cainalhue,RCAI7,-40.32057222,-73.44981667,39940,7,5,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,6,6
+Río Bueno,Río Cainalhue,RCAI7,-40.32057222,-73.44981667,39940,7,5,2009,Percichthys trucha,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,4,4
+Río Bueno,Río Cainalhue,RCAI7,-40.32057222,-73.44981667,39940,7,5,2009,Salmo trutta,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,21,21
+Río Bueno,Río Cainalhue,RCAI7,-40.32057222,-73.44981667,39940,7,5,2009,Trichomycterus areolatus,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,2,2
+Río Bueno,Río Calcurrupe,RCP,-40.22621111,-72.15027222,17/03/87,17,3,1987,Oncorhynchus mykiss,Angler,,1,1
+Río Bueno,Río Calle Calle - Rup,RCC23,-40.88405556,-72.36552778,39911,8,4,2009,Oncorhynchus kisutch,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda",,3,3
+Río Bueno,Río Calle Calle - Rup,RCC23,-40.88405556,-72.36552778,39911,8,4,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda",,17,17
+Río Bueno,Río Calle Calle - Rup,RCC23,-40.88405556,-72.36552778,39911,8,4,2009,Oncorhynchus tshawytscha,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda",,1,1
+Río Bueno,Río Calle Calle - Rup,RCC23,-40.88405556,-72.36552778,39911,8,4,2009,Salmo trutta,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda",,2,2
+Río Bueno,Río Caunahue,RCAU,-39.94974722,-71.06373333,15/02/84,15,2,1984,Oncorhynchus mykiss,Angler,,1,1
+Río Bueno,Río Collico,RCOLL,-40.3325,-72.22775,39928,25,4,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,6,6
+Río Bueno,Río Cruce a los Juncos,RCLJ,-40.33906111,-73.40245556,39940,7,5,2009,Cheirodon australe,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,3,3
+Río Bueno,Río Cruce a los Juncos,RCLJ,-40.33906111,-73.40245556,39940,7,5,2009,Galaxias maculatus,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,12,12
+Río Bueno,Río Cumilahue,RC,-40.22621111,-72.15027222,01/03/83,1,3,1983,Oncorhynchus mykiss,Angler,,1,1
+Río Bueno,Río Cumilahue,RC,-40.22621111,-72.15027222,01/04/90,1,4,1990,Salmo trutta,Angler,,1,1
+Río Bueno,Río El Encanto,RETO,-40.75565,-72.46741667,39939,6,5,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,43,43
+Río Bueno,Río El Encanto,RETO,-40.75565,-72.46741667,39939,6,5,2009,Salmo trutta,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,22,22
+Río Bueno,Río El Encanto,RETO,-40.75565,-72.46741667,39939,6,5,2009,Trichomycterus areolatus,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,1,1
+Río Bueno,Río Futangue,RFU16,-40.33177778,-72.26638889,39902,30,3,2009,Aplochiton zebra,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda",30,65,95
+Río Bueno,Río Futangue,RFU16,-40.33177778,-72.26638889,39902,30,3,2009,Galaxias platei,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda",,1,1
+Río Bueno,Río Futangue,RFU16,-40.33177778,-72.26638889,39902,30,3,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda",,9,9
+Río Bueno,Río Futangue,RFU16,-40.33177778,-72.26638889,39902,30,3,2009,Percichthys trucha,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda",,1,1
+Río Bueno,Río Futangue,RFU16,-40.33177778,-72.26638889,39927,24,4,2009,Aplochiton zebra,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,96,96
+Río Bueno,Río Futangue,RFU16,-40.33177778,-72.26638889,39927,24,4,2009,Galaxias platei,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,1,1
+Río Bueno,Río Futangue,RFU16,-40.33177778,-72.26638889,39927,24,4,2009,Oncorhynchus kisutch,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,2,2
+Río Bueno,Río Futangue,RFU16,-40.33177778,-72.26638889,39927,24,4,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,24,24
+Río Bueno,Río Futangue,RFU16,-40.33177778,-72.26638889,39928,25,4,2009,Aplochiton zebra,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,115,115
+Río Bueno,Río Futangue,RFU16,-40.33177778,-72.26638889,39928,25,4,2009,Brachygalaxias bullocki,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,1,1
+Río Bueno,Río Futangue,RFU16,-40.33177778,-72.26638889,39928,25,4,2009,Galaxias platei,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,1,1
+Río Bueno,Río Futangue,RFU16,-40.33177778,-72.26638889,39928,25,4,2009,Oncorhynchus kisutch,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,1,1
+Río Bueno,Río Futangue,RFU16,-40.33177778,-72.26638889,39928,25,4,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,13,13
+Río Bueno,Río Futangue,RFU16,-40.33177778,-72.26638889,39928,25,4,2009,Salmo trutta,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,2,2
+Río Bueno,Río Gol-Gol,RGG,-40.66160556,-72.2518,39205,3,5,2007,Oncorhynchus mykiss,,,12,12
+Río Bueno,Río Iculpe,RIC17,-40.31461111,-72.43908333,39903,31,3,2009,Aplochiton zebra,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",30,27,57
+Río Bueno,Río Iculpe,RIC17,-40.31461111,-72.43908333,39903,31,3,2009,Galaxias platei,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,11,11
+Río Bueno,Río Iculpe,RIC17,-40.31461111,-72.43908333,39903,31,3,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,18,18
+Río Bueno,Río Iculpe,RIC17,-40.31461111,-72.43908333,39903,31,3,2009,Oncorhynchus tshawytscha,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,1,1
+Río Bueno,Río Iculpe,RIC17,-40.31461111,-72.43908333,39903,31,3,2009,Percichthys trucha,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,1,1
+Río Bueno,Río Iculpe,RIC17,-40.31461111,-72.43908333,39903,31,3,2009,Salmo trutta,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,11,11
+Río Bueno,Río Iculpe,RIC17,-40.31461111,-72.43908333,39903,31,3,2009,Trichomycterus areolatus,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,2,2
+Río Bueno,Río Iculpe - Arriba,RIC17A,-40.36533333,-72.35591667,39903,31,3,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,27,27
+Río Bueno,Río Licán,RICAN,-40.62761111,-72.41041667,39855,11,2,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,28,28
+Río Bueno,Río Licán,RICAN,-40.62761111,-72.41041667,39855,11,2,2009,Oncorhynchus tshawytscha,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,3,3
+Río Bueno,Río Licán,RICAN,-40.62761111,-72.41041667,39855,11,2,2009,Salmo trutta,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,33,33
+Río Bueno,Río Nilahue,RN,-40.26818611,-72.20340833,09/03/85,9,3,1985,Oncorhynchus mykiss,Angler,,1,1
+Río Bueno,Río Nilahue,RN,-40.26818611,-72.20340833,12/02/90,12,2,1990,Oncorhynchus mykiss,Angler,,1,1
+Río Bueno,Río Pilmaiquén,RP,-40.38472778,-73.00347778,39455,8,1,2008,Oncorhynchus mykiss,,,8,8
+Río Bueno,Río Pilmaiquén,RP,-40.38472778,-73.00347778,39455,8,1,2008,Salmo trutta,,,3,3
+Río Bueno,Río Pitreño,RPI15,-40.32677778,-72.31955556,39898,26,3,2009,Aplochiton zebra,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",31,36,67
+Río Bueno,Río Pitreño,RPI15,-40.32677778,-72.31955556,39898,26,3,2009,Basilichthys australis,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,30,30
+Río Bueno,Río Pitreño,RPI15,-40.32677778,-72.31955556,39898,26,3,2009,Cheirodon australe,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,2,2
+Río Bueno,Río Pitreño,RPI15,-40.32677778,-72.31955556,39898,26,3,2009,Galaxias platei,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,12,12
+Río Bueno,Río Pitreño,RPI15,-40.32677778,-72.31955556,39898,26,3,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,54,54
+Río Bueno,Río Pitreño,RPI15,-40.32677778,-72.31955556,39898,26,3,2009,Percichthys trucha,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,8,8
+Río Bueno,Río Pitreño,RPI15,-40.32677778,-72.31955556,39898,26,3,2009,Trichomycterus areolatus,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,16,16
+Río Bueno,Río Pitreño - Arriba,RPI15A,-40.33438889,-72.329,39904,1,4,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda",,22,22
+Río Bueno,Río Pucopio,RPCP,-40.35390278,-73.45118611,39940,7,5,2009,Brachygalaxias bullocki,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,3,3
+Río Bueno,Río Pucopio,RPCP,-40.35390278,-73.45118611,39940,7,5,2009,Geotria australis,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,1,1
+Río Bueno,Río Pucopio,RPCP,-40.35390278,-73.45118611,39940,7,5,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,1,1
+Río Bueno,Río Pucopio,RPCP,-40.35390278,-73.45118611,39940,7,5,2009,Salmo trutta,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,5,5
+Río Bueno,Río Quiman,RQU14,-40.11386111,-72.34336111,39898,26,3,2009,Aplochiton zebra,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",25,2,27
+Río Bueno,Río Quiman,RQU14,-40.11386111,-72.34336111,39898,26,3,2009,Galaxias platei,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,7,7
+Río Bueno,Río Quiman,RQU14,-40.11386111,-72.34336111,39898,26,3,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,55,55
+Río Bueno,Río Quiman,RQU14,-40.11386111,-72.34336111,39898,26,3,2009,Salmo salar,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,56,56
+Río Bueno,Río Quiman,RQU14,-40.11386111,-72.34336111,39898,26,3,2009,Salmo trutta,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,25,25
+Río Bueno,Río Riñinahue,RR,-40.33181389,-72.24295833,04/04/84,4,4,1984,Salmo trutta,Angler,,2,2
+Río Bueno,Río Riñinahue,RR,-40.33181389,-72.24295833,31/03/91,31,3,1991,Oncorhynchus kisutch,Angler,,1,1
+Río Camanchaca,Río Camanchaca,RCAM1,-41.43882,-72.29497,2011-06-07,11,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,12,12
+Río Camanchaca,Río Camanchaca,RCAM1,-41.43882,-72.29497,2011-06-07,11,6,2007,Salmo salar,"Kyle Young, Jane McDonald, BP",,3,3
+Río Camanchaca,Río Camanchaca,RCAM1,-41.43882,-72.29497,2011-06-07,11,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,9,9
+Río Camanchaca,Río Camanchaca,RCAM1,-41.43882,-72.29497,2020-09-08,20,9,2008,Oncorhynchus mykiss,"Kyle Young, Gabriel Orellana",,8,8
+Río Camanchaca,Río Camanchaca,RCAM1,-41.43882,-72.29497,2020-09-08,20,9,2008,Salmo trutta,"Kyle Young, Gabriel Orellana",,5,5
+Río Camanchaca,Río Camanchaca,RCAM2,-41.43882,-72.29497,2011-06-07,11,6,2007,Aplochiton zebra,"Kyle Young, Jane McDonald, BP",,1,1
+Río Camanchaca,Río Camanchaca,RCAM2,-41.43882,-72.29497,2011-06-07,11,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,15,15
+Río Camanchaca,Río Camanchaca,RCAM2,-41.43882,-72.29497,2011-06-07,11,6,2007,Oncorhynchus tshawytscha ,"Kyle Young, Jane McDonald, BP",,5,5
+Río Camanchaca,Río Camanchaca,RCAM2,-41.43882,-72.29497,2011-06-07,11,6,2007,Salmo salar,"Kyle Young, Jane McDonald, BP",,1,1
+Río Camanchaca,Río Camanchaca,RCAM2,-41.43882,-72.29497,2011-06-07,11,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,8,8
+Río Camanchaca,Río Camanchaca,RCAM3,-41.43882,-72.29497,2011-06-07,11,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,2,2
+Río Camanchaca,Río Camanchaca,RCAM3,-41.43882,-72.29497,2011-06-07,11,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,12,12
+Río Cautín,Río Cautín,RCA15,-38.75797222,-72.60949722,39462,15,1,2008,Oncorhynchus mykiss,,,3,3
+Río Cendoya,Rio Cendoya,RCEN1,-42.15418,-73.48715,2007-11-07,7,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,4,4
+Río Cendoya,Rio Cendoya,RCEN1,-42.15418,-73.48715,2007-11-07,7,11,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,22,22
+Río Cendoya,Rio Cendoya,RCEN3,-42.15318,-73.49178,2008-11-07,8,11,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,14,14
+Río Cendoya,Rio Cendoya,RCEN3,-42.15318,-73.49178,2008-11-07,8,11,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,23,23
+Río Cendoya,Rio Cendoya,RCEN5,-42.15294,-73.49611,2006-12-07,6,12,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,30,30
+Río Cendoya,Rio Cendoya,RCEN5,-42.15294,-73.49611,2008-11-07,8,11,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,53,53
+Río Chadmo,Rio Chadmo,RCH,-42.93191,-73.6726,2017-05-07,17,5,2007,Salmo trutta,"Kyle Young, Jane McDonald",,7,7
+Río Chaica,Río Chaica,RCA,-41.58788889,-72.70041667,39917,14,4,2009,Eleginops maclovins,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,1,1
+Río Chaica,Río Chaica,RCA,-41.58788889,-72.70041667,39917,14,4,2009,Galaxias maculatus,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,68,68
+Río Chaica,Río Chaica,RCA,-41.58788889,-72.70041667,39917,14,4,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,12,12
+Río Chaica,Río Chaica,RCA,-41.58788889,-72.70041667,39917,14,4,2009,Salmo trutta,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,12,12
+Río Chaica,Río Chaica,RCA1,-41.58872,-72.70148,2023-08-08,23,8,2008,Oncorhynchus mykiss,"Kyle Young, Gabriel Orellana",,3,3
+Río Chaica,Río Chaica,RCA1,-41.58872,-72.70148,2023-08-08,23,8,2008,Salmo trutta,"Kyle Young, Gabriel Orellana",,12,12
+Río Chaica,Río Chaica,RCA1,-41.58872,-72.70148,2027-05-07,27,5,2007,Galaxias maculatus,"Kyle Young, Jane McDonald",,10,10
+Río Chaica,Río Chaica,RCA1,-41.58872,-72.70148,2027-05-07,27,5,2007,Oncorhynchus kisutch,"Kyle Young, Jane McDonald",,1,1
+Río Chaica,Río Chaica,RCA1,-41.58872,-72.70148,2027-05-07,27,5,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,5,5
+Río Chaica,Río Chaica,RCA1,-41.58872,-72.70148,2027-05-07,27,5,2007,Salmo salar,"Kyle Young, Jane McDonald",,1,1
+Río Chaica,Río Chaica,RCA1,-41.58872,-72.70148,2027-05-07,27,5,2007,Salmo trutta,"Kyle Young, Jane McDonald",,14,14
+Río Chaica,Río Chaica,RCA1,-41.58872,-72.70148,2027-05-07,27,5,2007,Sculpin sp,"Kyle Young, Jane McDonald",,1,1
+Río Chaica,Río Chaica,RCA1,-41.58872,-72.70148,1930-08-08,30,8,2008,Galaxias maculatus,"Kyle Young, Gabriel Orellana",,4,4
+Río Chaica,Río Chaica,RCA1,-41.58872,-72.70148,1930-08-08,30,8,2008,Oncorhynchus mykiss,"Kyle Young, Gabriel Orellana",,1,1
+Río Chaica,Río Chaica,RCA1,-41.58872,-72.70148,1930-08-08,30,8,2008,Salmo trutta,"Kyle Young, Gabriel Orellana",,8,8
+Río Chaica,Río Chaica,RCA1,-41.58872,-72.70148,39229,27,5,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,1,1
+Río Chaica,Río Chaica,RCA2,-41.58767,-72.69997,2027-05-07,27,5,2007,Salmo trutta,"Kyle Young, Jane McDonald",,30,30
+Río Chaica,Río Chaica,RCZ1,-41.44736,-72.821,39918,15,4,2009,Galaxias maculatus,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,33,33
+Río Chaica,Río Chaica,RCZ1,-41.44736,-72.821,39918,15,4,2009,Salmo trutta,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,2,2
+Río Chaica,Río Chaica,RCZ1,-41.61502,-72.65747,2004-05-08,4,5,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson, Gabriel Orellana",,3,3
+Río Chaica,Río Chaica,RCZ1,-41.61502,-72.65747,2004-05-08,4,5,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson, Gabriel Orellana",,1,1
+Río Chaica,Río Chaica,RCZ1,-41.61502,-72.65747,2004-05-08,4,5,2008,Salmo salar,"Kyle Young, Jessica Stephenson, Gabriel Orellana",,1,1
+Río Chaica,Río Chaica,RCZ1,-41.61502,-72.65747,2004-05-08,4,5,2008,Salmo trutta,"Kyle Young, Jessica Stephenson, Gabriel Orellana",,16,16
+Río Chaica,Río Chaica,RCZ1,-41.61502,-72.65747,2014-09-08,14,9,2008,Galaxias maculatus,"Kyle Young, Gabriel Orellana",,2,2
+Río Chaica,Río Chaica,RCZ1,-41.61502,-72.65747,2014-09-08,14,9,2008,Oncorhynchus mykiss,"Kyle Young, Gabriel Orellana",,2,2
+Río Chaica,Río Chaica,RCZ1,-41.61502,-72.65747,2014-09-08,14,9,2008,Salmo trutta,"Kyle Young, Gabriel Orellana",,18,18
+Río Chamiza,Lago Chapo,LC,-41.48910278,-72.46120278,39462,15,1,2008,Oncorhynchus mykiss,,,2,2
+Río Chamiza,Pangal,RPAN,-41.47995,-72.66032,2012-10-08,12,10,2008,Oncorhynchus mykiss,Gabriel Orellana,,5,5
+Río Chamiza,Pangal,RPAN,-41.47995,-72.66032,2012-10-08,12,10,2008,Salmo salar,Gabriel Orellana,,1,1
+Río Chamiza,Pangal,RPAN,-41.47995,-72.66032,2012-10-08,12,10,2008,Salmo trutta,Gabriel Orellana,,4,4
+Río Chamiza,Pangal,RPAN,-41.47995,-72.66032,39860,16,2,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,39,39
+Río Chamiza,Pangal,RPAN,-41.47995,-72.66032,39860,16,2,2009,Salmo salar,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,14,14
+Río Chamiza,Pangal,RPAN,-41.47995,-72.66032,39860,16,2,2009,Salmo trutta,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,32,32
+Río Chamiza,Rio Blanco - CORRENTOSO,RBLCO,-41.39403,-72.64113,39852,8,2,2009,Oncorhynchus kisutch,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,10,10
+Río Chamiza,Rio Blanco - CORRENTOSO,RBLCO,-41.39403,-72.64113,39852,8,2,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,55,55
+Río Chamiza,Rio Blanco - CORRENTOSO,RBLCO,-41.39403,-72.64113,39852,8,2,2009,Salmo salar,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,88,88
+Río Chamiza,Rio Blanco - CORRENTOSO,RBLCO,-41.39403,-72.64113,39852,8,2,2009,Salmo trutta,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,1,1
+Río Chamiza,Rio Chamiza,RCHZ,-41.46352,-72.83632,2017-10-08,17,10,2008,Oncorhynchus mykiss,Gabriel Orellana,,3,3
+Río Chamiza,Rio Chamiza,RCHZ,-41.46352,-72.83632,2017-10-08,17,10,2008,Salmo trutta,Gabriel Orellana,,1,1
+Río Chamiza,Rio Chamiza,RCHZ1,-41.44736,-72.821,2025-10-08,25,10,2008,Oncorhynchus kisutch,Gabriel Orellana,,1,1
+Río Chamiza,Rio Chamiza,RCHZ1,-41.44736,-72.821,2025-10-08,25,10,2008,Salmo trutta,Gabriel Orellana,,2,2
+Río Chaparano,Río Chaparano,RCHA,-41.74489,-72.57055,2010-06-07,10,6,2007,Salmo salar,"Kyle Young, Jane McDonald, BP",,3,3
+Río Chaparano,Río Chaparano,RCHA,-41.74489,-72.57055,2010-06-07,10,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,1,1
+Río Chaparano,Río Chaparano,RCHA,-41.74489,-72.57055,2023-08-08,23,8,2008,Oncorhynchus mykiss,"Kyle Young, Gabriel Orellana",,1,1
+Río Chaparano,Río Chaparano,RCHA,-41.74489,-72.57055,2023-08-08,23,8,2008,Salmo trutta,"Kyle Young, Gabriel Orellana",,3,3
+Río Chaparano,Río Chaparano,RCHA,-41.74489,-72.57055,39848,4,2,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,15,15
+Río Chaparano,Río Chaparano,RCHA,-41.74489,-72.57055,39848,4,2,2009,Salmo trutta,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,6,6
+Río Chaparano,Río Chaparano,RCHA1,-41.74489,-72.57055,39683,23,8,2008,Oncorhynchus mykiss,"Kyle Young, Gabriel Orellana",,1,1
+Rio Chauchille,Rio Chauchille,RCHU,-41.97381,-72.79375,2009-06-07,9,6,2007,Galaxias maculatus,"Kyle Young, Jane McDonald, BP",,60,60
+Rio Chauchille,Rio Chauchille,RCHU,-41.97381,-72.79375,2009-06-07,9,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,5,5
+Río Cheniu,Rio Río Cheniu,RCE,-42.00179,-72.7179,2009-06-07,9,6,2007,Galaxias maculatus,"Kyle Young, Jane McDonald, BP",,4,4
+Río Cheniu,Rio Río Cheniu,RCE,-42.00179,-72.7179,2009-06-07,9,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,3,3
+Río Chepu,Río Butalcura,RBU7,-42.27880556,-73.67219444,39893,21,3,2009,Brachygalaxias bullocki,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,1,1
+Río Chepu,Río Butalcura,RBU7,-42.27880556,-73.67219444,39893,21,3,2009,Geotria australis,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,2,2
+Río Chepu,Río Butalcura,RBU7,-42.27880556,-73.67219444,39893,21,3,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,12,12
+Río Chepu,Río Butalcura,RBU7,-42.27880556,-73.67219444,39893,21,3,2009,Salmo trutta,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,36,36
+Río Chepu,Río Butalcura,RBU7,-42.27880556,-73.67219444,39893,21,3,2009,Trichomycterus areolatus,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,3,3
+Río Chepu,Río Puntra,RPU,-42.11979,-73.81127,2015-05-07,15,5,2007,Galaxias maculatus,"Kyle Young, Jane McDonald",,4,4
+Río Chepu,Río Puntra,RPU,-42.11979,-73.81127,2015-05-07,15,5,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,1,1
+Río Chepu,Río Puntra,RPU,-42.11979,-73.81127,2015-05-07,15,5,2007,Salmo trutta,"Kyle Young, Jane McDonald",,2,2
+Río Chepu,Río Puntra,RPU,-42.11979,-73.81127,2015-05-07,15,5,2007,Trichomycterus areolatus,"Kyle Young, Jane McDonald",,1,1
+Río Chimehuin,Río Chimehuin,RCHI,-39.94974722,-71.06373333,04/02/84,4,2,1984,Oncorhynchus mykiss,Angler,,1,1
+Río Cisnes,Lago las Torres,LLT,-44.79638611,-72.2124,31/10/91,31,10,1991,Salmo trutta,Angler,,1,1
+Río Cisnes,Río Cisnes,RCIS,-44.75946944,-72.65336944,13/03/98,13,3,1998,Salmo trutta,Angler,,1,1
+Río Cisnes,Río Cisnes,RCIS,-44.75946944,-72.65336944,31/10/91,31,10,1991,Salmo trutta,Angler,,1,1
+Río Cisnes - Hualaihue,Río Cisnes - Hualaihue,RCG,-41.98032,-72.67313,2009-06-07,9,6,2007,Aplochiton zebra,"Kyle Young, Jane McDonald, BP",,15,15
+Río Cisnes - Hualaihue,Río Cisnes - Hualaihue,RCG,-41.98032,-72.67313,2009-06-07,9,6,2007,Galaxias maculatus,"Kyle Young, Jane McDonald, BP",,1,1
+Río Cisnes - Hualaihue,Río Cisnes - Hualaihue,RCG,-41.98032,-72.67313,2009-06-07,9,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,1,1
+Río Contao,Río Contao,RCONT,-41.48207,-72.42971,39846,2,2,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,25,25
+Río Contao,Río Zambo,RZAB,-41.80273,-72.71366,39846,2,2,2009,Galaxias maculatus,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,2,2
+Río Contao,Río Zambo,RZAB,-41.80273,-72.71366,39846,2,2,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,7,7
+Río Contao,Río Zambo,RZAB,-41.80273,-72.71366,39846,2,2,2009,Salmo trutta,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,37,37
+Río Cuchildeo,Río Cuchildeo,RCDEO,-41.96917,-72.47101,39840,27,1,2009,Eleginops maclovins,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,7,7
+Río Cuchildeo,Río Cuchildeo,RCDEO,-41.96917,-72.47101,39840,27,1,2009,Galaxias maculatus,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,1,1
+Río Cuchildeo,Río Cuchildeo,RCDEO,-41.96917,-72.47101,39840,27,1,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,13,13
+Río Cuchildeo,Río Cuchildeo,RCDEO,-41.96917,-72.47101,39840,27,1,2009,Salmo salar,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,1,1
+Río Cuchildeo,Río Cuchildeo,RCDEO,-41.96917,-72.47101,39840,27,1,2009,Salmo trutta,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,21,21
+Río Grande,Salmones Pacific Star S.A.,SPS,-43.11635,-73.63226,2004-02-08,4,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,40,40
+Río Huelden,Río Huelden,RUH5,-41.89911111,-73.53577778,39892,20,3,2009,Eleginops maclovins,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,34,34
+Río Huelden,Río Huelden,RUH5,-41.89911111,-73.53577778,39892,20,3,2009,Galaxias maculatus,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,145,145
+Río Huenocoihue,Río Huenocoihue,RHU1,-42.38713,-73.6688,2004-04-08,4,4,2008,Oncorhynchus mykiss,"Kyle Young, BC, MK",,3,3
+Río Huenocoihue,Río Huenocoihue,RHU1,-42.38713,-73.6688,2013-02-08,13,2,2008,Oncorhynchus kisutch,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,1,1
+Río Huenocoihue,Río Huenocoihue,RHU1,-42.38713,-73.6688,2013-02-08,13,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,4,4
+Río Huenocoihue,Río Huenocoihue,RHU1,-42.38713,-73.6688,2013-02-08,13,2,2008,Salmo salar,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,46,46
+Río Huenocoihue,Río Huenocoihue,RHU1,-42.38713,-73.6688,2019-05-07,19,5,2007,Galaxias maculatus,"Kyle Young, Jane McDonald",,73,73
+Río Huenocoihue,Río Huenocoihue,RHU1,-42.38713,-73.6688,2019-05-07,19,5,2007,Oncorhynchus kisutch,"Kyle Young, Jane McDonald",,2,2
+Río Huenocoihue,Río Huenocoihue,RHU1,-42.38713,-73.6688,2019-05-07,19,5,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,1,1
+Río Huenocoihue,Río Huenocoihue,RHU1,-42.38713,-73.6688,2019-05-07,19,5,2007,Oncorhynchus tshawytscha ,"Kyle Young, Jane McDonald",,2,2
+Río Huenocoihue,Río Huenocoihue,RHU1,-42.38713,-73.6688,2019-05-07,19,5,2007,Salmo salar,"Kyle Young, Jane McDonald",,19,19
+Río Huenocoihue,Río Huenocoihue,RHU1,-42.38713,-73.6688,1930-02-08,30,2,2008,Oncorhynchus kisutch,,,9,9
+Río Huenocoihue,Río Huenocoihue,RHU1,-42.38713,-73.6688,39491,13,2,2008,Oncorhynchus kisutch,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,9,9
+Río Huenocoihue,Río Huenocoihue,RHU1,-42.38713,-73.6688,39491,13,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,4,4
+Río Huenocoihue,Río Huenocoihue,RHU2,-42.37926,-73.67502,2019-05-07,19,5,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,25,25
+Río Huenocoihue,Río Huenocoihue,RHU2,-42.37926,-73.67502,39221,19,5,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,2,2
+Río Huenocoihue,Río Huenocoihue,RHU3,-42.38588,-73.67027,2020-05-07,20,5,2007,Galaxias maculatus,"Kyle Young, Jane McDonald",,1,1
+Río Huenocoihue,Río Huenocoihue,RHU3,-42.38588,-73.67027,2020-05-07,20,5,2007,Oncorhynchus kisutch,"Kyle Young, Jane McDonald",,1,1
+Río Huenocoihue,Río Huenocoihue,RHU3,-42.38588,-73.67027,2020-05-07,20,5,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,8,8
+Río Huenocoihue,Río Huenocoihue,RHU3,-42.38588,-73.67027,2020-05-07,20,5,2007,Salmo salar,"Kyle Young, Jane McDonald",,28,28
+Río Huenocoihue,Río Huenocoihue,RHU4,-42.38597,-73.671,2020-05-07,20,5,2007,Aplochiton zebra,"Kyle Young, Jane McDonald",,2,2
+Río Huenocoihue,Río Huenocoihue,RHU4,-42.38597,-73.671,2020-05-07,20,5,2007,Galaxias maculatus,"Kyle Young, Jane McDonald",,5,5
+Río Huenocoihue,Río Huenocoihue,RHU4,-42.38597,-73.671,2020-05-07,20,5,2007,Geotria australis,"Kyle Young, Jane McDonald",,1,1
+Río Huenocoihue,Río Huenocoihue,RHU4,-42.38597,-73.671,2020-05-07,20,5,2007,Oncorhynchus kisutch,"Kyle Young, Jane McDonald",,6,6
+Río Huenocoihue,Río Huenocoihue,RHU4,-42.38597,-73.671,2020-05-07,20,5,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,6,6
+Río Huenocoihue,Río Huenocoihue,RHU4,-42.38597,-73.671,2020-05-07,20,5,2007,Salmo salar,"Kyle Young, Jane McDonald",,53,53
+Río Huenocoihue,Río Huenocoihue,RHU5,-42.38604,-73.67194,2020-05-07,20,5,2007,Salmo trutta,"Kyle Young, Jane McDonald",,1,1
+Río Huenocoihue,Río Huenocoihue,RHU6,-42.38514,-73.67251,2020-05-07,20,5,2007,Geotria australis,"Kyle Young, Jane McDonald",,1,1
+Río Huenocoihue,Río Huenocoihue,RHU6,-42.38514,-73.67251,2020-05-07,20,5,2007,Oncorhynchus kisutch,"Kyle Young, Jane McDonald",,2,2
+Río Huenocoihue,Río Huenocoihue,RHU6,-42.38514,-73.67251,2020-05-07,20,5,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,4,4
+Río Huenocoihue,Río Huenocoihue,RHU6,-42.38514,-73.67251,2020-05-07,20,5,2007,Salmo salar,"Kyle Young, Jane McDonald",,8,8
+Río Huenopoicohue,Río Huenopoicohue,RUA4,-41.89941667,-72.54091667,39891,19,3,2009,Aplochiton zebra,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,1,1
+Río Huenopoicohue,Río Huenopoicohue,RUA4,-41.89941667,-72.54091667,39891,19,3,2009,Galaxias maculatus,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,148,148
+Río Huincha,Río Huicha,RH,-41.87983,-73.65266,2015-05-07,15,5,2007,Brachygalaxias bullocki,"Kyle Young, Jane McDonald",,9,9
+Río Huincha,Río Huicha,RH1,-41.87983333,-73.65227778,39890,18,3,2009,Aplochiton taeniatus,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",28,,28
+Río Huincha,Río Huicha,RH1,-41.87983333,-73.65227778,39890,18,3,2009,Aplochiton zebra,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",1,,1
+Río Huincha,Río Huicha,RH1,-41.87983333,-73.65227778,39890,18,3,2009,AzxAt hybrid,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",1,,1
+Río Huincha,Río Huicha,RH1,-41.87983333,-73.65227778,39890,18,3,2009,Brachygalaxias bullocki,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,79,79
+Río Huincha,Río Huicha,RH1,-41.87983333,-73.65227778,39890,18,3,2009,Geotria australis,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,48,48
+Río Huincha,Río Huicha,RH1,-41.87983333,-73.65227778,39890,18,3,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,1,1
+Río La Lobada,Río La Lobada,LOB,-41.75432,-72.66011,39846,2,2,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,7,7
+Río La Lobada,Río La Lobada,LOB,-41.75432,-72.66011,39846,2,2,2009,Salmo trutta,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,37,37
+Río Llaguepe,Río Llaguepe,RLL,-41.72043,-72.48656,39848,4,2,2009,Galaxias maculatus,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,2,2
+Río Llaguepe,Río Llaguepe,RLL,-41.72043,-72.48656,39848,4,2,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,12,12
+Río Llaguepe,Río Llaguepe,RLL,-41.72043,-72.48656,39848,4,2,2009,Salmo trutta,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,6,6
+Río Llaguepe,Río Llaguepe,RLL,-41.72116,-72.48642,2010-06-07,10,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,1,1
+Río Llaguepe,Río Llaguepe,RLL,-41.72116,-72.48642,2010-06-07,10,6,2007,Salmo salar,"Kyle Young, Jane McDonald, BP",,2,2
+Río Llaguepe,Río Llaguepe,RLL,-41.72116,-72.48642,2010-06-07,10,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,5,5
+Río Lleguiman,Lleguiman,RLLG,-41.9801,-72.76198,39841,28,1,2009,Eleginops maclovins,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,1,1
+Río Lleguiman,Lleguiman,RLLG,-41.9801,-72.76198,39841,28,1,2009,Galaxias maculatus,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,5,5
+Río Lleguiman,Lleguiman,RLLG,-41.9801,-72.76198,39841,28,1,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,17,17
+Río Lleguiman,Lleguiman,RLLG,-41.9801,-72.76198,39841,28,1,2009,Salmo trutta,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,9,9
+Río Manihueco,Rio Manihueco,RMAN,-41.76283,-72.67675,2008-06-07,8,6,2007,Galaxias maculatus,"Kyle Young, Jane McDonald, BP",,7,7
+Río Manihueco,Rio Manihueco,RMAN,-41.76283,-72.67675,2008-06-07,8,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,3,3
+Río Manihueco,Rio Manihueco,RMAN,-41.76283,-72.67675,2008-06-07,8,6,2007,Salmo salar,"Kyle Young, Jane McDonald, BP",,2,2
+Río Manihueco,Rio Manihueco,RMAN,-41.76283,-72.67675,2008-06-07,8,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,6,6
+Río Manihueco,Rio Manihueco,RMAN,-41.76283,-72.67675,39240,7,6,2007,Salmo salar,"Kyle Young, Jane McDonald, BP",,1,1
+Río Maquina,Maquina,RUM3,-41.88230556,-73.53163889,39891,19,3,2009,Eleginops maclovins,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,4,4
+Río Maquina,Maquina,RUM3,-41.88230556,-73.53163889,39891,19,3,2009,Galaxias maculatus,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,42,42
+Río Maquina,Maquina,RUM3,-41.88230556,-73.53163889,39891,19,3,2009,Galaxias platei,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,1,1
+Río Maullín,Aqua Chile Ensenada,ACE,-41.21260556,-72.55605556,39230,28,5,2007,Salmo salar,,,5,5
+Río Maullín,Aqua Chile Ensenada,ACE,-41.21260556,-72.55605556,39392,6,11,2007,Salmo salar,,,21,21
+Río Maullín,Aqua Chile Puerto Octay,ACPO,-40.984475,-72.86279444,39218,16,5,2007,Salmo salar,,,5,5
+Río Maullín,Aqua Chile Puerto Octay,ACPO,-40.984475,-72.86279444,39392,6,11,2007,Salmo salar,,,15,15
+Río Maullín,Aqua Chile Puerto Octay,ACPO,-40.984475,-72.86279444,39496,18,2,2008,Salmo salar,,,32,32
+Río Maullín,Lago Llanquihue,LL,-41.25946944,-73.00116111,21/11/92,21,11,1992,Salmo trutta,Angler,,1,1
+Río Maullín,Lago Llanquihue,LL,-41.25946944,-73.00116111,27/04/76,27,4,1976,Salmo trutta,Angler,,1,1
+Río Maullín,Maullín 2,RMA2,-41.47504,-73.26604,2026-11-07,26,11,2007,Basilichthys australis,"Kyle Young, Jane McDonald",,2,2
+Río Maullín,Maullín 2,RMA2,-41.47504,-73.26604,2026-11-07,26,11,2007,Percichthys trucha,"Kyle Young, Jane McDonald",,1,1
+Río Maullín,Maullín 2,RMA2,-41.47504,-73.26604,39408,22,11,2007,Oncorhynchus kisutch,"Kyle Young, Jane McDonald",,1,1
+Río Maullín,Maullín 2,RMA2,-41.47504,-73.26604,39412,26,11,2007,Basilichthys australis,"Kyle Young, Jane McDonald",,1,1
+Río Maullín,Pescado,RPE,-41.27127,-72.77543,2002-06-07,2,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,27,27
+Río Maullín,Pescado,RPE,-41.27127,-72.77543,2002-06-07,2,6,2007,Salmo trutta,"Kyle Young, Jane McDonald",,6,6
+Río Maullín,Pescado,RPE2,-41.25015,-72.79504,2002-06-07,2,6,2007,Galaxias platei,"Kyle Young, Jane McDonald",,115,115
+Río Maullín,Pescado,RPE2,-41.25015,-72.79504,2002-06-07,2,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,21,21
+Río Maullín,Pescado,RPE2,-41.25015,-72.79504,2002-06-07,2,6,2007,Salmo salar,"Kyle Young, Jane McDonald",,7,7
+Río Maullín,Pescado,RPE2,-41.25015,-72.79504,2002-06-07,2,6,2007,Salmo trutta,"Kyle Young, Jane McDonald",,9,9
+Río Maullín,Pescado,RPE2,-41.25015,-72.79504,2002-06-07,2,6,2007,Unknown,"Kyle Young, Jane McDonald",,21,21
+Río Maullín,Pescado,RPE2,-41.25015,-72.79504,2003-09-08,3,9,2008,Galaxias maculatus,"Kyle Young, Gabriel Orellana",,2,2
+Río Maullín,Pescado,RPE2,-41.25015,-72.79504,2003-09-08,3,9,2008,Galaxias platei,"Kyle Young, Gabriel Orellana",,4,4
+Río Maullín,Pescado,RPE2,-41.25015,-72.79504,2003-09-08,3,9,2008,Oncorhynchus kisutch,"Kyle Young, Gabriel Orellana",,2,2
+Río Maullín,Pescado,RPE2,-41.25015,-72.79504,2003-09-08,3,9,2008,Oncorhynchus mykiss,"Kyle Young, Gabriel Orellana",,35,35
+Río Maullín,Pescado,RPE2,-41.25015,-72.79504,2003-09-08,3,9,2008,Salmo trutta,"Kyle Young, Gabriel Orellana",,8,8
+Río Maullín,Pescado,RPE2,-41.25015,-72.79504,2003-09-08,3,9,2008,Trichomycterus areolatus,"Kyle Young, Gabriel Orellana",,1,1
+Río Maullín,Pescado,RPE3,-41.25525,-72.79549,2017-06-07,17,6,2007,Galaxias platei,"Kyle Young, Jane McDonald, BP",,3,3
+Río Maullín,Pescado,RPE3,-41.25525,-72.79549,2017-06-07,17,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,6,6
+Río Maullín,Pescado,RPE3,-41.25525,-72.79549,2017-06-07,17,6,2007,Trichomycterus areolatus,"Kyle Young, Jane McDonald, BP",,1,1
+Río Maullín,Pescado,RPEB10,-41.26072,-72.79427,2026-06-07,26,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,5,5
+Río Maullín,Pescado,RPEB10,-41.26072,-72.79427,2026-06-07,26,6,2007,Unknown,"Kyle Young, Jane McDonald, BP",,2,2
+Río Maullín,Pescado,RPEB2,-41.25212,-72.97517,2025-06-07,25,6,2007,Galaxias platei,"Kyle Young, Jane McDonald, BP",,13,13
+Río Maullín,Pescado,RPEB2,-41.25212,-72.97517,2025-06-07,25,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,2,2
+Río Maullín,Pescado,RPEB3,-41.25315,-72.79523,2025-06-07,25,6,2007,Galaxias platei,"Kyle Young, Jane McDonald, BP",,16,16
+Río Maullín,Pescado,RPEB3,-41.25315,-72.79523,2025-06-07,25,6,2007,Oncorhynchus kisutch,"Kyle Young, Jane McDonald, BP",,1,1
+Río Maullín,Pescado,RPEB3,-41.25315,-72.79523,2025-06-07,25,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,6,6
+Río Maullín,Pescado,RPEB3,-41.25315,-72.79523,2025-06-07,25,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,4,4
+Río Maullín,Pescado,RPEB4,-41.25445,-72.7956,2025-06-07,25,6,2007,Galaxias maculatus,"Kyle Young, Jane McDonald, BP",,5,5
+Río Maullín,Pescado,RPEB4,-41.25445,-72.7956,2025-06-07,25,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,8,8
+Río Maullín,Pescado,RPEB5,-41.25525,-72.79549,2025-06-07,25,6,2007,Galaxias platei,"Kyle Young, Jane McDonald, BP",,7,7
+Río Maullín,Pescado,RPEB5,-41.25525,-72.79549,2025-06-07,25,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,25,25
+Río Maullín,Pescado,RPEB5,-41.25525,-72.79549,2025-06-07,25,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,4,4
+Río Maullín,Pescado,RPEB6,-41.25657,-72.79569,2026-06-07,26,6,2007,Galaxias platei,"Kyle Young, Jane McDonald, BP",,6,6
+Río Maullín,Pescado,RPEB6,-41.25657,-72.79569,2026-06-07,26,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,19,19
+Río Maullín,Pescado,RPEB7,-41.25775,-72.79562,2026-06-07,26,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,10,10
+Río Maullín,Pescado,RPEB8,-41.25828,-72.79568,2026-06-07,26,6,2007,Galaxias platei,"Kyle Young, Jane McDonald, BP",,2,2
+Río Maullín,Pescado,RPEB8,-41.25828,-72.79568,2026-06-07,26,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,7,7
+Río Maullín,Pescado,RPEB8,-41.25828,-72.79568,2026-06-07,26,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,1,1
+Río Maullín,Pescado,RPEB9,-41.25937,-72.79565,2026-06-07,26,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,9,9
+Río Maullín,Pescado,RPEB9,-41.25937,-72.79565,2026-06-07,26,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,2,2
+Río Maullín,Puerto Fonck,HPF,-41,-72.7,2028-03-07,28,3,2007,Salmo salar,"Kyle Young, Jane McDonald",,50,50
+Río Maullín,Puerto Fonck,HPF,-41,-72.7,39496,18,2,2008,Salmo salar,,,32,32
+Río Maullín,Río Blanco,RBCO,-41.22381,-72.62321,2003-06-07,3,6,2007,Galaxias platei,"Kyle Young, Jane McDonald",,30,30
+Río Maullín,Río Blanco,RBCO,-41.22381,-72.62321,2003-06-07,3,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,24,24
+Río Maullín,Río Blanco,RBCO,-41.22381,-72.62321,2003-06-07,3,6,2007,Oncorhynchus tshawytscha ,"Kyle Young, Jane McDonald",,3,3
+Río Maullín,Río Blanco,RBCO,-41.22381,-72.62321,2003-06-07,3,6,2007,Salmo trutta,"Kyle Young, Jane McDonald",,3,3
+Río Maullín,Río Blanco,RBCO,-41.22381,-72.62321,2003-06-07,3,6,2007,Unknown,"Kyle Young, Jane McDonald",,3,3
+Río Maullín,Río Blanco,RBCO,-41.22381,-72.62321,2003-09-08,3,9,2008,Galaxias maculatus,"Kyle Young, Gabriel Orellana",,7,7
+Río Maullín,Río Blanco,RBCO,-41.22381,-72.62321,2003-09-08,3,9,2008,Galaxias platei,"Kyle Young, Gabriel Orellana",,5,5
+Río Maullín,Río Blanco,RBCO,-41.22381,-72.62321,2003-09-08,3,9,2008,Oncorhynchus kisutch,"Kyle Young, Gabriel Orellana",,8,8
+Río Maullín,Río Blanco,RBCO,-41.22381,-72.62321,2003-09-08,3,9,2008,Oncorhynchus mykiss,"Kyle Young, Gabriel Orellana",,11,11
+Río Maullín,Río Blanco,RBCO,-41.22381,-72.62321,2003-09-08,3,9,2008,Salmo trutta,"Kyle Young, Gabriel Orellana",,1,1
+Río Maullín,Río Blanco,RBCOB1,-41.22381,-72.62321,2029-06-07,29,6,2007,Oncorhynchus kisutch,"Kyle Young, Jane McDonald, BP",,3,3
+Río Maullín,Río Blanco,RBCOB1,-41.22381,-72.62321,2029-06-07,29,6,2007,Unknown,"Kyle Young, Jane McDonald, BP",,6,6
+Río Maullín,Río Blanco,RBCOB1,-41.22395,-72.62291,2029-06-07,29,6,2007,Galaxias platei,"Kyle Young, Jane McDonald, BP",,15,15
+Río Maullín,Río Blanco,RBCOB1,-41.22395,-72.62291,2029-06-07,29,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,12,12
+Río Maullín,Río Blanco,RBCOB2,-41.22502,-72.62321,2029-06-07,29,6,2007,Galaxias platei,"Kyle Young, Jane McDonald, BP",,15,15
+Río Maullín,Río Blanco,RBCOB2,-41.22502,-72.62321,2029-06-07,29,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,10,10
+Río Maullín,Río Blanco,RBCOB3,-41.22625,-72.6227,2029-06-07,29,6,2007,Galaxias platei,"Kyle Young, Jane McDonald, BP",,1,1
+Río Maullín,Río Blanco,RBCOB3,-41.22625,-72.6227,2029-06-07,29,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,24,24
+Río Maullín,Río Blanco,RBCOB3,-41.22625,-72.6227,2029-06-07,29,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,2,2
+Río Maullín,Río Blanco,RBCOB4,-41.22728,-72.62377,2029-06-07,29,6,2007,Galaxias platei,"Kyle Young, Jane McDonald, BP",,4,4
+Río Maullín,Río Blanco,RBCOB4,-41.22728,-72.62377,2029-06-07,29,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,45,45
+Río Maullín,Río Blanco,RBCOB4,-41.22728,-72.62377,2029-06-07,29,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,1,1
+Río Maullín,Río Blanco,RBCOB4,-41.22728,-72.62377,2029-06-07,29,6,2007,Trichomycterus areolatus,"Kyle Young, Jane McDonald, BP",,2,2
+Río Maullín,Río Blanco,RBCOB5,-41.22731,-72.62235,2028-06-07,28,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,5,5
+Río Maullín,Río Blanco,RBCOB5,-41.22731,-72.62235,2029-06-07,29,6,2007,Galaxias platei,"Kyle Young, Jane McDonald, BP",,16,16
+Río Maullín,Río Blanco,RBCOB5,-41.22731,-72.62235,2029-06-07,29,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,18,18
+Río Maullín,Río Blanco,RBCOB5,-41.22731,-72.62235,2029-06-07,29,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,4,4
+Río Maullín,Río Blanco,RBCOB6,-41.22794,-72.62098,2029-06-07,29,6,2007,Galaxias platei,"Kyle Young, Jane McDonald, BP",,7,7
+Río Maullín,Río Blanco,RBCOB6,-41.22794,-72.62098,2029-06-07,29,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,23,23
+Río Maullín,Río Blanco,RBCOB6,-41.22794,-72.62098,2029-06-07,29,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,1,1
+Río Maullín,Río Blanco,RBCOB7,-41.23061,-72.6206,1930-06-07,30,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,14,14
+Río Maullín,Río Blanco,RBCOB7,-41.23061,-72.6206,1930-06-07,30,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,3,3
+Río Maullín,Río Blanco,RBCOB8,-41.23191,-72.61977,1930-06-07,30,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,19,19
+Río Maullín,Río Blanco,RBCOB9,-41.2344,-72.6183,1930-06-07,30,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,28,28
+Río Maullín,Río Blanco,RBCOB9,-41.2344,-72.6183,1930-06-07,30,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,2,2
+Río Maullín,Rio Blanco Arenal,RBA1,-41.04855,-72.67419,2016-06-07,16,6,2007,Galaxias maculatus,"Kyle Young, Jane McDonald, BP",,1,1
+Río Maullín,Rio Blanco Arenal,RBA1,-41.04855,-72.67419,2016-06-07,16,6,2007,Galaxias platei,"Kyle Young, Jane McDonald, BP",,24,24
+Río Maullín,Rio Blanco Arenal,RBA1,-41.04855,-72.67419,2016-06-07,16,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,24,24
+Río Maullín,Rio Blanco Arenal,RBA1,-41.04855,-72.67419,2016-06-07,16,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,7,7
+Río Maullín,Rio Blanco Arenal,RBA2,-41.04855,-72.67419,2016-06-07,16,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,1,1
+Río Maullín,Rio Blanco Arenal,RBA2,-41.04855,-72.67419,39249,16,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,23,23
+Río Maullín,Río Esperanza,RES25,-41.319881,-73.541677,39912,9,4,2009,Geotria australis,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda",,21,21
+Río Maullín,Río Esperanza,RES25,-41.319881,-73.541677,39912,9,4,2009,Salmo trutta,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda",,44,44
+Río Maullín,Río Esperanza,RES25,-41.319881,-73.541677,39912,9,4,2009,Trichomycterus areolatus,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda",,8,8
+Río Maullín,Rio Maullin 1,RMA 1,-41.47504,-73.26604,2013-05-07,13,5,2007,Galaxias maculatus,"Kyle Young, Jane McDonald",,2,2
+Río Maullín,Rio Maullin 1,RMA 1,-41.47504,-73.26604,2013-05-07,13,5,2007,Geotria australis,"Kyle Young, Jane McDonald",,2,2
+Río Maullín,Rio Maullin 1,RMA 1,-41.47504,-73.26604,2013-05-07,13,5,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,1,1
+Río Maullín,Rio Maullin 1,RMA 1,-41.47504,-73.26604,2013-05-07,13,5,2007,Percichthys trucha,"Kyle Young, Jane McDonald",,2,2
+Río Maullín,Rio Maullin 1,RMA 1,-41.47504,-73.26604,2013-05-07,13,5,2007,Salmo trutta,"Kyle Young, Jane McDonald",,1,1
+Río Maullín,Rio Maullin 1,RMA 1,-41.47504,-73.26604,2013-05-07,13,5,2007,Trichomycterus areolatus,"Kyle Young, Jane McDonald",,4,4
+Río Maullín,Rio Nadi,RND26,-41.3842,-73.523,39912,9,4,2009,Brachygalaxias bullocki,"Jessica Stephenson, Ana María Cerda, Delphine Vanhaecke",,2,2
+Río Maullín,Rio Nadi,RND26,-41.3842,-73.523,39912,9,4,2009,Geotria australis,"Jessica Stephenson, Ana María Cerda, Delphine Vanhaecke",,30,30
+Río Maullín,Rio Nadi,RND26,-41.3842,-73.523,39912,9,4,2009,Salmo trutta,"Jessica Stephenson, Ana María Cerda, Delphine Vanhaecke",,15,15
+Río Maullín,Rio Negro 1,RN 1,-41.39078,-73.06887,39215,13,5,2007,Salmo trutta,"Kyle Young, Jane McDonald",,20,20
+Río Maullín,Río Tepu,RTE,-41.22282,-72.59436,2027-06-07,27,6,2007,Unknown,"Kyle Young, Jane McDonald, BP",,1,1
+Río Maullín,Río Tepu,RTE1,-41.22134,-72.59514,2017-06-07,17,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,1,1
+Río Maullín,Río Tepu,RTE2,-41.22366,-72.59407,2027-06-07,27,6,2007,Oncorhynchus kisutch,"Kyle Young, Jane McDonald, BP",,1,1
+Río Maullín,Río Tepu,RTE3,-41.22458,-72.59419,2027-06-07,27,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,2,2
+Río Maullín,Río Tepu,RTE4,-41.22578,-72.59495,2017-06-07,17,6,2007,Trichomycterus areolatus,"Kyle Young, Jane McDonald, BP",,1,1
+Río Maullín,Río Tepu,RTEB1,-41.22282,-72.59436,2025-06-07,25,6,2007,Galaxias platei,"Kyle Young, Jane McDonald, BP",,24,24
+Río Maullín,Río Tepu,RTEB1,-41.22282,-72.59436,2025-06-07,25,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,3,3
+Río Maullín,Río Tepu,RTEB1,-41.22282,-72.59436,2027-06-07,27,6,2007,Galaxias maculatus,"Kyle Young, Jane McDonald, BP",,27,27
+Río Maullín,Río Tepu,RTEB1,-41.22282,-72.59436,2027-06-07,27,6,2007,Galaxias platei,"Kyle Young, Jane McDonald, BP",,10,10
+Río Maullín,Río Tepu,RTEB10,-41.2334,-72.59509,2028-06-07,28,6,2007,Galaxias platei,"Kyle Young, Jane McDonald, BP",,5,5
+Río Maullín,Río Tepu,RTEB10,-41.2334,-72.59509,2028-06-07,28,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,13,13
+Río Maullín,Río Tepu,RTEB11,-41.23445,-72.59467,2028-06-07,28,6,2007,Galaxias platei,"Kyle Young, Jane McDonald, BP",,2,2
+Río Maullín,Río Tepu,RTEB11,-41.23445,-72.59467,2028-06-07,28,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,23,23
+Río Maullín,Río Tepu,RTEB11,-41.23445,-72.59467,2028-06-07,28,6,2007,Trichomycterus areolatus,"Kyle Young, Jane McDonald, BP",,3,3
+Río Maullín,Río Tepu,RTEB11,-41.23445,-72.59467,2028-06-07,28,6,2007,Unknown,"Kyle Young, Jane McDonald, BP",,2,2
+Río Maullín,Río Tepu,RTEB12,-41.23613,-72.59269,2028-06-07,28,6,2007,Galaxias platei,"Kyle Young, Jane McDonald, BP",,1,1
+Río Maullín,Río Tepu,RTEB12,-41.23613,-72.59269,2028-06-07,28,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,36,36
+Río Maullín,Río Tepu,RTEB12,-41.23613,-72.59269,2028-06-07,28,6,2007,Trichomycterus areolatus,"Kyle Young, Jane McDonald, BP",,5,5
+Río Maullín,Río Tepu,RTEB12,-41.23613,-72.59269,2028-06-07,28,6,2007,Unknown,"Kyle Young, Jane McDonald, BP",,1,1
+Río Maullín,Río Tepu,RTEB13,-41.23742,-72.59223,2028-06-07,28,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,7,7
+Río Maullín,Río Tepu,RTEB14,-41.23836,-72.59094,2028-06-07,28,6,2007,Oncorhynchus kisutch,"Kyle Young, Jane McDonald, BP",,1,1
+Río Maullín,Río Tepu,RTEB14,-41.23836,-72.59094,2028-06-07,28,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,37,37
+Río Maullín,Río Tepu,RTEB14,-41.23836,-72.59094,2028-06-07,28,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,2,2
+Río Maullín,Río Tepu,RTEB14,-41.23836,-72.59094,2028-06-07,28,6,2007,Trichomycterus areolatus,"Kyle Young, Jane McDonald, BP",,2,2
+Río Maullín,Río Tepu,RTEB2,-41.22366,-72.59407,2027-06-07,27,6,2007,Galaxias platei,"Kyle Young, Jane McDonald, BP",,27,27
+Río Maullín,Río Tepu,RTEB2,-41.22366,-72.59407,2027-06-07,27,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,17,17
+Río Maullín,Río Tepu,RTEB2,-41.22366,-72.59407,2027-06-07,27,6,2007,Trichomycterus areolatus,"Kyle Young, Jane McDonald, BP",,2,2
+Río Maullín,Río Tepu,RTEB3,-41.22458,-72.59419,2027-06-07,27,6,2007,Galaxias platei,"Kyle Young, Jane McDonald, BP",,23,23
+Río Maullín,Río Tepu,RTEB3,-41.22458,-72.59419,2027-06-07,27,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,9,9
+Río Maullín,Río Tepu,RTEB3,-41.22458,-72.59419,2027-06-07,27,6,2007,Trichomycterus areolatus,"Kyle Young, Jane McDonald, BP",,7,7
+Río Maullín,Río Tepu,RTEB4a,-41.22578,-72.59495,2027-06-07,27,6,2007,Galaxias maculatus,"Kyle Young, Jane McDonald, BP",,2,2
+Río Maullín,Río Tepu,RTEB4a,-41.22578,-72.59495,2027-06-07,27,6,2007,Galaxias platei,"Kyle Young, Jane McDonald, BP",,1,1
+Río Maullín,Río Tepu,RTEB4a,-41.22578,-72.59495,2027-06-07,27,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,2,2
+Río Maullín,Río Tepu,RTEB4a,-41.22578,-72.59495,2027-06-07,27,6,2007,Trichomycterus areolatus,"Kyle Young, Jane McDonald, BP",,9,9
+Río Maullín,Río Tepu,RTEB4b,-41.22578,-72.59495,2027-06-07,27,6,2007,Galaxias maculatus,"Kyle Young, Jane McDonald, BP",,1,1
+Río Maullín,Río Tepu,RTEB4b,-41.22578,-72.59495,2027-06-07,27,6,2007,Galaxias platei,"Kyle Young, Jane McDonald, BP",,12,12
+Río Maullín,Río Tepu,RTEB4b,-41.22578,-72.59495,2027-06-07,27,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,6,6
+Río Maullín,Río Tepu,RTEB4b,-41.22578,-72.59495,2027-06-07,27,6,2007,Trichomycterus areolatus,"Kyle Young, Jane McDonald, BP",,4,4
+Río Maullín,Río Tepu,RTEB5,-41.22768,-72.59447,2027-06-07,27,6,2007,Galaxias maculatus,"Kyle Young, Jane McDonald, BP",,3,3
+Río Maullín,Río Tepu,RTEB5,-41.22768,-72.59447,2027-06-07,27,6,2007,Galaxias platei,"Kyle Young, Jane McDonald, BP",,13,13
+Río Maullín,Río Tepu,RTEB5,-41.22768,-72.59447,2027-06-07,27,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,18,18
+Río Maullín,Río Tepu,RTEB5,-41.22768,-72.59447,2027-06-07,27,6,2007,Salmo salar,"Kyle Young, Jane McDonald, BP",,1,1
+Río Maullín,Río Tepu,RTEB5,-41.22768,-72.59447,2027-06-07,27,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,1,1
+Río Maullín,Río Tepu,RTEB5,-41.22768,-72.59447,2027-06-07,27,6,2007,Trichomycterus areolatus,"Kyle Young, Jane McDonald, BP",,4,4
+Río Maullín,Río Tepu,RTEB6,-41.22886,-72.59422,2027-06-07,27,6,2007,Galaxias maculatus,"Kyle Young, Jane McDonald, BP",,9,9
+Río Maullín,Río Tepu,RTEB6,-41.22886,-72.59422,2027-06-07,27,6,2007,Galaxias platei,"Kyle Young, Jane McDonald, BP",,14,14
+Río Maullín,Río Tepu,RTEB6,-41.22886,-72.59422,2027-06-07,27,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,7,7
+Río Maullín,Río Tepu,RTEB6,-41.22886,-72.59422,2027-06-07,27,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,1,1
+Río Maullín,Río Tepu,RTEB6,-41.22886,-72.59422,2027-06-07,27,6,2007,Trichomycterus areolatus,"Kyle Young, Jane McDonald, BP",,1,1
+Río Maullín,Río Tepu,RTEB7,-41.2296,-72.59448,2027-06-07,27,6,2007,Galaxias maculatus,"Kyle Young, Jane McDonald, BP",,31,31
+Río Maullín,Río Tepu,RTEB7,-41.2296,-72.59448,2027-06-07,27,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,5,5
+Río Maullín,Río Tepu,RTEB7,-41.2296,-72.59448,2027-06-07,27,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,1,1
+Río Maullín,Río Tepu,RTEB7,-41.2296,-72.59448,2027-06-07,27,6,2007,Trichomycterus areolatus,"Kyle Young, Jane McDonald, BP",,1,1
+Río Maullín,Río Tepu,RTEB8,-41.23043,-72.59448,2027-06-07,27,6,2007,Galaxias platei,"Kyle Young, Jane McDonald, BP",,8,8
+Río Maullín,Río Tepu,RTEB8,-41.23043,-72.59448,2027-06-07,27,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,20,20
+Río Maullín,Río Tepu,RTEB9,-41.23259,-72.59537,2028-06-07,28,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,31,31
+Río Maullín,Río Tepu,RTEB9,-41.23259,-72.59537,2028-06-07,28,6,2007,Salmo salar,"Kyle Young, Jane McDonald, BP",,1,1
+Río Maullín,Río Tepu,RTEB9,-41.23259,-72.59537,2028-06-07,28,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,3,3
+Río Metrenquen,Metrenquen,U56A,-41.97405556,-73.51691667,39892,20,3,2009,Eleginops maclovins,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,49,49
+Río Metrenquen,Metrenquen,U56A,-41.97405556,-73.51691667,39892,20,3,2009,Galaxias maculatus,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,63,63
+Río Molulco,Rio Molulco,RMO,-42.85514,-73.7459,2017-05-07,17,5,2007,Galaxias maculatus,"Kyle Young, Jane McDonald",,8,8
+Río Molulco,Rio Molulco,RMO,-42.85514,-73.7459,2017-05-07,17,5,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,1,1
+Río Molulco,Rio Molulco,RMO,-42.85514,-73.7459,2017-05-07,17,5,2007,Salmo trutta,"Kyle Young, Jane McDonald",,5,5
+Río Negro - Hornopiren,Rio Negro - Hornopiren,R33A,-41.92333,-72.43833,39840,27,1,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,17,17
+Río Negro - Hornopiren,Rio Negro - Hornopiren,R33A,-41.92333,-72.43833,39840,27,1,2009,Salmo trutta,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,24,24
+Río Negro - Hualaihue,Rio Negro - Hualaihue,RN2H,-41.99905,-72.68177,39841,28,1,2009,Galaxias maculatus,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,15,15
+Río Negro - Hualaihue,Rio Negro - Hualaihue,RN2H,-41.99905,-72.68177,39841,28,1,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,20,20
+Río Negro - Hualaihue,Rio Negro - Hualaihue,RN2H,-41.99905,-72.68177,39841,28,1,2009,Salmo salar,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,1,1
+Río Negro - Hualaihue,Rio Negro - Hualaihue,RN2H,-41.99905,-72.68177,39841,28,1,2009,Salmo trutta,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,11,11
+Río Petrohué,Río Blanco,RBL1,-41.25887,-72.47815,2012-05-07,12,5,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,40,40
+Río Petrohué,Río Blanco,RBL1,-41.25887,-72.47815,2012-05-07,12,5,2007,Salmo trutta,"Kyle Young, Jane McDonald",,50,50
+Río Petrohué,Río Blanco,RBL1,-41.25887,-72.47815,2012-05-07,12,5,2007,Trichomycterus areolatus,"Kyle Young, Jane McDonald",,1,1
+Río Pichicolo,Pichicolo,RPC,-41.97956,-72.55934,2008-06-07,8,6,2007,Galaxias maculatus,"Kyle Young, Jane McDonald, BP",,4,4
+Río Pichicolo,Pichicolo,RPC,-41.97956,-72.55934,2008-06-07,8,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,17,17
+Río Pichicolo,Pichicolo,RPC,-41.97956,-72.55934,2008-06-07,8,6,2007,Oncorhynchus tshawytscha ,"Kyle Young, Jane McDonald, BP",,1,1
+Río Pichicolo,Pichicolo,RPC,-41.97956,-72.55934,2008-06-07,8,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,23,23
+Río Pichicolo,Pichicolo,RPC07,-41.00429,-72.528245,39841,28,1,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,18,18
+Río Pichicolo,Pichicolo,RPC07,-41.00429,-72.528245,39841,28,1,2009,Salmo salar,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,1,1
+Río Pichicolo,Pichicolo,RPC07,-41.00429,-72.528245,39841,28,1,2009,Salmo trutta,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,13,13
+Río Pihuio,Pihuio,RPI,-41.82386111,-73.69205556,39889,17,3,2009,Aplochiton taeniatus,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",1,,1
+Río Pihuio,Pihuio,RPI,-41.82386111,-73.69205556,39889,17,3,2009,Aplochiton zebra,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,1,1
+Río Pihuio,Pihuio,RPI,-41.82386111,-73.69205556,39889,17,3,2009,Galaxias maculatus,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,1,1
+Río Pihuio,Pihuio,RPI,-41.82386111,-73.69205556,39889,17,3,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,6,6
+Río Pihuio,Pihuio,RPIH2,-41.82399,-73.69459,2001-11-07,1,11,2007,Brachygalaxias bullocki,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,33,33
+Río Pihuio,Pihuio,RPIH2,-41.82399,-73.69459,2001-11-07,1,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,3,3
+Río Pilpilehue ,Pilpilehue ,RPI1,-42.73759,-73.62148,2018-05-07,18,5,2007,Galaxias maculatus,"Kyle Young, Jane McDonald",,25,25
+Río Pilpilehue ,Pilpilehue ,RPI1,-42.73759,-73.62148,2018-05-07,18,5,2007,Salmo salar,"Kyle Young, Jane McDonald",,1,1
+Río Pilpilehue ,Pilpilehue ,RPI1,-42.73759,-73.62148,2018-05-07,18,5,2007,Sculpin sp,"Kyle Young, Jane McDonald",,52,52
+Río Pilpilehue ,Pilpilehue ,RPI2,-42.739,-73.62009,2018-05-07,18,5,2007,Galaxias maculatus,"Kyle Young, Jane McDonald",,31,31
+Río Pilpilehue ,Pilpilehue ,RPI2,-42.739,-73.62009,2018-05-07,18,5,2007,Geotria australis,"Kyle Young, Jane McDonald",,1,1
+Río Pilpilehue ,Pilpilehue ,RPI2,-42.739,-73.62009,2018-05-07,18,5,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,23,23
+Río Pilpilehue ,Pilpilehue ,RPI2,-42.739,-73.62009,2018-05-07,18,5,2007,Salmo salar,"Kyle Young, Jane McDonald",,1,1
+Río Puelo,Río Puelo,RPLO,-41.38485,-72.17365,39858,14,2,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Ana María Cerda, Gabriel Orellana",,9,9
+Río Puelo,Río Puelo,RPLO1,-41.60927,-72.2198,2001-11-08,1,11,2008,Oncorhynchus mykiss,Gabriel Orellana,,2,2
+Río Puelo,Río Puelo,STRP,-41.60927,-72.2198,39462,15,1,2008,Salmo trutta,,,1,1
+Río Punien/Poza,Río Punien/Poza,RPUN,-41.8056,-72.73002,2010-06-07,10,6,2007,Galaxias maculatus,"Kyle Young, Jane McDonald, BP",,6,6
+Río Punien/Poza,Río Punien/Poza,RPUN,-41.8056,-72.73002,2010-06-07,10,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,3,3
+Río Punien/Poza,Río Punien/Poza,RPUN,-41.8056,-72.73002,2010-06-07,10,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,13,13
+Río Punihuil,Rio Punihuil,RPH1,-41.93164,-74.02347,2001-12-07,1,12,2007,Aplochiton taeniatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",2,1,3
+Río Punihuil,Rio Punihuil,RPH1,-41.93164,-74.02347,2001-12-07,1,12,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,6,6
+Río Punihuil,Rio Punihuil,RPH1,-41.93164,-74.02347,2001-12-07,1,12,2007,Geotria australis,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,4,4
+Río Punihuil,Rio Punihuil,RPH1,-41.93164,-74.02347,2001-12-07,1,12,2007,Salmo trutta,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,16,16
+Río Punihuil,Rio Punihuil,RPH3,-41.93937,-74.01502,39417,1,12,2007,Salmo trutta,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,12,12
+Río Punihuil,Rio Punihuil,RPI4,-42.73932,-73.62017,2012-02-08,12,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,18,18
+Río Punihuil,Rio Punihuil,RPI4,-42.73932,-73.62017,2012-02-08,12,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,28,28
+Río Purne,Rio Purne,RPP,-41.99117,-72.74508,2009-06-07,9,6,2007,Galaxias maculatus,"Kyle Young, Jane McDonald, BP",,36,36
+Río Purne,Rio Purne,RPP,-41.99117,-72.74508,2009-06-07,9,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,1,1
+Río Putemún,Piscicultura Biomasa,PBM,-42.42061944,-73.91946944,2019-06-09,19,6,2009,Oncorhynchus mykiss,"Ana María Cerda, AB",,62,62
+Río Reyes,Rio Reyes,RR,-41.40428,-72.28554,2011-06-07,11,6,2007,Galaxias maculatus,"Kyle Young, Jane McDonald, BP",,3,3
+Río Reyes,Rio Reyes,RR,-41.40428,-72.28554,2011-06-07,11,6,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald, BP",,1,1
+Río Reyes,Rio Reyes,RR,-41.40428,-72.28554,2011-06-07,11,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,10,10
+Río Río Lenca,Río Lenca,RL,-41.60577778,-72.68247222,39917,14,4,2009,Aplochiton zebra,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",17,,17
+Río Río Lenca,Río Lenca,RL,-41.60577778,-72.68247222,39917,14,4,2009,Galaxias maculatus,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,66,66
+Río Río Lenca,Río Lenca,RL,-41.60577778,-72.68247222,39917,14,4,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,20,20
+Río Río Lenca,Río Lenca,RL,-41.60577778,-72.68247222,39917,14,4,2009,Salmo trutta,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,2,2
+Río Río Lenca,Río Lenca,RL,-41.60553,-72.68269,2014-09-08,14,9,2008,Aplochiton zebra,"Kyle Young, Gabriel Orellana",,4,4
+Río Río Lenca,Río Lenca,RL,-41.60553,-72.68269,2014-09-08,14,9,2008,Galaxias maculatus,"Kyle Young, Gabriel Orellana",,7,7
+Río Río Lenca,Río Lenca,RL,-41.60553,-72.68269,2014-09-08,14,9,2008,Salmo trutta,"Kyle Young, Gabriel Orellana",,10,10
+Río Río Lenca,Río Lenca,RL,-41.60553,-72.68269,2027-05-07,27,5,2007,Aplochiton zebra,"Kyle Young, Jane McDonald",,4,4
+Río Río Lenca,Río Lenca,RL,-41.60553,-72.68269,2027-05-07,27,5,2007,Galaxias maculatus,"Kyle Young, Jane McDonald",,5,5
+Río Río Lenca,Río Lenca,RL,-41.60553,-72.68269,2027-05-07,27,5,2007,Geotria australis,"Kyle Young, Jane McDonald",,1,1
+Río Río Lenca,Río Lenca,RL,-41.60553,-72.68269,2027-05-07,27,5,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,1,1
+Río Río Lenca,Río Lenca,RL,-41.60553,-72.68269,2027-05-07,27,5,2007,Salmo salar,"Kyle Young, Jane McDonald",,1,1
+Río Río Lenca,Río Lenca,RL,-41.60553,-72.68269,2027-05-07,27,5,2007,Salmo trutta,"Kyle Young, Jane McDonald",,16,16
+Río San Antonio,Rio Casas Viejas,RCV,-42.02829,-73.85435,2015-05-07,15,5,2007,Brachygalaxias bullocki,"Kyle Young, Jane McDonald",,1,1
+Río San Antonio,Rio Casas Viejas,RCV,-42.02829,-73.85435,2015-05-07,15,5,2007,Salmo trutta,"Kyle Young, Jane McDonald",,2,2
+Río San Antonio,Río San Antonio,RSA,-42.97431,-73.66365,2016-05-07,16,5,2007,Geotria australis,"Kyle Young, Jane McDonald",,1,1
+Río U1,Río U1,U1A,-43.08744,-73.71724,2003-02-08,3,2,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,32,32
+Río U1,Río U1,U1A,-43.08744,-73.71724,2003-02-08,3,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,1,1
+Río U1,Río U1,U1A,-43.08744,-73.71724,2003-02-08,3,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,12,12
+Río U1,Río U1,U1A,-43.08744,-73.71724,2003-02-08,3,2,2008,Salmo trutta,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,6,6
+Río U10,Río U10,U10,-41.84439,-73.62942,2001-11-07,1,11,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,3,3
+Río U10,Río U10,U10,-41.84439,-73.62942,2001-11-07,1,11,2007,Brachygalaxias bullocki,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,27,27
+Río U10,Río U10,U10,-41.84439,-73.62942,2001-11-07,1,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,6,6
+Río U10,Río U10,U10,-41.84439,-73.62942,2001-11-07,1,11,2007,Geotria australis,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,14,14
+Río U10,Río U10,U10,-41.84439,-73.62942,2001-11-07,1,11,2007,Unknown,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U12,Río U12,U12A,-41.88157,-73.53814,2002-11-07,2,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,15,15
+Río U12,Río U12,U12B,-41.88187,-73.53947,2002-11-07,2,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,9,9
+Río U12,Río U12,U12C,-41.881,-73.5414,2002-11-07,2,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,9,9
+Río U12,Río U12,U12D,-41.881,-73.5414,2002-11-07,2,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,6,6
+Río U12,Río U12,U12E,-41.881,-73.5414,2002-11-07,2,11,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U12,Río U12,U12E,-41.881,-73.5414,2002-11-07,2,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,11,11
+Río U12,Río U12,U12F,-41.88075,-73.54088,2002-11-07,2,11,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,3,3
+Río U12,Río U12,U12F,-41.88075,-73.54088,2002-11-07,2,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,5,5
+Río U13,Río U13,U13,-41.90032,-73.54063,2003-07-08,3,7,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson, PH",,1,1
+Río U13,Río U13,U13A,-41.89955,-73.53738,2002-11-07,2,11,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U13,Río U13,U13A,-41.89955,-73.53738,2002-11-07,2,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,93,93
+Río U13,Río U13,U13B,-41.90014,-73.53988,2002-11-07,2,11,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U13,Río U13,U13B,-41.90014,-73.53988,2002-11-07,2,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,4,4
+Río U13,Río U13,U13C,-41.90032,-73.54063,2002-11-07,2,11,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,13,13
+Río U13,Río U13,U13C,-41.90032,-73.54063,2002-11-07,2,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,12,12
+Río U13,Río U13,U13D,-41.8997,-73.5415,2002-11-07,2,11,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,7,7
+Río U13,Río U13,U13D,-41.8997,-73.5415,2002-11-07,2,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,3,3
+Río U13,Río U13,U13D,-41.8997,-73.5415,2002-11-08,2,11,2008,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U13,Río U13,U13D,-41.8997,-73.5415,39388,2,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U15,Río U15,U15A,-42.06161,-73.49485,2003-11-07,3,11,2007,Brachygalaxias bullocki,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,49,49
+Río U16,Río U16,U16,-42.03942,-73.51278,2003-11-07,3,11,2007,Brachygalaxias bullocki,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,20,20
+Río U17,Río U17,U17A,-42.11519,-73.48451,2004-11-07,4,11,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",9,2,11
+Río U17,Río U17,U17A,-42.11519,-73.48451,2004-11-07,4,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,20,20
+Río U17,Río U17,U17A,-42.11519,-73.48451,2004-11-07,4,11,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,7,7
+Río U17,Río U17,U17A,-42.11519,-73.48451,2004-11-07,4,11,2007,Unknown,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U17,Río U17,U17B,-42.11447,-73.4803,2004-11-07,4,11,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",9,18,27
+Río U17,Río U17,U17B,-42.11447,-73.4803,2004-11-07,4,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,4,4
+Río U17,Río U17,U17B,-42.11447,-73.4803,2004-11-07,4,11,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,11,11
+Río U17,Río U17,U17C,-42.11406,-73.48553,2004-11-07,4,11,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,12,12
+Río U17,Río U17,U17C,-42.11406,-73.48553,2004-11-07,4,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,4,4
+Río U17,Río U17,U17C,-42.11406,-73.48553,2004-11-07,4,11,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U17,Río U17,U17D,-42.11432,-73.48643,2004-11-07,4,11,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,25,25
+Río U17,Río U17,U17D,-42.11432,-73.48643,2004-11-07,4,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,2,2
+Río U17,Río U17,U17D,-42.11432,-73.48643,2004-11-07,4,11,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U17,Río U17,U17E,-42.11388,-73.48739,2004-11-07,4,11,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,19,19
+Río U17,Río U17,U17E,-42.11388,-73.48739,2004-11-07,4,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U17,Río U17,U17E,-42.11388,-73.48739,2004-11-07,4,11,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,2,2
+Río U17,Río U17,U17E,-42.11388,-73.48739,2004-11-07,4,11,2007,Unknown,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U17,Río U17,U17F,-42.11376,-73.4881,2005-11-07,5,11,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",2,,2
+Río U17,Río U17,U17F,-42.11376,-73.4881,2005-11-07,5,11,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,6,6
+Río U17,Río U17,U17G,-42.11413,-73.4893,2005-11-07,5,11,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",1,,1
+Río U17,Río U17,U17G,-42.11413,-73.4893,2005-11-07,5,11,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,14,14
+Río U18,Río U18,U18A,-42.06629,-73.42986,2006-11-07,6,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,2,2
+Río U18,Río U18,U18B,-42.06692,-73.43138,2006-11-07,6,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,16,16
+Río U18,Río U18,U18B,-42.06692,-73.43138,2006-11-07,6,11,2007,Geotria australis,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,3,3
+Río U18,Río U18,U18C,-42.06673,-73.43197,2006-11-07,6,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,5,5
+Río U18,Río U18,U18C,-42.06673,-73.43197,2006-11-07,6,11,2007,Geotria australis,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,3,3
+Río U18,Río U18,U18C,-42.06673,-73.43197,2006-11-07,6,11,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,2,2
+Río U18,Río U18,U18C,-42.06673,-73.43197,2006-11-07,6,11,2007,Unknown,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,14,14
+Río U18,Río U18,U18D1,-42.06635,-73.43329,2006-11-07,6,11,2007,Brachygalaxias bullocki,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U18,Río U18,U18D1,-42.06635,-73.43329,2006-11-07,6,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,7,7
+Río U18,Río U18,U18D2,-42.06676,-73.43431,2006-11-07,6,11,2007,Brachygalaxias bullocki,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,2,2
+Río U18,Río U18,U18D2,-42.06676,-73.43431,2006-11-07,6,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,11,11
+Río U19,Río U19,U19A,-42.14597,-73.48837,2008-11-07,8,11,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,58,58
+Río U19,Río U19,U19B,-42.14562,-73.48855,2008-11-07,8,11,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,10,10
+Río U19,Río U19,U19B,-42.14562,-73.48855,2008-11-07,8,11,2007,Brachygalaxias bullocki,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,4,4
+Río U19,Río U19,U19B,-42.14562,-73.48855,2008-11-07,8,11,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,16,16
+Río U2,Río U2,U2,-43.100714,-73.6963,2016-05-07,16,5,2007,Galaxias maculatus,"Kyle Young, Jane McDonald",,2,2
+Río U2,Río U2,U2,-43.100714,-73.6963,2016-05-07,16,5,2007,Salmo trutta,"Kyle Young, Jane McDonald",,9,9
+Río U2,Río U2,U2A,-43.1034,-73.7109,2003-02-08,3,2,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,9,9
+Río U2,Río U2,U2A,-43.1034,-73.7109,2003-02-08,3,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,60,60
+Río U2,Río U2,U2A,-43.1034,-73.7109,2003-02-08,3,2,2008,Geotria australis,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,4,4
+Río U2,Río U2,U2A,-43.1034,-73.7109,2003-02-08,3,2,2008,Salmo trutta,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,38,38
+Río U2,Río U2,U2C,-43.101,-73.69749,2003-02-08,3,2,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,23,23
+Río U2,Río U2,U2C,-43.101,-73.69749,2003-02-08,3,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,28,28
+Río U2,Río U2,U2C,-43.101,-73.69749,2003-02-08,3,2,2008,Geotria australis,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,3,3
+Río U2,Río U2,U2C,-43.101,-73.69749,2003-02-08,3,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,2,2
+Río U2,Río U2,U2C,-43.101,-73.69749,2003-02-08,3,2,2008,Salmo trutta,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,25,25
+Río U20,Río U20,U20A,-42.20891,-73.40191,2009-11-07,9,11,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",3,,3
+Río U20,Río U20,U20A,-42.20891,-73.40191,2009-11-07,9,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,17,17
+Río U20,Río U20,U20A,-42.20891,-73.40191,2009-11-07,9,11,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,4,4
+Río U20,Río U20,U20A,-42.20891,-73.40191,2009-11-07,9,11,2007,Unknown,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U20,Río U20,U20C,-42.21032,-73.40511,2009-11-07,9,11,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",11,2,13
+Río U20,Río U20,U20C,-42.21032,-73.40511,2009-11-07,9,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,8,8
+Río U20,Río U20,U20C,-42.21032,-73.40511,2009-11-07,9,11,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,6,6
+Río U20,Río U20,U20E,-42.21222,-73.40894,2009-11-07,9,11,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",12,3,15
+Río U20,Río U20,U20E,-42.21222,-73.40894,2009-11-07,9,11,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,5,5
+Río U21,Río U21,U21A,-42.20209,-73.41302,2009-11-07,9,11,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U21,Río U21,U21A,-42.20209,-73.41302,2009-11-07,9,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,30,30
+Río U21,Río U21,U21A,-42.20209,-73.41302,2009-11-07,9,11,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,3,3
+Río U21,Río U21,U21C,-42.20573,-73.41568,2009-11-07,9,11,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U21,Río U21,U21C,-42.20573,-73.41568,2009-11-07,9,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,2,2
+Río U21,Río U21,U21C,-42.20573,-73.41568,2009-11-07,9,11,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,5,5
+Río U22,Río U22,U22A,-42.27939,-73.35328,2010-11-07,10,11,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,6,6
+Río U22,Río U22,U22A,-42.27939,-73.35328,2010-11-07,10,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,158,158
+Río U22,Río U22,U22A,-42.27939,-73.35328,2010-11-07,10,11,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,9,9
+Río U22,Río U22,U22B,-42.27884,-73.3537,2010-11-07,10,11,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,5,5
+Río U23,Río U23,U23A,-42.33205,-73.54575,2010-11-07,10,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,31,31
+Río U23,Río U23,U23A,-42.33205,-73.54575,2010-11-07,10,11,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,13,13
+Río U23,Río U23,U23C,-42.3287,-73.54565,2011-11-07,11,11,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U23,Río U23,U23C,-42.3287,-73.54565,2011-11-07,11,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U23,Río U23,U23C,-42.3287,-73.54565,2011-11-07,11,11,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,23,23
+Río U23,Río U23,U23E,-42.32508,-73.54643,2011-11-07,11,11,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U23,Río U23,U23E,-42.32508,-73.54643,2011-11-07,11,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U23,Río U23,U23E,-42.32508,-73.54643,2011-11-07,11,11,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,41,41
+Río U23,Río U23,U23G,-42.32233,-73.54351,2011-11-07,11,11,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U23,Río U23,U23G,-42.32233,-73.54351,2011-11-07,11,11,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,29,29
+Río U24,Río U24,U24A,-41.81153,-74.03178,2029-11-07,29,11,2007,Aplochiton taeniatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",1,,1
+Río U24,Río U24,U24A,-41.81153,-74.03178,2029-11-07,29,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,84,84
+Río U24,Río U24,U24A,-41.81153,-74.03178,2029-11-07,29,11,2007,Geotria australis,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U24,Río U24,U24A,-41.81153,-74.03178,2029-11-07,29,11,2007,Sculpin sp,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U24,Río U24,U24A,-41.81153,-74.03178,2029-11-07,29,11,2007,Unknown,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U24,Río U24,U24C,-41.81353,-74.03423,2029-11-07,29,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,4,4
+Río U24,Río U24,U24E,-41.81366,-74.03197,2029-11-07,29,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,41,41
+Río U24,Río U24,U24G,-41.81597,-74.02802,2029-11-07,29,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U25,Río U25,U25A,-41.81499,-73.9715,2029-11-07,29,11,2007,Aplochiton taeniatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",1,,1
+Río U25,Río U25,U25A,-41.81499,-73.9715,2029-11-07,29,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,10,10
+Río U26,Río U26,U26A,-41.88628,-73.96237,1930-11-07,30,11,2007,Brachygalaxias bullocki,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U26,Río U26,U26A,-41.88628,-73.96237,1930-11-07,30,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,36,36
+Río U26,Río U26,U26C,-41.88679,-73.96333,1930-11-07,30,11,2007,Aplochiton taeniatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",1,,1
+Río U26,Río U26,U26C,-41.88679,-73.96333,1930-11-07,30,11,2007,Brachygalaxias bullocki,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,7,7
+Río U26,Río U26,U26C,-41.88679,-73.96333,1930-11-07,30,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,37,37
+Río U26,Río U26,U26C,-41.88679,-73.96333,1930-11-07,30,11,2007,Geotria australis,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,5,5
+Río U26,Río U26,U26E,-41.88813,-73.96439,1930-11-07,30,11,2007,Aplochiton taeniatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",2,,2
+Río U26,Río U26,U26E,-41.88813,-73.96439,1930-11-07,30,11,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U26,Río U26,U26E,-41.88813,-73.96439,1930-11-07,30,11,2007,Brachygalaxias bullocki,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,3,3
+Río U26,Río U26,U26E,-41.88813,-73.96439,1930-11-07,30,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,64,64
+Río U26,Río U26,U26E,-41.88813,-73.96439,1930-11-07,30,11,2007,Geotria australis,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,6,6
+Río U27,Río U27,U27A,-41.89357,-73.95935,39416,30,11,2007,Aplochiton taeniatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",5,4,9
+Río U27,Río U27,U27A,-41.89357,-73.95935,39416,30,11,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,4,4
+Río U27,Río U27,U27A,-41.89357,-73.95935,39416,30,11,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,3,3
+Río U27,Río U27,U27A,-41.89357,-73.95935,39416,30,11,2007,Unknown,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U27,Río U27,U27C,-41.53985,-73.5625,2018-02-08,18,2,2008,Aplochiton taeniatus,"Kyle Young, Jessica Stephenson",,1,1
+Río U27,Río U27,U27C,-41.53985,-73.5625,2018-02-08,18,2,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson",,62,62
+Río U27,Río U27,U27C,-41.53985,-73.5625,2018-02-08,18,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson",,3,3
+Río U27,Río U27,U27C,-41.53985,-73.5625,2018-02-08,18,2,2008,Geotria australis,"Kyle Young, Jessica Stephenson",,2,2
+Río U28,Río U28,U28A,-41.9465,-74.02473,2002-12-07,2,12,2007,Aplochiton taeniatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",4,,4
+Río U28,Río U28,U28A,-41.9465,-74.02473,2002-12-07,2,12,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",22,,22
+Río U28,Río U28,U28A,-41.9465,-74.02473,2002-12-07,2,12,2007,AzxAt hybrid,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",1,,1
+Río U28,Río U28,U28B,-41.94709,-74.0224,2002-12-07,2,12,2007,Aplochiton taeniatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",2,,2
+Río U28,Río U28,U28B,-41.94709,-74.0224,2002-12-07,2,12,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,22,22
+Río U29,Río U29,U29A,-41.95989,-74.04021,2003-12-07,3,12,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",21,2,23
+Río U30,Río U30,U30A,-41.98488,-74.01282,2004-12-07,4,12,2007,Aplochiton taeniatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",10,,10
+Río U30,Río U30,U30A,-41.98488,-74.01282,2004-12-07,4,12,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U30,Río U30,U30A,-41.98488,-74.01282,2004-12-07,4,12,2007,Salmo trutta,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,8,8
+Río U30,Río U30,U30C,-41.98552,-74.02763,2004-12-07,4,12,2007,Aplochiton taeniatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",1,,1
+Río U30,Río U30,U30C,-41.98552,-74.02763,2004-12-07,4,12,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,3,3
+Río U30,Río U30,U30C,-41.98552,-74.02763,2004-12-07,4,12,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,7,7
+Río U30,Río U30,U30C,-41.98552,-74.02763,2004-12-07,4,12,2007,Salmo trutta,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,37,37
+Río U30,Río U30,U30E,-41.98502,-74.04028,2004-12-07,4,12,2007,Aplochiton taeniatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",1,,1
+Río U30,Río U30,U30E,-41.98502,-74.04028,2004-12-07,4,12,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,9,9
+Río U30,Río U30,U30E,-41.98502,-74.04028,2004-12-07,4,12,2007,Salmo trutta,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,13,13
+Río U31,Río U31,U31A,-41.79725,-73.95163,2005-12-07,5,12,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,65,65
+Río U31,Río U31,U31A,-41.79725,-73.95163,2005-12-07,5,12,2007,Geotria australis,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,3,3
+Río U31,Río U31,U31C,-41.80022,-73.95544,2005-12-07,5,12,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,25,25
+Río U32,Río U32,U32,-42.16491,-73.47269,2014-04-08,14,4,2008,Salmo salar,"Kyle Young, Jessica Stephenson",,1,1
+Río U32,Río U32,U32A,-42.16491,-73.47269,2006-12-07,6,12,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U32,Río U32,U32A,-42.16491,-73.47269,2006-12-07,6,12,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,98,98
+Río U32,Río U32,U32A,-42.16491,-73.47269,2006-12-07,6,12,2007,Geotria australis,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U32,Río U32,U32A,-42.16491,-73.47269,2006-12-07,6,12,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U32,Río U32,U32C,-42.1709,-73.47256,2006-12-07,6,12,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,11,11
+Río U32,Río U32,U32C,-42.1709,-73.47256,2006-12-07,6,12,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,5,5
+Río U32,Río U32,U32C,-42.1709,-73.47256,2006-12-07,6,12,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,3,3
+Río U32,Río U32,U32E,-42.17471,-73.46948,2006-12-07,6,12,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,5,5
+Río U32,Río U32,U32E,-42.17471,-73.46948,2006-12-07,6,12,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,4,4
+Río U32,Río U32,U32E,-42.17471,-73.46948,2006-12-07,6,12,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,5,5
+Río U33,Río U33,U33A,-42.16802,-73.47995,2007-12-07,7,12,2007,Aplochiton taeniatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U33,Río U33,U33A,-42.16802,-73.47995,2007-12-07,7,12,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",8,,8
+Río U33,Río U33,U33A,-42.16802,-73.47995,2007-12-07,7,12,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,117,117
+Río U33,Río U33,U33A,-42.16802,-73.47995,2007-12-07,7,12,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,17,17
+Río U33,Río U33,U33A,-42.16802,-73.47995,2007-12-07,7,12,2007,Salmo salar,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,22,22
+Río U33,Río U33,U33B,-42.16925,-73.47957,2007-12-07,7,12,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",11,5,16
+Río U33,Río U33,U33B,-42.16925,-73.47957,2007-12-07,7,12,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,17,17
+Río U33,Río U33,U33B,-42.16925,-73.47957,2007-12-07,7,12,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,13,13
+Río U33,Río U33,U33B,-42.16925,-73.47957,2007-12-07,7,12,2007,Salmo salar,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,2,2
+Río U33,Río U33,U33C,-42.17039,-73.47986,2007-12-07,7,12,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",8,6,14
+Río U33,Río U33,U33C,-42.17039,-73.47986,2007-12-07,7,12,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,7,7
+Río U33,Río U33,U33C,-42.17039,-73.47986,2007-12-07,7,12,2007,Salmo salar,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,2,2
+Río U34,Río U34,U34A,-42.11079,-73.48407,2008-12-07,8,12,2007,Aplochiton zebra,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",15,35,50
+Río U34,Río U34,U34A,-42.11079,-73.48407,2008-12-07,8,12,2007,Brachygalaxias bullocki,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,2,2
+Río U34,Río U34,U34A,-42.11079,-73.48407,2008-12-07,8,12,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,67,67
+Río U34,Río U34,U34A,-42.11079,-73.48407,2008-12-07,8,12,2007,Oncorhynchus kisutch,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U34,Río U34,U34A,-42.11079,-73.48407,2008-12-07,8,12,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,6,6
+Río U34,Río U34,U34C,-42.10957,-73.48385,2008-12-07,8,12,2007,Brachygalaxias bullocki,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,43,43
+Río U35,Río U35,U35A,-43.13724,-73.65302,2004-02-08,4,2,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,9,9
+Río U35,Río U35,U35A,-43.13724,-73.65302,2004-02-08,4,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,7,7
+Río U35,Río U35,U35A,-43.13724,-73.65302,2004-02-08,4,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,2,2
+Río U35,Río U35,U35A,-43.13724,-73.65302,2004-02-08,4,2,2008,Salmo trutta,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,46,46
+Río U35,Río U35,U35C,-43.13221,-73.65633,2004-02-08,4,2,2008,Salmo trutta,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,28,28
+Río U36,Río U36,U36A,-43.04641,-73.62746,2005-02-08,5,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,80,80
+Río U36,Río U36,U36A,-43.04641,-73.62746,2005-02-08,5,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,6,6
+Río U36,Río U36,U36A,-43.04641,-73.62746,2005-02-08,5,2,2008,Salmo trutta,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,4,4
+Río U36,Río U36,U36C,-43.04502,-73.64363,2005-02-08,5,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,6,6
+Río U36,Río U36,U36D,-43.04154,-73.64645,2005-02-08,5,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,67,67
+Río U37,Río U37,U37A,-43.03323,-73.57449,2006-02-08,6,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,128,128
+Río U37,Río U37,U37A,-43.03323,-73.57449,2006-02-08,6,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,13,13
+Río U37,Río U37,U37A,-43.03323,-73.57449,2006-02-08,6,2,2008,Salmo trutta,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,1,1
+Río U38,Río U38,U38A,-43.04134,-73.59446,2006-02-08,6,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,44,44
+Río U38,Río U38,U38A,-43.04134,-73.59446,2006-02-08,6,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,63,63
+Río U38,Río U38,U38C,-43.03131,-73.60072,2006-02-08,6,2,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,40,40
+Río U39,Río U39,U39A,-42.91145,-73.6386,2007-02-08,7,2,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,1,1
+Río U39,Río U39,U39A,-42.91145,-73.6386,2007-02-08,7,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,1,1
+Río U39,Río U39,U39A,-42.91145,-73.6386,2007-02-08,7,2,2008,Salmo trutta,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,41,41
+Río U39,Río U39,U39C,-42.91407,-73.64059,2007-02-08,7,2,2008,Salmo trutta,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,18,18
+Río U40,Río U40,U40A,-42.89064,-73.65541,2007-02-08,7,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,2,2
+Río U40,Río U40,U40A,-42.89064,-73.65541,2007-02-08,7,2,2008,Salmo trutta,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,5,5
+Río U40,Río U40,U40C,-42.89232,-73.66039,2007-02-08,7,2,2008,Salmo trutta,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,30,30
+Río U41,Río U41,U41A,-42.88184,-73.66441,2008-02-08,8,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,2,2
+Río U41,Río U41,U41A,-42.88184,-73.66441,2008-02-08,8,2,2008,Salmo trutta,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,61,61
+Río U42,Río U42,U42A,-42.87653,-73.67674,2008-02-08,8,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,1,1
+Río U42,Río U42,U42A,-42.87653,-73.67674,2008-02-08,8,2,2008,Salmo trutta,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,29,29
+Río U42,Río U42,U42C,-42.87921,-73.68051,2008-02-08,8,2,2008,Salmo trutta,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,29,29
+Río U43,Río U43,U43A,-42.87309,-73.59266,2009-02-08,9,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,12,12
+Río U43,Río U43,U43A,-42.87309,-73.59266,2009-02-08,9,2,2008,Salmo trutta,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,48,48
+Río U44,Río U44,U44A,-42.8585,-73.6031,2009-02-08,9,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,3,3
+Río U44,Río U44,U44A,-42.8585,-73.6031,2009-02-08,9,2,2008,Salmo trutta,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,34,34
+Río U45,Río U45,U45A,-42.88706,-73.55497,2010-02-08,10,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,3,3
+Río U45,Río U45,U45A,-42.88706,-73.55497,2010-02-08,10,2,2008,Salmo trutta,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,34,34
+Río U45,Río U45,U45A,-42.88706,-73.55497,2010-02-08,10,2,2008,Unknown,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,1,1
+Río U45,Río U45,U45C,-42.88205,-73.55514,2010-02-08,10,2,2008,Salmo trutta,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,28,28
+Río U46,Río U46,U46A,-42.88169,-73.54764,2010-02-08,10,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,14,14
+Río U46,Río U46,U46A,-42.88169,-73.54764,2010-02-08,10,2,2008,Salmo trutta,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,26,26
+Río U46,Río U46,U46A,-42.88169,-73.54764,2010-02-08,10,2,2008,Sculpin sp,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,19,19
+Río U47,Río U47,U47A,-42.74561,-73.614,2011-02-08,11,2,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,4,4
+Río U47,Río U47,U47A,-42.74561,-73.614,2011-02-08,11,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,44,44
+Río U47,Río U47,U47A,-42.74561,-73.614,2011-02-08,11,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,16,16
+Río U48,Río U48,U48A,-42.75316,-73.60063,2012-02-08,12,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,32,32
+Río U48,Río U48,U48A,-42.75316,-73.60063,2012-02-08,12,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,37,37
+Río U49,Río U49,U49A,-42.7306,-73.62833,2012-02-08,12,2,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,10,10
+Río U49,Río U49,U49A,-42.7306,-73.62833,2012-02-08,12,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,27,27
+Río U49,Río U49,U49A,-42.7306,-73.62833,2012-02-08,12,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,10,10
+Río U5,Río U5,U5,-42.85109,-73.6936,2017-05-07,17,5,2007,Salmo trutta,"Kyle Young, Jane McDonald",,15,15
+Río U5,Río U5,U5A,-42.85208,-73.69341,2009-02-08,9,2,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,2,2
+Río U5,Río U5,U5A,-42.85208,-73.69341,2009-02-08,9,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,1,1
+Río U5,Río U5,U5A,-42.85208,-73.69341,2009-02-08,9,2,2008,Salmo trutta,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,106,106
+Río U50,Río U50,U50A,-42.71726,-73.63188,2012-02-08,12,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,38,38
+Río U51,Río U51,U51A,-41.55488,-73.57089,2018-02-08,18,2,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson",,2,2
+Río U51,Río U51,U51A,-41.55488,-73.57089,2018-02-08,18,2,2008,Salmo trutta,"Kyle Young, Jessica Stephenson",,36,36
+Río U52,Río U52,U52A,-41.57718,-73.33644,2019-02-08,19,2,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson",,43,43
+Río U52,Río U52,U52A,-41.57718,-73.33644,2019-02-08,19,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson",,72,72
+Río U53,Río U53,U53A,-41.5741,-73.3379,2019-02-08,19,2,2008,Aplochiton taeniatus,"Kyle Young, Jessica Stephenson",,1,1
+Río U53,Río U53,U53A,-41.5741,-73.3379,2019-02-08,19,2,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson",,33,33
+Río U53,Río U53,U53A,-41.5741,-73.3379,2019-02-08,19,2,2008,Brachygalaxias bullocki,"Kyle Young, Jessica Stephenson",,2,2
+Río U53,Río U53,U53A,-41.5741,-73.3379,2019-02-08,19,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson",,49,49
+Río U54,Río U54,U54A,-41.56743,-73.33936,2019-02-08,19,2,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson",,13,13
+Río U54,Río U54,U54A,-41.56743,-73.33936,2019-02-08,19,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson",,6,6
+Río U55,Río U55,U55A,-41.58234,-73.33105,2020-02-08,20,2,2008,Aplochiton taeniatus,"Kyle Young, Jessica Stephenson",,3,3
+Río U55,Río U55,U55A,-41.58234,-73.33105,2020-02-08,20,2,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson",,23,23
+Río U55,Río U55,U55A,-41.58234,-73.33105,2020-02-08,20,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson",,50,50
+Río U55,Río U55,U55A,-41.58234,-73.33105,2020-02-08,20,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson",,9,9
+Río U56,Río U56,U56A,-41.58798,-73.31819,2020-02-08,20,2,2008,Aplochiton taeniatus,"Kyle Young, Jessica Stephenson",,1,1
+Río U56,Río U56,U56A,-41.58798,-73.31819,2020-02-08,20,2,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson",,4,4
+Río U56,Río U56,U56A,-41.58798,-73.31819,2020-02-08,20,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson",,84,84
+Río U56,Río U56,U56A,-41.58798,-73.31819,2020-02-08,20,2,2008,Geotria australis,"Kyle Young, Jessica Stephenson",,2,2
+Río U56,Río U56,U56A,-41.58798,-73.31819,2020-02-08,20,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson",,4,4
+Río U57,Río U57,U57A,-42.06765,-73.29066,2020-02-08,20,2,2008,Aplochiton taeniatus,"Kyle Young, Jessica Stephenson",,1,1
+Río U57,Río U57,U57A,-42.06765,-73.29066,2020-02-08,20,2,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson",,59,59
+Río U57,Río U57,U57A,-42.06765,-73.29066,2020-02-08,20,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson",,13,13
+Río U57,Río U57,U57A,-42.06765,-73.29066,2020-02-08,20,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson",,11,11
+Río U58,Río U58,U58A,-42.38344,-73.60149,2022-02-08,22,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson",,1,1
+Río U58,Río U58,U58A,-42.38344,-73.60149,2022-02-08,22,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson",,70,70
+Río U59,Río U59,U59A,-42.3891,-73.62015,2022-02-08,22,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson",,14,14
+Río U6,Río U6,U6,-42.84663,-73.65218,2017-05-07,17,5,2007,Galaxias maculatus,"Kyle Young, Jane McDonald",,8,8
+Río U6,Río U6,U6,-42.84663,-73.65218,2017-05-07,17,5,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,1,1
+Río U6,Río U6,U6,-42.84663,-73.65218,2017-05-07,17,5,2007,Salmo trutta,"Kyle Young, Jane McDonald",,1,1
+Río U6,Río U6,U6A,-42.84671,-73.65187,2009-02-08,9,2,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,1,1
+Río U6,Río U6,U6A,-42.84671,-73.65187,2009-02-08,9,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,2,2
+Río U6,Río U6,U6A,-42.84671,-73.65187,2009-02-08,9,2,2008,Salmo trutta,"Kyle Young, Jessica Stephenson, Anne-Flore Thailly",,21,21
+Río U60,Río U60,U60A,-42.38962,-73.63062,2022-02-08,22,2,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson",,1,1
+Río U60,Río U60,U60A,-42.38962,-73.63062,2022-02-08,22,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson",,9,9
+Río U60,Río U60,U60A,-42.38962,-73.63062,2022-02-08,22,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson",,5,5
+Río U61,Río U61,U61A,-42.46796,-73.538,2022-02-08,22,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson",,36,36
+Río U61,Río U61,U61A,-42.46796,-73.538,2022-02-08,22,2,2008,Oncorhynchus kisutch,"Kyle Young, Jessica Stephenson",,1,1
+Río U62,Río U62,U62A,-42.46011,-73.72127,2024-02-08,24,2,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson",,5,5
+Río U62,Río U62,U62A,-42.46011,-73.72127,2024-02-08,24,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson",,1,1
+Río U62,Río U62,U62A,-42.46011,-73.72127,2024-02-08,24,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson",,19,19
+Río U63,Río U63,U63A,-42.47964,-73.73206,2024-02-08,24,2,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson",,31,31
+Río U63,Río U63,U63A,-42.47964,-73.73206,2024-02-08,24,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson",,8,8
+Río U63,Río U63,U63A,-42.47964,-73.73206,2024-02-08,24,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson",,24,24
+Río U64,Río U64,U64A,-42.24865,-73.39458,2026-02-08,26,2,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson",,35,35
+Río U64,Río U64,U64A,-42.24865,-73.39458,2026-02-08,26,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson",,77,77
+Río U64,Río U64,U64A,-42.24865,-73.39458,2026-02-08,26,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson",,10,10
+Río U65,Río U65,U65A,-42.26036,-73.39855,2026-02-08,26,2,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson",,34,34
+Río U65,Río U65,U65A,-42.26036,-73.39855,2026-02-08,26,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson",,15,15
+Río U65,Río U65,U65A,-42.26036,-73.39855,2026-02-08,26,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson",,26,26
+Río U66,Río U66,U66A,-42.26304,-73.42131,2027-02-08,27,2,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson",,72,72
+Río U66,Río U66,U66A,-42.26304,-73.42131,2027-02-08,27,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson",,52,52
+Río U66,Río U66,U66A,-42.26304,-73.42131,2027-02-08,27,2,2008,Geotria australis,"Kyle Young, Jessica Stephenson",,2,2
+Río U66,Río U66,U66A,-42.26304,-73.42131,2027-02-08,27,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson",,20,20
+Río U67,Río U67,U67A,-42.26334,-73.42747,2027-02-08,27,2,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson",,28,28
+Río U67,Río U67,U67A,-42.26334,-73.42747,2027-02-08,27,2,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson",,46,46
+Río U67,Río U67,U67A,-42.26334,-73.42747,2027-02-08,27,2,2008,Geotria australis,"Kyle Young, Jessica Stephenson",,3,3
+Río U67,Río U67,U67A,-42.26334,-73.42747,2027-02-08,27,2,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson",,5,5
+Río U68,Río U68,U68A,-42.3081,-73.43253,2003-03-08,3,3,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson",,14,14
+Río U68,Río U68,U68A,-42.3081,-73.43253,2003-03-08,3,3,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson",,132,132
+Río U68,Río U68,U68A,-42.3081,-73.43253,2003-03-08,3,3,2008,Geotria australis,"Kyle Young, Jessica Stephenson",,2,2
+Río U68,Río U68,U68A,-42.3081,-73.43253,2003-03-08,3,3,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson",,2,2
+Río U69,Río U69,U69A,-42.348,-73.57414,2003-03-08,3,3,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson",,2,2
+Río U69,Río U69,U69A,-42.348,-73.57414,2003-03-08,3,3,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson",,13,13
+Río U7,Río U7,U7,-42.86742,-73.51138,2018-05-07,18,5,2007,Oncorhynchus mykiss,"Kyle Young, Jane McDonald",,6,6
+Río U70,Río U70,U70A,-42.36095,-73.60734,2003-03-08,3,3,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson",,9,9
+Río U70,Río U70,U70A,-42.36095,-73.60734,2003-03-08,3,3,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson",,10,10
+Río U70,Río U70,U70A,-42.36095,-73.60734,2003-03-08,3,3,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson",,12,12
+Río U71,Río U71,U71A,-41.80997,-73.59871,2007-03-08,7,3,2008,Aplochiton taeniatus,"Kyle Young, Jessica Stephenson",,1,1
+Río U72,Río U72,U72A,-41.92332,-73.55228,2022-03-08,22,3,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson",,37,37
+Río U72,Río U72,U72A,-41.92332,-73.55228,2022-03-08,22,3,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson",,53,53
+Río U73,Río U73,U73A,-41.86837,-73.51987,2022-03-08,22,3,2008,Aplochiton taeniatus,"Kyle Young, Jessica Stephenson",,12,12
+Río U73,Río U73,U73A,-41.86837,-73.51987,2022-03-08,22,3,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson",,34,34
+Río U73,Río U73,U73A,-41.86837,-73.51987,2022-03-08,22,3,2008,Brachygalaxias bullocki,"Kyle Young, Jessica Stephenson",,2,2
+Río U74,Río U74,U74A,-42.42342,-73.7237,2004-04-08,4,4,2008,Aplochiton zebra,"Kyle Young, BC, MK",,51,51
+Río U74,Río U74,U74A,-42.42342,-73.7237,2004-04-08,4,4,2008,Galaxias maculatus,"Kyle Young, BC, MK",,2,2
+Río U74,Río U74,U74A,-42.42342,-73.7237,2004-04-08,4,4,2008,Oncorhynchus mykiss,"Kyle Young, BC, MK",,11,11
+Río U75,Río U75,U75A,-41.90449,-73.53587,2008-04-08,8,4,2008,Aplochiton taeniatus,"Kyle Young, Jessica Stephenson",,5,5
+Río U75,Río U75,U75A,-41.90449,-73.53587,2008-04-08,8,4,2008,Aplochiton zebra,"Kyle Young, Jessica Stephenson",,13,13
+Río U76,Río U76,U76A,-41.52874,-72.74181,2004-05-08,4,5,2008,Salmo trutta,"Kyle Young, Jessica Stephenson, Gabriel",,37,37
+Río U76,Río U76,U76A,-41.52874,-72.74181,1930-08-08,30,8,2008,Galaxias maculatus,"Kyle Young, Gabriel Orellana",,2,2
+Río U76,Río U76,U76A,-41.52874,-72.74181,1930-08-08,30,8,2008,Oncorhynchus mykiss,"Kyle Young, Gabriel Orellana",,1,1
+Río U76,Río U76,U76A,-41.52874,-72.74181,1930-08-08,30,8,2008,Oncorhynchus tshawytscha ,"Kyle Young, Gabriel Orellana",,1,1
+Río U76,Río U76,U76A,-41.52874,-72.74181,1930-08-08,30,8,2008,Salmo trutta,"Kyle Young, Gabriel Orellana",,33,33
+Río U77,Río U77,U77,-42.42342,-73.7237,1930-06-08,30,6,2008,Galaxias maculatus,"Kyle Young, Jessica Stephenson, PH",,25,25
+Río U77,Río U77,U77,-42.42342,-73.7237,1930-06-08,30,6,2008,Oncorhynchus mykiss,"Kyle Young, Jessica Stephenson, PH",,1,1
+Río U78,Río U78,U78A,-41.74099,-72.65036,2023-08-08,23,8,2008,Oncorhynchus mykiss,"Kyle Young, Gabriel Orellana",,3,3
+Río U78,Río U78,U78A,-41.74099,-72.65036,2023-08-08,23,8,2008,Salmo trutta,"Kyle Young, Gabriel Orellana",,11,11
+Río U8,Río U8,U8,-41.97971,-72.77434,2009-06-07,9,6,2007,Galaxias maculatus,"Kyle Young, Jane McDonald, BP",,19,19
+Río U8,Río U8,U8,-41.97971,-72.77434,2009-06-07,9,6,2007,Salmo trutta,"Kyle Young, Jane McDonald, BP",,1,1
+Río U80,Río U80,U80A,-41.38716,-72.28236,2020-09-08,20,9,2008,Aplochiton zebra,"Kyle Young, Gabriel Orellana",,1,1
+Río U80,Río U80,U80A,-41.38716,-72.28236,2020-09-08,20,9,2008,Oncorhynchus mykiss,"Kyle Young, Gabriel Orellana",,12,12
+Río U80,Río U80,U80A,-41.38716,-72.28236,2020-09-08,20,9,2008,Salmo salar,"Kyle Young, Gabriel Orellana",,13,13
+Río U80,Río U80,U80A,-41.38716,-72.28236,2020-09-08,20,9,2008,Salmo trutta,"Kyle Young, Gabriel Orellana",,29,29
+Río U9,Río U9,U9,-41.83229,-73.50793,1931-10-07,31,10,2007,Brachygalaxias bullocki,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río U9,Río U9,U9,-41.83229,-73.50793,1931-10-07,31,10,2007,Galaxias maculatus,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,71,71
+Río U9,Río U9,U9,-41.83229,-73.50793,1931-10-07,31,10,2007,Unknown,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,1,1
+Río Valdivia,Mañio,RMA8,-39.71472222,-72.3985,39895,23,3,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,42,42
+Río Valdivia,Mañio,RMA8,-39.71472222,-72.3985,39895,23,3,2009,Salmo trutta,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,38,38
+Río Valdivia,Ñancul,RNA9,-39.71436111,-72.43272222,39895,23,3,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,64,64
+Río Valdivia,Ñancul,RNA9,-39.71436111,-72.43272222,39895,23,3,2009,Salmo trutta,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,28,28
+Río Valdivia,Paillehuinte,RPAF13,-39.81608333,-72.07838889,39897,25,3,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,80,80
+Río Valdivia,Paillehuinte,RPAF13,-39.81608333,-72.07838889,39897,25,3,2009,Percichthys trucha,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,1,1
+Río Valdivia,Paillehuinte,RPAF13,-39.81608333,-72.07838889,39897,25,3,2009,Salmo trutta,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,56,56
+Río Valdivia,Paillehuinte,RPAF13,-39.81608333,-72.07838889,39897,25,3,2009,Trichomycterus areolatus,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,1,1
+Río Valdivia,Río Blanco - Enco,REN10,-39.57483333,-72.14986111,39896,24,3,2009,Aplochiton zebra,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",30,35,65
+Río Valdivia,Río Blanco - Enco,REN10,-39.57483333,-72.14986111,39896,24,3,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,43,43
+Río Valdivia,Río Blanco - Enco,REN10,-39.57483333,-72.14986111,39896,24,3,2009,Salmo trutta,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,25,25
+Río Valdivia,Río Calle-Calle,RCC,-39.79563889,-73.12931944,39462,15,1,2008,Oncorhynchus mykiss,,,1,1
+Río Valdivia,Río Punahue,RPU11,-39.83119444,-72.03711111,39896,24,3,2009,Aplochiton zebra,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",21,,21
+Río Valdivia,Río Punahue,RPU11,-39.83119444,-72.03711111,39896,24,3,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,80,80
+Río Valdivia,Río Punahue,RPU11,-39.83119444,-72.03711111,39896,24,3,2009,Salmo trutta,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,35,35
+Río Valdivia,Río Quinchilca,RQ,-39.858825,-72.75344167,39462,15,1,2008,Oncorhynchus mykiss,,,1,1
+Río Valdivia,Río Truful,RTR12,-39.82494444,-71.99744444,39897,25,3,2009,Oncorhynchus mykiss,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,130,130
+Río Valdivia,Río Truful,RTR12,-39.82494444,-71.99744444,39897,25,3,2009,Salmo trutta,"José del Carmen Sanzana, Delphine Vanhaecke, Ana María Cerda, Gabriel Orellana",,9,9
+Seno del Reloncaví,Aguas Claras,AC,-41.73256,-72.63393,2024-12-07,24,12,2007,Oncorhynchus mykiss,"Kyle Young, Alexandre Terreau, Anne-Flore Thailly",,34,34
+Seno del Reloncaví,Calbuco,CAL,-41.767375,-73.129775,39823,10,1,2009,Oncorhynchus mykiss,José del Carmen Sanzana,,10,10
+Seno del Reloncaví,Calbuco,CAL,-41.767375,-73.129775,39831,18,1,2009,Oncorhynchus mykiss,José del Carmen Sanzana,,6,6
+Seno del Reloncaví,Calbuco,CAL,-41.767375,-73.129775,39838,25,1,2009,Oncorhynchus mykiss,José del Carmen Sanzana,,4,4
+Seno del Reloncaví,Calbuco,CAL,-41.767375,-73.129775,39838,25,1,2009,Salmo salar,José del Carmen Sanzana,,2,2
+Seno del Reloncaví,Calbuco,CAL,-41.767375,-73.129775,39845,1,2,2009,Oncorhynchus kisutch,José del Carmen Sanzana,,1,1
+Seno del Reloncaví,Calbuco,CAL,-41.767375,-73.129775,39845,1,2,2009,Oncorhynchus mykiss,José del Carmen Sanzana,,8,8
