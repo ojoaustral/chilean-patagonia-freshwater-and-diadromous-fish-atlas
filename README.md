@@ -1,6 +1,4 @@
-# Atlas Ictiogeográfico de la Patagonia Chilena
-
-**Atlas ictiogeográfico de peces dulceacuícolas y diádromos de la Patagonia chilena / Ichthyogeographic atlas of freshwater and diadromous fishes of Chilean Patagonia**
+# Atlas ictiogeográfico de peces dulceacuícolas y diádromos de la Patagonia chilena / Ichthyogeographic atlas of freshwater and diadromous fishes of Chilean Patagonia
 
 ![Project photograph](images/CCorrea_RIMG4641.JPG)
 
@@ -25,10 +23,12 @@ The atlas was developed to:
 At present, the repository includes the following main components:
 
 ### Core project files
+
 - `Atlas_Ictiogeografico.Rmd` — main source document describing the atlas workflow
 - `Atlas_Ictiogeografico.pdf` — current compiled PDF output
 
 ### Main directories
+
 - `bibliography/` — bibliographic resources used by the report
 - `data_sources/` — source-specific folders and source datasets, metadata, and preliminary steps
 - `functions/` — helper R functions used in the workflow
@@ -38,6 +38,7 @@ At present, the repository includes the following main components:
 - `tex/` — LaTeX-related resources for report generation
 
 ### Examples of current source-data folders
+
 The `data_sources/` directory presently includes folders such as:
 
 - `Addendum_MBoisjoly`
@@ -55,6 +56,7 @@ The `data_sources/` directory presently includes folders such as:
 - `iNaturalist`
 
 ### Examples of current output files
+
 The `outputs_global_analyses/` directory currently contains products such as:
 
 - `2025-12-17_AtlasIctio2025_Datos_DwC_deInteres_norepetidos_revisados.csv`
@@ -73,10 +75,13 @@ A central aim of the project is to produce a fish occurrence database compatible
 ## Geographic and biological scope
 
 ### Geographic scope
+
 The working report defines the study area as Pacific-draining basins south of the **Río Maullín**, extending from the Puerto Montt area southward, including Chilean Patagonia and, where relevant to Chilean basins, transboundary basin context.
 
 ### Biological scope
+
 The atlas focuses on fish species that at some point during theur life cycle consistently utilize freshwater or estuarine habitats:
+
 - freshwater fishes;
 - estuarine fishes;
 - diadromous fishes.
@@ -98,7 +103,6 @@ In broad terms, the workflow documented in this repository includes:
 This compilation was prepared in the context of the **Programa Austral Patagonia (ProAP)**, with participation from the **Universidad Austral de Chile** and support from **The Pew Charitable Trusts**.
 
 ## Repository structure
-
 
 ```text
 chilean-patagonia-freshwater-and-diadromous-fish-atlas/
@@ -130,9 +134,7 @@ This repository is intended to be shared under:
 A formal citation will be added once the atlas, report, or associated dataset is finalized, versioned and published as a data paper. For now, a provisional citation is as follows:
 
 *Spanish*
-Correa, Cristian y Maryse Boisjoly (2026) Atlas ictiogeográfico de peces dulceacuícolas y diádromos de la Patagonia chilena. https://github.com/ojoaustral/chilean-patagonia-freshwater-and-diadromous-fish-atlas    ]
+Correa, Cristian y Maryse Boisjoly (2026) Atlas ictiogeográfico de peces dulceacuícolas y diádromos de la Patagonia chilena. <https://github.com/ojoaustral/chilean-patagonia-freshwater-and-diadromous-fish-atlas>
 
 *English*
-Correa, Cristian and Maryse Boisjoly (2026) Ichthyogeographic atlas of freshwater and diadromous fishes of Chilean Patagonia. https://github.com/ojoaustral/chilean-patagonia-freshwater-and-diadromous-fish-atlas    ]
-
-
+Correa, Cristian and Maryse Boisjoly (2026) Ichthyogeographic atlas of freshwater and diadromous fishes of Chilean Patagonia. <https://github.com/ojoaustral/chilean-patagonia-freshwater-and-diadromous-fish-atlas>
