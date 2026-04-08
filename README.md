@@ -2,7 +2,7 @@
 
 **Atlas ictiogeográfico de peces dulceacuícolas y diádromos de la Patagonia chilena / Ichthyogeographic atlas of freshwater and diadromous fishes of Chilean Patagonia**
 
-![Project photograph](images/"RIMG4641_modified_Azebra Gmac.JPG")
+![Project photograph](images/CCorrea_RIMG4641.JPG)
 
 ## Overview
 
