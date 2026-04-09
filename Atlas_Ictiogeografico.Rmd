@@ -195,7 +195,7 @@ La adopción de un estándar es importante porque fomenta la interoperabilidad  
 
 La distribución del estándar se hace a través del portal GitHub del Darwin Core Maintenance Interest Group [https://github.com/tdwg/dwc](https://github.com/tdwg/dwc). Allí  se encuentran definiciones, etiquetas, ejemplos, versiones anteriores, entre otros recursos, que a su vez son reflejados en una guía más fácil de leer ([Darwin Core Quick Reference Guide](https://dwc.tdwg.org/terms/)).  
 
-Una lista de 179 atributos o campos (vigentes y obsoletos) con sus respectivas definiciones, etc., fue obtenida de [GitHub (versión 2023-04-28)](https://github.com/tdwg/dwc/blob/master/vocabulary/term_versions.csv), y de estos una fracción (~30) de los atributos vigentes fue considerado con algún grado de prioridad para los efectos de este proyecto, incluyendo aquellos destacados por la red GBIF como [campos primarios y campos obligatorios](https://ipt.gbif.org/manual/en/ipt/latest/darwin-core). La lista completa de atributos  y la priorización de esta está disponible en un archivo suplementario (`Atlas_Ictiogeografico_Homologacion.xlsx`). A continuación se reproduce parte de la lista de atributos seleccionados (Table \ref{tab:Table1}).  
+Una lista de 179 atributos o campos (vigentes y obsoletos) con sus respectivas definiciones, etc., fue obtenida de [GitHub (versión 2023-04-28)](https://github.com/tdwg/dwc/blob/master/vocabulary/term_versions.csv), y de estos una fracción (~36) de los atributos vigentes fue considerado con algún grado de prioridad para los efectos de este proyecto, incluyendo aquellos destacados por la red GBIF como [campos primarios y campos obligatorios](https://ipt.gbif.org/manual/en/ipt/latest/darwin-core). La lista completa de atributos  y la priorización de esta está disponible en un archivo suplementario (`input_parameters/Atlas_Ictiogeografico_Homologacion.xlsx`). A continuación se reproduce parte de la lista de atributos seleccionados (Table \ref{tab:Table1}).  
 
 Es importante destacar que el campo `eventDate` en el DwC tolera diferentes formatos tales como 2025-11-29 (año), 2025-11 (mes), 2025 (año), e incluso intervalos de tiempo 2023-09-05/2023-09-18 [https://techdocs.gbif.org/en/data-processing/temporal-interpretation](https://techdocs.gbif.org/en/data-processing/temporal-interpretation).  
 
@@ -272,13 +272,6 @@ column_spec(column = 4, width = "15em")
 rm(list=ls()[!ls()%in%c("DwC",
                         "DwC.keep",
                         "fish.orders")])
-```
-
-
-
-```{r, eval=T, include=T}
-knitr::knit_exit()
-
 ```
 
 # Área de estudio y polígonos  
@@ -369,7 +362,7 @@ A partir de la base de datos se exportó una tabla simple (`FishDatabase_Correa_
 
 
 ```{r}
-FishDB_CC <- read.csv("./data_sources/Fish Database_CCorrea/FishDatabase_Correa_Boisjoly_2025-11-27.csv", fileEncoding = "UTF-8", colClasses = c(
+FishDB_CC <- read.csv("./data_sources/Correa_Boisjoly_Collection/FishDatabase_Correa_Boisjoly_2025-11-27.csv", fileEncoding = "UTF-8", colClasses = c(
                    "character", #Site.name"            
                    "character", #Locality"             
                    "character", #Site..waypoint.2014." 
@@ -412,7 +405,7 @@ inverts <- c("Aegla", "Allothunnus fallai", "Amphipod", "Anisoptera", "Arthropod
 
 
 ```{r}
-FishDB_CC <- FishDB_CC %>% filter( !(Species %in% inverts), !is.na(Species) )
+FishDB_CC <- FishDB_CC %>% filter(!(Species %in% inverts), !is.na(Species) )
 # where inverts is a vector of names to exclude, mostly invertebrates. 
 
 ```
@@ -420,7 +413,7 @@ FishDB_CC <- FishDB_CC %>% filter( !(Species %in% inverts), !is.na(Species) )
 
 La tabla de peces resultante presentó `r nrow(FishDB_CC)` filas o registros y `r ncol(FishDB_CC)` columnas o atributos. Las filas representan ocurrencias de individuos o conjuntos de individuos, por lo que para los efectos de este proyecto es pertinente agregar los datos (combinar filas) para obtener presencia de especies en sitios, fechas y protocolos de muestreos distintos.  
 
-Antes de agregar o combinar filas, se corrigieron algunas anomalías con el conteo de individuos para obtener el número de individuos registrado.
+Antes de agregar o combinar filas, se corrigieron algunas anomalías con el conteo de individuos para obtener el número de individuos registrado. En particular, cuando el campo `N.Individuals` estaba vacío se asumió n = 1 porque ese campo sirve sobre todo para acomodar conjuntos de peces indicando su número.   
 
 
 ```{r}
@@ -439,17 +432,26 @@ Función para agregar los datos:
 FishDB_CC_aggregated <-  
   FishDB_CC %>% 
   group_by(`Locality`, `Lat_effort`, `Lon_effort`, `Year`,`YYYY.MM.DD`, `Species`) %>%
-  summarise(n = sum(`N.Individuals`), 
+  summarise(
+     Fish_Id = first(`Fish_Id`),
+     n = sum(`N.Individuals`), 
      Technique = paste(unique(`Technique`), collapse = ", "),
      `Site.name` = paste(unique(`Site.name`), collapse = ", "),
       Crew = paste(unique(`Crew`), collapse = ", "),
+     bibliographicCitation = {
+      vals <- as.character(bibliographicCitation)
+      vals <- trimws(vals)
+      vals <- vals[!is.na(vals)]
+      vals <- vals[!(vals %in% c("", "NA", "<NA>", "na"))]
+      if (length(vals) == 0) "" else vals[1]
+    },
      associatedReferences = {
       vals <- as.character(associatedReferences)
       vals <- vals[!is.na(vals)]
       vals <- trimws(vals)
       vals <- vals[!(vals %in% c("", "NA", "<NA>", "na"))]
       if (length(vals) == 0) {""} else {
-        parts <- unlist(strsplit(vals, "\\s*\\|\\s*|;\\s*|,\\s*"))
+        parts <- unlist(strsplit(vals, "\\s*\\|\\s*|;\\s*"))
         parts <- trimws(parts) 
         parts <- parts[!(parts %in% c("", "NA", "<NA>", "na"))] 
         parts <- unique(parts) 
@@ -461,6 +463,7 @@ FishDB_CC_aggregated <-
 ```
 
 <!-- the chunk below is to clean the recordedBy field -->  
+
 
 ```{r, include=F}
 Crew <- FishDB_CC_aggregated$Crew
@@ -536,6 +539,7 @@ FishDB_CC.Fields <- colnames(FishDB_CC_aggregated)
 
 DwC.eq <- FishDB_CC.Fields %>% 
   recode(
+  Fish_Id                = "occurrenceID",
   `Site.name`            = "locationRemarks",
   Locality               = "locality",
   Lat_effort             = "decimalLatitude",
@@ -546,6 +550,7 @@ DwC.eq <- FishDB_CC.Fields %>%
   n                      = "individualCount",
   Technique              = "samplingProtocol",
   Crew                   = "recordedBy",
+  bibliographicCitation  = "bibliographicCitation",
   associatedReferences   = "associatedReferences")
 
 colnames(FishDB_CC_aggregated) <- DwC.eq
@@ -570,20 +575,24 @@ Además se añadieron algunos atributos del DwC que son constantes para todo el 
 FishDB_CC.ready$license <-
   "CC BY-NC 4.0"
 FishDB_CC.ready$rightsHolder <- 
-  "Cristián Correa, orcid.org/0000-0002-8608-6858"
+  "Cristian Correa, orcid.org/0000-0002-8608-6858"
 FishDB_CC.ready$accessRights <- 
   "not-for-profit use only"
-FishDB_CC.ready$bibliographicCitation <- 
-  "Correa, Cristian, & Boisjoly, Maryse (2025). Base de datos empírica de peces de Chile (Versions 2025-11-27) [Dataset]." 
+# Add bibliographic citation where there is none (published papers prevail when available).   
+FishDB_CC.ready$bibliographicCitation[
+  is.na(FishDB_CC.ready$bibliographicCitation) |
+  trimws(FishDB_CC.ready$bibliographicCitation) == ""
+] <- "Correa, Cristian, and Maryse Boisjoly. 2025. Chilean fish collection and empirical database (Version 2025-11-27) [Unpublished dataset]."
 FishDB_CC.ready$datasetName <- 
-  "Fish Database Correa-Boisjoly"
+  "Correa-Boisjoly fish collection Version 2025-11-27"
 FishDB_CC.ready$basisOfRecord <- 
   "Ocurrence"
 ```
 
 La Tabla \ref{tab:CCMB_sample} muestra una muestra aleatoria de 10 registros.  
 
-```{r CCMB_sample, eval=T, include=F, fig.cap="Muestra aleatoria de 10 registros de la tbla homologada."}
+```{r CCMB_sample, eval=T, include=T, fig.cap="Muestra aleatoria de 10 registros de la tbla homologada."}
+
 tmp <- FishDB_CC.ready[sample(nrow(FishDB_CC.ready), size = 10,replace = F),]
 
 tmp %>% 
@@ -607,14 +616,14 @@ column_spec(column = 10, width = "2em") #%>%
 
 ### Respaldo 
 ```{r}
-write.csv(FishDB_CC.ready, "./data_sources/Fish Database_CCorrea/Output_FishDatabase_Correa-Boisjoly.csv", fileEncoding = "UTF-8", row.names = F)
+write.csv(FishDB_CC.ready, "./data_sources/Correa_Boisjoly_Collection/Output_FishDatabase_Correa-Boisjoly.csv", fileEncoding = "UTF-8", row.names = F)
 
-saveRDS(FishDB_CC.ready, "./data_sources/Fish Database_CCorrea/Output_FishDatabase_Correa-Boisjoly.rds")
+saveRDS(FishDB_CC.ready, "./data_sources/Correa_Boisjoly_Collection/Output_FishDatabase_Correa-Boisjoly.rds")
 
 ```
 
 ```{r, eval=FALSE, include=FALSE}
-FishDB_CC.ready <- readRDS("./data_sources/Fish Database_CCorrea/Output_FishDatabase_Correa-Boisjoly.rds")
+FishDB_CC.ready <- readRDS("./data_sources/Correa_Boisjoly_Collection/Output_FishDatabase_Correa-Boisjoly.rds")
 ```
 
 
@@ -633,6 +642,11 @@ rm(list=ls()[!ls()%in% c("DwC",
                         )])
 ```
 
+
+```{r, eval=T, include=T}
+knitr::knit_exit()
+
+```
 
 
 ## Revisión de literatura C. Correa    
@@ -1763,7 +1777,7 @@ Uno de los productos fue una base de datos georeferenciada con los resultados de
 ### Lectura de datos  
 
 ```{r}
-DIFA <- read.csv("./data_sources/Darwin Initiative Fish Atlas/Darwin Web Fish Database_associatedReferences.csv", header = T, sep = ",", fileEncoding = "UTF-8", skip = 1, stringsAsFactors = F)
+DIFA <- read.csv("./data_sources/Darwin_Initiative_Fish_Atlas/Darwin Web Fish Database_associatedReferences.csv", header = T, sep = ",", fileEncoding = "UTF-8", skip = 1, stringsAsFactors = F)
 
 ```
 
@@ -1924,15 +1938,15 @@ DIFA.filtered <- DIFA.filtered %>%
 ### Respaldo  
 
 ```{r}
-write.csv(DIFA.filtered, "./data_sources/Darwin Initiative Fish Atlas/Output_DarwinInitiativeFishAtlas_DwC.csv", fileEncoding = "UTF-8", row.names = F)
+write.csv(DIFA.filtered, "./data_sources/Darwin_Initiative_Fish_Atlas/Output_DarwinInitiativeFishAtlas_DwC.csv", fileEncoding = "UTF-8", row.names = F)
 
-saveRDS(DIFA.filtered, "./data_sources/Darwin Initiative Fish Atlas/Output_DarwinInitiativeFishAtlas_DwC.rds")
+saveRDS(DIFA.filtered, "./data_sources/Darwin_Initiative_Fish_Atlas/Output_DarwinInitiativeFishAtlas_DwC.rds")
 
 ```
 
 ```{r, eval=FALSE, include=FALSE}
 
-DIFA.filtered <- readRDS("./data_sources/Output_Darwin Initiative Fish Atlas/DarwinInitiativeFishAtlas_DwC.rds")
+DIFA.filtered <- readRDS("./data_sources/Output_Darwin_Initiative_Fish_Atlas/DarwinInitiativeFishAtlas_DwC.rds")
 
 ```
 
@@ -3301,7 +3315,7 @@ Para correr el código a partir de este capítulo, es necesario cargar cada uno 
 
 
 ```{r}
-FishDB_CC.ready <- read.csv("./data_sources/Fish Database_CCorrea/Output_FishDatabase_Correa-Boisjoly.csv", colClasses = "character", fileEncoding = "UTF-8")
+FishDB_CC.ready <- read.csv("./data_sources/Correa_Boisjoly_Collection/Output_FishDatabase_Correa-Boisjoly.csv", colClasses = "character", fileEncoding = "UTF-8")
 
 metaDB.CC.filtered <- read.csv("./data_sources/FishGIS_metaDatabase/Output_metaDB.CC.filtered.csv", colClasses = "character", fileEncoding = "UTF-8")
 
@@ -3313,7 +3327,7 @@ SUBPESCA <- read.csv("./data_sources/SUBPESCA/SubpescaDB1/Output_SUBPESCA_DwC.cs
 
 SUBPESCA2 <- read.csv("./data_sources/SUBPESCA/SubpescaDB2/Output_SUBPESCA2_DwC.csv", colClasses = "character", fileEncoding = "UTF-8")
 
-DIFA.filtered <- read.csv("./data_sources/Darwin Initiative Fish Atlas/Output_DarwinInitiativeFishAtlas_DwC.csv", colClasses = "character", fileEncoding = "UTF-8")
+DIFA.filtered <- read.csv("./data_sources/Darwin_Initiative_Fish_Atlas/Output_DarwinInitiativeFishAtlas_DwC.csv", colClasses = "character", fileEncoding = "UTF-8")
 
 iDigBio_AE <- read.csv("./data_sources/iDigBio/Output_iDigBio_2025-11-30.csv", colClasses = "character", fileEncoding = "UTF-8")
       iDigBio_AE$Identification <- as.character(iDigBio_AE$Identification)
