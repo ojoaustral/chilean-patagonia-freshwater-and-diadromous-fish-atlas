@@ -433,7 +433,7 @@ FishDB_CC_aggregated <-
   FishDB_CC %>% 
   group_by(`Locality`, `Lat_effort`, `Lon_effort`, `Year`,`YYYY.MM.DD`, `Species`) %>%
   summarise(
-     Fish_Id = first(`Fish_Id`),
+     Fish_Id = paste0("Correa.Boisjoly.collection.",first(`Fish_Id`)),
      n = sum(`N.Individuals`), 
      Technique = paste(unique(`Technique`), collapse = ", "),
      `Site.name` = paste(unique(`Site.name`), collapse = ", "),
@@ -589,9 +589,9 @@ FishDB_CC.ready$basisOfRecord <-
   "Ocurrence"
 ```
 
-La Tabla \ref{tab:CCMB_sample} muestra una muestra aleatoria de 10 registros.  
+<!-- La Tabla \ref{tab:CCMB_sample} muestra una muestra aleatoria de 10 registros.   -->
 
-```{r CCMB_sample, eval=T, include=T, fig.cap="Muestra aleatoria de 10 registros de la tbla homologada."}
+```{r CCMB_sample, eval=F, include=F, fig.cap="Muestra aleatoria de 10 registros de la tbla homologada."}
 
 tmp <- FishDB_CC.ready[sample(nrow(FishDB_CC.ready), size = 10,replace = F),]
 
@@ -643,17 +643,11 @@ rm(list=ls()[!ls()%in% c("DwC",
 ```
 
 
-```{r, eval=T, include=T}
-knitr::knit_exit()
-
-```
-
-
 ## Revisión de literatura C. Correa    
 
-*Nombre del conjunto de datos*: FishGIS_metaDatabase_CC
+*Nombre del conjunto de datos*: CCorrea.Lit.Review   
 *Referencia*: Correa, Cristian, B. Dyer, G. Gajardo, C. Garcia De Leaniz, C. Meier, H. Samaniego (2009) Rumbo a un sistema nacional de información geográfica de peces dulceacuícolas de Chile. Poster presentado en VI Congreso Sociedad Chilena de Limnología. Octubre 2009, Coyhaique. [@Correa2009]  
-*Archivo*: `FishGIS_metaDatabase.export2023.csv`  
+*Archivos*: `occurrences.csv`, `references.csv`, `site_coords_WGS84.csv`, `site_names.csv`   
 
 Entre el período 2003-2009, uno de los autores de este reporte (CC) recabó, cual ratón de biblioteca, toda la literatura a su alcance sobre peces dulceacuícolas de Chile. Las bibliotecas consultadas incluyeron las principales Bibliotecas nacionales en Santiago, y algunas en Canadá, además de numerosos recursos online, préstamos interbibliotecarios, etc. A partir de este cuerpo de literatura, se  obtuvieron datos de ocurrencias georeferenciadas que se incluyeron en este trabajo.
 
@@ -661,35 +655,87 @@ Nota: Esta revisión no pretende ser exhaustiva, y se presenta  como fuente adic
 
 
 ### Lectura de datos
+
+La base de datos original se encuentra organizada en una base de datos relacional en MS Access (toda la información no geográfica) y en QGIS (geoposisionamiento). Para este trabajo, se exportaron las tablas relevantes en un formato simple (*.csv), las cuales son importadas y procesadas a continuación para la producción de una sola tabla de ocurrencias con toda la información. 
+
+Tabla de nombres de sitios  
 ```{r}
-# Data points
-metaDB.CC <- read.csv("./data_sources/FishGIS_metaDatabase/FishGIS_metaDatabase.export2023.csv", 
-  fileEncoding = "UTF-8", colClasses = "character", stringsAsFactors = FALSE)
+site_names <- read.csv("./data_sources/FishGIS_metaDatabase/CorreaFishOccurrenceReview/site_names.csv", fileEncoding = "UTF-8", colClasses = "character", stringsAsFactors = FALSE)
+# site_names %>% count(Site_ID) %>% filter(n > 1) # Good, unique
 
-metaDB.CC <- metaDB.CC %>% 
-  mutate(decimalLongitude = as.numeric(decimalLongitude),
-         decimalLatitude=as.numeric(decimalLatitude))
-
-colnames(metaDB.CC) <- gsub(pattern = "ODBC.FishGIS_metaDatabase.AllFish_", "", colnames(metaDB.CC))
+site_names <- site_names %>% select(Site_ID, Site_Name, Site_Precision, Notes, Years, Dates, Number_of_Dates, Samp_method, 
+Number_of_fish, Fishing_gear, OLD_Primary_key, OLD_SITE_ID, 
+OLD_ID, Review) %>% mutate(Site_ID = trimws(Site_ID))
 ```
 
-Lectura de la lista de referencias bibliográficas  
-
+Tabla de coordenadas geográficas (los puntos se digitalizaron previamente en un SIG)  
 ```{r}
-refs <- readxl::read_xlsx("./data_sources/FishGIS_metaDatabase/FishGIS_metaDatabase_References.xlsx", col_types = "text")
+# Site coordinates table.  
+site_coords_WGS84 <- read.csv("./data_sources/FishGIS_metaDatabase/CorreaFishOccurrenceReview/site_coords_WGS84.csv", fileEncoding = "UTF-8", colClasses = "character", stringsAsFactors = FALSE)
+site_coords_WGS84 <- site_coords_WGS84 %>% 
+  distinct() %>% # Make table unique
+  relocate(Site_ID)
+  # site_coords_WGS84 %>% count(Site_ID) %>% filter(n > 1) # Good, unique
 
-# Join datapoints and references
-refs$bibliographicCitation <- with(refs,paste0(Author," (", Year,") ",Title,". ", `Journal or Editorial`," ", `Vol  Pag`, ". ", "Type of document: ", `Type of document`, " Notes: ", Notes))
+site_coords_WGS84 <- site_coords_WGS84 %>% 
+  mutate(decimalLongitude = round(as.numeric(decimalLongitude),5),
+         decimalLatitude=round(as.numeric(decimalLatitude),5),
+         Site_ID = trimws(Site_ID))
+```
 
-refs <- refs %>% select(Ref_ID, bibliographicCitation)
+Tabla de ocurrencias  
+```{r}
+occurrences <- read.csv("./data_sources/FishGIS_metaDatabase/CorreaFishOccurrenceReview/occurrences.csv", fileEncoding = "UTF-8", colClasses = "character", stringsAsFactors = FALSE)
+# occurrences %>% count(Species_ID) %>% filter(n > 1) # Good, unique
 
-metaDB.CC <- left_join(x=metaDB.CC, y=refs, by = "Ref_ID")
+occurrences <- occurrences %>% mutate(
+    Species_ID = trimws(Species_ID),
+    Site_ID = trimws(Site_ID),
+    Ref_ID = trimws(Ref_ID))
+
+# Se removieron filas que no aportaban registros de especies.  
+occurrences <- occurrences %>% filter(Species != "?")
 
 ```
+
+
+Tabla de referencias bibliográficas  
+```{r}
+references <- read.csv("./data_sources/FishGIS_metaDatabase/CorreaFishOccurrenceReview/references.csv", fileEncoding = "UTF-8", colClasses = "character", stringsAsFactors = FALSE)
+# references %>% count(Ref_ID) %>% filter(n > 1) # Good, unique
+
+references$bibliographicCitation <- with(references, paste0(Author," (", Year,") ",Title,". ", Journal.or.Editorial," ", Vol..Pag, "."))
+
+references <- references %>% select(Ref_ID, bibliographicCitation) %>% 
+  mutate(
+    bibliographicCitation = bibliographicCitation %>%
+      str_trim() %>%
+      str_replace_all("(\\s*\\.\\s*)+$", "") %>%
+      ifelse(. == "" | is.na(.), ., str_c(., ".")),
+    Ref_ID = trimws(Ref_ID)
+  )
+```
+
+Combinar tablas. A continuación se pobló la tabla de ocurrencias con información geográfica, datos de sitios de muestreo y referencias bibliográfica.     
+
+```{r}
+metaDB.CC <- occurrences %>%
+  left_join(site_names, by = c("Site_ID" = "Site_ID")) %>%
+   left_join(site_coords_WGS84, by = c("Site_ID" = "Site_ID")) %>%
+   left_join(references, by = c("Ref_ID" = "Ref_ID"))
+```
+
 
 La tabla de datos presentó `r nrow(metaDB.CC)` filas u ocurrencias y `r ncol(metaDB.CC)` columnas o variables.
 
 ### Filtrado área de estudio  
+
+Antes de filtrar el área de estudio se excluyeron 166 filas sin coordenadas geográficas. Si bien la las coordenadas de muchas de estas filas se encuentran en el campo `Notas`, se comprobó que las 11 referencias afectadas ya fueron indexadas por otros conjuntos de datos. 
+
+```{r}
+metaDB.CC <- metaDB.CC %>% filter(!is.na(decimalLongitude))
+
+```
 
 Se extrajeron los datos dentro del área de estudio:  
 ```{r, include=F}
@@ -729,25 +775,41 @@ map + geom_point(data = metaDB.CC[!withinAE,], aes(x = decimalLongitude, y = dec
 
 Luego de filtrar por el área de estudio, el conjunto de datos se redujo a `r nrow(metaDB.CC.filtered)` ocurrencias, registradas en `r n_distinct(metaDB.CC.filtered$Site_ID)` sitios, y obtenido de `r n_distinct(metaDB.CC.filtered$Ref_ID)` referencias.  
 
-Se eliminaron muestreos que no revelaron ocurrencias  
-```{r}
-metaDB.CC.filtered <- metaDB.CC.filtered[metaDB.CC.filtered$Species != "",]
-```
-
-
 
 ### Homologación al DwC
 
 Primero se acuñó la variable año del registro `year` basada en el primer año mencionado en `Years`, variable que ocasionalmente incluyó 2 o más años calendario.
 
 ```{r}
+# Enter approximate date for this reference including record from Lago Yulton and few others (Soto et al. 2006)
+metaDB.CC.filtered$Years[metaDB.CC.filtered$Years == "Not specified (between 1990 and 2005)"] <- 1997 
+
+# Extract first year  
 metaDB.CC.filtered$year <- as.numeric(  
 gsub("(^\\d{4}).*", "\\1", metaDB.CC.filtered$Years)) 
 
+```
 
-metaDB.CC.filtered$year[176] <- 1997 # Approximate date for this record from Lago Yulton (Soto et al. 2006)
+Además se acuñó la variable `eventDate` que tolera  varios formatos de fechas incluyendo intervalos de tiempo, según el DwC. 
 
+```{r}
 
+metaDB.CC.filtered <- metaDB.CC.filtered %>%
+  mutate(
+    eventDate = sapply(Years, function(x) {
+      if (is.na(x) || str_trim(x) == "") return(NA_character_)
+      
+      yrs <- str_extract_all(x, "\\d{4}")[[1]]
+      yrs <- sort(unique(as.integer(yrs)))
+      
+      if (length(yrs) == 0) {
+        NA_character_
+      } else if (length(yrs) == 1) {
+        as.character(yrs[1])
+      } else {
+        paste0(min(yrs), "/", max(yrs) + 1)
+      }
+    }))
 ```
 
 Luego se guardó información que no calza bien con el DwC en una nueva variable `eventRemarks`. Esta incluye una idea de la precisión de la geolocación. (No se usaron variables tales como `coordinateUncertaintyInMeters` o `coordinatePrecision` porque el formato narrativo no concuerda con las definiciones del DwC.) 
@@ -756,26 +818,36 @@ Luego se guardó información que no calza bien con el DwC en una nueva variable
 
 metaDB.CC.filtered$eventRemarks <- with(metaDB.CC.filtered,
       ifelse(Site_Precision!="", 
-         paste(`Years`, `Notes`, "Geolocation:", Site_Precision),
-         paste(`Years`, `Notes`)))
+         paste(`Years`, `Notes.x`, "Geolocation:", Site_Precision),
+         paste(`Years`, `Notes.x`)))
 
 ```
 
 Se seleccionaron las columnas con información relevante y se homologaron con el DwC sustituyendo sus nombres.
 ```{r}
 metaDB.CC.filtered <- metaDB.CC.filtered %>%
-    select(`decimalLongitude`, `decimalLatitude`, `Site_Name`, `Species`, `year`, `bibliographicCitation`,`eventRemarks`)
+    select(Species_ID ,decimalLongitude, decimalLatitude, Site_Name, Species, year, eventDate, bibliographicCitation, eventRemarks)
 
 colnames(metaDB.CC.filtered) <- recode(colnames(metaDB.CC.filtered), 
+      `Species_ID` = "occurrenceID",
       `decimalLongitude` = "decimalLongitude", 
       `decimalLatitude` = "decimalLatitude", 
       `Site_Name` = "locality",
       `Species` = "scientificName",
       `year` = "year",
+      `eventDate` = "eventDate",
       `bibliographicCitation` = "bibliographicCitation", 
       `eventRemarks` = "eventRemarks")
 
 ```
+
+Se añadió un prefijo a `occurrenceID` para identificar el conjunto de datos.
+
+```{r}
+metaDB.CC.filtered <- metaDB.CC.filtered %>% mutate(occurrenceID = paste0("CCorrea.Lit.Review.", occurrenceID)) 
+
+```
+
 
 Además se añadieron algunos atributos del DwC que son constantes para todo el conjunto de datos.
 
@@ -783,7 +855,7 @@ Además se añadieron algunos atributos del DwC que son constantes para todo el 
 metaDB.CC.filtered$license <-
   "CC BY-NC 4.0"
 metaDB.CC.filtered$datasetName <- 
-  "FishGIS_metaDatabase_CCorrea"
+  "Literature review dataset of Chilean freshwater and diadromous fish occurrences, compiled by C. Correa (v2009)"
 metaDB.CC.filtered$basisOfRecord <- 
   "Ocurrence"
 ```
@@ -793,17 +865,17 @@ metaDB.CC.filtered$basisOfRecord <-
 Se identificaron un número de errores (de geolocalización, de nombres de localidades, etc.) y se corrigieron.  
 
 ```{r, eval=T}
-# Change coordinates to -48.250000, -73.591667, moving point closer to the fiord in another basin. 
+# Locality "Laguna Ventisquero (estero Ventisquero)", change coordinates to -48.250000, -73.591667, moving point closer to the fiord in another basin.
 
 fix <- metaDB.CC.filtered %>% 
   transmute(fix = (decimalLatitude == -47.47356 & decimalLongitude == -73.29885)) %>% pull()
 
 metaDB.CC.filtered <- metaDB.CC.filtered %>% 
-  mutate(decimalLongitude = ifelse(fix,-73.591667, decimalLongitude), 
-         decimalLatitude = ifelse(fix,-48.250000, decimalLatitude))
-rm(fix)
+  mutate(decimalLongitude = ifelse(fix,-73.59167, decimalLongitude), 
+         decimalLatitude = ifelse(fix,-48.25000, decimalLatitude))
 
 # Change Locality from Lago Risopatrón to Río Simpson, after reviewing the actual paper
+
 fix <- metaDB.CC.filtered %>% 
   transmute(fix = (decimalLatitude == -45.43213 & decimalLongitude == -72.41295)) %>% pull()
 
@@ -817,8 +889,8 @@ fix <- metaDB.CC.filtered %>%
                    decimalLongitude == -72.01994)) %>% pull()
 
 metaDB.CC.filtered <- metaDB.CC.filtered %>% 
-  mutate(decimalLongitude = ifelse(fix,-72.734212, decimalLongitude),
-         decimalLatitude = ifelse(fix,-51.562583, decimalLatitude))
+  mutate(decimalLongitude = ifelse(fix,-72.73421, decimalLongitude),
+         decimalLatitude = ifelse(fix,-51.56258, decimalLatitude))
 rm(fix)
 
 
@@ -827,15 +899,15 @@ rm(fix)
 
 ### Respaldo 
 ```{r}
-write.csv(metaDB.CC.filtered, "./data_sources/FishGIS_metaDatabase/Output_metaDB.CC.filtered.csv", fileEncoding = "UTF-8", row.names = F)
+write.csv(metaDB.CC.filtered, "./data_sources/FishGIS_metaDatabase/Output_CCorreaLitReview.csv", fileEncoding = "UTF-8", row.names = F)
 
-saveRDS(metaDB.CC.filtered, "./data_sources/FishGIS_metaDatabase/Output_metaDB.CC.filtered.rds")
+saveRDS(metaDB.CC.filtered, "./data_sources/FishGIS_metaDatabase/Output_CCorreaLitReview.rds")
 
 ```
  
 ```{r, eval=FALSE, include=FALSE}
 
-metaDB.CC.filtered <- readRDS("./data_sources/FishGIS_metaDatabase/Output_metaDB.CC.filtered.rds")
+metaDB.CC.filtered <- readRDS("./data_sources/FishGIS_metaDatabase/Output_CCorreaLitReview.rds")
 
 ```
  
@@ -853,6 +925,12 @@ rm(list=ls()[!ls()%in%c("DwC",
                         "sp_poly",
                         "FishDB_CC.ready",
                         "metaDB.CC.filtered")])
+```
+
+
+```{r, eval=T, include=T}
+knitr::knit_exit()
+
 ```
 
 ## Revisión de literatura M. Aguilar

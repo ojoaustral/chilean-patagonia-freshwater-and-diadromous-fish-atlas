@@ -738,10 +738,11 @@ Función para agregar los datos:
 \NormalTok{FishDB\_CC\_aggregated }\OtherTok{\textless{}{-}}\NormalTok{ FishDB\_CC }\SpecialCharTok{\%\textgreater{}\%}
     \FunctionTok{group\_by}\NormalTok{(Locality, Lat\_effort, Lon\_effort, Year, YYYY.MM.DD,}
 \NormalTok{        Species) }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{summarise}\NormalTok{(}\AttributeTok{Fish\_Id =} \FunctionTok{first}\NormalTok{(Fish\_Id), }\AttributeTok{n =} \FunctionTok{sum}\NormalTok{(N.Individuals),}
-        \AttributeTok{Technique =} \FunctionTok{paste}\NormalTok{(}\FunctionTok{unique}\NormalTok{(Technique), }\AttributeTok{collapse =} \StringTok{", "}\NormalTok{),}
-        \AttributeTok{Site.name =} \FunctionTok{paste}\NormalTok{(}\FunctionTok{unique}\NormalTok{(Site.name), }\AttributeTok{collapse =} \StringTok{", "}\NormalTok{),}
-        \AttributeTok{Crew =} \FunctionTok{paste}\NormalTok{(}\FunctionTok{unique}\NormalTok{(Crew), }\AttributeTok{collapse =} \StringTok{", "}\NormalTok{), }\AttributeTok{bibliographicCitation =}\NormalTok{ \{}
+    \FunctionTok{summarise}\NormalTok{(}\AttributeTok{Fish\_Id =} \FunctionTok{paste0}\NormalTok{(}\StringTok{"Correa.Boisjoly.collection."}\NormalTok{,}
+        \FunctionTok{first}\NormalTok{(Fish\_Id)), }\AttributeTok{n =} \FunctionTok{sum}\NormalTok{(N.Individuals), }\AttributeTok{Technique =} \FunctionTok{paste}\NormalTok{(}\FunctionTok{unique}\NormalTok{(Technique),}
+        \AttributeTok{collapse =} \StringTok{", "}\NormalTok{), }\AttributeTok{Site.name =} \FunctionTok{paste}\NormalTok{(}\FunctionTok{unique}\NormalTok{(Site.name),}
+        \AttributeTok{collapse =} \StringTok{", "}\NormalTok{), }\AttributeTok{Crew =} \FunctionTok{paste}\NormalTok{(}\FunctionTok{unique}\NormalTok{(Crew), }\AttributeTok{collapse =} \StringTok{", "}\NormalTok{),}
+        \AttributeTok{bibliographicCitation =}\NormalTok{ \{}
 \NormalTok{            vals }\OtherTok{\textless{}{-}} \FunctionTok{as.character}\NormalTok{(bibliographicCitation)}
 \NormalTok{            vals }\OtherTok{\textless{}{-}} \FunctionTok{trimws}\NormalTok{(vals)}
 \NormalTok{            vals }\OtherTok{\textless{}{-}}\NormalTok{ vals[}\SpecialCharTok{!}\FunctionTok{is.na}\NormalTok{(vals)]}
@@ -894,60 +895,6 @@ todo el conjunto de datos.
 \end{Highlighting}
 \end{Shaded}
 
-La Tabla \ref{tab:CCMB_sample} muestra una muestra aleatoria de 10
-registros.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{tmp }\OtherTok{\textless{}{-}}\NormalTok{ FishDB\_CC.ready[}\FunctionTok{sample}\NormalTok{(}\FunctionTok{nrow}\NormalTok{(FishDB\_CC.ready), }\AttributeTok{size =} \DecValTok{10}\NormalTok{,}
-    \AttributeTok{replace =}\NormalTok{ F), ]}
-
-\NormalTok{tmp }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{kable}\NormalTok{(}\AttributeTok{longtable =}\NormalTok{ F, }\AttributeTok{landscape =} \ConstantTok{TRUE}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{kable\_styling}\NormalTok{(}\AttributeTok{bootstrap\_options =} \FunctionTok{c}\NormalTok{(}\StringTok{"striped"}\NormalTok{, }\StringTok{"hover"}\NormalTok{, }\StringTok{"condensed"}\NormalTok{),}
-        \AttributeTok{full\_width =}\NormalTok{ F, }\AttributeTok{latex\_options =} \FunctionTok{c}\NormalTok{(}\StringTok{"hold\_position"}\NormalTok{), }\AttributeTok{font\_size =} \DecValTok{5}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{column\_spec}\NormalTok{(}\AttributeTok{column =} \DecValTok{1}\NormalTok{, }\AttributeTok{width =} \StringTok{"4em"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{column\_spec}\NormalTok{(}\AttributeTok{column =} \DecValTok{2}\NormalTok{, }\AttributeTok{width =} \StringTok{"4em"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{column\_spec}\NormalTok{(}\AttributeTok{column =} \DecValTok{3}\NormalTok{, }\AttributeTok{width =} \StringTok{"5em"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{column\_spec}\NormalTok{(}\AttributeTok{column =} \DecValTok{4}\NormalTok{, }\AttributeTok{width =} \StringTok{"5em"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{column\_spec}\NormalTok{(}\AttributeTok{column =} \DecValTok{5}\NormalTok{, }\AttributeTok{width =} \StringTok{"3em"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{column\_spec}\NormalTok{(}\AttributeTok{column =} \DecValTok{6}\NormalTok{, }\AttributeTok{width =} \StringTok{"5em"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{column\_spec}\NormalTok{(}\AttributeTok{column =} \DecValTok{7}\NormalTok{, }\AttributeTok{width =} \StringTok{"5em"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{column\_spec}\NormalTok{(}\AttributeTok{column =} \DecValTok{8}\NormalTok{, }\AttributeTok{width =} \StringTok{"2em"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{column\_spec}\NormalTok{(}\AttributeTok{column =} \DecValTok{9}\NormalTok{, }\AttributeTok{width =} \StringTok{"4em"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{column\_spec}\NormalTok{(}\AttributeTok{column =} \DecValTok{10}\NormalTok{, }\AttributeTok{width =} \StringTok{"2em"}\NormalTok{)  }\CommentTok{\#\%\textgreater{}\% }
-\end{Highlighting}
-\end{Shaded}
-
-\begingroup\fontsize{5}{7}\selectfont
-
-\begin{longtable}[t]{>{\raggedright\arraybackslash}p{4em}>{\raggedleft\arraybackslash}p{4em}>{\raggedleft\arraybackslash}p{5em}>{\raggedleft\arraybackslash}p{5em}>{\raggedright\arraybackslash}p{3em}>{\raggedright\arraybackslash}p{5em}>{\raggedleft\arraybackslash}p{5em}>{\raggedleft\arraybackslash}p{2em}>{\raggedright\arraybackslash}p{4em}>{\raggedright\arraybackslash}p{2em}llllllll}
-\toprule
-locality & decimalLatitude & decimalLongitude & year & eventDate & scientificName & occurrenceID & individualCount & samplingProtocol & locationRemarks & recordedBy & bibliographicCitation & associatedReferences & license & rightsHolder & accessRights & datasetName & basisOfRecord\\
-\midrule
-Lago Huelde, Río Cipresales & -42.58837 & -74.09985 & 2014 & 2014-02-25 & Salmo trutta & 4453 & 5 & Gill Net Experimental & Huelde & Cristian Correa, Maryse Boisjoly & Correa, Cristian, and Maryse Boisjoly. 2025. Chilean fish collection and empirical database (Version 2025-11-27) [Unpublished dataset]. &  & CC BY-NC 4.0 & Cristian Correa, orcid.org/0000-0002-8608-6858 & not-for-profit use only & Correa-Boisjoly fish collection Version 2025-11-27 & Ocurrence\\
-Lago Castor & -45.60028 & -71.78156 & 2007 & 2007-02-08 & Oncorhynchus mykiss & 19 & 3 & Bottom gillnet S, Bottom gillnet L & Castor & Cristian Correa & Correa, C., Bravo, A.P., and Hendry, A.P. 2012. Reciprocal trophic niche shifts in native and invasive fish: salmonids and galaxiids in Patagonian lakes. Freshwater Biology 57(9): 1769–1781. & (Correa et al. 2012) \&\#124; (Correa and Hendry 2012) & CC BY-NC 4.0 & Cristian Correa, orcid.org/0000-0002-8608-6858 & not-for-profit use only & Correa-Boisjoly fish collection Version 2025-11-27 & Ocurrence\\
-Lago Leon & -45.61615 & -71.84049 & 2009 & 2009-01-30 & Galaxias platei & 2166 & 3 & Bottom gillnet S & Leon & Cristian Correa & Correa, C., and Hendry, A.P. 2012. Invasive salmonids and lake order interact in the decline of puye grande Galaxias platei in western Patagonia lakes. Ecological Applications 22(3): 828–842. doi:10.1890/11-1174.1. & (Correa and Hendry 2012) & CC BY-NC 4.0 & Cristian Correa, orcid.org/0000-0002-8608-6858 & not-for-profit use only & Correa-Boisjoly fish collection Version 2025-11-27 & Ocurrence\\
-Lago Toro & -45.52982 & -71.85324 & 2009 & 2009-10-30 & Galaxias platei & 3495 & 13 & Electric fishing & Toro & Cristian Correa & Correa, C., Bravo, A.P., and Hendry, A.P. 2012. Reciprocal trophic niche shifts in native and invasive fish: salmonids and galaxiids in Patagonian lakes. Freshwater Biology 57(9): 1769–1781. & (Correa et al. 2012) & CC BY-NC 4.0 & Cristian Correa, orcid.org/0000-0002-8608-6858 & not-for-profit use only & Correa-Boisjoly fish collection Version 2025-11-27 & Ocurrence\\
-Río Simpson & -45.72747 & -72.08078 & 2007 & 2007-01-25 & Oncorhynchus tshawytscha & 1830 & 7 & Electric fishing & Simpson River & Cristian Correa & Correa, Cristian, and Maryse Boisjoly. 2025. Chilean fish collection and empirical database (Version 2025-11-27) [Unpublished dataset]. &  & CC BY-NC 4.0 & Cristian Correa, orcid.org/0000-0002-8608-6858 & not-for-profit use only & Correa-Boisjoly fish collection Version 2025-11-27 & Ocurrence\\
-\addlinespace
-Lago Aislado & -46.37539 & -73.24605 & 2014 & 2014-03-18 & Galaxias platei & 4545 & 2 & Hand Collected, Minnow Trap & Valle Exploradores & Cristian Correa, Maryse Boisjoly & Correa, Cristian, and Maryse Boisjoly. 2025. Chilean fish collection and empirical database (Version 2025-11-27) [Unpublished dataset]. &  & CC BY-NC 4.0 & Cristian Correa, orcid.org/0000-0002-8608-6858 & not-for-profit use only & Correa-Boisjoly fish collection Version 2025-11-27 & Ocurrence\\
-Chaiten & -42.92081 & -72.71487 & 2007 & 2007-01-22 & Eleginops maclovinus & 3653 & 1 & Dip net & Chaiten & Cristian Correa & Correa, Cristian, and Maryse Boisjoly. 2025. Chilean fish collection and empirical database (Version 2025-11-27) [Unpublished dataset]. &  & CC BY-NC 4.0 & Cristian Correa, orcid.org/0000-0002-8608-6858 & not-for-profit use only & Correa-Boisjoly fish collection Version 2025-11-27 & Ocurrence\\
-Estrecho de Magallanes & -53.68112 & -70.97443 & 2015 & 2015-02-20 & Galaxias maculatus & 6219 & 80 & Gill Net & Río Santa María & Fishermen & Correa, Cristian, and Maryse Boisjoly. 2025. Chilean fish collection and empirical database (Version 2025-11-27) [Unpublished dataset]. &  & CC BY-NC 4.0 & Cristian Correa, orcid.org/0000-0002-8608-6858 & not-for-profit use only & Correa-Boisjoly fish collection Version 2025-11-27 & Ocurrence\\
-Río Caleta & -53.20692 & -71.61602 & 2015 & 2015-02-25 & Oncorhynchus kisutch & 5613 & 1 & Electric fishing & Río Caleta & Maryse Boisjoly, Jonathan Poblete & Correa, Cristian, and Maryse Boisjoly. 2025. Chilean fish collection and empirical database (Version 2025-11-27) [Unpublished dataset]. &  & CC BY-NC 4.0 & Cristian Correa, orcid.org/0000-0002-8608-6858 & not-for-profit use only & Correa-Boisjoly fish collection Version 2025-11-27 & Ocurrence\\
-Río Ñireguao & -45.16493 & -72.10584 & 2014 & 2014-03-07 & Salmo trutta & 4515 & 1 & Gill Net Salmonera & Ñireguao River & Cristian Correa, Maryse Boisjoly & Correa, Cristian, and Maryse Boisjoly. 2025. Chilean fish collection and empirical database (Version 2025-11-27) [Unpublished dataset]. &  & CC BY-NC 4.0 & Cristian Correa, orcid.org/0000-0002-8608-6858 & not-for-profit use only & Correa-Boisjoly fish collection Version 2025-11-27 & Ocurrence\\
-\bottomrule
-\end{longtable}
-\endgroup{}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# column\_spec(column = 11, width = \textquotesingle{}6em\textquotesingle{}) \%\textgreater{}\%}
-\CommentTok{\# column\_spec(column = 12, width = \textquotesingle{}3em\textquotesingle{}) \%\textgreater{}\%}
-\CommentTok{\# column\_spec(column = 13, width = \textquotesingle{}4em\textquotesingle{})}
-\end{Highlighting}
-\end{Shaded}
-
 \subsubsection{Respaldo}\label{respaldo}
 
 \begin{Shaded}
@@ -956,6 +903,316 @@ Río Ñireguao & -45.16493 & -72.10584 & 2014 & 2014-03-07 & Salmo trutta & 4515
     \AttributeTok{fileEncoding =} \StringTok{"UTF{-}8"}\NormalTok{, }\AttributeTok{row.names =}\NormalTok{ F)}
 
 \FunctionTok{saveRDS}\NormalTok{(FishDB\_CC.ready, }\StringTok{"./data\_sources/Correa\_Boisjoly\_Collection/Output\_FishDatabase\_Correa{-}Boisjoly.rds"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Revisión de literatura C.
+Correa}\label{revisiuxf3n-de-literatura-c.-correa}
+
+\emph{Nombre del conjunto de datos}: FishGIS\_metaDatabase\_CC\\
+\emph{Referencia}: Correa, Cristian, B. Dyer, G. Gajardo, C. Garcia De
+Leaniz, C. Meier, H. Samaniego (2009) Rumbo a un sistema nacional de
+información geográfica de peces dulceacuícolas de Chile. Poster
+presentado en VI Congreso Sociedad Chilena de Limnología. Octubre 2009,
+Coyhaique. \citep{Correa2009}\\
+\emph{Archivos}: \texttt{occurrences.csv}, \texttt{references.csv},
+\texttt{site\_coords\_WGS84.csv}, \texttt{site\_names.csv}
+
+Entre el período 2003-2009, uno de los autores de este reporte (CC)
+recabó, cual ratón de biblioteca, toda la literatura a su alcance sobre
+peces dulceacuícolas de Chile. Las bibliotecas consultadas incluyeron
+las principales Bibliotecas nacionales en Santiago, y algunas en Canadá,
+además de numerosos recursos online, préstamos interbibliotecarios, etc.
+A partir de este cuerpo de literatura, se obtuvieron datos de
+ocurrencias georeferenciadas que se incluyeron en este trabajo.
+
+Nota: Esta revisión no pretende ser exhaustiva, y se presenta como
+fuente adicional de información potencialmente omitida por otras
+fuentes.
+
+\subsubsection{Lectura de datos}\label{lectura-de-datos-1}
+
+La base de datos original se encuentra organizada en una base de datos
+relacional en MS Access (toda la información no geográfica) y en QGIS
+(geoposisionamiento). Para este trabajo, se exportaron las tablas
+relevantes en un formato simple (*.csv), las cuales son importadas y
+procesadas a continuación para la producción de una sola tabla de
+ocurrencias con toda la información.
+
+Tabla de nombres de sitios
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{site\_names }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"./data\_sources/FishGIS\_metaDatabase/CorreaFishOccurrenceReview/site\_names.csv"}\NormalTok{,}
+    \AttributeTok{fileEncoding =} \StringTok{"UTF{-}8"}\NormalTok{, }\AttributeTok{colClasses =} \StringTok{"character"}\NormalTok{, }\AttributeTok{stringsAsFactors =} \ConstantTok{FALSE}\NormalTok{)}
+\CommentTok{\# site\_names \%\textgreater{}\% count(Site\_ID) \%\textgreater{}\% filter(n \textgreater{} 1) \# Good,}
+\CommentTok{\# unique}
+
+\NormalTok{site\_names }\OtherTok{\textless{}{-}}\NormalTok{ site\_names }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{select}\NormalTok{(Site\_ID, Site\_Name, Site\_Precision, Notes, Years,}
+\NormalTok{        Dates, Number\_of\_Dates, Samp\_method, Number\_of\_fish,}
+\NormalTok{        Fishing\_gear, OLD\_Primary\_key, OLD\_SITE\_ID, OLD\_ID, Review) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{Site\_ID =} \FunctionTok{trimws}\NormalTok{(Site\_ID))}
+\end{Highlighting}
+\end{Shaded}
+
+Tabla de coordenadas geográficas (los puntos se digitalizaron
+previamente en un SIG)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Site coordinates table.  }
+\NormalTok{site\_coords\_WGS84 }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"./data\_sources/FishGIS\_metaDatabase/CorreaFishOccurrenceReview/site\_coords\_WGS84.csv"}\NormalTok{, }\AttributeTok{fileEncoding =} \StringTok{"UTF{-}8"}\NormalTok{, }\AttributeTok{colClasses =} \StringTok{"character"}\NormalTok{, }\AttributeTok{stringsAsFactors =} \ConstantTok{FALSE}\NormalTok{)}
+\NormalTok{site\_coords\_WGS84 }\OtherTok{\textless{}{-}}\NormalTok{ site\_coords\_WGS84 }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{distinct}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# Make table unique}
+  \FunctionTok{relocate}\NormalTok{(Site\_ID)}
+  \CommentTok{\# site\_coords\_WGS84 \%\textgreater{}\% count(Site\_ID) \%\textgreater{}\% filter(n \textgreater{} 1) \# Good, unique}
+
+\NormalTok{site\_coords\_WGS84 }\OtherTok{\textless{}{-}}\NormalTok{ site\_coords\_WGS84 }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{decimalLongitude =} \FunctionTok{round}\NormalTok{(}\FunctionTok{as.numeric}\NormalTok{(decimalLongitude),}\DecValTok{5}\NormalTok{),}
+         \AttributeTok{decimalLatitude=}\FunctionTok{round}\NormalTok{(}\FunctionTok{as.numeric}\NormalTok{(decimalLatitude),}\DecValTok{5}\NormalTok{),}
+         \AttributeTok{Site\_ID =} \FunctionTok{trimws}\NormalTok{(Site\_ID))}
+\end{Highlighting}
+\end{Shaded}
+
+Tabla de ocurrencias
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{occurrences }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"./data\_sources/FishGIS\_metaDatabase/CorreaFishOccurrenceReview/occurrences.csv"}\NormalTok{,}
+    \AttributeTok{fileEncoding =} \StringTok{"UTF{-}8"}\NormalTok{, }\AttributeTok{colClasses =} \StringTok{"character"}\NormalTok{, }\AttributeTok{stringsAsFactors =} \ConstantTok{FALSE}\NormalTok{)}
+\CommentTok{\# occurrences \%\textgreater{}\% count(Species\_ID) \%\textgreater{}\% filter(n \textgreater{} 1) \#}
+\CommentTok{\# Good, unique}
+
+\NormalTok{occurrences }\OtherTok{\textless{}{-}}\NormalTok{ occurrences }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{Species\_ID =} \FunctionTok{trimws}\NormalTok{(Species\_ID), }\AttributeTok{Site\_ID =} \FunctionTok{trimws}\NormalTok{(Site\_ID),}
+        \AttributeTok{Ref\_ID =} \FunctionTok{trimws}\NormalTok{(Ref\_ID))}
+
+\CommentTok{\# Se removieron filas que no aportaban registros de}
+\CommentTok{\# especies.}
+\NormalTok{occurrences }\OtherTok{\textless{}{-}}\NormalTok{ occurrences }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{filter}\NormalTok{(Species }\SpecialCharTok{!=} \StringTok{"?"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Tabla de referencias bibliográficas
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{references }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"./data\_sources/FishGIS\_metaDatabase/CorreaFishOccurrenceReview/references.csv"}\NormalTok{,}
+    \AttributeTok{fileEncoding =} \StringTok{"UTF{-}8"}\NormalTok{, }\AttributeTok{colClasses =} \StringTok{"character"}\NormalTok{, }\AttributeTok{stringsAsFactors =} \ConstantTok{FALSE}\NormalTok{)}
+\CommentTok{\# references \%\textgreater{}\% count(Ref\_ID) \%\textgreater{}\% filter(n \textgreater{} 1) \# Good,}
+\CommentTok{\# unique}
+
+\NormalTok{references}\SpecialCharTok{$}\NormalTok{bibliographicCitation }\OtherTok{\textless{}{-}} \FunctionTok{with}\NormalTok{(references, }\FunctionTok{paste0}\NormalTok{(Author,}
+    \StringTok{" ("}\NormalTok{, Year, }\StringTok{") "}\NormalTok{, Title, }\StringTok{". "}\NormalTok{, Journal.or.Editorial, }\StringTok{" "}\NormalTok{,}
+\NormalTok{    Vol..Pag, }\StringTok{"."}\NormalTok{))}
+
+\NormalTok{references }\OtherTok{\textless{}{-}}\NormalTok{ references }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{select}\NormalTok{(Ref\_ID, bibliographicCitation) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{bibliographicCitation =}\NormalTok{ bibliographicCitation }\SpecialCharTok{\%\textgreater{}\%}
+        \FunctionTok{str\_trim}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
+        \FunctionTok{str\_replace\_all}\NormalTok{(}\StringTok{"(}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{s*}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{.}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{s*)+$"}\NormalTok{, }\StringTok{""}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+        \FunctionTok{ifelse}\NormalTok{(. }\SpecialCharTok{==} \StringTok{""} \SpecialCharTok{|} \FunctionTok{is.na}\NormalTok{(.), ., }\FunctionTok{str\_c}\NormalTok{(., }\StringTok{"."}\NormalTok{)), }\AttributeTok{Ref\_ID =} \FunctionTok{trimws}\NormalTok{(Ref\_ID))}
+\end{Highlighting}
+\end{Shaded}
+
+Combinar tablas. A continuación se pobló la tabla de ocurrencias con
+información geográfica, datos de sitios de muestreo y referencias
+bibliográfica.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{metaDB.CC }\OtherTok{\textless{}{-}}\NormalTok{ occurrences }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{left\_join}\NormalTok{(site\_names, }\AttributeTok{by =} \FunctionTok{c}\NormalTok{(}\AttributeTok{Site\_ID =} \StringTok{"Site\_ID"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{left\_join}\NormalTok{(site\_coords\_WGS84, }\AttributeTok{by =} \FunctionTok{c}\NormalTok{(}\AttributeTok{Site\_ID =} \StringTok{"Site\_ID"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{left\_join}\NormalTok{(references, }\AttributeTok{by =} \FunctionTok{c}\NormalTok{(}\AttributeTok{Ref\_ID =} \StringTok{"Ref\_ID"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+La tabla de datos presentó 2020 filas u ocurrencias y 47 columnas o
+variables.
+
+\subsubsection{Filtrado área de
+estudio}\label{filtrado-uxe1rea-de-estudio-1}
+
+Antes de filtrar el área de estudio se excluyeron 166 filas sin
+coordenadas geográficas. Si bien la las coordenadas de muchas de estas
+filas se encuentran en el campo \texttt{Notas}, se comprobó que las 11
+referencias afectadas ya fueron indexadas por otros conjuntos de datos.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{metaDB.CC }\OtherTok{\textless{}{-}}\NormalTok{ metaDB.CC }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{filter}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{is.na}\NormalTok{(decimalLongitude))}
+\end{Highlighting}
+\end{Shaded}
+
+Se extrajeron los datos dentro del área de estudio:
+
+La Figura \ref{fig:CCrevdata} muestra los datos filtrados espacialmente.
+
+\begin{figure}
+
+{\centering \includegraphics{Atlas_Ictiogeografico_files/figure-latex/CCrevdata-1} 
+
+}
+
+\caption{Distribución de ocurrencias de peces de revisión de literatura (Correa et al. 2009). Los puntos rojos fueron excluidos por estar fuera del área de estudio indicada por el polígono.}\label{fig:CCrevdata}
+\end{figure}
+
+Luego de filtrar por el área de estudio, el conjunto de datos se redujo
+a 343 ocurrencias, registradas en 167 sitios, y obtenido de 30
+referencias.
+
+\subsubsection{Homologación al DwC}\label{homologaciuxf3n-al-dwc}
+
+Primero se acuñó la variable año del registro \texttt{year} basada en el
+primer año mencionado en \texttt{Years}, variable que ocasionalmente
+incluyó 2 o más años calendario.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Enter approximate date for this reference including}
+\CommentTok{\# record from Lago Yulton and few others (Soto et al. 2006)}
+\NormalTok{metaDB.CC.filtered}\SpecialCharTok{$}\NormalTok{Years[metaDB.CC.filtered}\SpecialCharTok{$}\NormalTok{Years }\SpecialCharTok{==} \StringTok{"Not specified (between 1990 and 2005)"}\NormalTok{] }\OtherTok{\textless{}{-}} \DecValTok{1997}
+
+\CommentTok{\# Extract first year}
+\NormalTok{metaDB.CC.filtered}\SpecialCharTok{$}\NormalTok{year }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"(\^{}}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{d\{4\}).*"}\NormalTok{, }\StringTok{"}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{1"}\NormalTok{,}
+\NormalTok{    metaDB.CC.filtered}\SpecialCharTok{$}\NormalTok{Years))}
+\end{Highlighting}
+\end{Shaded}
+
+Además se acuñó la variable \texttt{eventDate} que tolera varios
+formatos de fechas incluyendo intervalos de tiempo, según el DwC.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{metaDB.CC.filtered }\OtherTok{\textless{}{-}}\NormalTok{ metaDB.CC.filtered }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{eventDate =} \FunctionTok{sapply}\NormalTok{(Years, }\ControlFlowTok{function}\NormalTok{(x) \{}
+        \ControlFlowTok{if}\NormalTok{ (}\FunctionTok{is.na}\NormalTok{(x) }\SpecialCharTok{||} \FunctionTok{str\_trim}\NormalTok{(x) }\SpecialCharTok{==} \StringTok{""}\NormalTok{)}
+            \FunctionTok{return}\NormalTok{(}\ConstantTok{NA\_character\_}\NormalTok{)}
+
+\NormalTok{        yrs }\OtherTok{\textless{}{-}} \FunctionTok{str\_extract\_all}\NormalTok{(x, }\StringTok{"}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{d\{4\}"}\NormalTok{)[[}\DecValTok{1}\NormalTok{]]}
+\NormalTok{        yrs }\OtherTok{\textless{}{-}} \FunctionTok{sort}\NormalTok{(}\FunctionTok{unique}\NormalTok{(}\FunctionTok{as.integer}\NormalTok{(yrs)))}
+
+        \ControlFlowTok{if}\NormalTok{ (}\FunctionTok{length}\NormalTok{(yrs) }\SpecialCharTok{==} \DecValTok{0}\NormalTok{) \{}
+            \ConstantTok{NA\_character\_}
+\NormalTok{        \} }\ControlFlowTok{else} \ControlFlowTok{if}\NormalTok{ (}\FunctionTok{length}\NormalTok{(yrs) }\SpecialCharTok{==} \DecValTok{1}\NormalTok{) \{}
+            \FunctionTok{as.character}\NormalTok{(yrs[}\DecValTok{1}\NormalTok{])}
+\NormalTok{        \} }\ControlFlowTok{else}\NormalTok{ \{}
+            \FunctionTok{paste0}\NormalTok{(}\FunctionTok{min}\NormalTok{(yrs), }\StringTok{"/"}\NormalTok{, }\FunctionTok{max}\NormalTok{(yrs) }\SpecialCharTok{+} \DecValTok{1}\NormalTok{)}
+\NormalTok{        \}}
+\NormalTok{    \}))}
+\end{Highlighting}
+\end{Shaded}
+
+Luego se guardó información que no calza bien con el DwC en una nueva
+variable \texttt{eventRemarks}. Esta incluye una idea de la precisión de
+la geolocación. (No se usaron variables tales como
+\texttt{coordinateUncertaintyInMeters} o \texttt{coordinatePrecision}
+porque el formato narrativo no concuerda con las definiciones del DwC.)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{metaDB.CC.filtered}\SpecialCharTok{$}\NormalTok{eventRemarks }\OtherTok{\textless{}{-}} \FunctionTok{with}\NormalTok{(metaDB.CC.filtered, }\FunctionTok{ifelse}\NormalTok{(Site\_Precision }\SpecialCharTok{!=}
+    \StringTok{""}\NormalTok{, }\FunctionTok{paste}\NormalTok{(Years, Notes.x, }\StringTok{"Geolocation:"}\NormalTok{, Site\_Precision),}
+    \FunctionTok{paste}\NormalTok{(Years, Notes.x)))}
+\end{Highlighting}
+\end{Shaded}
+
+Se seleccionaron las columnas con información relevante y se homologaron
+con el DwC sustituyendo sus nombres.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{metaDB.CC.filtered }\OtherTok{\textless{}{-}}\NormalTok{ metaDB.CC.filtered }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{select}\NormalTok{(Species\_ID, decimalLongitude, decimalLatitude, Site\_Name,}
+\NormalTok{        Species, year, eventDate, bibliographicCitation, eventRemarks)}
+
+\FunctionTok{colnames}\NormalTok{(metaDB.CC.filtered) }\OtherTok{\textless{}{-}} \FunctionTok{recode}\NormalTok{(}\FunctionTok{colnames}\NormalTok{(metaDB.CC.filtered),}
+    \AttributeTok{Species\_ID =} \StringTok{"occurrenceID"}\NormalTok{, }\AttributeTok{decimalLongitude =} \StringTok{"decimalLongitude"}\NormalTok{,}
+    \AttributeTok{decimalLatitude =} \StringTok{"decimalLatitude"}\NormalTok{, }\AttributeTok{Site\_Name =} \StringTok{"locality"}\NormalTok{,}
+    \AttributeTok{Species =} \StringTok{"scientificName"}\NormalTok{, }\AttributeTok{year =} \StringTok{"year"}\NormalTok{, }\AttributeTok{eventDate =} \StringTok{"eventDate"}\NormalTok{,}
+    \AttributeTok{bibliographicCitation =} \StringTok{"bibliographicCitation"}\NormalTok{, }\AttributeTok{eventRemarks =} \StringTok{"eventRemarks"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Se añadió un prefijo a \texttt{occurrenceID} para identificar el
+conjunto de datos.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{metaDB.CC.filtered }\OtherTok{\textless{}{-}}\NormalTok{ metaDB.CC.filtered }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{occurrenceID =} \FunctionTok{paste0}\NormalTok{(}\StringTok{"CCorrea.Lit.Review."}\NormalTok{, occurrenceID))}
+\end{Highlighting}
+\end{Shaded}
+
+Además se añadieron algunos atributos del DwC que son constantes para
+todo el conjunto de datos.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{metaDB.CC.filtered}\SpecialCharTok{$}\NormalTok{license }\OtherTok{\textless{}{-}} \StringTok{"CC BY{-}NC 4.0"}
+\NormalTok{metaDB.CC.filtered}\SpecialCharTok{$}\NormalTok{datasetName }\OtherTok{\textless{}{-}} \StringTok{"Literature review dataset of Chilean freshwater and diadromous fish occurrences, compiled by C. Correa (v2009)"}
+\NormalTok{metaDB.CC.filtered}\SpecialCharTok{$}\NormalTok{basisOfRecord }\OtherTok{\textless{}{-}} \StringTok{"Ocurrence"}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Corrección de errores}\label{correcciuxf3n-de-errores}
+
+Se identificaron un número de errores (de geolocalización, de nombres de
+localidades, etc.) y se corrigieron.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Locality \textquotesingle{}Laguna Ventisquero (estero Ventisquero)\textquotesingle{},}
+\CommentTok{\# change coordinates to {-}48.250000, {-}73.591667, moving}
+\CommentTok{\# point closer to the fiord in another basin.}
+
+\NormalTok{fix }\OtherTok{\textless{}{-}}\NormalTok{ metaDB.CC.filtered }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{transmute}\NormalTok{(}\AttributeTok{fix =}\NormalTok{ (decimalLatitude }\SpecialCharTok{==} \SpecialCharTok{{-}}\FloatTok{47.47356} \SpecialCharTok{\&}\NormalTok{ decimalLongitude }\SpecialCharTok{==}
+        \SpecialCharTok{{-}}\FloatTok{73.29885}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{pull}\NormalTok{()}
+
+\NormalTok{metaDB.CC.filtered }\OtherTok{\textless{}{-}}\NormalTok{ metaDB.CC.filtered }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{decimalLongitude =} \FunctionTok{ifelse}\NormalTok{(fix, }\SpecialCharTok{{-}}\FloatTok{73.59167}\NormalTok{, decimalLongitude),}
+        \AttributeTok{decimalLatitude =} \FunctionTok{ifelse}\NormalTok{(fix, }\SpecialCharTok{{-}}\FloatTok{48.25}\NormalTok{, decimalLatitude))}
+
+\CommentTok{\# Change Locality from Lago Risopatrón to Río Simpson,}
+\CommentTok{\# after reviewing the actual paper}
+
+\NormalTok{fix }\OtherTok{\textless{}{-}}\NormalTok{ metaDB.CC.filtered }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{transmute}\NormalTok{(}\AttributeTok{fix =}\NormalTok{ (decimalLatitude }\SpecialCharTok{==} \SpecialCharTok{{-}}\FloatTok{45.43213} \SpecialCharTok{\&}\NormalTok{ decimalLongitude }\SpecialCharTok{==}
+        \SpecialCharTok{{-}}\FloatTok{72.41295}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{pull}\NormalTok{()}
+
+\NormalTok{metaDB.CC.filtered }\OtherTok{\textless{}{-}}\NormalTok{ metaDB.CC.filtered }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{locality =} \FunctionTok{ifelse}\NormalTok{(fix, }\StringTok{"Río Simpson"}\NormalTok{, locality))}
+\FunctionTok{rm}\NormalTok{(fix)}
+
+\CommentTok{\# Change coordinates to the site where the historical Río}
+\CommentTok{\# Pratt Hatchery was located.}
+\NormalTok{fix }\OtherTok{\textless{}{-}}\NormalTok{ metaDB.CC.filtered }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{transmute}\NormalTok{(}\AttributeTok{fix =}\NormalTok{ (decimalLatitude }\SpecialCharTok{==} \SpecialCharTok{{-}}\FloatTok{52.68588} \SpecialCharTok{\&}\NormalTok{ decimalLongitude }\SpecialCharTok{==}
+        \SpecialCharTok{{-}}\FloatTok{72.01994}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{pull}\NormalTok{()}
+
+\NormalTok{metaDB.CC.filtered }\OtherTok{\textless{}{-}}\NormalTok{ metaDB.CC.filtered }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{decimalLongitude =} \FunctionTok{ifelse}\NormalTok{(fix, }\SpecialCharTok{{-}}\FloatTok{72.73421}\NormalTok{, decimalLongitude),}
+        \AttributeTok{decimalLatitude =} \FunctionTok{ifelse}\NormalTok{(fix, }\SpecialCharTok{{-}}\FloatTok{51.56258}\NormalTok{, decimalLatitude))}
+\FunctionTok{rm}\NormalTok{(fix)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Respaldo}\label{respaldo-1}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{write.csv}\NormalTok{(metaDB.CC.filtered, }\StringTok{"./data\_sources/FishGIS\_metaDatabase/Output\_CCorreaLitReview.csv"}\NormalTok{,}
+    \AttributeTok{fileEncoding =} \StringTok{"UTF{-}8"}\NormalTok{, }\AttributeTok{row.names =}\NormalTok{ F)}
+
+\FunctionTok{saveRDS}\NormalTok{(metaDB.CC.filtered, }\StringTok{"./data\_sources/FishGIS\_metaDatabase/Output\_CCorreaLitReview.rds"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.10)  9 APR 2026 14:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.10)  10 APR 2026 16:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -844,7 +844,7 @@ LaTeX Font Warning: Font shape `OML/cmtt/m/it' undefined
 (Font)              using `OML/cmm/m/it' instead
 (Font)              for symbol `textgreater' on input line 583.
 
-<Atlas_Ictiogeografico_files/figure-latex/studyareaplot-1.pdf, id=158, 174.6525pt x 316.18124pt>
+<Atlas_Ictiogeografico_files/figure-latex/studyareaplot-1.pdf, id=188, 174.6525pt x 316.18124pt>
 File: Atlas_Ictiogeografico_files/figure-latex/studyareaplot-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/studyareaplot-1.pdf>
 Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/studyareaplot-1.pdf  used on input line 600.
@@ -861,22 +861,22 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has
                                                   \__shipout_drop_firstpage_...
 l.690 \end{Shaded}
                    <./Atlas_Ictiogeografico_files/figure-latex/studyareaplot-1.pdf>]
-LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 744.
+LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 745.
 (c:/Program Files (x86)/R/R-4.4.1/share/texmf/tex/latex/omscmtt.fd
 File: omscmtt.fd 
 )
 LaTeX Font Info:    Font shape `OMS/cmtt/m/n' in size <10.03749> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 744.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 745.
 LaTeX Font Info:    Font shape `OMS/cmtt/bx/n' in size <10.03749> not available
-(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 759.
+(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 760.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [10]
-<Atlas_Ictiogeografico_files/figure-latex/CCdataplot-1.pdf, id=187, 174.6525pt x 316.18124pt>
+<Atlas_Ictiogeografico_files/figure-latex/CCdataplot-1.pdf, id=217, 174.6525pt x 316.18124pt>
 File: Atlas_Ictiogeografico_files/figure-latex/CCdataplot-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/CCdataplot-1.pdf>
-Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/CCdataplot-1.pdf  used on input line 790.
+Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/CCdataplot-1.pdf  used on input line 791.
 (pdftex.def)             Requested size: 174.65207pt x 316.18047pt.
 ignored error: Infinite glue shrinkage found in box being split
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -885,166 +885,42 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.828 \end{longtable}
+l.829 \end{longtable}
                       <./Atlas_Ictiogeografico_files/figure-latex/CCdataplot-1.pdf>]
-
-LaTeX Warning: Reference `tab:CCMB_sample' on page 12 undefined on input line 897.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [12]
-Overfull \hbox (21.09752pt too wide) in paragraph at lines 926--926
- []|\OT1/cmr/m/n/5 decimalLatitude|
- []
-
-
-Overfull \hbox (18.7364pt too wide) in paragraph at lines 926--926
- []|\OT1/cmr/m/n/5 decimalLongitude|
- []
-
-
-Overfull \hbox (9.5695pt too wide) in paragraph at lines 926--926
-[]|\OT1/cmr/m/n/5 eventDate| 
- []
-
-
-Overfull \hbox (9.24315pt too wide) in paragraph at lines 926--926
-[]|\OT1/cmr/m/n/5 scientificName| 
- []
-
-
-Overfull \hbox (5.23613pt too wide) in paragraph at lines 926--926
- []|\OT1/cmr/m/n/5 occurrenceID|
- []
-
-
-Overfull \hbox (34.65329pt too wide) in paragraph at lines 926--926
- []|\OT1/cmr/m/n/5 individualCount|
- []
-
-
-Overfull \hbox (24.70871pt too wide) in paragraph at lines 926--926
-[]|\OT1/cmr/m/n/5 samplingProtocol| 
- []
-
-
-Overfull \hbox (36.13246pt too wide) in paragraph at lines 926--926
-[]|\OT1/cmr/m/n/5 locationRemarks| 
- []
-
-
-Overfull \hbox (3.05557pt too wide) in paragraph at lines 928--928
-\OT1/cmr/m/n/5 Cipresales| 
- []
-
-
-Overfull \hbox (6.91678pt too wide) in paragraph at lines 928--928
-[]|\OT1/cmr/m/n/5 Huelde| 
- []
-
-
-Overfull \hbox (7.88203pt too wide) in paragraph at lines 929--929
-[]|\OT1/cmr/m/n/5 Oncorhynchus 
- []
-
-
-Overfull \hbox (6.1459pt too wide) in paragraph at lines 929--929
-[]|\OT1/cmr/m/n/5 Castor| 
- []
-
-
-Overfull \hbox (0.75002pt too wide) in paragraph at lines 930--930
-[]|\OT1/cmr/m/n/5 Leon| 
- []
-
-
-Overfull \hbox (7.88203pt too wide) in paragraph at lines 932--932
-[]|\OT1/cmr/m/n/5 Oncorhynchus 
- []
-
-
-Overfull \hbox (2.25693pt too wide) in paragraph at lines 932--932
-\OT1/cmr/m/n/5 tshawytscha| 
- []
-
-
-Overfull \hbox (11.28493pt too wide) in paragraph at lines 932--932
-[]|\OT1/cmr/m/n/5 Simpson 
- []
-
-
-Overfull \hbox (2.41667pt too wide) in paragraph at lines 932--932
-\OT1/cmr/m/n/5 River| 
- []
-
-
-Overfull \hbox (1.25696pt too wide) in paragraph at lines 934--934
-[]|\OT1/cmr/m/n/5 Valle 
- []
-
-
-Overfull \hbox (5.99315pt too wide) in paragraph at lines 934--934
-\OT1/cmr/m/n/5 Explo- 
- []
-
-
-Overfull \hbox (8.15982pt too wide) in paragraph at lines 934--934
-\OT1/cmr/m/n/5 radores| 
- []
-
-
-Overfull \hbox (9.86125pt too wide) in paragraph at lines 935--935
-[]|\OT1/cmr/m/n/5 Chaiten| 
- []
-
-
-Overfull \hbox (3.22922pt too wide) in paragraph at lines 936--936
-\OT1/cmr/m/n/5 Santa 
- []
-
-
-Overfull \hbox (3.86118pt too wide) in paragraph at lines 936--936
-\OT1/cmr/m/n/5 Mar^^S^^Pa| 
- []
-
-
-Overfull \hbox (7.88203pt too wide) in paragraph at lines 937--937
-[]|\OT1/cmr/m/n/5 Oncorhynchus 
- []
-
-
-Overfull \hbox (5.76396pt too wide) in paragraph at lines 937--937
-\OT1/cmr/m/n/5 Caleta| 
- []
-
-
-Overfull \hbox (3.75009pt too wide) in paragraph at lines 938--938
-\OT1/cmr/m/n/5 Salmonera| 
- []
-
-
-Overfull \hbox (13.02798pt too wide) in paragraph at lines 938--938
-[]|[]\OT1/cmr/m/n/5 Nireguao 
- []
-
-
-Overfull \hbox (2.41667pt too wide) in paragraph at lines 938--938
-\OT1/cmr/m/n/5 River| 
- []
-
-
-Overfull \hbox (1376.23775pt too wide) in alignment at lines 924--940
- [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
- []
-
-(./Atlas_Ictiogeografico.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[13])
+[13]
+<Atlas_Ictiogeografico_files/figure-latex/CCrevdata-1.pdf, id=254, 174.6525pt x 316.18124pt>
+File: Atlas_Ictiogeografico_files/figure-latex/CCrevdata-1.pdf Graphic file (type pdf)
+<use Atlas_Ictiogeografico_files/figure-latex/CCrevdata-1.pdf>
+Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/CCrevdata-1.pdf  used on input line 1057.
+(pdftex.def)             Requested size: 174.65207pt x 316.18047pt.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[14] (./Atlas_Ictiogeografico.aux)
+[14]
+Underfull \hbox (badness 2318) in paragraph at lines 1110--1115
+\OT1/cmr/m/n/10 Esta incluye una idea de la pre-cisi^^Son de la geolo-caci^^Son. (No se usaron vari-ables tales como
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[15
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1127 \begin{Shaded}
+                      <./Atlas_Ictiogeografico_files/figure-latex/CCrevdata-1.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[16] (./Atlas_Ictiogeografico.bbl)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[17] (./Atlas_Ictiogeografico.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-14>
@@ -1056,25 +932,22 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `Atlas_Ictiogeografico.out' has not changed.
-(rerunfilecheck)             Checksum: C25BA4C6392E9C368A559C29D627220E;2159.
+(rerunfilecheck)             Checksum: 0B422E8AB5905726A199F2DCDCA25127;3202.
  ) 
 Here is how much of TeX's memory you used:
- 17609 strings out of 469519
- 278933 string characters out of 5468255
- 753438 words of memory out of 5000000
- 45903 multiletter control sequences out of 15000+600000
+ 17644 strings out of 469519
+ 280005 string characters out of 5468255
+ 746202 words of memory out of 5000000
+ 45928 multiletter control sequences out of 15000+600000
  643354 words of font info for 104 fonts, out of 8000000 for 9000
  24 hyphenation exceptions out of 8191
- 90i,8n,93p,634b,629s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <c:/Users/crist/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> <c:/Users/crist/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcit1000.600pk> <c:/Users/crist/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tctt1000.600pk> <c:/Users/crist/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0900.600pk><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Atlas_Ictiogeografico.pdf (14 pages, 924537 bytes).
+ 90i,8n,93p,558b,626s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <c:/Users/crist/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> <c:/Users/crist/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcit1000.600pk> <c:/Users/crist/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tctt1000.600pk> <c:/Users/crist/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0900.600pk><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Atlas_Ictiogeografico.pdf (17 pages, 1087830 bytes).
 PDF statistics:
- 333 PDF objects out of 1000 (max. 8388607)
- 265 compressed objects within 3 object streams
- 48 named destinations out of 1000 (max. 500000)
- 107 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 392 PDF objects out of 1000 (max. 8388607)
+ 318 compressed objects within 4 object streams
+ 58 named destinations out of 1000 (max. 500000)
+ 160 words of extra memory for PDF output out of 10000 (max. 10000000)
 
