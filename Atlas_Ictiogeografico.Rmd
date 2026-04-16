@@ -343,8 +343,6 @@ rm(list=ls()[!ls()%in% c("DwC",
 
 Se incluyeron 12 conjuntos de datos en el análisis para generar el *Atlas Ictiogeográfico de la Patagonia*. Cada uno fue examinado, corregido en casos de errores, complementado con variables aplicables al nivel del conjunto de datos, y re-formateado para conformar al estándar DwC. Las siguientes secciones documentan el manejo que recibió cada conjunto de datos. Luego, en el capítulo *Consolidación del Atlas Ictiogeográfico*, se combinan todos los conjuntos de datos para conformar una gran tabla maestra que entre otras mejoras, se procesó para identificar ocurrencias duplicadas. 
 
-Durante la preparación de este documento algunos de los conjuntos de datos que habían sido incorporados fueron  ingresados por las agencias de origen al Global Biodiversity Information Facility (GBIF). Por ejemplo, este es el caso de *Base de datos del MMA*. Aquí  preservamos los capítulos originales que describen estos conjuntos de datos para entender mejor su origen y trazabilidad, pero ahora los datos se importan directamente desde GBIF. [**HERE**, check if we actually did this at the end.]
-
 
 ## Datos empíricos de los autores  
 
@@ -645,7 +643,7 @@ rm(list=ls()[!ls()%in% c("DwC",
 
 ## Revisión de literatura C. Correa    
 
-*Nombre del conjunto de datos*: CCorrea.Lit.Review   
+*Nombre corto del conjunto de datos*: CCorrea.Lit.Review   
 *Referencia*: Correa, Cristian, B. Dyer, G. Gajardo, C. Garcia De Leaniz, C. Meier, H. Samaniego (2009) Rumbo a un sistema nacional de información geográfica de peces dulceacuícolas de Chile. Poster presentado en VI Congreso Sociedad Chilena de Limnología. Octubre 2009, Coyhaique. [@Correa2009]  
 *Archivos*: `occurrences.csv`, `references.csv`, `site_coords_WGS84.csv`, `site_names.csv`   
 
@@ -928,14 +926,9 @@ rm(list=ls()[!ls()%in%c("DwC",
 ```
 
 
-```{r, eval=T, include=T}
-knitr::knit_exit()
-
-```
-
 ## Revisión de literatura M. Aguilar
 
-*Nombre del conjunto de datos*:  
+*Nombre corto del conjunto de datos*:  MAguilar.Lit.Review   
 *Referencia*: Aguilar-González, Marilyn (2023) Recopilación bibliográfica de ocurrencia de peces en la Patagonia del proyecto Priorización de Cuencas para la Conservación en Patagonia. Programa Austral Patagonia (ProAP) de The Pew Charitable Trusts. Coyhaique. [@Aguilar2023]  
 *Archivo*: `BD referencias (2022-2023).xlsx`  
 
@@ -969,9 +962,16 @@ RevAguilar <- RevAguilar %>%
 
 ### Homologación al DwC  
 
-Este conjunto de datos fue estandarizado al formato DwC casi desde un principio, por lo que casi no se requirieron cambios. Sin embargo, fue necesario estandarizar atributos relativos a fechas. En particular, en los casos donde se reportaron rangos de años, se usó el año inicial en el campo `year` (código abajo) y se mantuvo el rango original en `eventDate` (formato estandar DwC) y `verbatimEventDate` (inalterado).  
+Este conjunto de datos fue estandarizado al formato DwC casi desde un principio, por lo que casi no se requirieron cambios. Sin embargo, fue necesario estandarizar poblar `occurrenceID` con un identificador único y estandarizar atributos relativos a fechas. En particular, en los casos donde se reportaron rangos de años, se usó el año inicial en el campo `year` (código abajo) y se mantuvo el rango original en `eventDate` (formato estandar DwC) y `verbatimEventDate` (inalterado).  
 
-Estandarización de fechas 
+Para `OccurrenceID` se concadenó un prefijo para identificar el conjunto de datos y un número único que este tenía indexado en `catalogNumber`  
+```{r}
+RevAguilar <- RevAguilar %>% mutate(occurrenceID = paste0("MAguilar.Lit.Review.",catalogNumber)) %>% relocate(occurrenceID)
+
+```
+
+
+Estandarización de fechas  
 ```{r, warning=FALSE}
 library(dplyr)
 library(stringr)
@@ -1009,7 +1009,7 @@ RevAguilar$eventDate <- sub("-NA$", "", RevAguilar$eventDate)
 RevAguilar <- RevAguilar %>% mutate(year = str_extract(eventDate, "\\d{4}") %>% as.integer())
 
 # Check results
- # RevAguilar %>% select(year, month, day, eventDate) %>%  distinct()
+  # RevAguilar %>% select(year, month, day, eventDate) %>%  distinct()
  
 ```
 
@@ -1054,17 +1054,17 @@ map +
 Además se añadieron algunos atributos del DwC que son constantes para todo el conjunto de datos.
 
 ```{r}
-RevAguilar$license <- "CC BY-NC 4.0"
-RevAguilar$datasetName <- "Aguilar-González 2023"
-
+RevAguilar.filtered$license <- "CC BY-NC 4.0"
+RevAguilar.filtered$datasetName <- "Aguilar-González, Marilyn (2023) Recopilación bibliográfica de ocurrencia de peces en la Patagonia del proyecto Priorización de Cuencas para la Conservación en Patagonia. Programa Austral Patagonia (ProAP) de The Pew Charitable Trusts. Coyhaique."
 ```
+
 
 
 ### Respaldo 
 ```{r, eval=F}
-write.csv(RevAguilar, "./data_sources/MAguilar_review/Output_MAguilar_review2023.csv", fileEncoding = "UTF-8", row.names = F)
+write.csv(RevAguilar.filtered, "./data_sources/MAguilar_review/Output_MAguilar_review2023.csv", fileEncoding = "UTF-8", row.names = F)
 
-saveRDS(RevAguilar, "./data_sources/MAguilar_review/Output_MAguilar_review2023.rds")
+saveRDS(RevAguilar.filtered, "./data_sources/MAguilar_review/Output_MAguilar_review2023.rds")
 
 ```
 
@@ -1094,9 +1094,9 @@ rm(list=ls()[!ls()%in%c("DwC",
 
 ```
 
-## Base de datos MMA  
+## Base de datos Ministerio del Medio Ambiente de Chile  
 
-*Nombre del conjunto de datos*: MMA (versión original)  
+*Nombre corto del conjunto de datos*: MMA (versión original)  
 *Nombre del conjunto de datos*: GBIF_MMA (versión publicada en GBIF el 2023/12/13)  
 *Referencia*: Habit, E., Contreras, L., Dyer, B.S., Correa, C., Naretto, J., Contreras, V., Amaya, L., and Villagran. 2023. Fauna Íctica Nativa Continental de Chile. Ministerio del Medio Ambiente de Chile, Occurrence dataset https://doi.org/10.15468/cxb957 accessed via GBIF.org on 2025-10-17. [@Habit2023]  
 *Archivo*: `BD_original_observaciones.xls`  
@@ -1106,7 +1106,7 @@ El Ministerio del Medio Ambiente (MMA) hace años atrás (2015-2017) impulsó un
 
 En la producción del libro y la base de datos estaba colaborando Gloria Arratia (KU), E. Habit (Centro EULA), I. Vila (Laboratorio de Limnología de la Universidad de Chile), M. Contreras (Centro de Ecología Aplicada), Cristián Correa (UACh), Bryan Dyer (UV), Claudio Quezada (UCh) y otros. Lamentablemente este esfuerzo nunca se concretó, a pesar de haberse alcanzado al menos un 70% de avance. 
 
-Sin embargo, se publicó la base de datos en GBIF el 13 de diciembre del 2023. El conjunto de datos publicado de llama: Fauna Íctica Nativa Continental de Chile. Al publicar la base de datos a la plataforma GBIF, algunos campos importantes para la trazabilidad de los registros, tales como "Localidad" o "bibliographicCitation" no fueron indexados de manera óptima. Por esta razón, en esta instancia, se aprovechó de la oportunidad para completar los registros con la información correspondiente, disponible en la base de datos original del MMA.  
+Sin embargo, se publicó la base de datos en GBIF el 13 de diciembre del 2023. El conjunto de datos publicado de llama: *Fauna Íctica Nativa Continental de Chile*. Al publicar la base de datos a la plataforma GBIF, algunos campos importantes para la trazabilidad de los registros, tales como `locality` o `bibliographicCitation` no fueron indexados de manera óptima. Por esta razón, en esta instancia, se aprovechó de la oportunidad para completar los registros con la información correspondiente disponible en la base de datos original del MMA.  
 
 
 ### Lectura de datos  
@@ -1144,15 +1144,13 @@ cat("Does the two tables have the sanme number of rows?", nrow(MMA) == nrow(GBIF
 # sort(names(MMA))
 
 # # Compare column names
-# setdiff(names(MMA), names(GBIF_MMA))  # Columns in MMA but not in GBIF_MMA
-# setdiff(names(GBIF_MMA), names(MMA))  # Columns in GBIF_MMA but not in MMA
+# sort(setdiff(names(MMA), names(GBIF_MMA)))  # Columns in MMA but not in GBIF_MMA
+# sort(setdiff(names(GBIF_MMA), names(MMA))) # Columns in GBIF_MMA but not in MMA
 # intersect(names(GBIF_MMA), names(MMA))  # Common columns
 
 ```
 
-Mismo número de registros confirma que se trata de la misma base de datos, aunque solo un nombre de columna (entre decenas) coincide entre las dos bases de datos. Esta diferencia debería reducirse substancialmente una vez que los datos de MMA sean homologados al DwC más abajo. Comenzamos trabajando con la base de datos original filtrada para el área de estudio, para homologarla al formato DwC y luego añadirle identificadores provenientes de la versión de GBIF.  
-
-
+Mismo número de registros y varias pruebas adicionales confirma que se trata de la misma base de datos, aunque solo un nombre de columna (entre decenas) coincide entre las dos bases de datos. Esta diferencia se reduce una vez que los datos de MMA son homologados al DwC más abajo. Comenzamos trabajando con la base de datos original filtrada para el área de estudio, para homologarla al formato DwC y luego añadirle identificadores provenientes de la versión de GBIF.  
 ### Filtrado área de estudio  
 
 Se extrajeron los datos dentro del área de estudio.  
@@ -1167,6 +1165,8 @@ withinAE <- !is.na(sp::over(pts, sp_poly, returnList = F))
 MMA_AE <- MMA[withinAE,]
 
 ```
+
+
 
 La Figura \ref{fig:MMAplot} muestra un mapa con los datos filtrados espacialmente.   
 
@@ -1253,80 +1253,125 @@ MMA_AE$OrigFunteReg <- gsub("FuenteReg: NA,", "", MMA_AE$OrigFunteReg)
 MMA_AE$OrigFunteReg <- gsub("FuenteReg: NA", "", MMA_AE$OrigFunteReg)
 MMA_AE$OrigFunteReg <- gsub("Estudio: NA", "", MMA_AE$OrigFunteReg)
 MMA_AE$OrigFunteReg <- trimws(MMA_AE$OrigFunteReg)
+
 ```
 
-En la Tabla \ref{tab:MMArefs} se presentan las distintas referencias encontradas previo al curado manual y estandarización.  
+
+Con la combinación de `OrigenReg`, `FuenteReg` y `Estudio` bajo `OrigFunteReg` se generó una lista con valores únicos que fue exportada a una planilla de cálculo. Cada cadena de texto resultante fue revisada manualmente para 1) estandarizar el formato de las referencias bibliográficas, y según la necesidad, 2) asignar la información correspondiente a dos campos del DwC: `biblographicCitation` y `associatedReferences`. Estas mejoras se encuentras en el archivo `./data_sources/GBIF_MMA/bibliographicCitation_fix.csv`, que a continuación se importa para actualizar los valores en MMA_AE.
+
+```{r}
+refFix <- read.csv("./data_sources/GBIF_MMA/bibliographicCitation_fix.csv", ) %>% 
+  select(-ID)
+
+MMA_AE <- MMA_AE %>% left_join(refFix, by = join_by(OrigFunteReg))
+
+```
+
+En la Tabla \ref{tab:MMArefs} se presentan las distintas referencias encontradas combinando campos previo al curado manual (`OrigFunteReg`) y estandarización DwC (`bibliographicCitation`, `associatedReferences`).  
 \newpage
 
 ```{r MMArefs, echo=F}
-MMA_AE %>% select(OrigFunteReg) %>% distinct() %>% arrange() %>% ungroup() %>%
+MMA_AE %>% select(OrigFunteReg, bibliographicCitation, associatedReferences) %>% distinct() %>% arrange() %>% ungroup() %>%
   mutate(id = row_number()) %>% relocate(id) %>% 
-  kable(caption = "Lista de referencias indexadas en el conjunto de datos del MMA. Se mantuvo el nombre del campo que contenía la información.", longtable=T) %>%
+  kable(caption = "Lista de referencias indexadas en el conjunto de datos del MMA (combinadas en OrigFunteReg) y su homologación para el DwC (bibliographicCitation, associatedReferences).", longtable=T) %>%
          kable_styling(bootstrap_options = c("striped", "hover", "condensed"),full_width = F, latex_options = c("hold_position"),font_size = 8) %>% 
 column_spec(column = 1, width = "4em") %>% 
-column_spec(column = 2, width = "50em") 
+column_spec(column = 2, width = "20em") %>% 
+column_spec(column = 2, width = "20em")
 ```
 
-**HERE** Standarize references using Maryse's table. to query nicely formated refs.
-
-
-También se combinaron campos `verbatimLocality`,	`DescrLoc`, y `SSCuenca_correg` para crear `locality` y `eventRemarks` del DwC. El campo `locality` se omitió por ser redundante e incompleto. 
+También se combinaron campos `verbatimLocality`,	`DescrLoc`, y `SSCuenca_correg` para crear `locality` y `eventRemarks` del DwC. El campo de MMA `locality` se omitió por ser redundante e incompleto.
 
 ```{r}
 # locality (recycling the exsisting locality column)
 tmp <- MMA_AE[,  c("verbatimLocality",	"DescrLoc", "SSCuenca_correg")]
 MMA_AE$locality <- apply(tmp, 1, function(x){paste0(unique(x), collapse = ". ")})
 MMA_AE$locality <- gsub(pattern = "NA. ", replacement = "", MMA_AE$locality)
-
-# eventRemarks (MandanteEstacion was renames to eventRemarks below)
-MMA_AE$MandanteEstacion <- paste("Mandante: ",MMA_AE$Mandante, "Estacion: ", MMA_AE$Estacion)
-MMA_AE$MandanteEstacion <- gsub("Mandante:  NA Estacion:  NA", "", MMA_AE$MandanteEstacion)
-MMA_AE$MandanteEstacion[MMA_AE$MandanteEstacion == ""] <- NA
+MMA_AE$locality <- paste0(MMA_AE$locality, ".")
 
 ```
 
+Se rescató información de los campos `Mandante` y `Estacion`  para incorporarla en `eventRemarks`. 
 
-Se seleccionaron las columnas con información relevante y se homologaron con el DwC sustituyendo sus nombres.
+```{r}
+# eventRemarks (MandanteEstacion was renamed to eventRemarks below)
+MMA_AE$eventRemarks <- paste0("Mandante: ",MMA_AE$Mandante, " | Estacion: ", MMA_AE$Estacion)
+MMA_AE$eventRemarks <- gsub("Mandante: NA | Estacion: NA", "", MMA_AE$eventRemarks)
+MMA_AE$eventRemarks[MMA_AE$eventRemarks == "|"] <- ""
+
+```
+
+La combinación de los dos campos `Instit` y `Institución aporta BBDD Proyecto Ictiofauna 2015` generó una lista de valores únicos que fue exportada a una planilla de cálculo. Cada cadena de texto resultante fue revisada manualmente para asignar la información correspondiente entre los campos del DwC `institutionID` y `eventRemarks`. Estas mejoras se encuentran en el archivo `./data_sources/GBIF_MMA/institutionID_fix.csv`, que a continuación se importa para actualizar los valores en MMA_AE.  
+
+```{r}
+refFix <- read.csv("./data_sources/GBIF_MMA/institutionID_fix.csv", )
+
+# Just a convenient function to concatenate cleanly below. 
+clean_pipes <- function(x) {
+  sapply(strsplit(x, "\\|"), function(parts) {
+    parts <- trimws(parts)
+    parts <- parts[parts != ""]
+    paste(parts, collapse = " | ")
+  }, USE.NAMES = FALSE)}
+
+MMA_AE <- MMA_AE %>% mutate(InstitInstitu = paste(Instit,`Institución aporta BBDD 
+Proyecto Ictiofauna 2015`)) %>% 
+  # select(InstitInstitu, eventRemarks) %>% 
+  left_join(select(refFix, InstitInstitu, institutionID, eventRemarks), by = join_by(InstitInstitu)) %>% 
+  mutate(eventRemarks = clean_pipes(paste(eventRemarks.y, eventRemarks.x, sep = " | "))) %>%
+  select(-eventRemarks.y, -eventRemarks.x) %>% distinct()
+```
+
+
+El `TipoReg` fue renombrado a `basisOfRecord` y salvo por los etiquetados "Voucher", todos los registros se indexaron como "Occurrence". Voucher fue renombrado a "PreservedSpecimen".
+
+```{r}
+MMA_AE <- MMA_AE %>% mutate(basisOfRecord = ifelse(
+  TipoReg == "Voucher","PreservedSpecimen","Occurrence"))
+```
+
+
+La variable `Precision` del MMA contenía el valor "GPS" en cientos de registros, indicando que las coordenadas geográficas provenían de lecturas de GPS. No obstante, las coordenadas, expresadas en grados decimales, presentaban solo tres decimales, lo que implica una resolución espacial aproximada del orden de 100 m. En consecuencia, para estandarizar esta información según DwC, los registros con `Precision = "GPS"` fueron homologados a `coordinateUncertaintyInMeters = 100`.
 
 
 ```{r}
+MMA_AE <- MMA_AE %>%
+  mutate(
+    coordinateUncertaintyInMeters = ifelse(Precision == "GPS", 100, NA_real_)
+  )
+```
 
-MMA_AE <- MMA_AE %>% select(fila,Long_correg_2, Lat_correg_2,
-                  locality, NomCient, fecha_Col,AnoCol,
-                  OrigFunteReg,MandanteEstacion,NumIndiv,TipoMetodo,
-                  Colector,Precision,TipoReg,`Institución aporta BBDD \nProyecto Ictiofauna 2015`)
+Se seleccionaron las columnas con información relevante y se homologaron con el DwC sustituyendo sus nombres en los casos pendientes.
 
-# HERE: Note columna Instit, Estudio, is currently not being included. 
+```{r}
 
-colnames(MMA_AE) <- recode(colnames(MMA_AE), 
-      `Long_correg_2`    = "decimalLongitude", 
-      `Lat_correg_2`     = "decimalLatitude", 
-      `locality`         = "locality", 
-      `NomCient`         = "scientificName",
-      `fecha_Col`        = "eventDate",
-      `AnoCol`           = "year",
-      `OrigFunteReg`     = "bibliographicCitation", 
-      `MandanteEstacion` = "eventRemarks", 
-      `NumIndiv`         = "individualCount",
-      `TipoMetodo`       = "samplingProtocol",
-      `Colector`         = "recordedBy",
-      `Precision`        = "coordinateUncertaintyInMeters",
-      `TipoReg`          = "basisOfRecord",
-      `Institución aporta BBDD \nProyecto Ictiofauna 2015` = "institutionID",
-      `fila`             = "occurrenceID")
-
+MMA_AE <- MMA_AE %>% mutate( 
+         occurrenceID          = fila,      
+         eventDate             = fecha_Col, # processed above
+         year                  = AnoCol,    # processed above
+         locality              = locality,  # processed above
+         decimalLongitude      = Long_correg_2,
+         decimalLatitude       = Lat_correg_2,
+         scientificName        = NomCient,
+         bibliographicCitation = bibliographicCitation, # processed above
+         associatedReferences  = associatedReferences,  # processed above
+         eventRemarks          = eventRemarks,          # processed above
+         individualCount       = NumIndiv,
+         samplingProtocol      = TipoMetodo,
+         recordedBy            = Colector,
+         coordinateUncertaintyInMeters = coordinateUncertaintyInMeters, # above
+         basisOfRecord         = basisOfRecord, # processed above
+         institutionID         = institutionID,         # processed above
+                .keep = "none" )
 
 ```
 
-<!-- [**HERE** the original database and the published DB, are inconsistent with the use of `Institución aporta BBDD \nProyecto Ictiofauna 2015`, `Instit`, `rightHolder`, etc. This needs to be carefully reviewed and homologated before updating GBIF_MMA] -->
 
 ### Asignación de IDs de la versión GBIF  
 
 Si bien los datos del MMA ya fueron publicados en GBIF en formato DwC y se bajaron de esa plataforma (tabla GBIF_MMA), estos están incompletos, faltaron campos importantes tales como `locality` y `bibliographicCitation`. Por lo tanto, se optó por usar la base de datos original del MMA manipulada en este documento (i.e., MMA), añadiéndole los campos `gbifID`, `datasetKey`, y `ocurrenceID` provenientes de GBIF_MMA de modo de preservar la trazabilidad de la publicación original en GBIF.   
 
-<!-- [**HERE, uptate the GBIF data set with the improved version generated here.**]   -->
-
-Para asociar, una a una, las ocurrencias de la tabla MMA con la de la table GBIF_MMA, se usó como clave el campo `occurrenceID` (proveniente de `fila` en el set de datos original) luego de hacerlo  compatible con `occurenceID` de GBIF_MMA añadiéndole el prefijo "MMA:ICT:", seguido de siete dígitos correspondiendo al número de fila.  
+Para asociar, una a una, las ocurrencias de la tabla MMA con la de la table GBIF_MMA, se usó como clave el campo `occurrenceID` (proveniente de `fila` en el set de datos original) luego de hacerlo compatible con `occurenceID` de GBIF_MMA añadiéndole el prefijo "MMA:ICT:", seguido de siete dígitos correspondiendo al número de fila.   
 
 ```{r}
 MMA_AE$occurrenceID <- as.numeric(MMA_AE$occurrenceID)
@@ -1335,28 +1380,27 @@ MMA_AE <- MMA_AE %>%
   relocate(occurrenceID)
 head(MMA_AE$occurrenceID)
 ```
-Usando `occurrenceID` para relacionar ambos sets de datos, se extrajo `gbifID` de GBIF_MMA y se le añadió a MMA (o MMA_AE).  
+Usando `occurrenceID` para relacionar ambos sets de datos, se extrajo `gbifID` de GBIF_MMA y se le añadió a MMA (o MMA_AE) en el campo `otherCatalogNumbers`.  
 
 ```{r}
 
 MMA_AE <- MMA_AE %>%
   left_join(GBIF_MMA %>% select(occurrenceID, gbifID), by = "occurrenceID") %>%
-  relocate(gbifID, .after = 1)
+  mutate(otherCatalogNumbers = paste0("gbifID:",gbifID)) %>% select(-gbifID)
 
 ```
 
 
-
 Además se añadieron identificadores del conjunto de datos proveniente GBIF_MMA en el caso de `datasetKey`, así como licencia de acceso también copiada de GBIF_MMA. 
+
 
 ```{r}
 
 MMA_AE <- MMA_AE %>%  mutate(
-                      datasetName  = "MMA2017",
-                      datasetKey   = "45c3d8d2-7352-4dd1-aefd-c21e0b6b004e",
-                      license      = "CC_BY_NC_4_0",
-                      accessRights = "consultar con institución/autor") %>% 
-                      ungroup()
+                      datasetName  = "Habit E, Vila I, Contreras L. M, Dyer B, Correa C, Naretto J, Contreras V, Amaya L, Villagran C (2023). Fauna Íctica Nativa Continental de Chile. Ministerio del Medio Ambiente de Chile. Occurrence dataset https://doi.org/10.15468/cxb957",
+                      datasetID = "GBIF UUID: 45c3d8d2-7352-4dd1-aefd-c21e0b6b004e",
+                      license      = "CC BY-NC 4.0",
+                      accessRights = "consultar con institución/autor")
 
 ```
 
@@ -1393,7 +1437,10 @@ rm(list=ls()[!ls()%in%c("DwC",
                         "GBIF_MMA")])
 ```
 
+```{r, eval=T, include=T}
+knitr::knit_exit()
 
+```
 ## SUBPESCA: Primera base de datos   
 
 Hemos obtenido dos bases de datos aportadas por la Subsecretaría de Pesca y Acuicultura (SUBPESCA) que se analizan a continuación.  
@@ -3378,7 +3425,7 @@ rm(list=ls()[!ls()%in%c("DwC",
 
 La red FishNet es un esfuerzo colaborativo entre colecciones de peces de todo el mundo para compartir y distribuir datos sobre especímenes. Este sitio proporciona acceso abierto a los datos almacenados en colecciones de peces en museos de historia natural, universidades y otras instituciones [http://www.fishnet2.net/aboutFishNet.html](http://www.fishnet2.net/aboutFishNet.html).
 
-Se bajó un conjunto de datos filtrando para todo Chile, y luego se previsualizaron las ocurrencias de especies de interés, comparando las ocurrencias con las de GBIF. No se encontró información adicional relevante. Algunos registros aparentemente interesantes, resultaron ser falsos positivos, tal como *Aplochiton zebra* en el estrecho de Magallanes en 1888 y *Diplomystes camposensis* en Península Huequi. En ambos casos se comprobó error en las coordenadas. En el caso de Aplochiton, el mismo registro fue  incluído (y corregido) en otro conjunto de datos. En el caso de Diplomystes, este corresponde a una localidad cercana a Valdivia.  
+Se bajó un conjunto de datos filtrando para todo Chile, y luego se previsualizaron las ocurrencias de especies de interés, comparando las ocurrencias con las de GBIF. No se encontró información adicional relevante. Algunos registros aparentemente interesantes, resultaron ser falsos positivos, tal como *Aplochiton zebra* en el estrecho de Magallanes en 1888 y *Diplomystes camposensis* en Península Huequi. En ambos casos se comprobó error en las coordenadas. En el caso de Aplochiton, el mismo registro fue  incluído (y corregido) en otro conjunto de datos. En el caso de *Diplomystes*, este corresponde a una localidad cercana a Valdivia.  
 
 Este conjunto de datos fue considerado redundante y excluido en lo sucesivo.
 

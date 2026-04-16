@@ -620,15 +620,6 @@ Ictiogeográfico}, se combinan todos los conjuntos de datos para
 conformar una gran tabla maestra que entre otras mejoras, se procesó
 para identificar ocurrencias duplicadas.
 
-Durante la preparación de este documento algunos de los conjuntos de
-datos que habían sido incorporados fueron ingresados por las agencias de
-origen al Global Biodiversity Information Facility (GBIF). Por ejemplo,
-este es el caso de \emph{Base de datos del MMA}. Aquí preservamos los
-capítulos originales que describen estos conjuntos de datos para
-entender mejor su origen y trazabilidad, pero ahora los datos se
-importan directamente desde GBIF. {[}\textbf{HERE}, check if we actually
-did this at the end.{]}
-
 \subsection{Datos empíricos de los
 autores}\label{datos-empuxedricos-de-los-autores}
 
@@ -909,7 +900,7 @@ todo el conjunto de datos.
 \subsection{Revisión de literatura C.
 Correa}\label{revisiuxf3n-de-literatura-c.-correa}
 
-\emph{Nombre del conjunto de datos}: FishGIS\_metaDatabase\_CC\\
+\emph{Nombre corto del conjunto de datos}: CCorrea.Lit.Review\\
 \emph{Referencia}: Correa, Cristian, B. Dyer, G. Gajardo, C. Garcia De
 Leaniz, C. Meier, H. Samaniego (2009) Rumbo a un sistema nacional de
 información geográfica de peces dulceacuícolas de Chile. Poster
@@ -1213,6 +1204,659 @@ localidades, etc.) y se corrigieron.
     \AttributeTok{fileEncoding =} \StringTok{"UTF{-}8"}\NormalTok{, }\AttributeTok{row.names =}\NormalTok{ F)}
 
 \FunctionTok{saveRDS}\NormalTok{(metaDB.CC.filtered, }\StringTok{"./data\_sources/FishGIS\_metaDatabase/Output\_CCorreaLitReview.rds"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Revisión de literatura M.
+Aguilar}\label{revisiuxf3n-de-literatura-m.-aguilar}
+
+\emph{Nombre corto del conjunto de datos}: MAguilar.Lit.Review\\
+\emph{Referencia}: Aguilar-González, Marilyn (2023) Recopilación
+bibliográfica de ocurrencia de peces en la Patagonia del proyecto
+Priorización de Cuencas para la Conservación en Patagonia. Programa
+Austral Patagonia (ProAP) de The Pew Charitable Trusts. Coyhaique.
+\citep{Aguilar2023}\\
+\emph{Archivo}: \texttt{BD\ referencias\ (2022-2023).xlsx}
+
+Esta base de datos fue elaborada por Marilyn Aguilar González en el
+marco del Proyecto \emph{Priorización de Cuencas para la Conservación en
+Patagonia}''*, liderado por Brian Reid y Anna Astorga del CIEP, y
+financiado por el Programa Austral Patagonia (ProAP) de la Universidad
+Austral de Chile y The Pew Charitable Trusts.
+
+La información recopilada fue aunada en una misma planilla maestra
+considerando la nomenclatura de campos del Darwin Core para los datos
+compilados.
+
+Algunas consideraciones sobre los datos recopilados:
+
+1.- La información recopilada se basó en una revisión de publicaciones
+científicas de libre acceso e información publicada por fuentes
+confiables de carácter oficial (ej. Ministerio de Medio Ambiente),
+mediante búsqueda por especie, familia, grupo taxonómico, origen
+(nativa/introducida) y área de interés (Patagonia chilena y argentina).
+
+2.- Algunas publicaciones no explicitaban el listado de coordenadas,
+solo mencionaban los sitios de estudio o incluían un rango de
+coordenadas (ej. Bravo et al.~2019; Bravo et al.~2022; Chalde et
+al.~2016; Monzón-Argüello et al.~2014; Muñoz et al.~2022; Schröder y
+Garcia de Leaniz, 2011). Sin embargo, poseían figuras del área de
+estudio que podían georreferenciar. Por lo tanto, dichas figuras se
+proyectaron en ArcGIS y luego se obtuvieron las coordenadas de los
+puntos de interés.
+
+3.- Para la publicaciones que no contaban con fecha especifica para cada
+registro pero mas bien un rango de fechas para la totalidad de los
+registros, se tomó la primera fecha mencionada, y se aplicó para todos
+los registros.
+
+4.- Sólo se llenaron los atributos para los cuales se encontró
+información, y muchos registros resultaron incompletos.
+
+\subsubsection{Lectura de datos}\label{lectura-de-datos-2}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{RevAguilar }\OtherTok{\textless{}{-}}\NormalTok{ readxl}\SpecialCharTok{::}\FunctionTok{read\_xlsx}\NormalTok{(}\StringTok{"./data\_sources/MAguilar\_review/MAguilar\_review2023.xlsx"}\NormalTok{,}
+    \AttributeTok{sheet =} \DecValTok{1}\NormalTok{, }\AttributeTok{col\_types =} \StringTok{"text"}\NormalTok{)}
+
+\CommentTok{\# Note that RevAguilar$references ==}
+\CommentTok{\# RevAguilar$associatedReferences, keep only the former.}
+\NormalTok{RevAguilar }\OtherTok{\textless{}{-}}\NormalTok{ RevAguilar }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{associatedReferences) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{individualCount =} \FunctionTok{as.numeric}\NormalTok{(individualCount), }\AttributeTok{decimalLatitude =} \FunctionTok{as.numeric}\NormalTok{(decimalLatitude),}
+        \AttributeTok{decimalLongitude =} \FunctionTok{as.numeric}\NormalTok{(decimalLongitude))}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Homologación al DwC}\label{homologaciuxf3n-al-dwc-1}
+
+Este conjunto de datos fue estandarizado al formato DwC casi desde un
+principio, por lo que casi no se requirieron cambios. Sin embargo, fue
+necesario estandarizar poblar \texttt{occurrenceID} con un identificador
+único y estandarizar atributos relativos a fechas. En particular, en los
+casos donde se reportaron rangos de años, se usó el año inicial en el
+campo \texttt{year} (código abajo) y se mantuvo el rango original en
+\texttt{eventDate} (formato estandar DwC) y \texttt{verbatimEventDate}
+(inalterado).
+
+Para \texttt{OccurrenceID} se concadenó un prefijo para identificar el
+conjunto de datos y un número único que este tenía indexado en
+\texttt{catalogNumber}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{RevAguilar }\OtherTok{\textless{}{-}}\NormalTok{ RevAguilar }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{occurrenceID =} \FunctionTok{paste0}\NormalTok{(}\StringTok{"MAguilar.Lit.Review."}\NormalTok{, catalogNumber)) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{relocate}\NormalTok{(occurrenceID)}
+\end{Highlighting}
+\end{Shaded}
+
+Estandarización de fechas
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(dplyr)}
+\FunctionTok{library}\NormalTok{(stringr)}
+
+\NormalTok{RevAguilar }\OtherTok{\textless{}{-}}\NormalTok{ RevAguilar }\SpecialCharTok{\%\textgreater{}\%}  
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{day =} \FunctionTok{ifelse}\NormalTok{(verbatimEventDate }\SpecialCharTok{==} \StringTok{"April 7–12 2004"}\NormalTok{, }\StringTok{"07"}\NormalTok{, day)) }\SpecialCharTok{\%\textgreater{}\%}  
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{day =} \FunctionTok{ifelse}\NormalTok{(verbatimEventDate }\SpecialCharTok{==} \StringTok{"March 13–24 2004"}\NormalTok{, }\StringTok{"13"}\NormalTok{, day)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}
+    \CommentTok{\# First, extract all 4{-}digit years from eventDate}
+    \AttributeTok{years =} \FunctionTok{str\_extract\_all}\NormalTok{(year, }\StringTok{"}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{d\{4\}"}\NormalTok{),}
+    \AttributeTok{n\_years =} \FunctionTok{lengths}\NormalTok{(years),}
+    
+    \CommentTok{\# Create new eventDate based on conditions}
+    \AttributeTok{eventDate =} \FunctionTok{case\_when}\NormalTok{(}
+      
+      \CommentTok{\# If multiple years exist, paste first/last with /}
+\NormalTok{      n\_years }\SpecialCharTok{\textgreater{}=} \DecValTok{2} \SpecialCharTok{\textasciitilde{}} \FunctionTok{paste0}\NormalTok{(}\FunctionTok{sapply}\NormalTok{(years, }\StringTok{"first"}\NormalTok{), }\StringTok{"/"}\NormalTok{, }\FunctionTok{sapply}\NormalTok{(years, }\StringTok{"last"}\NormalTok{)),}
+      
+      \CommentTok{\# Otherwise, build from year, month, day fields}
+      \SpecialCharTok{!}\FunctionTok{is.na}\NormalTok{(year) }\SpecialCharTok{\&} \SpecialCharTok{!}\FunctionTok{is.na}\NormalTok{(month) }\SpecialCharTok{\&} \SpecialCharTok{!}\FunctionTok{is.na}\NormalTok{(day) }\SpecialCharTok{\textasciitilde{}} 
+        \FunctionTok{sprintf}\NormalTok{(}\StringTok{"\%04d{-}\%02d{-}\%02d"}\NormalTok{, }\FunctionTok{as.integer}\NormalTok{(year), }\FunctionTok{as.integer}\NormalTok{(month), }\FunctionTok{as.integer}\NormalTok{(day)),}
+      
+      \SpecialCharTok{!}\FunctionTok{is.na}\NormalTok{(year) }\SpecialCharTok{\&} \SpecialCharTok{!}\FunctionTok{is.na}\NormalTok{(month) }\SpecialCharTok{\textasciitilde{}} 
+        \FunctionTok{sprintf}\NormalTok{(}\StringTok{"\%04d{-}\%02d"}\NormalTok{, }\FunctionTok{as.integer}\NormalTok{(year), }\FunctionTok{as.integer}\NormalTok{(month)),}
+      
+      \SpecialCharTok{!}\FunctionTok{is.na}\NormalTok{(year) }\SpecialCharTok{\textasciitilde{}} 
+        \FunctionTok{sprintf}\NormalTok{(}\StringTok{"\%04d"}\NormalTok{, }\FunctionTok{as.integer}\NormalTok{(year)),}
+      
+      \CommentTok{\# Keep original if none of the conditions apply}
+      \ConstantTok{TRUE} \SpecialCharTok{\textasciitilde{}}\NormalTok{ year) ) }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{years, }\SpecialCharTok{{-}}\NormalTok{n\_years)  }\CommentTok{\# Remove temporary columns}
+
+\CommentTok{\# Remove a few trailing NAs produced by day ranges (fixed above though).  }
+\NormalTok{RevAguilar}\SpecialCharTok{$}\NormalTok{eventDate }\OtherTok{\textless{}{-}} \FunctionTok{sub}\NormalTok{(}\StringTok{"{-}NA$"}\NormalTok{, }\StringTok{""}\NormalTok{, RevAguilar}\SpecialCharTok{$}\NormalTok{eventDate)}
+
+\NormalTok{RevAguilar }\OtherTok{\textless{}{-}}\NormalTok{ RevAguilar }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{mutate}\NormalTok{(}\AttributeTok{year =} \FunctionTok{str\_extract}\NormalTok{(eventDate, }\StringTok{"}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{d\{4\}"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{as.integer}\NormalTok{())}
+
+\CommentTok{\# Check results}
+  \CommentTok{\# RevAguilar \%\textgreater{}\% select(year, month, day, eventDate) \%\textgreater{}\%  distinct()}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Filtrado área de
+estudio}\label{filtrado-uxe1rea-de-estudio-2}
+
+No fue necesario aplicar un filtro espacial porque el area de estudio
+del conjunto de datos coincide con el área de estudio de este proyecto
+(Figura \ref{fig:revaguilarplot}).
+
+\begin{figure}
+
+{\centering \includegraphics{Atlas_Ictiogeografico_files/figure-latex/revaguilarplot-1} 
+
+}
+
+\caption{Distribución de ocurrencias de peces según revisión bibliográfica de Marilyn Aguilar (2003).}\label{fig:revaguilarplot}
+\end{figure}
+
+Además se añadieron algunos atributos del DwC que son constantes para
+todo el conjunto de datos.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{RevAguilar.filtered}\SpecialCharTok{$}\NormalTok{license }\OtherTok{\textless{}{-}} \StringTok{"CC BY{-}NC 4.0"}
+\NormalTok{RevAguilar.filtered}\SpecialCharTok{$}\NormalTok{datasetName }\OtherTok{\textless{}{-}} \StringTok{"Aguilar{-}González, Marilyn (2023) Recopilación bibliográfica de ocurrencia de peces en la Patagonia del proyecto Priorización de Cuencas para la Conservación en Patagonia. Programa Austral Patagonia (ProAP) de The Pew Charitable Trusts. Coyhaique."}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Respaldo}\label{respaldo-2}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{write.csv}\NormalTok{(RevAguilar.filtered, }\StringTok{"./data\_sources/MAguilar\_review/Output\_MAguilar\_review2023.csv"}\NormalTok{,}
+    \AttributeTok{fileEncoding =} \StringTok{"UTF{-}8"}\NormalTok{, }\AttributeTok{row.names =}\NormalTok{ F)}
+
+\FunctionTok{saveRDS}\NormalTok{(RevAguilar.filtered, }\StringTok{"./data\_sources/MAguilar\_review/Output\_MAguilar\_review2023.rds"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Base de datos Ministerio del Medio Ambiente de
+Chile}\label{base-de-datos-ministerio-del-medio-ambiente-de-chile}
+
+\emph{Nombre corto del conjunto de datos}: MMA (versión original)\\
+\emph{Nombre del conjunto de datos}: GBIF\_MMA (versión publicada en
+GBIF el 2023/12/13)\\
+\emph{Referencia}: Habit, E., Contreras, L., Dyer, B.S., Correa, C.,
+Naretto, J., Contreras, V., Amaya, L., and Villagran. 2023. Fauna Íctica
+Nativa Continental de Chile. Ministerio del Medio Ambiente de Chile,
+Occurrence dataset \url{https://doi.org/10.15468/cxb957} accessed via
+GBIF.org on 2025-10-17. \citep{Habit2023}\\
+\emph{Archivo}: \texttt{BD\_original\_observaciones.xls}\\
+\emph{Archivo}: \texttt{GBIF\_MMA.csv}
+
+El Ministerio del Medio Ambiente (MMA) hace años atrás (2015-2017)
+impulsó un esfuerzo colaborativo para producir un libro titulado
+\emph{Peces nativos de aguas continentales de Chile} (280 páginas
+aprox.), que además llevaba anexo una base de datos de ocurrencias de
+peces de agua dulce. Leisy Stephanie Amaya Montano, División Recursos
+Naturales y Biodiversidad del MMA, era la coordinadora de este proyecto
+(bajo la jefatura de Alejandra Figueroa Fernández).
+
+En la producción del libro y la base de datos estaba colaborando Gloria
+Arratia (KU), E. Habit (Centro EULA), I. Vila (Laboratorio de Limnología
+de la Universidad de Chile), M. Contreras (Centro de Ecología Aplicada),
+Cristián Correa (UACh), Bryan Dyer (UV), Claudio Quezada (UCh) y otros.
+Lamentablemente este esfuerzo nunca se concretó, a pesar de haberse
+alcanzado al menos un 70\% de avance.
+
+Sin embargo, se publicó la base de datos en GBIF el 13 de diciembre del
+2023. El conjunto de datos publicado de llama: \emph{Fauna Íctica Nativa
+Continental de Chile}. Al publicar la base de datos a la plataforma
+GBIF, algunos campos importantes para la trazabilidad de los registros,
+tales como \texttt{locality} o \texttt{bibliographicCitation} no fueron
+indexados de manera óptima. Por esta razón, en esta instancia, se
+aprovechó de la oportunidad para completar los registros con la
+información correspondiente disponible en la base de datos original del
+MMA.
+
+\subsubsection{Lectura de datos}\label{lectura-de-datos-3}
+
+Importar la base de datos original:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{MMA }\OtherTok{\textless{}{-}}\NormalTok{ readxl}\SpecialCharTok{::}\FunctionTok{read\_xls}\NormalTok{(}\StringTok{"./data\_sources/GBIF\_MMA/BD\_original\_observaciones.xls"}\NormalTok{,}
+    \AttributeTok{col\_types =} \StringTok{"text"}\NormalTok{)}
+
+\NormalTok{MMA }\OtherTok{\textless{}{-}}\NormalTok{ MMA }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{Lat\_correg\_2 =} \FunctionTok{as.numeric}\NormalTok{(Lat\_correg\_2), }\AttributeTok{Long\_correg\_2 =} \FunctionTok{as.numeric}\NormalTok{(Long\_correg\_2),}
+        \AttributeTok{NumIndiv =} \FunctionTok{as.numeric}\NormalTok{(NumIndiv))}
+\end{Highlighting}
+\end{Shaded}
+
+Importar la misma base de datos pero la versión obtenida de GBIF:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{GBIF\_MMA }\OtherTok{\textless{}{-}} \FunctionTok{read.delim}\NormalTok{(}\StringTok{"./data\_sources/GBIF\_MMA/GBIF\_MMA.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Comparación de
+versiones}\label{comparaciuxf3n-de-versiones}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{cat}\NormalTok{(}\StringTok{"Does the two tables have the sanme number of rows?"}\NormalTok{, }\FunctionTok{nrow}\NormalTok{(MMA) }\SpecialCharTok{==}
+    \FunctionTok{nrow}\NormalTok{(GBIF\_MMA))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Does the two tables have the sanme number of rows? TRUE
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Check dimensions dim(GBIF\_MMA) dim(MMA)}
+
+\CommentTok{\# Check column names sort(names(GBIF\_MMA)) sort(names(MMA))}
+
+\CommentTok{\# \# Compare column names sort(setdiff(names(MMA),}
+\CommentTok{\# names(GBIF\_MMA))) \# Columns in MMA but not in GBIF\_MMA}
+\CommentTok{\# sort(setdiff(names(GBIF\_MMA), names(MMA))) \# Columns in}
+\CommentTok{\# GBIF\_MMA but not in MMA intersect(names(GBIF\_MMA),}
+\CommentTok{\# names(MMA)) \# Common columns}
+\end{Highlighting}
+\end{Shaded}
+
+Mismo número de registros y varias pruebas adicionales confirma que se
+trata de la misma base de datos, aunque solo un nombre de columna (entre
+decenas) coincide entre las dos bases de datos. Esta diferencia se
+reduce una vez que los datos de MMA son homologados al DwC más abajo.
+Comenzamos trabajando con la base de datos original filtrada para el
+área de estudio, para homologarla al formato DwC y luego añadirle
+identificadores provenientes de la versión de GBIF.\\
+\#\#\# Filtrado área de estudio
+
+Se extrajeron los datos dentro del área de estudio.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{pts }\OtherTok{\textless{}{-}} \FunctionTok{SpatialPointsDataFrame}\NormalTok{(}\AttributeTok{data =}\NormalTok{ MMA, }\AttributeTok{coords =}\NormalTok{ MMA[, }\FunctionTok{c}\NormalTok{(}\StringTok{"Long\_correg\_2"}\NormalTok{,}
+    \StringTok{"Lat\_correg\_2"}\NormalTok{)], }\AttributeTok{proj4string =} \FunctionTok{CRS}\NormalTok{(}\StringTok{"+init=epsg:4326"}\NormalTok{))}
+
+\NormalTok{withinAE }\OtherTok{\textless{}{-}} \SpecialCharTok{!}\FunctionTok{is.na}\NormalTok{(sp}\SpecialCharTok{::}\FunctionTok{over}\NormalTok{(pts, sp\_poly, }\AttributeTok{returnList =}\NormalTok{ F))}
+\NormalTok{MMA\_AE }\OtherTok{\textless{}{-}}\NormalTok{ MMA[withinAE, ]}
+\end{Highlighting}
+\end{Shaded}
+
+La Figura \ref{fig:MMAplot} muestra un mapa con los datos filtrados
+espacialmente.
+
+\begin{figure}
+
+{\centering \includegraphics{Atlas_Ictiogeografico_files/figure-latex/MMAplot-1} 
+
+}
+
+\caption{Distribución de ocurrencias de peces según base de datos MMA. Los puntos rojos fueron excluidos por estar fuera del área de estudio indicada por el polígono.}\label{fig:MMAplot}
+\end{figure}
+
+\subsubsection{Homologación al DwC}\label{homologaciuxf3n-al-dwc-2}
+
+Antes de homologar fue necesario estandarizar y combinar atributos
+relativos a fechas, fuentes de información y localidad.
+
+Estandarización de fechas.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{tmp }\OtherTok{\textless{}{-}}\NormalTok{ MMA\_AE }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{select}\NormalTok{(AnoCol, MesCol, DiaCol, RangoCol) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{distinct}\NormalTok{()}
+
+\NormalTok{fecha }\OtherTok{\textless{}{-}}\NormalTok{ MMA\_AE }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{select}\NormalTok{(AnoCol, MesCol, DiaCol, RangoCol)}
+
+\CommentTok{\# Replace unexpected values by NAs}
+\NormalTok{fecha}\SpecialCharTok{$}\NormalTok{AnoCol }\OtherTok{\textless{}{-}} \FunctionTok{gsub}\NormalTok{(}\StringTok{"NA"}\NormalTok{, }\ConstantTok{NA}\NormalTok{, fecha}\SpecialCharTok{$}\NormalTok{AnoCol)}
+\NormalTok{fecha}\SpecialCharTok{$}\NormalTok{MesCol }\OtherTok{\textless{}{-}} \FunctionTok{gsub}\NormalTok{(}\StringTok{"NA"}\NormalTok{, }\ConstantTok{NA}\NormalTok{, fecha}\SpecialCharTok{$}\NormalTok{MesCol)}
+\NormalTok{fecha}\SpecialCharTok{$}\NormalTok{MesCol }\OtherTok{\textless{}{-}} \FunctionTok{gsub}\NormalTok{(}\StringTok{"44044"}\NormalTok{, }\ConstantTok{NA}\NormalTok{, fecha}\SpecialCharTok{$}\NormalTok{MesCol)}
+\NormalTok{fecha}\SpecialCharTok{$}\NormalTok{DiaCol }\OtherTok{\textless{}{-}} \FunctionTok{gsub}\NormalTok{(}\StringTok{"NA"}\NormalTok{, }\ConstantTok{NA}\NormalTok{, fecha}\SpecialCharTok{$}\NormalTok{DiaCol)}
+\NormalTok{fecha}\SpecialCharTok{$}\NormalTok{DiaCol }\OtherTok{\textless{}{-}} \FunctionTok{gsub}\NormalTok{(}\StringTok{"0"}\NormalTok{, }\ConstantTok{NA}\NormalTok{, fecha}\SpecialCharTok{$}\NormalTok{DiaCol)}
+
+\CommentTok{\# Create a valid date field, with several accepted DwC}
+\CommentTok{\# formats}
+\NormalTok{fecha }\OtherTok{\textless{}{-}}\NormalTok{ fecha }\SpecialCharTok{\%\textgreater{}\%}
+    \CommentTok{\# rowwise() \%\textgreater{}\%}
+\FunctionTok{mutate}\NormalTok{(}\AttributeTok{fecha\_Col =} \FunctionTok{paste}\NormalTok{(AnoCol, MesCol, DiaCol, }\AttributeTok{sep =} \StringTok{"{-}"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{fecha\_Col =} \FunctionTok{gsub}\NormalTok{(}\StringTok{"{-}NA"}\NormalTok{, }\StringTok{""}\NormalTok{, fecha\_Col)) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{fecha\_Col =} \FunctionTok{gsub}\NormalTok{(}\StringTok{"NA"}\NormalTok{, }\ConstantTok{NA}\NormalTok{, fecha\_Col)) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{fecha\_Col =} \FunctionTok{ifelse}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{is.na}\NormalTok{(RangoCol), }\FunctionTok{gsub}\NormalTok{(}\StringTok{"}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{s*{-}}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{s*"}\NormalTok{,}
+        \StringTok{"/"}\NormalTok{, RangoCol), fecha\_Col)) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{AnoCol =} \FunctionTok{ifelse}\NormalTok{(}\FunctionTok{is.na}\NormalTok{(AnoCol) }\SpecialCharTok{\&} \SpecialCharTok{!}\FunctionTok{is.na}\NormalTok{(fecha\_Col),}
+        \FunctionTok{substr}\NormalTok{(fecha\_Col, }\DecValTok{1}\NormalTok{, }\DecValTok{4}\NormalTok{), AnoCol))}
+
+\CommentTok{\# Inspect fecha \%\textgreater{}\% distinct() \# Good!}
+
+\CommentTok{\# Keep standardized dates}
+\NormalTok{MMA\_AE}\SpecialCharTok{$}\NormalTok{fecha\_Col }\OtherTok{\textless{}{-}}\NormalTok{ fecha}\SpecialCharTok{$}\NormalTok{fecha\_Col}
+\NormalTok{MMA\_AE}\SpecialCharTok{$}\NormalTok{AnoCol }\OtherTok{\textless{}{-}}\NormalTok{ fecha}\SpecialCharTok{$}\NormalTok{AnoCol}
+\end{Highlighting}
+\end{Shaded}
+
+La estandarización de fuentes de información se hizo en etapas para (i)
+reducir sinónimos bajo los campos \texttt{OrigenReg} y
+\texttt{FuenteReg}; (ii) combinar estos dos campos que fueron
+transformados en una versión preliminar de
+\texttt{bibliographicCitation}, y (iii) curado manual en una planilla de
+los valores únicos de esta versión preliminar para estandardizar
+referencias bibliográficas y referencias asociadas. (iv) Por último,
+esta planilla fue utilizada para actualizar
+\texttt{bibliographicCitation} y \texttt{associatedReferences}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Merging synonyms}
+\NormalTok{MMA\_AE }\OtherTok{\textless{}{-}}\NormalTok{ MMA\_AE }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{OrigenReg =} \FunctionTok{recode}\NormalTok{(OrigenReg, }\StringTok{\textasciigrave{}}\AttributeTok{Base Datos EULA UdeC}\StringTok{\textasciigrave{}} \OtherTok{=} \StringTok{"Base de Datos EULA UdeC"}\NormalTok{,}
+        \StringTok{\textasciigrave{}}\AttributeTok{Base Datos}\StringTok{\textasciigrave{}} \OtherTok{=} \StringTok{"Base de Datos EULA UdeC"}\NormalTok{))}
+\NormalTok{MMA\_AE }\OtherTok{\textless{}{-}}\NormalTok{ MMA\_AE }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{FuenteReg =} \FunctionTok{recode}\NormalTok{(FuenteReg, }\StringTok{\textasciigrave{}}\AttributeTok{Publicación, 2012}\StringTok{\textasciigrave{}} \OtherTok{=} \StringTok{"Unmack et al. 2012"}\NormalTok{))}
+
+\CommentTok{\# Combination of both fields}
+\NormalTok{MMA\_AE }\OtherTok{\textless{}{-}}\NormalTok{ MMA\_AE }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{rowwise}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{OrigFunteReg =} \FunctionTok{paste0}\NormalTok{(}\StringTok{"OrigenReg: "}\NormalTok{, OrigenReg, }\StringTok{", FuenteReg: "}\NormalTok{,}
+\NormalTok{        FuenteReg, }\StringTok{" Estudio: "}\NormalTok{, Estudio))}
+\NormalTok{MMA\_AE}\SpecialCharTok{$}\NormalTok{OrigFunteReg }\OtherTok{\textless{}{-}} \FunctionTok{gsub}\NormalTok{(}\StringTok{"OrigenReg: NA,"}\NormalTok{, }\StringTok{""}\NormalTok{, MMA\_AE}\SpecialCharTok{$}\NormalTok{OrigFunteReg)}
+\NormalTok{MMA\_AE}\SpecialCharTok{$}\NormalTok{OrigFunteReg }\OtherTok{\textless{}{-}} \FunctionTok{gsub}\NormalTok{(}\StringTok{"FuenteReg: NA,"}\NormalTok{, }\StringTok{""}\NormalTok{, MMA\_AE}\SpecialCharTok{$}\NormalTok{OrigFunteReg)}
+\NormalTok{MMA\_AE}\SpecialCharTok{$}\NormalTok{OrigFunteReg }\OtherTok{\textless{}{-}} \FunctionTok{gsub}\NormalTok{(}\StringTok{"FuenteReg: NA"}\NormalTok{, }\StringTok{""}\NormalTok{, MMA\_AE}\SpecialCharTok{$}\NormalTok{OrigFunteReg)}
+\NormalTok{MMA\_AE}\SpecialCharTok{$}\NormalTok{OrigFunteReg }\OtherTok{\textless{}{-}} \FunctionTok{gsub}\NormalTok{(}\StringTok{"Estudio: NA"}\NormalTok{, }\StringTok{""}\NormalTok{, MMA\_AE}\SpecialCharTok{$}\NormalTok{OrigFunteReg)}
+\NormalTok{MMA\_AE}\SpecialCharTok{$}\NormalTok{OrigFunteReg }\OtherTok{\textless{}{-}} \FunctionTok{trimws}\NormalTok{(MMA\_AE}\SpecialCharTok{$}\NormalTok{OrigFunteReg)}
+\end{Highlighting}
+\end{Shaded}
+
+Con la combinación de \texttt{OrigenReg}, \texttt{FuenteReg} y
+\texttt{Estudio} bajo \texttt{OrigFunteReg} se generó una lista con
+valores únicos que fue exportada a una planilla de cálculo. Cada cadena
+de texto resultante fue revisada manualmente para 1) estandarizar el
+formato de las referencias bibliográficas, y según la necesidad, 2)
+asignar la información correspondiente a dos campos del DwC:
+\texttt{biblographicCitation} y \texttt{associatedReferences}. Estas
+mejoras se encuentras en el archivo
+\texttt{./data\_sources/GBIF\_MMA/bibliographicCitation\_fix.csv}, que a
+continuación se importa para actualizar los valores en MMA\_AE.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{refFix }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"./data\_sources/GBIF\_MMA/bibliographicCitation\_fix.csv"}\NormalTok{,}
+\NormalTok{    ) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{ID)}
+
+\NormalTok{MMA\_AE }\OtherTok{\textless{}{-}}\NormalTok{ MMA\_AE }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{left\_join}\NormalTok{(refFix, }\AttributeTok{by =} \FunctionTok{join\_by}\NormalTok{(OrigFunteReg))}
+\end{Highlighting}
+\end{Shaded}
+
+En la Tabla \ref{tab:MMArefs} se presentan las distintas referencias
+encontradas combinando campos previo al curado manual
+(\texttt{OrigFunteReg}) y estandarización DwC
+(\texttt{bibliographicCitation}, \texttt{associatedReferences}).\\
+\newpage
+
+\begingroup\fontsize{8}{10}\selectfont
+
+\begin{longtable}[t]{>{\raggedleft\arraybackslash}p{4em}>{\raggedright\arraybackslash}p{20em}ll}
+\caption{\label{tab:MMArefs}Lista de referencias indexadas en el conjunto de datos del MMA (combinadas en OrigFunteReg) y su homologación para el DwC (bibliographicCitation, associatedReferences).}\\
+\toprule
+id & OrigFunteReg & bibliographicCitation & associatedReferences\\
+\midrule
+1 & OrigenReg: Zama, A., and Cárdenas, E. 1984. Introduction into Aysén Chile of the pacific salmon. N°9 Descriptive catalogue of marine and freshwater fishes from the Aysén region, southern Chile, with zoogeographical notes on fish fauna. Servicio Nacional de Pesca - Japanese International Cooperation Agency., FuenteReg: Servicio Nacional de Pesca (Puerto Aysen) & Zama, A., and Cárdenas, E. 1984. Introduction into Aysén Chile of the pacific salmon. N°9 Descriptive catalogue of marine and freshwater fishes from the Aysén region, southern Chile, with zoogeographical notes on fish fauna. Servicio Nacional de Pesca - Japanese International Cooperation Agency. & \\
+2 & OrigenReg: Zama, A., and Cárdenas, E. 1984. Introduction into Aysén Chile of the pacific salmon. N°9 Descriptive catalogue of marine and freshwater fishes from the Aysén region, southern Chile, with zoogeographical notes on fish fauna. Servicio Nacional de Pesca - Japanese International Cooperation Agency. McDowall, R.M., and Nakaya, K. 1987. Identity of the galaxioid fishes of the genus Aplochiton Jenys from southern Chile. Japan Journal of Ichthyology 34: 377–383., FuenteReg: Instituto de la Patagonia, Punta Arenas & Zama, A., and Cárdenas, E. 1984. Introduction into Aysén Chile of the pacific salmon. N°9 Descriptive catalogue of marine and freshwater fishes from the Aysén region, southern Chile, with zoogeographical notes on fish fauna. Servicio Nacional de Pesca - Japanese International Cooperation Agency. & McDowall, R.M., and Nakaya, K. 1987. Identity of the galaxioid fishes of the genus Aplochiton Jenys from southern Chile. Japan Journal of Ichthyology 34: 377–383.\\
+3 & OrigenReg: McDowall, R.M., and Nakaya, K. 1988. Morphological divergence in the two species of Aplochiton Jenyns (Salmoniformes: Aplochitonidae): a generalist and a specialist. Copeia 1: 233–236., FuenteReg: Laboratory of Marine Zoology, Hokkaido University (HUMZ) & McDowall, R.M., and Nakaya, K. 1988. Morphological divergence in the two species of Aplochiton Jenyns (Salmoniformes: Aplochitonidae): a generalist and a specialist. Copeia 1(1): 233–236. & \\
+4 & OrigenReg: Alo, D., Correa, C., Arias, C., and Cardenas, L. 2013. Diversity of Aplochiton Fishes (Galaxiidea) and the Taxonomic Resurrection of A. marinus. PLoS ONE. doi/10.1371/journal.pone.0071577., FuenteReg: Museo Nacional de Historia Natural de Chile & Alò, D., Correa, C., Arias, C., and Cárdenas, L. 2013. Diversity of Aplochiton fishes (Galaxiidea) and the taxonomic resurrection of A. marinus. PLoS ONE 8(8): e71577. & \\
+5 & OrigenReg: Alo, D., Correa, C., Arias, C., and Cardenas, L. 2013. Diversity of Aplochiton Fishes (Galaxiidea) and the Taxonomic Resurrection of A. marinus. PLoS ONE. doi/10.1371/journal.pone.0071577., & Alò, D., Correa, C., Arias, C., and Cárdenas, L. 2013. Diversity of Aplochiton fishes (Galaxiidea) and the taxonomic resurrection of A. marinus. PLoS ONE 8(8): e71577. & \\
+\addlinespace
+6 & OrigenReg: CEA para ENDESA, FuenteReg: Base de datos CEA 2015 & CEA para ENDESA, Base de datos CEA 2015 & \\
+7 & OrigenReg: Base de Datos EULA UdeC, FuenteReg: Base Datos 2007 & Base Datos EULA UdeC, Base Datos 2007 & \\
+8 & OrigenReg: Base de Datos EULA UdeC, FuenteReg: Base Datos 2009 & Base Datos EULA UdeC, Base Datos 2009 & \\
+9 & OrigenReg: Base de Datos EULA UdeC, FuenteReg: Base Datos 2013 & Base Datos EULA UdeC, Base Datos 2013 & \\
+10 & OrigenReg: Base de Datos EULA UdeC, FuenteReg: Base Datos 2008 & Base Datos EULA UdeC, Base Datos 2008 & \\
+\addlinespace
+11 & FuenteReg: McDowall \& Nakaya 1987 & McDowall, R.M., and Nakaya, K. 1987. Identity of the galaxioid fishes of the genus Aplochiton Jenys from southern Chile. Japan Journal of Ichthyology 34: 377–383. & \\
+12 & FuenteReg: Campos et al. 1984 & Campos, H. 1984. Gonswana and Neotropical Galaxioid fish biogeography. In Evolutionary Ecology of Neotropical Freshwater Fishes. Edited by T.M. Zaret. Junk Publisher, The Hague Netherland. & \\
+13 & FuenteReg: McDowall 1971a & McDowall, R.M. 1971. Fishes of the family Aplochitonidae. Journal of The Royal Society of New Zealand: 1(1):31-52. & \\
+14 & FuenteReg: Moorman et al. 2009 & Moorman, M.C. 2007. The Conservation Implications of Introduced Trout and Beaver onNative Fish in the Cape Horn Biosphere Reserve, ChileT. North Carolina State University. & \\
+15 & OrigenReg: Base de Datos EULA UdeC, FuenteReg: Base Datos 2005 & Base Datos EULA UdeC, Base Datos 2005 & \\
+\addlinespace
+16 & OrigenReg: Base de Datos EULA UdeC, FuenteReg: Base Datos 2006 & Base Datos EULA UdeC, Base Datos 2006 & \\
+17 &  &  & \\
+18 & FuenteReg: Eigenmann 1927 Estudio: Campos et al. 1993b & Eigenmann, C.H. 1928. The fresh-water fishes of Chile. Memoirs of the National Academy of Science 22: 1–80. & \\
+19 & FuenteReg: Fowler 1951 Estudio: Campos et al. 1993b & Fowler, H. 1951. Analysis of the fishes of Chile. Revista Chilena de Historia Natural: 263-323. & \\
+20 & FuenteReg: Gunther 1980 Estudio: Campos et al. 1993b & Günther, A.C.L.G. 1880. An introduction to the study of fishes. Adam \& Charles Black, Edinburgh. & \\
+\addlinespace
+21 & FuenteReg: Valenciennes 1833 Estudio: Arratia et al. 1981 & Cuvier, G., Cuvier, G., Axelrod, H.R., Baird, S.F., Valenciennes, Koninklijk Zoologisch Genootschap Natura Artis Magistra,  te A., and Congress, L. of. 1835. Histoire naturelle des poissons. Chez F. G. Levrault; [etc., etc.], Paris. doi:10.5962/bhl.title.12283. & Arratia, G. 1981. Generos de peces de aguas continentales de Chile. Publicación ocacional del Museo Nacional de Historia Natural, Chile: 34:-3-108.\\
+22 & FuenteReg: Gonzalez 2005 & Gonzáles, J. 2005. Evaluación de interferencias tróficas entre truchas y peces nativos en ríos del sur de Chile, a través de analísis de contenidos estomacales. Tesis de pregrado Biología Marina, Facultad de Ciencias, Universidad Austral de Chile. & \\
+23 & FuenteReg: Campos et al. 1996 & Campos, H., Gavilan, J., Murillo, V., and Alarcon, P. 1996. Presencia de Cheirodon australe (Pisces: Characidae) en Lago Tarahuín (Isla Grande de Chiloé, 42º40’S, Chile) y su Significado Zoogeográfico. Medio Ambiente 13: 69–79. & \\
+24 & OrigenReg: Estudio peces CEA, FuenteReg: Entrevista Jorge Parra & Estudio peces CEA, Entrevista Jorge Parra & \\
+25 & OrigenReg: Base de Datos EULA UdeC, FuenteReg: Base Datos 2014 & Base Datos EULA UdeC, Base Datos 2014 & \\
+\addlinespace
+26 & OrigenReg: Base Datos CEA 2015, & Base Datos CEA 2015 & \\
+27 & FuenteReg: Murillo \& Ruiz 2002 Estudio: Vila et al. 2006 & Murillo, V., and Ruiz, V.H. 2002. El puye Galaxias globiceps Eigenmann 1927 (Osteichthyes: Galaxiidae): ¿una especie en peligro de extincion? Gayana (Concepción) 66: 191–197. & Vila, I., Veloso, A., Schlatter, R., and Ramírez, C. 2006. Macrófitas y vertebrados de los sistemas límnicos de Chile. In Editorial Universitaria. Editorial Universitaria.\\
+28 & OrigenReg: Líneas bases XI CEA Ltda. Agosto 2015, FuenteReg: Líneas bases XI CEA Ltda. Agosto 2015 & Líneas bases XI CEA Ltda. Agosto 2015 & \\
+29 & OrigenReg: Publicación, FuenteReg: Vila et al. 1999. Ictiofauna en los sistemas límnicos de la Isla Grande, Tierra del Fuego, Chile & Vila, I., Fuentes, L., and Saavedra, M. 1999. Ictiofauna en los sistemas límnicos de la isla grande, Tierra del Fuego, Chile. Revista Chilena de Historia Natural: 72:-273–284. & \\
+30 & FuenteReg: Campos \& Ortiz 1992 Estudio: Campos et al. 1993b & Campos, H., and Ortiz, J.C. 1992. Peces, Anfibios y Reptiles de Torres del Paine: ¿Qué pasó con la diversidad? In Biodiversidad en Parque Nacional Torres del Paine. Edited by W.F.C.N.- -1. (en imprenta). & \\
+\addlinespace
+31 & FuenteReg: Campos et al. 1984 Estudio: Campos et al. 1993b & Campos, H. 1984. Gonswana and Neotropical Galaxioid fish biogeography. In Evolutionary Ecology of Neotropical Freshwater Fishes. Edited by T.M. Zaret. Junk Publisher, The Hague Netherland. & \\
+32 & FuenteReg: Venegas 2005 & Venegas 2005 & \\
+33 & FuenteReg: Vila et al. 1999 & Vila, I., Fuentes, L., and Contreras, M. 1999. Peces límnicos de Chile. Boletín del Museo Nacional de Historia Natural, Chile: 48:-61–75. & \\
+34 & OrigenReg: Base de Datos EULA UdeC, FuenteReg: Base Datos 2009  2010 & Base Datos EULA UdeC, Base Datos 2009  2010 & \\
+35 & OrigenReg: Base de Datos EULA UdeC, FuenteReg: Base Datos 2011 & Base Datos EULA UdeC, Base Datos 2011 & \\
+\addlinespace
+36 & OrigenReg: Fishnet2, FuenteReg: Colecta BS Dyer & Fishnet2, Colecta BS Dyer & \\
+37 & FuenteReg: McDowall 1971b Estudio: Ruiz \& Marchant 2004 & McDowall, R.M. 1971. The Galaxiid fishes of South America. Zoological Journal of the Limnological Society 50: 33–73. & Ruiz, V.H., and Marchand, M. 2004. Ictiofauna de aguas continentales chilenas. Universidad de Concepción.\\
+38 & OrigenReg: Publicación, FuenteReg: Unmack et al 2009 & Unmack, P.J., Habit, E.M., and Johnson, J.B. 2009. New records of Hatcheria macraei (Siluriformes, Trichomycteridae) from Chilean Province. Gayana 73(1): 102–110. & \\
+39 & FuenteReg: Unmack et al. 2009a & Unmack, P., Bennin, A., Habit, E., Victoriano, P., and Johnson, J. 2009. Impact of ocean barriers, topography, and glaciation on the phylogeography of the catfish Trichomycterus areolatus (Teleostei: Trichomycteridae) in Chile. Biological Journal of the Linnean Society 97: 876–892. doi:10.1111/j.1095-8312.2009.01224.x. & \\
+40 & FuenteReg: Unmack et al. 2009b & Unmack, P.J., Habit, E.M., and Johnson, J.B. 2009. New records of Hatcheria macraei (Siluriformes, Trichomycteridae) from Chilean Province. Gayana 73(1): 102–110. & \\
+\addlinespace
+41 & FuenteReg: Campos et al. 1998 Estudio: Ruiz \& Marchant 2004 & Campos, H., Dazarola, G., Dyer, B.S., Fuentes, L., Gavilán, J.F., Huaquín, L., Martínez, G., Meléndez, R., Pequeño, G., Ponce, F., Ruiz, V.H., Sielfeld, W., Soto, D., Vega, R., and Vila, I. 1998. Categorías de conservación de peces nativos de aguas continentales de Chile. Boletín del Museo Nacional de Historia Natural, Chile 47: 101–122. & Ruiz, V.H., and Marchand, M. 2004. Ictiofauna de aguas continentales chilenas. Universidad de Concepción.\\
+42 & FuenteReg: Unmack et al. 2012 & Unmack, P.J., Barriga, J.P., Battini, M.A., Habit, E.M., and Johnson, J.B. 2012. Phylogeography of the catfish Hatcheria macraei reveals a negligible role of drainage divides in structuring populations. Molecular Ecology 21(4): 942–959. doi:10.1111/j.1365-294X.2011.05408.x. & \\
+43 & OrigenReg: Francisco J. Neira 1984, & Neira, F.J. 1984. Biomorfología de las lampreas parásitas Geotria australis Gray, 1851 y Mordacia lapicida (Gray, 1851) (Petronizontiformes). Gayana Zoológica: 48(1-2): 3-40. & \\
+44 & FuenteReg: Perugia 1891 Estudio: Campos et al. 1993b & Perugia, A. 1891. Appunti sopra alcuni pesci sud-americani conservati nel Museo Civico di Storia Naturale di Genova. Annali del Museo Civico di Storia Naturale “Giacomo Doria” 10 (Serie 2): 605–657. & \\
+45 & OrigenReg: Unmack et al 2009, & Unmack, P.J., Habit, E.M., and Johnson, J.B. 2009. New records of Hatcheria macraei (Siluriformes, Trichomycteridae) from Chilean Province. Gayana 73(1): 102–110. & \\
+\addlinespace
+46 & FuenteReg: Eigenmann 1927 & Eigenmann, C.H. 1928. The fresh-water fishes of Chile. Memoirs of the National Academy of Science 22: 1–80. & \\
+\bottomrule
+\end{longtable}
+\endgroup{}
+
+También se combinaron campos \texttt{verbatimLocality},
+\texttt{DescrLoc}, y \texttt{SSCuenca\_correg} para crear
+\texttt{locality} y \texttt{eventRemarks} del DwC. El campo de MMA
+\texttt{locality} se omitió por ser redundante e incompleto.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# locality (recycling the exsisting locality column)}
+\NormalTok{tmp }\OtherTok{\textless{}{-}}\NormalTok{ MMA\_AE[, }\FunctionTok{c}\NormalTok{(}\StringTok{"verbatimLocality"}\NormalTok{, }\StringTok{"DescrLoc"}\NormalTok{, }\StringTok{"SSCuenca\_correg"}\NormalTok{)]}
+\NormalTok{MMA\_AE}\SpecialCharTok{$}\NormalTok{locality }\OtherTok{\textless{}{-}} \FunctionTok{apply}\NormalTok{(tmp, }\DecValTok{1}\NormalTok{, }\ControlFlowTok{function}\NormalTok{(x) \{}
+    \FunctionTok{paste0}\NormalTok{(}\FunctionTok{unique}\NormalTok{(x), }\AttributeTok{collapse =} \StringTok{". "}\NormalTok{)}
+\NormalTok{\})}
+\NormalTok{MMA\_AE}\SpecialCharTok{$}\NormalTok{locality }\OtherTok{\textless{}{-}} \FunctionTok{gsub}\NormalTok{(}\AttributeTok{pattern =} \StringTok{"NA. "}\NormalTok{, }\AttributeTok{replacement =} \StringTok{""}\NormalTok{, MMA\_AE}\SpecialCharTok{$}\NormalTok{locality)}
+\NormalTok{MMA\_AE}\SpecialCharTok{$}\NormalTok{locality }\OtherTok{\textless{}{-}} \FunctionTok{paste0}\NormalTok{(MMA\_AE}\SpecialCharTok{$}\NormalTok{locality, }\StringTok{"."}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Se rescató información de los campos \texttt{Mandante} y
+\texttt{Estacion} para incorporarla en \texttt{eventRemarks}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# eventRemarks (MandanteEstacion was renamed to}
+\CommentTok{\# eventRemarks below)}
+\NormalTok{MMA\_AE}\SpecialCharTok{$}\NormalTok{eventRemarks }\OtherTok{\textless{}{-}} \FunctionTok{paste0}\NormalTok{(}\StringTok{"Mandante: "}\NormalTok{, MMA\_AE}\SpecialCharTok{$}\NormalTok{Mandante,}
+    \StringTok{" | Estacion: "}\NormalTok{, MMA\_AE}\SpecialCharTok{$}\NormalTok{Estacion)}
+\NormalTok{MMA\_AE}\SpecialCharTok{$}\NormalTok{eventRemarks }\OtherTok{\textless{}{-}} \FunctionTok{gsub}\NormalTok{(}\StringTok{"Mandante: NA | Estacion: NA"}\NormalTok{, }\StringTok{""}\NormalTok{,}
+\NormalTok{    MMA\_AE}\SpecialCharTok{$}\NormalTok{eventRemarks)}
+\NormalTok{MMA\_AE}\SpecialCharTok{$}\NormalTok{eventRemarks[MMA\_AE}\SpecialCharTok{$}\NormalTok{eventRemarks }\SpecialCharTok{==} \StringTok{"|"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{""}
+\end{Highlighting}
+\end{Shaded}
+
+La combinación de los dos campos \texttt{Instit} y
+\texttt{Institución\ aporta\ BBDD\ Proyecto\ Ictiofauna\ 2015} generó
+una lista de valores únicos que fue exportada a una planilla de cálculo.
+Cada cadena de texto resultante fue revisada manualmente para asignar la
+información correspondiente entre los campos del DwC
+\texttt{institutionID} y \texttt{eventRemarks}. Estas mejoras se
+encuentran en el archivo
+\texttt{./data\_sources/GBIF\_MMA/institutionID\_fix.csv}, que a
+continuación se importa para actualizar los valores en MMA\_AE.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{refFix }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"./data\_sources/GBIF\_MMA/institutionID\_fix.csv"}\NormalTok{,}
+\NormalTok{    )}
+
+\CommentTok{\# Just a convenient function to concatenate cleanly below.}
+\NormalTok{clean\_pipes }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(x) \{}
+    \FunctionTok{sapply}\NormalTok{(}\FunctionTok{strsplit}\NormalTok{(x, }\StringTok{"}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{|"}\NormalTok{), }\ControlFlowTok{function}\NormalTok{(parts) \{}
+\NormalTok{        parts }\OtherTok{\textless{}{-}} \FunctionTok{trimws}\NormalTok{(parts)}
+\NormalTok{        parts }\OtherTok{\textless{}{-}}\NormalTok{ parts[parts }\SpecialCharTok{!=} \StringTok{""}\NormalTok{]}
+        \FunctionTok{paste}\NormalTok{(parts, }\AttributeTok{collapse =} \StringTok{" | "}\NormalTok{)}
+\NormalTok{    \}, }\AttributeTok{USE.NAMES =} \ConstantTok{FALSE}\NormalTok{)}
+\NormalTok{\}}
+
+\NormalTok{MMA\_AE }\OtherTok{\textless{}{-}}\NormalTok{ MMA\_AE }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{InstitInstitu =} \FunctionTok{paste}\NormalTok{(Instit, }\StringTok{\textasciigrave{}}\AttributeTok{Institución aporta BBDD }\SpecialCharTok{\textbackslash{}n}\AttributeTok{Proyecto Ictiofauna 2015}\StringTok{\textasciigrave{}}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+    \CommentTok{\# select(InstitInstitu, eventRemarks) \%\textgreater{}\%}
+\FunctionTok{left\_join}\NormalTok{(}\FunctionTok{select}\NormalTok{(refFix, InstitInstitu, institutionID, eventRemarks),}
+    \AttributeTok{by =} \FunctionTok{join\_by}\NormalTok{(InstitInstitu)) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{eventRemarks =} \FunctionTok{clean\_pipes}\NormalTok{(}\FunctionTok{paste}\NormalTok{(eventRemarks.y, eventRemarks.x,}
+        \AttributeTok{sep =} \StringTok{" | "}\NormalTok{))) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{eventRemarks.y, }\SpecialCharTok{{-}}\NormalTok{eventRemarks.x) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{distinct}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+El \texttt{TipoReg} fue renombrado a \texttt{basisOfRecord} y salvo por
+los etiquetados ``Voucher'', todos los registros se indexaron como
+``Occurrence''. Voucher fue renombrado a ``PreservedSpecimen''.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{MMA\_AE }\OtherTok{\textless{}{-}}\NormalTok{ MMA\_AE }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{basisOfRecord =} \FunctionTok{ifelse}\NormalTok{(TipoReg }\SpecialCharTok{==} \StringTok{"Voucher"}\NormalTok{, }\StringTok{"PreservedSpecimen"}\NormalTok{,}
+        \StringTok{"Occurrence"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+La variable \texttt{Precision} del MMA contenía el valor ``GPS'' en
+cientos de registros, indicando que las coordenadas geográficas
+provenían de lecturas de GPS. No obstante, las coordenadas, expresadas
+en grados decimales, presentaban solo tres decimales, lo que implica una
+resolución espacial aproximada del orden de 100 m. En consecuencia, para
+estandarizar esta información según DwC, los registros con
+\texttt{Precision\ =\ "GPS"} fueron homologados a
+\texttt{coordinateUncertaintyInMeters\ =\ 100}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{MMA\_AE }\OtherTok{\textless{}{-}}\NormalTok{ MMA\_AE }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{coordinateUncertaintyInMeters =} \FunctionTok{ifelse}\NormalTok{(Precision }\SpecialCharTok{==}
+        \StringTok{"GPS"}\NormalTok{, }\DecValTok{100}\NormalTok{, }\ConstantTok{NA\_real\_}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+Se seleccionaron las columnas con información relevante y se homologaron
+con el DwC sustituyendo sus nombres en los casos pendientes.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{MMA\_AE }\OtherTok{\textless{}{-}}\NormalTok{ MMA\_AE }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{mutate}\NormalTok{( }
+         \AttributeTok{occurrenceID          =}\NormalTok{ fila,      }
+         \AttributeTok{eventDate             =}\NormalTok{ fecha\_Col, }\CommentTok{\# processed above}
+         \AttributeTok{year                  =}\NormalTok{ AnoCol,    }\CommentTok{\# processed above}
+         \AttributeTok{locality              =}\NormalTok{ locality,  }\CommentTok{\# processed above}
+         \AttributeTok{decimalLongitude      =}\NormalTok{ Long\_correg\_2,}
+         \AttributeTok{decimalLatitude       =}\NormalTok{ Lat\_correg\_2,}
+         \AttributeTok{scientificName        =}\NormalTok{ NomCient,}
+         \AttributeTok{bibliographicCitation =}\NormalTok{ bibliographicCitation, }\CommentTok{\# processed above}
+         \AttributeTok{associatedReferences  =}\NormalTok{ associatedReferences,  }\CommentTok{\# processed above}
+         \AttributeTok{eventRemarks          =}\NormalTok{ eventRemarks,          }\CommentTok{\# processed above}
+         \AttributeTok{individualCount       =}\NormalTok{ NumIndiv,}
+         \AttributeTok{samplingProtocol      =}\NormalTok{ TipoMetodo,}
+         \AttributeTok{recordedBy            =}\NormalTok{ Colector,}
+         \AttributeTok{coordinateUncertaintyInMeters =}\NormalTok{ coordinateUncertaintyInMeters, }\CommentTok{\# above}
+         \AttributeTok{basisOfRecord         =}\NormalTok{ basisOfRecord, }\CommentTok{\# processed above}
+         \AttributeTok{institutionID         =}\NormalTok{ institutionID,         }\CommentTok{\# processed above}
+                \AttributeTok{.keep =} \StringTok{"none"}\NormalTok{ )}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Asignación de IDs de la versión
+GBIF}\label{asignaciuxf3n-de-ids-de-la-versiuxf3n-gbif}
+
+Si bien los datos del MMA ya fueron publicados en GBIF en formato DwC y
+se bajaron de esa plataforma (tabla GBIF\_MMA), estos están incompletos,
+faltaron campos importantes tales como \texttt{locality} y
+\texttt{bibliographicCitation}. Por lo tanto, se optó por usar la base
+de datos original del MMA manipulada en este documento (i.e., MMA),
+añadiéndole los campos \texttt{gbifID}, \texttt{datasetKey}, y
+\texttt{ocurrenceID} provenientes de GBIF\_MMA de modo de preservar la
+trazabilidad de la publicación original en GBIF.
+
+Para asociar, una a una, las ocurrencias de la tabla MMA con la de la
+table GBIF\_MMA, se usó como clave el campo \texttt{occurrenceID}
+(proveniente de \texttt{fila} en el set de datos original) luego de
+hacerlo compatible con \texttt{occurenceID} de GBIF\_MMA añadiéndole el
+prefijo ``MMA:ICT:'', seguido de siete dígitos correspondiendo al número
+de fila.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{MMA\_AE}\SpecialCharTok{$}\NormalTok{occurrenceID }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(MMA\_AE}\SpecialCharTok{$}\NormalTok{occurrenceID)}
+\NormalTok{MMA\_AE }\OtherTok{\textless{}{-}}\NormalTok{ MMA\_AE }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{occurrenceID =} \FunctionTok{sprintf}\NormalTok{(}\StringTok{"MMA:ICT:\%07d"}\NormalTok{, occurrenceID)) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{relocate}\NormalTok{(occurrenceID)}
+\FunctionTok{head}\NormalTok{(MMA\_AE}\SpecialCharTok{$}\NormalTok{occurrenceID)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "MMA:ICT:0000002" "MMA:ICT:0000003" "MMA:ICT:0000004" "MMA:ICT:0000005"
+## [5] "MMA:ICT:0000007" "MMA:ICT:0000008"
+\end{verbatim}
+
+Usando \texttt{occurrenceID} para relacionar ambos sets de datos, se
+extrajo \texttt{gbifID} de GBIF\_MMA y se le añadió a MMA (o MMA\_AE) en
+el campo \texttt{otherCatalogNumbers}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{MMA\_AE }\OtherTok{\textless{}{-}}\NormalTok{ MMA\_AE }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{left\_join}\NormalTok{(GBIF\_MMA }\SpecialCharTok{\%\textgreater{}\%}
+        \FunctionTok{select}\NormalTok{(occurrenceID, gbifID), }\AttributeTok{by =} \StringTok{"occurrenceID"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{otherCatalogNumbers =} \FunctionTok{paste0}\NormalTok{(}\StringTok{"gbifID:"}\NormalTok{, gbifID)) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{gbifID)}
+\end{Highlighting}
+\end{Shaded}
+
+Además se añadieron identificadores del conjunto de datos proveniente
+GBIF\_MMA en el caso de \texttt{datasetKey}, así como licencia de acceso
+también copiada de GBIF\_MMA.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{MMA\_AE }\OtherTok{\textless{}{-}}\NormalTok{ MMA\_AE }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{datasetName =} \StringTok{"Habit E, Vila I, Contreras L. M, Dyer B, Correa C, Naretto J, Contreras V, Amaya L, Villagran C (2023). Fauna Íctica Nativa Continental de Chile. Ministerio del Medio Ambiente de Chile. Occurrence dataset https://doi.org/10.15468/cxb957"}\NormalTok{,}
+        \AttributeTok{datasetID =} \StringTok{"GBIF UUID: 45c3d8d2{-}7352{-}4dd1{-}aefd{-}c21e0b6b004e"}\NormalTok{,}
+        \AttributeTok{license =} \StringTok{"CC BY{-}NC 4.0"}\NormalTok{, }\AttributeTok{accessRights =} \StringTok{"consultar con institución/autor"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Respaldo}\label{respaldo-3}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{write.csv}\NormalTok{(MMA\_AE, }\StringTok{"./data\_sources/GBIF\_MMA/Output\_MMA\_AE\_GBIF\_DwC.csv"}\NormalTok{,}
+    \AttributeTok{fileEncoding =} \StringTok{"UTF{-}8"}\NormalTok{, }\AttributeTok{row.names =}\NormalTok{ F)}
+
+\FunctionTok{saveRDS}\NormalTok{(MMA\_AE, }\StringTok{"./data\_sources/GBIF\_MMA/Output\_MMA\_AE\_GBIF\_DwC.rds"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 

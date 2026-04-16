@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.10)  10 APR 2026 16:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.10)  16 APR 2026 12:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -844,7 +844,7 @@ LaTeX Font Warning: Font shape `OML/cmtt/m/it' undefined
 (Font)              using `OML/cmm/m/it' instead
 (Font)              for symbol `textgreater' on input line 583.
 
-<Atlas_Ictiogeografico_files/figure-latex/studyareaplot-1.pdf, id=188, 174.6525pt x 316.18124pt>
+<Atlas_Ictiogeografico_files/figure-latex/studyareaplot-1.pdf, id=243, 174.6525pt x 316.18124pt>
 File: Atlas_Ictiogeografico_files/figure-latex/studyareaplot-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/studyareaplot-1.pdf>
 Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/studyareaplot-1.pdf  used on input line 600.
@@ -859,24 +859,24 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.690 \end{Shaded}
+l.681 \end{Shaded}
                    <./Atlas_Ictiogeografico_files/figure-latex/studyareaplot-1.pdf>]
-LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 745.
+LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 736.
 (c:/Program Files (x86)/R/R-4.4.1/share/texmf/tex/latex/omscmtt.fd
 File: omscmtt.fd 
 )
 LaTeX Font Info:    Font shape `OMS/cmtt/m/n' in size <10.03749> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 745.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 736.
 LaTeX Font Info:    Font shape `OMS/cmtt/bx/n' in size <10.03749> not available
-(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 760.
+(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 751.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [10]
-<Atlas_Ictiogeografico_files/figure-latex/CCdataplot-1.pdf, id=217, 174.6525pt x 316.18124pt>
+<Atlas_Ictiogeografico_files/figure-latex/CCdataplot-1.pdf, id=272, 174.6525pt x 316.18124pt>
 File: Atlas_Ictiogeografico_files/figure-latex/CCdataplot-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/CCdataplot-1.pdf>
-Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/CCdataplot-1.pdf  used on input line 791.
+Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/CCdataplot-1.pdf  used on input line 782.
 (pdftex.def)             Requested size: 174.65207pt x 316.18047pt.
 ignored error: Infinite glue shrinkage found in box being split
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -885,24 +885,28 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.829 \end{longtable}
+l.820 \end{longtable}
                       <./Atlas_Ictiogeografico_files/figure-latex/CCdataplot-1.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [12]
+Overfull \vbox (1.73134pt too high) detected at line 987
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [13]
-<Atlas_Ictiogeografico_files/figure-latex/CCrevdata-1.pdf, id=254, 174.6525pt x 316.18124pt>
+<Atlas_Ictiogeografico_files/figure-latex/CCrevdata-1.pdf, id=310, 174.6525pt x 316.18124pt>
 File: Atlas_Ictiogeografico_files/figure-latex/CCrevdata-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/CCrevdata-1.pdf>
-Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/CCrevdata-1.pdf  used on input line 1057.
+Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/CCrevdata-1.pdf  used on input line 1048.
 (pdftex.def)             Requested size: 174.65207pt x 316.18047pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [14]
-Underfull \hbox (badness 2318) in paragraph at lines 1110--1115
+Underfull \hbox (badness 2318) in paragraph at lines 1101--1106
 \OT1/cmr/m/n/10 Esta incluye una idea de la pre-cisi^^Son de la geolo-caci^^Son. (No se usaron vari-ables tales como
  []
 
@@ -913,14 +917,85 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1127 \begin{Shaded}
+l.1118 \begin{Shaded}
                       <./Atlas_Ictiogeografico_files/figure-latex/CCrevdata-1.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[16] (./Atlas_Ictiogeografico.bbl)
+[16]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[17] (./Atlas_Ictiogeografico.aux)
+[17]
+<Atlas_Ictiogeografico_files/figure-latex/revaguilarplot-1.pdf, id=345, 174.6525pt x 316.18124pt>
+File: Atlas_Ictiogeografico_files/figure-latex/revaguilarplot-1.pdf Graphic file (type pdf)
+<use Atlas_Ictiogeografico_files/figure-latex/revaguilarplot-1.pdf>
+Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/revaguilarplot-1.pdf  used on input line 1348.
+(pdftex.def)             Requested size: 174.65207pt x 316.18047pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[18]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[19
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1415 \subsubsection
+                     {Lectura de datos}\label{lectura-de-datos-3} <./Atlas_Ictiogeografico_files/figure-latex/revaguilarplot-1.pdf>]
+<Atlas_Ictiogeografico_files/figure-latex/MMAplot-1.pdf, id=374, 174.6525pt x 316.18124pt>
+File: Atlas_Ictiogeografico_files/figure-latex/MMAplot-1.pdf Graphic file (type pdf)
+<use Atlas_Ictiogeografico_files/figure-latex/MMAplot-1.pdf>
+Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/MMAplot-1.pdf  used on input line 1492.
+(pdftex.def)             Requested size: 174.65207pt x 316.18047pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[20]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[21
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1552 \begin{Shaded}
+                      <./Atlas_Ictiogeografico_files/figure-latex/MMAplot-1.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 1596--1600
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[22]
+Overfull \hbox (1669.18541pt too wide) in alignment at lines 1604--1665
+ [] [] [] [] 
+ []
+
+ignored error: Infinite glue shrinkage found in box being split
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[23]
+Underfull \hbox (badness 1655) in paragraph at lines 1700--1709
+\OT1/cmr/m/n/10 de texto resul-tante fue revisada man-ual-mente para asig-nar la infor-maci^^Son cor-re-spon-di-ente entre
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[24]
+Underfull \vbox (badness 10000) detected at line 1789
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[25] (./Atlas_Ictiogeografico.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[26])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[27] (./Atlas_Ictiogeografico.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-14>
@@ -933,21 +1008,21 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `Atlas_Ictiogeografico.out' has not changed.
-(rerunfilecheck)             Checksum: 0B422E8AB5905726A199F2DCDCA25127;3202.
+(rerunfilecheck)             Checksum: 10DCE9709A6BB5D53643FD189CFF1FC5;5308.
  ) 
 Here is how much of TeX's memory you used:
- 17644 strings out of 469519
- 280005 string characters out of 5468255
- 746202 words of memory out of 5000000
- 45928 multiletter control sequences out of 15000+600000
- 643354 words of font info for 104 fonts, out of 8000000 for 9000
+ 17728 strings out of 469519
+ 282296 string characters out of 5468255
+ 748369 words of memory out of 5000000
+ 45985 multiletter control sequences out of 15000+600000
+ 643691 words of font info for 105 fonts, out of 8000000 for 9000
  24 hyphenation exceptions out of 8191
- 90i,8n,93p,558b,626s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <c:/Users/crist/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> <c:/Users/crist/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcit1000.600pk> <c:/Users/crist/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tctt1000.600pk> <c:/Users/crist/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0900.600pk><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Atlas_Ictiogeografico.pdf (17 pages, 1087830 bytes).
+ 90i,8n,93p,1078b,629s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <c:/Users/crist/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0800.600pk> <c:/Users/crist/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> <c:/Users/crist/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcit1000.600pk> <c:/Users/crist/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tctt1000.600pk> <c:/Users/crist/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0900.600pk><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Atlas_Ictiogeografico.pdf (27 pages, 1521243 bytes).
 PDF statistics:
- 392 PDF objects out of 1000 (max. 8388607)
- 318 compressed objects within 4 object streams
- 58 named destinations out of 1000 (max. 500000)
- 160 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 541 PDF objects out of 1000 (max. 8388607)
+ 446 compressed objects within 5 object streams
+ 84 named destinations out of 1000 (max. 500000)
+ 258 words of extra memory for PDF output out of 10000 (max. 10000000)
 
