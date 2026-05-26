@@ -6,9 +6,6 @@ Data is coming from multiple sources, including museum collection and GBIF. But,
 
 Institution acronyms stand for, FO = Fundación Oga
 
-2024-04-2018:
-The database "Los Peces de Argentina" is no longer available in Databasin. But it appears that all the records are also included in "Los Peces de Latinoamérica y el Caribe"
-
 2025-11-28
 could be downloaded from "Los Peces de Argentina" https://databasin.org/maps/new/#
 First added to the map, then selected records from a relevant rectangular range, and then were downloaded.

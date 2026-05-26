@@ -1,1 +1,7 @@
 .Rproj.user/
+.Renviron
+.Rhistory
+.RData
+.Ruserdata
+/data_sources/GBIF/*
+!/data_sources/GBIF/Output_GBIF_2026-05-16.rds

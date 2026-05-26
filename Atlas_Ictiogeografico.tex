@@ -623,7 +623,8 @@ para identificar ocurrencias duplicadas.
 \subsection{Datos empíricos de los
 autores}\label{datos-empuxedricos-de-los-autores}
 
-\emph{Nombre del conjunto de datos}: Fish Database Correa-Boisjoly\\
+\emph{Nombre corto del conjunto de datos}: Fish collection
+Correa-Boisjoly\\
 \emph{Referencia}: Correa, Cristián, Maryse Boisjoly (2025) Base de
 datos empírica de peces de Chile. Valdivia, Chile. \citep{Correa2025}\\
 \emph{Archivo}: \texttt{FishDatabase\_Correa\_Boisjoly\_2025-11-27.csv}
@@ -900,7 +901,7 @@ todo el conjunto de datos.
 \subsection{Revisión de literatura C.
 Correa}\label{revisiuxf3n-de-literatura-c.-correa}
 
-\emph{Nombre corto del conjunto de datos}: CCorrea.Lit.Review\\
+\emph{Nombre corto del conjunto de datos}: C.Correa.Lit.Review\\
 \emph{Referencia}: Correa, Cristian, B. Dyer, G. Gajardo, C. Garcia De
 Leaniz, C. Meier, H. Samaniego (2009) Rumbo a un sistema nacional de
 información geográfica de peces dulceacuícolas de Chile. Poster
@@ -1376,7 +1377,7 @@ todo el conjunto de datos.
 \subsection{Base de datos Ministerio del Medio Ambiente de
 Chile}\label{base-de-datos-ministerio-del-medio-ambiente-de-chile}
 
-\emph{Nombre corto del conjunto de datos}: MMA (versión original)\\
+\emph{Nombre corto del conjunto de datos}: MMA.continental.fishes\\
 \emph{Nombre del conjunto de datos}: GBIF\_MMA (versión publicada en
 GBIF el 2023/12/13)\\
 \emph{Referencia}: Habit, E., Contreras, L., Dyer, B.S., Correa, C.,
@@ -1783,7 +1784,7 @@ con el DwC sustituyendo sus nombres en los casos pendientes.
          \AttributeTok{recordedBy            =}\NormalTok{ Colector,}
          \AttributeTok{coordinateUncertaintyInMeters =}\NormalTok{ coordinateUncertaintyInMeters, }\CommentTok{\# above}
          \AttributeTok{basisOfRecord         =}\NormalTok{ basisOfRecord, }\CommentTok{\# processed above}
-         \AttributeTok{institutionID         =}\NormalTok{ institutionID,         }\CommentTok{\# processed above}
+         \AttributeTok{institutionID         =}\NormalTok{ institutionID, }\CommentTok{\# processed above}
                 \AttributeTok{.keep =} \StringTok{"none"}\NormalTok{ )}
 \end{Highlighting}
 \end{Shaded}
@@ -1857,6 +1858,777 @@ también copiada de GBIF\_MMA.
     \AttributeTok{fileEncoding =} \StringTok{"UTF{-}8"}\NormalTok{, }\AttributeTok{row.names =}\NormalTok{ F)}
 
 \FunctionTok{saveRDS}\NormalTok{(MMA\_AE, }\StringTok{"./data\_sources/GBIF\_MMA/Output\_MMA\_AE\_GBIF\_DwC.rds"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{SUBPESCA: Primera base de
+datos}\label{subpesca-primera-base-de-datos}
+
+Hemos obtenido dos bases de datos aportadas por la Subsecretaría de
+Pesca y Acuicultura (SUBPESCA) que se analizan a continuación.
+
+Además, existe un set de datos llamado ``Base de datos biogeográfica del
+Fondo de Investigación Pesquera y de Acuicultura (1999-2019),
+Subsecretaría de Pesca y Acuicultura'' publicado en 2023
+\href{https://www.gbif.org/dataset/9f094ddc-68f9-426b-91f2-4c6f34298b34}{(vínculo)}
+con más de 3 millones de ocurrencias pero que no se analizó porque su
+área de estudio es el ambiente marino. Se confirmó que la composición
+taxonómica no incluye especies de interés.
+
+Primer set de datos:\\
+\emph{Nombre corsto del conjunto de datos}:
+SUBPESCA.PecesContinentales2019\\
+\emph{Referencia}: SUBPESCA (2019) Sistematización de registros de peces
+de aguas continentales. \emph{Archivo}:
+\texttt{BDSubpesca\_original.xlsx}
+
+Esta base de dados con registros hasta 2019 incluye un número de
+publicaciones científicas, informes de declaración y evaluación de
+impacto ambiental y posiblemente permisos de pesca de investigación.
+Viene con muchos errores, inconsistencias, formatos heterogéneos, etc.,
+que han sido abordados y subsanados en la medida de lo posible.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{SUBPESCA }\OtherTok{\textless{}{-}}\NormalTok{ readxl}\SpecialCharTok{::}\FunctionTok{read\_xlsx}\NormalTok{(}\StringTok{"./data\_sources/SUBPESCA/SubpescaDB1/BDSubpesca\_original.xlsx"}\NormalTok{,}
+    \AttributeTok{col\_types =} \StringTok{"text"}\NormalTok{, }\AttributeTok{col\_names =}\NormalTok{ T, }\AttributeTok{na =} \StringTok{"NA"}\NormalTok{)}
+
+\NormalTok{SUBPESCA}\SpecialCharTok{$}\NormalTok{decimalLatitude }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(SUBPESCA}\SpecialCharTok{$}\NormalTok{decimalLatitude)}
+\NormalTok{SUBPESCA}\SpecialCharTok{$}\NormalTok{decimalLongitude }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(SUBPESCA}\SpecialCharTok{$}\NormalTok{decimalLongitude)}
+\NormalTok{SUBPESCA}\SpecialCharTok{$}\NormalTok{ABUNDACIA }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(SUBPESCA}\SpecialCharTok{$}\NormalTok{ABUNDACIA)}
+\end{Highlighting}
+\end{Shaded}
+
+Modificar el título de proyecto que posee un número ascendente al final,
+como producto de arrastre de celdas en excel.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{SUBPESCA }\OtherTok{\textless{}{-}}\NormalTok{ SUBPESCA }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{TITULO\_PRO =} \FunctionTok{if\_else}\NormalTok{(}\FunctionTok{grepl}\NormalTok{(}\StringTok{"EVALUACION Y SEGUIMIENTO DE LA SITUACION SANITARIA DE ESPECIES SILVESTRES EN AGUA DULCE Y MAR"}\NormalTok{,}
+\NormalTok{        TITULO\_PRO), }\StringTok{"EVALUACION Y SEGUIMIENTO DE LA SITUACION SANITARIA DE ESPECIES SILVESTRES EN AGUA DULCE Y MAR"}\NormalTok{,}
+\NormalTok{        TITULO\_PRO))}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Manejo de referencias}\label{manejo-de-referencias}
+
+Se combinaron seis campos para crear una versión cruda preliminar del
+atributo \texttt{bibliographicCitation} del DwC.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{SUBPESCA}\SpecialCharTok{$}\NormalTok{REVISTA }\OtherTok{\textless{}{-}} \FunctionTok{gsub}\NormalTok{(}\StringTok{"ND"}\NormalTok{, }\StringTok{""}\NormalTok{, SUBPESCA}\SpecialCharTok{$}\NormalTok{REVISTA)}
+
+\NormalTok{SUBPESCA }\OtherTok{\textless{}{-}}\NormalTok{ SUBPESCA }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{TITULO\_PRO =} \FunctionTok{if\_else}\NormalTok{(stringr}\SpecialCharTok{::}\FunctionTok{str\_to\_upper}\NormalTok{(TITULO\_PRO) }\SpecialCharTok{==}
+\NormalTok{        TITULO\_PRO, stringr}\SpecialCharTok{::}\FunctionTok{str\_to\_title}\NormalTok{(}\FunctionTok{tolower}\NormalTok{(TITULO\_PRO)),}
+\NormalTok{        TITULO\_PRO)) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{bibliographicCitation =} \FunctionTok{paste0}\NormalTok{(}\StringTok{\textasciigrave{}}\AttributeTok{AUTOR/EJECUTOR}\StringTok{\textasciigrave{}}\NormalTok{, }\StringTok{" ("}\NormalTok{,}
+\NormalTok{        AÑO\_PUBLIC, }\StringTok{") "}\NormalTok{, TITULO\_PRO, }\StringTok{". "}\NormalTok{, REVISTA, }\StringTok{", "}\NormalTok{, LINK)) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{bibliographicCitation =} \FunctionTok{ifelse}\NormalTok{(}\FunctionTok{is.na}\NormalTok{(REVISTA), bibliographicCitation,}
+        \StringTok{\textasciigrave{}}\AttributeTok{CITA (APA)}\StringTok{\textasciigrave{}}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{bibliographicCitation =} \FunctionTok{str\_trim}\NormalTok{(}\FunctionTok{str\_remove\_all}\NormalTok{(bibliographicCitation,}
+        \StringTok{"[}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{.,;]?}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{s*(}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{b(NA|ND)}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{b[}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{s,]*)+$"}\NormalTok{)))}
+
+\CommentTok{\# length(unique(SUBPESCA$bibliographicCitation))}
+\end{Highlighting}
+\end{Shaded}
+
+El conjunto de datos presentó 90 referencias provenientes de estudios de
+impacto ambiental (consultores), artículos científicos y otros.
+
+Muchos de los artículos científicos indexados contenían errores y
+omisiones tal como no registrar el año de las ocurrencias lo que genera
+dificultades en el procesamiento subsecuente en el capítulo
+\emph{Consolidación del Atlas Ictiogeográfico}. Por lo tanto se optó por
+excluir todas las ocurrencias de este set de datos correspondientes a
+artículos científicos indexadas también en otros conjuntos de datos de
+mejor calidad (i.e.~redundantes). Para esto, primero se exportó una
+planilla con las 90 referencias (\texttt{bibliographicCitation}), y esta
+planilla se editó manualmente añadiendo el campo \texttt{Filter} con
+valores 1 y 0 para referencias a incluir o excluir, respectivamente.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Save the table of references edit it in the spreadsheet}
+\CommentTok{\# (done)}
+
+\CommentTok{\# tmp \textless{}{-} SUBPESCA \%\textgreater{}\% select(bibliographicCitation) \%\textgreater{}\%}
+\CommentTok{\# arrange() \%\textgreater{}\% unique() write.csv(tmp,}
+\CommentTok{\# \textquotesingle{}./data\_sources/SUBPESCA/SubpescaDB1/Subpesca\_bibliographicCitation.csv\textquotesingle{})}
+
+\CommentTok{\# Import the table of references including the filter}
+\CommentTok{\# column added manually}
+
+\NormalTok{filter }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"./data\_sources/SUBPESCA/SubpescaDB1/Subpesca\_bibliographicCitation\_filter.csv"}\NormalTok{,}
+    \AttributeTok{row.names =} \DecValTok{1}\NormalTok{)}
+
+\NormalTok{n\_exclude }\OtherTok{\textless{}{-}}\NormalTok{ SUBPESCA }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{left\_join}\NormalTok{(filter, }\AttributeTok{by =} \StringTok{"bibliographicCitation"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{filter}\NormalTok{(Filter }\SpecialCharTok{==} \DecValTok{0}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{nrow}\NormalTok{()}
+
+\NormalTok{SUBPESCA }\OtherTok{\textless{}{-}}\NormalTok{ SUBPESCA }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{left\_join}\NormalTok{(filter, }\AttributeTok{by =} \StringTok{"bibliographicCitation"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{filter}\NormalTok{(Filter }\SpecialCharTok{==} \DecValTok{1}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+En la planilla, de las 90 referencias, 30 se excluyeron (números un poco
+exagerados pues algunas referencias aparecían más de una vez bajo
+distinto formato). La aplicación de este filtro resultó en la exclusión
+de 335 ocurrencias provenientes de artículos científicos indexados en
+otros conjuntos de datos. La vasta mayoría de las referencias retenidas
+corresponden a ocurrencias reportadas por empresas consultoras en el
+marco del Sistema de Evaluación Ambiental (SEA). Se retuvieron 7176
+ocurrencias.
+
+\subsubsection{Filtrado área de
+estudio}\label{filtrado-uxe1rea-de-estudio-3}
+
+Primero se estandarizaron las coordenadas geográficas a grados
+decimales, y luego se filtró el área de estudio. Estos pasos se hicieron
+en un SIG (ArcGIS 10.8.2) antes de importar los datos (Marilyn Aguilar).
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  De los puntos dentro del rango de interés (X-XII Región) de la base de
+  datos Subpesca existieron 38 puntos UTM erróneos que tuvieron que ser
+  incorporados manualmente al SIG, pasando en limpio los datos
+  originales para poder corregir los errores.
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  23 de estos (datos Econometric ID: 50214-50248) no tenían el 7mo
+  dígito de la coordenada Norte y correspondían a datos de una DIA. De
+  acuerdo con los datos originales de esta DIA
+  (\url{https://seia.sea.gob.cl/expediente/expedientesEvaluacion.php?modo=ficha&id_expediente=2132812956})
+  sólo 20 puntos corresponden realmente a los datos originales.\\
+\item
+  11 datos (ID: 31580-31584; todos \emph{G. maculatus}) correspondían al
+  paper de Delgado et al.~(2019). Luego de revisar el paper se constató
+  que eran 14 y no 11 puntos: 3 de estos de Zemlak et al.~2010; 9 de
+  Gorski et al.~2018; y 2 datos no publicados anteriormente de Habit
+  Lab.\\
+\item
+  2 datos correspondientes al EIA Central de pasada Mediterraneo
+  (\url{https://seia.sea.gob.cl/expediente/expedientesEvaluacion.php?modo=ficha&id_expediente=6357086\#-1})
+  (ID: 25957 y 28720) que según documentación original son 4 datos (3 de
+  \emph{S. trutta} y 1 de \emph{O. mykiss}).\\
+\item
+  1 polígono Subcuenca 1152/Río Aviles (ID: 29153)
+  (\url{https://seia.sea.gob.cl/expediente/expedientesEvaluacion.php?modo=ficha&id_expediente=2128931266})
+  que, de acuerdo con documentación original, no hay datos pues se dio
+  termino anticipado al proyecto y en el expediente solo se menciona que
+  se espera encontrar \emph{O. mykiss} en el área de estudio pero no se
+  realizó ningún estudio al respecto. Por esto, este punto se excluyó.\\
+\item
+  1 dato erróneo (ID: 44711) que no se logró corroborar con la
+  información original. No obstante, de acuerdo con la base de datos de
+  Subpesca, es un dato que pertenece a la cuenca del Río Maullín así que
+  no corresponde con nuestra área de estudio. Excluído.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Asimismo, existieron 50 puntos erróneos de coordenadas tipo DM, las
+  cuales tuvieron que ser ingresadas manualmente una vez corregidas:\\
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  3 pertenecían a Aló et al.~(2013) (ID: 31534-31536), luego de revisar
+  el paper se corrigió a 7 puntos.\\
+\item
+  35 de estos provenían de Ortiz-Sandoval et al.~(2017) (ID:
+  31760-31794). Por lo tanto, los 61 puntos originales se extrajeron
+  directamente del paper.\\
+\item
+  12 correspondían a Bravo et al.~(2019) sobre especies introducidas
+  (ID: 31705-31716). Tras una revisión del paper se corrigió a 2 sitios
+  de muestreo y 4 especies registradas por sitio.
+\end{itemize}
+
+En resumen se ingresaron manualmente 24 puntos UTM y 90 puntos en grados
+decimales (incluidos los 14 puntos de Delgado et al.~2019), provenientes
+de estos errores de la base de datos de Subpesca.
+
+En cuanto a las columnas de ``decimalLatitude'', y ``decimalLongitude'',
+estas fueron calculadas una vez obtenidas las capas de coordenadas de la
+base de datos Subpesca en ArcGIS. Primero se pasaron las planillas excel
+a tablas de atributos y luego estas tablas de atributos fueron
+transformadas a datos con coordenadas grados decimales mediante el
+geoproceso ``Convert Coordinate Notation (Data Management)''. Una vez
+hecho este proceso para las diferentes capas procesadas de acuerdo a las
+diferencias en coordenadas originales (DD, DMS, UTM, adicionales
+provenientes de errores), se realizó la fusión de capas para tener todos
+los datos en una misma planilla con sus coordenadas en grados decimales.
+
+Una vez ingresados los datos en este análisis, se corrigieron 20
+coordenadas intercambiadas ente latitud y longitud.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Offending coordinates: OBJECTID \%in\% c(50214:50233)}
+\NormalTok{SUBPESCA[SUBPESCA}\SpecialCharTok{$}\NormalTok{OBJECTID }\SpecialCharTok{\%in\%} \FunctionTok{c}\NormalTok{(}\DecValTok{50214}\SpecialCharTok{:}\DecValTok{50233}\NormalTok{), }\FunctionTok{c}\NormalTok{(}\StringTok{"decimalLongitude"}\NormalTok{,}
+    \StringTok{"decimalLatitude"}\NormalTok{)] }\OtherTok{\textless{}{-}}\NormalTok{ SUBPESCA[SUBPESCA}\SpecialCharTok{$}\NormalTok{OBJECTID }\SpecialCharTok{\%in\%} \FunctionTok{c}\NormalTok{(}\DecValTok{50214}\SpecialCharTok{:}\DecValTok{50233}\NormalTok{),}
+    \FunctionTok{c}\NormalTok{(}\StringTok{"decimalLatitude"}\NormalTok{, }\StringTok{"decimalLongitude"}\NormalTok{)]}
+\end{Highlighting}
+\end{Shaded}
+
+Mapa con datos filtrados espacialmente (Figura \ref{fig:SUBPESCAplot}).
+
+\begin{figure}
+
+{\centering \includegraphics{Atlas_Ictiogeografico_files/figure-latex/SUBPESCAplot-1} 
+
+}
+
+\caption{Distribución de ocurrencias de peces de la base de datos de SUBPESCA.}\label{fig:SUBPESCAplot}
+\end{figure}
+
+\subsubsection{Selección de atributos}\label{selecciuxf3n-de-atributos}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{SUBPESCA }\OtherTok{\textless{}{-}}\NormalTok{ SUBPESCA }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(OBJECTID,}
+        \CommentTok{\# FUENTE\_BBDD   }
+        \CommentTok{\# MANDANTE}
+\NormalTok{        MES,}
+        \StringTok{\textasciigrave{}}\AttributeTok{AÑO}\StringTok{\textasciigrave{}}\NormalTok{,}
+        \CommentTok{\# HORA, \# barely available}
+\NormalTok{        COD\_EST,}
+\NormalTok{        ESTE,}
+\NormalTok{        NORTE,}
+\NormalTok{        UTM,}
+\NormalTok{        DATUM,}
+\NormalTok{        NOMBRE\_CIE,}
+\NormalTok{        TIPO\_ARTE,}
+\NormalTok{        ABUNDACIA,}
+\NormalTok{        bibliographicCitation, }\CommentTok{\# modified above}
+\NormalTok{        decimalLongitude, }\CommentTok{\# coords normalized earlier }
+\NormalTok{        decimalLatitude) }
+        \CommentTok{\# UNIDAD\_ABUN }
+        \CommentTok{\# CPUE}
+        \CommentTok{\# UNIDAD\_CPUE   \# These atributes aren\textquotesingle{}t well curated }
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Estandarización de
+fechas}\label{estandarizaciuxf3n-de-fechas}
+
+Se estandarizó la fecha de ocurrencia. La base de datos provista por
+SUBPESCA solo contemplaba los campos Mes y Año, y para la mayoría de los
+registros, estos campos estaban vacíos.
+
+Por ahora, se reemplazaron los rangos de años por el primer año, los
+años cero por \texttt{NA}s, y los años y meses originales con formatos
+especiales se conservaron en \texttt{verbatimEventDate}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{SUBPESCA}\SpecialCharTok{$}\NormalTok{MES }\OtherTok{\textless{}{-}} \FunctionTok{gsub}\NormalTok{(}\AttributeTok{pattern =} \StringTok{"ND"}\NormalTok{, }\AttributeTok{replacement =} \ConstantTok{NA}\NormalTok{, SUBPESCA}\SpecialCharTok{$}\NormalTok{MES)}
+
+\NormalTok{SUBPESCA }\OtherTok{\textless{}{-}}\NormalTok{ SUBPESCA }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{Offending\_month =} \FunctionTok{ifelse}\NormalTok{(}\FunctionTok{is.na}\NormalTok{(}\FunctionTok{suppressWarnings}\NormalTok{(}\FunctionTok{as.integer}\NormalTok{(MES))),}
+\NormalTok{        MES, }\ConstantTok{NA}\NormalTok{), }\AttributeTok{Offending\_year =} \FunctionTok{ifelse}\NormalTok{(}\FunctionTok{is.na}\NormalTok{(}\FunctionTok{suppressWarnings}\NormalTok{(}\FunctionTok{as.integer}\NormalTok{(AÑO))),}
+\NormalTok{        AÑO, }\ConstantTok{NA}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{MES =} \FunctionTok{suppressWarnings}\NormalTok{(}\FunctionTok{as.integer}\NormalTok{(MES)), AÑO }\OtherTok{=} \FunctionTok{suppressWarnings}\NormalTok{(}\FunctionTok{as.integer}\NormalTok{(AÑO)),}
+        \AttributeTok{verbatimEventDate =} \FunctionTok{paste}\NormalTok{(Offending\_year, Offending\_month)) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(AÑO }\OtherTok{=} \FunctionTok{ifelse}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{is.na}\NormalTok{(Offending\_year), }\FunctionTok{as.character}\NormalTok{(}\FunctionTok{sapply}\NormalTok{(}\FunctionTok{strsplit}\NormalTok{(Offending\_year,}
+        \StringTok{"{-}"}\NormalTok{), }\StringTok{\textasciigrave{}}\AttributeTok{[}\StringTok{\textasciigrave{}}\NormalTok{, }\DecValTok{1}\NormalTok{)), AÑO)) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(AÑO }\OtherTok{=} \FunctionTok{ifelse}\NormalTok{(AÑO }\SpecialCharTok{==} \StringTok{"0"}\NormalTok{, }\ConstantTok{NA}\NormalTok{, AÑO)) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(AÑO }\OtherTok{=} \FunctionTok{as.integer}\NormalTok{(AÑO)) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{verbatimEventDate =} \FunctionTok{gsub}\NormalTok{(}\StringTok{"NA"}\NormalTok{, }\StringTok{""}\NormalTok{, verbatimEventDate)) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{verbatimEventDate =}\NormalTok{ stringr}\SpecialCharTok{::}\FunctionTok{str\_squish}\NormalTok{(verbatimEventDate)) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{Offending\_month, }\SpecialCharTok{{-}}\NormalTok{Offending\_year)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Estandarización nombre
+científico}\label{estandarizaciuxf3n-nombre-cientuxedfico}
+
+Se pasaron a minúsculas los nombres científicos, salvo por la primera
+letra de géneros.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{SUBPESCA }\OtherTok{\textless{}{-}}\NormalTok{ SUBPESCA }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{NOMBRE\_CIE =}\NormalTok{ stringr}\SpecialCharTok{::}\FunctionTok{str\_to\_sentence}\NormalTok{(NOMBRE\_CIE)) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{NOMBRE\_CIE =}\NormalTok{ stringr}\SpecialCharTok{::}\FunctionTok{str\_squish}\NormalTok{(NOMBRE\_CIE))}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Homologación al formato
+DwC}\label{homologaciuxf3n-al-formato-dwc-1}
+
+Se renombraron las columnas para homologar,
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{SUBPESCA }\OtherTok{\textless{}{-}}\NormalTok{ SUBPESCA }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{occurrenceID =} \FunctionTok{paste0}\NormalTok{(}\StringTok{"SUBPESCA.PecesContinentales2019."}\NormalTok{,}
+\NormalTok{        OBJECTID), }\AttributeTok{catalogNumber =}\NormalTok{ OBJECTID, }\AttributeTok{month =}\NormalTok{ MES, }\AttributeTok{year =}\NormalTok{ AÑO,}
+        \AttributeTok{locationRemarks =}\NormalTok{ COD\_EST, }\AttributeTok{verbatimLatitude =}\NormalTok{ ESTE, }\AttributeTok{verbatimLongitude =}\NormalTok{ NORTE,}
+        \AttributeTok{verbatimCoordinateSystem =}\NormalTok{ UTM, }\AttributeTok{verbatimSRS =}\NormalTok{ DATUM,}
+        \AttributeTok{scientificName =}\NormalTok{ NOMBRE\_CIE, }\AttributeTok{samplingProtocol =}\NormalTok{ TIPO\_ARTE,}
+        \AttributeTok{individualCount =}\NormalTok{ ABUNDACIA, }\AttributeTok{bibliographicCitation =}\NormalTok{ bibliographicCitation,}
+        \AttributeTok{decimalLongitude =}\NormalTok{ decimalLongitude, }\AttributeTok{decimalLatitude =}\NormalTok{ decimalLatitude,}
+        \AttributeTok{.keep =} \StringTok{"none"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Además se añadió un identificador del conjunto de datos.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{SUBPESCA }\OtherTok{\textless{}{-}}\NormalTok{ SUBPESCA }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{datasetName =} \StringTok{"SUBPESCA (2019) Sistematización de registros de peces de aguas continentales."}\NormalTok{,}
+        \AttributeTok{license =} \StringTok{"CC NC{-}BY 4.0"}\NormalTok{, }\AttributeTok{accessRights =} \StringTok{"Publicaciones científicas y estudios parte del SEA son de acceso público"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{ungroup}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Respaldo}\label{respaldo-4}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{write.csv}\NormalTok{(SUBPESCA, }\StringTok{"./data\_sources/SUBPESCA/SubpescaDB1/Output\_SUBPESCA\_DwC.csv"}\NormalTok{,}
+    \AttributeTok{fileEncoding =} \StringTok{"UTF{-}8"}\NormalTok{, }\AttributeTok{row.names =}\NormalTok{ F)}
+
+\FunctionTok{saveRDS}\NormalTok{(SUBPESCA, }\StringTok{"./data\_sources/SUBPESCA/SubpescaDB1/Output\_SUBPESCA\_DwC.rds"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{SUBPESCA: Segunda base de
+datos}\label{subpesca-segunda-base-de-datos}
+
+\emph{Nombre corto del conjunto de datos}:
+SUBPESCA.PescaInvestigación2012-2023.\\
+\emph{Referencia}: SUBPESCA (2023) Resultados de pesca de investigación
+de peces de aguas continentales en el período 2012-2023.
+
+\emph{Archivo}: \texttt{BD\_Subpesca\_PINV\_2012\_2023\_original.xlsx}
+
+Estos datos fueron adquiridos mediante solicitud bajo Ley de
+Transparencia a la Subsecretaría de Pesca y Acuicultura (SUBPESCA), como
+respuesta a consulta de acceso a la información pública CI:
+AH002T-0005627, solicitada por Marilyn Aguilar González en 2023. Dicha
+solicitud requirió de un proceso de subsanación (gestionado por Macarena
+Covarrubias), acotando el período de Permisos de Pesca de Investigación
+a los resultados de proyectos desde el año 2012 hasta el otoño 2023.
+
+Se recibieron 113 carpetas organizadas por resolución de aceptación de
+cada permiso de pesca (los datos no estaba ordenados en una tabla). De
+estas, sólo 12 correspondieron con el área y especies de estudio y por
+lo tanto fueron procesadas para crear una sola tabla de datos a partir
+de la información disponible en las carpetas.
+
+El archivo \texttt{BD\_Subpesca\_PINV\_2012\_2023\_original.xlsx}
+contiene los datos de las observaciones de peces dentro del área de
+interés en su estado original desde la base de datos adquirida.
+
+Sin embargo, esta tabla fue modificada para conformar con el formato DwC
+antes de ser leída aquí. Se hicieron los siguientes cambios:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Primero, se combinaron varios campos para crear el campo
+  \texttt{bibliographicCitation} (EJECUTOR, AÑO, N° DE RESOLUCIÓN
+  SUBPESCA, TITULO PROYECTO, N° DE RESOLUCIÓN SUBPESCA, MANDANTE).
+\item
+  Luego, se renombraron las siguientes columnas como sigue:
+\end{enumerate}
+
+AÑO -\textgreater{} \texttt{year}\\
+MES -\textgreater{} \texttt{month}\\
+HORA DE MUESTREO -\textgreater{} \texttt{eventTime}\\
+ESTACIÓN -\textgreater{} \texttt{locationRemarks}\\
+LATITUD -\textgreater{} \texttt{verbatimLatitude}\\
+LONGITUD -\textgreater{} \texttt{verbatimLongitude}\\
+NOMBRE CIENTÍFICO -\textgreater{} \texttt{scientificName}\\
+NOMBRE COMÚN -\textgreater{} \texttt{vernacularName}\\
+N° INDIVIDUOS -\textgreater{} \texttt{individualCount}\\
+TIPO DE ARTE -\textgreater{} \texttt{samplingProtocol}\\
+VALOR CPUE -\textgreater{} \texttt{sampleSizeValue}\\
+UNIDAD CPUE -\textgreater{} \texttt{sampleSizeUnit}\\
+N° DE INDIVIDUOS -\textgreater{} \texttt{individualCount}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\item
+  Se estandarizaron las coordenadas geográficas transformado, según
+  corresponda, a grados decimales mediante la herramienta \emph{Convert
+  Coordinate Notation (Data Management)} en ArcGIS. Las coordenadas
+  estandarizadas se guardaron en dos nuevas variables
+  \texttt{decimalLatitud} y \texttt{decimalLongitude}.
+\item
+  Se añadieron nuevas variables con información encontrada en las
+  carpetas, incluyendo:\\
+  \texttt{verbatimEventDate}\strut \\
+  \texttt{eventDate}\strut \\
+  \texttt{locality}\strut \\
+  \texttt{samplingEffort}\strut \\
+  \texttt{continent}\strut \\
+  \texttt{country}\strut \\
+  \texttt{countryCode}\strut \\
+  \texttt{stateProvince}\strut \\
+  \texttt{county}\strut \\
+  \texttt{municipality}
+\item
+  Un número de campos fueron omitidos (FUENTE, Nº SACRIFICADOS, DIDYMO
+  VISUAL, MUESTRA, PESO\_MIN\_GR, PESO\_MAX\_GR, PESO\_PROMEDIO, PESO
+  D.S., LONG\_MIN\_CM, LONG\_MAX\_CM, LONG\_PROMEDIO, LONG\_D.S., y
+  otros).
+\end{enumerate}
+
+En adelante se trabajó con la tabla de datos homologada que se lee a
+continuación.
+
+\subsubsection{Lectura de datos
+homologados}\label{lectura-de-datos-homologados}
+
+Se importó la tabla de datos preparada como se describe arriba.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{SUBPESCA2 }\OtherTok{\textless{}{-}}\NormalTok{ readxl}\SpecialCharTok{::}\FunctionTok{read\_xlsx}\NormalTok{(}\StringTok{"./data\_sources/SUBPESCA/SubpescaDB2/BD\_Subpesca\_PINV\_2012\_2023\_homologado\_CC.xlsx"}\NormalTok{,}
+    \AttributeTok{col\_types =} \StringTok{"text"}\NormalTok{, }\AttributeTok{col\_names =}\NormalTok{ T, }\AttributeTok{na =} \StringTok{"NA"}\NormalTok{)}
+
+\NormalTok{SUBPESCA2 }\OtherTok{\textless{}{-}}\NormalTok{ SUBPESCA2 }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{decimalLongitude =} \FunctionTok{as.numeric}\NormalTok{(decimalLongitude), }\AttributeTok{decimalLatitude =} \FunctionTok{as.numeric}\NormalTok{(decimalLatitude),}
+        \AttributeTok{individualCount =} \FunctionTok{as.numeric}\NormalTok{(individualCount), }\AttributeTok{day =} \FunctionTok{as.numeric}\NormalTok{(day),}
+        \AttributeTok{month =} \FunctionTok{as.numeric}\NormalTok{(month), }\AttributeTok{year =} \FunctionTok{as.numeric}\NormalTok{(year), }\AttributeTok{eventDate =} \FunctionTok{as.Date}\NormalTok{(eventDate))}
+\end{Highlighting}
+\end{Shaded}
+
+El conjunto de datos presentó 12 referencias correspondientes a informes
+de resultados de pescas de investigación autorizadas por SUBPESCA en el
+marco del Sistema de Evaluación Ambiental (Tabla
+\ref{tab:subpescareftable}).
+
+\begingroup\fontsize{8}{10}\selectfont
+
+\begin{longtable}[t]{>{\raggedleft\arraybackslash}p{4em}>{\raggedright\arraybackslash}p{50em}}
+\caption{\label{tab:subpescareftable}Lista de referencias en el segundo conjunto de datos de SUBPESCA.}\\
+\toprule
+id & before\\
+\midrule
+1 & Maring Eirl (2012) Informe de resutados de pesca de investigación asociado al permiso SUBPESCA, R.EX N°262/2012. Proyecto: Evaluación limnológica-íctica, estero El Arco, Coyhaique, Región de Aysén. Mandante: Garo S.A.\\
+2 & Gaman Limno Studies Ltda. (2014) Informe de resutados de pesca de investigación asociado al permiso SUBPESCA, R.EX N°767/2014. Proyecto: Estudio Línea base de tipo limnológico del proyecto hidroeléctrico Chaica en el río Lenca, comuna de Puerto Montt, X Región. Mandante: Ingenium Civil S.A\\
+3 & Claudia Verdugo Castro (Ecosistema) (2016) Informe de resutados de pesca de investigación asociado al permiso SUBPESCA, R.EX N°3232/2016. Proyecto: Piscicultura de recirculación lago Balmaceda, Sealand Aquaculture S.A.; respuesta observación 1.2.8 ICSARA n°1 (064/2016). Mandante: Sealand Aquaculture S.A.\\
+4 & Icnova Ing Consultores (2018) Informe de resutados de pesca de investigación asociado al permiso SUBPESCA, R. EX N°388/2018. Proyecto: Diagnostico hidrobiológico de laguna Escondida y laguna Barrosa - declaración de impacto ambiental almacenamiento de agua de interior Mina Javiera en laguna Salitrosa, comuna de Chile Chico, XII Región de Aysén. Mandante: Compañía Minera Cerro Bayo Ltda.\\
+5 & Icnova Ing (2018) Informe de resutados de pesca de investigación asociado al permiso SUBPESCA, R. EX N°838/2018. Proyecto: Caracterización limnológica asociado al proyecto de riego Magallanes, embalse río Porvenir, XII region de Magallanes y la Antártica Chilena. Mandante: Comisión Nacional de Riego.\\
+\addlinespace
+6 & Martinez Ambiental Ltda (2019) Informe de resutados de pesca de investigación asociado al permiso SUBPESCA, R.EX N°1628/2019. Proyecto: Plan de vigilancia ambiental, asociado al proyecto Mina Invierno, comuna de Río Verde, región de Magallanes y Antártica Chilena. Mandante: Minera Invierno Sa.\\
+7 & Claudia Verdugo Castro (2020) Informe de resutados de pesca de investigación asociado al permiso SUBPESCA, R. EX N°65/2020. Proyecto: Monitoreo limnológico proyecto refundición de RCA's Amplición y cambio operacional, río Petrohué, comuna de Puerto Varas, región de Los Lagos. Mandante: Salmones Camanchaca S.A.\\
+8 & Claudia Verdugo Castro (2020) Informe de resutados de pesca de investigación asociado al permiso SUBPESCA, R. EX. N° E-2020-607 . Proyecto: Línea base limnológica Río Trainel cercano a la Piscicultura Trainel, región de Los Lagos. Mandante: Piscicultura Trainel.\\
+9 & Jaime Illanes y Asociados Consultores S.A.  (2021) Informe de resutados de pesca de investigación asociado al permiso SUBPESCA, R. EX N°E-2021-074. Proyecto: Caracterización ecosistemas acuáticos continentales asociados al proyecto modificación Piscicultura los Tilcos, Río Chico Región de Los Lagos. Mandante: Piscicultura los Tilcos.\\
+10 & Juan Cárcamo Barría (2017) Informe de resutados de pesca de investigación asociado al permiso SUBPESCA, R. EX N°411-2017. Proyecto: Caracterización de fauna íctica asociada al proyecto, piscicultura San Joaquín, sector El Varal, comuna de Hualaihué, X región de Los Lagos. Mandante: Cultivos Marinos Lago Yelcho S.P.A.\\
+\addlinespace
+11 & Las Orcas Spa. (Photosintesis) (2021) Informe de resutados de pesca de investigación asociado al permiso SUBPESCA, R. EX N°E-2021-117. Proyecto: Caracterización limnológica y uso de hábitats ribereños en los lagos Meullín, Yulton y Río cuervos, región del General Carlos Ibáñez del Campo. Mandante: Fundación Kreen.\\
+12 & Brian Reid (2022) Informe de resutados de pesca de investigación asociado al permiso SUBPESCA, R. EX N°E-2022-499. Proyecto: Efecto de sedimentos suspendidos a la alimentación de los peces nativos e introducidos, en la cuenca del río Simpson, región de Aysén. Centro de Investigación de Ecosistemas de la Patagonia.\\
+\bottomrule
+\end{longtable}
+\endgroup{}
+
+\subsubsection{Área de estudio}\label{uxe1rea-de-estudio}
+
+Solo se procesaron e ingresaron al conjunto de datos pescas de
+investigación practicadas dentro del área de estudio, por lo que no se
+requirió más filtros espaciales.
+
+Mapa con datos filtrados espacialmente (Figura \ref{fig:subpesca2plot}).
+
+\begin{figure}
+
+{\centering \includegraphics{Atlas_Ictiogeografico_files/figure-latex/subpesca2plot-1} 
+
+}
+
+\caption{Distribución de ocurrencias de peces del segundo conjunto de datos de SUBPESCA.}\label{fig:subpesca2plot}
+\end{figure}
+
+Además se añadió un identificador del conjunto de datos.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{SUBPESCA2 }\OtherTok{\textless{}{-}}\NormalTok{ SUBPESCA2 }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{occurrenceID =} \FunctionTok{paste0}\NormalTok{(}\StringTok{"SUBPESCA.PescaInvestigacion2012{-}2023."}\NormalTok{,}
+        \FunctionTok{row\_number}\NormalTok{()), }\AttributeTok{datasetName =} \StringTok{"SUBPESCA (2023) Resultados de pesca de investigación  de peces de aguas continentales en el período 2012{-}2023."}\NormalTok{,}
+        \AttributeTok{license =} \StringTok{"CC NC{-}BY 4.0"}\NormalTok{, }\AttributeTok{accessRights =} \StringTok{"Datos obtenidos por ley de transparencia."}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Respaldo}\label{respaldo-5}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{write.csv}\NormalTok{(SUBPESCA2, }\StringTok{"./data\_sources/SUBPESCA/SubpescaDB2/Output\_SUBPESCA2\_DwC.csv"}\NormalTok{,}
+    \AttributeTok{fileEncoding =} \StringTok{"UTF{-}8"}\NormalTok{, }\AttributeTok{row.names =}\NormalTok{ F)}
+
+\FunctionTok{saveRDS}\NormalTok{(SUBPESCA2, }\StringTok{"./data\_sources/SUBPESCA/SubpescaDB2/Output\_SUBPESCA2\_DwC.rds"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Darwin Initiative Fish
+Atlas}\label{darwin-initiative-fish-atlas}
+
+\emph{Nombre corto del conjunto de datos}: DarwinFreshwaterFish\\
+\emph{Referencia}: Garcia de Leaniz, C.; Gajardo, G., Consuegra, S.;
+Young, K.A.; Sanzana, J.; Vanhaecke,D, Orellana, G.;Cerda, A.M.;
+Stephenson, J.F.; Terreau, A.; Thailly, A.F.; Perry, B.; Howes, P.N.;
+MacDonald, J. (2020). The Darwin Freshwater Fish Database of Exotic and
+Native Species in Chile. \citep{Leaniz2020}\\
+\emph{Archivo}:
+\texttt{Darwin\ Web\ Fish\ Database\_associatedReferences.csv}
+
+Base de datos del proyecto \emph{Darwin Initiative}
+\citep{GarciadeLeaniz2012} financiado por el Department for Environment
+Food and Rural Affairs (DEFRA), del Reino Unido y liderado por Carlos
+García de Leániz (UK) y Gonzalo Gajardo (Chile, ULA). El propósito de
+este proyecto fue construir, en colaboración con el gobierno, la
+industria y otros actores relevantes, la capacidad de evaluar,
+monitorear y reducir el impacto de la introducción accidental o
+deliberada de especies de peces exóticas en la biodiversidad acuática
+chilena. Este proyecto se realizó en dos etapas:
+
+\begin{itemize}
+\tightlist
+\item
+  2006-2009. Reducing the Impact of Exotic Aquaculture on Chilean
+  Aquatic Biodiversity. Grant \#15020, DEFRA, UK.\\
+\item
+  2010-2012. Protecting galaxiids from salmonid invasions in Chile and
+  the Falklands. Grant EIDPO041, DEFRA, UK.
+\end{itemize}
+
+Uno de los productos fue una base de datos georeferenciada con los
+resultados de las pescas de investigación realizadas en la región de Los
+Lagos, Aysén e Islas Malvinas/Falkland. Las pescas se realizaron en su
+mayoría con pesca eléctrica.
+
+Los datos fueron obtenidos con permiso de los autores principales
+(Carlos García de Leaniz y Gonzalo Gajardo) aunque posteriormente fueron
+publicados \citep{Leaniz2020}.
+
+Antes de ser usados en este análisis, los datos fueron agregados por
+fecha, especie y sitio de muestreo (la base de datos original es a nivel
+individual). También se corrigieron algunos registros en base a los
+resultados de identificación de especies mediante barcoding (atención
+Delphine Vanhaecke), y se añadió una columna para
+\texttt{associatedReferences} que vincula ocurrencias con varias
+publicaciones científicas que hicieron uso de ellas.
+
+\subsubsection{Lectura de datos}\label{lectura-de-datos-4}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{DIFA }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"./data\_sources/Darwin\_Initiative\_Fish\_Atlas/Darwin Web Fish Database\_associatedReferences.csv"}\NormalTok{,}
+    \AttributeTok{header =}\NormalTok{ T, }\AttributeTok{sep =} \StringTok{","}\NormalTok{, }\AttributeTok{fileEncoding =} \StringTok{"UTF{-}8"}\NormalTok{, }\AttributeTok{skip =} \DecValTok{1}\NormalTok{,}
+    \AttributeTok{stringsAsFactors =}\NormalTok{ F)}
+\end{Highlighting}
+\end{Shaded}
+
+Preparación de los datos
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{DIFA }\OtherTok{\textless{}{-}}\NormalTok{ DIFA }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{date =} \FunctionTok{as.Date}\NormalTok{(}\FunctionTok{paste0}\NormalTok{(Year, }\StringTok{"{-}"}\NormalTok{, Month, }\StringTok{"{-}"}\NormalTok{, Day)))}
+\end{Highlighting}
+\end{Shaded}
+
+Las especies documentadas en este conjunto de datos fueron:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sort}\NormalTok{(}\FunctionTok{unique}\NormalTok{(DIFA}\SpecialCharTok{$}\NormalTok{Species))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] "Aplochiton taeniatus"      "Aplochiton zebra"         
+##  [3] "AzxAt hybrid"              "Basilichthys australis"   
+##  [5] "Brachygalaxias bullocki"   "Cheirodon australe"       
+##  [7] "Eleginops maclovins"       "Galaxias maculatus"       
+##  [9] "Galaxias platei"           "Geotria australis"        
+## [11] "Oncorhynchus kisutch"      "Oncorhynchus mykiss"      
+## [13] "Oncorhynchus tshawytscha"  "Oncorhynchus tshawytscha "
+## [15] "Percichthys trucha"        "Percilia gillissi"        
+## [17] "Salmo salar"               "Salmo trutta"             
+## [19] "Sculpin sp"                "Trichomycterus areolatus" 
+## [21] "Unknown"
+\end{verbatim}
+
+\subsubsection{Filtrado y otras
+correcciones}\label{filtrado-y-otras-correcciones}
+
+Se corrigió un typo
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{DIFA}\SpecialCharTok{$}\NormalTok{Species }\OtherTok{\textless{}{-}} \FunctionTok{gsub}\NormalTok{(}\AttributeTok{pattern =} \StringTok{"Eleginops maclovins"}\NormalTok{, }\AttributeTok{replacement =} \StringTok{"Eleginops maclovinus"}\NormalTok{,}
+\NormalTok{    DIFA}\SpecialCharTok{$}\NormalTok{Species)}
+\end{Highlighting}
+\end{Shaded}
+
+Se removieron especies no identificadas y mal identificadas,
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{DIFA }\OtherTok{\textless{}{-}}\NormalTok{ DIFA }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{filter}\NormalTok{(Species }\SpecialCharTok{!=} \StringTok{"Sculpin sp"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{filter}\NormalTok{(Species }\SpecialCharTok{!=} \StringTok{"Unknown"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+y los híbridos de \emph{Aplochiton} se identificaron como género
+Aplochiton, sin precisar la especie (sección \emph{Estandarización
+taxonómica} en Capítulo 7).
+
+Selección de variables
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{DIFA }\OtherTok{\textless{}{-}}\NormalTok{ DIFA }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{select}\NormalTok{(Watershed, Location, Station, Latitude, Longitude,}
+\NormalTok{        date, Species, Collected.by, n.individuals, associatedReferences)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Filtrado área de
+estudio}\label{filtrado-uxe1rea-de-estudio-4}
+
+Se aplicó un filtro espacial para extraer las ocurrencias dentro del
+área de estudio.
+
+Mapa con datos filtrados espacialmente (Figura
+\ref{fig:inidarwinplot2}).\\
+
+\begin{figure}
+
+{\centering \includegraphics{Atlas_Ictiogeografico_files/figure-latex/inidarwinplot2-1} 
+
+}
+
+\caption{Distribución de ocurrencias de peces de la Iniciativa Darwin. Los puntos rojos fueron excluidos por estar fuera del área de estudio indicada por el polígono.}\label{fig:inidarwinplot2}
+\end{figure}
+
+\subsubsection{Homologción al DwC}\label{homologciuxf3n-al-dwc}
+
+Primero se combinaron dos campos para crear \texttt{locality} del DwC.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{tmp }\OtherTok{\textless{}{-}}\NormalTok{ DIFA.filtered[, }\FunctionTok{c}\NormalTok{(}\StringTok{"Watershed"}\NormalTok{, }\StringTok{"Location"}\NormalTok{)]}
+\NormalTok{DIFA.filtered}\SpecialCharTok{$}\NormalTok{locality }\OtherTok{\textless{}{-}} \FunctionTok{apply}\NormalTok{(tmp, }\DecValTok{1}\NormalTok{, }\ControlFlowTok{function}\NormalTok{(x) \{}
+    \FunctionTok{paste0}\NormalTok{(}\FunctionTok{unique}\NormalTok{(x), }\AttributeTok{collapse =} \StringTok{", "}\NormalTok{)}
+\NormalTok{\})}
+
+\NormalTok{DIFA.filtered }\OtherTok{\textless{}{-}}\NormalTok{ DIFA.filtered }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{Watershed, }\SpecialCharTok{{-}}\NormalTok{Location)}
+\end{Highlighting}
+\end{Shaded}
+
+Muchos sitios de muestreo en Chiloé y unos pocos en otros lugares solo
+tienen nombres crípticos (códigos), tales como \emph{Río U23}, sin
+información adicional. Todos los sitios con este formato fueron
+renombrados añadiendo la palabra Chiloé (ej., \emph{Chiloé, Río U23}),
+excepto por cuatro localizados en Chiloé Continental que se renombraron
+con con toponimia encontrada en mapas.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Rename sites in continental Chiloé}
+\NormalTok{DIFA.filtered }\OtherTok{\textless{}{-}}\NormalTok{ DIFA.filtered }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{locality =} \FunctionTok{recode}\NormalTok{(locality, }\StringTok{\textasciigrave{}}\AttributeTok{Río U80A}\StringTok{\textasciigrave{}} \OtherTok{=} \StringTok{"Estero de Reloncaví, Río Del Este"}\NormalTok{,}
+        \StringTok{\textasciigrave{}}\AttributeTok{Río U76A}\StringTok{\textasciigrave{}} \OtherTok{=} \StringTok{"Seno de Reloncaví, Qhillaipe"}\NormalTok{, }\StringTok{\textasciigrave{}}\AttributeTok{Río U78}\StringTok{\textasciigrave{}} \OtherTok{=} \StringTok{"Chiloé continental, Río Puelche"}\NormalTok{,}
+        \StringTok{\textasciigrave{}}\AttributeTok{Río U8}\StringTok{\textasciigrave{}} \OtherTok{=} \StringTok{"Chiloé continental, Río entre Chauchil y Leguiman"}\NormalTok{))}
+
+\CommentTok{\# Rename all remaining sites with codes beginning with \textquotesingle{}Río}
+\CommentTok{\# U\textquotesingle{}}
+\NormalTok{tmp }\OtherTok{\textless{}{-}} \FunctionTok{grepl}\NormalTok{(}\StringTok{"\^{}Río U"}\NormalTok{, DIFA.filtered}\SpecialCharTok{$}\NormalTok{locality)}
+\NormalTok{DIFA.filtered}\SpecialCharTok{$}\NormalTok{locality[tmp] }\OtherTok{\textless{}{-}} \FunctionTok{paste}\NormalTok{(}\StringTok{"Chiloé"}\NormalTok{, DIFA.filtered}\SpecialCharTok{$}\NormalTok{locality[tmp],}
+    \AttributeTok{sep =} \StringTok{", "}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Luego se renombraron los campos restantes para conformar el DwC:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{DIFA.filtered }\OtherTok{\textless{}{-}}\NormalTok{ DIFA.filtered }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{locality =}\NormalTok{ locality, }\AttributeTok{locationRemarks =}\NormalTok{ Station, }\AttributeTok{decimalLatitude =}\NormalTok{ Latitude,}
+        \AttributeTok{decimalLongitude =}\NormalTok{ Longitude, }\AttributeTok{eventDate =} \FunctionTok{as.Date}\NormalTok{(}\FunctionTok{as.character}\NormalTok{(date)),}
+        \AttributeTok{scientificName =}\NormalTok{ Species, }\AttributeTok{recordedBy =}\NormalTok{ Collected.by,}
+        \AttributeTok{individualCount =}\NormalTok{ n.individuals, }\AttributeTok{associatedReferences =}\NormalTok{ associatedReferences,}
+        \AttributeTok{.keep =} \StringTok{"none"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Además se añadieron algunos atributos del DwC que son constantes para
+todo el conjunto de datos.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{DIFA.filtered}\SpecialCharTok{$}\NormalTok{license }\OtherTok{\textless{}{-}} \StringTok{"CC BY{-}NC 4.0"}
+\NormalTok{DIFA.filtered}\SpecialCharTok{$}\NormalTok{rightsHolder }\OtherTok{\textless{}{-}} \StringTok{"Carlos García de Leaniz y Gonzalo Gajardo"}
+\NormalTok{DIFA.filtered}\SpecialCharTok{$}\NormalTok{accessRights }\OtherTok{\textless{}{-}} \StringTok{"not{-}for{-}profit use only"}
+\NormalTok{DIFA.filtered}\SpecialCharTok{$}\NormalTok{bibliographicCitation }\OtherTok{\textless{}{-}} \StringTok{"Leaniz, C.G.D., Gajardo, G., Consuegra, S., Young, K.A., Sanzana, J., Vanhaecke, D., Orellana, G., Cerda, A.M., Stephenson, J.F., Terreau, A., Thailly, A.{-}F., Perry, B., Howes, P.N., MacDonald, J., Leaniz, C.G.D., Gajardo, G., Consuegra, S., Young, K.A., Sanzana, J., Vanhaecke, D., Orellana, G., Cerda, A.M., Stephenson, J.F., Terreau, A., Thailly, A.{-}F., Perry, B., Howes, P.N., and MacDonald, J. 2020. The Darwin Freshwater Fish Database of Exotic and Native Species in Chile [database]. figshare. https://doi.org/10.6084/m9.figshare.13077350"}
+\NormalTok{DIFA.filtered}\SpecialCharTok{$}\NormalTok{datasetName }\OtherTok{\textless{}{-}} \StringTok{"Garcia de Leaniz, C.; Gajardo, et al. (2020) The Darwin Freshwater Fish Database of Exotic and Native Species in Chile. https://doi.org/10.6084/m9.figshare.13077350"}
+\NormalTok{DIFA.filtered}\SpecialCharTok{$}\NormalTok{basisOfRecord }\OtherTok{\textless{}{-}} \StringTok{"Occurrence"}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Corrección de errores}\label{correcciuxf3n-de-errores-1}
+
+Se identificaron un número de errores (de geolocalización, de nombres de
+localidades, etc.) y se corrigieron.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Wrong coordinates since it is located in the sea. Most}
+\CommentTok{\# likely was located in Huyar Bajo {-}42.398331, {-}73.553923,}
+\CommentTok{\# (after checking neighbouring sampling locations and other}
+\CommentTok{\# inconclusive info in the paper).}
+
+\NormalTok{locationRemarks.toFix }\OtherTok{\textless{}{-}} \StringTok{"U57A"}
+
+\NormalTok{fix }\OtherTok{\textless{}{-}}\NormalTok{ DIFA.filtered }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{transmute}\NormalTok{(}\AttributeTok{fix =}\NormalTok{ locationRemarks }\SpecialCharTok{\%in\%}\NormalTok{ locationRemarks.toFix) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{pull}\NormalTok{()}
+
+\NormalTok{DIFA.filtered }\OtherTok{\textless{}{-}}\NormalTok{ DIFA.filtered }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{decimalLongitude =} \FunctionTok{ifelse}\NormalTok{(fix, }\SpecialCharTok{{-}}\FloatTok{73.553923}\NormalTok{, decimalLongitude),}
+        \AttributeTok{decimalLatitude =} \FunctionTok{ifelse}\NormalTok{(fix, }\SpecialCharTok{{-}}\FloatTok{42.398331}\NormalTok{, decimalLatitude))}
+
+\CommentTok{\# \# Check tmp \textless{}{-} DIFA.filtered \%\textgreater{}\% filter(fix) \%\textgreater{}\%}
+\CommentTok{\# select(locality, decimalLatitude, decimalLongitude,}
+\CommentTok{\# scientificName, locationRemarks) \# Clean rm(fix,}
+\CommentTok{\# occurrenceID.toFix)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Respaldo}\label{respaldo-6}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{write.csv}\NormalTok{(DIFA.filtered, }\StringTok{"./data\_sources/Darwin\_Initiative\_Fish\_Atlas/Output\_DarwinInitiativeFishAtlas\_DwC.csv"}\NormalTok{,}
+    \AttributeTok{fileEncoding =} \StringTok{"UTF{-}8"}\NormalTok{, }\AttributeTok{row.names =}\NormalTok{ F)}
+
+\FunctionTok{saveRDS}\NormalTok{(DIFA.filtered, }\StringTok{"./data\_sources/Darwin\_Initiative\_Fish\_Atlas/Output\_DarwinInitiativeFishAtlas\_DwC.rds"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 

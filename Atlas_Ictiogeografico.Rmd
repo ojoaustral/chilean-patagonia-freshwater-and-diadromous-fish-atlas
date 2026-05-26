@@ -16,7 +16,7 @@ classoptions:
   # - lineno        # Optional: Add line numbers
   # - iicol         # Optional: Double column layour
 
-title: "Atlas ictiogeográfico de la Patagonia occidental: homologción y consolidación de bases de datos"
+title: "Atlas ictiogeográfico de la Patagonia occidental: homologción y consolidación de bases de datos OR Atlas ictiogeográfico de cuencas patagónicas chilenas y transfronterizas: registros de peces"
 titlerunning: Atlas ictiogeográfico de la Patagonia
 
 authors: 
@@ -125,6 +125,7 @@ knitr::opts_chunk$set(tidy.opts = list(width.cutoff = 60), tidy = TRUE)
 
 ```{r libraries, eval=T, message=F, include=F}
 rm(list=ls())
+
 library("tidyr") # pivot_longer
 library("ggplot2")
 library("tibble")
@@ -155,10 +156,10 @@ library(tidyverse)
 
 Los ecosistemas dulceacuícolas tienen un alto grado de amenaza a nivel mundial [@Dudgeon2006]. Patagonia occidental no es una excepción, a pesar de la gran cobertura de áreas protegidas. Desde las vulnerables cabeceras de los ríos, y tramos inferiores que están excluidos desde las áreas protegidas, hasta el gran desconocimiento del estado poblacional y distribución de muchas especies dulceacuícolas [@Reid2021].  
 
-En el contexto de un primer esfuerzo regional en avanzar en la planificación de la conservación dulceacuícola en la Patagonia occidental, se desarrolló el informe “Priorización de cuencas para la conservación en Patagonia” [@Aguilar2022], donde se identificaron tres ejes de avance: (1) la consolidación de información de biodiversidad de tres grupos taxonómicos dulceacuícolas, (2) la identificación de **subrogantes** geoespaciales que destaquen valores de conservación dulceacuícola, y (3) el desarrollo de un prototipo metodológico para la priorización de múltiples valores de conservación dulceacuícola a la escala de sub-subcuenca.  
+En el contexto de un primer esfuerzo regional en avanzar en la planificación de la conservación dulceacuícola en la Patagonia occidental, se desarrolló el informe “Priorización de cuencas para la conservación en Patagonia” [@Aguilar2022], donde se identificaron tres ejes de avance: (1) la consolidación de información de biodiversidad de tres grupos taxonómicos dulceacuícolas, (2) la identificación de características geoespaciales que destaquen valores de conservación dulceacuícola, y (3) el desarrollo de un prototipo metodológico para la priorización de múltiples valores de conservación dulceacuícola a la escala de sub-subcuenca.  
 Una de las principales limitantes en esta primera iteración fue la carencia de información sobre biodiversidad dulceacuícola, donde resalta fuertemente el poco conocimiento y la baja densidad de observaciones comparado con otros esfuerzos similares en otras áreas geográficas [@Aguilar2022, p. 26].  
 
-Aunque la literatura científica es una fuente importante de información sobre biodiversidad, también hay mucha información de las especies dulceacuícolas en la literatura gris, entidades estatales, bases de dato publicas GBIF y iNaturalist, y, finalmente, en el conocimiento de las/los expertos/as taxónomos y naturalistas. Mucho conocimiento e información que queda en las bases de dato de estos especialistas, que aún no es transcrita a observaciones oficiales, lo cual se relaciona directamente al escaso financiamiento para el trabajo de especialistas. Por lo tanto, una de las recomendaciones principales en este informe y de @Reid2021 fue mejorar la información de biodiversidad integrando al grupo de trabajo a los/as expertas, que con su conocimiento especializado en cada grupo taxonómico lograrían mejorar, consolidar y evaluar las observaciones existentes de biodiversidad. Este atlas ictiográfico es el resultado de este esfuerzo, y también un ejemplo a seguir para otros grupos dulceacuícolas.   
+Aunque la literatura científica es una fuente importante de información sobre biodiversidad, también hay mucha información de las especies dulceacuícolas en la literatura gris, entidades estatales, bases de datos publicas tales como GBIF y iNaturalist, y, finalmente, en el conocimiento de las/los expertos/as taxónomos y naturalistas. Mucho conocimiento e información que queda en las bases de datos de estos especialistas, que aún no es transcrita a observaciones oficiales, lo cual se relaciona directamente al escaso financiamiento para el trabajo de especialistas. Por lo tanto, una de las recomendaciones principales en este informe y de @Reid2021 fue mejorar la información de biodiversidad integrando al grupo de trabajo a los/as expertas, que con su conocimiento especializado en cada grupo taxonómico lograrían mejorar, consolidar y evaluar las observaciones existentes de biodiversidad. Este atlas ictiográfico es el resultado de este esfuerzo, y también un ejemplo a seguir para otros grupos dulceacuícolas.   
 
 El presente documento detalla la metodología en la revisión del material existente, la recopilación, análisis, y combinación de diversos conjuntos de datos de ocurrencias de peces dulceacuícolas y diádromos obtenidos empíricamente (a través de prospecciones ictiológicas), a partir de revisiones de literatura, y de distintas bases de datos. El resultado es una base de datos geográfica de ocurrencia de peces en formato compatible con el Darwin Core standard (DwC), un estándar ampliamente adoptado para la distribución y consolidación de bases de datos biológicas de ocurrencia de especies por entidades tales como el Global Biodiversity Information Facility ([GBIF](https://www.gbif.org/)) o la Superintendencia del Medio Ambiente, Gobierno de Chile.  
 
@@ -308,7 +309,11 @@ bbox <- make_bbox(study.area$long, study.area$lat, f = 0.1)
 
 library("ggmap")
 
-register_stadiamaps(key = "f4aaa648-6137-4e34-a850-46c9821d7a6a")
+# Get Stadiamaps API key from your environment variables 
+# (Make sure you set up .Renviron in the root project directory; see .Renviron for an example of this file.)
+STADIAMAPS_KEY = Sys.getenv("STADIAMAPS_KEY")
+stopifnot( nzchar(STADIAMAPS_KEY) )
+register_stadiamaps(key = STADIAMAPS_KEY)
 
 map <- ggmap(get_stadiamap(bbox = c(left = -76, bottom = -57, right = -64, top = -40), zoom = 5, maptype= "stamen_terrain_background"))
 
@@ -346,13 +351,13 @@ Se incluyeron 12 conjuntos de datos en el análisis para generar el *Atlas Ictio
 
 ## Datos empíricos de los autores  
 
-*Nombre del conjunto de datos*: Fish Database Correa-Boisjoly  
+*Nombre corto del conjunto de datos*: Fish collection Correa-Boisjoly  
 *Referencia*: Correa, Cristián, Maryse Boisjoly (2025) Base de datos empírica de peces de Chile. Valdivia, Chile. [@Correa2025]  
 *Archivo*: `FishDatabase_Correa_Boisjoly_2025-11-27.csv`  
 
 Este conjunto de datos corresponde a nuestros propios datos empíricos de registros de ocurrencias de peces dulceacuícolas, estuarinos y diádromos en la Patagonia. Algunos de estos registros ya han sido publicados antes pero hay muchos inéditos. Las ocurrencias han sido documentadas en el marco de un número de proyectos de investigación y sus respectivos permisos de pesca de investigación durante los últimos veinte años.  En general, el foco de los muestreos ha sido documentar biodiversidad de peces nativos e introducidos, abarcando un amplio rango de técnicas de muestreo, hábitats y tallas, pero también se hicieron muestreos específicos.
 
-Nuestros datos empíricos se encuentran  almacenados en una base de datos relacional en formato MSAcess. A partir de esta, creamos una consulta  (Querry)  incluyendo todas las ocurrencias de peces y un conjunto de atributos o campos relevantes que, como se describe a continuación, fueron homologados al estándar DwC.
+Nuestros datos empíricos se encuentran  almacenados en una base de datos relacional en formato MSAcess. A partir de esta, creamos una consulta  (querry) incluyendo todas las ocurrencias de peces y un conjunto de atributos o campos relevantes que, como se describe a continuación, fueron homologados al estándar DwC.
 
 ### Lectura de datos
 
@@ -431,7 +436,7 @@ FishDB_CC_aggregated <-
   FishDB_CC %>% 
   group_by(`Locality`, `Lat_effort`, `Lon_effort`, `Year`,`YYYY.MM.DD`, `Species`) %>%
   summarise(
-     Fish_Id = paste0("Correa.Boisjoly.collection.",first(`Fish_Id`)),
+     Fish_Id = first(`Fish_Id`),
      n = sum(`N.Individuals`), 
      Technique = paste(unique(`Technique`), collapse = ", "),
      `Site.name` = paste(unique(`Site.name`), collapse = ", "),
@@ -498,7 +503,10 @@ La versión agregando ocurrencias por fecha, sitio, y especie se redujo de `r nr
 ```{r CCdataplot, echo=F, fig.width=6, warning = FALSE, message = FALSE, fig.align = 'center', fig.cap="Distribución de ocurrencias de peces dulceacuícolas y diádromos  según los datos empíricos de los autores de este informe. Datos dentro del polígono del área de estudio en azul."}
 
 library("ggmap")
-register_stadiamaps(key = "f4aaa648-6137-4e34-a850-46c9821d7a6a")
+STADIAMAPS_KEY = Sys.getenv("STADIAMAPS_KEY")
+stopifnot( nzchar(STADIAMAPS_KEY) )
+register_stadiamaps(key = STADIAMAPS_KEY)
+
 map <- ggmap(get_stadiamap(bbox = c(left = -76, bottom = -57, right = -64, top = -40), zoom = 6, maptype = "stamen_terrain_background") , darken = c(0.5,"white"))
  
 map + 
@@ -533,34 +541,43 @@ column_spec(column = 2, width = "20em")
 Los campos más importantes fueron homologados como indica la siguiente Tabla \ref{tab:CCMB_DwC}.  
 
 ```{r}
-FishDB_CC.Fields <- colnames(FishDB_CC_aggregated)
-
-DwC.eq <- FishDB_CC.Fields %>% 
-  recode(
-  Fish_Id                = "occurrenceID",
-  `Site.name`            = "locationRemarks",
-  Locality               = "locality",
-  Lat_effort             = "decimalLatitude",
-  Lon_effort             = "decimalLongitude", 
-  Year                   = "year",
-  YYYY.MM.DD             = "eventDate", 
-  Species                = "scientificName", 
-  n                      = "individualCount",
-  Technique              = "samplingProtocol",
-  Crew                   = "recordedBy",
-  bibliographicCitation  = "bibliographicCitation",
-  associatedReferences   = "associatedReferences")
-
-colnames(FishDB_CC_aggregated) <- DwC.eq
-FishDB_CC.ready <- FishDB_CC_aggregated[withinAE,]
+FishDB_CC.ready <- FishDB_CC_agg_AE %>% 
+  mutate(
+    occurrenceID         = paste0("Correa.Boisjoly.collection.", sprintf("%06d", Fish_Id)),
+    locationRemarks      = Site.name,
+    locality             = Locality,
+    decimalLatitude      = Lat_effort,
+    decimalLongitude     = Lon_effort,
+    year                 = Year,
+    eventDate            = YYYY.MM.DD,
+    scientificName       = Species,
+    individualCount      = n,
+    samplingProtocol     = Technique,
+    recordedBy           = Crew,
+    bibliographicCitation = bibliographicCitation,
+    associatedReferences = associatedReferences,
+    .keep = "none"
+  )
 ```
 
 
 ```{r CCMB_DwC, echo=F}
 
-cbind(FishDB_CC.Fields, DwC.eq) %>% 
+data.frame(
+  original_column = c(
+    "Fish_Id", "Site.name", "Locality", "Lat_effort", "Lon_effort",
+    "Year", "YYYY.MM.DD", "Species", "n", "Technique",
+    "Crew", "bibliographicCitation", "associatedReferences"),
+  dwc_equivalent = c(
+    "occurrenceID", "locationRemarks", "locality", "decimalLatitude",
+    "decimalLongitude", "year", "eventDate", "scientificName",
+    "individualCount", "samplingProtocol", "recordedBy",
+    "bibliographicCitation", "associatedReferences"
+  ),
+  stringsAsFactors = FALSE
+) %>% 
   kable(caption = "Correspondencia entre atributos para homologar con DwC.",
-        col.names = c("Fish Database Correa-Boisjoly","DwC equivalent"),longtable=F) %>%
+        col.names = c("Fish Database Correa & Boisjoly","DwC equivalent"),longtable=F) %>%
          kable_styling(bootstrap_options = c("striped", "hover", "condensed"),full_width = F, latex_options = c("hold_position"),font_size = 7) %>% 
 column_spec(column = 1, width = "20em") %>% 
 column_spec(column = 2, width = "20em") 
@@ -576,15 +593,17 @@ FishDB_CC.ready$rightsHolder <-
   "Cristian Correa, orcid.org/0000-0002-8608-6858"
 FishDB_CC.ready$accessRights <- 
   "not-for-profit use only"
-# Add bibliographic citation where there is none (published papers prevail when available).   
+
+# Add bibliographic citation where there is none; published papers prevail when available.   
 FishDB_CC.ready$bibliographicCitation[
   is.na(FishDB_CC.ready$bibliographicCitation) |
   trimws(FishDB_CC.ready$bibliographicCitation) == ""
-] <- "Correa, Cristian, and Maryse Boisjoly. 2025. Chilean fish collection and empirical database (Version 2025-11-27) [Unpublished dataset]."
+] <- "Correa, Cristian, and Maryse Boisjoly (2025) Chilean fish collection and empirical database (Version 2025-11-27) [Unpublished dataset]."
 FishDB_CC.ready$datasetName <- 
-  "Correa-Boisjoly fish collection Version 2025-11-27"
+  "Correa & Boisjoly fish collection v.2025-11-27"
+FishDB_CC.ready$datasetName_tmp <- "Fish Database Correa-Boisjoly"
 FishDB_CC.ready$basisOfRecord <- 
-  "Ocurrence"
+  "Occurrence"
 ```
 
 <!-- La Tabla \ref{tab:CCMB_sample} muestra una muestra aleatoria de 10 registros.   -->
@@ -612,7 +631,7 @@ column_spec(column = 10, width = "2em") #%>%
 ```
 
 
-### Respaldo 
+### Respaldo  
 ```{r}
 write.csv(FishDB_CC.ready, "./data_sources/Correa_Boisjoly_Collection/Output_FishDatabase_Correa-Boisjoly.csv", fileEncoding = "UTF-8", row.names = F)
 
@@ -643,7 +662,7 @@ rm(list=ls()[!ls()%in% c("DwC",
 
 ## Revisión de literatura C. Correa    
 
-*Nombre corto del conjunto de datos*: CCorrea.Lit.Review   
+*Nombre corto del conjunto de datos*: C.Correa.Lit.Review   
 *Referencia*: Correa, Cristian, B. Dyer, G. Gajardo, C. Garcia De Leaniz, C. Meier, H. Samaniego (2009) Rumbo a un sistema nacional de información geográfica de peces dulceacuícolas de Chile. Poster presentado en VI Congreso Sociedad Chilena de Limnología. Octubre 2009, Coyhaique. [@Correa2009]  
 *Archivos*: `occurrences.csv`, `references.csv`, `site_coords_WGS84.csv`, `site_names.csv`   
 
@@ -759,7 +778,7 @@ La Figura \ref{fig:CCrevdata} muestra los datos filtrados espacialmente.
   bbox <- make_bbox(study.area$long, study.area$lat, f = 0.1)
 
 # Get reference map using ggmap
-register_stadiamaps(key = "f4aaa648-6137-4e34-a850-46c9821d7a6a")
+register_stadiamaps(key = Sys.getenv("STADIAMAPS_KEY"))
 
 map <- ggmap(get_stadiamap(bbox = c(left = -76, bottom = -57, right = -64, top = -40), zoom = 5, maptype= "stamen_terrain_background"), darken = c(0.5,"white"))
 
@@ -854,8 +873,8 @@ metaDB.CC.filtered$license <-
   "CC BY-NC 4.0"
 metaDB.CC.filtered$datasetName <- 
   "Literature review dataset of Chilean freshwater and diadromous fish occurrences, compiled by C. Correa (v2009)"
-metaDB.CC.filtered$basisOfRecord <- 
-  "Ocurrence"
+metaDB.CC.filtered$datasetName_tmp <- "FishGIS_metaDatabase_CCorrea"
+metaDB.CC.filtered$basisOfRecord <- "Occurrence"
 ```
 
 ### Corrección de errores  
@@ -1040,7 +1059,7 @@ RevAguilar.filtered <- RevAguilar[withinAE,]
 # Get reference map using ggmap
 library(ggmap)
 
-register_stadiamaps(key = "f4aaa648-6137-4e34-a850-46c9821d7a6a")
+register_stadiamaps(key = Sys.getenv("STADIAMAPS_KEY"))
 map <- ggmap(get_stadiamap(bbox = c(left = -76, bottom = -57, right = -64, top = -40), zoom = 5, maptype= "stamen_terrain_background"), darken = c(0.5,"white"))
 
 # Plot the reference map and add points on top of it
@@ -1054,8 +1073,14 @@ map +
 Además se añadieron algunos atributos del DwC que son constantes para todo el conjunto de datos.
 
 ```{r}
-RevAguilar.filtered$license <- "CC BY-NC 4.0"
-RevAguilar.filtered$datasetName <- "Aguilar-González, Marilyn (2023) Recopilación bibliográfica de ocurrencia de peces en la Patagonia del proyecto Priorización de Cuencas para la Conservación en Patagonia. Programa Austral Patagonia (ProAP) de The Pew Charitable Trusts. Coyhaique."
+
+RevAguilar.filtered <-RevAguilar.filtered %>% 
+  mutate(
+  license = "CC BY-NC 4.0",
+  datasetName = "González-Aguilar, Marilyn (2023) Recopilación bibliográfica de ocurrencia de peces en la Patagonia del proyecto Priorización de Cuencas para la Conservación en Patagonia. Programa Austral Patagonia (ProAP) de The Pew Charitable Trusts. Coyhaique.",
+  datasetName_tmp = "Aguilar-González, Marilyn (2023) Recopilación bibliográfica de ocurrencia peces en la Patagonia. Proyecto Priorización de Cuencas para la Conservación en Patagonia. Programa Austral Patagonia (ProAP) de The Pew Charitable Trusts. Coyhaique."
+        )
+
 ```
 
 
@@ -1096,7 +1121,7 @@ rm(list=ls()[!ls()%in%c("DwC",
 
 ## Base de datos Ministerio del Medio Ambiente de Chile  
 
-*Nombre corto del conjunto de datos*: MMA (versión original)  
+*Nombre corto del conjunto de datos*: MMA.continental.fishes  
 *Nombre del conjunto de datos*: GBIF_MMA (versión publicada en GBIF el 2023/12/13)  
 *Referencia*: Habit, E., Contreras, L., Dyer, B.S., Correa, C., Naretto, J., Contreras, V., Amaya, L., and Villagran. 2023. Fauna Íctica Nativa Continental de Chile. Ministerio del Medio Ambiente de Chile, Occurrence dataset https://doi.org/10.15468/cxb957 accessed via GBIF.org on 2025-10-17. [@Habit2023]  
 *Archivo*: `BD_original_observaciones.xls`  
@@ -1127,6 +1152,11 @@ Importar la misma base de datos pero la versión obtenida de GBIF:
 ```{r}
 GBIF_MMA <- read.delim("./data_sources/GBIF_MMA/GBIF_MMA.csv")
 
+
+GBIF_MMA %>% select(datasetKey, institutionCode, collectionCode ) %>% distinct() 
+
+colnames(GBIF_MMA)
+
 ```
 
 
@@ -1151,6 +1181,7 @@ cat("Does the two tables have the sanme number of rows?", nrow(MMA) == nrow(GBIF
 ```
 
 Mismo número de registros y varias pruebas adicionales confirma que se trata de la misma base de datos, aunque solo un nombre de columna (entre decenas) coincide entre las dos bases de datos. Esta diferencia se reduce una vez que los datos de MMA son homologados al DwC más abajo. Comenzamos trabajando con la base de datos original filtrada para el área de estudio, para homologarla al formato DwC y luego añadirle identificadores provenientes de la versión de GBIF.  
+
 ### Filtrado área de estudio  
 
 Se extrajeron los datos dentro del área de estudio.  
@@ -1178,7 +1209,7 @@ La Figura \ref{fig:MMAplot} muestra un mapa con los datos filtrados espacialment
 bbox <- make_bbox(study.area$long, study.area$lat, f = 0.1)
 
 # Get reference map using ggmap
-register_stadiamaps(key = "f4aaa648-6137-4e34-a850-46c9821d7a6a")
+register_stadiamaps(key = Sys.getenv("STADIAMAPS_KEY"))
 map <- ggmap(get_stadiamap(bbox = c(left = -76, bottom = -57, right = -64, top = -40), zoom = 5, maptype= "stamen_terrain_background"))
 
 
@@ -1361,7 +1392,7 @@ MMA_AE <- MMA_AE %>% mutate(
          recordedBy            = Colector,
          coordinateUncertaintyInMeters = coordinateUncertaintyInMeters, # above
          basisOfRecord         = basisOfRecord, # processed above
-         institutionID         = institutionID,         # processed above
+         institutionID         = institutionID, # processed above
                 .keep = "none" )
 
 ```
@@ -1398,7 +1429,9 @@ Además se añadieron identificadores del conjunto de datos proveniente GBIF_MMA
 
 MMA_AE <- MMA_AE %>%  mutate(
                       datasetName  = "Habit E, Vila I, Contreras L. M, Dyer B, Correa C, Naretto J, Contreras V, Amaya L, Villagran C (2023). Fauna Íctica Nativa Continental de Chile. Ministerio del Medio Ambiente de Chile. Occurrence dataset https://doi.org/10.15468/cxb957",
-                      datasetID = "GBIF UUID: 45c3d8d2-7352-4dd1-aefd-c21e0b6b004e",
+                      datasetName_tmp = "MMA2017",
+                      datasetID = "45c3d8d2-7352-4dd1-aefd-c21e0b6b004e",
+                      datasetKey = "45c3d8d2-7352-4dd1-aefd-c21e0b6b004e",
                       license      = "CC BY-NC 4.0",
                       accessRights = "consultar con institución/autor")
 
@@ -1437,10 +1470,7 @@ rm(list=ls()[!ls()%in%c("DwC",
                         "GBIF_MMA")])
 ```
 
-```{r, eval=T, include=T}
-knitr::knit_exit()
 
-```
 ## SUBPESCA: Primera base de datos   
 
 Hemos obtenido dos bases de datos aportadas por la Subsecretaría de Pesca y Acuicultura (SUBPESCA) que se analizan a continuación.  
@@ -1448,11 +1478,11 @@ Hemos obtenido dos bases de datos aportadas por la Subsecretaría de Pesca y Acu
 Además,  existe un set de datos llamado "Base de datos biogeográfica del Fondo de Investigación Pesquera y de Acuicultura (1999-2019), Subsecretaría de Pesca y Acuicultura" publicado en 2023  [(vínculo)](https://www.gbif.org/dataset/9f094ddc-68f9-426b-91f2-4c6f34298b34) con más de 3 millones de ocurrencias  pero que no se analizó  porque su área de estudio es el ambiente marino.  Se confirmó que la composición taxonómica no incluye especies de interés. 
 
 Primer set de datos:  
-*Nombre del conjunto de datos*: Base de datos SUBPESCA-1.   
-*Referencia*: Base de datos entregada por la Subsecretaria de Pesca y Acuicultura. 
+*Nombre corsto del conjunto de datos*: SUBPESCA.PecesContinentales2019  
+*Referencia*: SUBPESCA (2019) Sistematización de registros de peces de aguas continentales. 
 *Archivo*: `BDSubpesca_original.xlsx`  
 
-Esta base de dados comprende el período 2013-2019, e incluye  un número de publicaciones científicas, informes de declaración y evaluación de impacto ambiental y permisos de pesca de investigación. Viene con muchos errores, inconsistencias, formatos heterogéneos, etc., que han sido abordados y subsanados en la medida de lo posible.
+Esta base de dados con registros hasta 2019 incluye un número de publicaciones científicas, informes de declaración y evaluación de impacto ambiental y posiblemente permisos de pesca de investigación. Viene con muchos errores, inconsistencias, formatos heterogéneos, etc., que han sido abordados y subsanados en la medida de lo posible.
 
 
 ```{r}
@@ -1476,7 +1506,7 @@ SUBPESCA <- SUBPESCA %>%
 
 ### Manejo de referencias 
 
-Se combinaron seis campos para crear el atributo `bibliographicCitation` requerido por el DwC.
+Se combinaron seis campos para crear una versión cruda preliminar del atributo `bibliographicCitation` del DwC. 
 
 ```{r}
 SUBPESCA$REVISTA <- gsub("ND", "", SUBPESCA$REVISTA)
@@ -1495,12 +1525,13 @@ SUBPESCA <- SUBPESCA %>%
   mutate(bibliographicCitation = ifelse(is.na(REVISTA), bibliographicCitation,`CITA (APA)`)) %>%
   mutate(bibliographicCitation = str_trim(str_remove_all(bibliographicCitation, "[\\.,;]?\\s*(\\b(NA|ND)\\b[\\s,]*)+$")))
 
-length(unique(SUBPESCA$bibliographicCitation))
+# length(unique(SUBPESCA$bibliographicCitation))
 
 ```
 
+El conjunto de datos presentó `r length(unique(SUBPESCA$bibliographicCitation))` referencias provenientes de estudios de impacto ambiental (consultores), artículos científicos y otros.  
 
-El conjunto de datos presentó `r length(unique(SUBPESCA$bibliographicCitation))` referencias provenientes de estudios de impacto ambiental (consultores), artículos científicos y otros. Muchos de los artículos científicos indexados contenían errores y omisiones tal como  no registrar el año de las ocurrencias lo que genera dificultades en el procesamiento subsecuente en el capítulo *Consolidación del Atlas Ictiogeográfico*. Por lo tanto se optó por excluir todas las ocurrencias de este set de datos correspondientes a artículos científicos indexadas también en otros conjuntos de datos de mejor calidad (i.e. redundantes). Para esto, primero se exportó una planilla con las  `r length(unique(SUBPESCA$bibliographicCitation))` referencias (`bibliographicCitation`), y esta planilla se editó manualmente añadiendo el campo  `Filter` con valores 1 y 0 para referencias a incluir o excluir, respectivamente. 
+Muchos de los artículos científicos indexados contenían errores y omisiones tal como  no registrar el año de las ocurrencias lo que genera dificultades en el procesamiento subsecuente en el capítulo *Consolidación del Atlas Ictiogeográfico*. Por lo tanto se optó por excluir todas las ocurrencias de este set de datos correspondientes a artículos científicos indexadas también en otros conjuntos de datos de mejor calidad (i.e. redundantes). Para esto, primero se exportó una planilla con las  `r length(unique(SUBPESCA$bibliographicCitation))` referencias (`bibliographicCitation`), y esta planilla se editó manualmente añadiendo el campo  `Filter` con valores 1 y 0 para referencias a incluir o excluir, respectivamente. 
 
 <!-- [**HERE**] Hay un número de referencias que no proveen año en que se registró la ocurrencia. Muchos de estos registros ya se encuentran en otras bases de datos por lo que no se han revisado todavía, hasta comprobar que aporten información nueva. A continuación, una lista de las referencias  problemáticas (Tabla \ref{ref:subBib}). -->
 
@@ -1522,22 +1553,13 @@ SUBPESCA <- SUBPESCA %>% left_join(filter, by = "bibliographicCitation") %>%
                      filter(Filter==1)  
 
 ```
-En la planilla, de las `r nrow(filter)` referencias, `r sum(filter$Filter == 0)` se excluyeron (números un poco exagerados pues algunas referencias aparecían  más de una vez bajo distinto formato). La aplicación de este filtro resultó en la exclusión de `r n_exclude` ocurrencias provenientes de artículos científicos indexados en otros conjuntos de datos. La vasta mayoría de las referencias retenidas corresponden a  ocurrencias reportadas por consultoras en el marco del Sistema de Evaluación Ambiental (SEA). Se retuvieron `r nrow(SUBPESCA)` ocurrencias.
 
-<!-- Below, a legacy table used to display references  with year problems. Most of these refs are now excluded from this dataset. -->
-```{r subBib, echo=FALSE, eval=FALSE, include=FALSE}
-SUBPESCA %>% select(`AÑO`,MES, bibliographicCitation) %>% filter(`AÑO` %in% c("0","2004-2011", "2004-2012", "2004-2013", "2006-2018", "2007-2013")) %>% distinct() %>% 
-  kable(caption = "Lista de referencis con problemas de fechas que podrían ser corregidos de ser necesario.", longtable=T) %>%
-         kable_styling(bootstrap_options = c("striped", "hover", "condensed"),full_width = F, latex_options = c("hold_position"),font_size = 5) %>% 
-column_spec(column = 1, width = "7em") %>%
-column_spec(column = 2, width = "7em") %>% 
-column_spec(column = 3, width = "40em") 
-```
+En la planilla, de las `r nrow(filter)` referencias, `r sum(filter$Filter == 0)` se excluyeron (números un poco exagerados pues algunas referencias aparecían  más de una vez bajo distinto formato). La aplicación de este filtro resultó en la exclusión de `r n_exclude` ocurrencias provenientes de artículos científicos indexados en otros conjuntos de datos. La vasta mayoría de las referencias retenidas corresponden a  ocurrencias reportadas por empresas consultoras en el marco del Sistema de Evaluación Ambiental (SEA). Se retuvieron `r nrow(SUBPESCA)` ocurrencias. 
 
 
 ### Filtrado área de estudio  
 
-Primero se estandarizaron las coordenadas geográficas a grados decimales, y luego se filtró el área de estudio. Estos pasos hicieron en un SIG (ArcGIS 10.8.2) antes de importar los datos (Marilyn Aguilar).
+Primero se estandarizaron las coordenadas geográficas a grados decimales, y luego se filtró el área de estudio. Estos pasos se hicieron en un SIG (ArcGIS 10.8.2) antes de importar los datos (Marilyn Aguilar).
 
 1. De los puntos dentro del rango de interés (X-XII Región) de la base de datos Subpesca existieron 38 puntos UTM erróneos que tuvieron que ser incorporados manualmente al SIG, pasando en limpio los datos originales para poder corregir los errores.  
 
@@ -1582,7 +1604,7 @@ Mapa con datos filtrados espacialmente (Figura \ref{fig:SUBPESCAplot}).
   # chile_argentina_bbox <- c(-77, -57, -65, -40)
   bbox <- make_bbox(study.area$long, study.area$lat, f = 0.1)
 # Get reference map using ggmap
-register_stadiamaps(key = "f4aaa648-6137-4e34-a850-46c9821d7a6a")
+register_stadiamaps(key = Sys.getenv("STADIAMAPS_KEY"))
 
 map <- ggmap(get_stadiamap(bbox = c(left = -76, bottom = -57, right = -64, top = -40), zoom = 5, maptype= "stamen_terrain_background"), darken = c(0.5,"white"))
 
@@ -1613,7 +1635,7 @@ SUBPESCA <- SUBPESCA %>% select(OBJECTID,
         TIPO_ARTE,
         ABUNDACIA,
         bibliographicCitation, # modified above
-        decimalLongitude, # coords from previous transformation 
+        decimalLongitude, # coords normalized earlier 
         decimalLatitude) 
         # UNIDAD_ABUN 
         # CPUE
@@ -1626,6 +1648,7 @@ SUBPESCA <- SUBPESCA %>% select(OBJECTID,
 Se estandarizó la fecha de ocurrencia. La base de datos provista por SUBPESCA solo contemplaba los campos Mes y Año, y para la mayoría de los registros, estos campos estaban vacíos.
 
 Por ahora, se reemplazaron los rangos de años por el primer año, los años cero por `NA`s, y los años y meses originales con formatos especiales se conservaron en `verbatimEventDate`.
+
 
 ```{r}
 SUBPESCA$MES <- gsub(pattern = "ND", replacement = NA, SUBPESCA$MES)
@@ -1655,39 +1678,39 @@ SUBPESCA <- SUBPESCA %>% mutate(NOMBRE_CIE = stringr::str_to_sentence(NOMBRE_CIE
 ### Homologación al formato DwC
 
 Se renombraron las columnas para homologar,  
-```{r}
-colnames(SUBPESCA) <- recode(colnames(SUBPESCA), 
-        OBJECTID = "catalogNumber",
-        # FUENTE_BBDD	= 
-        # MANDANTE
-        MES = "month",
-        `AÑO` = "year",
-        # HORA = "eventTime",
-        COD_EST = "locationRemarks",
-        ESTE = "verbatimLatitude",
-        NORTE = "verbatimLongitude",
-        UTM = "verbatimCoordinateSystem",
-        DATUM = "verbatimSRS",
-        NOMBRE_CIE = "scientificName",
-        TIPO_ARTE	= "samplingProtocol",
-        ABUNDACIA = "individualCount",
-        bibliographicCitation = "bibliographicCitation",
-        decimalLongitude = "decimalLongitude",
-        decimalLatitude = "decimalLatitude"
-        # UNIDAD_ABUN 
-        # CPUE
-        # UNIDAD_CPUE	# These three atributes aren't well curated 
-        )
 
+```{r}
+SUBPESCA <- SUBPESCA %>% 
+  mutate(
+    occurrenceID        = paste0("SUBPESCA.PecesContinentales2019.", OBJECTID),
+    catalogNumber       = OBJECTID,
+    month               = MES,
+    year                = `AÑO`,
+    locationRemarks     = COD_EST,
+    verbatimLatitude    = ESTE,
+    verbatimLongitude   = NORTE,
+    verbatimCoordinateSystem = UTM,
+    verbatimSRS         = DATUM,
+    scientificName      = NOMBRE_CIE,
+    samplingProtocol    = TIPO_ARTE,
+    individualCount     = ABUNDACIA,
+    bibliographicCitation = bibliographicCitation,
+    decimalLongitude    = decimalLongitude,
+    decimalLatitude     = decimalLatitude,
+    .keep = "none"
+  )
 ```
 
 
 Además se añadió un identificador del conjunto de datos. 
 
 ```{r}
-SUBPESCA <- SUBPESCA %>%  mutate(datasetName = "SUBPESCA-1",
-     license = "revisar",
-     accessRights = "publicaciones científicas y estudios parte del SEA son de acceso público") %>% ungroup()
+SUBPESCA <- SUBPESCA %>%  
+  mutate(
+  datasetName = "SUBPESCA (2019) Sistematización de registros de peces de aguas continentales.",
+     license = "CC NC-BY 4.0",
+  datasetName_tmp = "SUBPESCA-1",
+     accessRights = "Publicaciones científicas y estudios parte del SEA son de acceso público")
 ```
 
 ### Respaldo  
@@ -1728,11 +1751,12 @@ rm(list=ls()[!ls()%in%c("DwC",
 
 ## SUBPESCA: Segunda base de datos   
 
-*Nombre del conjunto de datos*: Base de datos SUBPESCA-2. Registros de Permisos de Pesca de Investigación Subpesca 2012-2023.   
-*Referencia*: Resultados de permisos de pesca de investigación en el período 2012-2023. Datos crudos facilitados por la Subsecretaría de Pesca y Acuicultura  (SUBPESCA) en respuesta a requerimiento de Acceso a Información Pública AH002T-0005627, solicitada por Marilyn Aguilar González.  
+*Nombre corto del conjunto de datos*: SUBPESCA.PescaInvestigación2012-2023.   
+*Referencia*: SUBPESCA (2023) Resultados de pesca de investigación  de peces de aguas continentales en el período 2012-2023.
+
 *Archivo*: `BD_Subpesca_PINV_2012_2023_original.xlsx`
 
-Estos datos fueron adquiridos mediante solicitud bajo Ley de Transparencia a la Subsecretaría de Pesca y Acuicultura (SUBPESCA), como respuesta a consulta de acceso a la información pública CI: AH002T-0005627, solicitada por Marilyn Aguilar González. Dicha solicitud requirió de un proceso de subsanación (gestionado por Macarena Covarrubias), acotando el período de Permisos de Pesca de Investigación a los resultados de proyectos desde el año 2012 a la fecha (otoño 2023).
+Estos datos fueron adquiridos mediante solicitud bajo Ley de Transparencia a la Subsecretaría de Pesca y Acuicultura (SUBPESCA), como respuesta a consulta de acceso a la información pública CI: AH002T-0005627, solicitada por Marilyn González Aguilar en 2023. Dicha solicitud requirió de un proceso de subsanación (gestionado por Macarena Covarrubias), acotando el período de Permisos de Pesca de Investigación a los resultados de proyectos desde el año 2012 hasta el otoño 2023.
 
 Se recibieron 113 carpetas organizadas por resolución de aceptación de cada permiso de pesca (los datos no estaba ordenados en una tabla). De estas, sólo 12 correspondieron con el área y especies de estudio y por lo tanto fueron procesadas para crear una sola tabla de datos a partir de la información disponible en las carpetas. 
 
@@ -1776,7 +1800,7 @@ N° DE INDIVIDUOS	->	`individualCount`
 
 En adelante se trabajó con la tabla de datos homologada que se lee a continuación.  
 
-### Lectura de datos  
+### Lectura de datos homologados  
 
 Se importó la tabla de datos preparada como se describe arriba.  
 ```{r}
@@ -1805,6 +1829,8 @@ column_spec(column = 2, width = "50em")
 ```
 
 
+### Área de estudio  
+
 Solo se procesaron e ingresaron al conjunto de datos  pescas de investigación practicadas dentro del área de estudio, por lo que no se requirió más filtros espaciales. 
 
 ```{r, include=F}
@@ -1818,16 +1844,14 @@ SUBPESCA2_AE <- SUBPESCA2[withinAE,]
 
 Mapa con datos filtrados espacialmente (Figura \ref{fig:subpesca2plot}).   
 
-```{r, subpesca2plot,echo=F, fig.width=6, warning = FALSE, message = FALSE, fig.align = 'center', fig.cap="Distribución de ocurrencias de peces del segundo conjunto de datos de SUBPESCA."}
+```{r subpesca2plot, echo=F, fig.width=6, warning = FALSE, message = FALSE, fig.align = 'center', fig.cap="Distribución de ocurrencias de peces del segundo conjunto de datos de SUBPESCA."}
 # Set bounding box for Chile and Argentina
   # chile_argentina_bbox <- c(-77, -57, -65, -40)
   bbox <- make_bbox(study.area$long, study.area$lat, f = 0.1)
 # Get reference map using ggmap
-register_stadiamaps(key = "f4aaa648-6137-4e34-a850-46c9821d7a6a")
+register_stadiamaps(key = Sys.getenv("STADIAMAPS_KEY"))
 
 map <- ggmap(get_stadiamap(bbox = c(left = -76, bottom = -57, right = -64, top = -40), zoom = 5, maptype= "stamen_terrain_background"), darken = c(0.5,"white"))
-
-
 
 # Plot the reference map and add points on top of it
 map + geom_point(data = SUBPESCA2[!withinAE,], aes(x = decimalLongitude, y = decimalLatitude), color = "red", size = 2, alpha=0.3)+
@@ -1840,9 +1864,13 @@ map + geom_point(data = SUBPESCA2[!withinAE,], aes(x = decimalLongitude, y = dec
 Además se añadió un identificador del conjunto de datos.  
 ```{r}
 
-SUBPESCA2 <- SUBPESCA2 %>%  mutate(datasetName = "SUBPESCA-2",
-     license = "revisar",
-     accessRights = "Publicaciones científicas y estudios parte del SEA son de acceso público") %>% ungroup()
+
+SUBPESCA2 <- SUBPESCA2 %>%  mutate(
+      occurrenceID = paste0("SUBPESCA.PescaInvestigacion2012-2023.", sprintf("%03d", row_number())), 
+      datasetName = "SUBPESCA (2023) Resultados de pesca de investigación  de peces de aguas continentales en el período 2012-2023.",
+      datasetName_tmp = "SUBPESCA-2",
+      license = "CC NC-BY 4.0",
+      accessRights = "Datos obtenidos por ley de transparencia.")
 ```
 
 
@@ -1886,17 +1914,22 @@ rm(list=ls()[!ls()%in%c("DwC",
 
 ## Darwin Initiative Fish Atlas  
 
-*Nombre del conjunto de datos*: Darwin Atlas of Exotic and Native Freshwater Fish Species of Chile  
-*Referencia*: García de Leániz, Carlos, Gonzalo Gajardo, Sofia Consuegra, Daniel Fowler, Nick Rendell, Guillermo Giannico,  Jose Sanzana, Jason B. Dunham (2012) Protecting galaxiids from salmonid invasions in Chile and the Falklands. Department for Environment Food and Rural Affairs, grant EIDPO041, UK. [@GarciadeLeaniz2012]   
+*Nombre corto del conjunto de datos*: DarwinInitiativeFreshwaterFish    
+*Referencia*: Garcia de Leaniz, C.; Gajardo, G., Consuegra, S.; Young, K.A.; Sanzana, J.; Vanhaecke,D, Orellana, G.;Cerda, A.M.; Stephenson, J.F.; Terreau, A.; Thailly, A.F.; Perry, B.; Howes, P.N.; MacDonald, J. (2020). The Darwin Freshwater Fish Database of Exotic and Native Species in Chile. [@Leaniz2020]      
 *Archivo*: `Darwin Web Fish Database_associatedReferences.csv`  
 
 
-Base de datos del proyecto *Darwin Initiative* financiado por el Department for Environment Food and Rural Affairs (DEFRA), del Reino Unido y liderado por Carlos García de Leániz (UK) y Gonzalo Gajardo (Chile, ULA). El propósito de este proyecto fue construir, en colaboración con el gobierno, la industria y otros actores relevantes, la capacidad de evaluar, monitorear y reducir el impacto de la introducción accidental o deliberada de especies de peces exóticas en la biodiversidad acuática chilena. Este proyecto se realizó en dos etapas: 
+Base de datos del proyecto *Darwin Initiative* [@GarciadeLeaniz2012] financiado por el Department for Environment Food and Rural Affairs (DEFRA), del Reino Unido y liderado por Carlos García de Leániz (UK) y Gonzalo Gajardo (Chile, ULA). El propósito de este proyecto fue construir, en colaboración con el gobierno, la industria y otros actores relevantes, la capacidad de evaluar, monitorear y reducir el impacto de la introducción accidental o deliberada de especies de peces exóticas en la biodiversidad acuática chilena. Este proyecto se realizó en dos etapas: 
 
 - 2006-2009. Reducing the Impact of Exotic Aquaculture on Chilean Aquatic Biodiversity. Grant #15020, DEFRA, UK.  
 - 2010-2012. Protecting galaxiids from salmonid invasions in Chile and the Falklands. Grant EIDPO041, DEFRA, UK.
 
-Uno de los productos fue una base de datos georeferenciada con los resultados de las pescas de investigación realizadas en la región de Los Lagos, Aysén e Islas Malvinas/Falkland.  Las pescas se realizaron en su mayoría con pesca eléctrica. Los datos fueron obtenidos con permiso de los autores principales (Carlos García de Leaniz y Gonzalo Gajardo), y antes de ser usados en este análisis fueron agregados  por fecha, especie y sitio de muestreo (la base de datos original es a nivel individual).  También se corrigieron algunos registros en base a los resultados de identificación de especies mediante metabarcoding (atención Delphine Vanhaecke), y se añadió una columna para `associatedReferences` que vincula ocurrencias con varias publicaciones científicas que hicieron uso de ellas.    
+
+Uno de los productos fue una base de datos georeferenciada con los resultados de las pescas de investigación realizadas en la región de Los Lagos, Aysén e Islas Malvinas/Falkland.  Las pescas se realizaron en su mayoría con pesca eléctrica. 
+
+Los datos fueron obtenidos con permiso de los autores principales (Carlos García de Leaniz y Gonzalo Gajardo) aunque posteriormente fueron publicados [@Leaniz2020]. 
+
+Antes de ser usados en este análisis, los datos fueron agregados por fecha, especie y sitio de muestreo (la base de datos original es a nivel individual).  También se corrigieron algunos registros en base a los resultados de identificación de especies mediante barcoding (atención Delphine Vanhaecke), y se añadió una columna para `associatedReferences` que vincula ocurrencias con varias publicaciones científicas que hicieron uso de ellas.    
 
 
 ### Lectura de datos  
@@ -1919,7 +1952,7 @@ sort(unique(DIFA$Species))
 
 ### Filtrado y otras correcciones  
 
-Se corrigió un typo.. 
+Se corrigió un typo
 ```{r}
 DIFA$Species <- gsub(pattern = "Eleginops maclovins",
                     replacement = "Eleginops maclovinus",
@@ -1959,7 +1992,7 @@ Mapa con datos filtrados espacialmente (Figura \ref{fig:inidarwinplot2}).
   bbox <- make_bbox(study.area$long, study.area$lat, f = 0.1)
 
 # Get reference map using ggmap
-register_stadiamaps(key = "f4aaa648-6137-4e34-a850-46c9821d7a6a")
+register_stadiamaps(key = Sys.getenv("STADIAMAPS_KEY"))
 
 map <- ggmap(get_stadiamap(bbox = c(left = -76, bottom = -57, right = -64, top = -40), zoom = 5, maptype= "stamen_terrain_background"), darken = c(0.5,"white"))
 
@@ -2002,19 +2035,24 @@ DIFA.filtered$locality[tmp] <- paste("Chiloé",
 
 Luego se renombraron los campos restantes para conformar el DwC:
 ```{r}
-colnames(DIFA.filtered) <- recode(colnames(DIFA.filtered),
-            # "Watershed" = "locality", # Parsed to locality
-            # "Location" = "locality", # Parsed to locality
-            `Station` = "locationRemarks",
-            `Latitude` = "decimalLatitude",
-            `Longitude` = "decimalLongitude",
-            `date` = "eventDate",
-            `Species` = "scientificName",
-            `Collected.by` = "recordedBy",
-            `n.individuals` = "individualCount",
-            `associatedReferences` = "associatedReferences") 
+DIFA.filtered <- DIFA.filtered %>% 
+  mutate(
+    occurrenceID         = paste0("DarwinInitiativeFreshwaterFish.", sprintf("%03d", row_number())),
+    locality             = locality,
+    locationRemarks      = Station,
+    decimalLatitude      = Latitude,
+    decimalLongitude     = Longitude,
+    eventDate            = as.Date(as.character(date)),
+    scientificName       = Species,
+    recordedBy           = Collected.by,
+    individualCount      = n.individuals,
+    associatedReferences = associatedReferences,
+    .keep = "none"
+  )
+
 
 ```
+
 
 Además se añadieron algunos atributos del DwC que son constantes para todo el conjunto de datos.
 
@@ -2026,22 +2064,18 @@ DIFA.filtered$rightsHolder <-
 DIFA.filtered$accessRights <- 
   "not-for-profit use only"
 DIFA.filtered$bibliographicCitation <- 
-  "García de Leániz, Carlos, Gonzalo Gajardo, Sofia Consuegra, Daniel Fowler, Nick Rendell, Guillermo Giannico,  Jose Sanzana, Jason B. Dunham (2012) Protecting galaxiids from salmonid invasions in Chile and the Falklands. Department for Environment Food and Rural Affairs, grant EIDPO041, UK."
+  "Leaniz, C.G.D., Gajardo, G., Consuegra, S., Young, K.A., Sanzana, J., Vanhaecke, D., Orellana, G., Cerda, A.M., Stephenson, J.F., Terreau, A., Thailly, A.-F., Perry, B., Howes, P.N., MacDonald, J., Leaniz, C.G.D., Gajardo, G., Consuegra, S., Young, K.A., Sanzana, J., Vanhaecke, D., Orellana, G., Cerda, A.M., Stephenson, J.F., Terreau, A., Thailly, A.-F., Perry, B., Howes, P.N., and MacDonald, J. 2020. The Darwin Freshwater Fish Database of Exotic and Native Species in Chile [database]. figshare. https://doi.org/10.6084/m9.figshare.13077350"
 DIFA.filtered$datasetName <- 
-  "Darwin Initiative Fish Atlas"
-DIFA.filtered$basisOfRecord <- 
-  "Ocurrence"
+  "Garcia de Leaniz, C.; Gajardo, et al. (2020) The Darwin Freshwater Fish Database of Exotic and Native Species in Chile. https://doi.org/10.6084/m9.figshare.13077350"  
+DIFA.filtered$datasetName_tmp <- "Darwin Initiative Fish Atlas"
+DIFA.filtered$basisOfRecord <- "Occurrence"
 ```
 
-Se homologó la clase de `eventDate`  
-```{r}
-DIFA.filtered$eventDate <- as.Date(as.character(DIFA.filtered$eventDate))
-```
 
 ### Corrección de errores  
 Se identificaron un número de errores (de geolocalización, de nombres de localidades, etc.) y se corrigieron.
 ```{r, eval=FALSE}
-# Wrong coordinates since is located in the sea. Most likely was located in Huyar Bajo -42.398331, -73.553923, (after checking neighbouring sampling locations and other inconclusive info in the paper). 
+# Wrong coordinates since it is located in the sea. Most likely was located in Huyar Bajo -42.398331, -73.553923, (after checking neighbouring sampling locations and other inconclusive info in the paper). 
 
 locationRemarks.toFix <- "U57A"
 
@@ -2097,11 +2131,16 @@ rm(list=ls()[!ls()%in%c("DwC",
 ```
 
 
+```{r, eval=T, include=T}
+knitr::knit_exit()
+
+```
+
 ## iDigBio
 
-*Nombre del conjunto de datos*: iDigBio  
+*Nombre corto del conjunto de datos*: iDigBio  
 *Referencia*: [https://www.idigbio.org/](https://www.idigbio.org/)  
-*Archivo*:  Datos bajados directamente de internet (ver abajo)   
+*Archivo*:  `./data_sources/iDigBio/iDigBIo_download_2025-11-27.rds`   
 
 [iDigBio](https://www.idigbio.org/) es un proyecto enfocado en la digitalización y  publicación en línea de colecciones de especímenes de museos. iDigBio contiene casi 30 millones de registros de datos sobre especímenes de museos que se encuentran en instituciones de los Estados Unidos, incluyendo la colección de peces del Dr. Brian Dyer depositada en *The Division of Fishes of the Museum of Zoology of University of Michigan* (UMMZ Fish Collection). iDigBio también cuenta con casi 5 millones de imágenes de estos especímenes. 
 
@@ -2151,6 +2190,7 @@ X <- readRDS("./data_sources/iDigBio/iDigBIo_download_2025-11-27.rds")
 ```
 
 
+
 ```{r, eval=T}
 # Identificación de atributos con modo lista
 sapply(X, is.list)[sapply(X, is.list)==T]
@@ -2191,7 +2231,7 @@ column_spec(column = 2, width = "25em")
 
 ```
 
-En definitiva, los dos campos llamados identifiedBy (con uno de ellos anidado dentro de Identificación) presentan un solape parcial, y generalmente es preferible el campo que no anidado. 
+En definitiva, los dos campos llamados identifiedBy (con uno de ellos anidado dentro de Identificación) presentan un solape parcial, y generalmente es preferible el campo no anidado. 
 
 En relación a `ResourceRelationship`, estos son los campos que contiene:
 
@@ -2275,7 +2315,7 @@ iDigBio <- iDigBio %>%
 
 El campo de fecha de ocurrencia venía muy heterogéneo con textos describiendo rangos de fechas, fechas incompletas y distintos formatos. Por lo tanto, se respaldó el campo `eventDate` (bajo el nombre `eventDate_Old`)  y se actualizó  para conformar al formato estándar DwC con sus distintas [variantes](https://techdocs.gbif.org/en/data-processing/temporal-interpretation). En algunos casos fue necesario  recurrir al campo `verbatimEventDate` y realizar correcciones manuales. Una vez actualizado `eventDate`, este se utilizó para extraer y crear `year`.
 
-Por último, los registros en `verbatimEventDate` se mantuvieron inalterados, pero se añadieron nuevos registros obtenidos de `eventDate_Old`, `verbatimEventDate`estaba vacío y `eventDate_Old` difirió de `eventDate`.  
+Por último, los registros en `verbatimEventDate` se mantuvieron inalterados, pero se añadieron nuevos registros obtenidos de `eventDate_Old` cuando `verbatimEventDate`estaba vacío y `eventDate_Old` difirió de `eventDate`.  
 
 ```{r, eval=TRUE}
 # Create dataframe
@@ -2339,8 +2379,6 @@ df <- df %>% mutate(verbatimEventDate = ifelse(
 Finalmente, se transfirieron los campos actualizados a la tabla de iDigBio:   
 
 ```{r, eval=TRUE}
-dim(iDigBio)
-
 iDigBio$verbatimEventDate <- df$verbatimEventDate
 iDigBio$eventDate <- df$eventDate
 iDigBio$year <- as.numeric(df$year)
@@ -2369,7 +2407,7 @@ Mapa con datos filtrados espacialmente (Figura \ref{fig:iDigBioplot}).
   # chile_argentina_bbox <- c(-77, -57, -65, -40)
   bbox <- make_bbox(study.area$long, study.area$lat, f = 0.1)
 # Get reference map using ggmap
-register_stadiamaps(key = "f4aaa648-6137-4e34-a850-46c9821d7a6a")
+register_stadiamaps(key = Sys.getenv("STADIAMAPS_KEY"))
 map <- ggmap(
   get_stadiamap(bbox = c(left = -76, bottom = -57, right = -64, top = -40), zoom = 5, maptype = "stamen_terrain_background"), darken = c(0.5,"white")
 )
@@ -2482,16 +2520,18 @@ Añadir  un identificador para el origen de los datos en `datasetName`, pero ret
 
 ```{r}
 
-iDigBio_AE <- iDigBio_AE %>% mutate(datasetName = if_else(
+iDigBio_AE <- iDigBio_AE %>% 
+  mutate(
+    datasetName = if_else(
       !is.na(datasetName) & str_trim(datasetName) != "",
-      paste0("iDigBio; ", datasetName),
-      "iDigBio")) 
+      paste0("iDigBio: ", datasetName), "iDigBio"),
+    datasetName_tmp = if_else(
+      !is.na(datasetName) & str_trim(datasetName) != "",
+      paste0("iDigBio; Originaly provided by: ", institutionCode), "iDigBio")) 
 
 ```
 
-### Respaldo  
-
-El archivo `iDigBio_ready.csv` se guardó en la carpeta de este proyecto en el disco duro, después de modificar `datasetName` añadiendo una etiqueta para *iDigBio* y reteniendo la fuente original del conjunto de datos, que en este caso son museos.  
+### Respaldo   
 
 
 ```{r}
@@ -2510,7 +2550,6 @@ saveRDS(iDigBio_AE, paste0("./data_sources/iDigBio/Output_iDigBio_",
 iDigBio_AE <- readRDS("./data_sources/iDigBio/Output_iDigBio_2025-11-30.rds")
 
 ```
-
 
 
 ```{r, include=F}
@@ -2537,9 +2576,9 @@ rm(list=ls()[!ls()%in%c("DwC",
 
 ##  Global Biodiversity Information Facility (GBIF)  
 
-*Nombre del conjunto de datos*: GBIF  
-*Referencia*: GBIF Occurrence Download https://doi.org/10.15468/dl.wdtxyw Accessed from R via rgbif (https://github.com/ropensci/rgbif) on 2025-11-27.  
-*Archivo*:  `GBIF2025-11-27_0012918-251120083545085.csv`  
+*Nombre corto del conjunto de datos*: GBIF20260420  
+*Referencia*: "GBIF Occurrence Download (https://doi.org/10.15468/dl.wwr886)[https://doi.org/10.15468/dl.wwr886] Accessed from R via rgbif (https://github.com/ropensci/rgbif)[https://github.com/ropensci/rgbif] on 2026-04-20"
+*Archivo*:  `/data_sources/GBIF/0034545-260409193756587/occurrence.txt`  
 
 La *Global Biodiversity Information Facility* (GBIF) es la más grande red internacional e infraestructura de datos financiada por los gobiernos del mundo, con el objetivo de proporcionar a cualquier persona, en cualquier lugar, acceso abierto a datos sobre todo tipo de vida en la Tierra  [(https://www.gbif.org/what-is-gbif)](https://www.gbif.org/what-is-gbif).
 
@@ -2550,7 +2589,7 @@ Conjuntos de datos de ocurrencia de especies pueden ser bajados programáticamen
 
 Los datos se bajaron con la función `occ_download{rgbif}` utilizando un criterio geográfico (`study.area.wkt_Simp`) y un criterio taxonómico (ordenes de peces) (ver capítulos *Listado taxonómico de peces* y *Área de estudio*).  
 
-El siguiente código fue ejecutado una vez, paso a paso, y los datos se guardaron en el disco duro (`GBIF2025-11-27_0012918-251120083545085.csv`) antes de proceder con el filtrado, etc.
+El siguiente código fue ejecutado una vez, paso a paso, y los datos se guardaron en el disco duro (`/data_sources/GBIF/0034545-260409193756587/occurrence.txt`) antes de proceder con el filtrado, etc.
 
 ```{r, eval=F}
 library("rgbif")
@@ -2559,13 +2598,21 @@ library("rgbif")
 # All fish orders
 gbif_taxon_keys <- fish.orders$orderKey
 
+# Load API access credentials
+gbif_user  <- Sys.getenv("GBIF_USER")
+gbif_pwd   <- Sys.getenv("GBIF_PWD")
+gbif_email <- Sys.getenv("GBIF_EMAIL")
+
+stopifnot( nzchar(gbif_user), nzchar(gbif_pwd), nzchar(gbif_email) )
+
 gbif_download <- occ_download(
-         pred_in("taxonKey",gbif_taxon_keys),
-             pred_within(study.area.wkt_Simp),
-             format = "SIMPLE_CSV",
-             user = "cristiancorrea", 
-             pwd = "gb1f24", 
-             email = "cristiancorrea@gmail.com" )
+  pred_in("taxonKey", gbif_taxon_keys),
+  pred_within(study.area.wkt_Simp),
+  format = "DWCA",
+  user  = gbif_user,
+  pwd   = gbif_pwd,
+  email = gbif_email
+)
 
 # The followig line issues the query and waits for the response.
 # It takes several to many minutes, or even an hour.
@@ -2581,16 +2628,17 @@ d <- occ_download_get(gbif_download, path = "./data_sources/GBIF/") %>%
 
 ```
 
-El conjunto de datos fue bajado con éxito y puede ser citado así "GBIF Occurrence Download https://doi.org/10.15468/dl.wdtxyw Accessed from R via rgbif (https://github.com/ropensci/rgbif) on 2025-11-27".
+El conjunto de datos fue bajado con éxito y puede ser citado así "GBIF Occurrence Download (https://doi.org/10.15468/dl.wwr886)[https://doi.org/10.15468/dl.wwr886] Accessed from R via rgbif (https://github.com/ropensci/rgbif)[https://github.com/ropensci/rgbif] on 2026-04-20".
 
 A continuación la lectura del conjunto de datos.  
 ```{r, eval = TRUE}
 
-GBIF_AE <- read.delim("./data_sources/GBIF/GBIF_2025-11-27/GBIF2025-11-27_0012918-251120083545085.csv") 
+GBIF_AE <- read.delim("./data_sources/GBIF/0034545-260409193756587/occurrence.txt", fileEncoding = "UTF-8") 
 
 ```
 
-Cabe destacar que algunos pocos registros fueron erróneamente incluidos en el área de estudio por artefacto del polígono simplificado. Por ejemplo, este es el caso de ocurrencias en Ensenada, Lago Llanquíhue. Estos registros fueron excluidos con un filtro espacial, esta vez usando el polígono más detallado (ver *Area de estudio*).
+Cabe destacar que algunos pocos registros fueron erróneamente incluidos en el área de estudio por artefacto del polígono simplificado. Por ejemplo, este es el caso de ocurrencias en Ensenada, lago Llanquíhue. Estos registros fueron excluidos con un filtro espacial, esta vez usando el polígono más detallado (ver *Área de estudio*).
+
 
 ```{r, include=F}
 pts <- SpatialPointsDataFrame(data = GBIF_AE,
@@ -2605,13 +2653,13 @@ GBIF_AE <- GBIF_AE[withinAE,]
 ```
 
 
-El conjunto de datos contiene `r nrow(GBIF_AE)` registros de ocurrencias dentro del área de estudio, aunque la vasta mayoría son  en ambiente marino y son excluidos en el capítulo *Consolidación del Atlas Ictiogeográfico*. En la Figura \ref{fig:GBIFplot} me muestra un mapa con los datos filtrados espacialmente.  
+El conjunto de datos contiene `r nrow(GBIF_AE)` registros de ocurrencias dentro del área de estudio, aunque la vasta mayoría son taxa marinos así como datos a nivel individual y son excluidos en el capítulo *Consolidación del Atlas Ictiogeográfico*. En la Figura \ref{fig:GBIFplot} se muestra un mapa con los datos filtrados espacialmente.  
 
 ```{r GBIFplot, echo=F, fig.width=6, warning = FALSE, message = FALSE, fig.align = 'center', fig.cap="Distribución de ocurrencias de peces bajados de GBIF usando como filtro espacial el polígono azul."}
 
 library("ggmap")
 
-register_stadiamaps(key = "f4aaa648-6137-4e34-a850-46c9821d7a6a")
+register_stadiamaps(key = Sys.getenv("STADIAMAPS_KEY"))
 
 map <- ggmap(get_stadiamap(bbox = c(left = -76, bottom = -57, right = -64, top = -40), zoom = 5, maptype= "stamen_terrain_background"))
 
@@ -2624,23 +2672,34 @@ map +
 
 ### Homologación al formato DwC
 
-Casi no fue necesario homologar porque el formato nativo de ocurrencias de GBIF es DwC.  Sin embargo, se añadió la variable `datasetName = "GBIF"` para identificar este set de datos en el producto final. 
+Casi no fue necesario homologar porque el formato nativo de ocurrencias de GBIF es DwC. 
+
+El  campo `occurrenceID` se mantuvo inalterado salvo por dos registros sin `occurrenceID`, en cuyo caso se les asignó el mismo valor  que `catalogNumber.` 
+Todos los valores de `occurrenceID` resultaron  únicos, salvo por unas pocas instancias de peces marinos  que se ignoraron.   
+
 
 ```{r}
-GBIF_AE$datasetName <- "GBIF"
+# GBIF_AE %>% select(occurrenceID, catalogNumber) %>% filter(occurrenceID == "")
+GBIF_AE <- GBIF_AE %>% mutate(occurrenceID = ifelse(occurrenceID != "", occurrenceID, catalogNumber))
 ```
 
-Se homologó la clase (tipo de dato) de `eventDate` y `occurrenceID`
-```{r}
-GBIF_AE$occurrenceID <- as.character(GBIF_AE$occurrenceID)
+El campo `occurrenceID` tiene unos pocos valores repetidos (3 pares), pero fueron ignorados por tratarse de especies marinas.   
+
+```{r, eval=FALSE, include=FALSE}
+GBIF_AE %>%
+  add_count(occurrenceID) %>%
+  filter(n > 1) %>%
+  select(occurrenceID, gbifID, scientificName) %>%
+  relocate(scientificName) %>% arrange(occurrenceID)
 
 ```
+
 
 El campo `eventDate` en el DwC tolera diferentes formatos tales como 2025-11-29, 2025-11, 2025, e incluso intervalos de tiempo 2023-09-05/2023-09-18 [https://techdocs.gbif.org/en/data-processing/temporal-interpretation](https://techdocs.gbif.org/en/data-processing/temporal-interpretation), y en la tabla bajada de GBIF se encuentran varios de estos formatos y no fueron alterados.
 
 Algunas ocurrencias no tienen año y `eventDate` es un rango. Asignar  a `year`, el primer año del rango. 
 
-```{r, eval = TRUE}
+```{r, eval=TRUE}
 
 GBIF_AE$eventDate[GBIF_AE$eventDate == ""] <- NA
 GBIF_AE$year[GBIF_AE$year == ""] <- NA
@@ -2653,43 +2712,58 @@ range(GBIF_AE$year, na.rm = T)
 ```
 
 ### Remover los registros que provienen del Ministerio del Medio Ambiente (MMA)
-Los registros de la base de datos del MMA fueron publicados en GBIF, lo que genera un problema de registros duplicados entre GBIF y el MMA. Dado que los registros en la base de datos del MMA son más completos, se eliminaran los registros del MMA publicados en GBIF, para quedarse solo con los datos originales más completos. 
+Los registros de la base de datos del MMA fueron publicados en GBIF, lo que genera un problema de registros duplicados entre GBIF y el MMA (ver arriba *Base de datos Ministerio del Medio Ambiente de Chile*). Dado que los registros en la base de datos del MMA son más completos, aquí se excluyeron los registros del MMA curados e incluidos más arriba que están más completos.  
 
 ```{r}
-# Select only records starting with "MMAMMA:ICT"
-mma_records <- GBIF_AE[grepl("^MMA:ICT", GBIF_AE$occurrenceID), ]
+# Read the occurrenceID of the  dataset MMA dataset.  
+occurrenceID_exclude <- read.csv("./data_sources/GBIF_MMA/Output_MMA_AE_GBIF_DwC.csv", 
+         fileEncoding ="UTF-8") %>% select(occurrenceID)
 
-nrow(mma_records) # 740
-nrow(MMA_AE) # 756
-
-# # Some records in MMA_AE were not found in GBIF
-# MMA_AE[!(MMA_AE$occurrenceID %in% mma_records$occurrenceID), c("year","locality")]
-# 
-# # All records in GBIF are included in MMA_AE 
-# mma_records[!(mma_records$occurrenceID %in% MMA_AE$occurrenceID), c("year","locality")]
-
-# Filter them out from your main dataset.
-GBIF_AE <- GBIF_AE[!grepl("^MMA:ICT", GBIF_AE$occurrenceID), ]
+GBIF_AE_bkp <- GBIF_AE 
+GBIF_AE <- GBIF_AE %>% anti_join(occurrenceID_exclude, by = "occurrenceID")
 
 ```
+
+Un total de `r nrow(GBIF_AE_bkp) - nrow(GBIF_AE)` registros provenientes del Ministerio del Medio Ambiente fueron excluidos aquí puesto que se incluyeron más arroba en otro conjunto de datos.
 
 
 ### Remover registro que provienen de iNaturalist
-Varios registros de iNaturalist fueron publicados en GBIF, lo que genera un problema de registros duplicados entre GBIF y iNaturalist. Dado que los registros en la base de datos de iNaturalist son más completos, se eliminaran los registros del iNaturalist publicados en GBIF, para quedarse solo con los datos originales más completos. 
+Varios cientos de ocurrencias de peces (previo a filtro taxonómico) provenientes de iNaturalist y calidad investigación (research-grade) fueron publicados en GBIF (n = 297, a la fecha 2026-04-22), lo que genera un problema de registros duplicados entre GBIF y iNaturalist. Dado que el número de ocurrencias de peces en el área de estudio disponibles directamente de iNaturalist es mucho mayor (679, misma fecha y calidad, ver siguiente sección]) se decidió eliminar los registros de iNaturalist publicados en GBIF para quedarse con los datos originales bajados directamente de iNaturalist.
+
 
 ```{r}
-# Select records with institutionCode = "iNaturalist"
-iNat_records <- GBIF_AE[grepl("iNaturalist", GBIF_AE$institutionCode), ]
+# Select records with institutionCode = "iNaturalist" and save for later.
+GBIF_iNat <- GBIF_AE[grepl("iNaturalist", GBIF_AE$institutionCode), 
+                     c("gbifID", "catalogNumber", "occurrenceID")] 
 
-# head(iNat_records)
-
-# Check how many iNat records are in GBIF (252 records)
-# nrow(iNat_records)
-
-# Filter them out from your main dataset.
-GBIF_AE <- GBIF_AE[!grepl("iNat", GBIF_AE$institutionCode), ]
+# Filter them out from your main GBIF dataset.
+GBIF_AE <- GBIF_AE[!grepl("iNaturalist", GBIF_AE$institutionCode), ]
 ```
 
+Un total de `r nrow(GBIF_iNat)` ocurrencias de iNaturalist fueron excluidas  para ser importadas directamente de iNaturalist, junto con cientos de otras ocurrencias calidad investigación de peces dentro del área de estudio que por alguna razón no se encontraron en GBIF. El objeto `GBIF_iNat` se mantuvo temporalmente en el ambiente de trabajo para  añadir los gbifID a las ocurrencias correspondientes de iNaturalist. 
+
+### Agregación de datos a nivel individual provenientes de SUBPESCA
+
+Aunque más abajo en la sección *Consolidación del Atlas Ictiogeográfico* se emplea un algoritmo para deduplicar los datos, aquí se agregaron los datos a nivel individual para  reducir considerablemente el tamaño de la tabla y facilitar su procesamineto. Para esto, los datos a nivel individual se agruparon por coordenadas geográficas, fechas, y  especie.
+
+```{r}
+GBIF_AE <- bind_rows(
+  GBIF_AE %>%
+    filter(publisher != "Subsecretaría de Pesca y Acuicultura"),
+  
+  GBIF_AE %>%
+    filter(publisher == "Subsecretaría de Pesca y Acuicultura") %>%
+    group_by(decimalLatitude, decimalLongitude, eventDate, species) %>%
+    mutate(individualCount = n()) %>%
+    slice(1) %>%
+    ungroup() %>%
+    mutate(sex = NA)
+)
+
+
+```
+
+El conjunto de datos ahora contiene `r nrow(GBIF_AE)` registros de ocurrencias dentro del área de estudio, agregando los datos de GBIF-SUBPESCA a nivel de muestreo y especie.  La exclusión de taxa marinos se realiza en el capítulo *Consolidación del Atlas Ictiogeográfico*.
 
 ### Corrección de errores  
 
@@ -2793,7 +2867,29 @@ rm(fix, occurrenceID.toFix)
 
 Se retuvieron `r nrow(GBIF_AE)` registros, previo filtro taxonómico.    
 
-### Respaldo
+
+Se retuvieron inalterados los campos `datasetKey`, `datasetID`, y `datasetName` para mejorar la trazabilidad de los datos, y se creó una  nueva variable llamada `datasetSource` para identificar colectivamente el conjunto de datos bajados de GBIF.     
+
+```{r, include=F, eval=FALSE}
+
+tmp <- GBIF_AE %>% #filter(datasetName=="") %>% 
+  select(publisher, datasetID, datasetName, datasetKey) %>% distinct()
+
+```
+
+
+```{r}
+
+GBIF_AE <- GBIF_AE %>%
+  mutate(datasetSource = "GBIF Occurrence Download https://doi.org/10.15468/dl.wwr886 Accessed from R via rgbif (https://github.com/ropensci/rgbif) on 2026-04-20, and subsequently filtered.",
+         datasetName_tmp = "GBIF"
+         )
+
+
+```
+
+
+### Respaldo  
 
 ```{r}
 write.csv(GBIF_AE, paste0("./data_sources/GBIF/Output_GBIF_",Sys.Date(),".csv"), row.names = F,fileEncoding = "UTF-8")
@@ -2805,7 +2901,7 @@ saveRDS(GBIF_AE, paste0("./data_sources/GBIF/Output_GBIF_",Sys.Date(),".rds"))
 
 ```{r, eval=FALSE, include=FALSE}
 
-GBIF_AE <- readRDS("./data_sources/GBIF/Output_GBIF_2025-11-29.rds")
+GBIF_AE <- readRDS("./data_sources/GBIF/Output_GBIF_2025-05-11.rds")
 
 ```
 
@@ -2829,7 +2925,8 @@ rm(list=ls()[!ls()%in%c("DwC",
                         "SUBPESCA2",
                         "DIFA.filtered",
                         "iDigBio_AE",
-                        "GBIF_AE")])
+                        "GBIF_AE",
+                        "GBIF_iNat")])
 ```
 
 
@@ -2873,9 +2970,14 @@ iNat_list <- list()
 
 for(i in 1:length(bounds_list)) {
   cat("Downloading region", i, "\n")
-  iNat_list[[i]] <- get_inat_obs(taxon_name = "Actinopterygii", bounds = bounds_list[[i]])
+  iNat_list[[i]] <- get_inat_obs(taxon_name = "Actinopterygii", bounds = bounds_list[[i]], maxresults = 1000) 
   Sys.sleep(1)  # Be nice to the API
 }
+
+iNat_list <- lapply(iNat_list, \(x) { x %>% mutate(tag_list = as.character(tag_list)) })
+
+# Make sure you reach the maxresults argument limit 
+sapply(iNat_list, nrow)
 
 iNat <- bind_rows(iNat_list)
 
@@ -2885,16 +2987,18 @@ write.csv(iNat, file = paste0("./data_sources/iNaturalist/iNat_downloaded_", Sys
 ```
 
 
-### Lectura de datos
+### Lectura de datos  
+Los datos se bajaron con ejecutando el bloque de arriba (activar y ejecutar si se quiere actualizar). A continuación se leen los últimos datos bajados, y se filtran para retener solamente los datos calidad investigación ().    
 
 ```{r, eval = TRUE}
-iNat <- read.csv("./data_sources/iNaturalist/iNat_downloaded_2025-11-28.csv")
+iNat <- read.csv("./data_sources/iNaturalist/iNat_downloaded_2026-04-22.csv") 
+iNat <- iNat %>% filter(quality_grade == "research")
 
 ```
 
 El conjunto de datos original presentó `r nrow(iNat)` ocurrencias y `r ncol(iNat)` variables. 
 
-Se estipularon las clases de datos numericos   
+Se estipularon las clases de datos numéricos   
 ```{r}
 iNat$longitude <- as.numeric(iNat$longitude)
 iNat$latitude <- as.numeric(iNat$latitude)
@@ -2915,51 +3019,36 @@ iNat$positional_accuracy <- as.numeric(iNat$positional_accuracy)
 ```
 
 
-### Selección de variables   
-
-Se seleccionaron las variables más importantes para ser homologadas.
-```{r}
-iNat <- iNat %>% select(id, observed_on_string, observed_on, 
-user_id, user_name,created_at, updated_at, quality_grade, license, url, description, place_guess, 
-latitude, longitude, positional_accuracy, scientific_name, common_name, taxon_id, user_id, user_name) 
-
-
-```
-
-
 ### Homologación al formato DwC  
 
-La homologación con el DwC se hizo con la siguiente clave: 
+La homologación con el DwC se hizo con la siguiente clave (DwC = iNaturalist_variable). Se añadió la variable `datasetName = "iNaturalist research-grade observations"` para identificar este set de datos en el producto final.  
+
 ```{r}
-colnames(iNat) <- recode(colnames(iNat),
-      `id` = "catalogNumber", 
-      `observed_on_string` = "verbatimEventDate",
-      `observed_on` = "eventDate", # number converted to date
-      `user_id` = "recordedByID",
-      `user_name` = "recordedBy",
-      `created_at` = "dateIdentified",
-      `updated_at` = "modified",
-      `quality_grade` = "datasetName",
-      `license` = "license",
-      `url` = "occurrenceID",
-      `description` = "eventRemarks",
-      `place_guess` = "locality",
-      `latitude` = "decimalLatitude",
-      `longitude` = "decimalLongitude",
-      `positional_accuracy` = "coordinateUncertaintyInMeters",
-      # `place_county_name` = "municipality",
-      # `place_state_name` = "stateProvince",
-      # `place_country_name` = "country",
-      `scientific_name` = "scientificName",
-      `common_name` = "vernacularName",
-      `taxon_id` = "taxonID",
-      # `taxon_kingdom_name` = "kingdom",
-      # `taxon_phylum_name` = "phylum",
-      # `taxon_class_name` = "class",
-      # `taxon_order_name` = "order",
-      # `taxon_family_name` = "family",
-      # `taxon_genus_name` = "genus"
-      )
+iNat <- iNat %>% mutate(
+      catalogNumber = id, 
+      occurrenceID = url,
+      taxonID = as.character(taxon_id),
+      scientificName = scientific_name,
+      eventDate = observed_on,
+      verbatimEventDate = observed_on_string,
+      eventRemarks = description,
+      occurrenceRemarks = description, 
+      locality = place_guess,
+      decimalLatitude = latitude,
+      decimalLongitude = longitude,
+      coordinateUncertaintyInMeters = positional_accuracy,
+      license = license,
+      associatedMedia = image_url,
+      basisOfRecord = "HumanObservation",
+      datasetName = "iNaturalist research-grade observations",
+      datasetName_tmp = "iNaturalist research-grade observations",
+      geodeticDatum = dplyr::if_else(
+        !is.na(latitude) & !is.na(longitude),
+        "WGS84",
+        NA_character_),
+      .keep = "none"
+              )
+
 ```
 
 
@@ -2984,7 +3073,7 @@ Mapa con datos filtrados espacialmente (Figura \ref{fig:iNaturalistplot}).
 ```{r iNaturalistplot, echo=F, fig.width=6, warning = FALSE, message = FALSE, fig.align = 'center', fig.cap="Distribución de ocurrencias de peces bajados de iNaturalist usando como filtro espacial el polígono azul."}
 
 # Get reference map using ggmap
-register_stadiamaps(key = "f4aaa648-6137-4e34-a850-46c9821d7a6a")
+register_stadiamaps(key = Sys.getenv("STADIAMAPS_KEY"))
 
 map <- ggmap(
   get_stadiamap(bbox = c(left = -76, bottom = -57, right = -64, top = -40), zoom = 5, maptype = "stamen_terrain_background"), darken = c(0.5,"white")
@@ -2998,11 +3087,13 @@ map + geom_point(data = iNat[!withinAE,], aes(x = decimalLongitude, y = decimalL
   
 ```
 
-Se añadió la variable `datasetName = "iNaturalist research-grade observations"` para identificar este set de datos en el producto final. 
+Para mejorar la trazabilidad también se indexó el identificador del conjunto de datos de GBIF (gbifID) para las ocurrencias de iNaturalist que también se encontraron en GBIF (ver sección precedente).    
 
 ```{r}
-iNat_AE$datasetName <- "iNaturalist"
-iNat_AE$basisOfRecord <- "HumanObservation"
+GBIF_iNat <- GBIF_iNat %>% mutate(catalogNumber = as.integer(catalogNumber))
+
+iNat_AE <- iNat_AE %>% left_join(GBIF_iNat[,c("catalogNumber", "gbifID")], by = "catalogNumber") %>%
+  mutate(otherCatalogNumbers = ifelse(!is.na(gbifID), paste0("gbifID:", gbifID), NA)) %>% select(-gbifID)
 
 ```
 
@@ -3047,19 +3138,20 @@ rm(list=ls()[!ls()%in%c("DwC",
 
 
 
-## Los Peces de Argentina (DataBasin)  
+## Freshwater Fishes from Argentina  
 
-*Nombre del conjunto de datos*: DataBasin - Los Peces de Argentina (DBLPA)   
-*Referencia*: Conservation Biology Institute. Los Peces de Argentina. Último acceso 2025-11-28, [https://databasin.org/datasets/a990e5f4d70a4cd1b040b7ceb6c22904/](https://databasin.org/datasets/a990e5f4d70a4cd1b040b7ceb6c22904/) [@Liotta2020]  
-*Archivo*: `DataBasin_Argentina_AE.csv`  
+*Nombre corto del conjunto de datos*: Freshwater Fishes from Argentina 
+*Nombre del conjunto de datos*: Distribución geográfica de los peces de aguas continentales de Argentina
+*Referencia*: Liotta, J. 2020. Geographical distribution database of freshwater fishes from Argentina. FMJ: 1–5. doi:10.15504/fmj.2020.47. [@Liotta2020]
+*Archivo*: `Fundaccion_Oga_DAP_20251215_commented.csv`
 
 Conjunto de datos liderado por [Jorge Liotta](https://orcid.org/0000-0002-9053-9274) en varias etapas, partiendo por la publicación de su libro (@Liotta2006) en el cual "se realizó una recopilación bibliográfica exhaustiva de los trabajos científicos realizados desde 1967, año de la publicación de Raúl Ringuelet, Raúl Arámburu y Armonía Alonso de Arámburu, tomada como base del trabajo para el conjunto de la ictiofauna del país. Para las subregiones Patagónica y Andino-cuyana se utilizaron además los trabajos de Arratia et al. (1983) y de Bello (2002). Se intentó incluir la totalidad de los trabajos existentes hasta el año 2003, aunque se agregaron algunas publicaciones posteriores." [@Liotta2006]. 
 
-Posteriormente (mayo 2008 a julio 2009) este conjunto de datos fue mejorado mediante la adición de nuevos campos de metadata, nuevos registros, y la implementación de metodología de la Red Temática de Especies y Especímenes de IABIN (SSTN, por sus siglas en inglés). Esta etapa se hizo bajo el alero de la *Fundación Óga* (discontinuada años después), con el apoyo del *Museo de Ciencias Naturales "Rvdo. P. Antonio Scasso"*, y financiado por *Secretaría General de la Organización de Estados Americanos (SG/OAS), Departamento de Desarrollo Sostenible* [@Liotta2009]. 
+Posteriormente (mayo 2008 a julio 2009) este conjunto de datos fue mejorado mediante la adición de nuevos campos de metadata, nuevos registros, y la implementación de metodología de la Red Temática de Especies y Especímenes de IABIN (SSTN, por sus siglas en inglés). Esta etapa se hizo bajo el alero de la *Fundación Óga* (discontinuada años después), con el apoyo del *Museo de Ciencias Naturales "Rvdo. P. Antonio Scasso"*, y financiado por *Secretaría General de la Organización de Estados Americanos (SG/OAS), Departamento de Desarrollo Sostenible* [@Liotta2009]. El producto fue incorporado a un conjunto de datos público llamado *Los Peces de Argentina* y publicado por el *Conservation Biology Institute* en  [databasin.org](https://databasin.org/datasets/a990e5f4d70a4cd1b040b7ceb6c22904/) (acceso 2025-11-28). En este conjunto de datos, la mayoría de los datos de peces provenientes de cuencas compartidas entre Chile y Argentina fueron proporcionados por la Fundación Oga (FO). La mayoría de los datos de FO indican en el campo `database` el valor "SSTN", que significa "IABIN - Species and Specimens Thematic Network" (por sus siglas en inglés). Sin embargo, la trazabilidad de los datos en esta capa es muy pobre, faltando campos clave tales como referencias y año del registro. 
 
-El producto fue incorporado a un conjunto de datos público llamado *Los Peces de Argentina* y publicado por el *Conservation Biology Institute* en  [databasin.org](https://databasin.org/datasets/a990e5f4d70a4cd1b040b7ceb6c22904/) (acceso 2025-11-28). En este conjunto de datos, la mayoría de los datos de peces provenientes de cuencas compartidas entre Chile y Argentina fueron proporcionados por la Fundación Oga (FO). La mayoría de los datos de FO indican en el campo `database` el valor "SSTN", que significa "IABIN - Species and Specimens Thematic Network" (por sus siglas en inglés). Sin embargo, la trazabilidad de los datos en esta capa es muy pobre, faltando campos clave tales como referencias y año del registro. 
+Esto nos ha llevado a buscar una versión más completa de la base de datos. En su última descripción de la base de datos que adoptamos en esta sección, Jorge Liotta (@Liotta2020) dice que "Posee campos de información de diversos tipos: de sistemática y etatus de conservación (23 campos), geográficos (16), de bibliografía (12), de georreferenciación y  calidad asociada (12), y de colección (3). Actualmente cuenta con unos 19.000 registros de casi 550 especies nativas y 24  exóticas válidas, que se encontraban dispersos en más de 800 publicaciones científicas y varias colecciones de museos. Un  30% de los registros corresponden a especímenes mientras que el resto de los registros son observacionales." También sostiene: "Not all fields are available in the website; information can be requested via \texttt{infobasepecesarg@gmail.com}". 
 
-Esto nos ha llevado a buscar una versión más completa de la base de datos. En su ultima descripción de la base de datos, Jorge Liotta (@Liotta2020) dice que "Posee campos de información de diversos tipos: de sistemática y status de conservación (23 campos), geográficos (16), de bibliografía (12), de georreferenciación y  calidad asociada (12), y de colección (3). Actualmente cuenta con unos 19.000 registros de casi 550 especies nativas y 24  exóticas válidas, que se encontraban dispersos en más de 800 publicaciones científicas y varias colecciones de museos. Un  30% de los registros corresponden a especímenes mientras que el resto de los registros son observacionales." También sostiene: "Not all fields are available in the website; information can be requested via \texttt{infobasepecesarg@gmail.com}". Es por esto que hemos contactado al autor para  pedir una versión más completa, al menos de nuestra área de estudios solamente, y estamos en espera de una respuesta.  
+Todo esto nos llevó a contactar a Jorge Liotta  directamente, quien tuvo la gentileza de compartir su versión actualizada de ocurrencias dentro de nuestra área de estudios.   
 
 Contacto: 
    Jorge Liotta
@@ -3070,50 +3162,113 @@ Contacto:
 
 
 
-### Lectura de datos
+### Lectura de datos    
+Como se explica en la introducción de este conjunto de datos, los datos se obtuvieron de dos fuentes:
+####  1. Bajándolos de  DataBasin - Los Peces de Argentina (DBLPA)  
 
-```{r}
+Un análisis preliminar demuestra que los únicos datos originales de este set de datos son los aportados por Fundación Óga, y estos fueron aportados en mayor detalle por Jorge Liotta. El resto de los datos útiles de este set de datos provienen de GBIF, y son importados en el capítulo de GBIF. 
+
+```{r, eval=FALSE, include=FALSE}
 # rm(list="DBLPA")
 DBLPA <- read.csv("./data_sources/Los_Peces_de_Argentina/Los_Peces_de_Argentina_downloaded_2025-11-28.csv", header = T, sep = ",", fileEncoding = "UTF-8", stringsAsFactors = F, colClasses = "character")
 
 ```
+  
 
-### Selección de atributos  
+####  2.  Obtenidos directamente de Jorge Liotta  (más completos)
+  
+Datos de la Fundación Óga con mayor nivel de detalle que la versión publicada en DataBasin. 
+  
+```{r}
+FO_Liotta <- read.csv("./data_sources/Los_Peces_de_Argentina/data_from_Jorge_Liotta_20251215/Fundaccion_Oga_DAP_20251215_commented.csv", header = T, sep = ",", fileEncoding = "UTF-8", stringsAsFactors = F, colClasses = "character")
+```
+  
+Se seleccionaron las columnas relevantes.    
+```{r}
+cols_selection <- c(
+  "GlobalUniqueIdentifier", "NOMBRE.CIENTÍFICO",  "CUERPO.DE.AGUA",
+  "CITA", "Decimal.Latitude",  "Decimal.Longitude",  "AÑO",  "CODIGO.INSTITUCIÓN",  
+  "CODIGO.COLECCIÓN",  "N.COLECCIÓN", "comments",  ".remove",
+  ".locality", ".decimalLatitude", ".decimalLongitude")
+
+FO_Liotta <- FO_Liotta %>% select(all_of(cols_selection))
+```
+
+Se  reemplazó la referencia bibliográfica por la versión completa provista por  Jorge Liotta.  
+```{r}
+biblio <- read.csv("./data_sources/Los_Peces_de_Argentina/data_from_Jorge_Liotta_20251215/bibliographyKey.csv", header = T, sep = ",", fileEncoding = "UTF-8", stringsAsFactors = F, colClasses = "character")
+
+FO_Liotta <- FO_Liotta %>%
+  left_join(biblio, by = "CITA") %>%
+  mutate(CITA = bibliography, .keep = "unused"  )
+```
+
+
+### Homologación con DwC   
 
 ```{r}
-DBLPA <- DBLPA %>% select(id, latitude, longitude,  obs_date, t_species, database, inst, collection, provider)
+FO_Liotta <- FO_Liotta %>%
+  mutate(
+    occurrenceID = GlobalUniqueIdentifier,
+    scientificName = `NOMBRE.CIENTÍFICO`,
+    locality = ifelse(CUERPO.DE.AGUA == "-", NA,CUERPO.DE.AGUA),
+    decimalLatitude = Decimal.Latitude,
+    decimalLongitude = Decimal.Longitude,
+    year = AÑO,
+    eventDate = AÑO, 
+    bibliographicCitation = CITA,
+    institutionCode = `CODIGO.INSTITUCIÓN`,
+    collectionCode = `CODIGO.COLECCIÓN`,
+    catalogNumber = `N.COLECCIÓN`,
+    datasetName = "Liotta, J. (2020) Geographical distribution database of freshwater fishes from Argentina. doi:10.15504/fmj.2020.47",
+    datasetName_tmp = "DataBasin-Los Peces de Argentina; Originally provided by Fundación Óga through SSTN",
+    .keep = "unused",
+    .before = comments)
+
 
 ```
 
-```{r}
-# clean eventDate
-DBLPA <- DBLPA %>% 
-  mutate(obs_date = trimws(obs_date),
-         obs_date = ifelse(obs_date == "", NA, obs_date))
-# Examine date format used  before cohercing
-# unique(DBLPA$obs_date) 
 
-DBLPA$obs_date  <- as.Date(DBLPA$obs_date, format = "%Y-%m-%d")
-DBLPA$id        <- as.character(DBLPA$id)
-DBLPA$latitude  <- as.numeric(DBLPA$latitude)
-DBLPA$longitude <- as.numeric(DBLPA$longitude)
+Se excluyeron 26 registros provenientes de GBIF dado que estos ingresarán al análisis por otra vía. 
+
+```{r}
+FO_Liotta <- FO_Liotta %>% filter(!grepl("GBIF.org", bibliographicCitation))
 
 ```
 
 
-Excluir registros que no tienen información taxonómica]   
+### Corrección de errores  
+
+El conjunto de datos fue revisado manualmente en QGIS y Google Earth, lo que permitió identificar y corregir algunos problemas de georreferenciación, como el desplazamiento de coordenadas para hacerlas coincidir con el cuerpo de agua reportado. También se identificaron registros que debían removerse por estar ya incorporados en otros conjuntos de datos.
+
+Las revisiones se consignaron en cinco nuevas columnas del archivo `Fundaccion_Oga_DAP_20251215_commented.csv`: `comments`, `.remove`, `.locality`, `.decimalLatitude` y `.decimalLongitude`. En las columnas con el prefijo `.` —por ejemplo, `.decimalLatitude`—, los valores no vacíos indican correcciones propuestas para los campos originales correspondientes. Los valores originales de la tabla enviada por Jorge Liotta no fueron alterados, y los cambios se ejecutan a continuación.
+
+
 ```{r}
-DBLPA <- DBLPA %>% 
-  filter(!is.na(t_species) & str_trim(t_species) != "")
+FO_Liotta <- FO_Liotta %>%
+  mutate( across( c(.remove, .locality, .decimalLatitude, .decimalLongitude),
+      ~ na_if(str_trim(as.character(.x)), "") ) ) %>%
+  filter(is.na(.remove)) %>%
+  mutate(
+    locality = if_else(!is.na(.locality), .locality, 
+                              locality),
+    decimalLatitude = if_else(!is.na(.decimalLatitude), as.numeric(.decimalLatitude), 
+                              as.numeric(decimalLatitude)),
+    decimalLongitude = if_else(!is.na(.decimalLongitude), as.numeric(.decimalLongitude),
+                              as.numeric(decimalLongitude)) ) %>% 
+  select(-comments, -.remove, -.locality, -.decimalLatitude, -.decimalLongitude)
+
+
 ```
+
 
 Los peces reportados por este conjunto de datos argentino dentro del área de estudio en cuencas binacionales y fiordos se presentan en la Tabla \ref{ab:DBLPAtaxa}.  
 
 ```{r DBLPAtaxa, echo=F, warning=FALSE, fig.pos='H'}
-tmp <- DBLPA %>% select(t_species) %>% 
-  arrange(t_species) %>% distinct() %>% pull()
+tmp <- FO_Liotta %>% select(scientificName) %>% 
+  arrange(scientificName) %>% distinct() %>% pull()
 tmp <- matrix(tmp, ncol = 2) 
-kable(tmp,caption = "Lista de taxa encontrados en DataBasin - Los Peces de Argentina (DBLPA).", 
+kable(tmp,caption = "Lista de taxa encontrados en Los Peces de Argentina - Museo de Ciencias Naturales Rvdo. P. Antonio Scasso (Jorge Liotta)", 
         col.names = c("Taxón", "Taxón (cont.)"),longtable=F) %>%
          kable_styling(bootstrap_options = c("striped", "hover", "condensed"),full_width = F, latex_options = c("HOLD_position"), font_size = 10) %>% 
 column_spec(column = 1, width = "20em") %>% 
@@ -3121,55 +3276,6 @@ column_spec(column = 2, width = "20em")
 
 ```
 
-### Agregado de datos por sitio
-
-[**HERE**, check if the dataset is at the individual level. I found evidence for and against it. Ambiguous. For now, left it  as is.]  
-
-[**HERE**, eventDates and bibligraphicCitation  are missing, awaiting for an answer from Jorge Liotta].  
-
-### Homologación con DwC  
-
-Se renombraron los atributos para homologar con el DwC usando la siguiente clave.  
-```{r}
-colnames(DBLPA) <- recode(colnames(DBLPA), 
-           `id`= "occurrenceID",
-           `latitude`= "decimalLatitude",
-           `longitude`= "decimalLongitude",
-           `obs_date`= "eventDate",
-           `t_species`= "scientificName",
-           `database`= "datasetName",# merged with provider below
-           `inst`= "institutionCode",
-           `collection`= "collectionCode",
-           `provider`= "datasetName2") # see next chunk     
-
-
-```
-
-
-```{r}
-# "datasetName" and "datasetName2" were merged below to produce "datasetName"
-DBLPA$datasetName <- case_when(
-  !is.na(DBLPA$datasetName2) & !is.na(DBLPA$datasetName) ~ 
-    paste0("DataBasin-Los Peces de Argentina; Originally provided by ", 
-           DBLPA$datasetName2, " through ", DBLPA$datasetName),
-  !is.na(DBLPA$datasetName2) ~ 
-    paste0("DataBasin-Los Peces de Argentina; Originally provided by ", 
-           DBLPA$datasetName2),
-  !is.na(DBLPA$datasetName) ~ 
-    paste0("DataBasin-Los Peces de Argentina; ", DBLPA$datasetName),
-  TRUE ~ "DataBasin-Los Peces de Argentina"
-)
-
-DBLPA$license <-
-  "CC BY-NC 3.0"
-DBLPA$rightsHolder <- 
-  "Conservation Biology Institute, http://consbio.org"
-DBLPA$accessRights <- 
-  "not-for-profit use only"
-
-DBLPA <- DBLPA %>% select(-datasetName2)
-
-```
 
 
 ### Filtrado área de estudio  
@@ -3178,12 +3284,12 @@ Se extrajeron los datos dentro del área de estudio.
 
 ```{r, include=T}
 
-pts <- SpatialPointsDataFrame(data = DBLPA,
-          coords = DBLPA[,c("decimalLongitude", "decimalLatitude")],
+pts <- SpatialPointsDataFrame(data = FO_Liotta,
+          coords = FO_Liotta[,c("decimalLongitude", "decimalLatitude")],
           proj4string = CRS("+init=epsg:4326"))
 
 withinAE <- !is.na(sp::over(pts, sp_poly, returnList = F))
-DBLPA_AE <- DBLPA[withinAE,]
+FO_Liotta_AE <- FO_Liotta[withinAE,]
 
 ```
 
@@ -3193,15 +3299,15 @@ Mapa con datos filtrados espacialmente (Figura \ref{fig:DBLPAplot}).
 ```{r DBLPAplot, echo=F, fig.width=6, warning = FALSE, message = FALSE, fig.align = 'center', fig.cap="Distribución de ocurrencias de la base de datos Los Peces de Argentina bajados de databasin.org usando como filtro espacial el polígono azul."}
 
 # Get reference map using ggmap
-register_stadiamaps(key = "f4aaa648-6137-4e34-a850-46c9821d7a6a")
+register_stadiamaps(key = Sys.getenv("STADIAMAPS_KEY"))
 
 map <- ggmap(
   get_stadiamap(bbox = c(left = -76, bottom = -57, right = -64, top = -40), zoom = 5, maptype = "stamen_terrain_background"), darken = c(0.5,"white")
 )
 
 # Plot the reference map and add points on top of it
-map + geom_point(data = DBLPA[!withinAE,], aes(x = decimalLongitude, y = decimalLatitude), color = "red", size = 2, alpha=0.3)+
-  geom_point(data = DBLPA[withinAE,],aes(x = decimalLongitude, y = decimalLatitude), color = "blue", size = 2, alpha=0.3)+
+map + geom_point(data = FO_Liotta[!withinAE,], aes(x = decimalLongitude, y = decimalLatitude), color = "red", size = 2, alpha=0.3)+
+  geom_point(data = FO_Liotta[withinAE,],aes(x = decimalLongitude, y = decimalLatitude), color = "blue", size = 2, alpha=0.3)+
   geom_polygon(data = study.area_coords, 
     aes(x = lon, y = lat), color="blue", fill=NA, alpha = 0.5, size=0.2)
   
@@ -3211,15 +3317,15 @@ map + geom_point(data = DBLPA[!withinAE,], aes(x = decimalLongitude, y = decimal
 
 ```{r}
 
-write.csv(DBLPA_AE, paste0("./data_sources/Los_Peces_de_Argentina/Output_Los_Peces_de_Argentina_", Sys.Date(), ".csv"), fileEncoding = "UTF-8", row.names = F)
+write.csv(FO_Liotta_AE, paste0("./data_sources/Los_Peces_de_Argentina/Output_Los_Peces_de_Argentina_", Sys.Date(), ".csv"), fileEncoding = "UTF-8", row.names = F)
 
-saveRDS(DBLPA, paste0("./data_sources/Los_Peces_de_Argentina/Output_Los_Peces_de_Argentina_", Sys.Date(), ".rds"))
+saveRDS(FO_Liotta_AE, paste0("./data_sources/Los_Peces_de_Argentina/Output_Los_Peces_de_Argentina_", Sys.Date(), ".rds"))
 
 ```
 
 ```{r, eval=FALSE, include=FALSE}
 
-DBLPA <- readRDS("./data_sources/Los_Peces_de_Argentina/Output_Los_Peces_de_Argentina_2025-11-30.rds")
+FO_Liotta_AE <- readRDS("./data_sources/Los_Peces_de_Argentina/Output_Los_Peces_de_Argentina_2026-05-12.rds")
 
 ```
 
@@ -3244,7 +3350,7 @@ rm(list=ls()[!ls()%in%c("DwC",
                         "iDigBio_AE",
                         "GBIF_AE",
                         "iNat_AE",
-                        "DBLPA_AE")])
+                        "FO_Liotta_AE")])
 ```
 
 
@@ -3291,6 +3397,7 @@ unlist(tmp$meta)
 ```{r, eval = TRUE}
 VertNet <- read.csv("./data_sources/VertNet/VertNet_downloaded__2023-07-12.csv")
 
+
 ```
 
 La tabla tiene `r nrow(VertNet)` registros (filas) y `r ncol(VertNet)` columnas.   
@@ -3305,7 +3412,7 @@ all(tolower(colnames(VertNet)) %in% tolower(DwC$`Darwin Core Terms (DwC)`))
 
 ```
 
-Para homologar se reemplazaron los nombres por los correspondientes del DwC.  
+Para homologar se reemplazaron los nombres por los correspondientes del DwC.  Esto se hizo previamente y se conservaron los 130 campos disponibles.  
 
 ```{r}
 tmp <- match(tolower(colnames(VertNet)), tolower(DwC$`Darwin Core Terms (DwC)`), nomatch = NA)
@@ -3359,7 +3466,7 @@ Mapa con datos filtrados espacialmente (Figura \ref{fig:VertNetplot}).
 # bbox <- make_bbox(study.area$long, study.area$lat, f = 0.1)
 # Get reference map using ggmap
 
-register_stadiamaps(key = "f4aaa648-6137-4e34-a850-46c9821d7a6a")
+register_stadiamaps(key = Sys.getenv("STADIAMAPS_KEY"))
 
 map <- ggmap(
   get_stadiamap(bbox = c(left = -76, bottom = -57, right = -64, top = -40), zoom = 5, maptype = "stamen_terrain_background"), darken = c(0.5,"white")
@@ -3373,14 +3480,18 @@ map + geom_point(data = VertNet[withinAE,], aes(x = decimalLongitude, y = decima
   
 ```
 
+<!-- HERE - try to download the updated dataset again, and keep the original datasetName if any.  Note: The rvertnet  package is not working  as of 2626-05-20, and several attempts before that -->
 
 ```{r, eval=FALSE}
-# HERE, modify this line to prevent pre-existing info overwrite.
-
-VertNet_AE$datasetName <- "VertNet"
+VertNet_AE <- VertNet_AE %>% 
+  mutate(datasetName_tmp = datasetName,
+         datasetName = "VertNet")
 
 ```
 
+```{r}
+VertNet_AE %>% select(datasetName, datasetName_tmp) %>% distinct()
+```
 
 ### Respaldo  
 ```{r}
@@ -3391,7 +3502,7 @@ write_rds(VertNet_AE, paste0("./data_sources/VertNet/Output_VertNet_",Sys.Date()
 
 ```{r, eval=FALSE, include=FALSE}
 
-VertNet_AE <- readRDS("./data_sources/VertNet/Output_VertNet_2025-11-29.rds")
+VertNet_AE <- readRDS("./data_sources/VertNet/Output_VertNet_2026-05-12.rds")
 
 ```
 
@@ -3416,7 +3527,7 @@ rm(list=ls()[!ls()%in%c("DwC",
                         "iDigBio_AE",
                         "GBIF_AE",
                         "iNat",
-                        "DBLPA",
+                        "FO_Liotta_AE",
                         "VertNet_AE")])
 ```
 
@@ -3429,7 +3540,14 @@ Se bajó un conjunto de datos filtrando para todo Chile, y luego se previsualiza
 
 Este conjunto de datos fue considerado redundante y excluido en lo sucesivo.
 
+
+
 # Consolidación del Atlas Ictiogeográfico  
+
+```{r}
+rm(list = ls())
+```
+
 
 Se combinaron los distintos conjuntos de datos en una gran tabla, a pesar de las potenciales ocurrencias duplicadas que pudiesen surgir. En el siguiente código se enumera cada conjunto de datos en orden de precedencia. Este orden incide en la remoción masiva de duplicados (ver más abajo). En el proceso se creó la variable `rObjectRank_CC` que registró el orden de precedencia \ref{tab:tabpreced}. Por ejemplo, se decidió mover iNaturalist arriba de GBIF: muchos registros de iNaturalit fueron indexados en GBIF también pero los registros originales (iNaturalist) son mas completos incluyendo "locality" y "country", campos que se encontraron vacíos en GBIF.  
 
@@ -3442,7 +3560,7 @@ Para correr el código a partir de este capítulo, es necesario cargar cada uno 
 ```{r}
 FishDB_CC.ready <- read.csv("./data_sources/Correa_Boisjoly_Collection/Output_FishDatabase_Correa-Boisjoly.csv", colClasses = "character", fileEncoding = "UTF-8")
 
-metaDB.CC.filtered <- read.csv("./data_sources/FishGIS_metaDatabase/Output_metaDB.CC.filtered.csv", colClasses = "character", fileEncoding = "UTF-8")
+metaDB.CC.filtered <- read.csv("./data_sources/FishGIS_metaDatabase/Output_CCorreaLitReview.csv", colClasses = "character", fileEncoding = "UTF-8")
 
 RevAguilar <- read.csv("./data_sources/MAguilar_review/Output_MAguilar_review2023.csv", colClasses = "character", fileEncoding = "UTF-8")
 
@@ -3454,18 +3572,19 @@ SUBPESCA2 <- read.csv("./data_sources/SUBPESCA/SubpescaDB2/Output_SUBPESCA2_DwC.
 
 DIFA.filtered <- read.csv("./data_sources/Darwin_Initiative_Fish_Atlas/Output_DarwinInitiativeFishAtlas_DwC.csv", colClasses = "character", fileEncoding = "UTF-8")
 
-iDigBio_AE <- read.csv("./data_sources/iDigBio/Output_iDigBio_2025-11-30.csv", colClasses = "character", fileEncoding = "UTF-8")
+iDigBio_AE <- read.csv("./data_sources/iDigBio/Output_iDigBio_2026-05-16.csv", colClasses = "character", fileEncoding = "UTF-8")
       iDigBio_AE$Identification <- as.character(iDigBio_AE$Identification)
 
-GBIF_AE <- read.csv("./data_sources/GBIF/Output_GBIF_2025-11-29.csv", colClasses = "character", fileEncoding = "UTF-8")
+GBIF_AE <- read.csv("./data_sources/GBIF/Output_GBIF_2026-05-16.csv", colClasses = "character", fileEncoding = "UTF-8")
 
-iNat <- read.csv("./data_sources/iNaturalist/Output_iNat_2025-11-29.csv", colClasses = "character", fileEncoding = "UTF-8")
+iNat <- read.csv("./data_sources/iNaturalist/Output_iNat_2026-05-16.csv", colClasses = "character", fileEncoding = "UTF-8")
 
-DBLPA <- read.csv("./data_sources/Los_Peces_de_Argentina/Output_Los_Peces_de_Argentina_2025-11-30.csv", colClasses = "character", fileEncoding = "UTF-8")
+DBLPA <- read.csv("./data_sources/Los_Peces_de_Argentina/Output_Los_Peces_de_Argentina_2026-05-16.csv", colClasses = "character", fileEncoding = "UTF-8")
 
-VertNet_AE <- read.csv("./data_sources/VertNet/Output_VertNet_2025-11-29.csv", colClasses = "character", fileEncoding = "UTF-8")
+VertNet_AE <- read.csv("./data_sources/VertNet/Output_VertNet_2026-05-20.csv", colClasses = "character", fileEncoding = "UTF-8")
 
 ```
+
 
 ## Combinar los conjuntos de datos en una gran tabla  
 
@@ -3474,10 +3593,11 @@ X <- bind_rows(
        FishDB_CC.ready,
        DIFA.filtered, 
        iDigBio_AE, 
-       VertNet_AE[,!(colnames(VertNet_AE) %in% 
-                       c("coordinateUncertaintyInMeters", 
-                         "coordinatePrecision", 
-                         "dateIdentified"))], # HERE, exclude/homologate above.
+       # VertNet_AE[,!(colnames(VertNet_AE) %in% 
+       #                 c("coordinateUncertaintyInMeters", 
+       #                   "coordinatePrecision", 
+       #                   "dateIdentified"))], # HERE, exclude/homologate above.
+       VertNet_AE, # HERE, exclude/homologate
        metaDB.CC.filtered,
        RevAguilar,
        iNat,
@@ -3491,7 +3611,6 @@ X <- bind_rows(
 dim(X)         
       
 ```
-
 
 \newpage
 ```{r tabpreced, echo=F}
@@ -3534,7 +3653,7 @@ withinAE <- st_within(X_sf, shapefile_AE_Simp, sparse = FALSE)[,1]
 
 X <- X_all[withinAE,]
 
-nrow(X_all) - nrow(X)
+# nrow(X_all) - nrow(X)
 ```
 Como resultado del filtro espacial, `r nrow(X_all) - nrow(X)` de los `r nrow(X_all)` registros (peces dulceacuícolas y marinos) fueron excluidos. 
 
@@ -3542,7 +3661,7 @@ Como resultado del filtro espacial, `r nrow(X_all) - nrow(X)` de los `r nrow(X_a
 
 # Map the data
 
-register_stadiamaps(key = "f4aaa648-6137-4e34-a850-46c9821d7a6a")
+register_stadiamaps(key = Sys.getenv("STADIAMAPS_KEY"))
 
 map <- ggmap(get_stadiamap(bbox = c(left = -76, bottom = -57, right = -64, top = -40), zoom = 5, maptype= "stamen_terrain_background"), darken = c(0.5,"white"))
 
@@ -3591,6 +3710,7 @@ Se encontraron `r length(unique(X$scientificName))` nombres científicos en la b
 Para conseguir la estandarización y clasificación taxonómica de cada taxa, (i) se  consultó la base de datos de *GBIF Backbone Taxonomy* mediante la función `name_backbone{rgbif}`, y (ii) se completó manualmente algunos nombres que no rindieron coincidencias. Además, (iii) se  revisó  la lista completa de especies etiquetando aquellas dulceacuícolas, estuarinas y diádromas (variable `IncludePewProAP`) para posterior filtrado de los taxa de interés (ver *Filtrado taxonómico*).
 
 
+<!-- Run onlt the first time. See below.  -->
 ```{r, eval = F}
 # The output of this chunk of code has to be checked and annotated manually. 
 
@@ -3617,7 +3737,7 @@ Cabe destacar que algunos taxa en este estandard posiblemente cambiarán en un f
 La lista completa de taxa con anotaciones para el filtrado, la estandarización de nombres y taxonomía se encuentra en la planilla `AtlasIctiogeográfico_list of taxa_annotated.csv`. El campo original del nombre científico fue renombrado a `scientificName_Old`, y los nombres estandarizados son `scientificName` y `canonicalName` (con y sin autoridad taxonómica, respectivamente). Los taxa de interés para este estudio se identificaron en la variable `IncludePewProAP` con un valor de 1.
 
 ```{r}
-ScN <- read.csv("./input_parameters/AtlasIctiogeográfico_list of taxa_annotated.csv", fileEncoding = "UTF-8", colClasses = "character", stringsAsFactors = FALSE)
+ScN <- read.csv("./input_parameters/AtlasIctiogeográfico_list of taxa_annotated_2026.csv", fileEncoding = "UTF-8", colClasses = "character", stringsAsFactors = FALSE)
 
 ```
 
@@ -3647,8 +3767,10 @@ taxonomic.df <- cbind(tmp, taxonomic.df)
     tmp2 <- taxonomic.df %>% 
        select(usageKey,	scientificName,	canonicalName,	rank,	status,	confidence,	matchType,	kingdom,	phylum,	order,	family, kingdomKey,	phylumKey,	orderKey,	familyKey,	#synonym, 
               verbatim_name,	verbatim_rank,	genus,	species,	genusKey,
-            speciesKey #,	acceptedUsageKey, classKey,	class
+            speciesKey ,	#acceptedUsageKey, classKey,	class
              )
+tmp2 <- cbind(scientificName_Old = tmp, tmp2)    
+    
 write.table(tmp2, file = "clipboard", fileEncoding = "UTF-8", row.names = F, sep=",")
 
 ```
@@ -3665,10 +3787,11 @@ Primero, se excluyeron 28 registros de taxa no informativos.
 # Identify cases with missing scientificName 
 # X %>% filter( is.na(scientificName)) %>% select( scientificName_Old)  %>% distinct()
 
-X <- X[!(X$scientificName %in%  c("Actinopterygii", "Notothenioidei", "Amphilophus citrinellus × Vieja melanurus")), ] 
+X <- X[!(X$scientificName %in%  c("", "Actinopterygii", "Notothenioidei", "Amphilophus citrinellus × Vieja melanurus")), ] 
 
 
 ```
+
 
 Luego, se actualizó la taxonomía.  
 
@@ -3719,7 +3842,7 @@ X <- X %>% select(-any_of(c(
 ```
 
 
-Una tabla con la taxonomía de las ocurrencias globales estandarizada se guardo en el disco duro (`Output_standardized_taxa_list.csv`).   
+Una tabla con la taxonomía de las ocurrencias globales estandarizada se guardo en el disco duro (`Output_all_standardized_taxa_list.csv`).   
 ```{r}
 taxonomy2 <- taxonomy %>% mutate(scientificName = scientificName_new) %>% select(-scientificName_new) %>% relocate(scientificName) %>% 
   arrange(order, family, genus, species)
@@ -3767,9 +3890,9 @@ write.csv(X.filtered %>%
 ```
 
 
-### Gestión de duplicados  
+### Gestión de duplicados y otros cambios   
 
-#### Remocin automática de duplicados  
+#### Remoción automática de duplicados  
 
 Se diseñó un algoritmo  para etiquetar  y/o remover ocurrencias duplicadas. Primero se creó una nueva variable, `spatialClust_CC`, identificando conjuntos de ocurrencias ubicadas cerca, a menos de un umbral de distancia de 30 metros (para lidiar con diferencias por aproximación, proyecciones espaciales, etc; y el valor del umbral puede ser modificado). 
 
@@ -3801,12 +3924,14 @@ X.filtered$spatialClust_CC <- dbscan_result$cluster
 t1 <- Sys.time()
 cat("Process took:", t1 - t0, "\n")
 ```
+
+
 ```{r}
 barplot(sort(table(X.filtered$spatialClust_CC), decreasing = T), 
         xlab = "cluster", ylab = "number of rows belonging to a cluster")
 ```
 
-Los conjunto de datos que generaron clusters con >50 ocurrencias fueron SUBPESCA-1, GBIF, y SUBPESCA-2 (SUBPESCA-1 con 128 clustres, GBIF con 15, y SUBPESCA-2 con 3). La causa aparente es la existencia de datos ingresados a nivel individual (peces individuales en cada sitio de muestreo) en lugar peces agregados por sitio. 
+Los conjunto de datos que generaron clusters con >50 ocurrencias fueron SUBPESCA-1, GBIF, y SUBPESCA-2 (SUBPESCA-1 con 104 clusters, GBIF con 12, y SUBPESCA-2 con 2). La causa aparente es la existencia de datos ingresados a nivel individual (peces individuales en cada sitio de muestreo) en lugar peces agregados por sitio. 
 
 ```{r}
 threshold <- 50
@@ -3822,9 +3947,10 @@ tmp <- X.filtered %>% filter(spatialClust_CC %in% names(tmp)) %>%
           eventDate, 
           rObjectRank_CC,
           datasetName,
+          datasetName_tmp,
           locality) %>% distinct()
 
-sort(table(tmp$datasetName), decreasing = T)
+sort(table(tmp$datasetName_tmp), decreasing = T)
 
 ```
 
@@ -3864,6 +3990,7 @@ X.filtered <- X.filtered %>%
 ```
 
 
+
 Basado en los siguientes atributos, `spatialClust_CC` (derivado de `decimalLatitude`, `decimalLongitude`), `canonicalName`, `eventDate`, `year`, se encontró y etiquetó un total de `r nrow(X.filtered[X.filtered$duplicated_CC,])` (`r round(100* nrow(X.filtered[X.filtered$duplicated_CC,])/nrow(X))`%) filas con ocurrencias repetidas.  
 
 Para crear otra versión de la base de datos sin ocurrencias repetidas, de cada ocurrencia repetida se retuvo solo una versión y se eliminó programáticamente el resto. Las primeras instancias de las ocurrencias se retuvieron y las subsecuentes repeticiones se excluyeron. En este proceso fue importante el orden de las filas en la base de datos (ver bloque anterior) porque esto determinó la precedencia o prioridad de las ocurrencias repetidas.  En este sentido el campo `rObjectRank_CC` es muy importante (ver definición). 
@@ -3895,10 +4022,11 @@ tmp <- X.filtered.dedup %>%
           eventDate, 
           rObjectRank_CC,
           datasetName,
+          datasetName_tmp,
           locality) %>% 
   distinct()
 
-sort(table(tmp$datasetName), decreasing = T)
+sort(table(tmp$datasetName_tmp), decreasing = T)
 ```
 
 <!-- **HERE** enhance this transition, and perhaps save a version before changes from manual review. -->
@@ -3919,9 +4047,15 @@ X.filtered.dedup <- X.filtered.dedup %>% relocate(
                               occurrenceID)
 
 
-write.csv(X.filtered.dedup,  paste0("./outputs_global_analyses/X.filtered.dedup_",Sys.Date(),".csv"),           fileEncoding ="UTF-8", row.names = F, dec = ".", na = "NA")
+write.csv(X.filtered.dedup,  
+          paste0("./outputs_global_analyses/dataset_filtered_deduplicated_before_manual_corrections_",Sys.Date(),".csv"),
+          fileEncoding ="UTF-8", row.names = F, dec = ".", na = "NA")
 
-write_rds(X.filtered.dedup, paste0("./outputs_global_analyses/dataset_before_Remocion_manual_",Sys.Date(), ".rds"))
+write_rds(X.filtered.dedup, 
+          paste0("./outputs_global_analyses/dataset_filtered_deduplicated_before_manual_corrections_",
+          Sys.Date(), ".rds"))
+
+
 
 ```
 
@@ -3929,18 +4063,16 @@ write_rds(X.filtered.dedup, paste0("./outputs_global_analyses/dataset_before_Rem
 ```{r, eval=FALSE, include=FALSE}
 # Load data to start from here 
 
-X.filtered.dedup <- readRDS("./outputs_global_analyses/dataset_before_Remocion_manual_2025-12-03.rds")
+X.filtered.dedup <- readRDS("./outputs_global_analyses/dataset_filtered_deduplicated_before_manual_corrections_2026-05-20.rds")
 
-# getwd()
-
-# save.image()
+ save.image()
 # load(".Rdata")
 ```
 
 
 #### Remoción manual de duplicados y otros cambios, correcciones y mejoras     
 
-Durante el proceso de consolidación y depuración de datos, numerosas ocurrencias duplicadas (registros provenientes de una misma fuente e incorporados en distintos conjuntos de datos) no fueron detectadas por el algoritmo automático para de-duplicar datos, y debieron identificarse manualmente mediante inspección manual en planillas y QGIS. Asimismo, se realizaron mejoras puntuales en muchos registros corrigiendo errores, añadiendo información, etc. Estas modificaciones se documentaron en la planilla  `./input?parameters/Cambios_a_implementar_2025-12-06.csv`,  para aplicarlas en esta sección.  
+Durante el proceso de consolidación y depuración de datos, numerosas ocurrencias duplicadas (registros provenientes de una misma fuente e incorporados en distintos conjuntos de datos) no fueron detectadas por el algoritmo automático para de-duplicar datos, y debieron identificarse manualmente mediante inspección manual en planillas y QGIS. Asimismo, se realizaron mejoras puntuales en muchos registros corrigiendo errores, añadiendo información, etc. Estas modificaciones se documentaron en la planilla  `./input_parameters/Cambios_a_implementar_2025-12-15.csv`, para aplicarlas en esta sección.  
 
 En el caso de los duplicados, la columna `Duplicate` (no confundir con `duplicated`) con valores 1 y 0 indican ocurrencias a retener o excluir, respectivamente, mientras que las celdas vacías representan registros únicos. Otras revisiones se consignaron en columnas con el prefijo “.” (por ejemplo, `.decimalLatitude`), donde un valor distinto de vacío indica el valor corregido del campo original correspondiente.  
 
@@ -3962,7 +4094,7 @@ CM <- read.csv("./input_parameters/Cambios_a_implementar_2025-12-15.csv",
 ```
 
 
-Antes de proceder, es necesario asegurar que se está trabajando con versiones compatibles de la tabla de correcciones y de la tabla principal de datos. El siguiente bloque carga y corre una una función de diagnóstico preliminar.  
+Antes de proceder, es necesario asegurar que se está trabajando con versiones compatibles de la tabla de correcciones y de la tabla principal de datos. El siguiente bloque carga y corre una función de diagnóstico preliminar.  
 ```{r, eval = FALSE}
 source("./functions/validate_correspondance_of_corrections.R")
 
@@ -3984,7 +4116,7 @@ if (!checks_passed) {
 ```
 
 
-Habiendo  confirmado la correspondencia entre las dos tablas, es seguro proceder a  ejecutar los cambios. 
+Habiendo  confirmado la correspondencia entre las dos tablas, es seguro proceder a ejecutar los cambios. 
 
 
 ##### Procedimiento de Actualización de la Base de Datos
@@ -4028,7 +4160,7 @@ La función `table_update()` ejecuta la siguiente secuencia de operaciones:
   - Número de registros que reciben actualizaciones
   - Recuento final de filas comparado con el tamaño original de la base de datos
 
-Nota: Las funciones table_update() y validate_correspondance_of_corrections() junto datos demostrativos se  encuentran el subdirectorio "./functions/".   
+Nota: Las funciones table_update() y validate_correspondance_of_corrections() junto con datos demostrativos se  encuentran el subdirectorio "./functions/".   
 
 
 **Uso de la Función**
@@ -4054,14 +4186,7 @@ X.filtered.dedup.revised <- table_update(
 ```
 
 
-
-```{r, eval=T, include=T}
-knitr::knit_exit()
-
-```
-
-
-### Corrección de registros  
+### Corrección adicional de registros  
 
 #### Exclusión de taxa dulceacuícolas muy improbables o erróneos  
 
@@ -4310,7 +4435,7 @@ Como resultado del filtro espacial, `r nrow(X_all) - nrow(X.filtered.dedup.revis
 
 # Map the data  
 
-register_stadiamaps(key = "f4aaa648-6137-4e34-a850-46c9821d7a6a")
+register_stadiamaps(key = Sys.getenv("STADIAMAPS_KEY"))
 
 map <- ggmap(get_stadiamap(bbox = c(left = -76, bottom = -57, right = -64, top = -40), zoom = 5, maptype= "stamen_terrain_background"), darken = c(0.5,"white"))
 
@@ -4417,7 +4542,7 @@ Por otra parte se aprecia alta complementariedad entre distintas fuentes de dato
 # Set bounding box for Chile and Argentina
   bbox <- make_bbox(study.area$long, study.area$lat, f = 0.1)
 # Get reference map using ggmap
-register_stadiamaps(key = "f4aaa648-6137-4e34-a850-46c9821d7a6a")
+register_stadiamaps(key = Sys.getenv("STADIAMAPS_KEY"))
 
 map <- ggmap(get_stadiamap(bbox = c(left = -76, bottom = -57, right = -64, top = -40), zoom = 5, maptype= "stamen_terrain_background"))
 
@@ -4484,7 +4609,7 @@ En la siguiente figura se presenta la distribución de familias ordenadas por pr
   # chile_argentina_bbox <- c(-77, -57, -65, -40)
   bbox <- make_bbox(study.area$long, study.area$lat, f = 0.1)
 # Get reference map using ggmap
-register_stadiamaps(key = "f4aaa648-6137-4e34-a850-46c9821d7a6a")
+register_stadiamaps(key = Sys.getenv("STADIAMAPS_KEY"))
 
 # map <- ggmap(
 #   get_stadiamap(bbox = bbox, zoom = 5, maptype = "stamen_terrain_background"), darken = c(0.5,"white")
@@ -4521,7 +4646,7 @@ Un desgloce de la familia Galaxiidae, la familia nativa más ampliamente distrib
   # chile_argentina_bbox <- c(-77, -57, -65, -40)
   bbox <- make_bbox(study.area$long, study.area$lat, f = 0.1)
 # Get reference map using ggmap
-register_stadiamaps(key = "f4aaa648-6137-4e34-a850-46c9821d7a6a")
+register_stadiamaps(key = Sys.getenv("STADIAMAPS_KEY"))
 map <- ggmap(get_stadiamap(bbox = bbox, zoom = 6, maptype = "stamen_terrain_background"), darken = c(0.5,"white")
              )
 
@@ -4557,7 +4682,7 @@ Un desgloce de la familia Atherinopsidae reveló un número de especies de rara 
   # chile_argentina_bbox <- c(-77, -57, -65, -40)
   bbox <- make_bbox(study.area$long, study.area$lat, f = 0.1)
 # Get reference map using ggmap
-register_stadiamaps(key = "f4aaa648-6137-4e34-a850-46c9821d7a6a")
+register_stadiamaps(key = Sys.getenv("STADIAMAPS_KEY"))
 map <- ggmap(get_stadiamap(bbox = bbox, zoom = 6, maptype = "stamen_terrain_background"), darken = c(0.5,"white")
              )
 

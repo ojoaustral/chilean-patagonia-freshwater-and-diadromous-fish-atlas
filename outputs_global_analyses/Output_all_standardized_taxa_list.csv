@@ -1,9 +1,15 @@
 "scientificName","scientificName_Old","canonicalName","IncludePewProAP","rank","kingdom","phylum","order","family","genus","species"
+"Tachyeres patachonicus AVES STEEMER DUCK ","Micropterus patachonicus King, 1831","","0","SPECIES","Animalia","Chordata","","","",""
+NA,"",NA,"0",NA,"","","","","",""
+"Bassanago albescens (Barnard, 1923)","Bassanago albescens (Barnard, 1923)","Bassanago albescens","0","SPECIES","Animalia","Chordata","Anguilliformes","Congridae","Bassanago","Bassanago albescens"
+"Bassanago nielseni (Karmovskaya, 1990)","Bassanago nielseni (Karmovskaya, 1990)","Bassanago nielseni","0","SPECIES","Animalia","Chordata","Anguilliformes","Congridae","Bassanago","Bassanago nielseni"
 "Congridae","Congridae","Congridae","0","FAMILY","Animalia","Chordata","Anguilliformes","Congridae",NA,NA
+"Anguilliformes","Anguilliformes","Anguilliformes","0","ORDER","Animalia","Chordata","Anguilliformes",NA,NA,NA
 "Atherinidae","ATHERINIDAE","Atherinidae","1","FAMILY","Animalia","Chordata","Atheriniformes","Atherinidae",NA,NA
 "Atherinidae","Atherinidae","Atherinidae","1","FAMILY","Animalia","Chordata","Atheriniformes","Atherinidae",NA,NA
 "Atherinops Steindachner, 1876","Atherinops","Atherinops","1","GENUS","Animalia","Chordata","Atheriniformes","Atherinopsidae","Atherinops",NA
 "Basilichthys australis Eigenmann, 1928","Basilichthys australis","Basilichthys australis","1","SPECIES","Animalia","Chordata","Atheriniformes","Atherinopsidae","Basilichthys","Basilichthys australis"
+"Basilichthys australis Eigenmann, 1928","Basilichthys australis Eigenmann, 1928","Basilichthys australis","1","SPECIES","Animalia","Chordata","Atheriniformes","Atherinopsidae","Basilichthys","Basilichthys australis"
 "Basilichthys microlepidotus (Jenyns, 1841)","Basilichthys microlepidotus","Basilichthys microlepidotus","1","SPECIES","Animalia","Chordata","Atheriniformes","Atherinopsidae","Basilichthys","Basilichthys microlepidotus"
 "Basilichthys microlepidotus (Jenyns, 1841)","Basilichthys microlepidotus (Jenyns, 1841)","Basilichthys microlepidotus","1","SPECIES","Animalia","Chordata","Atheriniformes","Atherinopsidae","Basilichthys","Basilichthys microlepidotus"
 "Atherinichthys Bleeker, 1853","Atherinichthys Bleeker, 1853","Atherinichthys","0","GENUS","Animalia","Chordata","Atheriniformes","Atherinopsidae","Chirostoma",NA
@@ -11,7 +17,9 @@
 "Menidia Bonaparte, 1836","Menidia alburnus","Menidia","1","GENUS","Animalia","Chordata","Atheriniformes","Atherinopsidae","Menidia",NA
 "Menidia Bonaparte, 1836","Menidia Bonaparte, 1836","Menidia","1","GENUS","Animalia","Chordata","Atheriniformes","Atherinopsidae","Menidia",NA
 "Odontesthes bonariensis (Valenciennes, 1835)","Odontesthes bonariensis","Odontesthes bonariensis","1","SPECIES","Animalia","Chordata","Atheriniformes","Atherinopsidae","Odontesthes","Odontesthes bonariensis"
+"Odontesthes bonariensis (Valenciennes, 1835)","Odontesthes bonariensis (Valenciennes, 1835)","Odontesthes bonariensis","1","SPECIES","Animalia","Chordata","Atheriniformes","Atherinopsidae","Odontesthes","Odontesthes bonariensis"
 "Odontesthes brevianalis (Günther, 1880)","Odontesthes brevianalis","Odontesthes brevianalis","1","SPECIES","Animalia","Chordata","Atheriniformes","Atherinopsidae","Odontesthes","Odontesthes brevianalis"
+"Odontesthes brevianalis (Günther, 1880)","Odontesthes brevianalis (Günther, 1880)","Odontesthes brevianalis","1","SPECIES","Animalia","Chordata","Atheriniformes","Atherinopsidae","Odontesthes","Odontesthes brevianalis"
 "Odontesthes hatcheri (Eigenmann, 1909)","Odontesthes hatcheri","Odontesthes hatcheri","1","SPECIES","Animalia","Chordata","Atheriniformes","Atherinopsidae","Odontesthes","Odontesthes hatcheri"
 "Odontesthes hatcheri (Eigenmann, 1909)","Odontesthes hatcheri (Eigenmann, 1909)","Odontesthes hatcheri","1","SPECIES","Animalia","Chordata","Atheriniformes","Atherinopsidae","Odontesthes","Odontesthes hatcheri"
 "Odontesthes humensis de Buen, 1953","Odontesthes humensis","Odontesthes humensis","1","SPECIES","Animalia","Chordata","Atheriniformes","Atherinopsidae","Odontesthes","Odontesthes humensis"
@@ -44,16 +52,23 @@
 "Batrachoides Lacepède, 1800","Batrachoides Lacepède, 1800","Batrachoides","0","GENUS","Animalia","Chordata","Batrachoidiformes","Batrachoididae","Batrachoides",NA
 "Porichthys margaritatus (Richardson, 1844)","Porichthys margaritatus","Porichthys margaritatus","0","SPECIES","Animalia","Chordata","Batrachoidiformes","Batrachoididae","Porichthys","Porichthys margaritatus"
 "Porichthys margaritatus (Richardson, 1844)","Porichthys margaritatus (Richardson, 1844)","Porichthys margaritatus","0","SPECIES","Animalia","Chordata","Batrachoidiformes","Batrachoididae","Porichthys","Porichthys margaritatus"
+"Beryx splendens Lowe, 1834","Beryx splendens Lowe, 1834","Beryx splendens","0","SPECIES","Animalia","Chordata","Beryciformes","Berycidae","Beryx","Beryx splendens"
+"Diretmichthys parini (Post & Quéro, 1981)","Diretmichthys parini (Post & Quéro, 1981)","Diretmichthys parini","0","SPECIES","Animalia","Chordata","Beryciformes","Diretmidae","Diretmichthys","Diretmichthys parini"
 "Cheirodon australe Eigenmann, 1928","Cheirodon australe","Cheirodon australe","1","SPECIES","Animalia","Chordata","Characiformes","Characidae","Cheirodon","Cheirodon australe"
 "Cheirodon australe Eigenmann, 1928","Cheirodon australe Eigenmann, 1928","Cheirodon australe","1","SPECIES","Animalia","Chordata","Characiformes","Characidae","Cheirodon","Cheirodon australe"
+"Cheirodon australe Eigenmann, 1928","Cheirodon australis","Cheirodon australe","1","SPECIES","Animalia","Chordata","Characiformes","Characidae","Cheirodon","Cheirodon australe"
 "Cheirodon interruptus (Jenyns, 1842)","Cheirodon interruptus","Cheirodon interruptus","1","SPECIES","Animalia","Chordata","Characiformes","Characidae","Cheirodon","Cheirodon interruptus"
+"Cheirodon interruptus (Jenyns, 1842)","Cheirodon interruptus (Jenyns, 1842)","Cheirodon interruptus","1","SPECIES","Animalia","Chordata","Characiformes","Characidae","Cheirodon","Cheirodon interruptus"
 "Cheirodon Girard, 1855","Cheirodon","Cheirodon","1","GENUS","Animalia","Chordata","Characiformes","Characidae","Cheirodon",NA
+"Cheirodon Girard, 1855","Cheirodon Girard, 1855","Cheirodon","1","GENUS","Animalia","Chordata","Characiformes","Characidae","Cheirodon",NA
 "Myloplus Gill, 1896","Myloplus","Myloplus","1","GENUS","Animalia","Chordata","Characiformes","Serrasalmidae","Myloplus",NA
 "Alosidae","Alosidae","Alosidae","0","FAMILY","Animalia","Chordata","Clupeiformes","Alosidae",NA,NA
 "Clupea Linnaeus, 1758","Clupea","Clupea","0","GENUS","Animalia","Chordata","Clupeiformes","Clupeidae","Clupea",NA
+"Clupea Linnaeus, 1758","Clupea Linnaeus, 1758","Clupea","0","GENUS","Animalia","Chordata","Clupeiformes","Clupeidae","Clupea",NA
 "Ramnogaster arcuata (Jenyns, 1842)","Ramnogaster arcuata (Jenyns, 1842)","Ramnogaster arcuata","0","SPECIES","Animalia","Chordata","Clupeiformes","Clupeidae","Ramnogaster","Ramnogaster arcuata"
 "Sardina Antipa, 1904","Sardina","Sardina","0","GENUS","Animalia","Chordata","Clupeiformes","Clupeidae","Sardina",NA
 "Sardinops sagax (Jenyns, 1842)","Sardinops sagax","Sardinops sagax","0","SPECIES","Animalia","Chordata","Clupeiformes","Clupeidae","Sardinops","Sardinops sagax"
+"Sardinops sagax (Jenyns, 1842)","Sardinops sagax (Jenyns, 1842)","Sardinops sagax","0","SPECIES","Animalia","Chordata","Clupeiformes","Clupeidae","Sardinops","Sardinops sagax"
 "BOLD:ABA0605","BOLD:ABA0605","BOLD:ABA0605","0","UNRANKED","Animalia","Chordata","Clupeiformes","Clupeidae","Sprattus","Sprattus fuegensis"
 "Clupea fuegensis Jenyns, 1842","Clupea fuegensis Jenyns, 1842","Clupea fuegensis","0","SPECIES","Animalia","Chordata","Clupeiformes","Clupeidae","Sprattus","Sprattus fuegensis"
 "Sprattus fuegensis (Jenyns, 1842)","Sprattus fuegensis","Sprattus fuegensis","0","SPECIES","Animalia","Chordata","Clupeiformes","Clupeidae","Sprattus","Sprattus fuegensis"
@@ -68,6 +83,7 @@
 "Cyprinus rubrofuscus Lacepède, 1803","Cyprinus rubrofuscus","Cyprinus rubrofuscus","1","SPECIES","Animalia","Chordata","Cypriniformes","Cyprinidae","Cyprinus","Cyprinus rubrofuscus"
 "Parachela Steindachner, 1881","Parachela Steindachner, 1881","Parachela","1","GENUS","Animalia","Chordata","Cypriniformes","Cyprinidae","Parachela",NA
 "Gambusia affinis (Baird & Girard, 1853)","Gambusia affinis","Gambusia affinis","1","SPECIES","Animalia","Chordata","Cyprinodontiformes","Poeciliidae","Gambusia","Gambusia affinis"
+"Gambusia affinis (Baird & Girard, 1853)","Gambusia affinis (Baird & Girard, 1853)","Gambusia affinis","1","SPECIES","Animalia","Chordata","Cyprinodontiformes","Poeciliidae","Gambusia","Gambusia affinis"
 "Gambusia holbrooki Girard, 1859","Gambusia holbrooki","Gambusia holbrooki","1","SPECIES","Animalia","Chordata","Cyprinodontiformes","Poeciliidae","Gambusia","Gambusia holbrooki"
 "Poecilia reticulata Peters, 1859","Poecilia reticulata","Poecilia reticulata","1","SPECIES","Animalia","Chordata","Cyprinodontiformes","Poeciliidae","Poecilia","Poecilia reticulata"
 "Poeciliidae","Poeciliinae","Poeciliidae","1",NA,"Animalia","Chordata","Cyprinodontiformes","Poeciliidae",NA,NA
@@ -82,11 +98,18 @@
 "Coelorinchus fasciatus (Günther, 1878)","Coelorinchus fasciatus","Coelorinchus fasciatus","0","SPECIES","Animalia","Chordata","Gadiformes","Macrouridae","Coelorinchus","Coelorinchus fasciatus"
 "Coelorinchus fasciatus (Günther, 1878)","Coelorinchus fasciatus (Günther, 1878)","Coelorinchus fasciatus","0","SPECIES","Animalia","Chordata","Gadiformes","Macrouridae","Coelorinchus","Coelorinchus fasciatus"
 "Macrurus fasciatus Günther, 1878","Macrurus fasciatus Günther, 1878","Macrurus fasciatus","0","SPECIES","Animalia","Chordata","Gadiformes","Macrouridae","Coelorinchus","Coelorinchus fasciatus"
+"Coelorinchus kaiyomaru Arai & Iwamoto, 1979","Coelorinchus kaiyomaru Arai & Iwamoto, 1979","Coelorinchus kaiyomaru","0","SPECIES","Animalia","Chordata","Gadiformes","Macrouridae","Coelorinchus","Coelorinchus kaiyomaru"
 "Coelorhynchus Giorna, 1809","Coelorhynchus Giorna, 1809","Coelorhynchus","0","GENUS","Animalia","Chordata","Gadiformes","Macrouridae","Coelorinchus",NA
 "Coelorinchus Giorna, 1809","Coelorinchus Giorna, 1809","Coelorinchus","0","GENUS","Animalia","Chordata","Gadiformes","Macrouridae","Coelorinchus",NA
+"Coryphaenoides armatus (Hector, 1875)","Coryphaenoides armatus (Hector, 1875)","Coryphaenoides armatus","0","SPECIES","Animalia","Chordata","Gadiformes","Macrouridae","Coryphaenoides","Coryphaenoides armatus"
+"Macrourus carinatus (Günther, 1878)","Macrourus carinatus (Günther, 1878)","Macrourus carinatus","0","SPECIES","Animalia","Chordata","Gadiformes","Macrouridae","Macrourus","Macrourus carinatus"
+"Macrourus holotrachys Günther, 1878","Macrourus holotrachys Günther, 1878","Macrourus holotrachys","0","SPECIES","Animalia","Chordata","Gadiformes","Macrouridae","Macrourus","Macrourus holotrachys"
+"Nezumia Jordan, 1904","Nezumia Jordan, 1904","Nezumia","0","GENUS","Animalia","Chordata","Gadiformes","Macrouridae","Nezumia",NA
+"Macrouridae","Macrouridae","Macrouridae","0","FAMILY","Animalia","Chordata","Gadiformes","Macrouridae",NA,NA
 "Macruronus magellanicus Lönnberg, 1907","Macruronus magellanicus","Macruronus magellanicus","0","SPECIES","Animalia","Chordata","Gadiformes","Merlucciidae","Macruronus","Macruronus magellanicus"
 "Macruronus magellanicus Lönnberg, 1907","Macruronus magellanicus Lönnberg, 1907","Macruronus magellanicus","0","SPECIES","Animalia","Chordata","Gadiformes","Merlucciidae","Macruronus","Macruronus magellanicus"
 "Macruronus novaezelandiae (Hector, 1871)","Macruronus novaezelandiae","Macruronus novaezelandiae","0","SPECIES","Animalia","Chordata","Gadiformes","Merlucciidae","Macruronus","Macruronus novaezelandiae"
+"Macruronus novaezelandiae (Hector, 1871)","Macruronus novaezelandiae (Hector, 1871)","Macruronus novaezelandiae","0","SPECIES","Animalia","Chordata","Gadiformes","Merlucciidae","Macruronus","Macruronus novaezelandiae"
 "Macruronus novaezelandiae magellanicus Lönnberg, 1907","Macruronus novaezelandiae magellanicus Lönnberg, 1907","Macruronus novaezelandiae magellanicus","0","SUBSPECIES","Animalia","Chordata","Gadiformes","Merlucciidae","Macruronus","Macruronus novaezelandiae"
 "BOLD:AAB2174","BOLD:AAB2174","BOLD:AAB2174","0","UNRANKED","Animalia","Chordata","Gadiformes","Merlucciidae","Merluccius","Merluccius australis"
 "Merluccius australis (Hutton, 1872)","Merluccius australis","Merluccius australis","0","SPECIES","Animalia","Chordata","Gadiformes","Merlucciidae","Merluccius","Merluccius australis"
@@ -96,7 +119,11 @@
 "Merluccius gayi (Guichenot, 1848)","Merluccius gayi","Merluccius gayi","0","SPECIES","Animalia","Chordata","Gadiformes","Merlucciidae","Merluccius","Merluccius gayi"
 "Merluccius gayi (Guichenot, 1848)","Merluccius gayi (Guichenot, 1848)","Merluccius gayi","0","SPECIES","Animalia","Chordata","Gadiformes","Merlucciidae","Merluccius","Merluccius gayi"
 "Merluccius gayi gayi (Guichenot, 1848)","Merluccius gayi gayi (Guichenot, 1848)","Merluccius gayi gayi","0","SUBSPECIES","Animalia","Chordata","Gadiformes","Merlucciidae","Merluccius","Merluccius gayi"
+"Merluccius gayi gayi (Guichenot, 1848)","Merluccius gayi gayi","Merluccius gayi gayi","0","SUBSPECIES","Animalia","Chordata","Gadiformes","Merlucciidae","Merluccius","Merluccius gayi"
 "Merluccius hubbsi Marini, 1933","Merluccius hubbsi Marini, 1933","Merluccius hubbsi","0","SPECIES","Animalia","Chordata","Gadiformes","Merlucciidae","Merluccius","Merluccius hubbsi"
+"Merluccius Rafinesque, 1810","Merluccius Rafinesque, 1810","Merluccius","0","GENUS","Animalia","Chordata","Gadiformes","Merlucciidae","Merluccius",NA
+"Antimora rostrata (Günther, 1878)","Antimora rostrata (Günther, 1878)","Antimora rostrata","0","SPECIES","Animalia","Chordata","Gadiformes","Moridae","Antimora","Antimora rostrata"
+"Guttigadus kongi (Markle & Meléndez C., 1988)","Guttigadus kongi (Markle & Meléndez C., 1988)","Guttigadus kongi","0","SPECIES","Animalia","Chordata","Gadiformes","Moridae","Guttigadus","Guttigadus kongi"
 "Lotella marginata Macleay, 1881","Lotella marginata Macleay, 1881","Lotella marginata","0","SPECIES","Animalia","Chordata","Gadiformes","Moridae","Lotella","Lotella rhacina"
 "Lotella marginata Günther, 1878","Lotella marginata Günther, 1878","Lotella marginata","0","SPECIES","Animalia","Chordata","Gadiformes","Moridae","Notophycis","Notophycis marginata"
 "Notophycis marginata (Günther, 1878)","Notophycis marginata","Notophycis marginata","0","SPECIES","Animalia","Chordata","Gadiformes","Moridae","Notophycis","Notophycis marginata"
@@ -105,6 +132,7 @@
 "Salilota australis (Günther, 1878)","Salilota australis","Salilota australis","0","SPECIES","Animalia","Chordata","Gadiformes","Moridae","Salilota","Salilota australis"
 "Salilota australis (Günther, 1878)","Salilota australis (Günther, 1878)","Salilota australis","0","SPECIES","Animalia","Chordata","Gadiformes","Moridae","Salilota","Salilota australis"
 "Salilota Günther, 1887","Salilota","Salilota","0","GENUS","Animalia","Chordata","Gadiformes","Moridae","Salilota",NA
+"Salilota Günther, 1887","Salilota Günther, 1887","Salilota","0","GENUS","Animalia","Chordata","Gadiformes","Moridae","Salilota",NA
 "Muraenolepis marmorata Günther, 1880","Muraenolepis marmorata Günther, 1880","Muraenolepis marmorata","0","SPECIES","Animalia","Chordata","Gadiformes","Muraenolepididae","Muraenolepis","Muraenolepis marmorata"
 "Muraenolepis orangiensis Vaillant, 1888","Muraenolepis orangiensis Vaillant, 1888","Muraenolepis orangiensis","0","SPECIES","Animalia","Chordata","Gadiformes","Muraenolepididae","Muraenolepis","Muraenolepis orangiensis"
 "Gadiformes","Gadiformes","Gadiformes","0","ORDER","Animalia","Chordata","Gadiformes",NA,NA,NA
@@ -112,10 +140,13 @@
 "Gobiesox marmoratus Jenyns, 1842","Gobiesox marmoratus Jenyns, 1842","Gobiesox marmoratus","0","SPECIES","Animalia","Chordata","Gobiesociformes","Gobiesocidae","Gobiesox","Gobiesox marmoratus"
 "Sicyases sanguineus Müller & Troschel, 1843","Sicyases sanguineus","Sicyases sanguineus","0","SPECIES","Animalia","Chordata","Gobiesociformes","Gobiesocidae","Sicyases","Sicyases sanguineus"
 "Sicyases sanguineus Müller & Troschel, 1843","Sicyases sanguineus Müller & Troschel, 1843","Sicyases sanguineus","0","SPECIES","Animalia","Chordata","Gobiesociformes","Gobiesocidae","Sicyases","Sicyases sanguineus"
+"Gobiesocidae","Gobiesocidae","Gobiesocidae","0","FAMILY","Animalia","Chordata","Gobiesociformes","Gobiesocidae",NA,NA
 "Electrophorus electricus (Linnaeus, 1766)","Electrophorus electricus (Linnaeus, 1766)","Electrophorus electricus","0","SPECIES","Animalia","Chordata","Gymnotiformes","Gymnotidae","Electrophorus","Electrophorus electricus"
 "Regalecus russelii (Cuvier, 1816)","Regalecus russelii (Cuvier, 1816)","Regalecus russelii","0","SPECIES","Animalia","Chordata","Lampriformes","Regalecidae","Regalecus","Regalecus russelii"
 "Regalecus russelii (Cuvier, 1816)","Regalecus russellii","Regalecus russelii","0","SPECIES","Animalia","Chordata","Lampriformes","Regalecidae","Regalecus","Regalecus russelii"
+"Trachipterus Goüan, 1770","Trachipterus Goüan, 1770","Trachipterus","0","GENUS","Animalia","Chordata","Lampriformes","Trachipteridae","Trachipterus",NA
 "Mugil cephalus Linnaeus, 1758","Mugil cephalus","Mugil cephalus","1","SPECIES","Animalia","Chordata","Mugiliformes","Mugilidae","Mugil","Mugil cephalus"
+"Mugil cephalus Linnaeus, 1758","Mugil cephalus Linnaeus, 1758","Mugil cephalus","1","SPECIES","Animalia","Chordata","Mugiliformes","Mugilidae","Mugil","Mugil cephalus"
 "Hygophum bruuni Wisner, 1971","Hygophum bruuni Wisner, 1971","Hygophum bruuni","0","SPECIES","Animalia","Chordata","Myctophiformes","Myctophidae","Hygophum","Hygophum bruuni"
 "Lampanyctodes hectoris (Günther, 1876)","Lampanyctodes hectoris (Günther, 1876)","Lampanyctodes hectoris","0","SPECIES","Animalia","Chordata","Myctophiformes","Myctophidae","Lampanyctodes","Lampanyctodes hectoris"
 "Myctophum Rafinesque, 1810","Myctophum Rafinesque, 1810","Myctophum","0","GENUS","Animalia","Chordata","Myctophiformes","Myctophidae","Myctophum",NA
@@ -124,6 +155,7 @@
 "Myctophidae","Myctophidae","Myctophidae","0","FAMILY","Animalia","Chordata","Myctophiformes","Myctophidae",NA,NA
 "Gigliolia moseleyi Goode & Bean, 1895","Gigliolia moseleyi Goode & Bean, 1895","Gigliolia moseleyi","0","SPECIES","Animalia","Chordata","Notacanthiformes","Notacanthidae","Notacanthus","Notacanthus sexspinis"
 "Notacanthus sexspinis Richardson, 1846","Notacanthus sexspinis Richardson, 1846","Notacanthus sexspinis","0","SPECIES","Animalia","Chordata","Notacanthiformes","Notacanthidae","Notacanthus","Notacanthus sexspinis"
+"Notacanthus sexspinis Richardson, 1846","Notacanthus sexspinis","Notacanthus sexspinis","0","SPECIES","Animalia","Chordata","Notacanthiformes","Notacanthidae","Notacanthus","Notacanthus sexspinis"
 "Notacanthiformes","Notacanthiformes","Notacanthiformes","0","ORDER","Animalia","Chordata","Notacanthiformes",NA,NA,NA
 "Cataetyx messieri (Günther, 1878)","Cataetyx messieri","Cataetyx messieri","0","SPECIES","Animalia","Chordata","Ophidiiformes","Bythitidae","Cataetyx","Cataetyx messieri"
 "Cataetyx messieri (Günther, 1878)","Cataetyx messieri (Günther, 1878)","Cataetyx messieri","0","SPECIES","Animalia","Chordata","Ophidiiformes","Bythitidae","Cataetyx","Cataetyx messieri"
@@ -136,6 +168,7 @@
 "Genypterus maculatus (Tschudi, 1846)","Genypterus maculatus (Tschudi, 1846)","Genypterus maculatus","0","SPECIES","Animalia","Chordata","Ophidiiformes","Ophidiidae","Genypterus","Genypterus maculatus"
 "Genypterus Philippi, 1857","Genypterus Philippi, 1857","Genypterus","0","GENUS","Animalia","Chordata","Ophidiiformes","Ophidiidae","Genypterus",NA
 "Ophidiidae","Ophidiidae","Ophidiidae","0","FAMILY","Animalia","Chordata","Ophidiiformes","Ophidiidae",NA,NA
+"Talismania aphos (Bussing, 1965)","Talismania aphos","Talismania aphos","0","SPECIES","Animalia","Chordata","Osmeriformes","Alepocephalidae","Talismania","Talismania aphos"
 "Argentinidae","Argentinidae","Argentinidae","0","FAMILY","Animalia","Chordata","Osmeriformes","Argentinidae",NA,NA
 "Bathylagichthys parini Kobyliansky, 1990","Bathylagichthys parini Kobyliansky, 1990","Bathylagichthys parini","0","SPECIES","Animalia","Chordata","Osmeriformes","Bathylagidae","Bathylagichthys","Bathylagichthys parini"
 "Aplochiton marinus Eigenmann, 1928","Aplochiton marinus","Aplochiton marinus","1","SPECIES","Animalia","Chordata","Osmeriformes","Galaxiidae","Aplochiton","Aplochiton marinus"
@@ -160,6 +193,7 @@
 "Galaxias maculatus (Jenyns, 1842)","Galaxias maculatus","Galaxias maculatus","1","SPECIES","Animalia","Chordata","Osmeriformes","Galaxiidae","Galaxias","Galaxias maculatus"
 "Galaxias maculatus (Jenyns, 1842)","Galaxias maculatus (Jenyns, 1842)","Galaxias maculatus","1","SPECIES","Animalia","Chordata","Osmeriformes","Galaxiidae","Galaxias","Galaxias maculatus"
 "Galaxias maculatus (Jenyns, 1842)","Galaxias variegatus","Galaxias maculatus","1","SPECIES","Animalia","Chordata","Osmeriformes","Galaxiidae","Galaxias","Galaxias maculatus"
+"Galaxias maculatus (Jenyns, 1842)","Galaxias maculatus ","Galaxias maculatus","1","SPECIES","Animalia","Chordata","Osmeriformes","Galaxiidae","Galaxias","Galaxias maculatus"
 "Galaxias platei Steindachner, 1898","Galaxias delfini Philippi, 1895","Galaxias platei","1","SPECIES","Animalia","Chordata","Osmeriformes","Galaxiidae","Galaxias","Galaxias platei"
 "Galaxias platei Steindachner, 1898","Galaxias platei","Galaxias platei","1","SPECIES","Animalia","Chordata","Osmeriformes","Galaxiidae","Galaxias","Galaxias platei"
 "Galaxias platei Steindachner, 1898","Galaxias platei Steindachner, 1898","Galaxias platei","1","SPECIES","Animalia","Chordata","Osmeriformes","Galaxiidae","Galaxias","Galaxias platei"
@@ -187,9 +221,11 @@
 "Cottoperca trigloides (Forster, 1801)","Cottoperca trigloides (Forster, 1801)","Cottoperca trigloides","0","SPECIES","Animalia","Chordata","Perciformes","Bovichtidae","Cottoperca","Cottoperca trigloides"
 "Cottoperca Steindachner, 1876","Cottoperca Steindachner, 1876","Cottoperca","0","GENUS","Animalia","Chordata","Perciformes","Bovichtidae","Cottoperca",NA
 "Brama australis Valenciennes, 1838","Brama australis Valenciennes, 1838","Brama australis","0","SPECIES","Animalia","Chordata","Perciformes","Bramidae","Brama","Brama australis"
+"Brama australis Valenciennes, 1838","Brama australis","Brama australis","0","SPECIES","Animalia","Chordata","Perciformes","Bramidae","Brama","Brama australis"
 "Trachurus murphyi Nichols, 1920","Trachurus murphyi","Trachurus murphyi","0","SPECIES","Animalia","Chordata","Perciformes","Carangidae","Trachurus","Trachurus murphyi"
 "Trachurus murphyi Nichols, 1920","Trachurus murphyi Nichols, 1920","Trachurus murphyi","0","SPECIES","Animalia","Chordata","Perciformes","Carangidae","Trachurus","Trachurus murphyi"
 "Trachurus symmetricus (Ayres, 1855)","Trachurus symmetricus (Ayres, 1855)","Trachurus symmetricus","0","SPECIES","Animalia","Chordata","Perciformes","Carangidae","Trachurus","Trachurus symmetricus"
+"Centrolophus niger (Gmelin, 1789)","Centrolophus niger (Gmelin, 1789)","Centrolophus niger","0","SPECIES","Animalia","Chordata","Perciformes","Centrolophidae","Centrolophus","Centrolophus niger"
 "Seriolella caerulea Guichenot, 1848","Seriolella caerulea","Seriolella caerulea","0","SPECIES","Animalia","Chordata","Perciformes","Centrolophidae","Seriolella","Seriolella caerulea"
 "Seriolella caerulea Guichenot, 1848","Seriolella caerulea Guichenot, 1848","Seriolella caerulea","0","SPECIES","Animalia","Chordata","Perciformes","Centrolophidae","Seriolella","Seriolella caerulea"
 "Seriolella porosa Guichenot, 1848","Seriolella porosa","Seriolella porosa","0","SPECIES","Animalia","Chordata","Perciformes","Centrolophidae","Seriolella","Seriolella porosa"
@@ -202,6 +238,7 @@
 "Champsocephalus esox (Günther, 1861)","Champsocephalus esox (Günther, 1861)","Champsocephalus esox","0","SPECIES","Animalia","Chordata","Perciformes","Channichthyidae","Champsocephalus","Champsocephalus esox"
 "Nemadactylus bergi (Norman, 1937)","Nemadactylus bergi","Nemadactylus bergi","0","SPECIES","Animalia","Chordata","Perciformes","Cheilodactylidae","Nemadactylus","Nemadactylus bergi"
 "Nemadactylus bergi (Norman, 1937)","Nemadactylus bergi (Norman, 1937)","Nemadactylus bergi","0","SPECIES","Animalia","Chordata","Perciformes","Cheilodactylidae","Nemadactylus","Nemadactylus bergi"
+"Nemadactylus gayi (Kner, 1865)","Nemadactylus gayi (Kner, 1865)","Nemadactylus gayi","0","SPECIES","Animalia","Chordata","Perciformes","Cheilodactylidae","Nemadactylus","Nemadactylus gayi"
 "Pterophyllum Heckel, 1840","Pterophyllum Heckel, 1840","Pterophyllum","1","GENUS","Animalia","Chordata","Perciformes","Cichlidae","Pterophyllum",NA
 "Myxodes cristatus Valenciennes, 1836","Myxodes cristatus","Myxodes cristatus","0","SPECIES","Animalia","Chordata","Perciformes","Clinidae","Myxodes","Myxodes cristatus"
 "Myxodes cristatus Valenciennes, 1836","Myxodes cristatus Valenciennes, 1836","Myxodes cristatus","0","SPECIES","Animalia","Chordata","Perciformes","Clinidae","Myxodes","Myxodes cristatus"
@@ -214,6 +251,9 @@
 "Eleginops Gill, 1862","Eleginops falklandicus","Eleginops","1","GENUS","Animalia","Chordata","Perciformes","Eleginopsidae","Eleginops",NA
 "Eleginops Gill, 1862","Eleginops Gill, 1862","Eleginops","1","GENUS","Animalia","Chordata","Perciformes","Eleginopsidae","Eleginops",NA
 "Gobiomorus maculatus (Günther, 1859)","Gobiomorus maculatus (Günther, 1859)","Gobiomorus maculatus","0","SPECIES","Animalia","Chordata","Perciformes","Eleotridae","Gobiomorus","Gobiomorus maculatus"
+"Emmelichthys Richardson, 1845","Emmelichthys Richardson, 1845","Emmelichthys","0","GENUS","Animalia","Chordata","Perciformes","Emmelichthyidae","Emmelichthys",NA
+"Epigonus crassicaudus de Buen, 1959","Epigonus crassicaudus de Buen, 1959","Epigonus crassicaudus","0","SPECIES","Animalia","Chordata","Perciformes","Epigonidae","Epigonus","Epigonus crassicaudus"
+"Lepidocybium flavobrunneum (Smith, 1843)","Lepidocybium flavobrunneum (Smith, 1843)","Lepidocybium flavobrunneum","0","SPECIES","Animalia","Chordata","Perciformes","Gempylidae","Lepidocybium","Lepidocybium flavobrunneum"
 "Thyrsites atun (Euphrasen, 1791)","Thyrsites atun","Thyrsites atun","0","SPECIES","Animalia","Chordata","Perciformes","Gempylidae","Thyrsites","Thyrsites atun"
 "Thyrsites atun (Euphrasen, 1791)","Thyrsites atun (Euphrasen, 1791)","Thyrsites atun","0","SPECIES","Animalia","Chordata","Perciformes","Gempylidae","Thyrsites","Thyrsites atun"
 "Microgobius Poey, 1876","Microgobius","Microgobius","0","GENUS","Animalia","Chordata","Perciformes","Gobiidae","Microgobius",NA
@@ -236,6 +276,8 @@
 "Calliclinus nudiventris Cervigón & Pequeño, 1979","Calliclinus nudiventris","Calliclinus nudiventris","0","SPECIES","Animalia","Chordata","Perciformes","Labrisomidae","Calliclinus","Calliclinus nudiventris"
 "Calliclinus nudiventris Cervigón & Pequeño, 1979","Calliclinus nudiventris Cervigón & Pequeño, 1979","Calliclinus nudiventris","0","SPECIES","Animalia","Chordata","Perciformes","Labrisomidae","Calliclinus","Calliclinus nudiventris"
 "Calliclinus Gill, 1860","Calliclinus racemarius","Calliclinus","0","GENUS","Animalia","Chordata","Perciformes","Labrisomidae","Calliclinus",NA
+"Calliclinus Gill, 1860","Calliclinus Gill, 1860","Calliclinus","0","GENUS","Animalia","Chordata","Perciformes","Labrisomidae","Calliclinus",NA
+"Cubiceps caeruleus Regan, 1914","Cubiceps caeruleus Regan, 1914","Cubiceps caeruleus","0","SPECIES","Animalia","Chordata","Perciformes","Nomeidae","Cubiceps","Cubiceps caeruleus"
 "BOLD:AAA4566","BOLD:AAA4566","BOLD:AAA4566","0","UNRANKED","Animalia","Chordata","Perciformes","Nototheniidae","Dissostichus","Dissostichus eleginoides"
 "Dissostichus eleginoides Smitt, 1898","Dissostichus eleginoides Smitt, 1898","Dissostichus eleginoides","0","SPECIES","Animalia","Chordata","Perciformes","Nototheniidae","Dissostichus","Dissostichus eleginoides"
 "Lepidonotothen squamifrons (Günther, 1880)","Lepidonotothen squamifrons (Günther, 1880)","Lepidonotothen squamifrons","0","SPECIES","Animalia","Chordata","Perciformes","Nototheniidae","Lepidonotothen","Lepidonotothen squamifrons"
@@ -326,8 +368,12 @@
 "Sciaenidae","Sciaenidae","Sciaenidae","0","FAMILY","Animalia","Chordata","Perciformes","Sciaenidae",NA,NA
 "Allothunnus fallai Serventy, 1948","Allothunnus fallai","Allothunnus fallai","0","SPECIES","Animalia","Chordata","Perciformes","Scombridae","Allothunnus","Allothunnus fallai"
 "Allothunnus fallai Serventy, 1948","Allothunnus fallai Serventy, 1948","Allothunnus fallai","0","SPECIES","Animalia","Chordata","Perciformes","Scombridae","Allothunnus","Allothunnus fallai"
+"Katsuwonus pelamis (Linnaeus, 1758)","Katsuwonus pelamis (Linnaeus, 1758)","Katsuwonus pelamis","0","SPECIES","Animalia","Chordata","Perciformes","Scombridae","Katsuwonus","Katsuwonus pelamis"
+"Scomber japonicus Houttuyn, 1782","Scomber japonicus Houttuyn, 1782","Scomber japonicus","0","SPECIES","Animalia","Chordata","Perciformes","Scombridae","Scomber","Scomber japonicus"
+"Thunnus South, 1845","Thunnus South, 1845","Thunnus","0","GENUS","Animalia","Chordata","Perciformes","Scombridae","Thunnus",NA
 "Caprodon longimanus (Günther, 1859)","Caprodon longimanus (Günther, 1859)","Caprodon longimanus","0","SPECIES","Animalia","Chordata","Perciformes","Serranidae","Caprodon","Caprodon longimanus"
 "Caprodon Temminck & Schlegel, 1843","Caprodon","Caprodon","0","GENUS","Animalia","Chordata","Perciformes","Serranidae","Caprodon",NA
+"Caprodon Temminck & Schlegel, 1843","Caprodon Temminck & Schlegel, 1843","Caprodon","0","GENUS","Animalia","Chordata","Perciformes","Serranidae","Caprodon",NA
 "Paralabrax humeralis (Valenciennes, 1828)","Paralabrax humeralis (Valenciennes, 1828)","Paralabrax humeralis","0","SPECIES","Animalia","Chordata","Perciformes","Serranidae","Paralabrax","Paralabrax humeralis"
 "Paralabrax nebulifer (Girard, 1854)","Paralabrax nebulifer (Girard, 1854)","Paralabrax nebulifer","0","SPECIES","Animalia","Chordata","Perciformes","Serranidae","Paralabrax","Paralabrax nebulifer"
 "Stromateus brasiliensis Fowler, 1906","Stromateus brasiliensis Fowler, 1906","Stromateus brasiliensis","0","SPECIES","Animalia","Chordata","Perciformes","Stromateidae","Stromateus","Stromateus brasiliensis"
@@ -336,6 +382,7 @@
 "Helcogrammoides cunninghami (Smitt, 1898)","Helcogrammoides cunninghami","Helcogrammoides cunninghami","0","SPECIES","Animalia","Chordata","Perciformes","Tripterygiidae","Helcogrammoides","Helcogrammoides cunninghami"
 "Helcogrammoides cunninghami (Smitt, 1898)","Helcogrammoides cunninghami (Smitt, 1898)","Helcogrammoides cunninghami","0","SPECIES","Animalia","Chordata","Perciformes","Tripterygiidae","Helcogrammoides","Helcogrammoides cunninghami"
 "Helcogrammoides Rosenblatt, 1990","Helcogrammoides","Helcogrammoides","0","GENUS","Animalia","Chordata","Perciformes","Tripterygiidae","Helcogrammoides",NA
+"Helcogrammoides Rosenblatt, 1990","Helcogrammoides Rosenblatt, 1990","Helcogrammoides","0","GENUS","Animalia","Chordata","Perciformes","Tripterygiidae","Helcogrammoides",NA
 "Argentinolycus elongatus (Smitt, 1898)","Argentinolycus elongatus (Smitt, 1898)","Argentinolycus elongatus","0","SPECIES","Animalia","Chordata","Perciformes","Zoarcidae","Argentinolycus","Argentinolycus elongatus"
 "Iluocoetes elongatus (Smitt, 1898)","Iluocoetes elongatus","Iluocoetes elongatus","0","SPECIES","Animalia","Chordata","Perciformes","Zoarcidae","Argentinolycus","Argentinolycus elongatus"
 "Iluocoetes elongatus (Smitt, 1898)","Iluocoetes elongatus (Smitt, 1898)","Iluocoetes elongatus","0","SPECIES","Animalia","Chordata","Perciformes","Zoarcidae","Argentinolycus","Argentinolycus elongatus"
@@ -357,6 +404,7 @@
 "Iluocoetes facali Lloris & Rucabado, 1987","Iluocoetes facali Lloris & Rucabado, 1987","Iluocoetes facali","0","SPECIES","Animalia","Chordata","Perciformes","Zoarcidae","Iluocoetes","Iluocoetes fimbriatus"
 "Iluocoetes fimbriatus Jenyns, 1842","Iluocoetes fimbriatus","Iluocoetes fimbriatus","0","SPECIES","Animalia","Chordata","Perciformes","Zoarcidae","Iluocoetes","Iluocoetes fimbriatus"
 "Iluocoetes fimbriatus Jenyns, 1842","Iluocoetes fimbriatus Jenyns, 1842","Iluocoetes fimbriatus","0","SPECIES","Animalia","Chordata","Perciformes","Zoarcidae","Iluocoetes","Iluocoetes fimbriatus"
+"Phucocoetes variegatus Smitt, 1898","Phucocoetes variegatus Smitt, 1898","Phucocoetes variegatus","0","SPECIES","Animalia","Chordata","Perciformes","Zoarcidae","Iluocoetes","Iluocoetes fimbriatus"
 "Lycodapus antarcticus Tomo, 1982","Lycodapus antarcticus Tomo, 1982","Lycodapus antarcticus","0","SPECIES","Animalia","Chordata","Perciformes","Zoarcidae","Lycodapus","Lycodapus antarcticus"
 "Lycodapus australis Norman, 1937","Lycodapus australis Norman, 1937","Lycodapus australis","0","SPECIES","Animalia","Chordata","Perciformes","Zoarcidae","Lycodapus","Lycodapus australis"
 "Lycodichthys antarcticus Pappenheim, 1911","Lycodichthys antarcticus Pappenheim, 1911","Lycodichthys antarcticus","0","SPECIES","Animalia","Chordata","Perciformes","Zoarcidae","Lycodichthys","Lycodichthys antarcticus"
@@ -378,10 +426,16 @@
 "Zoarcidae","Zoarcidae","Zoarcidae","0","FAMILY","Animalia","Chordata","Perciformes","Zoarcidae",NA,NA
 "Perciformes","Perciformes","Perciformes","0","ORDER","Animalia","Chordata","Perciformes",NA,NA,NA
 "Geotria australis Gray, 1851","Geotria australis","Geotria australis","1","SPECIES","Animalia","Chordata","Petromyzontiformes","Geotriidae","Geotria","Geotria australis"
+"Geotria australis Gray, 1851","Geotria australis Gray, 1851","Geotria australis","1","SPECIES","Animalia","Chordata","Petromyzontiformes","Geotriidae","Geotria","Geotria australis"
 "Geotria australis Gray, 1851","Velesia sp.","Geotria australis","1","SPECIES","Animalia","Chordata","Petromyzontiformes","Geotriidae","Geotria","Geotria australis"
 "Geotria macrostoma (Burmeister, 1868)","Geotria macrostoma","Geotria macrostoma","1","SPECIES","Animalia","Chordata","Petromyzontiformes","Geotriidae","Geotria","Geotria australis"
+"Geotria macrostoma (Burmeister, 1868)","Geotria macrostoma (Burmeister, 1868)","Geotria macrostoma","1","SPECIES","Animalia","Chordata","Petromyzontiformes","Geotriidae","Geotria","Geotria australis"
 "Mordacia lapicida (Gray, 1851)","Mordacia lapicida","Mordacia lapicida","1","SPECIES","Animalia","Chordata","Petromyzontiformes","Mordaciidae","Mordacia","Mordacia lapicida"
+"Mordacia lapicida (Gray, 1851)","Mordacia lapicida (Gray, 1851)","Mordacia lapicida","1","SPECIES","Animalia","Chordata","Petromyzontiformes","Mordaciidae","Mordacia","Mordacia lapicida"
+"Mordacia Gray, 1851","Mordacia/Caragola sp.","Mordacia","1","GENUS","Animalia","Chordata","Petromyzontiformes","Mordaciidae","Mordacia",NA
 "Petromyzontiformes","Lamprey",NA,"1",NA,"Animalia","Chordata","Petromyzontiformes",NA,NA,NA
+"Petromyzontiformes","Petromyzontiformes","Petromyzontiformes","1","ORDER","Animalia","Chordata","Petromyzontiformes",NA,NA,NA
+"Mancopsetta maculata (Günther, 1880)","Mancopsetta maculata (Günther, 1880)","Mancopsetta maculata","0","SPECIES","Animalia","Chordata","Pleuronectiformes","Achiropsettidae","Mancopsetta","Mancopsetta maculata"
 "Bothidae","Bothidae","Bothidae","0","FAMILY","Animalia","Chordata","Pleuronectiformes","Bothidae",NA,NA
 "Hippoglossina bollmani Gilbert, 1890","Hippoglossina bollmani","Hippoglossina bollmani","0","SPECIES","Animalia","Chordata","Pleuronectiformes","Paralichthyidae","Hippoglossina","Hippoglossina bollmani"
 "Hippoglossina bollmani Gilbert, 1890","Hippoglossina bollmani Gilbert, 1890","Hippoglossina bollmani","0","SPECIES","Animalia","Chordata","Pleuronectiformes","Paralichthyidae","Hippoglossina","Hippoglossina bollmani"
@@ -389,16 +443,22 @@
 "Hippoglossina mystacium Ginsburg, 1936","Hippoglossina mystacium","Hippoglossina mystacium","0","SPECIES","Animalia","Chordata","Pleuronectiformes","Paralichthyidae","Hippoglossina","Hippoglossina mystacium"
 "Hippoglossina mystacium Ginsburg, 1936","Hippoglossina mystacium Ginsburg, 1936","Hippoglossina mystacium","0","SPECIES","Animalia","Chordata","Pleuronectiformes","Paralichthyidae","Hippoglossina","Hippoglossina mystacium"
 "Paralichthys microps (Günther, 1881)","Paralichthys microps (Günther, 1881)","Paralichthys microps","0","SPECIES","Animalia","Chordata","Pleuronectiformes","Paralichthyidae","Paralichthys","Paralichthys microps"
+"Paralichthys microps (Günther, 1881)","Paralichthys microps","Paralichthys microps","0","SPECIES","Animalia","Chordata","Pleuronectiformes","Paralichthyidae","Paralichthys","Paralichthys microps"
 "Paralichthys Girard, 1858","Paralichthys","Paralichthys","0","GENUS","Animalia","Chordata","Pleuronectiformes","Paralichthyidae","Paralichthys",NA
 "Paralichthys Girard, 1858","Paralichthys Girard, 1858","Paralichthys","0","GENUS","Animalia","Chordata","Pleuronectiformes","Paralichthyidae","Paralichthys",NA
 "Pleuronectiformes","Pleuronectiformes","Pleuronectiformes","0","ORDER","Animalia","Chordata","Pleuronectiformes",NA,NA,NA
 "Oncorhynchus gorbuscha (Walbaum, 1792)","Oncorhynchus gorbuscha","Oncorhynchus gorbuscha","1","SPECIES","Animalia","Chordata","Salmoniformes","Salmonidae","Oncorhynchus","Oncorhynchus gorbuscha"
+"Oncorhynchus gorbuscha (Walbaum, 1792)","Oncorhynchus gorbuscha (Walbaum, 1792)","Oncorhynchus gorbuscha","1","SPECIES","Animalia","Chordata","Salmoniformes","Salmonidae","Oncorhynchus","Oncorhynchus gorbuscha"
 "Oncorhynchus keta (Walbaum, 1792)","Oncorhynchus keta","Oncorhynchus keta","1","SPECIES","Animalia","Chordata","Salmoniformes","Salmonidae","Oncorhynchus","Oncorhynchus keta"
+"Oncorhynchus keta (Walbaum, 1792)","Oncorhynchus keta (Walbaum, 1792)","Oncorhynchus keta","1","SPECIES","Animalia","Chordata","Salmoniformes","Salmonidae","Oncorhynchus","Oncorhynchus keta"
 "Oncorhynchus kisutch (Walbaum, 1792)","Oncorhynchus kisutch","Oncorhynchus kisutch","1","SPECIES","Animalia","Chordata","Salmoniformes","Salmonidae","Oncorhynchus","Oncorhynchus kisutch"
 "Oncorhynchus kisutch (Walbaum, 1792)","Oncorhynchus kisutch (Walbaum, 1792)","Oncorhynchus kisutch","1","SPECIES","Animalia","Chordata","Salmoniformes","Salmonidae","Oncorhynchus","Oncorhynchus kisutch"
 "Oncorhynchus masou (Brevoort, 1856)","Oncorhynchus masou","Oncorhynchus masou","1","SPECIES","Animalia","Chordata","Salmoniformes","Salmonidae","Oncorhynchus","Oncorhynchus masou"
+"Oncorhynchus masou (Brevoort, 1856)","Oncorhynchus masou (Brevoort, 1856)","Oncorhynchus masou","1","SPECIES","Animalia","Chordata","Salmoniformes","Salmonidae","Oncorhynchus","Oncorhynchus masou"
 "Oncorhynchus mykiss (Walbaum, 1792)","Oncorhynchus mykiss","Oncorhynchus mykiss","1","SPECIES","Animalia","Chordata","Salmoniformes","Salmonidae","Oncorhynchus","Oncorhynchus mykiss"
 "Oncorhynchus mykiss (Walbaum, 1792)","Oncorhynchus mykiss (Walbaum, 1792)","Oncorhynchus mykiss","1","SPECIES","Animalia","Chordata","Salmoniformes","Salmonidae","Oncorhynchus","Oncorhynchus mykiss"
+"Oncorhynchus mykiss (Walbaum, 1792)","Salmo gairdnerii Richardson, 1836","Oncorhynchus mykiss","1","SPECIES","Animalia","Chordata","Salmoniformes","Salmonidae","Oncorhynchus","Oncorhynchus mykiss"
+"Oncorhynchus nerka (Walbaum, 1792)","Oncorhynchus nerka","Oncorhynchus nerka","1","SPECIES","Animalia","Chordata","Salmoniformes","Salmonidae","Oncorhynchus","Oncorhynchus nerka"
 "Oncorhynchus tshawytscha (Walbaum, 1792)","Oncorhynchus tshawytscha","Oncorhynchus tshawytscha","1","SPECIES","Animalia","Chordata","Salmoniformes","Salmonidae","Oncorhynchus","Oncorhynchus tshawytscha"
 "Oncorhynchus tshawytscha (Walbaum, 1792)","Oncorhynchus tshawytscha ","Oncorhynchus tshawytscha","1","SPECIES","Animalia","Chordata","Salmoniformes","Salmonidae","Oncorhynchus","Oncorhynchus tshawytscha"
 "Oncorhynchus tshawytscha (Walbaum, 1792)","Oncorhynchus tshawytscha (Walbaum, 1792)","Oncorhynchus tshawytscha","1","SPECIES","Animalia","Chordata","Salmoniformes","Salmonidae","Oncorhynchus","Oncorhynchus tshawytscha"
@@ -413,6 +473,7 @@
 "Salvelinus fontinalis (Mitchill, 1814)","Salvelinus fontinalis","Salvelinus fontinalis","1","SPECIES","Animalia","Chordata","Salmoniformes","Salmonidae","Salvelinus","Salvelinus fontinalis"
 "Salvelinus fontinalis (Mitchill, 1814)","Salvelinus fontinalis (Mitchill, 1814)","Salvelinus fontinalis","1","SPECIES","Animalia","Chordata","Salmoniformes","Salmonidae","Salvelinus","Salvelinus fontinalis"
 "Salvelinus namaycush (Walbaum, 1792)","Salvelinus namaycush","Salvelinus namaycush","1","SPECIES","Animalia","Chordata","Salmoniformes","Salmonidae","Salvelinus","Salvelinus namaycush"
+"Salvelinus namaycush (Walbaum, 1792)","Salvelinus namaycush (Walbaum, 1792)","Salvelinus namaycush","1","SPECIES","Animalia","Chordata","Salmoniformes","Salmonidae","Salvelinus","Salvelinus namaycush"
 "Oncorhynchus","Oncorhynchus","Oncorhynchus","1","SPECIES","Animalia","Chordata","Salmoniformes","Salmonidae",NA,NA
 "Salmonidae","Salmonidae","Salmonidae","1","FAMILY","Animalia","Chordata","Salmoniformes","Salmonidae",NA,NA
 "Salmonidae","Salmoninae","Salmonidae","1",NA,"Animalia","Chordata","Salmoniformes","Salmonidae",NA,NA
@@ -468,6 +529,7 @@
 "Diplomystes Bleeker, 1858","Diplomystes Bleeker, 1858","Diplomystes","1","GENUS","Animalia","Chordata","Siluriformes","Diplomystidae","Diplomystes",NA
 "Diplomystes Bleeker, 1858","Diplomystes sp.","Diplomystes","1","GENUS","Animalia","Chordata","Siluriformes","Diplomystidae","Diplomystes",NA
 "Olivaichthys viedmensis (MacDonagh, 1931)","Olivaichthys viedmensis","Olivaichthys viedmensis","1","SPECIES","Animalia","Chordata","Siluriformes","Diplomystidae","Olivaichthys","Olivaichthys viedmensis"
+"Olivaichthys viedmensis (MacDonagh, 1931)","Olivaichthys viedmensis (MacDonagh, 1931)","Olivaichthys viedmensis","1","SPECIES","Animalia","Chordata","Siluriformes","Diplomystidae","Olivaichthys","Olivaichthys viedmensis"
 "Hatcheria macraei (Girard, 1855)","Hatcheria macraei","Hatcheria macraei","1","SPECIES","Animalia","Chordata","Siluriformes","Trichomycteridae","Hatcheria","Hatcheria macraei"
 "Hatcheria macraei (Girard, 1855)","Hatcheria macraei (Girard, 1855)","Hatcheria macraei","1","SPECIES","Animalia","Chordata","Siluriformes","Trichomycteridae","Hatcheria","Hatcheria macraei"
 "Hatcheria macraei (Girard, 1855)","Hatcheria patagoniensis","Hatcheria macraei","1","SPECIES","Animalia","Chordata","Siluriformes","Trichomycteridae","Hatcheria","Hatcheria macraei"
@@ -480,6 +542,7 @@
 "Trichomycterus Valenciennes, 1832","Trichomycterus sp.","Trichomycterus","1","GENUS","Animalia","Chordata","Siluriformes","Trichomycteridae","Trichomycterus",NA
 "Trichomycterus Valenciennes, 1832","Trichomycterus Valenciennes, 1832","Trichomycterus","1","GENUS","Animalia","Chordata","Siluriformes","Trichomycteridae","Trichomycterus",NA
 "Siluriformes","BOLD:ADL4127","Siluriformes","1","ORDER","Animalia","Chordata","Siluriformes",NA,NA,NA
+"Siluriformes","Siluriformes","Siluriformes","1","ORDER","Animalia","Chordata","Siluriformes",NA,NA,NA
 "Vinciguerria lucetia (Garman, 1899)","Vinciguerria lucetia (Garman, 1899)","Vinciguerria lucetia","0","SPECIES","Animalia","Chordata","Stomiiformes","Phosichthyidae","Vinciguerria","Vinciguerria lucetia"
 "Vinciguerria Jordan & Evermann, 1896","Vinciguerria Jordan & Evermann, 1896","Vinciguerria","0","GENUS","Animalia","Chordata","Stomiiformes","Phosichthyidae","Vinciguerria",NA
 "Maurolicus muelleri (Gmelin, 1789)","Maurolicus muelleri (Gmelin, 1789)","Maurolicus muelleri","0","SPECIES","Animalia","Chordata","Stomiiformes","Sternoptychidae","Maurolicus","Maurolicus muelleri"
@@ -491,9 +554,13 @@
 "Leptonotus blainvilleanus (Eydoux & Gervais, 1837)","Leptonotus blainvilleanus","Leptonotus blainvilleanus","0","SPECIES","Animalia","Chordata","Syngnathiformes","Syngnathidae","Leptonotus","Leptonotus blainvilleanus"
 "Leptonotus blainvilleanus (Eydoux & Gervais, 1837)","Leptonotus blainvilleanus (Eydoux & Gervais, 1837)","Leptonotus blainvilleanus","0","SPECIES","Animalia","Chordata","Syngnathiformes","Syngnathidae","Leptonotus","Leptonotus blainvilleanus"
 "Leptonotus blainvillianus (Eydoux & Gervais, 1837)","Leptonotus blainvillianus (Eydoux & Gervais, 1837)","Leptonotus blainvillianus","0","SPECIES","Animalia","Chordata","Syngnathiformes","Syngnathidae","Leptonotus","Leptonotus blainvilleanus"
+"Leptonotus Kaup, 1853","Leptonotus Kaup, 1853","Leptonotus","0","GENUS","Animalia","Chordata","Syngnathiformes","Syngnathidae","Leptonotus",NA
 "Syngnathus macrobrachium Fritzsche, 1980","Syngnathus macrobrachium Fritzsche, 1980","Syngnathus macrobrachium","0","SPECIES","Animalia","Chordata","Syngnathiformes","Syngnathidae","Syngnathus","Syngnathus macrobrachium"
+"Mola tecta Nyegaard, Sawai, Gemmell, Gillum, Loneragan, Yamanoue & Stewart, 2017","Mola tecta","Mola tecta","0","SPECIES","Animalia","Chordata","Tetraodontiformes","Molidae","Mola","Mola tecta"
 "Gyrodus Agassiz, 1833","Gyrodus Agassiz 1843","Gyrodus","0","GENUS","Animalia","Chordata",NA,"Gyrodontidae","Gyrodus",NA
-"Pterophyllum trichomatosum Villar de Seoane, 2001","Pterophyllum trichomatosum Villar de Seoane 2001","Pterophyllum trichomatosum","1","SPECIES","Plantae","Tracheophyta",NA,"Williamsoniaceae","Pterophyllum","Pterophyllum trichomatosum"
+"Gyrodus Agassiz, 1833","Gyrodus Agassiz, 1833","Gyrodus","0","GENUS","Animalia","Chordata",NA,"Gyrodontidae","Gyrodus",NA
+"Pterophyllum trichomatosum Villar de Seoane, 2001","Pterophyllum trichomatosum Villar de Seoane 2001","Pterophyllum trichomatosum","0","SPECIES","Plantae","Tracheophyta",NA,"Williamsoniaceae","Pterophyllum","Pterophyllum trichomatosum"
+"Pterophyllum trichomatosum Villar de Seoane, 2001","Pterophyllum trichomatosum Villar de Seoane, 2001","Pterophyllum trichomatosum","0","SPECIES","Plantae","Tracheophyta",NA,"Williamsoniaceae","Pterophyllum","Pterophyllum trichomatosum"
 "Galaxias","Galaxias","Animalia","1","KINGDOM","Animalia",NA,NA,NA,NA,NA
 "Galaxias","Galaxias sp.","Animalia","1","KINGDOM","Animalia",NA,NA,NA,NA,NA
 "Leptonotus","Leptonotus","Animalia","0","KINGDOM","Animalia",NA,NA,NA,NA,NA
