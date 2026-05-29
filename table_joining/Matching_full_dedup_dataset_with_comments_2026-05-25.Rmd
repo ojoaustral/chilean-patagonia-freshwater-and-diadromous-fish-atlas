@@ -1101,8 +1101,6 @@ kable(summary_table, caption = "Final Summary Statistics")
 ```
 
 
-
-
 # Final remarks    
 
 - **Total processed:** `r nrow(table1_matched)` rows  
@@ -1154,10 +1152,15 @@ sessionInfo()
 ```
 
 
+```{r, eval=T, include=T}
+knitr::knit_exit()
+```
+
+
 # Utility function to compare assignments and import manually revised annotation to new matching tables. 
 
 
-```{r, eval = F}
+```{r, eval = F, include=FALSE}
 
 # =====================================================================
 # import_annotations() — Import Reviewed Annotations by Composite Key
@@ -1219,6 +1222,101 @@ write.csv(updated_table, "./annotated-new_output_comparisson/Table1_matched_stri
 
   
 ```
+
+# Utility function to simplify the table with annotations after manual review.
+
+This is to strip the table with annotations and corrections from columns related to the row-matching process, diagnostic matching columns, etc. The idea is to get a clean  table with corrections to parse to the main pipeline. 
+
+It runs in three passes: 
+(1) update `occurrenceID_master` using manually corrected matches,
+(2) pick the best available match ID, and 
+(3) remove unlinked rows and tidy the column layout.
+
+
+```{r}
+CM_fixed <- read.csv("./outputs/Table1_matched_strict_2026-05-26_editedMaryse.csv", 
+         stringsAsFactors = F, 
+         fileEncoding = "UTF-8")
+
+
+CM_fixed <- CM_fixed %>%
+  mutate(
+    id_CC_key_num = suppressWarnings(as.numeric(correcting_match)),
+    id_CC_key = if_else(
+      !is.na(id_CC_key_num) & id_CC_key_num == as.integer(id_CC_key_num),
+      as.integer(id_CC_key_num),
+      NA_integer_
+    )
+  ) %>%
+  left_join(
+    X.filtered.dedup %>%
+      select(id_CC, occurrenceID_from_master = occurrenceID),
+    by = c("id_CC_key" = "id_CC")
+  ) %>%
+  mutate(
+    occurrenceID_master = if_else(
+      !is.na(id_CC_key) & !is.na(occurrenceID_from_master),
+      occurrenceID_from_master,
+      occurrenceID_master
+    )
+  ) %>%
+  select(-id_CC_key_num, -id_CC_key, -occurrenceID_from_master)
+
+
+CM_fixed <- CM_fixed %>%
+  mutate(
+    correcting_match_num = suppressWarnings(as.numeric(correcting_match)),
+    match_ID_num = suppressWarnings(as.numeric(match_id)),
+
+    correcting_match_int = if_else(
+      !is.na(correcting_match_num) &
+        correcting_match_num == as.integer(correcting_match_num),
+      as.integer(correcting_match_num),
+      NA_integer_
+    ),
+
+    match_ID_int = if_else(
+      !is.na(match_ID_num) &
+        match_ID_num == as.integer(match_ID_num),
+      as.integer(match_ID_num),
+      NA_integer_
+    ),
+
+    new_match_id = coalesce(correcting_match_int, match_ID_int)
+  ) %>%
+  select(
+    -correcting_match_num,
+    -match_ID_num,
+    -correcting_match_int,
+    -match_ID_int
+  )
+
+# Remove rows flagged with correcting_match == "unlink", because these cases are no longer included in the master databese 
+
+CM_fixed <- CM_fixed %>%
+  filter(!str_detect(correcting_match, "^unlink")) %>% 
+  select(-id_CC_original, -match_id, -correcting_match) %>% 
+  rename(id_CC = new_match_id,
+         datasetName_tmp = datasetName) %>% relocate(id_CC) 
+
+# Create  a new column to indicate cases that need  to be removed from the master table
+
+CM_fixed <- CM_fixed %>% mutate(Remove_from_master = 
+                                  ifelse(
+        str_detect(Comment, "^Remove"), 
+        "remove",NA)) %>% 
+       relocate(Remove_from_master, .after = Comment) 
+
+
+```
+
+
+```{r}
+write.csv(CM_fixed, "./outputs/Cambios_a_implementar_2026-05-28.csv", fileEncoding = "UTF-8", row.names = F)
+
+
+```
+
 
 ```{r, eval=T, include=T}
 knitr::knit_exit()

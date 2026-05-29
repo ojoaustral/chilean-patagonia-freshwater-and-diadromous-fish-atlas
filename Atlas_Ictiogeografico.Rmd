@@ -2131,11 +2131,6 @@ rm(list=ls()[!ls()%in%c("DwC",
 ```
 
 
-```{r, eval=T, include=T}
-knitr::knit_exit()
-
-```
-
 ## iDigBio
 
 *Nombre corto del conjunto de datos*: iDigBio  
@@ -4065,63 +4060,59 @@ write_rds(X.filtered.dedup,
 
 X.filtered.dedup <- readRDS("./outputs_global_analyses/dataset_filtered_deduplicated_before_manual_corrections_2026-05-20.rds")
 
- save.image()
+ # save.image()
 # load(".Rdata")
 ```
 
 
 #### Remoción manual de duplicados y otros cambios, correcciones y mejoras     
 
-Durante el proceso de consolidación y depuración de datos, numerosas ocurrencias duplicadas (registros provenientes de una misma fuente e incorporados en distintos conjuntos de datos) no fueron detectadas por el algoritmo automático para de-duplicar datos, y debieron identificarse manualmente mediante inspección manual en planillas y QGIS. Asimismo, se realizaron mejoras puntuales en muchos registros corrigiendo errores, añadiendo información, etc. Estas modificaciones se documentaron en la planilla  `./input_parameters/Cambios_a_implementar_2025-12-15.csv`, para aplicarlas en esta sección.  
+Durante el proceso de consolidación y depuración de datos, numerosas ocurrencias duplicadas (registros provenientes de una misma fuente e incorporados en distintos conjuntos de datos) no fueron detectadas por el algoritmo automático para de-duplicar datos, y debieron identificarse manualmente mediante inspección manual en planillas y QGIS. Asimismo, se realizaron mejoras puntuales en muchos registros corrigiendo errores, añadiendo información, etc. Estas modificaciones se documentaron en la planilla  `./input_parameters/Cambios_a_implementar_2026-05-28.csv`, para aplicarlas en esta sección.  
 
-En el caso de los duplicados, la columna `Duplicate` (no confundir con `duplicated`) con valores 1 y 0 indican ocurrencias a retener o excluir, respectivamente, mientras que las celdas vacías representan registros únicos. Otras revisiones se consignaron en columnas con el prefijo “.” (por ejemplo, `.decimalLatitude`), donde un valor distinto de vacío indica el valor corregido del campo original correspondiente.  
+En el caso de los duplicados, la columna `Duplicate` (no confundir con `duplicated`) con valores 1 y 0 indican ocurrencias a retener o excluir, respectivamente, mientras que las celdas vacías representan registros únicos. Por otra parte la columna `Remove_from_master` indica filas a remover de la gran bases de datos por distintas razones especificadas en `Comentarios`.
 
-**Nota**: El trabajo realizado sobre distintas versiones de la base consolidada provocó la pérdida del vínculo directo entre la tabla principal depurada y la tabla con anotaciones. Por ello, fue necesario restablecerlo mediante un protocolo de comparación exhaustivo entre tablas, implementando herramientas diagnósticas y verificaciones manuales en los casos dudosos. Este protocolo se encuentra documentado en detalle en el sub-directorio `./table_joining/`. El resultado de ese proceso se guardo en el archivo `./table_?_joining/outputs/Table1_matched_strict_reviewed_2025-12-06.csv`, que luego fue simplificado  y renombrado a `Cambios_a_implementar_2025-12-06.csv` para su uso en esta sección. 
+Otras revisiones se consignaron en columnas con el prefijo “.” (por ejemplo, `.decimalLatitude`), donde un valor distinto de vacío indica el valor corregido del campo original correspondiente.  
 
-<!-- En esta tabla se excluyeron algunos bloques de datos: -->
-<!--   - (DatasetName == GBIF) & (institutionCode == iNaturalist). Ahora los datos de iNat tienen precedencia, y además se excluyenos los datos de iNat vía GBIF.   -->
-<!--   - (datasetName == "gbif") & (str_sub(occurrenceID, 1L, 3L) == "mma"). Usamos la versión mejorada directamente del MMA, no la versión  publicada en GBIF. -->
-<!--   - (datasetName == "subpesca-1") una lista de papers indexados en otras fuentes fue excluido. Ver planilla en carpeta SUBPESCA, y código de exclusión arriba.   -->
+<!-- **Nota**: El trabajo realizado sobre distintas versiones de la base consolidada provocó la pérdida del vínculo directo entre la tabla principal depurada y la tabla con anotaciones. Por ello, fue necesario restablecerlo mediante un protocolo de comparación exhaustivo entre tablas, implementando herramientas diagnósticas y verificaciones manuales en los casos dudosos. Este protocolo se encuentra documentado en detalle en el sub-directorio `./table_joining/`. El resultado de ese proceso se guardo en el archivo `./table_joining/outputs/Table1_matched_strict_2026-05-26.csv`, que luego fue revisado manualmente Table1_matched_strict_2026-05-26_editedMaryse.csv y finalmente simplificado  y renombrado a `Cambios_a_implementar_2026-05-28.csv` para su uso en esta sección.  -->
 
 
+Cargar la tabla de correcciones
 ```{r}
-# Load correction table previously processed by scrip in ./table_joining/
+# Load correction table previously processed by script and manual review in ./table_joining/
 
-CM <- read.csv("./input_parameters/Cambios_a_implementar_2025-12-15.csv", 
+CM <- read.csv("./input_parameters/Cambios_a_implementar_2026-05-28.csv", 
                encoding = "UTF-8", sep = ",", colClasses = "character", 
                na.strings = c("", "NA"))
 
 ```
 
+Primero, es necesario establecer una relación uno-a-uno entre la tabla de correcciones `CM` y la base de datos consolidada. Es importante notar que la columna `id_CC` no es ideal para este propósito, ya que sus valores pueden cambiar cada vez que se ejecuta el código utilizado para construir la base de datos.
 
-Antes de proceder, es necesario asegurar que se está trabajando con versiones compatibles de la tabla de correcciones y de la tabla principal de datos. El siguiente bloque carga y corre una función de diagnóstico preliminar.  
-```{r, eval = FALSE}
-source("./functions/validate_correspondance_of_corrections.R")
+Por esta razón, preferimos utilizar `occurrenceID` como identificador principal. Sin embargo, este campo ocasionalmente contiene valores repetidos (c. 35 ocasiones en la base de datos), por ejemplo, cuando un mismo registro —con un `occurrenceID` proveniente de un museo— ingresa a la base de datos por distintas vías o fuentes.
 
-checks_passed <- validate_corrections(
-  table_main = X.filtered.dedup,
-  table_corrections = CM,
-  check_columns = c("datasetName","canonicalName", "year", "locality"),
-  main_key = "id_CC", 
-  match_key = "match_id", 
-  correcting_key = "correcting_match"   
-)
+Para resolver este problema, decidimos establecer la correspondencia utilizando una clave compuesta por `occurrenceID` y `datasetName_tmp`. Este último campo corresponde a una versión abreviada de la fuente del conjunto de datos, creada para uso interno durante el proceso de integración y curaduría.
 
-#Only proceed if safe. If test fails, remove CM proceed to review the missmatch.
 
-if (!checks_passed) {
-  rm(CM)
-}
+```{r}
+CM <- CM %>% mutate(prim_key = paste(tolower(substr(datasetName_tmp, 1, 4)), occurrenceID_master, sep = " | ")) %>% 
+  relocate(prim_key)
+
+X.filtered.dedup <- X.filtered.dedup %>% mutate(prim_key = paste(tolower(substr(datasetName_tmp, 1, 4)), occurrenceID, sep = " | ")) %>% 
+  relocate(prim_key)
+
+# # Test if all unique values
+# X.filtered.dedup %>% select(prim_key) %>% count(prim_key) %>% filter(n>1)
+# CM %>% select(prim_key) %>% count(prim_key) %>% filter(n>1)
+# # Test is all prim_key values of the correction table are available in the master table
+# all(CM$prim_key %in% X.filtered.dedup$prim_key)
+# all(CM$id_CC %in% X.filtered.dedup$id_CC)
 
 ```
 
-
-Habiendo  confirmado la correspondencia entre las dos tablas, es seguro proceder a ejecutar los cambios. 
+El nuevo campo `prim_key` ahora puede ser usado para vincular la tabla de correcciones con la base de datos. Se comprobó que este campo tiene valores únicos en ambas tablas.  
 
 
 ##### Procedimiento de Actualización de la Base de Datos
-
-Tras la revisión manual de la base de datos, se implementó un flujo de trabajo sistemático para incorporar correcciones y modificaciones al conjunto de datos principal. Este proceso utiliza la función `table_update()`, que armoniza los cambios registrados en una tabla de correcciones con la base de datos primaria de manera organizada y trazable.
 
 El procedimiento de actualización opera sobre dos estructuras de datos principales:
 
@@ -4129,64 +4120,237 @@ El procedimiento de actualización opera sobre dos estructuras de datos principa
 
 2. **Tabla de Correcciones** (`CM`): Una tabla estructurada que documenta todas las revisiones manuales identificadas. Esta tabla contiene los siguientes campos clave:  
 
-   - `match_id`: El identificador principal que vincula las entradas de corrección con los registros en la base de datos principal.  
-   - `correcting_match`: Un campo que contiene un identificador alternativo para el emparejamiento o instrucciones especiales (e.g., "unlink" para excluir registros del procesamiento).  
-   - `Duplicate`: Un campo indicador donde los valores de "0" indican registros a eliminar de la base de datos principal, "1" indica registros que si bien  eran duplicados se deben retener, y `NA` que también indica registros que se deben retener, y potencialmente requieren actualizaciones.  
+   - `prim_key`: El identificador principal que vincula las entradas de corrección con los registros en la base de datos principal.  
+   - `Duplicate`: Un campo indicador donde los valores de "0" indican registros a eliminar de la base de datos principal, "1" indica registros que si bien  eran duplicados se deben retener, y `NA` que también indica registros que se deben retener, y potencialmente requieren actualizaciones.
+   - `Remove_from_master`: Columna que indica cuales registros deben ser eliminados de la Base de Datos Principal, por los motivos indicados en la columna `Comments`.
    - Columnas con prefijo "." (p. ej., `.decimalLatitude`, `.locality`, `.associatedReferences`): Estas contienen valores corregidos/añadidos que reemplazarán las columnas correspondientes sin prefijo en la base de datos principal cuando no estén vacías.  
 
-*Lógica de Actualización*
 
-La función `table_update()` ejecuta la siguiente secuencia de operaciones:
-
-  **Paso 1: Establecimiento de la Clave**  
-  La función crea una clave relacional (`key_to_main`) para vincular las entradas de corrección con los registros de la base de datos principal. La lógica sigue esta jerarquía:
-  - Si `correcting_match` contiene la palabra "unlink" (sin distinción de mayúsculas/minúsculas), la fila de corrección se marca para exclusión del procesamiento
-  - Si `correcting_match` contiene un valor numérico, ese valor se utiliza como clave de vinculación
-  - De lo contrario, se utiliza el valor de `match_id` como clave de vinculación
-  
-  **Paso 2: Filtrado de Entradas Desvinculadas**  
-  Las filas de corrección marcadas como "unlink" se separan y excluyen del procesamiento posterior. Estas representan registros que no deben ser emparejados ni aplicados a la base de datos principal.
-  
-  **Paso 3: Eliminación de Duplicados**  
+**Paso 1: Eliminación de Duplicados**  
   Los registros marcados con `Duplicate == "0"` se identifican y sus entradas correspondientes (basadas en la clave establecida) se eliminan de la base de datos principal. Este paso maneja la eliminación de registros duplicados o inválidos identificados durante la revisión manual.
   
-  **Paso 4: Aplicación de Actualizaciones**  
+```{r}
+tmp_key <- CM %>% filter(Duplicate == "0") %>% pull(prim_key)  
+
+X.filtered.dedup.updating <- X.filtered.dedup %>%
+  filter(!prim_key %in% tmp_key)
+
+# Update the CM table removing already applied correction
+CM <- CM %>% filter(!prim_key %in% tmp_key)  
+
+```
+Un total de `r length(tmp_key)` se excluyeron de la base de datos principal, pasando de `r nrow(X.filtered.dedup)` ocurrencias a `r X.filtered.dedup.updating` ocurrencias. 
+
+  **Paso 2: Excluir registros selectos**
+
+Se excluyeron de la base de dato principal  los registros identificados en la tabla de correcciones con `Remove_from_master == "remove"`. 
+
+```{r}
+tmp_key <- CM %>% filter(Remove_from_master == "remove") %>% pull(prim_key)  
+
+X.filtered.dedup.updating <- X.filtered.dedup %>%
+  filter(!prim_key %in% tmp_key)
+
+# Update the CM table removing already applied correction
+CM <- CM %>% filter(!prim_key %in% tmp_key)  
+```
+
+Un total de `r length(tmp_key)` se excluyeron de la base de datos principal, la que qued[o con `r X.filtered.dedup.updating` ocurrencias. 
+
+  **Paso 3: Aplicación de correcciones desde columnas con prefijo "."**  
   Para todas las entradas de corrección restantes (aquellas con `Duplicate == "1"` o `NA`), la función realiza una unión izquierda entre la base de datos principal y la tabla de correcciones utilizando la relación de clave establecida. Para cada columna con prefijo "." en la tabla de correcciones, si existe un valor no faltante, este reemplaza el valor correspondiente en la columna base (sin el prefijo) de la base de datos principal. Por ejemplo, un valor no vacío en `.decimalLatitude` actualizará el campo `decimalLatitude` en la base de datos principal para ese registro.
   
-  **Paso 5: Salida y Validación**  
-  La función devuelve la base de datos actualizada conteniendo solo la estructura de columnas original, con todas las columnas temporales de corrección eliminadas. Se imprime un resumen mostrando:
-  - Número de filas de corrección excluidas (desvinculadas)
-  - Número de registros eliminados de la base de datos principal (duplicados)
-  - Número de registros que reciben actualizaciones
-  - Recuento final de filas comparado con el tamaño original de la base de datos
+Se corre un ckeck preliminar. 
+```{r check-dot-prefixed-columns, echo=FALSE}
 
-Nota: Las funciones table_update() y validate_correspondance_of_corrections() junto con datos demostrativos se  encuentran el subdirectorio "./functions/".   
+# This identifies all columns in the correction table that begin with ".",
+# removes the "." prefix, and checks whether the corresponding base columns
+# exist in the master database.
+
+dot_columns <- names(CM)[grepl("^\\.", names(CM))]
+
+base_columns <- sub("^\\.", "", dot_columns)
+
+missing_base_columns <- setdiff(base_columns, names(X.filtered.dedup.updating))
+
+if (length(missing_base_columns) > 0) {
+  warning(
+    paste0(
+      "Las siguientes columnas de corrección no tienen columnas equivalentes en la base de datos principal: ",
+      paste(paste0(".", missing_base_columns), collapse = ", "),
+      "\nEstas correcciones serán omitidas a menos que se corrijan los nombres de las columnas."
+    )
+  )
+} else {
+  message(
+    "Todas las columnas de corrección tienen columnas equivalentes en la base de datos principal. Listo para aplicar las actualizaciones."
+  )
+}
 
 
-**Uso de la Función**
+```  
+  
 
-La llamada completa a la función utilizada para esta actualización de la base de datos es:
+Realizar unión izquierda temporal entre la base de datos y la table de correcciones.
+```{r apply-dot-prefixed-corrections}
+# Identificar las columnas de corrección.
+dot_columns <- names(CM)[grepl("^\\.", names(CM))]
 
+# Preparar una versión reducida de la tabla de correcciones. 
+
+corrections_select <- CM %>%
+  select(prim_key, all_of(dot_columns))
+
+
+# Unir la base principal con las correcciones. 
+# Esta unión agrega temporalmente las columnas con prefijo "." a la base principal,
+# usando `prim_key` como clave de correspondencia.
+
+X.filtered.dedup.updating <- X.filtered.dedup.updating %>%
+  left_join(corrections_select, by = "prim_key")
+```
+
+Para cada columna con prefijo ".", se identifica la columna base equivalente
+removiendo el punto inicial del nombre.
+
+Si la columna base existe en la base principal:
+ - se reemplaza su valor por el valor corregido cuando este no es NA;
+ - se conserva el valor original cuando no hay corrección disponible.
+
+Si la columna base no existe, se emite una advertencia y esa corrección se omite.
+
+```{r apply-corrections-and-report-updates}
+# Crear una tabla vacía para registrar el resumen de actualizaciones.
+update_summary <- tibble(
+  correction_column = character(),
+  updated_column = character(),
+  proposed_updates = integer(),
+  actual_changes = integer()
+)
+
+
+# Aplicar las correcciones y registrar el número de actualizaciones.
+for (dot_col in dot_columns) {
+  base_col <- sub("^\\.", "", dot_col)
+  if (base_col %in% names(X.filtered.dedup.updating)) {
+    
+    # Contar valores no faltantes en la columna de corrección.
+    # Estos corresponden a correcciones propuestas.
+    proposed_updates <- X.filtered.dedup.updating %>%
+      summarise(n = sum(!is.na(.data[[dot_col]]))) %>%
+      pull(n)
+    
+    
+    # Contar cambios efectivos.
+    #
+    # Un cambio efectivo ocurre cuando:
+    # - existe una corrección en la columna con prefijo ".";
+    # - y el valor corregido es distinto del valor actualmente presente
+    #   en la columna base.
+    
+    actual_changes <- X.filtered.dedup.updating %>%
+      summarise(
+        n = sum(
+          !is.na(.data[[dot_col]]) &
+            (
+              is.na(.data[[base_col]]) |
+                as.character(.data[[dot_col]]) != as.character(.data[[base_col]])
+            )
+        )
+      ) %>%
+      pull(n)
+    
+    
+    # Registrar el resumen para esta columna.
+    
+    update_summary <- update_summary %>%
+      add_row(
+        correction_column = dot_col,
+        updated_column = base_col,
+        proposed_updates = proposed_updates,
+        actual_changes = actual_changes
+      )
+    
+    # Aplicar la actualización:
+    # si existe un valor no faltante en la columna de corrección,
+    # este reemplaza el valor de la columna base.
+    
+    X.filtered.dedup.updating <- X.filtered.dedup.updating %>%
+      mutate(
+        !!base_col := ifelse(
+          !is.na(.data[[dot_col]]),
+          .data[[dot_col]],
+          .data[[base_col]]
+        )
+      )
+    
+  } else {
+    
+    warning(
+      paste0(
+        "Column '", base_col,
+        "' not found in X.filtered.dedup.updating. Skipping update for '",
+        dot_col, "'."
+      )
+    )
+  }
+}
+
+# Reportar resumen de actualizaciones.
+message(
+  paste0(
+    "Correcciones propuestas: ", sum(update_summary$proposed_updates), "\n",
+    "Cambios efectivos aplicados: ", sum(update_summary$actual_changes), "\n",
+    "Registros afectados: ",
+    X.filtered.dedup.updating %>%
+      filter(if_any(all_of(dot_columns), ~ !is.na(.x))) %>%
+      nrow()
+  )
+)
+```
 
 
 ```{r}
 
-source("./functions/table_update.R")
+update_summary %>% kable(
+    row.names = FALSE,
+    caption = "Resumen de frecuancias de correcciones o cambios  específicos realizados luego de la inspección manual de los datos.",
+    booktabs = TRUE,
+    # col.names = c("Column", "Non-NA Count", "Total Rows", "% Non-NA", "NA Count")
+  ) %>%
+  kable_styling(
+    latex_options = c("striped", "hold_position", "scale_down", "condensed"),
+    font_size = 10,
+    full_width = FALSE
+  ) %>%
+  row_spec(0, bold = TRUE)
+```
 
 
-X.filtered.dedup.revised <- table_update(
-                                        table_to_update = X.filtered.dedup,
-                                        table_with_corrections = CM,
-                                        main_key = "id_CC",
-                                        match_key = "match_id",
-                                        correcting_key = "correcting_match",
-                                        duplicate_flag = "Duplicate"
-                                        )
+Eliminar las columnas temporales
+
+```{r remove-temporary-correction-columns}
+X.filtered.dedup.revised <- X.filtered.dedup.updating %>%
+  select(-all_of(dot_columns))
+```  
+  
+
+```{r}
+write.csv(X.filtered.dedup.revised,  
+          paste0("./outputs_global_analyses/dataset_filtered_deduplicated_after_manual_corrections_",Sys.Date(),".csv"),
+          fileEncoding ="UTF-8", row.names = F, dec = ".", na = "NA")
+
+write_rds(X.filtered.dedup.revised, 
+          paste0("./outputs_global_analyses/dataset_filtered_deduplicated_after_manual_corrections_",
+          Sys.Date(), ".rds"))
+
 
 ```
 
 
 ### Corrección adicional de registros  
+
+
 
 #### Exclusión de taxa dulceacuícolas muy improbables o erróneos  
 
