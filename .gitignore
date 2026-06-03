@@ -1,7 +1,17 @@
+# R / RStudio files
 .Rproj.user/
 .Renviron
 .Rhistory
 .RData
 .Ruserdata
+
+# Ignore individual-level data from Correa and Boijoly empirical collection
+/data_sources/Correa_Boisjoly_Collection/FishDatabase_Correa_Boisjoly_2025-11-27.csv
+
+# Ignore all GBIF data files except the selected RDS checkpoint
 /data_sources/GBIF/*
 !/data_sources/GBIF/Output_GBIF_2026-05-16.rds
+
+# Ignore large or outdated Darwin Initiative source files
+/data_sources/Darwin_Initiative_Fish_Atlas/Darwin Web fish database  14-08-17_DV5_CC_MB2023.xlsx
+/data_sources/Darwin_Initiative_Fish_Atlas/Darwin Web fish database 08-11-10_Outdated.xls

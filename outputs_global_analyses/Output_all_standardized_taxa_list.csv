@@ -198,6 +198,8 @@ NA,"",NA,"0",NA,"","","","","",""
 "Galaxias platei Steindachner, 1898","Galaxias platei","Galaxias platei","1","SPECIES","Animalia","Chordata","Osmeriformes","Galaxiidae","Galaxias","Galaxias platei"
 "Galaxias platei Steindachner, 1898","Galaxias platei Steindachner, 1898","Galaxias platei","1","SPECIES","Animalia","Chordata","Osmeriformes","Galaxiidae","Galaxias","Galaxias platei"
 "Galaxias platei Steindachner, 1898","Galaxias plattii","Galaxias platei","1","SPECIES","Animalia","Chordata","Osmeriformes","Galaxiidae","Galaxias","Galaxias platei"
+"Galaxias Cuvier, 1816","Galaxias","Galaxias","1","GENUS","Animalia","Chordata","Osmeriformes","Galaxiidae","Galaxias",NA
+"Galaxias Cuvier, 1816","Galaxias sp.","Galaxias","1","GENUS","Animalia","Chordata","Osmeriformes","Galaxiidae","Galaxias",NA
 "Galaxias Cuvier, 1816","Galaxias Cuvier, 1816","Galaxias","1","GENUS","Animalia","Chordata","Osmeriformes","Galaxiidae","Galaxias",NA
 "Galaxiidae","GALAXIIDAE","Galaxiidae","1","FAMILY","Animalia","Chordata","Osmeriformes","Galaxiidae",NA,NA
 "Galaxiidae","Galaxiidae","Galaxiidae","1","FAMILY","Animalia","Chordata","Osmeriformes","Galaxiidae",NA,NA
@@ -561,8 +563,6 @@ NA,"",NA,"0",NA,"","","","","",""
 "Gyrodus Agassiz, 1833","Gyrodus Agassiz, 1833","Gyrodus","0","GENUS","Animalia","Chordata",NA,"Gyrodontidae","Gyrodus",NA
 "Pterophyllum trichomatosum Villar de Seoane, 2001","Pterophyllum trichomatosum Villar de Seoane 2001","Pterophyllum trichomatosum","0","SPECIES","Plantae","Tracheophyta",NA,"Williamsoniaceae","Pterophyllum","Pterophyllum trichomatosum"
 "Pterophyllum trichomatosum Villar de Seoane, 2001","Pterophyllum trichomatosum Villar de Seoane, 2001","Pterophyllum trichomatosum","0","SPECIES","Plantae","Tracheophyta",NA,"Williamsoniaceae","Pterophyllum","Pterophyllum trichomatosum"
-"Galaxias","Galaxias","Animalia","1","KINGDOM","Animalia",NA,NA,NA,NA,NA
-"Galaxias","Galaxias sp.","Animalia","1","KINGDOM","Animalia",NA,NA,NA,NA,NA
 "Leptonotus","Leptonotus","Animalia","0","KINGDOM","Animalia",NA,NA,NA,NA,NA
 NA,"Actinopterygii",NA,"0",NA,NA,NA,NA,NA,NA,NA
 NA,"Amphilophus citrinellus × Vieja melanurus",NA,"0",NA,NA,NA,NA,NA,NA,NA

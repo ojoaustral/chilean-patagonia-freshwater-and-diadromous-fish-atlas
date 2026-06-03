@@ -163,8 +163,8 @@ IncludePewProAP,URL,scientificName_Old,usageKey,scientificName,canonicalName,ran
 0,,"Epigonus crassicaudus de Buen, 1959",2395050,"Epigonus crassicaudus de Buen, 1959",Epigonus crassicaudus,SPECIES,ACCEPTED,100,EXACT,Animalia,Chordata,Perciformes,Epigonidae,1,44,587,8532,,"Epigonus crassicaudus de Buen, 1959",higher,Epigonus,Epigonus crassicaudus,2395026,2395050,NA,NA,
 0,,Gadidae,3701,Gadidae,Gadidae,FAMILY,ACCEPTED,94,HIGHERRANK,Animalia,Chordata,Gadiformes,Gadidae,1,44,549,3701,,Gadidae,higher,NA,NA,NA,NA,NA,NA,NA
 0,,Gadiformes,549,Gadiformes,Gadiformes,ORDER,ACCEPTED,94,EXACT,Animalia,Chordata,Gadiformes,NA,1,44,549,NA,FALSE,Gadiformes,higher,NA,NA,NA,NA,NA,NA,NA
-1,,Galaxias,1,Galaxias,Animalia,KINGDOM,ACCEPTED,92,HIGHERRANK,Animalia,NA,NA,NA,1,NA,NA,NA,FALSE,Galaxias,higher,NA,NA,NA,NA,NA,NA,NA
-1,,Galaxias sp.,1,Galaxias,Animalia,KINGDOM,ACCEPTED,92,HIGHERRANK,Animalia,NA,NA,NA,1,NA,NA,NA,FALSE,Galaxias sp.,higher,NA,NA,NA,NA,NA,NA,NA
+1,,Galaxias,2410478,"Galaxias Cuvier, 1816",Galaxias,GENUS,ACCEPTED,98,EXACT,Animalia,Chordata,Osmeriformes,Galaxiidae,1,44,1068,4224,FALSE,"Galaxias Cuvier, 1816",higher,Galaxias,NA,2410478,NA,NA,NA,NA
+1,,Galaxias sp.,2410478,"Galaxias Cuvier, 1816",Galaxias,GENUS,ACCEPTED,98,EXACT,Animalia,Chordata,Osmeriformes,Galaxiidae,1,44,1068,4224,FALSE,"Galaxias Cuvier, 1816",higher,Galaxias,NA,2410478,NA,NA,NA,NA
 1,,"Galaxias Cuvier, 1816",2410478,"Galaxias Cuvier, 1816",Galaxias,GENUS,ACCEPTED,98,EXACT,Animalia,Chordata,Osmeriformes,Galaxiidae,1,44,1068,4224,FALSE,"Galaxias Cuvier, 1816",higher,Galaxias,NA,2410478,NA,NA,NA,NA
 1,,Galaxias globiceps,5214258,"Galaxias globiceps Eigenmann, 1928",Galaxias globiceps,SPECIES,ACCEPTED,99,EXACT,Animalia,Chordata,Osmeriformes,Galaxiidae,1,44,1068,4224,FALSE,Galaxias globiceps,higher,Galaxias,Galaxias globiceps,2410478,5214258,NA,NA,NA
 1,,"Galaxias globiceps Eigenmann, 1928",5214258,"Galaxias globiceps Eigenmann, 1928",Galaxias globiceps,SPECIES,ACCEPTED,100,EXACT,Animalia,Chordata,Osmeriformes,Galaxiidae,1,44,1068,4224,FALSE,"Galaxias globiceps Eigenmann, 1928",higher,Galaxias,Galaxias globiceps,2410478,5214258,NA,NA,NA

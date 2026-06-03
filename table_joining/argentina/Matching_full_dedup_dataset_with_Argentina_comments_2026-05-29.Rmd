@@ -1,0 +1,270 @@
+---
+title: "One-to-One table matching between the revised Argeninean data subset and the  consolidated database."
+author: "Cristian Correa and Maryse Boisjoly"
+date: "`r Sys.Date()`"
+output:
+  pdf_document:
+    toc: true
+    toc_depth: 3
+    number_sections: true
+geometry: margin=2cm
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  fig.width = 8,
+  fig.height = 6
+)
+```
+
+# Introduction
+
+Aquí se documenta cómo se vincularon los comentarios y revisiones de Daniela Milano y Juan Pablo Barriga sobre las ocurrencias reportadas en territorio Argentino.    
+
+Este documento describe el método empleado para restablecer el vínculo uno-a-uno entre la tabla de comentarios y revisiones (table1) y la de la base de datos (table2) de modo de poder ejecutar dichos cambios, asegurando correspondencias precisas y completamente trazables.  
+
+**Principios clave del flujo de trabajo**:  
+
+  - Cada fila de `table1` debe coincidir de manera exacta con una única fila de `table2.`  
+  - Las comparaciones se realizan exhaustivamente contra todas las filas de la otra tabla.  
+
+La correspondencia se efectuó usando el campo catalogNumber, salvo por  12 filas que se revisaron y vincularon manualmente. 
+
+# Load Required Libraries
+
+```{r libraries}
+
+setwd("C:/Users/crist/Documents/GitHub/Atlas_Ictiogeografico/table_joining")
+
+rm(list=ls())
+  
+library(dplyr)
+library(stringr)
+library(ggplot2)
+library(knitr)
+library(tidyr)
+library(kableExtra) 
+```
+
+
+# Data importation    
+
+## Current database  
+```{r data-entry}
+# Load data to start from here 
+
+X.filtered.dedup <- read.csv("../outputs_global_analyses/dataset_filtered_deduplicated_after_manual_corrections_2026-05-29.csv", fileEncoding = "UTF-8", na.strings = c("", "NA"))
+
+```
+
+
+## Revised database received back from Daniela Milano and Juan Barriga
+
+```{r}
+CM.Ar <- read.csv("./argentina/AtlasIctio2025_Datos_DwC_deInteres_norepetidos DM_Sfontinalis.csv", 
+                  na.strings = c("", "NA"))
+```
+
+
+# Preliminary handling  
+```{r}
+## Fix character encoding-related issues. 
+CM.Ar <- CM.Ar %>%  
+  mutate(across(
+    .cols = where(is.character) & 
+            !any_of("correccion") & 
+            !starts_with("."),
+    .fns = ~ iconv(., from = "UTF-8", to = "Windows-1252", sub = "byte")
+  ))
+
+# Merge (coalesce) two columns that were separated only due to a typo.
+
+CM.Ar <- CM.Ar %>%
+  mutate(
+    across(c(bibliographicCitation, bibiographicCitation),
+           ~ str_trim(.) %>% na_if("") %>% na_if("NA")),
+    bibliographicCitation = coalesce(bibliographicCitation, bibiographicCitation)
+  ) %>%  select(-bibiographicCitation)
+
+
+# Remove "NUEVOS" because these enter through another route, and sort by id_CC
+CM.Ar <- CM.Ar %>% filter(id_CC != "NUEVO") %>% 
+   arrange(as.numeric(id_CC))
+```
+
+Exclude rows from `CM.Ar` that do not have changes to apply (no action required)
+
+```{r}
+# Keep only rows with comments in another object
+CM.Ar <- CM.Ar %>% 
+  filter(!is.na(correccion))
+
+```
+
+
+Exclude data from Fundación Óga (institutionCode == "FO"), because these were imported from another, better source.  
+
+```{r}
+
+CM.Ar <- CM.Ar %>% filter(institutionCode != "FO" | is.na(institutionCode)) 
+
+# %>% select(datasetName)
+
+```
+
+
+# Diagnostic check of matching fields
+
+Select only the candidate matching field from both tables.
+Add row IDs so that each row can be tracked unambiguously during checks.
+
+```{r prepare-catalogNumber-matching}
+
+CM.Ar.match <- CM.Ar %>%
+  mutate(CM_row_id = row_number()) %>%
+  select(CM_row_id, catalogNumber, everything())
+
+X.master.match <- X.filtered.dedup %>%
+  mutate(master_row_id = row_number()) 
+```
+
+
+Count how many times each catalogNumber appears in CM.Ar.
+```{r check-catalogNumber-matches}
+CM.catalog_counts <- CM.Ar.match %>%
+  count(catalogNumber, name = "n_CM")
+
+# Count how many times each catalogNumber appears in the master table.
+
+master.catalog_counts <- X.master.match %>%
+  count(catalogNumber, name = "n_master")
+
+# Combine the counts to identify clean, ambiguous, and unmatched cases.
+
+catalog_match_check <- CM.Ar.match %>%
+  select(CM_row_id, catalogNumber) %>%
+  left_join(CM.catalog_counts, by = "catalogNumber") %>%
+  left_join(master.catalog_counts, by = "catalogNumber") %>%
+  mutate(
+    n_master = replace_na(n_master, 0),
+    match_status = case_when(
+      is.na(catalogNumber) ~ "missing catalogNumber",
+      n_CM == 1 & n_master == 1 ~ "one-to-one",
+      n_CM > 1 & n_master >= 1 ~ "duplicated in CM.Ar",
+      n_CM == 1 & n_master > 1 ~ "multiple matches in master",
+      n_master == 0 ~ "no match in master",
+      TRUE ~ "check manually"
+    )
+  )
+```
+
+Summarize how many rows fall into each matching category.
+
+```{r summarize-catalogNumber-matches}
+catalog_match_check %>%
+  count(match_status)
+```
+
+
+# Making the match based on exact catalogNumber match
+
+Keep only the cases where catalogNumber gives exactly one match in CM.Ar and exactly one match in the master database.
+
+```{r create-clean-automatic-matches}
+
+CM.Ar.clean_matches <- CM.Ar.match %>%
+  left_join(
+    catalog_match_check %>%
+      select(CM_row_id, match_status),
+    by = "CM_row_id"
+  ) %>%
+  filter(match_status == "one-to-one") %>%
+  left_join(
+    X.master.match %>%
+      select(prim_key, 
+             master_row_id, 
+             catalogNumber, 
+             occurrenceID_master = occurrenceID,
+             canonicalName_master = canonicalName,
+             locality_master = locality,
+             datasetName_master = datasetName,
+             eventDate_master = eventDate,
+             decimalLatitude_master = decimalLatitude),
+    by = "catalogNumber")
+
+
+```
+
+
+*Note*: Several sanity chechs (not shown) demonstrated adequate matching between the two tables. 
+
+# Manual revision of ambiguous matches
+
+The next step was to extract 12 cases that could not be matched automatically, revise them manually (not shown), and crosscheck with the master database to establish the links by indexing the prim_key. If no valid match is found, leave prim_key  blank.  
+
+These should be reviewed manually.
+```{r extract-ambiguous-or-unmatched-cases}
+CM.Ar.manual_check <- CM.Ar.match %>%
+  left_join(
+    catalog_match_check %>%
+      select(CM_row_id, match_status),
+    by = "CM_row_id"
+  ) %>%
+  filter(match_status != "one-to-one")
+
+
+manual_link <- data.frame(CM_row_id = c(5,11,13,81,83,200,263,274,301,306,321,324),
+           prim_key = c("agui | MAguilar.Lit.Review.1424",
+                              "gbif | urn:catalog:CAS:ICH:63844",
+                              "gbif | FFPAT086-11",
+                              "inat | https://www.inaturalist.org/observations/147830684",
+                              "gbif | KJ499172",
+                              NA,
+                              "gbif | KJ499176",
+                              "gbif | FFPAT042-11",
+                              NA,
+                              NA,
+                              NA,
+                              NA))
+
+CM.Ar.manual_check <- CM.Ar.manual_check %>% 
+  left_join(manual_link, by = "CM_row_id") %>% relocate(prim_key)
+```
+
+# Final table matching  
+Finally, combine both the automatic assignments and manual assignments, and consolidate the table of corrections 
+to be applied to the master database in the main  code. 
+
+```{r}
+CM.Ar.link  <- CM.Ar.clean_matches %>% bind_rows(CM.Ar.manual_check) %>% select(CM_row_id, prim_key)
+
+Cambios_a_implementar_Argentina <- CM.Ar %>% mutate(CM_row_id = row_number()) %>% 
+          select(CM_row_id, correccion, RemoveFromMaster, starts_with(".")) %>% 
+          left_join(CM.Ar.link, by = "CM_row_id") %>% relocate(prim_key, .after = CM_row_id)
+
+```
+
+
+```{r, echo=FALSE, eval=TRUE}
+
+head(Cambios_a_implementar_Argentina)[,1:6] %>% 
+kable(caption = "Sample of the finished table of corrections. The second column corresponds to the primary key of the master database.")
+
+```
+
+Save correction table to hard drive
+```{r}
+write.csv(Cambios_a_implementar_Argentina,  "Cambios_a_implementar_Argentina_2026-05-30.csv", fileEncoding = "UTF-8", na = "", row.names = F)
+
+```
+
+
+# Session Information
+
+```{r session-info}
+sessionInfo()
+```
+
