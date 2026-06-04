@@ -134,8 +134,8 @@ This repository is intended to be shared under:
 A formal citation will be added once the atlas, report, or associated dataset is finalized, versioned and published as a data paper. For now, a provisional citation is as follows:
 
 *Spanish*
-Correa, Cristian y Maryse Boisjoly (2026) Atlas ictiogeográfico de cuencas patagónicas chilenas y transfronterizas: consolidación de bases de datos de ocurrencias de peces. <https://github.com/ojoaustral/chilean-patagonia-freshwater-and-diadromous-fish-atlas>
+Correa, Cristian y Maryse Boisjoly (2026) Atlas ictiogeográfico de cuencas patagónicas chilenas y transfronterizas: consolidación de bases de datos de ocurrencias de peces. Programa Austral Patagonia, Universidad Austral de Chile. <https://github.com/ojoaustral/chilean-patagonia-freshwater-and-diadromous-fish-atlas>
 
 *English*
-Correa, Cristian and Maryse Boisjoly (2026) Ichthyogeographic atlas of Chilean and transboundary Patagonian basins: consolidation of fish occurrence databases. <https://github.com/ojoaustral/chilean-patagonia-freshwater-and-diadromous-fish-atlas>
+Correa, Cristian and Maryse Boisjoly (2026) Ichthyogeographic atlas of Chilean and transboundary Patagonian basins: consolidation of fish occurrence databases. Programa Austral Patagonia, Universidad Austral de Chile. <https://github.com/ojoaustral/chilean-patagonia-freshwater-and-diadromous-fish-atlas>
 
