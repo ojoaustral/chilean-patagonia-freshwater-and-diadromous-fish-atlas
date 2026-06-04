@@ -1,4 +1,4 @@
-"scientificName","scientificName_Old","canonicalName","IncludePewProAP","rank","kingdom","phylum","order","family","genus","species"
+"scientificName","scientificName_Old","canonicalName","IncludePewProAP","taxonRank","kingdom","phylum","order","family","genus","species"
 "Tachyeres patachonicus AVES STEEMER DUCK ","Micropterus patachonicus King, 1831","","0","SPECIES","Animalia","Chordata","","","",""
 NA,"",NA,"0",NA,"","","","","",""
 "Bassanago albescens (Barnard, 1923)","Bassanago albescens (Barnard, 1923)","Bassanago albescens","0","SPECIES","Animalia","Chordata","Anguilliformes","Congridae","Bassanago","Bassanago albescens"
@@ -476,7 +476,7 @@ NA,"",NA,"0",NA,"","","","","",""
 "Salvelinus fontinalis (Mitchill, 1814)","Salvelinus fontinalis (Mitchill, 1814)","Salvelinus fontinalis","1","SPECIES","Animalia","Chordata","Salmoniformes","Salmonidae","Salvelinus","Salvelinus fontinalis"
 "Salvelinus namaycush (Walbaum, 1792)","Salvelinus namaycush","Salvelinus namaycush","1","SPECIES","Animalia","Chordata","Salmoniformes","Salmonidae","Salvelinus","Salvelinus namaycush"
 "Salvelinus namaycush (Walbaum, 1792)","Salvelinus namaycush (Walbaum, 1792)","Salvelinus namaycush","1","SPECIES","Animalia","Chordata","Salmoniformes","Salmonidae","Salvelinus","Salvelinus namaycush"
-"Oncorhynchus","Oncorhynchus","Oncorhynchus","1","SPECIES","Animalia","Chordata","Salmoniformes","Salmonidae",NA,NA
+"Oncorhynchus","Oncorhynchus","Oncorhynchus","1","GENUS","Animalia","Chordata","Salmoniformes","Salmonidae",NA,NA
 "Salmonidae","Salmonidae","Salmonidae","1","FAMILY","Animalia","Chordata","Salmoniformes","Salmonidae",NA,NA
 "Salmonidae","Salmoninae","Salmonidae","1",NA,"Animalia","Chordata","Salmoniformes","Salmonidae",NA,NA
 "Salmoniformes","Salmoniformes","Salmoniformes","1","ORDER","Animalia","Chordata","Salmoniformes",NA,NA,NA

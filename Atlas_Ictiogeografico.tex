@@ -128,9 +128,9 @@
 \begin{document}
 
 
-\title[Atlas ictiogeográfico de la Patagonia]{Atlas ictiogeográfico de
-cuencas patagónicas chilenas y transfronterizas: consolidación de bases
-de datos de ocurrencias de peces}
+\title[Atlas ictiogeográfico de la Patagonia Occidental]{Atlas
+ictiogeográfico de cuencas patagónicas chilenas y transfronterizas:
+consolidación de bases de datos de ocurrencias de peces}
 
 %%=============================================================%%
 %% Prefix	-> \pfx{Dr}
@@ -190,109 +190,15 @@ biology}
 \begin{Shaded}
 \begin{Highlighting}[]
 \FunctionTok{library}\NormalTok{(}\StringTok{"tidyverse"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Warning: package 'tidyverse' was built under R version 4.4.3
-\end{verbatim}
-
-\begin{verbatim}
-## Warning: package 'ggplot2' was built under R version 4.4.3
-\end{verbatim}
-
-\begin{verbatim}
-## Warning: package 'tibble' was built under R version 4.4.3
-\end{verbatim}
-
-\begin{verbatim}
-## Warning: package 'tidyr' was built under R version 4.4.3
-\end{verbatim}
-
-\begin{verbatim}
-## Warning: package 'readr' was built under R version 4.4.3
-\end{verbatim}
-
-\begin{verbatim}
-## Warning: package 'purrr' was built under R version 4.4.3
-\end{verbatim}
-
-\begin{verbatim}
-## Warning: package 'dplyr' was built under R version 4.4.3
-\end{verbatim}
-
-\begin{verbatim}
-## Warning: package 'stringr' was built under R version 4.4.3
-\end{verbatim}
-
-\begin{verbatim}
-## Warning: package 'forcats' was built under R version 4.4.3
-\end{verbatim}
-
-\begin{verbatim}
-## Warning: package 'lubridate' was built under R version 4.4.3
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
 \FunctionTok{library}\NormalTok{(}\StringTok{"lubridate"}\NormalTok{)}
 \FunctionTok{library}\NormalTok{(}\StringTok{"kableExtra"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Warning: package 'kableExtra' was built under R version 4.4.3
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
 \FunctionTok{library}\NormalTok{(}\StringTok{"ggmap"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Warning: package 'ggmap' was built under R version 4.4.3
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
 \FunctionTok{library}\NormalTok{(}\StringTok{"sf"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Warning: package 'sf' was built under R version 4.4.3
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
 \FunctionTok{library}\NormalTok{(}\StringTok{"sp"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Warning: package 'sp' was built under R version 4.4.3
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
 \FunctionTok{library}\NormalTok{(}\StringTok{"rgbif"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Warning: package 'rgbif' was built under R version 4.4.3
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
 \FunctionTok{library}\NormalTok{(}\StringTok{"dbscan"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
-
-\begin{verbatim}
-## Warning: package 'dbscan' was built under R version 4.4.3
-\end{verbatim}
 
 \section{Introduction}\label{sec1}
 
@@ -668,15 +574,16 @@ cuencas con vertiente Pacífica que desembocan al sur de la cuenca del
 Río Maullín. Esto incluye desde Puerto Montt hacia el sur, incluyendo
 territorio Argentino de cuencas pacíficas, y mares interiores.
 
-Se trabajó con un polígono originalmente proporcionado por Mary Aguilar,
-y posteriormente simplificado y generalizado a mano para incluir
-territorio marítimo donde habitan especies diádromas. Además, para
-mejorar la cobertura del área de estudio en la Patagonia chilena, se
-agregaron las cuencas chilenas que desembocan hacía el Atlántico. Estas
-cuencas se encuentran todas en la región de Magallanes. Este polígono
-fue simplificado nuevamente en QGIS (función \emph{simplify}, with
-tolerance set to 0.000575) para reducir su número puntos a 9950, y poder
-ser usado en el motor de búsqueda de GBIF cuyo máximo es 10000 puntos
+Se trabajó con un polígono originalmente proporcionado por Mary
+González-Aguilar, y posteriormente simplificado y generalizado a mano
+para incluir territorio marítimo donde habitan especies diádromas.
+Además, para mejorar la cobertura del área de estudio en la Patagonia
+chilena, se agregaron las cuencas chilenas que desembocan hacía el
+Atlántico. Estas cuencas se encuentran todas en la región de Magallanes.
+Este polígono fue simplificado nuevamente en QGIS (función
+\emph{simplify}, with tolerance set to 0.000575) para reducir su número
+puntos a 9950, y poder ser usado en el motor de búsqueda de GBIF cuyo
+máximo es 10000 puntos
 (\texttt{Study\ Area\ Polygon\ Pacific\ and\ Binational\_Simp.shp}).
 
 \begin{Shaded}
@@ -1334,7 +1241,7 @@ localidades, etc.) y se corrigieron.
 \end{Shaded}
 
 \subsection{Revisión de literatura M.
-Aguilar}\label{revisiuxf3n-de-literatura-m.-aguilar}
+González-Aguilar}\label{revisiuxf3n-de-literatura-m.-gonzuxe1lez-aguilar}
 
 \emph{Nombre corto del conjunto de datos}: Review by M. González-Aguilar
 (2023)\\
@@ -1345,7 +1252,7 @@ Austral Patagonia (ProAP) de The Pew Charitable Trusts. Coyhaique.
 \citep{Aguilar2023}\\
 \emph{Archivo}: \texttt{BD\ referencias\ (2022-2023).xlsx}
 
-Esta base de datos fue elaborada por Marilyn Aguilar González en el
+Esta base de datos fue elaborada por Marilyn González-Aguilar en el
 marco del Proyecto \emph{Priorización de Cuencas para la Conservación en
 Patagonia}''*, liderado por Brian Reid y Anna Astorga del CIEP, y
 financiado por el Programa Austral Patagonia (ProAP) de la Universidad
@@ -3602,11 +3509,9 @@ antes de proceder con el filtrado, etc.
 \end{Shaded}
 
 El conjunto de datos fue bajado con éxito y puede ser citado así ``GBIF
-Occurrence Download
-(\url{https://doi.org/10.15468/dl.wwr886}){[}\url{https://doi.org/10.15468/dl.wwr886}{]}
-Accessed from R via rgbif
-(\url{https://github.com/ropensci/rgbif}){[}\url{https://github.com/ropensci/rgbif}{]}
-on 2026-04-20''.
+Occurrence Download \url{https://doi.org/10.15468/dl.wwr886} Accessed
+from R via rgbif \url{https://github.com/ropensci/rgbif} on
+2026-04-20''.
 
 A continuación la lectura del conjunto de datos.
 
@@ -4192,8 +4097,10 @@ Naturales ``A. Scasso''
 \subsubsection{Lectura de datos}\label{lectura-de-datos-6}
 
 Como se explica en la introducción de este conjunto de datos, los datos
-se obtuvieron de dos fuentes: \#\#\#\# 1. Bajándolos de DataBasin - Los
-Peces de Argentina (DBLPA)
+se obtuvieron de dos fuentes:
+
+\paragraph{1. Bajándolos de DataBasin - Los Peces de Argentina
+(DBLPA)}\label{bajuxe1ndolos-de-databasin---los-peces-de-argentina-dblpa}
 
 Un análisis preliminar demuestra que los únicos datos originales de este
 set de datos son los aportados por Fundación Óga, y estos fueron
@@ -4572,7 +4479,6 @@ tabla}\label{combinar-los-conjuntos-de-datos-en-una-gran-tabla}
 \end{Highlighting}
 \end{Shaded}
 
-\newpage
 \begingroup\fontsize{8}{10}\selectfont
 
 \begin{longtable}[t]{>{\raggedright\arraybackslash}p{7em}>{\raggedright\arraybackslash}p{30em}}
@@ -4807,7 +4713,7 @@ Luego, se actualizó la taxonomía.
     \AttributeTok{scientificName\_new =}\NormalTok{ scientificName, }\CommentTok{\# interim name}
 \NormalTok{    canonicalName,}
 \NormalTok{    IncludePewProAP,}
-\NormalTok{    rank,}
+    \AttributeTok{taxonRank =}\NormalTok{ rank,}
 \NormalTok{    kingdom,}
 \NormalTok{    phylum,}
 \NormalTok{    order,}
@@ -4820,7 +4726,7 @@ Luego, se actualizó la taxonomía.
 \CommentTok{\# Remove taxonomy columns to fully replace/update}
 \NormalTok{X }\OtherTok{\textless{}{-}}\NormalTok{ X }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\FunctionTok{any\_of}\NormalTok{(}\FunctionTok{c}\NormalTok{(}
       \StringTok{"canonicalName"}\NormalTok{,}
-      \StringTok{"rank"}\NormalTok{,}
+      \StringTok{"taxonRank"}\NormalTok{,}
       \StringTok{"kingdom"}\NormalTok{,}
       \StringTok{"phylum"}\NormalTok{,}
       \StringTok{"order"}\NormalTok{,}
@@ -4838,7 +4744,7 @@ Luego, se actualizó la taxonomía.
 
 
 \CommentTok{\# taxcheck \textless{}{-} X \%\textgreater{}\%}
-\CommentTok{\#   select(scientificName\_Old, scientificName, canonicalName, rank,}
+\CommentTok{\#   select(scientificName\_Old, scientificName, canonicalName, taxonRank,}
 \CommentTok{\#     kingdom, phylum, order, family, genus, species) \%\textgreater{}\%}
 \CommentTok{\#   distinct() \%\textgreater{}\%}
 \CommentTok{\#   arrange(scientificName)}
@@ -4968,7 +4874,7 @@ duplicados}\label{remociuxf3n-automuxe1tica-de-duplicados}
 Se diseñó un algoritmo para etiquetar y/o remover ocurrencias
 duplicadas. Primero se creó una nueva variable,
 \texttt{spatialClust\_CC}, identificando conjuntos de ocurrencias
-ubicadas cerca, a menos de un umbral de distancia de 30 metros (para
+ubicadas cerca, a menos de un umbral de distancia de 10 metros (para
 lidiar con diferencias por aproximación, proyecciones espaciales, etc; y
 el valor del umbral puede ser modificado).
 
@@ -5010,13 +4916,14 @@ identificaron por compartir los mismos valores de
 \end{Shaded}
 
 \begin{verbatim}
-## Process took: 1.406383
+## Process took: 1.432175
 \end{verbatim}
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \FunctionTok{barplot}\NormalTok{(}\FunctionTok{sort}\NormalTok{(}\FunctionTok{table}\NormalTok{(X.filtered}\SpecialCharTok{$}\NormalTok{spatialClust\_CC), }\AttributeTok{decreasing =}\NormalTok{ T),}
-    \AttributeTok{xlab =} \StringTok{"cluster"}\NormalTok{, }\AttributeTok{ylab =} \StringTok{"number of rows belonging to a cluster"}\NormalTok{)}
+    \AttributeTok{xlab =} \StringTok{"cluster"}\NormalTok{, }\AttributeTok{ylab =} \StringTok{"number of rows belonging to a cluster"}\NormalTok{,}
+    \AttributeTok{las =} \DecValTok{2}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -5095,15 +5002,15 @@ es muy importante (ver definición).
 \end{Highlighting}
 \end{Shaded}
 
-En resúmen, se pasó de 108957 ocurrencias en la tabla con todos los
+En resumen, se pasó de 108957 ocurrencias en la tabla con todos los
 conjuntos de datos recién combinados, a 13833 luego del filtro
 taxonómico, a 7568 luego de la exclusión programática de duplicados. A
 continuación, se incorporan cambios detectados mediante la inspección
 cautelosa de esta última versión, incluyendo la corrección de errores y
 exclusión de duplicados no detectados mediante el algoritmo antes
-empleado. Por ejemplo, muchos papers no reportan coordenadas precisas, y
-según el investigador que digitalizó los datos, cada vez las coordenadas
-ingresadas son diferentes.
+empleado. Por ejemplo, muchos estudios no reportan coordenadas precisas,
+y según el investigador que digitalizó los datos, cada vez las
+coordenadas ingresadas son diferentes.
 
 \subsubsection{Revisiónes manuales}\label{revisiuxf3nes-manuales}
 
@@ -6123,13 +6030,13 @@ serán (parcialmente) reimportadas más abajo.
 
 \textbf{Ortiz-Sandoval et al.~2017:}\\
 Esta referencia fue digitalizada previamente por dos instancias: Mary
-Aguilar y SUBPESCA, pero se encontraron numerosos errores por lo que
-optamos por excluir estos registros. Además, los registros de peces
-nativos reportados en Ortiz-Sandoval \emph{et al.} (2017) también se
-encuentran en la base de datos de EULA incluido en el conjunto de datos
-MMA2017. Por lo tanto, se decidió redigitalizar únicamente los registros
-de especies introducidas, y mantener los registros de especies nativas
-vía la base de datos MMA2017.
+González-Aguilar y SUBPESCA, pero se encontraron numerosos errores por
+lo que optamos por excluir estos registros. Además, los registros de
+peces nativos reportados en Ortiz-Sandoval \emph{et al.} (2017) también
+se encuentran en la base de datos de EULA incluido en el conjunto de
+datos MMA2017. Por lo tanto, se decidió redigitalizar únicamente los
+registros de especies introducidas, y mantener los registros de especies
+nativas vía la base de datos MMA2017.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -6177,7 +6084,8 @@ que serán (parcialmente) reimportadas más abajo.
     \AttributeTok{fileEncoding =} \StringTok{"UTF{-}8"}\NormalTok{, }\AttributeTok{na =} \FunctionTok{c}\NormalTok{(}\StringTok{""}\NormalTok{, }\ConstantTok{NA}\NormalTok{), }\AttributeTok{colClasses =} \StringTok{"character"}\NormalTok{)}
 
 \NormalTok{MB }\OtherTok{\textless{}{-}}\NormalTok{ MB }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{decimalLatitude =} \FunctionTok{as.numeric}\NormalTok{(decimalLatitude), }\AttributeTok{decimalLongitude =} \FunctionTok{as.numeric}\NormalTok{(decimalLongitude))}
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{decimalLatitude =} \FunctionTok{as.numeric}\NormalTok{(decimalLatitude), }\AttributeTok{decimalLongitude =} \FunctionTok{as.numeric}\NormalTok{(decimalLongitude),}
+        \AttributeTok{taxonRank =}\NormalTok{ rank, }\AttributeTok{.keep =} \StringTok{"unused"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -6274,7 +6182,7 @@ columnas retenidas.
 \end{Shaded}
 
 \begin{verbatim}
-## Columns with <10% coverage: 191
+## Columns with <10% coverage: 190
 \end{verbatim}
 
 \begin{Shaded}
@@ -6317,7 +6225,7 @@ kingdom & 6917 & 6917 & 100.0 & 0\\
 \cellcolor{gray!10}{phylum} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0}\\
 order & 6917 & 6917 & 100.0 & 0\\
 \cellcolor{gray!10}{family} & \cellcolor{gray!10}{6916} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{1}\\
-rank & 6911 & 6917 & 99.9 & 6\\
+taxonRank & 6911 & 6917 & 99.9 & 6\\
 \cellcolor{gray!10}{genus} & \cellcolor{gray!10}{6891} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{99.6} & \cellcolor{gray!10}{26}\\
 \addlinespace
 species & 6852 & 6917 & 99.1 & 65\\
@@ -6390,139 +6298,138 @@ disposition & 582 & 6917 & 8.4 & 6335\\
 typeStatus & 558 & 6917 & 8.1 & 6359\\
 \cellcolor{gray!10}{higherGeography} & \cellcolor{gray!10}{558} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.1} & \cellcolor{gray!10}{6359}\\
 fieldNumber & 558 & 6917 & 8.1 & 6359\\
-\cellcolor{gray!10}{taxonRank} & \cellcolor{gray!10}{557} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.1} & \cellcolor{gray!10}{6360}\\
+\cellcolor{gray!10}{language} & \cellcolor{gray!10}{557} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.1} & \cellcolor{gray!10}{6360}\\
 \addlinespace
-language & 557 & 6917 & 8.1 & 6360\\
-\cellcolor{gray!10}{modified} & \cellcolor{gray!10}{557} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.1} & \cellcolor{gray!10}{6360}\\
-preparations & 557 & 6917 & 8.1 & 6360\\
-\cellcolor{gray!10}{identifiedBy} & \cellcolor{gray!10}{556} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6361}\\
-georeferencedBy & 556 & 6917 & 8.0 & 6361\\
+modified & 557 & 6917 & 8.1 & 6360\\
+\cellcolor{gray!10}{preparations} & \cellcolor{gray!10}{557} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.1} & \cellcolor{gray!10}{6360}\\
+identifiedBy & 556 & 6917 & 8.0 & 6361\\
+\cellcolor{gray!10}{georeferencedBy} & \cellcolor{gray!10}{556} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6361}\\
+georeferenceRemarks & 556 & 6917 & 8.0 & 6361\\
 \addlinespace
-\cellcolor{gray!10}{georeferenceRemarks} & \cellcolor{gray!10}{556} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6361}\\
-verbatimScientificName & 555 & 6917 & 8.0 & 6362\\
-\cellcolor{gray!10}{recordNumber} & \cellcolor{gray!10}{554} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6363}\\
-higherClassification & 554 & 6917 & 8.0 & 6363\\
-\cellcolor{gray!10}{dateIdentified} & \cellcolor{gray!10}{554} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6363}\\
+\cellcolor{gray!10}{verbatimScientificName} & \cellcolor{gray!10}{555} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6362}\\
+recordNumber & 554 & 6917 & 8.0 & 6363\\
+\cellcolor{gray!10}{higherClassification} & \cellcolor{gray!10}{554} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6363}\\
+dateIdentified & 554 & 6917 & 8.0 & 6363\\
+\cellcolor{gray!10}{organismQuantityType} & \cellcolor{gray!10}{553} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6364}\\
 \addlinespace
-organismQuantityType & 553 & 6917 & 8.0 & 6364\\
-\cellcolor{gray!10}{ownerInstitutionCode} & \cellcolor{gray!10}{553} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6364}\\
-locationID & 553 & 6917 & 8.0 & 6364\\
-\cellcolor{gray!10}{familyKey} & \cellcolor{gray!10}{553} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6364}\\
-occurrenceStatus & 552 & 6917 & 8.0 & 6365\\
+ownerInstitutionCode & 553 & 6917 & 8.0 & 6364\\
+\cellcolor{gray!10}{locationID} & \cellcolor{gray!10}{553} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6364}\\
+familyKey & 553 & 6917 & 8.0 & 6364\\
+\cellcolor{gray!10}{occurrenceStatus} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+verbatimLocality & 552 & 6917 & 8.0 & 6365\\
 \addlinespace
-\cellcolor{gray!10}{verbatimLocality} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-eventID & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{georeferenceVerificationStatus} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-nomenclaturalCode & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{georeferencedDate} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+\cellcolor{gray!10}{eventID} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+georeferenceVerificationStatus & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{nomenclaturalCode} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+georeferencedDate & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{georeferenceProtocol} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
 \addlinespace
-georeferenceProtocol & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{georeferenceSources} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-dynamicProperties & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{island} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-verbatimDepth & 552 & 6917 & 8.0 & 6365\\
+georeferenceSources & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{dynamicProperties} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+island & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{verbatimDepth} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+footprintWKT & 552 & 6917 & 8.0 & 6365\\
 \addlinespace
-\cellcolor{gray!10}{footprintWKT} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-islandGroup & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{identificationRemarks} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-previousIdentifications & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{infraspecificEpithet} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+\cellcolor{gray!10}{islandGroup} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+identificationRemarks & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{previousIdentifications} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+infraspecificEpithet & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{materialSampleID} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
 \addlinespace
-materialSampleID & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{scientificNameID} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-originalNameUsage & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{associatedSequences} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-identificationQualifier & 552 & 6917 & 8.0 & 6365\\
+scientificNameID & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{originalNameUsage} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+associatedSequences & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{identificationQualifier} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+gbifID & 552 & 6917 & 8.0 & 6365\\
 \addlinespace
-\cellcolor{gray!10}{gbifID} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-publisher & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{type} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-informationWithheld & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{dataGeneralizations} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+\cellcolor{gray!10}{publisher} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+type & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{informationWithheld} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+dataGeneralizations & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{recordedByID} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
 \addlinespace
-recordedByID & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{vitality} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-organismScope & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{organismRemarks} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-verbatimLabel & 552 & 6917 & 8.0 & 6365\\
+vitality & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{organismScope} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+organismRemarks & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{verbatimLabel} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+parentEventID & 552 & 6917 & 8.0 & 6365\\
 \addlinespace
-\cellcolor{gray!10}{parentEventID} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-higherGeographyID & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{identificationID} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-verbatimIdentification & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{identifiedByID} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+\cellcolor{gray!10}{higherGeographyID} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+identificationID & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{verbatimIdentification} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+identifiedByID & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{acceptedNameUsageID} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
 \addlinespace
-acceptedNameUsageID & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{taxonConceptID} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-acceptedNameUsage & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{nameAccordingTo} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-genericName & 552 & 6917 & 8.0 & 6365\\
+taxonConceptID & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{acceptedNameUsage} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+nameAccordingTo & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{genericName} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+taxonomicStatus & 552 & 6917 & 8.0 & 6365\\
 \addlinespace
-\cellcolor{gray!10}{taxonomicStatus} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-taxonRemarks & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{publishingCountry} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-lastInterpreted & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{issue} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+\cellcolor{gray!10}{taxonRemarks} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+publishingCountry & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{lastInterpreted} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+issue & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{nonTaxonomicIssue} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
 \addlinespace
-nonTaxonomicIssue & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{mediaType} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-hasCoordinate & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{hasGeospatialIssues} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-taxonKey & 552 & 6917 & 8.0 & 6365\\
+mediaType & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{hasCoordinate} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+hasGeospatialIssues & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{taxonKey} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+acceptedTaxonKey & 552 & 6917 & 8.0 & 6365\\
 \addlinespace
-\cellcolor{gray!10}{acceptedTaxonKey} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-kingdomKey & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{phylumKey} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-orderKey & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{acceptedScientificName} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+\cellcolor{gray!10}{kingdomKey} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+phylumKey & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{orderKey} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+acceptedScientificName & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{typifiedName} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
 \addlinespace
-typifiedName & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{protocol} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-lastParsed & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{lastCrawled} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-repatriated & 552 & 6917 & 8.0 & 6365\\
+protocol & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{lastParsed} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+lastCrawled & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{repatriated} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+projectId & 552 & 6917 & 8.0 & 6365\\
 \addlinespace
-\cellcolor{gray!10}{projectId} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-isSequenced & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{gbifRegion} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-publishedByGbifRegion & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{level0Gid} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+\cellcolor{gray!10}{isSequenced} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+gbifRegion & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{publishedByGbifRegion} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+level0Gid & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{level0Name} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
 \addlinespace
-level0Name & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{level1Gid} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-level1Name & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{level2Gid} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-level2Name & 552 & 6917 & 8.0 & 6365\\
+level1Gid & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{level1Name} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+level2Gid & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{level2Name} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+level3Gid & 552 & 6917 & 8.0 & 6365\\
 \addlinespace
-\cellcolor{gray!10}{level3Gid} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-level3Name & 552 & 6917 & 8.0 & 6365\\
-\cellcolor{gray!10}{iucnRedListCategory} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
-genusKey & 544 & 6917 & 7.9 & 6373\\
-\cellcolor{gray!10}{speciesKey} & \cellcolor{gray!10}{540} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{7.8} & \cellcolor{gray!10}{6377}\\
+\cellcolor{gray!10}{level3Name} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365}\\
+iucnRedListCategory & 552 & 6917 & 8.0 & 6365\\
+\cellcolor{gray!10}{genusKey} & \cellcolor{gray!10}{544} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{7.9} & \cellcolor{gray!10}{6373}\\
+speciesKey & 540 & 6917 & 7.8 & 6377\\
+\cellcolor{gray!10}{day} & \cellcolor{gray!10}{515} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{7.4} & \cellcolor{gray!10}{6402}\\
 \addlinespace
-day & 515 & 6917 & 7.4 & 6402\\
-\cellcolor{gray!10}{startDayOfYear} & \cellcolor{gray!10}{426} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{6.2} & \cellcolor{gray!10}{6491}\\
-endDayOfYear & 426 & 6917 & 6.2 & 6491\\
-\cellcolor{gray!10}{geodeticDatum} & \cellcolor{gray!10}{307} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{4.4} & \cellcolor{gray!10}{6610}\\
-associatedMedia & 300 & 6917 & 4.3 & 6617\\
+startDayOfYear & 426 & 6917 & 6.2 & 6491\\
+\cellcolor{gray!10}{endDayOfYear} & \cellcolor{gray!10}{426} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{6.2} & \cellcolor{gray!10}{6491}\\
+geodeticDatum & 307 & 6917 & 4.4 & 6610\\
+\cellcolor{gray!10}{associatedMedia} & \cellcolor{gray!10}{300} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{4.3} & \cellcolor{gray!10}{6617}\\
+verbatimElevation & 287 & 6917 & 4.1 & 6630\\
 \addlinespace
-\cellcolor{gray!10}{verbatimElevation} & \cellcolor{gray!10}{287} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{4.1} & \cellcolor{gray!10}{6630}\\
-sex & 193 & 6917 & 2.8 & 6724\\
-\cellcolor{gray!10}{depth} & \cellcolor{gray!10}{117} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{1.7} & \cellcolor{gray!10}{6800}\\
-organismQuantity & 110 & 6917 & 1.6 & 6807\\
-\cellcolor{gray!10}{depthAccuracy} & \cellcolor{gray!10}{110} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{1.6} & \cellcolor{gray!10}{6807}\\
+\cellcolor{gray!10}{sex} & \cellcolor{gray!10}{193} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{2.8} & \cellcolor{gray!10}{6724}\\
+depth & 117 & 6917 & 1.7 & 6800\\
+\cellcolor{gray!10}{organismQuantity} & \cellcolor{gray!10}{110} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{1.6} & \cellcolor{gray!10}{6807}\\
+depthAccuracy & 110 & 6917 & 1.6 & 6807\\
+\cellcolor{gray!10}{uuid} & \cellcolor{gray!10}{105} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{1.5} & \cellcolor{gray!10}{6812}\\
 \addlinespace
-uuid & 105 & 6917 & 1.5 & 6812\\
-\cellcolor{gray!10}{Identification} & \cellcolor{gray!10}{105} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{1.5} & \cellcolor{gray!10}{6812}\\
-elevation & 101 & 6917 & 1.5 & 6816\\
-\cellcolor{gray!10}{elevationAccuracy} & \cellcolor{gray!10}{101} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{1.5} & \cellcolor{gray!10}{6816}\\
-sampleSizeValue & 71 & 6917 & 1.0 & 6846\\
+Identification & 105 & 6917 & 1.5 & 6812\\
+\cellcolor{gray!10}{elevation} & \cellcolor{gray!10}{101} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{1.5} & \cellcolor{gray!10}{6816}\\
+elevationAccuracy & 101 & 6917 & 1.5 & 6816\\
+\cellcolor{gray!10}{sampleSizeValue} & \cellcolor{gray!10}{71} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{1.0} & \cellcolor{gray!10}{6846}\\
+coordinatePrecision & 9 & 6917 & 0.1 & 6908\\
 \addlinespace
-\cellcolor{gray!10}{coordinatePrecision} & \cellcolor{gray!10}{9} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{0.1} & \cellcolor{gray!10}{6908}\\
-scientificNameAuthorship & 4 & 6917 & 0.1 & 6913\\
-\cellcolor{gray!10}{organismID} & \cellcolor{gray!10}{2} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{6915}\\
-maximumDepthInMeters & 1 & 6917 & 0.0 & 6916\\
-\cellcolor{gray!10}{minimumDepthInMeters} & \cellcolor{gray!10}{1} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{6916}\\
+\cellcolor{gray!10}{scientificNameAuthorship} & \cellcolor{gray!10}{4} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{0.1} & \cellcolor{gray!10}{6913}\\
+organismID & 2 & 6917 & 0.0 & 6915\\
+\cellcolor{gray!10}{maximumDepthInMeters} & \cellcolor{gray!10}{1} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{6916}\\
+minimumDepthInMeters & 1 & 6917 & 0.0 & 6916\\
 \bottomrule
 \end{longtable}
 \endgroup{}
@@ -6610,22 +6517,33 @@ pendientes}\label{resultados-preliminares-y-tareas-pendientes}
 
 El \emph{Atlas Ictiogeográfico de la Patagonia Occidental} reunió un
 total de 6909 ocurrencias de peces dulceacuícolas, estuarinos y
-diádromos, registradas en el período 1833, 2026. La información se
-consolidó a partir de doce conjuntos de datos incluyendo datos empíricos
-de primera mano, datos asociados a colecciones de museos del mundo,
-revisiones de literatura científica y gris, reportes de resultados de
-pesca de investigación, y reportes de ocurrencias basados en ciencia
-ciudadana. Naturalmente, varios de estos conjuntos de datos se solaparon
-entre sí por lo que se identificaron y removieron miles de registros
-duplicados (6247 (45\%)).
+diádromos, registradas en el período 1833, 2026. No se incluyeron
+registros de peces en cautiverio o siendo liberados, sino solo aquellos
+registrados en libertad en la naturaleza. La información se consolidó a
+partir de doce conjuntos de datos incluyendo datos empíricos de primera
+mano, datos asociados a colecciones de museos del mundo, revisiones de
+literatura científica y gris, reportes de resultados de pesca de
+investigación, y reportes de ocurrencias basados en ciencia ciudadana.
+Naturalmente, varios de estos conjuntos de datos se solaparon entre sí
+por lo que se identificaron y removieron miles de registros duplicados
+(6247 (45\%)).
 
 \subsection{Taxa encontrados}\label{taxa-encontrados}
 
-Se encontraron 51 taxa pertenecientes a 12 familias de peces
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{species.list }\OtherTok{\textless{}{-}}\NormalTok{ X.filtered.dedup.revised }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{filter}\NormalTok{(taxonRank }\SpecialCharTok{==} \StringTok{"SPECIES"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{count}\NormalTok{(family, scientificName, canonicalName) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{arrange}\NormalTok{(}\FunctionTok{desc}\NormalTok{(n))}
+\end{Highlighting}
+\end{Shaded}
+
+Se encontraron 37 taxa pertenecientes a 12 familias de peces
 dulceacuícolas, estuarinos y diádromos. Las especies más frecuentemente
 reportadas fueron la trucha marrón \emph{Salmo trutta} y la trucha
 arcoíris \emph{Oncorhynchus mykiss}, ambas especies invasivas (Figura
-\ref{fig:freqplot}). Entre los peces nativos los más comunes fueron el
+\ref{fig:freqplotspecies}). Los peces nativos los más comunes fueron el
 puye grande \emph{G. platei} e el puye \emph{Galaxias maculatus}. La
 mayoría de las ocurrencias en los conjuntos de datos fueron
 identificados a nivel de especie, aunque algunos a nivel de género,
@@ -6634,23 +6552,24 @@ fue estandarizada de acuerdo al \emph{GBIF Backbone Taxonomy}.
 
 \begin{figure}
 
-{\centering \includegraphics{Atlas_Ictiogeografico_files/figure-latex/freqplot-1} 
+{\centering \includegraphics{Atlas_Ictiogeografico_files/figure-latex/freqplotspecies-1} 
 
 }
 
-\caption{Distribución de frecuencia de ocurrencias por taxa (después de excluir duplicados programaticamente).}\label{fig:freqplot}
+\caption{Distribución de frecuencia de ocurrencias por especie en la base de datos consolidada y revisada.}\label{fig:freqplotspecies}
 \end{figure}
 
-\subsection{HERE Contribución de los distintos conjuntos de
-datos}\label{here-contribuciuxf3n-de-los-distintos-conjuntos-de-datos}
+\begin{figure}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{tmp }\OtherTok{\textless{}{-}}\NormalTok{ X.filtered.dedup.revised }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{select}\NormalTok{(datasetName, data\_source) }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{distinct}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
+{\centering \includegraphics{Atlas_Ictiogeografico_files/figure-latex/freqplottaxa-1} 
+
+}
+
+\caption{Distribución de frecuencia de ocurrencias por taxa en la base de datos consolidada y revisada.}\label{fig:freqplottaxa}
+\end{figure}
+
+\subsection{Contribución de los distintos conjuntos de
+datos}\label{contribuciuxf3n-de-los-distintos-conjuntos-de-datos}
 
 En cuanto al aporte de los distintos conjuntos de datos, el mayor número
 de ocurrencias fue aportado por el set de datos de SUBPESCA, incluso
@@ -6708,7 +6627,14 @@ alta prevalencia y amplia distribución de la familia Salmonidae
 \caption{Distribución de ocurrencias de familias de peces.}\label{fig:occfamplot}
 \end{figure}
 
-\subsubsection{Familia Galaxiidae}\label{familia-galaxiidae}
+\subsubsection{Galaxiidae}\label{galaxiidae}
+
+\emph{Aplochiton marinus} Eigenmann, 1928\\
+\emph{Aplochiton taeniatus} Jenyns, 1842\\
+\emph{Aplochiton zebra} Jenyns, 1842\\
+\emph{Brachygalaxias bullocki} (Regan, 1908)\\
+\emph{Galaxias maculatus} (Jenyns, 1842)\\
+\emph{Galaxias platei} Steindachner, 1898
 
 Un desglose de la familia Galaxiidae, la familia nativa más ampliamente
 distribuida en la región, reveló una alta heterogeneidad espacial entre
@@ -6724,7 +6650,12 @@ especies con segregación norte-sur y este-oeste (Figura
 \caption{Distribución de ocurrencias de especies de la familia Galaxiidae. Ocurrencias identificadas a nivel de género y familia fueron excluídas.}\label{fig:occgalaxplot}
 \end{figure}
 
-\subsubsection{Familia Atherinopsidae}\label{familia-atherinopsidae}
+\subsubsection{Atherinopsidae}\label{atherinopsidae}
+
+\emph{Odontesthes bonariensis} (Valenciennes, 1835)\\
+\emph{Odontesthes brevianalis} (Günther, 1880)\\
+\emph{Odontesthes hatcheri} (Eigenmann, 1909)\\
+\emph{Odontesthes mauleanum} (Steindachner, 1896)
 
 Un desgloce de la familia Atherinopsidae reveló un número de especies de
 rara ocurrencia que ameritan un escrutinio más detallado (ej., \emph{O.
@@ -6750,6 +6681,123 @@ incursiona ocasionalmente hacia el pacífico vías cuencas transandinas
 \caption{Distribución de ocurrencias de especies de la familia Atherinopsidae. Ocurrencias identificadas a nivel de género y familia fueron excluídas.}\label{fig:atherinplot}
 \end{figure}
 
+\subsubsection{Percichthyidae}\label{percichthyidae}
+
+\emph{Percichthys chilensis} Girard, 1855\\
+\emph{Percichthys laevis} (Jenyns, 1840)\\
+\emph{Percichthys melanops} Girard, 1855\\
+\emph{Percichthys trucha} (Valenciennes, 1833)
+
+\begin{figure}
+
+{\centering \includegraphics{Atlas_Ictiogeografico_files/figure-latex/perchichplot-1} 
+
+}
+
+\caption{Distribución de ocurrencias de especies de la familia Percichthyidae.}\label{fig:perchichplot}
+\end{figure}
+
+\subsubsection{Salmonidae}\label{salmonidae}
+
+\emph{Oncorhynchus keta} (Walbaum, 1792)\\
+\emph{Oncorhynchus kisutch} (Walbaum, 1792)\\
+\emph{Oncorhynchus masou} (Brevoort, 1856)\\
+\emph{Oncorhynchus mykiss} (Walbaum, 1792)\\
+\emph{Oncorhynchus nerka} (Walbaum, 1792)\\
+\emph{Oncorhynchus tshawytscha} (Walbaum, 1792)\\
+\emph{Salmo salar Linnaeus}, 1758\\
+\emph{Salmo trutta Linnaeus}, 1758\\
+\emph{Salvelinus alpinus} (Linnaeus, 1758)\\
+\emph{Salvelinus fontinalis} (Mitchill, 1814)
+
+\begin{figure}
+
+{\centering \includegraphics{Atlas_Ictiogeografico_files/figure-latex/salmonidaeplot-1} 
+
+}
+
+\caption{Distribución de ocurrencias de especies de la familia introducida Salmonidae. Ocurrencias identificadas a nivel de género y familia fueron excluídas.}\label{fig:salmonidaeplot}
+\end{figure}
+
+\subsubsection{Characidae}\label{characidae}
+
+\emph{Cheirodon interruptus} (Jenyns, 1842)\\
+\emph{Cheirodon australe} Eigenmann, 1928
+
+La familia Characidae está distribuida en el norte de nuestra área de
+estudio, y representa remanentes de la influencia pasada de la fauna
+Brazílica en la región austral. Esta influencia también es evidenciada
+por otras familias que aun persisten tal como Percichthyidae.
+Interesantement, la familia Cichlidae se encontró en un hallazgo fósil
+dentro del area de estudio una vez más revelando esta afinidad con la
+fauna Brazílica. Este registro se excluyó por tratarse de un fósil.
+
+El hallazgo de \emph{Cheirodon interruptus} es particular. Se trata de
+la única ocurrencia registrada en el área de estudio por Brian Dyer y
+Cristian Correa, extendiendo substancialmente su distribución al sur de
+Sudamérica. En Chile es considerado una especie introducida, y es
+posible que también lo sea en el lugar de su captura. Su identificación
+taxonómica fue realizada por Luiz R. Malabarba, autoridad mundial en
+sistemática de peces dulceacuícolas neotropicales.
+
+\subsubsection{Poeciliidae}\label{poeciliidae}
+
+\emph{Gambusia affinis} (Baird \& Girard, 1853)\\
+Especie invasiva ausente del área de estudio salvo por un registro en el
+extremo norte.
+
+\subsubsection{Geotriidae}\label{geotriidae}
+
+\emph{Geotria australis} Gray, 1851\\
+\emph{Geotria macrostoma} (Burmeister, 1868)
+
+La familia Geotriidae, y especialmente \emph{Geotria australis} tiene
+una amplia distribución incluyendo toda la Patagonia, sin embargo aquí
+reportamos el primer registro de un solo individuo de \emph{Geotria
+macrostoma} en Chile, una especie previamente considerada endémica de
+Argentina. Recomendamos prestar especial atención para la correcta
+identificación y distinción de estas dos especies de lamprea. El
+registro aquí reportado proveniente de Tierra del Fuego fue colectado e
+identificado por Cristian Correa y Maryse Boisjoly, y confirmado por
+Francisco Neira, experto en taxonomía de lampreas australes.
+
+\subsubsection{Diplomystidae}\label{diplomystidae}
+
+\emph{Olivaichthys viedmensis} (MacDonagh, 1931)
+
+Es notable la existencia de un único registro de \emph{Olivaichthys
+viedmensis} en la cuenca del río Baker, reportado por
+\citet{arratiaUnderstandingMorphologicalVariability2017}. Esta especie
+se distribuye ampliamente al este de la cordillera de los Andes, en la
+vertiente atlántica, y su presencia en el Baker podría explicarse por
+procesos de captura hidrográfica ocurridos hacia fines del Pleistoceno.
+En particular, el sistema del lago General Carrera/Buenos Aires, que
+originalmente drenaba hacia el Atlántico, habría comenzado a drenar
+hacia el Pacífico, facilitando la conexión entre faunas ícticas de
+distintas cuencas.
+
+Procesos similares de reorganización postglacial del drenaje han
+afectado otras cuencas patagónicas y podrían explicar distribuciones
+disyuntas y aparentemente aisladas en Chile, como ocurre con
+\emph{Odontesthes hatcheri} (Atherinopsidae).
+
+\subsubsection{Trichomycteridae}\label{trichomycteridae}
+
+\emph{Trichomycterus areolatus} Valenciennes, 1846
+
+\subsubsection{Mugilidae}\label{mugilidae}
+
+\emph{Mugil cephalus} Linnaeus, 1758\\
+Especie eurihalina que habita en las aguas costeras de la mayoría de las
+regiones tropicales y subtropicales del mundo, encontrándoselo
+frecuentemente en ambientes estuarinos y de agua dulce. En el área de
+estudio, existe un único registro: dos ejemplares capturados en Chiloé
+que le hicieron llegar a Germán Pequeño, autoridad chilena en taxonomía
+de peces, quien los identificó y los preservó en su colección
+posteriormente destruida en el incendio de 2007 del ex-Instituto de
+Zoología de la Universidad Austral de Chile, Valdivia (Germán Pequeño,
+com. pers. 2025).
+
 \subsubsection{Animación histórica}\label{animaciuxf3n-histuxf3rica}
 
 Finalmente, se puede apreciar en una gráfica animada un recuento
@@ -6761,11 +6809,6 @@ suplementario, \texttt{AtlasIctioPat\_anim\_NatInv.gif}).
 Dentro de las tareas pendientes, queda examinar en mayor detalle un
 número de registros dudosos de especies y familias, así como una
 interpretación narrativa y gráfica de su distribución.
-
-Por ejemplo, la familia Cichlidae está representada por un interesante
-hallazgo de un pez fósil, evidencia de la influencia pasada de la fauna
-Brazílica en la región austral. Esta influencia también es evidenciada
-por otras familias que aun persisten tal como Characidae.
 
 Otros casos pueden contener errores de identificación taxonómica o de
 ubicación geográfica de ocurrencias. Por ejemplo, la familia Poeciliidae

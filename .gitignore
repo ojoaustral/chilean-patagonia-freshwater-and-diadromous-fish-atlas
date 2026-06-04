@@ -15,3 +15,6 @@
 # Ignore large or outdated Darwin Initiative source files
 /data_sources/Darwin_Initiative_Fish_Atlas/Darwin Web fish database  14-08-17_DV5_CC_MB2023.xlsx
 /data_sources/Darwin_Initiative_Fish_Atlas/Darwin Web fish database 08-11-10_Outdated.xls
+
+# Ignore output files from global analyses before taxonomic filter (too long to load in GitHub) 
+/outputs_global_analyses/Output_AtlasIctio2026_Datos_DwC_todos.csv

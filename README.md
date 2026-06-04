@@ -1,4 +1,4 @@
-# Atlas ictiogeográfico de peces dulceacuícolas y diádromos de la Patagonia chilena / Ichthyogeographic atlas of freshwater and diadromous fishes of Chilean Patagonia
+# Atlas ictiogeográfico de cuencas patagónicas chilenas y transfronterizas: consolidación de bases de datos de ocurrencias de peces
 
 ![Project photograph](images/CCorrea_RIMG4641.JPG)
 
@@ -64,7 +64,7 @@ The `outputs_global_analyses/` directory currently contains products such as:
 - `Output_filtered_standardized_species_list.csv`
 - `X.filtered.dedup_2025-12-02.csv`
 
-![Fish records by family](images/map_family_occurrences.png)
+![Fish records by family](images/occurrences_map_by_fish_family.png)
 
 These filenames may evolve as the project continues to be refined.
 
@@ -134,7 +134,8 @@ This repository is intended to be shared under:
 A formal citation will be added once the atlas, report, or associated dataset is finalized, versioned and published as a data paper. For now, a provisional citation is as follows:
 
 *Spanish*
-Correa, Cristian y Maryse Boisjoly (2026) Atlas ictiogeográfico de peces dulceacuícolas y diádromos de la Patagonia chilena. <https://github.com/ojoaustral/chilean-patagonia-freshwater-and-diadromous-fish-atlas>
+Correa, Cristian y Maryse Boisjoly (2026) Atlas ictiogeográfico de cuencas patagónicas chilenas y transfronterizas: consolidación de bases de datos de ocurrencias de peces. <https://github.com/ojoaustral/chilean-patagonia-freshwater-and-diadromous-fish-atlas>
 
 *English*
-Correa, Cristian and Maryse Boisjoly (2026) Ichthyogeographic atlas of freshwater and diadromous fishes of Chilean Patagonia. <https://github.com/ojoaustral/chilean-patagonia-freshwater-and-diadromous-fish-atlas>
+Correa, Cristian and Maryse Boisjoly (2026) Ichthyogeographic atlas of Chilean and transboundary Patagonian basins: consolidation of fish occurrence databases. <https://github.com/ojoaustral/chilean-patagonia-freshwater-and-diadromous-fish-atlas>
+
