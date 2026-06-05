@@ -129,13 +129,19 @@ This repository is intended to be shared under:
 
 **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)**
 
+This material is shared openly after thousands of hours of careful, detailed, and often tedious work collecting samples thoughout Patagonia, compiling all possible written sources, cleaning, harmonizing, and documenting the dataset. In that spirit, we ask users to approach the material with appropriate academic respect, collegiality, and proper attribution.  
+
+We welcome reuse and reanalysis of the dataset for non-commercial academic, conservation, and educational purposes. Researchers, students or practitioners interested in using these data are warmly encouraged to contact the authors to explore opportunities for friendly and constructive academic collaboration or consulting.  
+
+We also welcome constructive contributions through GitHub. Users who identify errors, omissions, or possible improvements are encouraged to open an issue or submit a pull request, so that corrections and enhancements can be reviewed, discussed, and incorporated transparently into the repository.  
+
 ## Citation
 
 A formal citation will be added once the atlas, report, or associated dataset is finalized, versioned and published as a data paper. For now, a provisional citation is as follows:
 
-*Spanish*
+*Spanish*  
 Correa, Cristian y Maryse Boisjoly (2026) Atlas ictiogeográfico de cuencas patagónicas chilenas y transfronterizas: consolidación de bases de datos de ocurrencias de peces. Programa Austral Patagonia, Universidad Austral de Chile. <https://github.com/ojoaustral/chilean-patagonia-freshwater-and-diadromous-fish-atlas>
 
-*English*
+*English*  
 Correa, Cristian and Maryse Boisjoly (2026) Ichthyogeographic atlas of Chilean and transboundary Patagonian basins: consolidation of fish occurrence databases. Programa Austral Patagonia, Universidad Austral de Chile. <https://github.com/ojoaustral/chilean-patagonia-freshwater-and-diadromous-fish-atlas>
 

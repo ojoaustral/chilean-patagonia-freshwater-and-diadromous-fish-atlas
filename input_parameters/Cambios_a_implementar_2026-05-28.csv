@@ -96,7 +96,7 @@ id_CC,occurrenceID_master,datasetName_tmp,canonicalName,year,eventDate,locality,
 926,MMA:ICT:0001115,mma2,cheirodon australe,2002,NA,río puntra. rio chepu,-42.118,-73.809,FuenteReg: Gonzalez ,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 927,MMA:ICT:0002494,mma2,galaxias platei,2002,NA,río puntra. rio chepu,-42.118,-73.809,FuenteReg: Gonzalez ,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 928,MMA:ICT:0005199,mma2,trichomycterus areolatus,2002,NA,río puntra. rio chepu,-42.118,-73.809,FuenteReg: Gonzalez ,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-946,MMA:ICT:0001118,mma2,cheirodon australe,1993,NA,lago tarahuín. en zona litoral. costera vertiente oeste entre rio cucao (incluido) y rio medina (incluido),-42.717,-73.8,FuenteReg: Campos et,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+946,MMA:ICT:0001118,mma2,cheirodon australe,1993,NA,lago tarahuín. en zona litoral. costera vertiente oeste entre rio cucao (incluido) y rio medina (incluido),-42.717,-73.8,FuenteReg: Campos et,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 978,MMA:ICT:0001863,mma2,galaxias maculatus,2006,2006-12-22,lago tarahuin. costera vertiente oeste entre rio cucao (incluido) y rio medina (incluido),-42.722,-73.781,OrigenReg: Base Dato,NA,NA,NA,associatedReference: (Habit et al. 2012),NA,NA,Habit et al. 2012,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 1054,MMA:ICT:0001858,mma2,galaxias maculatus,2006,2006-07-17,lago natri. costeras vertientes este entre punta ahoni y punta yatac,-42.804,-73.778,OrigenReg: Base Dato,NA,NA,NA,associatedReference: (Habit et al. 2012),NA,NA,Habit et al. 2012,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 1063,CIMAR1_52_sp16,gbif,atheriniformes,1995,1995-11-01,NA,-46.4483,-73.7767,NA,NA,shoa,NA,Remove. Added to GBIF in June 1995. Could be removed because they are oceanographic stations.,remove,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -418,7 +418,7 @@ id_CC,occurrenceID_master,datasetName_tmp,canonicalName,year,eventDate,locality,
 5244,MAguilar.Lit.Review.1066,agui,eleginops maclovinus,NA,NA,río aysén,-45.4166666669,-72.8000000001,Rademacher K. 2007. ,1066,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 5245,MAguilar.Lit.Review.1078,agui,galaxias maculatus,NA,NA,río aysén,-45.4166666669,-72.8000000001,Rademacher K. 2007. ,1078,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 5246,MMA:ICT:0001909,mma2,galaxias maculatus,2009,2009-07-27,lago porteno. en orilla. lago del toro,-51.36,-72.8,OrigenReg: Base Dato,NA,NA,NA,associatedReferences: (Ortiz-Sandoval et al. 2017),NA,NA,Ortiz-Sandoval et al. 2017,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-5251,MMA:ICT:0002649,mma2,geotria australis,NA,NA,río santa barbara. costeras entre rio rayas y rio chaiten,-42.867,-72.8,FuenteReg: Campos et,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+5251,MMA:ICT:0002649,mma2,geotria australis,NA,NA,río santa barbara. costeras entre rio rayas y rio chaiten,-42.867,-72.8,FuenteReg: Campos et,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 5255,MMA:ICT:0000015,mma2,aplochiton taeniatus,2009,2009-02-05,lago porteno. en orilla. lago del toro,-51.36,-72.799,OrigenReg: Base Dato,NA,NA,NA,associatedReference: (Elgueta et al. 2013) | (Ortiz-Sandoval et al. 2017),NA,NA,Elgueta et al. 2013) | (Ortiz-Sandoval et al. 2017,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 5257,MMA:ICT:0000089,mma2,aplochiton zebra,2009,2009-02-05,lago porteno. en orilla. lago del toro,-51.36,-72.799,OrigenReg: Base Dato,NA,NA,NA,associatedReference: (Elgueta et al. 2013) | (Ortiz-Sandoval et al. 2017),NA,NA,Elgueta et al. 2013) | (Ortiz-Sandoval et al. 2017,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 5259,MMA:ICT:0000091,mma2,aplochiton zebra,2009,2009-02-06,lago porteno. lago del toro,-51.36,-72.799,OrigenReg: Base Dato,NA,NA,NA,associatedReference: (Elgueta et al. 2013),NA,NA,Elgueta et al. 2013,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -583,7 +583,7 @@ id_CC,occurrenceID_master,datasetName_tmp,canonicalName,year,eventDate,locality,
 8304,SUBPESCA.PecesContinentales2019.15508,subpesca-1,odontesthes hatcheri,2009,NA,NA,-47.311907,-72.583495,CEA (NA) Linea Base ,15508,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8306,SUBPESCA.PecesContinentales2019.15563,subpesca-1,percichthys trucha,2009,NA,NA,-47.311907,-72.583495,CEA (NA) Linea Base ,15563,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8310,SUBPESCA.PecesContinentales2019.21327,subpesca-1,percichthys trucha,2012,NA,NA,-47.421039,-72.583249,CEA (NA) Monitoreo L,21327,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-8330,MMA:ICT:0002170,mma2,galaxias maculatus,NA,NA,río pascua. costeras del fiordo coman,-42.333,-72.583,FuenteReg: Campos et,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+8330,MMA:ICT:0002170,mma2,galaxias maculatus,NA,NA,río pascua. costeras del fiordo coman,-42.333,-72.583,FuenteReg: Campos et,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8332,SUBPESCA.PecesContinentales2019.14865,subpesca-1,galaxias platei,2008,NA,NA,-47.305839,-72.582951,CEA (NA) Linea Base ,14865,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8334,SUBPESCA.PecesContinentales2019.14876,subpesca-1,odontesthes hatcheri,2008,NA,NA,-47.305839,-72.582951,CEA (NA) Linea Base ,14876,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8337,SUBPESCA.PecesContinentales2019.15946,subpesca-1,odontesthes hatcheri,2010,NA,NA,-47.305839,-72.582951,CEA (NA) Linea Base ,15946,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -601,7 +601,7 @@ id_CC,occurrenceID_master,datasetName_tmp,canonicalName,year,eventDate,locality,
 9262,SUBPESCA.PecesContinentales2019.21271,subpesca-1,galaxias platei,2012,NA,NA,-47.477325,-72.53838,CEA (NA) Monitoreo L,21271,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 9268,SUBPESCA.PecesContinentales2019.14949,subpesca-1,hatcheria macraei,2008,NA,NA,-47.248651,-72.534834,CEA (NA) Linea Base ,14949,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 9397,CCorrea.Lit.Review.1300,fishgis_metadatabase_ccorrea,salmo trutta,1984,NA,río cisnes bajo,-44.69697,-72.52794,"Campos, H., J. Arena",NA,NA,1,Remove. imported from other dataset.,remove,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-9419,MMA:ICT:0002648,mma2,geotria australis,NA,NA,lago risopatrón. rio risopatron,-44.233,-72.517,FuenteReg: Campos et,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+9419,MMA:ICT:0002648,mma2,geotria australis,NA,NA,lago risopatrón. rio risopatron,-44.233,-72.517,FuenteReg: Campos et,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 9424,MAguilar.Lit.Review.1394,agui,percichthys trucha,NA,NA,lago maldonado,-47.233333333,-72.5166666667,Zama A. y Cárdenas E,1394,NA,0,"Cambiar coordenadas a -47.257249, -72.516063",NA,NA,NA,-47.257249,-72.516063,NA,NA,NA,NA,NA,NA,NA,NA,NA
 9428,SUBPESCA.PecesContinentales2019.21238,subpesca-1,percichthys trucha,2012,NA,NA,-47.254925,-72.515747,CEA (NA) Monitoreo L,21238,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 9444,MAguilar.Lit.Review.544,agui,salmo trutta,NA,NA,lago risopatrón,-44.2531199996,-72.5115540002,"Cussac, V.E.; Barran",544,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -611,7 +611,7 @@ id_CC,occurrenceID_master,datasetName_tmp,canonicalName,year,eventDate,locality,
 9592,CCorrea.Lit.Review.1290,fishgis_metadatabase_ccorrea,salmo trutta,1984,NA,río los césares,-44.18894,-72.49877,"Campos, H., J. Arena",NA,NA,NA,Remove. imported from other dataset.,remove,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 9711,SUBPESCA.PecesContinentales2019.15068,subpesca-1,galaxias platei,2008,NA,NA,-45.77889,-72.483918,CEA (NA) Linea De Ba,15068,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 9734,MAguilar.Lit.Review.347,agui,oncorhynchus tshawytscha,2004,2004-04-07,río huñu-hueñu,-41.2666666671,-72.4833333329,"Correa, C., Gross, M",347,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-9735,MMA:ICT:0000192,mma2,aplochiton zebra,NA,NA,río amarillo. rio amarillo,-43.017,-72.483,FuenteReg: Campos et,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+9735,MMA:ICT:0000192,mma2,aplochiton zebra,NA,NA,río amarillo. rio amarillo,-43.017,-72.483,FuenteReg: Campos et,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 9795,CCorrea.Lit.Review.196,fishgis_metadatabase_ccorrea,NA,2000,NA,río cuchildeo,-41.96528,-72.47477,Doris Soto B.and Iva,NA,NA,NA,check reference. From CCorrea Metadatabase,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 9834,MAguilar.Lit.Review.991,agui,oncorhynchus tshawytscha,NA,NA,río petrohue (chile),-41.2500000002,-72.4667000002,"Narum, SR, Gallardo,",991,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 9835,MAguilar.Lit.Review.345,agui,oncorhynchus tshawytscha,2004,2004-04-07,los patos (río petrohué),-41.1833333334,-72.4666666668,"Correa, C., Gross, M",345,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -623,12 +623,12 @@ id_CC,occurrenceID_master,datasetName_tmp,canonicalName,year,eventDate,locality,
 10627,CIMAR1_10_sp16,gbif,atheriniformes,1995,1995-10-19,NA,-42.4617,-72.4283,NA,NA,shoa,NA,Remove. Added to GBIF in June 1995. Could be removed because they are oceanographic stations.,remove,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 10641,CCorrea.Lit.Review.1298,fishgis_metadatabase_ccorrea,oncorhynchus mykiss,1984,NA,río queulat,-44.56857,-72.42222,"Campos, H., J. Arena",NA,NA,1,Remove. imported from other dataset.,remove,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 10654,CCorrea.Lit.Review.1299,fishgis_metadatabase_ccorrea,salmo trutta,1984,NA,río cascadas,-44.63582,-72.41754,"Campos, H., J. Arena",NA,NA,1,Remove. imported from other dataset.,remove,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-10665,MMA:ICT:0002486,mma2,galaxias platei,NA,NA,lago yelcho. rio yelcho entre desague lago yelcho y rio amarillo,-43.167,-72.417,FuenteReg: Campos et,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+10665,MMA:ICT:0002486,mma2,galaxias platei,NA,NA,lago yelcho. rio yelcho entre desague lago yelcho y rio amarillo,-43.167,-72.417,FuenteReg: Campos et,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 10666,MMA:ICT:0000181,mma2,aplochiton zebra,1919,NA,saltos del petrohue. lago todos los santos,-41.15,-72.417,FuenteReg: Eigenmann,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 10667,MMA:ICT:0005229,mma2,trichomycterus areolatus,1919,NA,cascada de petrohue. lago todos los santos,-41.15,-72.417,FuenteReg: Eigenmann,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 10766,MAguilar.Lit.Review.357,agui,aplochiton taeniatus,NA,NA,lago saltos del petrohué,-41.1333333326,-72.3833333331,"Cussac, V., Ortubay,",357,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 10767,MAguilar.Lit.Review.374,agui,aplochiton zebra,NA,NA,lago saltos del petrohué,-41.1333333326,-72.3833333331,"Cussac, V., Ortubay,",374,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-10778,MMA:ICT:0000180,mma2,aplochiton zebra,NA,NA,río aura. rio palena entre rio frio y rio rosselot,-43.833,-72.367,FuenteReg: Campos et,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+10778,MMA:ICT:0000180,mma2,aplochiton zebra,NA,NA,río aura. rio palena entre rio frio y rio rosselot,-43.833,-72.367,FuenteReg: Campos et,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 10836,CCorrea.Lit.Review.1277,fishgis_metadatabase_ccorrea,oncorhynchus mykiss,1984,NA,río vuelta y vuelta,-42.9781,-72.34913,"Campos, H., J. Arena",NA,NA,NA,Remove. imported from other dataset.,remove,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 10848,MAguilar.Lit.Review.1032,agui,galaxias maculatus,2007,NA,lago risopatron,-44.1501666667,-72.3452499996,"Ortiz-Sandoval, J., ",1032,NA,NA,"change coordinates to -44.258668, -72.514963",NA,NA,NA,-44.258668,-72.514963,NA,NA,NA,NA,NA,NA,NA,NA,NA
 10849,MAguilar.Lit.Review.1031,agui,galaxias platei,2007,NA,lago risopatron,-44.1501666667,-72.3452499996,"Ortiz-Sandoval, J., ",1031,NA,NA,"change coordinates to -44.258668, -72.514963",NA,NA,NA,-44.258668,-72.514963,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -640,7 +640,7 @@ id_CC,occurrenceID_master,datasetName_tmp,canonicalName,year,eventDate,locality,
 10890,MAguilar.Lit.Review.356,agui,aplochiton taeniatus,NA,NA,río petrohué,-41.0833333327,-72.3333333332,"Cussac, V., Ortubay,",356,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 10891,MAguilar.Lit.Review.373,agui,aplochiton zebra,NA,NA,río petrohué,-41.0833333327,-72.3333333332,"Cussac, V., Ortubay,",373,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 10892,MAguilar.Lit.Review.414,agui,galaxias platei,NA,NA,río petrohué,-41.0833333327,-72.3333333332,"Cussac, V., Ortubay,",414,NA,NA,Locality: Lago Todos los Santos y río Petrohue (current waypoint located in Lago Todos los Santos),NA,NA,NA,NA,NA,Lago Todos los Santos y río Petrohue,NA,NA,NA,NA,NA,NA,NA,NA
-10895,MMA:ICT:0000179,mma2,aplochiton zebra,NA,NA,río frio. rio frio,-43.583,-72.333,FuenteReg: Campos et,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+10895,MMA:ICT:0000179,mma2,aplochiton zebra,NA,NA,río frio. rio frio,-43.583,-72.333,FuenteReg: Campos et,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 10898,MCZ:Ich:98719,idig,trichomycterus areolatus,1968,1968-02-19,"rio chacabuco, tributary of rio limay",-47.05381,-72.33268,NA,98719,mcz,NA,Change canonicalName to Trichomycteridae. Change scientificName to Trichomycteridae. Way out of range. Record from preserved speciment at MCZ.,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 10936,MAguilar.Lit.Review.748,agui,oncorhynchus mykiss,2006,NA,laguna candelaria,-41.6935860003,-72.3249220002,"Habit, E., Gonzalez,",748,NA,1,"associatedReference: (Cussac et al., 2020)",NA,NA,"Cussac et al., 2020",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 10938,MAguilar.Lit.Review.493,agui,oncorhynchus mykiss,NA,NA,laguna candelaria,-41.6935860003,-72.3249220002,"Cussac, V.E.; Barran",493,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -702,8 +702,8 @@ id_CC,occurrenceID_master,datasetName_tmp,canonicalName,year,eventDate,locality,
 11507,MAguilar.Lit.Review.1424,agui,galaxias platei,1998,NA,lago belgrano,-47.8694444439,-72.1461111107,"ZEMLAK, T.S., HABIT,",1424,NA,1,NA,NA,NA,Ruzzante et al. 2008.,-47.869444,-72.146111,NA,NA,NA,NA,NA,NA,NA,NA,NA
 11518,MAguilar.Lit.Review.985,agui,salvelinus fontinalis,NA,NA,los lagos laguna (chile),-41.9180999999,-72.1421000004,"Narum, SR, Gallardo,",985,NA,0,Coordenada imprecisa.,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 11568,MAguilar.Lit.Review.1379,agui,hatcheria macraei,NA,NA,huichalao,-45.4999999998,-72.1333333327,Zama A. y Cárdenas E,1379,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-11569,MMA:ICT:0002748,mma2,hatcheria macraei,NA,NA,río ñirehuao. rio nireguao entre rio norte y rio picaflor,-45.167,-72.133,FuenteReg: Campos et,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-11570,MMA:ICT:0002485,mma2,galaxias platei,NA,NA,lago pedro aguirre cerda. rio picaflor hasta rio turbio,-45.033,-72.133,FuenteReg: Campos et,NA,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+11569,MMA:ICT:0002748,mma2,hatcheria macraei,NA,NA,río ñirehuao. rio nireguao entre rio norte y rio picaflor,-45.167,-72.133,FuenteReg: Campos et,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+11570,MMA:ICT:0002485,mma2,galaxias platei,NA,NA,lago pedro aguirre cerda. rio picaflor hasta rio turbio,-45.033,-72.133,FuenteReg: Campos et,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 11600,MAguilar.Lit.Review.148,agui,oncorhynchus tshawytscha,2004,NA,aysén-ñireguao,-45.1700000001,-72.1200000002,"Alò D, Correa C, Sam",148,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 11609,MCZ:Ich:98722,idig,trichomycterus areolatus,1968,1968-02-17,stream entering lago buenos ayres.,-46.5263,-72.11705,NA,98722,mcz,NA,Change canonicalName to Trichomycteridae. Change scientificName to Trichomycteridae. Way out of range. Record from preserved speciment at MCZ.,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 11613,MAguilar.Lit.Review.350,agui,oncorhynchus tshawytscha,2004,NA,río ñireguao,-45.1666666674,-72.1166666666,"Correa, C., Gross, M",350,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

@@ -18,3 +18,4 @@
 
 # Ignore output files from global analyses before taxonomic filter (too long to load in GitHub) 
 /outputs_global_analyses/Output_AtlasIctio2026_Datos_DwC_todos.csv
+
