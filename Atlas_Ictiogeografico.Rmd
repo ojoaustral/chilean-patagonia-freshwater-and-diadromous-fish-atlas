@@ -4936,6 +4936,12 @@ X.filtered.dedup.revised <- X.filtered.dedup.revised %>%
   filter( !(canonicalName == "Oncorhynchus nerka" & as.numeric(year) == 2000 ))
 ```
 
+***Oncorhynchus gorbuscha*** de la Isla de Chiloé, 2014, registrado por un estudio de impacto ambiental de un campo eólico, Subpesca-1. Aunque introducida en los 1980s, especie muy improbable y no confirmada en toda la Patagonia. Pudo haberse tratado de otro *Oncorhynchus*.  
+```{r}
+X.filtered.dedup.revised <- X.filtered.dedup.revised %>% 
+  filter( !(canonicalName == "Oncorhynchus gorbuscha" & as.numeric(year) == 2014) )
+```
+
 
 ***Odontesthes humensis***, único registro antiguo 1872 de ejemplar capturado en el mar. Probable error en su identificación taxonómica. Esta especie se distribuye mucho más al norte Río De La Plata, Argentina, Río Negro, Uruguay.    
 ```{r}
@@ -4943,11 +4949,6 @@ X.filtered.dedup.revised <- X.filtered.dedup.revised %>%
   filter( !(canonicalName == "Odontesthes humensis" & as.numeric(year) == 1872))
 ```
 
-***Oncorhynchus gorbuscha*** de la Isla de Chiloé, 2014, registrado por un estudio de impacto ambiental de un campo eólico, Subpesca-1. Aunque introducida en los 1980s, especie muy improbable y no confirmada en toda la Patagonia. Pudo haberse tratado de otro *Oncorhynchus*.  
-```{r}
-X.filtered.dedup.revised <- X.filtered.dedup.revised %>% 
-  filter( !(canonicalName == "Oncorhynchus gorbuscha" & as.numeric(year) == 2014) )
-```
 
 ***Pterophyllum*** es un género de pez dulceacuícola tropical muy común en acuarios (escalares),  con rangos de temperatura >20°C. *Pterophyllum trichomatosum*, en tanto, es una planta fósil. Ambos registros únicos fueron excluidos.  
 ```{r}
@@ -4997,7 +4998,7 @@ Algunas referencias debieron ser re-digitalizadas completamente antes de ser re-
 **Zama y Cárdenas (1984):**  
 Los registros de esta referencia fueron digitalizados previamente por MMA, Mary Aguilar y Cristian Correa. Sin embargo, ninguno de estos conjuntos de datos resultó suficientemente completo o consistente, por lo que se optó por re-digitalizar íntegramente este estudio.  
 
-Zama y Cárdenas (1984) mezcla registros primarios (observaciones directas) y secundarios (citas de otros estudios) sin distinguir entre ambos. Como consecuencia, los registros secundarios carecen de información clave, como fecha de muestreo, coordenadas exactas, referencia bibliográfica y existencia de ejemplares preservados en museos. Además, la mayoría de los registros —incluidos muchos primarios— no cuenta con fecha de muestreo, y la correspondencia geográfica entre los distintos conjuntos de datos es baja, lo que dificulta la identificación confiable de registros duplicados. Por estas razones, se decidió re-ingresar toda la información disponible directamente desde Zama y Cárdenas (1984).  
+@zamaIntroductionAysenChile1984 mezcla registros primarios (observaciones directas) y secundarios (citas de otros estudios) sin distinguir entre ambos. Como consecuencia, los registros secundarios carecen de información clave, como fecha de muestreo, coordenadas exactas, referencia bibliográfica y existencia de ejemplares preservados en museos. Además, la mayoría de los registros —incluidos muchos primarios— no cuenta con fecha de muestreo, y la correspondencia geográfica entre los distintos conjuntos de datos es baja, lo que dificulta la identificación confiable de registros duplicados. Por estas razones, se decidió re-ingresar toda la información disponible directamente desde el reporte original.  
 
 
 ```{r}
@@ -5032,7 +5033,7 @@ X.filtered.dedup.revised <- X.filtered.dedup.revised %>% filter(!exclude)
 Se removieron `r sum(exclude)` ocurrencias provenientes de Zama y Cárdenas 1984 que serán reimportadas más abajo.
 
 **Campos (1984):**  
-Esta referencia fue digitalizada previamente en tres instancias: Irma Vila, incluido en los datos MMA; Cristian Correa, incluido  en su revisión (2009); y SUBPESCA en sus Peces continentales (2019), aunque muchos estudios revisados por pares e intrgrados en otro conjunto de datos ya fueron excluidos de este último conjunto de datos.  El conjunto del MMA incluye únicamente peces nativos. La revisión de Cristian Correa no incorporó todos los taxa ni todas las localidades, mientras que SUBPESCA presenta múltiples errores de digitalización. Además, la publicación original de Campos (1984) no incluye coordenadas geográficas, por lo que cada iniciativa asignó coordenadas distintas a las mismas localidades.  
+Esta referencia [@camposMacrozoobentosFaunaIctica1984] fue digitalizada previamente en tres instancias: Irma Vila, incluido en los datos MMA; Cristian Correa, incluido  en su revisión (2009); y SUBPESCA en sus Peces continentales (2019), aunque muchos estudios revisados por pares e integrados en otro conjunto de datos ya fueron excluidos de este último conjunto de datos.  El conjunto del MMA incluye únicamente peces nativos. La revisión de Cristian Correa no incorporó todos los taxa ni todas las localidades, mientras que SUBPESCA presenta múltiples errores de digitalización. Además, la publicación original de Campos (1984) no incluye coordenadas geográficas, por lo que cada iniciativa asignó coordenadas distintas a las mismas localidades.  
 
 Esta combinación de inconsistencias —variación en coordenadas, taxones y localidades— dificulta significativamente la identificación de registros duplicados. Por estas razones, se eliminaron todos los registros de SUBPESCA y de la revisión de Cristian Correa, y se re-digitalizaron únicamente los escasos registros de peces introducidos, con el fin de complementar de manera coherente el conjunto del MMA.  
 
@@ -5071,7 +5072,7 @@ Se removieron `r sum(exclude)` ocurrencias provenientes de Campos et al. 1984 qu
 
 
 **Ortiz-Sandoval et al. 2017:**  
-Esta referencia fue digitalizada previamente por dos instancias: Mary González-Aguilar y SUBPESCA, pero se encontraron numerosos errores por lo que optamos por excluir estos registros. Además, los registros de peces nativos reportados en Ortiz-Sandoval *et al.* (2017) también se encuentran en la base de datos de EULA incluido en el conjunto de datos MMA2017. Por lo tanto, se decidió redigitalizar únicamente los registros de especies introducidas, y mantener los registros de especies nativas vía la base de datos MMA2017. 
+Esta referencia fue digitalizada previamente por dos instancias: Mary González-Aguilar y SUBPESCA, pero se encontraron numerosos errores por lo que optamos por excluir estos registros. Además, los registros de peces nativos reportados en @Ortiz-Sandoval2017 también se encuentran en la base de datos de EULA incluido en el conjunto de datos MMA2017. Por lo tanto, se decidió redigitalizar únicamente los registros de especies introducidas, y mantener los registros de especies nativas vía la base de datos MMA2017. 
 
 ```{r}
 # Exclude occurrences from Ortiz-Sandoval et al 2017 before re-importing them from newly digitized table below.
@@ -5101,6 +5102,7 @@ column_spec(column = 2, width = "20em")
 ```{r}
 X.filtered.dedup.revised <- X.filtered.dedup.revised %>% filter(!exclude)
 ```
+
 Se removieron `r sum(exclude)` ocurrencias provenientes de Ortiz-Sandoval et al 2017 que serán (parcialmente) reimportadas más abajo.
 
 ```{r, echo = FALSE}
@@ -5147,7 +5149,7 @@ MB$id_CC          <- (max(X.filtered.dedup.revised$id_CC)+1):
 
 ```
 
-Se corrigió una identificación de especie (ver sección *Revisión de taxa improbables o erróneos*)   
+Se corrigió una identificación de especie tal como lo hecho anteriormente (ver sección *Revisión de taxa improbables o erróneos*).
 
 ```{r}
 idx <- MB$canonicalName == "Odontesthes bonariensis"
@@ -5388,9 +5390,6 @@ rm(list=ls()[!ls()%in%c("DwC",
 
 ```
 
-```{r}
-X.filtered.dedup.revised %>% filter(is.na(taxonRank)) %>% select(prim_key, canonicalName)
-```
 
 ## Respaldo  
 
@@ -5642,10 +5641,10 @@ ggsave("./outputs_global_analyses/assorted_figures/occurrences_map_Atherinopsida
 *Percichthys melanops* Girard, 1855  
 *Percichthys trucha* (Valenciennes, 1833)  
 
-La taxonomía de de la familia Percichthyidae, y del género *Percichthys* en particular, no se encuentra del todo resuelta. Distintos estudios basados en evidencia morfológica [@Lopez-Arbarello2004, @Arratia2019] o molecular [@ruzzantePhylogeographyPercichthyidaePisces2006, @ruzzantePhylogeographyPhenotypicDiversification2011] difieren en el número de especies presentes en la Patagonia. 
+La taxonomía de de la familia Percichthyidae, y del género *Percichthys* en particular, no se encuentra del todo resuelta. Distintos estudios basados en evidencia morfológica [@Lopez-Arbarello2004; @Arratia2019] o molecular [@ruzzantePhylogeographyPercichthyidaePisces2006; @ruzzantePhylogeographyPhenotypicDiversification2011] difieren en el número de especies presentes en la Patagonia. 
 
 
-Recomendamos tratar los mapas de distribución a nivel de especies con cautela, y revisar las fuentes originales. Está fuera del alcance de este reporte abordar problemas complejos de identificación taxonómica, y en el el caso de las percas, nos limitamos a recaudar los datos disponibles y  cotejar la distribución a nivel de género. Las percas tienen una amplia distribución dentro del área de estudio, especialmente al norte de Magallanes, y son típicas de cuencas transandinas que han sufrido capturas hidrográficas históricas [@Ruzzante2020], similar al caso de *O. hatcheri* recién discutido.
+Recomendamos tratar los mapas de distribución a nivel de especies con cautela, y revisar las fuentes originales. Está fuera del alcance de este reporte abordar problemas complejos de identificación taxonómica, y en el el caso de las percas, nos limitamos a recaudar los datos disponibles y  cotejar la distribución a nivel de género (Figura \ref{fig:perchichplot}). Las percas tienen una amplia distribución dentro del área de estudio, especialmente al norte de Magallanes, y son típicas de cuencas transandinas que han sufrido capturas hidrográficas históricas [@Ruzzante2020], similar al caso de *O. hatcheri* recién discutido.
 
 
 ```{r perchichplot, echo=F, fig.width=7, fig.height=7, warning = FALSE, message = FALSE, fig.align = 'center', fig.cap="Distribución de ocurrencias de especies de la familia Percichthyidae."}
@@ -5678,9 +5677,11 @@ ggsave("./outputs_global_analyses/assorted_figures/occurrences_map_Atherinopsida
 *Salvelinus alpinus* (Linnaeus, 1758)  
 *Salvelinus fontinalis* (Mitchill, 1814)    
 
-La familia Salmonidae, introducida profusamente desde el hemisferio norte durante el siglo XX, fue por lejos la familia más ampliamente representada y distribuida dentro del área de estudio. Su presencia abarca gran parte de las cuencas analizadas y refleja un proceso sostenido de introducción, establecimiento y expansión en la Patagonia. Debido a su condición de depredadores generalistas y competidores eficientes, los salmónidos introducidos tienen importantes impactos ecológicos sobre la ictiofauna nativa, incluyendo depredación, competencia por recursos, alteraciones en la estructura de las comunidades acuáticas y, en algunos casos, extirpación local de especies nativas.
+La familia Salmonidae, introducida profusamente desde el hemisferio norte durante el siglo XX, fue por lejos la familia más ampliamente representada y distribuida dentro del área de estudio (Figura \ref{fig:occfamplot}). Su presencia abarca gran parte de las cuencas analizadas y refleja un proceso sostenido de introducción, establecimiento y expansión en la Patagonia. Debido a su condición de depredadores generalistas y competidores eficientes, los salmónidos introducidos tienen importantes impactos ecológicos sobre la ictiofauna nativa, incluyendo depredación, competencia por recursos, alteraciones en la estructura de las comunidades acuáticas y, en algunos casos, extirpación local de especies nativas.
 
-Algunos registros de Salmonidae corresponden a observaciones históricas asociadas a programas de siembra realizados durante las décadas de 1970 y 1980 [@basultoLargoViajeSalmones2003]. Varias de estas especies no han vuelto a ser observadas desde entonces, por lo que se asume que no lograron establecer poblaciones autosustentables y, en consecuencia, no se consideran especies asilvestradas dentro del área de estudio. Este sería el caso de *Salvelinus alpinus* y *Oncorhynchus keta*.
+Los salmónidos más comunes y ampliamente distribuidos en el área de estudio son la trucha marrón *Salmo trutta*, la trucha arcoiris *Oncorhynchus mykiss*, el salmón rey *O. tshawytscha*, y el salmón coho *O. kisutch*, con otras especies  con distribuciones más localizadas (Figura \ref{fig:salmonidaeplot}).
+
+Algunos registros de salmónidos corresponden a observaciones históricas asociadas a programas de siembra realizados durante las décadas de 1970 y 1980 [@basultoLargoViajeSalmones2003; @sakaiPacificSalmonRanching2002]. Varias de estas especies no han vuelto a ser observadas desde entonces, por lo que se asume que no lograron establecer poblaciones autosustentables y, en consecuencia, no se consideran especies asilvestradas dentro del área de estudio. Este sería el caso de *Salvelinus alpinus* y *Oncorhynchus keta*.
 
 En contraste, la mayoría de las especies restantes se consideran asilvestradas, con la excepción de *Salmo salar*. Los registros de esta última especie suelen atribuirse a ejemplares escapados desde centros de cultivo, y pese a su amplia distribución, existen diudas de que haya logrado establecer poblaciones autosustentables en la Patagonia.
 
@@ -5755,11 +5756,11 @@ ggsave("./outputs_global_analyses/assorted_figures/occurrences_map_Petromyzontif
 
 *Olivaichthys viedmensis* (MacDonagh, 1931)  
 
-Es notable la existencia de un único registro de *Olivaichthys viedmensis* en la cuenca del río Baker, reportado por @arratiaUnderstandingMorphologicalVariability2017. Esta especie se distribuye ampliamente al este de la cordillera de los Andes, en la vertiente atlántica, y su presencia en el Baker podría explicarse por procesos de captura hidrográfica ocurridos hacia fines del Pleistoceno [arratiaUnderstandingMorphologicalVariability2017]. En particular, el sistema del lago General Carrera/Buenos Aires, que originalmente drenaba hacia el Atlántico, habría comenzado a drenar hacia el Pacífico, facilitando la conexión entre faunas ícticas de distintas cuencas.  
+Es notable la existencia de un único registro de *Olivaichthys viedmensis* en la cuenca del río Baker, reportado por @arratiaUnderstandingMorphologicalVariability2017 (Figura \ref{fig:occfamplot}). Esta especie se distribuye ampliamente al este de la cordillera de los Andes, en la vertiente atlántica, y su presencia en el Baker podría explicarse por procesos de captura hidrográfica ocurridos hacia fines del Pleistoceno [arratiaUnderstandingMorphologicalVariability2017]. En particular, el sistema del lago General Carrera/Buenos Aires, que originalmente drenaba hacia el Atlántico, habría comenzado a drenar hacia el Pacífico, facilitando la conexión entre faunas ícticas de distintas cuencas.  
 
-Procesos similares de reorganización postglacial del drenaje han afectado otras cuencas patagónicas y podrían explicar distribuciones disyuntas y aparentemente aisladas en Chile, como ocurre con *Odontesthes hatcheri* (Atherinopsidae).  
+Procesos similares de reorganización postglacial del drenaje han afectado otras cuencas patagónicas y podrían explicar distribuciones disyuntas y aparentemente aisladas en Chile, como ocurre con *Odontesthes hatcheri* y *Percichthys trucha*.  
 
-Del género *Diplomystes* existe un único registro proveniente de un estudio de impacto ambiental en la cuenca del río Palena. Actualmente, las especies de este género se distribuyen en cuencas de drenaje Pacífico desde la cuenca del río Valdivia hacia el norte [@arratiaUnderstandingMorphologicalVariability2017]. Este registro resulta llamativo tanto por su carácter aislado como por encontrarse considerablemente fuera del área de distribución conocida para el género, pero fue imposible confirmar su correcta identificación por falta de respaldo material.   
+Del género *Diplomystes* existe un único registro proveniente de un estudio de impacto ambiental en la cuenca del río Palena. Actualmente, las especies de este género se distribuyen en cuencas de drenaje Pacífico desde la cuenca del río Valdivia hacia el norte [@arratiaUnderstandingMorphologicalVariability2017]. Este registro aislado se encuentra considerablemente fuera del área de distribución conocida para el género, y fue imposible confirmar su correcta identificación por falta de respaldo material. Si efectivamente se trató de un Diplomystidae, sería más probable que se trate de *Olivaichthys viedmensis*.     
 
 ### Trichomycteridae  
 *Trichomycterus areolatus* Valenciennes, 1846  
@@ -5797,28 +5798,20 @@ ggsave("./outputs_global_analyses/assorted_figures/occurrences_map_Siluriformes.
 Especie eurihalina que habita en las aguas costeras de la mayoría de las regiones tropicales y subtropicales del mundo, encontrándoselo frecuentemente en ambientes estuarinos y de agua dulce. En el área de estudio, existe un único registro: dos ejemplares capturados en Chiloé que le hicieron llegar a Germán Pequeño, autoridad chilena en taxonomía de peces, quien los identificó y los preservó en su colección posteriormente destruida en el incendio de 2007 del ex-Instituto de Zoología de la Universidad Austral de Chile, Valdivia (Germán Pequeño, com. pers. 2025).  
 
 
-### Animación histórica   
-Finalmente, se puede apreciar en una gráfica animada un recuento histórico de la investigación ictiológica en la Patagonia (archivo suplementario, `AtlasIctioPat_anim_NatInv.gif`).   
+<!-- ## Tareas pendientes   -->
 
+<!-- Otros casos indudablemente involucran especies mal identificadas. Por ejemplo, las tres especies de *Aplochiton* están profusamente confundidas en la literatura^[Alò, D., Correa, C., Arias, C., and Cárdenas, L. 2013. Diversity of Aplochiton fishes (Galaxiidea) and the taxonomic resurrection of A. marinus. PLoS ONE 8: e71577. doi: 10.1371/journal.pone.0071577.]. La confusión  también se extiende a la incorrecta identificación de muchos especímenes de museo,  de modo que un número de registros aquí incluidos deben ser corregidos según un estudio en preparación^[Correa and Boisjoly, unpublished). Estas confusiones son relevantes porque las tres especies de Aplochiton difieren en  su historia de vida, nicho ecológico y estructura genética poblacional.      -->
 
-## Tareas pendientes  
+<!-- Los pejerreyes (Atherinopsidae y Atherinidae) y peladillas (Galaxiidae, Aplochiton) son grupos que hay que revisar en detalle, ojalá con la ayuda de expertos en su sistemática. Así, algunas de las ocurrencias reportadas, sobre todo aquellas que poseen respaldo gráfico o material, podrán ser rectificadas en cado de errores de identificación. En algunos casos  será necesario conducir estudios de campo para  delimitar las zonas de distribución de especies. -->
 
-Dentro de las tareas pendientes, queda  examinar en mayor detalle un número de registros dudosos de especies y familias, así como una interpretación narrativa y gráfica de su distribución.  
-
- 
-
-Otros casos pueden contener errores de identificación taxonómica o de ubicación geográfica de ocurrencias. Por ejemplo,  la familia Poeciliidae representada por *Gambusia holbrooki* y *Gambusia affinis*, dos invasores casi cosmopolitas comunes en el centro sur ce Chile, interesantemente no se encontraron dentro del área de estudio, salvo por dos registros que podrían ser falsos positivos.  
-Otros casos indudablemente involucran especies mal identificadas. Por ejemplo, las tres especies de *Aplochiton* están profusamente confundidas en la literatura^[Alò, D., Correa, C., Arias, C., and Cárdenas, L. 2013. Diversity of Aplochiton fishes (Galaxiidea) and the taxonomic resurrection of A. marinus. PLoS ONE 8: e71577. doi: 10.1371/journal.pone.0071577.]. La confusión  también se extiende a la incorrecta identificación de muchos especímenes de museo,  de modo que un número de registros aquí incluidos deben ser corregidos según un estudio en preparación^[Correa and Boisjoly, unpublished). Estas confusiones son relevantes porque las tres especies de Aplochiton difieren en  su historia de vida, nicho ecológico y estructura genética poblacional.     
-
-Los pejerreyes (Atherinopsidae y Atherinidae) y peladillas (Galaxiidae, Aplochiton) son grupos que hay que revisar en detalle, ojalá con la ayuda de expertos en su sistemática. Así, algunas de las ocurrencias reportadas, sobre todo aquellas que poseen respaldo gráfico o material, podrán ser rectificadas en cado de errores de identificación. En algunos casos  será necesario conducir estudios de campo para  delimitar las zonas de distribución de especies.
-
-Por otra parte queda pendiente una evaluación caso a caso de duplicados.
+<!-- Por otra parte queda pendiente una evaluación caso a caso de duplicados. -->
 
 
 
 ## Perspectivas  
 
 Una vez terminado el *Atlas Ictiológico de la Patagonia Occidental*, este servirá para producir mapas predictivos de biodiversidad de peces, examinar  relaciones ecológicas y funcionales incluyendo el impacto de la introducción de los salmónidos, y orientar futuras prospecciones ictiológicas. Por ejemplo, los resultados preliminares revelan una gran brecha de información  sobre biodiversidad en el suroeste del área de estudio. Es urgente explorar este territorio con ríos, lagos y mallines costeros ubicados entre las penínsulas y archipiélagos más lluviosos del mundo. Este es un territorio aún prístino, y nuestro atlas sugiere que aquí podrían existir valiosos refugios de biodiversidad que es preciso documentar y proteger en cuanto antes.  
+
 
 # Información de sesión en R  
 
