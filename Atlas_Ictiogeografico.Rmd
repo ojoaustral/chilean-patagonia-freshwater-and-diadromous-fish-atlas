@@ -861,7 +861,8 @@ Se seleccionaron las columnas con información relevante y se homologaron con el
 metaDB.CC.filtered <- metaDB.CC.filtered %>%
     select(Species_ID ,decimalLongitude, decimalLatitude, Site_Name, Species, year, eventDate, bibliographicCitation, eventRemarks)
 
-colnames(metaDB.CC.filtered) <- recode(colnames(metaDB.CC.filtered), 
+colnames(metaDB.CC.filtered) <- 
+  recode(colnames(metaDB.CC.filtered), 
       `Species_ID` = "occurrenceID",
       `decimalLongitude` = "decimalLongitude", 
       `decimalLatitude` = "decimalLatitude", 
@@ -2391,7 +2392,8 @@ df <- df %>% mutate(eventDate = gsub("\\\\+", "/", eventDate)) %>%
              mutate(eventDate = gsub("/+", "/", eventDate))
              
 # Fix a few dates with odd formats  by keeping only the first date 
-# df %>% filter(nchar(eventDate)>10 & nchar(eventDate)<14) %>% distinct(eventDate) %>% pull() %>% dput()
+# df %>% filter(nchar(eventDate)>10 & nchar(eventDate)<14) %>% 
+# distinct(eventDate) %>% pull() %>% dput()
 
 bad <- c("1935-02-05/09", "1966-08-09/10", 
          "1994-07-18/22", "1995-04-22/24", 
@@ -2400,7 +2402,8 @@ df <- df %>% mutate(eventDate = if_else(eventDate %in% bad,
       substr(eventDate, 1, 10), eventDate))
 
 # Reformat dates such as 11-20-1963 to 1963-11-20  
-# df %>% filter(!is.na(eventDate) & !grepl("^\\d{4}", eventDate)) %>% distinct()
+# df %>% filter(!is.na(eventDate) & !grepl("^\\d{4}", eventDate)) %>% 
+# distinct()
 
 df <- df %>% mutate(eventDate = str_replace(eventDate,
           "^(\\d{1,2})-(\\d{1,2})-(\\d{4})$", "\\3-\\1-\\2") )
@@ -3819,7 +3822,6 @@ Se confirmó que todas las variantes de `scientificName` estuviesen contenidas e
 tmp <- unique(X$scientificName)
 all(tmp %in% ScN$scientificName_Old) 
 
-
 ```
 
 ```{r, include=F, eval=F}
@@ -3836,19 +3838,21 @@ taxonomic.df <- cbind(tmp, taxonomic.df)
 
 # Depending on the output above, some fields below may be missing and need to be silenced. Paste the resulting table to complement AtlasIctiogeográfico_list of taxa_annotated.csv 
     tmp2 <- taxonomic.df %>% 
-       select(usageKey,	scientificName,	canonicalName,	rank,	status,	confidence,	matchType,	kingdom,	phylum,	order,	family, kingdomKey,	phylumKey,	orderKey,	familyKey,	#synonym, 
-              verbatim_name,	verbatim_rank,	genus,	species,	genusKey,
-            speciesKey ,	#acceptedUsageKey, classKey,	class
-             )
+       select(usageKey,	scientificName,	
+              canonicalName,	rank,	status,	
+              confidence,	matchType,	
+              kingdom,	phylum,	order,	family, genus,	species,
+              kingdomKey,	phylumKey,	orderKey,	familyKey, genusKey, speciesKey,
+              verbatim_name, verbatim_rank
+              )
 tmp2 <- cbind(scientificName_Old = tmp, tmp2)    
     
 write.table(tmp2, file = "clipboard", fileEncoding = "UTF-8", row.names = F, sep=",")
 
 ```
 
-Finalmente, se reemplazó los nombres científicos de la base de datos consolidada por los nombres científicos estandarizados. Tal como en la lista taxonómica, se guardó un respaldo del nombre científico original en una nueva columna llamada `scientificName_Old`.   
 
-<!-- [**HERE**, `scientificName_Old` could actually go to DwC:verbatim_name, but I'm unsure if this field is already in good use for some records].      -->
+Finalmente, se reemplazó los nombres científicos de la base de datos consolidada por los nombres científicos estandarizados. Tal como en la lista taxonómica, se guardó un respaldo del nombre científico original en una nueva columna llamada `scientificName_Old`.   
 
 Además se asignaron los grupos taxonómicos superiores a cada taxón observado (Reino, Orden, Familia, Genero). Clase se omitió para los peces huesudos (ver capítulo *Listado taxonómico de peces*). Una lista de taxa encontrados y su taxonomía se guardó en disco duro `Output_AtlasIctiogeográfico_standardized_taxa_list.csv`.
 
@@ -3858,9 +3862,9 @@ Primero, se excluyeron 28 registros de taxa no informativos.
 # Identify cases with missing scientificName 
 # X %>% filter( is.na(scientificName)) %>% select( scientificName_Old)  %>% distinct()
 
-X <- X[!(X$scientificName %in%  c("", "Actinopterygii", "Notothenioidei", "Amphilophus citrinellus × Vieja melanurus")), ] 
-
-
+X <- X[!(X$scientificName %in%  
+           c("", "Actinopterygii", "Notothenioidei", 
+             "Amphilophus citrinellus × Vieja melanurus")), ] 
 ```
 
 
@@ -3880,11 +3884,13 @@ taxonomy <- ScN %>%
     order,
     family,
     genus,
-    species
-  ) %>% distinct() %>% arrange(order, family, genus, scientificName_new)
+    species,
+    usageKey) %>% 
+  distinct() %>% 
+  arrange(order, family, genus, scientificName_new)
+```
 
-
-# Remove taxonomy columns to fully replace/update
+```{r}
 X <- X %>% select(-any_of(c(
       "canonicalName",
       "taxonRank",
@@ -3894,22 +3900,31 @@ X <- X %>% select(-any_of(c(
       "family",
       "genus",
       "species"))) %>%
-    # Keep original scientificName for matching
-  mutate(scientificName_Old = scientificName) %>%
-    # Join taxonomy info
+  mutate(scientificName_Old = scientificName,
+         verbatimIdentification = 
+           ifelse( (is.na(verbatimIdentification) | 
+                      verbatimIdentification == ""), 
+                   NA, 
+                   verbatimIdentification)) %>%
   left_join(taxonomy, by = "scientificName_Old") %>%
-    # Update scientificName if a new one is available
-  mutate(scientificName = coalesce(scientificName_new, scientificName)) %>%
-    # Drop helper column
+  mutate(
+    scientificName = coalesce(scientificName_new, scientificName),
+    verbatimIdentification = if_else(
+      !is.na(scientificName_new) & 
+        scientificName_new != scientificName_Old &
+        is.na(verbatimIdentification),  
+      scientificName_Old,
+      verbatimIdentification
+    )
+  ) %>%
   select(-scientificName_new)
 
-
 # taxcheck <- X %>%
-#   select(scientificName_Old, scientificName, canonicalName, taxonRank,
+#   select(scientificName_Old, verbatimIdentification,
+# scientificName, canonicalName, taxonRank,
 #     kingdom, phylum, order, family, genus, species) %>%
 #   distinct() %>%
 #   arrange(scientificName)
-
 ```
 
 
@@ -3931,7 +3946,8 @@ rm(list=ls()[!ls()%in%c("DwC",
                         "study.area_coords",
                         "poly",
                         "sp_poly",
-                        "X"
+                        "X",
+                        "taxonomy"
                         )
              ]
    )
@@ -3985,6 +4001,7 @@ rm(list=ls()[!ls()%in%c("DwC",
                         "poly",
                         "sp_poly",
                         "X",
+                        "taxonomy",
                         "X.filtered")
              ]
    )
@@ -4166,6 +4183,7 @@ rm(list=ls()[!ls()%in%c("DwC",
                         "poly",
                         "sp_poly",
                         "X",
+                        "taxonomy",
                         "X.filtered",
                         "X.filtered.dedup")
              ]
@@ -4464,6 +4482,7 @@ rm(list=ls()[!ls()%in%c("DwC",
                         "poly",
                         "sp_poly",
                         "X",
+                        "taxonomy",
                         "X.filtered",
                         "X.filtered.dedup",
                         "X.filtered.dedup.revised")
@@ -4728,6 +4747,7 @@ rm(list=ls()[!ls()%in%c("DwC",
                         "poly",
                         "sp_poly",
                         "X",
+                        "taxonomy",
                         "X.filtered",
                         "X.filtered.dedup",
                         "X.filtered.dedup.revised")
@@ -4766,6 +4786,8 @@ stopifnot(sum(idx) == length(misidentified_ids))
 X.filtered.dedup.revised$canonicalName[idx] <- "Hatcheria macraei"
 X.filtered.dedup.revised$scientificName[idx] <- "Hatcheria macraei (Girard, 1855)"
 X.filtered.dedup.revised$identifiedBy[idx] <- "Gloria Arratia"
+X.filtered.dedup.revised$usageKey[idx] <- "2342955"
+X.filtered.dedup.revised$taxonKey[idx] <- "2342955"
 
 # Build Identification text by occurrenceID
 new_identifications <- c(
@@ -4828,10 +4850,11 @@ rm(idx)
 idx <- X.filtered.dedup.revised$prim_key %in% 
   c("agui | MAguilar.Lit.Review.906")
 # Exclude from database two duplicated and misidentified records
-X.filtered.dedup.revised$verbatimScientificName[idx] <- X.filtered.dedup.revised$scientificName[idx]
+X.filtered.dedup.revised$verbatimIdentification[idx] <- X.filtered.dedup.revised$scientificName[idx]
 X.filtered.dedup.revised$canonicalName[idx]  <- "Aplochiton marinus"
 X.filtered.dedup.revised$scientificName[idx] <- "Aplochiton marinus Eigenmann, 1928"
-
+X.filtered.dedup.revised$taxonKey[idx]       <- "2410622" 
+X.filtered.dedup.revised$usageKey[idx]        <- "2410622"
 rm(idx)
 ```
 
@@ -4842,14 +4865,16 @@ rm(idx)
 # Locate the problematic taxon  
 idx <- X.filtered.dedup.revised$canonicalName %in% "Atherinidae"
 
-# Keep the old taxonomic identification in verbatimScientificName
-X.filtered.dedup.revised$verbatimScientificName[idx] <- X.filtered.dedup.revised$scientificName[idx]
+# Keep the old taxonomic identification in verbatimIdentification
+X.filtered.dedup.revised$verbatimIdentification[idx] <- X.filtered.dedup.revised$scientificName[idx]
 
 # Assign the new identification
 X.filtered.dedup.revised$scientificName[idx] <- "Atherinopsidae"
 X.filtered.dedup.revised$canonicalName[idx]  <- "Atherinopsidae"
 X.filtered.dedup.revised$family[idx]         <- "Atherinopsidae"
 X.filtered.dedup.revised$familyKey[idx]      <- "2957"
+X.filtered.dedup.revised$usageKey[idx]       <- "2957"
+X.filtered.dedup.revised$taxonKey[idx]       <- "2957"
 
 ```
 
@@ -4860,14 +4885,15 @@ X.filtered.dedup.revised$familyKey[idx]      <- "2957"
 idx <- X.filtered.dedup.revised$canonicalName == "Basilichthys australis"
 
 # Keep a record of the original identification
-X.filtered.dedup.revised$verbatimScientificName[idx] <- X.filtered.dedup.revised$scientificName[idx]
+X.filtered.dedup.revised$verbatimIdentification[idx] <- X.filtered.dedup.revised$scientificName[idx]
 
 # Update identification 
 X.filtered.dedup.revised$scientificName[idx] <- 
        "Basilichthys microlepidotus (Jenyns, 1841)"
 X.filtered.dedup.revised$canonicalName[idx]  <- 
        "Basilichthys microlepidotus"
-
+X.filtered.dedup.revised$taxonKey[idx]  <- "2412258"
+X.filtered.dedup.revised$usageKey[idx]  <- "2412258"
 ```
 
 
@@ -4881,13 +4907,15 @@ Dados estos antecedentes, ambos registros fueron reasignados a *Odontesthes hatc
 idx <- X.filtered.dedup.revised$canonicalName == "Odontesthes bonariensis"
 
 # Keep a record of the original identification
-X.filtered.dedup.revised$verbatimScientificName[idx] <- X.filtered.dedup.revised$scientificName[idx]
+X.filtered.dedup.revised$verbatimIdentification[idx] <- X.filtered.dedup.revised$scientificName[idx]
 
 # Update identification 
 X.filtered.dedup.revised$scientificName[idx] <- 
        "Odontesthes hatcheri (Eigenmann, 1909)"
 X.filtered.dedup.revised$canonicalName[idx]  <- 
        "Odontesthes hatcheri"
+X.filtered.dedup.revised$taxonKey[idx]  <- "2412392"
+X.filtered.dedup.revised$usageKey[idx]  <- "2412392"
 
 ```
 
@@ -4900,6 +4928,14 @@ X.filtered.dedup.revised <- X.filtered.dedup.revised %>%
   filter( !(canonicalName == "Salvelinus namaycush" & as.numeric(year) == 2008 ))
 
 ```
+
+***Oncorhynchus nerka*** El salmón sockeye fue introducido en Chile (1904 - 1930) y Argentina (1904 - 1910) en la primera mitad del siglo pasado, y nunca se constató su aclimatación [@basultoLargoViajeSalmones2003].  Se encontró un registro proveniente de un estudio de impacto ambiental en Lago Riesco, cerca de Puerto Aysén, en el año 2000; sin embargo, esta observación aislada sin respaldo material se consideró improbable, pudiéndose tratar de otra especie de salmón sembrado o escapado en la zona. No estamos al tanto de siembras ni cultivos de *O. nerka* en la región de Aysén. Este registro dudoso fue excluido.
+
+```{r}
+X.filtered.dedup.revised <- X.filtered.dedup.revised %>% 
+  filter( !(canonicalName == "Oncorhynchus nerka" & as.numeric(year) == 2000 ))
+```
+
 
 ***Odontesthes humensis***, único registro antiguo 1872 de ejemplar capturado en el mar. Probable error en su identificación taxonómica. Esta especie se distribuye mucho más al norte Río De La Plata, Argentina, Río Negro, Uruguay.    
 ```{r}
@@ -5115,7 +5151,7 @@ Se corrigió una identificación de especie (ver sección *Revisión de taxa imp
 
 ```{r}
 idx <- MB$canonicalName == "Odontesthes bonariensis"
-MB$verbatimScientificName[idx] <- MB$scientificName[idx]
+MB$verbatimIdentification[idx] <- MB$scientificName[idx]
 MB$scientificName[idx] <- 
        "Odontesthes hatcheri (Eigenmann, 1909)"
 MB$canonicalName[idx]  <- 
@@ -5141,6 +5177,7 @@ rm(list=ls()[!ls()%in%c("DwC",
                         "poly",
                         "sp_poly",
                         "X",
+                        "taxonomy",
                         "X.filtered",
                         "X.filtered.dedup",
                         "X.filtered.dedup.revised")
@@ -5149,59 +5186,111 @@ rm(list=ls()[!ls()%in%c("DwC",
 
 ```
 
+## Manejo de columnas  
 
-## Diagnóstico y eliminación de columnas vacías   
+### Código identificador taxonómico   
 
-Como legado de la juntura de muchas bases de datos, la frecuencia de uso de cada variable (columna) en la base de datos final fue muy variables, y se solo se eliminaron las columnas vacías. En la Tabla \ref{tab:columnUsage} se aprecia la frecuencia de uso de todas las columnas retenidas.      
+Actualizar `taxonRank` y `taxonID` mediante vinculación con la taxonomía backbone de GBIF. Este paso ya había sido realizado en gran medida, pero se repite para asegurar consistencia después de algunas reasignaciones taxonómicas, y se implementa URL.  
 
-```{r }
+```{r}
+taxonomy <- taxonomy %>% filter(IncludePewProAP == 1) %>% 
+  select(canonicalName, taxonRank, usageKey) %>% 
+  distinct() %>% 
+  arrange(canonicalName)
 
-# Calculate non-NA frequency per column
+tmp <- taxonomy[
+    match(X.filtered.dedup.revised$canonicalName, taxonomy$canonicalName),
+    c("taxonRank", "usageKey")] %>% 
+  mutate(taxonID = ifelse(!is.na(usageKey), 
+                          paste0("https://www.gbif.org/species/", 
+                                 usageKey), 
+                          NA), .keep = "unused")
+
+X.filtered.dedup.revised <- X.filtered.dedup.revised %>%
+  select(-any_of(c("taxonRank", "taxonID"))) %>%   
+  bind_cols(tmp) 
+
+rm(tmp)
+```
+
+### Diagnóstico y eliminación de columnas vacías   
+
+Como legado de la juntura de muchas bases de datos, la frecuencia de uso de cada variable (columna) en la base de datos final fue muy variables. Se reordenaron las columnas  según su frecuencia de uso y se eliminaron las columnas vacías, así como la mayoría de las columnas que no corresponden al DwC. En la Tabla \ref{tab:columnUsage} se aprecia la frecuencia de uso de todas las columnas retenidas.      
+
+Resumir la frecuencia de uso de las columnas y reordenarlas según tasa de llenado decreciente.  
+
+```{r}
+# Summarise column completeness and reorder columns by decreasing fill rate
 column_usage <- data.frame(
-  column = names(X.filtered.dedup.revised),
+  column   = names(X.filtered.dedup.revised),
   n_non_na = colSums(!is.na(X.filtered.dedup.revised)),
-  n_total = nrow(X.filtered.dedup.revised)
+  n_total  = nrow(X.filtered.dedup.revised)
 ) %>%
   mutate(
     pct_non_na = round(100 * n_non_na / n_total, 1),
-    n_na = n_total - n_non_na
+    n_na       = n_total - n_non_na
   ) %>%
   arrange(desc(n_non_na))
 
-# Summary statistics
-cat("\nSummary statistics:\n")
-cat("Columns with 100% coverage:", sum(column_usage$pct_non_na == 100), "\n")
-cat("Columns with >50% coverage:", sum(column_usage$pct_non_na > 50), "\n")
-cat("Columns with <10% coverage:", sum(column_usage$pct_non_na < 10), "\n")
-cat("Completely empty columns:", sum(column_usage$n_non_na == 0), "\n")
+# Reorder columns from most to least complete
+X.filtered.dedup.revised <- X.filtered.dedup.revised %>%
+  select(all_of(column_usage$column))
+
 ```
+
+De un total de `r nrow(column_usage)` columnas, 
+`r sum(column_usage$pct_non_na == 100)` tienen cobertura del 100%, 
+`r sum(column_usage$pct_non_na > 50)` tienen más del 50% de cobertura, 
+`r sum(column_usage$pct_non_na < 10)` tienen menos del 10%, y 
+`r sum(column_usage$n_non_na == 0)` están completamente vacías.
+
+
+Mantener solo columnas compatibles con DwC, más algunas columnas clave del proyecto o para trazabilidad.   
+```{r}
+# Keep DwC-compliant columns plus project-specific identifiers
+keep.cols <- unique(c(
+  names(X.filtered.dedup.revised)[names(X.filtered.dedup.revised) %in% DwC$`Darwin Core Terms (DwC)`],
+  c("prim_key", "canonicalName", "data_source",
+    "uuid", "gbifID", "datasetKey", "taxonKey")
+))  
+
+n_before <- ncol(X.filtered.dedup.revised)
+
+# Drop all non-DwC, non-essential columns; any_of() skips already-absent columns
+X.filtered.dedup.revised <- X.filtered.dedup.revised %>%
+  select(any_of(keep.cols))
+
+```
+
+De `r n_before` columnas, se eliminaron `r n_before - ncol(X.filtered.dedup.revised)`. La tabla final tiene `r ncol(X.filtered.dedup.revised)` columnas. 
 
 \newpage 
-```{r columnUsage, echo=FALSE}
-column_usage %>% filter(n_non_na != 0) %>% 
+```{r columnUsage, echo=FALSE, warning=FALSE}
+column_usage %>% 
+  filter(n_non_na != 0) %>%
+  mutate(kept = if_else(column %in% keep.cols, "kept", "dropped")) %>%
+  arrange(desc(n_non_na)) %>%
   kable(
     row.names = FALSE,
-    caption = "Frecuancia de uso por columna: frecuencia de valores no NA. Las columnas enteramente vacias fueron excluidas.",
-    booktabs = TRUE,
+    caption   = "Frecuencia de uso por columna: frecuencia de valores no NA. Se indica si cada columna fue retenida o excluida del conjunto de datos final.",
+    booktabs  = TRUE,
     longtable = TRUE,
-    col.names = c("Column", "Non-NA Count", "Total Rows", "% Non-NA", "NA Count")
+    col.names = c("Column", "Non-NA Count", "Total Rows", "% Non-NA", "NA Count", "Status")
   ) %>%
   kable_styling(
-    latex_options = c("striped", "scale_down", "condensed"),
-    font_size = 10,
-    full_width = FALSE
+    latex_options = c("striped", "scale_down", "condensed", "repeat_header"),
+    font_size     = 10,
+    full_width    = FALSE
   ) %>%
-  row_spec(0, bold = TRUE)
+  row_spec(0, bold = TRUE) %>%
+  row_spec(which(column_usage %>% 
+                   filter(n_non_na != 0) %>% 
+                   mutate(kept = if_else(column %in% keep.cols, "kept", "dropped")) %>%
+                   arrange(desc(n_non_na)) %>%
+                   pull(kept) == "dropped"),
+           color = "gray")
 ```
 
-
- 
-```{r}
-col.to.delete <-  column_usage %>% filter(n_non_na == 0) %>% pull(column)
-X.filtered.dedup.revised <- X.filtered.dedup.revised %>% select( !all_of(col.to.delete) )
-cat("Se eliminaron", sum(column_usage$n_non_na == 0), "columnas vacias.")  
-
-```
 
 ```{r, include=FALSE}
 rm(list=ls()[!ls()%in%c("DwC",
@@ -5213,6 +5302,7 @@ rm(list=ls()[!ls()%in%c("DwC",
                         "poly",
                         "sp_poly",
                         "X",
+                        "taxonomy",
                         "X.filtered",
                         "X.filtered.dedup",
                         "X.filtered.dedup.revised")
@@ -5222,10 +5312,11 @@ rm(list=ls()[!ls()%in%c("DwC",
 ```
 
 
+
 ## Filtrado área de estudio  
 
 
-Si bien cada conjunto de datos fue filtrado previamente par incluir solo datos dentro del área de estudio, algunas correcciones posteriores resultaron en ocurrencias fuera del área de estudios.  
+Si bien cada conjunto de datos fue filtrado previamente para incluir solo datos dentro del área de estudio, algunas correcciones posteriores resultaron en ocurrencias fuera del área de estudios.  
 
 Se aplicó el filtro espacial para extraer las ocurrencias dentro del área de estudio.  
 
@@ -5233,11 +5324,12 @@ Se aplicó el filtro espacial para extraer las ocurrencias dentro del área de e
 ```{r}
 # 1. Read the polygon
 shapefile_AE_Simp <- st_read(
-  "input_parameters/study_area/Study Area Polygon Pacific and Binational_Simp.shp",  quiet = TRUE)
+  "input_parameters/study_area/Study Area Polygon Pacific and Binational_Simp.shp",  
+  quiet = TRUE)
 shapefile_AE_Simp <- st_transform(shapefile_AE_Simp, crs = 4326)
 
 X_all <- X.filtered.dedup.revised %>% 
-  mutate(decimalLatitude  = as.numeric(decimalLatitude) , 
+  mutate(decimalLatitude  = as.numeric(decimalLatitude),
          decimalLongitude = as.numeric(decimalLongitude))
 
 # 2. Convert X to sf points
@@ -5296,6 +5388,9 @@ rm(list=ls()[!ls()%in%c("DwC",
 
 ```
 
+```{r}
+X.filtered.dedup.revised %>% filter(is.na(taxonRank)) %>% select(prim_key, canonicalName)
+```
 
 ## Respaldo  
 
@@ -5321,7 +5416,7 @@ X.filtered.dedup.revised <- read.csv("./outputs_global_analyses/AtlasIctio2026_D
 ```
 
 
-El *Atlas Ictiogeográfico de la Patagonia Occidental* reunió un total de `r nrow(X.filtered.dedup.revised)` ocurrencias de peces dulceacuícolas, estuarinos y diádromos, registradas en el período `r range(X.filtered.dedup.revised$year, na.rm=T)`. No se incluyeron registros de peces en cautiverio o siendo liberados, sino solo aquellos registrados en libertad en la naturaleza. La información se consolidó a partir de doce conjuntos de datos incluyendo datos empíricos de primera mano, datos asociados a colecciones de museos del mundo, revisiones de literatura científica y gris, reportes de resultados de pesca de investigación, y reportes de ocurrencias basados en ciencia ciudadana. Naturalmente, varios de estos conjuntos de datos se solaparon entre sí por lo que se identificaron y removieron miles de registros duplicados (`r (dup.out <- nrow(X.filtered[X.filtered$duplicated_CC,]) - nrow(X.filtered.dedup.revised[X.filtered.dedup.revised$duplicated_CC,]))` (`r round(100* dup.out/nrow(X.filtered))`%)).  
+El *Atlas Ictiogeográfico de la Patagonia Occidental* reunió un total de `r nrow(X.filtered.dedup.revised)` ocurrencias de peces dulceacuícolas, estuarinos y diádromos, registradas en el período `r range(X.filtered.dedup.revised$year, na.rm=T)`. No se incluyeron registros de peces en cautiverio o siendo liberados, sino solo aquellos registrados en libertad en la naturaleza. La información se consolidó a partir de 13 conjuntos de datos incluyendo datos empíricos de primera mano, datos asociados a colecciones de museos del mundo, revisiones de literatura científica y gris, reportes de resultados de pesca de investigación, y reportes de ocurrencias basados en ciencia ciudadana. Naturalmente, varios de estos conjuntos de datos se solaparon entre sí por lo que se identificaron y removieron miles de registros duplicados (`r (dup.out <- nrow(X.filtered[X.filtered$duplicated_CC,]) - nrow(X.filtered.dedup.revised[X.filtered.dedup.revised$duplicated_CC,]))` (`r round(100* dup.out/nrow(X.filtered))`%)).  
 
 
 ## Contribución de los distintos conjuntos de datos  
@@ -5410,7 +5505,7 @@ ggsave("./outputs_global_analyses/assorted_figures/occurrences_map_by_data_sourc
 species.list <- X.filtered.dedup.revised %>% filter(taxonRank == "SPECIES") %>% count(order, family, scientificName, canonicalName) %>% arrange(desc(n))
 ```
 
-Se encontraron `r nrow(species.list)` especies pertenecientes a `r length(unique(species.list$family))` familias de peces dulceacuícolas, estuarinos y diádromos. Las especies más frecuentemente reportadas fueron la trucha marrón  *Salmo trutta* y la trucha arcoíris *Oncorhynchus mykiss*, ambas especies  invasivas (Figura \ref{fig:freqplotspecies}). Los peces nativos los más comunes fueron el puye grande *G. platei* e el puye *Galaxias maculatus*. La mayoría de las ocurrencias en los conjuntos de datos fueron identificados a nivel de especie, aunque algunos a nivel de género, familia y orden. Cabe destacar que toda la taxonomía de las ocurrencias fue estandarizada de acuerdo al *GBIF Backbone Taxonomy*.  
+Se encontraron `r nrow(species.list)` especies pertenecientes a `r length(unique(species.list$family))` familias de peces dulceacuícolas, estuarinos y diádromos. Las especies más frecuentemente reportadas fueron la trucha marrón  *Salmo trutta* y la trucha arcoíris *Oncorhynchus mykiss*, ambas especies  invasivas (Figura \ref{fig:freqplotspecies}). Los peces nativos los más comunes fueron el puye grande *G. platei* y el puye *Galaxias maculatus*. La mayoría de las ocurrencias en los conjuntos de datos fueron identificados a nivel de especie, aunque algunos a nivel de género, familia y orden. Cabe destacar que toda la taxonomía de las ocurrencias fue estandarizada de acuerdo al *GBIF Backbone Taxonomy*.  
 
 
 ```{r freqplotspecies, echo=F, fig.width=6, fig.asp=1.5, warning = FALSE, message = FALSE, fig.align = 'center', fig.cap="Distribución de frecuencia de ocurrencias por especie en la base de datos consolidada y revisada."}
@@ -5440,7 +5535,7 @@ ggsave("./outputs_global_analyses/assorted_figures/species_prevalence_in_DB.png"
 
 A continuación se presenta la distribución de ocurrencias y una breve síntesis organizada por familia presentando la lista de especies documentadas, y una breve síntesis destacando hallazgos relevantes o inusuales.  Para comenzar, se presenta la distribución geográfica de familias ordenadas por prevalencia total, integrando todo el rango de tiempo. Destacó la alta prevalencia y amplia distribución de la familia exótica Salmonidae (truchas, salmones y chars) en relación a todas las familias nativas (Figura \ref{fig:occfamplot}).  
 
-```{r occfamplot, echo=F, fig.width=6, fig.height=8, warning = FALSE, message = FALSE, fig.align = 'center', fig.cap="Distribución de ocurrencias de familias de peces."}
+```{r occfamplot, echo=F, fig.width=6.5, fig.height=8, warning = FALSE, message = FALSE, fig.align = 'center', fig.cap="Distribución de ocurrencias de familias de peces."}
 
 # Set bounding box for Chile and Argentina
   # chile_argentina_bbox <- c(-77, -57, -65, -40)
@@ -5516,7 +5611,9 @@ ggsave("./outputs_global_analyses/assorted_figures/occurrences_map_Galaxiidae.pn
 *Odontesthes hatcheri* (Eigenmann, 1909)  
 *Odontesthes mauleanum* (Steindachner, 1896)  
 
-Un desgloce de la familia Atherinopsidae reveló un número de especies de rara ocurrencia que ameritan un escrutinio más detallado (ej., *O. bonariensis*, *Menidia sp.*, *O. humensis*), específicamente para descartar falsos positivos. En otros casos, pareciera haber confusión en la identificación taxonómica de distintas especies. Esto puede deberse a cambios y discusiónes abiertas  sobre la taxonmía de pejerreyes en Sudamérica (ej., *O. mauleanum*, *O. australis*, *O. microlepidotus*). El pejerrey más característico  de la región transandina de la Patagonia austral fue *O. hatcheri*. Hacemos hincapié en transandino porque solo se encontró en cuencas que han sufrido capturas y reversos históricos en la dirección de flujo de sus aguas. Básicamente es una especie nativa de la vertiente atlántica que incursiona ocasionalmente hacia el pacífico vías cuencas transandinas (Figura \ref{fig:atherinplot}). 
+El pejerrey más característico  de la región transandina de la Patagonia austral fue *O. hatcheri*. Hacemos hincapié en transandino porque solo se encontró en cuencas que han sufrido capturas y reversos históricos en la dirección de flujo de sus aguas. Básicamente es una especie nativa de la vertiente atlántica que incursiona ocasionalmente hacia el pacífico vía cuencas transandinas. Por otra parte, en el extremo norte del área de estudio también se registraron especies típicas de la región centro y centro sur de Chile tales como *Basilichthys microlepidotus*, *Odontesthes brevianalis* y *O. maulaenum* (Figura \ref{fig:atherinplot}). Cabe destacar *B. autralis* se consideró sinónimo de *B. microlepidotus*  en este análisis [@velizGeneroBasilichthysTeleostei2012]. Por último, un raro registro de *O. bonariensis* en la cuenca del río Baker fue considerado improbable (ver *Revisión de taxa improbables o erróneos*) [@ruedaGeneticIntrogressionBetween2017].  
+
+ 
 
 ```{r atherinplot, echo=F, fig.width=7, fig.height=7, warning = FALSE, message = FALSE, fig.align = 'center', fig.cap="Distribución de ocurrencias de especies de la familia Atherinopsidae. Ocurrencias identificadas a nivel de género y familia fueron excluídas."}
 
@@ -5536,11 +5633,20 @@ ggsave("./outputs_global_analyses/assorted_figures/occurrences_map_Atherinopsida
        plot = last_plot(), width = 8, height = 11, dpi = 300)
 
 ```
+
+
+
 ### Percichthyidae  
 *Percichthys chilensis* Girard, 1855  
 *Percichthys laevis* (Jenyns, 1840)  
 *Percichthys melanops* Girard, 1855  
 *Percichthys trucha* (Valenciennes, 1833)  
+
+La taxonomía de de la familia Percichthyidae, y del género *Percichthys* en particular, no se encuentra del todo resuelta. Distintos estudios basados en evidencia morfológica [@Lopez-Arbarello2004, @Arratia2019] o molecular [@ruzzantePhylogeographyPercichthyidaePisces2006, @ruzzantePhylogeographyPhenotypicDiversification2011] difieren en el número de especies presentes en la Patagonia. 
+
+
+Recomendamos tratar los mapas de distribución a nivel de especies con cautela, y revisar las fuentes originales. Está fuera del alcance de este reporte abordar problemas complejos de identificación taxonómica, y en el el caso de las percas, nos limitamos a recaudar los datos disponibles y  cotejar la distribución a nivel de género. Las percas tienen una amplia distribución dentro del área de estudio, especialmente al norte de Magallanes, y son típicas de cuencas transandinas que han sufrido capturas hidrográficas históricas [@Ruzzante2020], similar al caso de *O. hatcheri* recién discutido.
+
 
 ```{r perchichplot, echo=F, fig.width=7, fig.height=7, warning = FALSE, message = FALSE, fig.align = 'center', fig.cap="Distribución de ocurrencias de especies de la familia Percichthyidae."}
 
@@ -5566,14 +5672,19 @@ ggsave("./outputs_global_analyses/assorted_figures/occurrences_map_Atherinopsida
 *Oncorhynchus kisutch* (Walbaum, 1792)  
 *Oncorhynchus masou* (Brevoort, 1856)  
 *Oncorhynchus mykiss* (Walbaum, 1792)  
-*Oncorhynchus nerka* (Walbaum, 1792)  
 *Oncorhynchus tshawytscha* (Walbaum, 1792)  
-*Salmo salar Linnaeus*, 1758  
-*Salmo trutta Linnaeus*, 1758  
+*Salmo salar* Linnaeus, 1758  
+*Salmo trutta* Linnaeus, 1758  
 *Salvelinus alpinus* (Linnaeus, 1758)  
-*Salvelinus fontinalis* (Mitchill, 1814)  
+*Salvelinus fontinalis* (Mitchill, 1814)    
 
-```{r salmonidaeplot, echo=F, fig.width=7, fig.height=7, warning = FALSE, message = FALSE, fig.align = 'center', fig.cap="Distribución de ocurrencias de especies de la familia introducida Salmonidae. Ocurrencias identificadas a nivel de género y familia fueron excluídas."}
+La familia Salmonidae, introducida profusamente desde el hemisferio norte durante el siglo XX, fue por lejos la familia más ampliamente representada y distribuida dentro del área de estudio. Su presencia abarca gran parte de las cuencas analizadas y refleja un proceso sostenido de introducción, establecimiento y expansión en la Patagonia. Debido a su condición de depredadores generalistas y competidores eficientes, los salmónidos introducidos tienen importantes impactos ecológicos sobre la ictiofauna nativa, incluyendo depredación, competencia por recursos, alteraciones en la estructura de las comunidades acuáticas y, en algunos casos, extirpación local de especies nativas.
+
+Algunos registros de Salmonidae corresponden a observaciones históricas asociadas a programas de siembra realizados durante las décadas de 1970 y 1980 [@basultoLargoViajeSalmones2003]. Varias de estas especies no han vuelto a ser observadas desde entonces, por lo que se asume que no lograron establecer poblaciones autosustentables y, en consecuencia, no se consideran especies asilvestradas dentro del área de estudio. Este sería el caso de *Salvelinus alpinus* y *Oncorhynchus keta*.
+
+En contraste, la mayoría de las especies restantes se consideran asilvestradas, con la excepción de *Salmo salar*. Los registros de esta última especie suelen atribuirse a ejemplares escapados desde centros de cultivo, y pese a su amplia distribución, existen diudas de que haya logrado establecer poblaciones autosustentables en la Patagonia.
+
+```{r salmonidaeplot, echo=F, fig.width=6.5, fig.height=6.5, warning = FALSE, message = FALSE, fig.align = 'center', fig.cap="Distribución de ocurrencias de especies de la familia introducida Salmonidae. Ocurrencias identificadas a nivel de género y familia fueron excluídas."}
 
 
 taxa <- species.list %>% filter(family == "Salmonidae") %>% pull(canonicalName)
@@ -5597,7 +5708,7 @@ ggsave("./outputs_global_analyses/assorted_figures/occurrences_map_Atherinopsida
 *Cheirodon interruptus* (Jenyns, 1842)  
 *Cheirodon australe* Eigenmann, 1928  
 
-La familia Characidae está distribuida en el norte de nuestra área de estudio, y representa remanentes de la influencia pasada de la fauna Brazílica en la región austral. Esta influencia también  es evidenciada por otras familias que aun persisten tal como Percichthyidae. Interesantement, la familia Cichlidae se encontró  en un hallazgo fósil dentro del area de estudio una vez más revelando esta afinidad con la fauna Brazílica. Este registro se excluyó  por tratarse de un fósil.  
+La familia Characidae está distribuida en el norte de nuestra área de estudio, y representa remanentes de la influencia pasada de la fauna Brazílica en la región austral. Esta influencia también  es evidenciada por otras familias que aun persisten tal como Percichthyidae. En esta línea, interesantement, la familia Cichlidae se encontró en un hallazgo fósil dentro del área de estudio, una vez más, revelando esta afinidad con la fauna Brazílica. Este registro se excluyó  por tratarse de un fósil.  
 
 El hallazgo de *Cheirodon interruptus* es particular. Se trata de la única ocurrencia registrada en el área de estudio por Brian Dyer y Cristian Correa, extendiendo substancialmente su distribución al sur de Sudamérica. En Chile es considerado una especie introducida, y es posible que también lo sea en el lugar de su captura. Su identificación taxonómica fue realizada por  Luiz R. Malabarba, autoridad mundial en sistemática de peces dulceacuícolas neotropicales.  
 
@@ -5609,21 +5720,27 @@ Especie invasiva ausente del área de estudio salvo por un registro en el extrem
 *Geotria australis* Gray, 1851  
 *Geotria macrostoma* (Burmeister, 1868)  
 
-La familia Geotriidae, y especialmente *Geotria australis* tiene una amplia distribución incluyendo toda la Patagonia, sin embargo  aquí reportamos el primer registro de un solo individuo de *Geotria macrostoma* en Chile, una especie previamente considerada endémica de Argentina. Recomendamos prestar especial atención para la correcta identificación y distinción de estas dos especies de lamprea cuya identificación es posible usando como criterio la disposición de sus aletas [@Riva-Rossi2020]. El registro aquí reportado proveniente de Tierra del Fuego fue colectado e identificado por Cristian Correa y Maryse Boisjoly basado en @Riva-Rossi2020, y confirmado por Francisco Neira, experto en taxonomía de lampreas australes (actualmente, el voucher se encuentra en la colección de Correa y Boisjoly).  Queda por verificar si este hallazgo fue fortuito o si efectivamente *Geotria macrostoma*  presenta poblaciones autosustentables en  cuencas que drenan hacia el Pacífico.   
+La lamprea de bolsa *Geotria australis* tiene una distribución casi panaustral en Chile, Argentina, Australia y Nueva Zelanda, y dentro del área de estudio en la Patagonia se encontró desde la región de Aysén hacia el norte. En este trabajo reportamos además el primer registro de *Geotria macrostoma* en la vertiente pacífica de Tierra del Fuego, basado en un único individuo (Figura \ref{fig:lampreyplot}). Este ejemplar fue colectado por Cristian Correa y Maryse Boisjoly, identificado siguiendo los criterios morfológicos propuestos por @Riva-Rossi2020, y posteriormente confirmado por Francisco Neira, experto en taxonomía de lampreas australes. El registro es relevante porque *G. macrostoma* se considera endémica de Argentina. Actualmente, el voucher se encuentra en la colección de Correa y Boisjoly.
+
+Dado que *G. australis* y *G. macrostoma* pueden distinguirse mediante caracteres externos, incluyendo la disposición de sus aletas [@Riva-Rossi2020], recomendamos prestar especial atención a la correcta identificación de ambas especies en futuros registros. Queda por verificar si el hallazgo de *G. macrostoma* en Chile corresponde a un evento fortuito o si la especie presenta poblaciones autosustentables en cuencas que drenan hacia el Pacífico.
 
 ### Mordaciidae  
 *Mordacia lapicida* (Gray, 1851)  
 
+La lamprea chilena *Mordacia lapicida* se distribuye desde el río Aconcagua (32º55’S) hasta la península de Brunswick, en Punta Arenas (53º39’S) [@Neira1984]. Aunque dentro del área de estudio su distribución potencial podría solaparse ampliamente con la de *Geotria spp*, los registros disponibles se concentran en el norte, principalmente en Chiloé y Chiloé continental (Figura \ref{fig:lampreyplot}).
 
+Cabe destacar que la mayoría de estos registros, muchos de ellos provenientes de estudios de impacto ambiental, no indican explícitamente el criterio de identificación utilizado ni cuentan con evidencia de respaldo, como secuencias genéticas, fotografías, especímenes de referencia (*vouchers*) o publicaciones revisadas por pares que permitan corroborar su determinación taxonómica. Aunque *M. lapicida*, *G. australis* y *G. macrostoma* pueden distinguirse mediante caracteres diagnósticos externos, incluyendo patrones dentarios y disposición de aletas, las tres especies pueden resultar semejantes para observadores no especializados. Por ello, parece prematuro interpretar patrones aparentes de distribución sin contar con registros de mayor calidad, trazabilidad y respaldo taxonómico.
 
-```{r lampreyplot, echo=F, fig.width=7, fig.height=7, warning = FALSE, message = FALSE, fig.align = 'center', fig.cap="Distribución de ocurrencias de especies de lampreas (orden Petromyzontiformes)."}
+Esta incertidumbre pone de manifiesto la necesidad de fortalecer la documentación de las lampreas en la región mediante muestreos enfocados, registros verificables, idealmente respaldados por material de referencia, imágenes diagnósticas o datos moleculares. Esto permitiría evaluar con mayor precisión su distribución real y mejorar la confiabilidad de los antecedentes utilizados en estudios biogeográficos y de conservación.
+
+```{r lampreyplot, echo=F, fig.width=4, fig.height=4, warning = FALSE, message = FALSE, fig.align = 'center', fig.cap="Distribución de ocurrencias de especies de lampreas (orden Petromyzontiformes)."}
 
 taxa <- species.list %>% filter(order == "Petromyzontiformes") %>%
   pull(canonicalName)
 
 data <- X.filtered.dedup.revised %>% filter(canonicalName %in% taxa) %>% mutate(canonicalName = factor(canonicalName, levels = taxa))
 
-map + geom_point(data = data, aes(x = decimalLongitude, y = decimalLatitude, , color=canonicalName), size = 2, alpha=0.3)+
+map + geom_point(data = data, aes(x = decimalLongitude, y = decimalLatitude, , color=canonicalName), size = 2, alpha=0.5)+
   geom_polygon(data = study.area_coords, 
     aes(x = lon, y = lat), color="black", fill=NA, alpha = 0.5, size=0.15)+
   scale_x_continuous(breaks = scales::breaks_pretty(n = 3))+
@@ -5642,21 +5759,30 @@ Es notable la existencia de un único registro de *Olivaichthys viedmensis* en l
 
 Procesos similares de reorganización postglacial del drenaje han afectado otras cuencas patagónicas y podrían explicar distribuciones disyuntas y aparentemente aisladas en Chile, como ocurre con *Odontesthes hatcheri* (Atherinopsidae).  
 
+Del género *Diplomystes* existe un único registro proveniente de un estudio de impacto ambiental en la cuenca del río Palena. Actualmente, las especies de este género se distribuyen en cuencas de drenaje Pacífico desde la cuenca del río Valdivia hacia el norte [@arratiaUnderstandingMorphologicalVariability2017]. Este registro resulta llamativo tanto por su carácter aislado como por encontrarse considerablemente fuera del área de distribución conocida para el género, pero fue imposible confirmar su correcta identificación por falta de respaldo material.   
 
 ### Trichomycteridae  
 *Trichomycterus areolatus* Valenciennes, 1846  
 
-```{r catfishplot, echo=F, fig.width=7, fig.height=7, warning = FALSE, message = FALSE, fig.align = 'center', fig.cap="Distribución de ocurrencias de especies de lampreas (orden Petromyzontiformes)."}
+
+```{r catfishplot, echo=F, fig.width=4, fig.height=4, warning = FALSE, message = FALSE, fig.align = 'center', fig.cap="Distribución de ocurrencias de especies de lampreas (orden Petromyzontiformes)."}
 
 taxa <- species.list %>% filter(order == "Siluriformes") %>%
   pull(canonicalName)
 
-data <- X.filtered.dedup.revised %>% filter(canonicalName %in% taxa) %>% mutate(canonicalName = factor(canonicalName, levels = taxa))
+data <- X.filtered.dedup.revised %>% 
+  filter(canonicalName %in% taxa) %>% 
+  mutate(canonicalName = factor(canonicalName, levels = taxa)) %>%
+  arrange(canonicalName == "Olivaichthys viedmensis")  # plot last
 
-map + geom_point(data = data, aes(x = decimalLongitude, y = decimalLatitude, , color=canonicalName), size = 2, alpha=0.3)+
+map + 
+  geom_point(data = data, 
+             aes(x = decimalLongitude, y = decimalLatitude, color = canonicalName), 
+             size = 2, alpha = 0.5) +
   geom_polygon(data = study.area_coords, 
-    aes(x = lon, y = lat), color="black", fill=NA, alpha = 0.5, size=0.15)+
-  scale_x_continuous(breaks = scales::breaks_pretty(n = 3))+
+               aes(x = lon, y = lat), 
+               color = "black", fill = NA, alpha = 0.5, size = 0.15) +
+  scale_x_continuous(breaks = scales::breaks_pretty(n = 3)) +
   theme(strip.text = element_text(size = 8))
 
 ggsave("./outputs_global_analyses/assorted_figures/occurrences_map_Siluriformes.png",
@@ -5667,6 +5793,7 @@ ggsave("./outputs_global_analyses/assorted_figures/occurrences_map_Siluriformes.
 
 ### Mugilidae  
 *Mugil cephalus* Linnaeus, 1758   
+
 Especie eurihalina que habita en las aguas costeras de la mayoría de las regiones tropicales y subtropicales del mundo, encontrándoselo frecuentemente en ambientes estuarinos y de agua dulce. En el área de estudio, existe un único registro: dos ejemplares capturados en Chiloé que le hicieron llegar a Germán Pequeño, autoridad chilena en taxonomía de peces, quien los identificó y los preservó en su colección posteriormente destruida en el incendio de 2007 del ex-Instituto de Zoología de la Universidad Austral de Chile, Valdivia (Germán Pequeño, com. pers. 2025).  
 
 
@@ -5687,13 +5814,6 @@ Los pejerreyes (Atherinopsidae y Atherinidae) y peladillas (Galaxiidae, Aplochit
 
 Por otra parte queda pendiente una evaluación caso a caso de duplicados.
 
-**Tareas específicas:**  
-- Revisar muestreos de Charles Darwin en Gore Sound.  
-- Revisar ocurrencias de salmónidos en Magallanes, 1930s.  
-- Revisar ocurrencias de salmónidos de ICLARM Magallanes (o como se llame) en que paticipó I. Vila.  
-- Revisar ocurrencias de salmónidos en Magallanes en 1980s.  
-- Revisar cual fue la contribución de VertNet; efectivamente registros nuevos?  
-- Buscar una cobertura geográfica de caminos, ojalá con año de apertura del tramo.  
 
 
 ## Perspectivas  
