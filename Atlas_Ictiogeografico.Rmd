@@ -3306,7 +3306,7 @@ FO_Liotta <- FO_Liotta %>%
 ```
 
 
-Los peces reportados por este conjunto de datos argentino dentro del área de estudio en cuencas binacionales y fiordos se presentan en la Tabla \ref{DBLPAtaxa}.  
+Los peces reportados por este conjunto de datos argentino dentro del área de estudio en cuencas binacionales y fiordos se presentan en la Tabla \ref{tab:DBLPAtaxa}.  
 
 ```{r DBLPAtaxa, echo=F, warning=FALSE, fig.pos='H'}
 tmp <- FO_Liotta %>% select(scientificName) %>% 
@@ -4899,9 +4899,9 @@ X.filtered.dedup.revised$usageKey[idx]  <- "2412258"
 
 ***Odontesthes bonariensis*** Se encontraron dos registros identificados como pejerrey argentino *Odontesthes bonariensis* en la cuenca del río Baker, una especie exótica en la región: uno proveniente de un estudio de impacto ambiental en el lago General Carrera/Buenos Aires y otro reportado por @zamaIntroductionAysenChile1984 en la Laguna Esmeralda. *O. bonariensis* ha sido ampliamante introducido en Argentina y Chile central, sin embargo no es común en  la Patagonia y múltiples campañas independientes en el lago General Carrera/Buenos Aires y en la Laguna Esmeralda han documentado, consistentemente, la presencia abundante de la especie nativa pejerrey patagónico *O. hatcheri*, pero no de *O. bonariensis*.
 
-Además, @zamaIntroductionAysenChile1984 no registraron *O. hatcheri* en la Laguna Esmeralda ni en otras localidades, lo que sugiere una posible confusión taxonómica entre ambas especies. Esta interpretación es consistente con un estudio genético posterior, que no encontró evidencia de poblaciones de *O. bonariensis* ni de hibridación introgresiva con *O. hatcheri* en cuatro sitios de la cuenca del río Baker [@ruedaGeneticIntrogressionBetween2017].
+Además, @zamaIntroductionAysenChile1984 no registraron *O. hatcheri* en la Laguna Esmeralda ni en otras localidades, lo que sugiere una posible confusión taxonómica entre ambas especies. Esta interpretación es consistente con un estudio genético posterior, que no encontró evidencia de poblaciones de *O. bonariensis* ni de hibridación introgresiva con *O. hatcheri* en cuatro sitios de la cuenca del río Baker [@Rueda2017].  
 
-Dados estos antecedentes, ambos registros fueron reasignados a *Odontesthes hatcheri* en la presente base de datos.
+Dados estos antecedentes, ambos registros fueron reasignados a *Odontesthes hatcheri* en la presente base de datos.  
 
 ```{r}
 idx <- X.filtered.dedup.revised$canonicalName == "Odontesthes bonariensis"
@@ -5610,7 +5610,7 @@ ggsave("./outputs_global_analyses/assorted_figures/occurrences_map_Galaxiidae.pn
 *Odontesthes hatcheri* (Eigenmann, 1909)  
 *Odontesthes mauleanum* (Steindachner, 1896)  
 
-El pejerrey más característico  de la región transandina de la Patagonia austral fue *O. hatcheri*. Hacemos hincapié en transandino porque solo se encontró en cuencas que han sufrido capturas y reversos históricos en la dirección de flujo de sus aguas. Básicamente es una especie nativa de la vertiente atlántica que incursiona ocasionalmente hacia el pacífico vía cuencas transandinas. Por otra parte, en el extremo norte del área de estudio también se registraron especies típicas de la región centro y centro sur de Chile tales como *Basilichthys microlepidotus*, *Odontesthes brevianalis* y *O. maulaenum* (Figura \ref{fig:atherinplot}). Cabe destacar *B. autralis* se consideró sinónimo de *B. microlepidotus*  en este análisis [@velizGeneroBasilichthysTeleostei2012]. Por último, un raro registro de *O. bonariensis* en la cuenca del río Baker fue considerado improbable (ver *Revisión de taxa improbables o erróneos*) [@ruedaGeneticIntrogressionBetween2017].  
+El pejerrey más característico  de la región transandina de la Patagonia austral fue *O. hatcheri*. Hacemos hincapié en transandino porque solo se encontró en cuencas que han sufrido capturas y reversos históricos en la dirección de flujo de sus aguas. Básicamente es una especie nativa de la vertiente atlántica que incursiona ocasionalmente hacia el pacífico vía cuencas transandinas. Por otra parte, en el extremo norte del área de estudio también se registraron especies típicas de la región centro y centro sur de Chile tales como *Basilichthys microlepidotus*, *Odontesthes brevianalis* y *O. maulaenum* (Figura \ref{fig:atherinplot}). Cabe destacar *B. autralis* se consideró sinónimo de *B. microlepidotus*  en este análisis [@velizGeneroBasilichthysTeleostei2012]. Por último, un raro registro de *O. bonariensis* en la cuenca del río Baker fue considerado improbable (ver *Revisión de taxa improbables o erróneos*) [@Rueda2017].  
 
  
 
