@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.10)  8 JUN 2026 15:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.10)  8 JUN 2026 20:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -855,7 +855,7 @@ LaTeX Font Warning: Font shape `OML/cmtt/m/it' undefined
 (Font)              using `OML/cmm/m/it' instead
 (Font)              for symbol `textgreater' on input line 600.
 
-<Atlas_Ictiogeografico_files/figure-latex/studyareaplot-1.pdf, id=715, 174.6525pt x 316.18124pt>
+<Atlas_Ictiogeografico_files/figure-latex/studyareaplot-1.pdf, id=720, 174.6525pt x 316.18124pt>
 File: Atlas_Ictiogeografico_files/figure-latex/studyareaplot-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/studyareaplot-1.pdf>
 Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/studyareaplot-1.pdf  used on input line 617.
@@ -884,7 +884,7 @@ LaTeX Font Info:    Font shape `OMS/cmtt/bx/n' in size <10.03749> not available
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [13]
-<Atlas_Ictiogeografico_files/figure-latex/CCdataplot-1.pdf, id=744, 174.6525pt x 316.18124pt>
+<Atlas_Ictiogeografico_files/figure-latex/CCdataplot-1.pdf, id=749, 174.6525pt x 316.18124pt>
 File: Atlas_Ictiogeografico_files/figure-latex/CCdataplot-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/CCdataplot-1.pdf>
 Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/CCdataplot-1.pdf  used on input line 799.
@@ -904,7 +904,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [16]
-<Atlas_Ictiogeografico_files/figure-latex/CCrevdata-1.pdf, id=781, 174.6525pt x 316.18124pt>
+<Atlas_Ictiogeografico_files/figure-latex/CCrevdata-1.pdf, id=786, 174.6525pt x 316.18124pt>
 File: Atlas_Ictiogeografico_files/figure-latex/CCrevdata-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/CCrevdata-1.pdf>
 Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/CCrevdata-1.pdf  used on input line 1080.
@@ -935,7 +935,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [21]
-<Atlas_Ictiogeografico_files/figure-latex/revaguilarplot-1.pdf, id=822, 174.6525pt x 316.18124pt>
+<Atlas_Ictiogeografico_files/figure-latex/revaguilarplot-1.pdf, id=827, 174.6525pt x 316.18124pt>
 File: Atlas_Ictiogeografico_files/figure-latex/revaguilarplot-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/revaguilarplot-1.pdf>
 Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/revaguilarplot-1.pdf  used on input line 1382.
@@ -952,7 +952,7 @@ l.1426
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [23]
-<Atlas_Ictiogeografico_files/figure-latex/MMAplot-1.pdf, id=850, 174.6525pt x 316.18124pt>
+<Atlas_Ictiogeografico_files/figure-latex/MMAplot-1.pdf, id=855, 174.6525pt x 316.18124pt>
 File: Atlas_Ictiogeografico_files/figure-latex/MMAplot-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/MMAplot-1.pdf>
 Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/MMAplot-1.pdf  used on input line 1591.
@@ -1086,7 +1086,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2183--2187
 
  []
 
-<Atlas_Ictiogeografico_files/figure-latex/SUBPESCAplot-1.pdf, id=920, 174.6525pt x 316.18124pt>
+<Atlas_Ictiogeografico_files/figure-latex/SUBPESCAplot-1.pdf, id=925, 174.6525pt x 316.18124pt>
 File: Atlas_Ictiogeografico_files/figure-latex/SUBPESCAplot-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/SUBPESCAplot-1.pdf>
 Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/SUBPESCAplot-1.pdf  used on input line 2224.
@@ -1125,7 +1125,7 @@ Overfull \hbox (16.38136pt too wide) in alignment at lines 2455--2475
  [] [] 
  []
 
-<Atlas_Ictiogeografico_files/figure-latex/subpesca2plot-1.pdf, id=964, 174.6525pt x 316.18124pt>
+<Atlas_Ictiogeografico_files/figure-latex/subpesca2plot-1.pdf, id=969, 174.6525pt x 316.18124pt>
 File: Atlas_Ictiogeografico_files/figure-latex/subpesca2plot-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/subpesca2plot-1.pdf>
 Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/subpesca2plot-1.pdf  used on input line 2488.
@@ -1154,7 +1154,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2652--2654
 
  []
 
-<Atlas_Ictiogeografico_files/figure-latex/inidarwinplot2-1.pdf, id=1002, 174.6525pt x 316.18124pt>
+<Atlas_Ictiogeografico_files/figure-latex/inidarwinplot2-1.pdf, id=1007, 174.6525pt x 316.18124pt>
 File: Atlas_Ictiogeografico_files/figure-latex/inidarwinplot2-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/inidarwinplot2-1.pdf>
 Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/inidarwinplot2-1.pdf  used on input line 2657.
@@ -1214,7 +1214,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3309--3310
 
  []
 
-<Atlas_Ictiogeografico_files/figure-latex/iDigBioplot-1.pdf, id=1061, 174.6525pt x 316.18124pt>
+<Atlas_Ictiogeografico_files/figure-latex/iDigBioplot-1.pdf, id=1066, 174.6525pt x 316.18124pt>
 File: Atlas_Ictiogeografico_files/figure-latex/iDigBioplot-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/iDigBioplot-1.pdf>
 Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/iDigBioplot-1.pdf  used on input line 3313.
@@ -1254,7 +1254,7 @@ Underfull \hbox (badness 5064) in paragraph at lines 3492--3496
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [52]
-<Atlas_Ictiogeografico_files/figure-latex/GBIFplot-1.pdf, id=1108, 174.6525pt x 316.18124pt>
+<Atlas_Ictiogeografico_files/figure-latex/GBIFplot-1.pdf, id=1113, 174.6525pt x 316.18124pt>
 File: Atlas_Ictiogeografico_files/figure-latex/GBIFplot-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/GBIFplot-1.pdf>
 Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/GBIFplot-1.pdf  used on input line 3565.
@@ -1294,7 +1294,7 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/it' in size <10.03749> not available
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [58]
-<Atlas_Ictiogeografico_files/figure-latex/iNaturalistplot-1.pdf, id=1161, 174.6525pt x 316.18124pt>
+<Atlas_Ictiogeografico_files/figure-latex/iNaturalistplot-1.pdf, id=1166, 174.6525pt x 316.18124pt>
 File: Atlas_Ictiogeografico_files/figure-latex/iNaturalistplot-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/iNaturalistplot-1.pdf>
 Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/iNaturalistplot-1.pdf  used on input line 4022.
@@ -1322,7 +1322,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4217--4226
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [62]
-<Atlas_Ictiogeografico_files/figure-latex/DBLPAplot-1.pdf, id=1214, 174.6525pt x 316.18124pt>
+<Atlas_Ictiogeografico_files/figure-latex/DBLPAplot-1.pdf, id=1219, 174.6525pt x 316.18124pt>
 File: Atlas_Ictiogeografico_files/figure-latex/DBLPAplot-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/DBLPAplot-1.pdf>
 Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/DBLPAplot-1.pdf  used on input line 4283.
@@ -1340,7 +1340,7 @@ Underfull \hbox (badness 1062) in paragraph at lines 4396--4401
 \OT1/cmtt/m/n/10 decimalLatitude\OT1/cmr/m/n/10 ) y excepto por unos pocos (ninguno de inter^^Ses) tam-poco hubo infor-maci^^Son en
  []
 
-<Atlas_Ictiogeografico_files/figure-latex/VertNetplot-1.pdf, id=1244, 174.6525pt x 316.18124pt>
+<Atlas_Ictiogeografico_files/figure-latex/VertNetplot-1.pdf, id=1249, 174.6525pt x 316.18124pt>
 File: Atlas_Ictiogeografico_files/figure-latex/VertNetplot-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/VertNetplot-1.pdf>
 Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/VertNetplot-1.pdf  used on input line 4413.
@@ -1370,7 +1370,7 @@ Overfull \hbox (4.12532pt too wide) in paragraph at lines 4513--4513
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [66]
-<Atlas_Ictiogeografico_files/figure-latex/totplot1-1.pdf, id=1277, 183.68625pt x 316.18124pt>
+<Atlas_Ictiogeografico_files/figure-latex/totplot1-1.pdf, id=1282, 183.68625pt x 316.18124pt>
 File: Atlas_Ictiogeografico_files/figure-latex/totplot1-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/totplot1-1.pdf>
 Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/totplot1-1.pdf  used on input line 4598.
@@ -1420,7 +1420,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [71]
-<Atlas_Ictiogeografico_files/figure-latex/unnamed-chunk-187-1.pdf, id=1318, 425.59pt x 251.94125pt>
+<Atlas_Ictiogeografico_files/figure-latex/unnamed-chunk-187-1.pdf, id=1323, 425.59pt x 251.94125pt>
 File: Atlas_Ictiogeografico_files/figure-latex/unnamed-chunk-187-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/unnamed-chunk-187-1.pdf>
 Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/unnamed-chunk-187-1.pdf  used on input line 4948.
@@ -1564,12 +1564,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [93]
-<Atlas_Ictiogeografico_files/figure-latex/freqperdatasetplot-1.pdf, id=1476, 415.5525pt x 316.18124pt>
+<Atlas_Ictiogeografico_files/figure-latex/freqperdatasetplot-1.pdf, id=1482, 415.5525pt x 316.18124pt>
 File: Atlas_Ictiogeografico_files/figure-latex/freqperdatasetplot-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/freqperdatasetplot-1.pdf>
 Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/freqperdatasetplot-1.pdf  used on input line 6686.
 (pdftex.def)             Requested size: 415.55148pt x 316.18047pt.
-<Atlas_Ictiogeografico_files/figure-latex/occdataplot-1.pdf, id=1478, 288.07625pt x 566.115pt>
+<Atlas_Ictiogeografico_files/figure-latex/occdataplot-1.pdf, id=1484, 288.07625pt x 566.115pt>
 File: Atlas_Ictiogeografico_files/figure-latex/occdataplot-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/occdataplot-1.pdf>
 Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/occdataplot-1.pdf  used on input line 6699.
@@ -1578,17 +1578,17 @@ Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/occdataplot-1.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [94]
-<Atlas_Ictiogeografico_files/figure-latex/freqplotspecies-1.pdf, id=1487, 404.51125pt x 641.39626pt>
+<Atlas_Ictiogeografico_files/figure-latex/freqplotspecies-1.pdf, id=1492, 404.51125pt x 641.39626pt>
 File: Atlas_Ictiogeografico_files/figure-latex/freqplotspecies-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/freqplotspecies-1.pdf>
 Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/freqplotspecies-1.pdf  used on input line 6730.
 (pdftex.def)             Requested size: 404.51025pt x 641.39468pt.
-<Atlas_Ictiogeografico_files/figure-latex/occfamplot-1.pdf, id=1489, 457.71pt x 566.115pt>
+<Atlas_Ictiogeografico_files/figure-latex/occfamplot-1.pdf, id=1494, 457.71pt x 566.115pt>
 File: Atlas_Ictiogeografico_files/figure-latex/occfamplot-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/occfamplot-1.pdf>
 Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/occfamplot-1.pdf  used on input line 6751.
 (pdftex.def)             Requested size: 457.7089pt x 566.11362pt.
-<Atlas_Ictiogeografico_files/figure-latex/occgalaxplot-1.pdf, id=1491, 425.59pt x 566.115pt>
+<Atlas_Ictiogeografico_files/figure-latex/occgalaxplot-1.pdf, id=1496, 425.59pt x 566.115pt>
 File: Atlas_Ictiogeografico_files/figure-latex/occgalaxplot-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/occgalaxplot-1.pdf>
 Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/occgalaxplot-1.pdf  used on input line 6774.
@@ -1618,7 +1618,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.17}) ha
                                                   \__shipout_drop_firstpage_...
 l.6803 
         <./Atlas_Ictiogeografico_files/figure-latex/freqplotspecies-1.pdf>]
-<Atlas_Ictiogeografico_files/figure-latex/atherinplot-1.pdf, id=1543, 495.8525pt x 260.975pt>
+<Atlas_Ictiogeografico_files/figure-latex/atherinplot-1.pdf, id=1548, 495.8525pt x 260.975pt>
 File: Atlas_Ictiogeografico_files/figure-latex/atherinplot-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/atherinplot-1.pdf>
 Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/atherinplot-1.pdf  used on input line 6806.
@@ -1645,7 +1645,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.19}) ha
                                                   \__shipout_drop_firstpage_...
 l.6837 
         <./Atlas_Ictiogeografico_files/figure-latex/occgalaxplot-1.pdf>]
-<Atlas_Ictiogeografico_files/figure-latex/perchichplot-1.pdf, id=1610, 495.8525pt x 260.975pt>
+<Atlas_Ictiogeografico_files/figure-latex/perchichplot-1.pdf, id=1615, 495.8525pt x 260.975pt>
 File: Atlas_Ictiogeografico_files/figure-latex/perchichplot-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/perchichplot-1.pdf>
 Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/perchichplot-1.pdf  used on input line 6840.
@@ -1669,7 +1669,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.21}) ha
                                                   \__shipout_drop_firstpage_...
 l.6858 
         <./Atlas_Ictiogeografico_files/figure-latex/atherinplot-1.pdf> <./Atlas_Ictiogeografico_files/figure-latex/perchichplot-1.pdf>]
-<Atlas_Ictiogeografico_files/figure-latex/salmonidaeplot-1.pdf, id=1655, 459.7175pt x 381.425pt>
+<Atlas_Ictiogeografico_files/figure-latex/salmonidaeplot-1.pdf, id=1660, 459.7175pt x 381.425pt>
 File: Atlas_Ictiogeografico_files/figure-latex/salmonidaeplot-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/salmonidaeplot-1.pdf>
 Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/salmonidaeplot-1.pdf  used on input line 6896.
@@ -1683,7 +1683,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.22}) ha
                                                   \__shipout_drop_firstpage_...
 l.6908 L
         a familia Characidae está distribuida en el norte de nuestra área de <./Atlas_Ictiogeografico_files/figure-latex/salmonidaeplot-1.pdf>]
-<Atlas_Ictiogeografico_files/figure-latex/lampreyplot-1.pdf, id=1691, 273.02pt x 260.975pt>
+<Atlas_Ictiogeografico_files/figure-latex/lampreyplot-1.pdf, id=1696, 273.02pt x 260.975pt>
 File: Atlas_Ictiogeografico_files/figure-latex/lampreyplot-1.pdf Graphic file (type pdf)
 <use Atlas_Ictiogeografico_files/figure-latex/lampreyplot-1.pdf>
 Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/lampreyplot-1.pdf  used on input line 6994.
@@ -1692,34 +1692,43 @@ Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/lampreyplot-1.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [102]
-<Atlas_Ictiogeografico_files/figure-latex/catfishplot-1.pdf, id=1705, 273.02pt x 223.83624pt>
-File: Atlas_Ictiogeografico_files/figure-latex/catfishplot-1.pdf Graphic file (type pdf)
-<use Atlas_Ictiogeografico_files/figure-latex/catfishplot-1.pdf>
-Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/catfishplot-1.pdf  used on input line 7039.
-(pdftex.def)             Requested size: 273.01933pt x 223.8357pt.
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [103
 pdfTeX warning (ext4): destination with the same identifier (name{figure.23}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.7059 
+l.7055 
         <./Atlas_Ictiogeografico_files/figure-latex/lampreyplot-1.pdf>]
+<Atlas_Ictiogeografico_files/figure-latex/catfishplot-1.pdf, id=1734, 273.02pt x 223.83624pt>
+File: Atlas_Ictiogeografico_files/figure-latex/catfishplot-1.pdf Graphic file (type pdf)
+<use Atlas_Ictiogeografico_files/figure-latex/catfishplot-1.pdf>
+Package pdftex.def Info: Atlas_Ictiogeografico_files/figure-latex/catfishplot-1.pdf  used on input line 7084.
+(pdftex.def)             Requested size: 273.01933pt x 223.8357pt.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [104
 pdfTeX warning (ext4): destination with the same identifier (name{figure.24}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.7201 \end{verbatim}
-                      <./Atlas_Ictiogeografico_files/figure-latex/catfishplot-1.pdf>]
+l.7120 
+        <./Atlas_Ictiogeografico_files/figure-latex/catfishplot-1.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[105] (./Atlas_Ictiogeografico.bbl
+[105]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [106]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[107]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[108] (./Atlas_Ictiogeografico.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[109]
 Underfull \hbox (badness 1168) in paragraph at lines 219--231
 []\OT1/cmr/m/n/10 Bloom, D.  (2016).  \OT1/cmr/m/it/10 Vert-Net[]Fishes[]Sept2016.  \OT1/cmr/m/n/10 CyVerse Data Com-mons.  Retrieved from DOI
  []
@@ -1727,13 +1736,13 @@ Underfull \hbox (badness 1168) in paragraph at lines 219--231
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[107]
+[110]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[108])
+[111])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[109] (./Atlas_Ictiogeografico.aux)
+[112] (./Atlas_Ictiogeografico.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-14>
@@ -1746,21 +1755,21 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `Atlas_Ictiogeografico.out' has not changed.
-(rerunfilecheck)             Checksum: D2C387AC949278B16E441BE012088D69;23551.
+(rerunfilecheck)             Checksum: F966BA44D5D6B93DA34F97E53A86925A;23763.
  ) 
 Here is how much of TeX's memory you used:
- 18671 strings out of 469519
- 308416 string characters out of 5468255
- 852097 words of memory out of 5000000
- 46669 multiletter control sequences out of 15000+600000
+ 18702 strings out of 469519
+ 309490 string characters out of 5468255
+ 852491 words of memory out of 5000000
+ 46691 multiletter control sequences out of 15000+600000
  648157 words of font info for 122 fonts, out of 8000000 for 9000
  24 hyphenation exceptions out of 8191
  90i,10n,93p,2811b,785s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <c:/Users/crist/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0800.600pk> <c:/Users/crist/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> <c:/Users/crist/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcit1000.600pk> <c:/Users/crist/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tctt1000.600pk> <c:/Users/crist/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0900.600pk><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb><c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Atlas_Ictiogeografico.pdf (109 pages, 36485993 bytes).
+Output written on Atlas_Ictiogeografico.pdf (112 pages, 36502225 bytes).
 PDF statistics:
- 1981 PDF objects out of 2073 (max. 8388607)
- 1670 compressed objects within 17 object streams
- 332 named destinations out of 1000 (max. 500000)
- 1094 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2045 PDF objects out of 2073 (max. 8388607)
+ 1730 compressed objects within 18 object streams
+ 341 named destinations out of 1000 (max. 500000)
+ 1102 words of extra memory for PDF output out of 10000 (max. 10000000)
 

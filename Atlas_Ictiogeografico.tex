@@ -4934,7 +4934,7 @@ identificaron por compartir los mismos valores de
 \end{Shaded}
 
 \begin{verbatim}
-## Process took: 0.468163
+## Process took: 0.7274649
 \end{verbatim}
 
 \begin{Shaded}
@@ -5882,8 +5882,8 @@ encontró evidencia de poblaciones de \emph{O. bonariensis} ni de
 hibridación introgresiva con \emph{O. hatcheri} en cuatro sitios de la
 cuenca del río Baker \citep{Rueda2017}.
 
-Dados estos antecedentes, ambos registros fueron reasignados a
-\emph{Odontesthes hatcheri} en la presente base de datos.
+Dados estos antecedentes, ambos registros fueron reasignados a \emph{O.
+hatcheri} en la presente base de datos.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -7004,12 +7004,13 @@ y de conservación.
 
 Es notable la existencia de un único registro de \emph{Olivaichthys
 viedmensis} en la cuenca del río Baker, reportado por
-\citet{arratiaUnderstandingMorphologicalVariability2017} (Figura
-\ref{fig:occfamplot}). Esta especie se distribuye ampliamente al este de
-la cordillera de los Andes, en la vertiente atlántica, y su presencia en
-el Baker podría explicarse por procesos de captura hidrográfica
-ocurridos hacia fines del Pleistoceno
-{[}arratiaUnderstandingMorphologicalVariability2017{]}. En particular,
+\citet{arratiaUnderstandingMorphologicalVariability2017} (la Figura
+\ref{fig:catfishplot} muestra la distribución de Siluriformes,
+incluyendo Trichomycteridae y Diplomystidae{]}). Esta especie se
+distribuye ampliamente al este de la cordillera de los Andes, en la
+vertiente atlántica, y su presencia en el Baker podría explicarse por
+procesos de captura hidrográfica ocurridos hacia fines del Pleistoceno
+\citep{arratiaUnderstandingMorphologicalVariability2017}. En particular,
 el sistema del lago General Carrera/Buenos Aires, que originalmente
 drenaba hacia el Atlántico, habría comenzado a drenar hacia el Pacífico,
 facilitando la conexión entre faunas ícticas de distintas cuencas.
@@ -7032,7 +7033,51 @@ de un Diplomystidae, sería más probable que se trate de
 
 \subsubsection{Trichomycteridae}\label{trichomycteridae}
 
-\emph{Trichomycterus areolatus} Valenciennes, 1846
+\emph{Hatcheria macraei (Girard, 1855)} \emph{Trichomycterus areolatus}
+Valenciennes, 1846
+
+Dentro del área de estudio, la familia de bagrecitos Trichomycteridae
+tiene una amplia distribución desde la región de Aysén (c.~48°S) hacia
+el norte (la Figura \ref{fig:catfishplot} muestra la distribución de
+Siluriformes, incluyendo Trichomycteridae y Diplomystidae{]}). Las dos
+especies de Trichomycteridae presentaron distribuciones complementarias:
+\emph{Trichomycterus areolatus}, bagrecito común en el centro y
+centro-sur de Chile está presente en el extremo norte del área de
+estudio en la isla de Chiloé, y en el río Petrohé en el continente, y
+zonas aledañas. \emph{Hatcheria macraei}, en cambio, posee una clara
+afinidad andina. Se registró desde la cuenca del río Puelo (41.4°S)
+hasta la cuenca del río Baker (47.8°S), siempre en cuencas andinas y
+transandinas. Este resultado es consistente con la hipótesis de
+colonización histórica desde Argentina donde posee una amplia
+distribución, mediada por capturas fluviales hacia finales del
+Pleistoceno \citep{unmackPhylogeographyCatfishHatcheria2012}, parecido a
+lo discutido para otros taxa.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{X.filtered.dedup.revised }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{filter}\NormalTok{(canonicalName }\SpecialCharTok{==} \StringTok{"Hatcheria macraei"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{select}\NormalTok{(locality, decimalLatitude) }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{arrange}\NormalTok{(}\FunctionTok{desc}\NormalTok{(decimalLatitude))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 199 x 2
+##    locality                                                      decimalLatitude
+##    <chr>                                                                   <dbl>
+##  1 "Lago Mascardi "                                                        -41.4
+##  2 "Lago Mascardi"                                                         -41.4
+##  3 "Río Manso"                                                             -41.5
+##  4 "Lago Steffen"                                                          -41.5
+##  5 "Río Manso. Cuenca río Puelo (Argentina). Rio Manso entre fr~           -41.5
+##  6 "Río Manso inferior"                                                    -41.6
+##  7 "Río Manso. Rio Manso entre Rio Steffen y Rio Puelo."                   -41.7
+##  8 "Río Manso. Puelo-Pacific. Rio Manso entre Rio Steffen y Rio~           -41.7
+##  9 "Río Epuyén"                                                            -42.1
+## 10 "Río Epuyén"                                                            -42.1
+## # i 189 more rows
+\end{verbatim}
 
 \begin{figure}
 
@@ -7040,7 +7085,7 @@ de un Diplomystidae, sería más probable que se trate de
 
 }
 
-\caption{Distribución de ocurrencias de especies de lampreas (orden Petromyzontiformes).}\label{fig:catfishplot}
+\caption{Distribución de ocurrencias de especies de bagres (orden Siluriformes).}\label{fig:catfishplot}
 \end{figure}
 
 \subsubsection{Mugilidae}\label{mugilidae}
@@ -7057,20 +7102,232 @@ posteriormente destruida en el incendio de 2007 del ex-Instituto de
 Zoología de la Universidad Austral de Chile, Valdivia (Germán Pequeño,
 com. pers. 2025).
 
-\subsection{Perspectivas}\label{perspectivas}
+\section{Discusión y consideraciones
+finales}\label{discusiuxf3n-y-consideraciones-finales}
 
-Una vez terminado el \emph{Atlas Ictiológico de la Patagonia
-Occidental}, este servirá para producir mapas predictivos de
-biodiversidad de peces, examinar relaciones ecológicas y funcionales
-incluyendo el impacto de la introducción de los salmónidos, y orientar
-futuras prospecciones ictiológicas. Por ejemplo, los resultados
-preliminares revelan una gran brecha de información sobre biodiversidad
-en el suroeste del área de estudio. Es urgente explorar este territorio
-con ríos, lagos y mallines costeros ubicados entre las penínsulas y
-archipiélagos más lluviosos del mundo. Este es un territorio aún
-prístino, y nuestro atlas sugiere que aquí podrían existir valiosos
-refugios de biodiversidad que es preciso documentar y proteger en cuanto
-antes.
+El Atlas Ictiogeográfico de la Patagonia Occidental representa, hasta
+donde sabemos, el primer esfuerzo sistemático de consolidación, curación
+y estandarización de registros de ocurrencia de peces dulceacuícolas,
+estuarinos y diádromos de cuencas chilenas y transfronterizas de la
+Patagonia. Su principal aporte no radica únicamente en reunir un alto
+número de registros, sino en hacerlo mediante una estrategia explícita
+de trazabilidad, homologación al estándar Darwin Core, revisión
+espacial, estandarización taxonómica y remoción de duplicados. De esta
+manera, el Atlas transforma información dispersa, heterogénea y
+parcialmente redundante en una base de datos interoperable, auditable y
+directamente utilizable para análisis biogeográficos, planificación de
+conservación y diseño de futuros programas de monitoreo.
+
+El conjunto de datos consolidado integra ocurrencias provenientes de
+fuentes de naturaleza muy distinta, incluyendo prospecciones
+ictiológicas de primera mano, colecciones de museos, revisiones de
+literatura científica y gris, bases de datos estatales, permisos de
+pesca de investigación, plataformas globales de biodiversidad y
+observaciones de ciencia ciudadana. Esta complementariedad permitió
+ampliar sustancialmente la cobertura espacial y temporal de la
+información disponible. Al mismo tiempo, el proceso evidenció que una
+proporción importante de los registros disponibles en repositorios
+públicos y bases institucionales corresponde a datos duplicados,
+incompletos, geográficamente imprecisos o taxonómicamente difíciles de
+auditar. Por ello, más que un simple ejercicio de agregación, este
+trabajo debe entenderse como una curación crítica de información
+ictiológica acumulada durante casi dos siglos de exploración,
+investigación y gestión ambiental en Patagonia. Sin embargo, el esfuerzo
+de estandarización y curaduría no resuelve definitivamente todos los
+problemas presentes en las fuentes originales. La base de datos
+resultante representa la mejor versión consolidada disponible a partir
+de los antecedentes revisados y dadas ciertas restricciones técnicas, de
+recursos y de tiempo, pero con seguridad conserva errores residuales,
+duplicados no detectados y registros cuya interpretación podría cambiar
+con nueva evidencia taxonómica, geográfica o documental.
+
+Los resultados generales confirman que la ictiofauna dulceacuícola y
+diádroma de la Patagonia occidental presenta una combinación de
+elementos nativos ampliamente distribuidos, linajes con historias
+biogeográficas complejas y especies introducidas de amplia expansión.
+Entre las familias nativas, Galaxiidae destaca por su distribución
+amplia y por la heterogeneidad espacial entre especies, mientras que
+otros grupos, como Percichthyidae, Atherinopsidae, Trichomycteridae,
+Diplomystidae y las lampreas australes, revelan patrones más acotados,
+disyuntos o asociados a historias particulares de conexión entre
+cuencas. En contraste, Salmonidae fue la familia con mayor
+representación y cobertura espacial, reflejando la magnitud histórica de
+introducciones intencionales \citep{basultoLargoViajeSalmones2003},
+escapes accidentales
+\citep{sepulvedaEscapedFarmedSalmon2013, sotoEnvironmentalRiskAssessment2022}
+y procesos de establecimiento de salmónidos en Patagonia
+\citep[e.g.,][]{correaChinookSalmonInvade2008, chaldeDetectionJuvenileCoho2023}.
+Esta dominancia de registros de salmónidos no debe interpretarse
+únicamente como una señal biológica, sino también como el resultado
+combinado de su amplia distribución, interés pesquero, relevancia en
+estudios de impacto ambiental y mayor probabilidad de detección y
+reporte.
+
+Un aspecto central que emerge de este trabajo es que los mapas de
+distribución deben interpretarse con cautela cuando existen problemas de
+identificación, inestabilidad taxonómica o falta de respaldo material.
+Este punto es particularmente importante para géneros y familias como
+\emph{Galaxias}, \emph{Aplochiton}, \emph{Percichthys} y Atherinopsidae,
+entre otros. En \emph{Aplochiton}, por ejemplo, la delimitación entre
+\emph{A. zebra}, \emph{A. taeniatus} y \emph{A. marinus} ha sido
+históricamente problemática, y los registros solo pueden ser reevaluados
+cuando se reportan caracteres morfológicos diagnósticos o se incluyen
+fotografías, especímenes voucher o evidencia genética \citep{Alo2013}.
+En \emph{Percichthys}, la taxonomía del género continúa siendo debatida,
+con diferencias entre interpretaciones morfológicas y moleculares sobre
+el número y delimitación de especies en Patagonia
+\citep{Lopez-Arbarello2004, ruzzantePhylogeographyPercichthyidaePisces2006, ruzzantePhylogeographyPhenotypicDiversification2011, Arratia2019}.
+En estos casos, los patrones de distribución a nivel de especie deben
+ser considerados hipótesis de trabajo, no resultados taxonómicos
+definitivos.
+
+La incertidumbre taxonómica se ve agravada por la calidad desigual de la
+evidencia asociada a los registros. Muchos registros históricos,
+institucionales o provenientes de estudios ambientales carecen de
+fotografías, vouchers, secuencias genéticas, identificación por
+especialistas o documentación suficiente para evaluar independientemente
+la determinación taxonómica. En consecuencia, algunos registros
+improbables no pueden ser confirmados ni descartados de manera
+definitiva. Esta limitación no invalida el valor del Atlas, pero sí
+establece una distinción importante entre registros georreferenciados y
+registros efectivamente auditables. En futuras versiones, sería deseable
+poblar campos sobre calidad de evidencia, tales como presencia de
+voucher, fotografía diagnóstica, secuencia molecular, identificación por
+especialista o nivel de incertidumbre taxonómica. Esta distinción será
+especialmente relevante en grupos taxonómicos complejos donde se podría
+modificar la identificación de registros particulares, tal como se hizo
+aquí en muchos casos, y donde eventuales cambios taxonómicos podrían
+requerir la reinterpretación retrospectiva de una parte de las
+ocurrencias.
+
+Un problema adicional surge cuando las ocurrencias provienen de textos,
+mapas o descripciones de localidad sin coordenadas explícitas. En esos
+casos, la georreferenciación requiere inferir la posición aproximada de
+la colecta, y distintos curadores pueden asignar coordenadas diferentes
+al mismo registro original. Esta variación dificulta la detección
+automática de duplicados, especialmente cuando los registros comparten
+taxón y fuente bibliográfica, pero difieren en coordenadas, precisión
+espacial, localidad normalizada o fecha de ocurrencia. Por lo tanto, es
+probable que algunos duplicados hayan sobrevivido tanto al algoritmo
+automático como a la revisión manual posterior.
+
+Desde una perspectiva biogeográfica, el Atlas permite distinguir entre
+cuencas con drenaje pacífico típico y cuencas transandinas cuya historia
+hidrográfica ha sido afectada por capturas, reversos de drenaje y
+reorganización postglacial. Esta distinción es fundamental para
+interpretar la presencia de especies asociadas principalmente a la
+vertiente atlántica en sistemas que actualmente drenan hacia el
+Pacífico. Casos como \emph{Odontesthes hatcheri}, \emph{Percichthys
+trucha}, \emph{Hatcheria macraei} y \emph{Olivaichthys viedmensis}
+sugieren que la historia fluvial, incluyendo capturas hidrográficas, es
+clave para explicar la composición de las comunidades de peces
+dulceacuícolas en la Patagonia
+\citep{ruzzantePhylogeographyPercichthyidaePisces2006, unmackPhylogeographyCatfishHatcheria2012, arratiaUnderstandingMorphologicalVariability2017, Ruzzante2020}.
+Las cuencas transandinas deben tratarse, por lo tanto, como unidades
+biogeográficas particulares, donde la historia geomorfológica puede ser
+tan importante como las condiciones ecológicas contemporáneas.
+
+El patrón general también es consistente con un fuerte efecto de las
+glaciaciones del Pleistoceno sobre la fauna íctica dulceacuícola de la
+Patagonia occidental. La escasez de peces dulceacuícolas estrictos en
+gran parte del área de estudio, salvo en cuencas transandinas
+potencialmente colonizadas desde el este, sugiere que la expansión de
+los hielos habría eliminado o restringido severamente las biotas
+dulceacuícolas locales. En este contexto, \emph{G. platei} constituye un
+caso especialmente informativo: su estructura filogeográfica indica
+refugios glaciales al este y oeste de los Andes, recolonización
+postglacial desde refugios no locales, contacto secundario entre linajes
+y una posible expansión facilitada por reversos de drenaje y lagos
+proglaciales. Estos antecedentes refuerzan la idea de que la
+distribución actual de varios peces patagónicos no puede explicarse solo
+por las cuencas contemporáneas, sino que debe interpretarse a la luz de
+la historia glacial, la conectividad pasada y los cambios en la
+dirección de drenaje.
+
+Otra línea de evidencia proviene de la mayor riqueza de especies
+observada hacia el extremo norte del área de estudio, especialmente al
+norte de la Isla de Chiloé y en tributarios del Seno de Reloncaví,
+incluyendo el río Petrohué. Esta zona presenta una fauna íctica con
+mayor afinidad con la zona centro-sur de Chile y podría haber
+funcionado, al menos parcialmente, como refugio glacial o zona de
+persistencia local para especies como \emph{Cheirodon australe},
+\emph{Trichomycterus areolatus} y \emph{Brachygalaxias bullocki}. En
+contraste, las especies diádromas pudieron recolonizar sistemas remotos
+de la Patagonia por vía marina, una diferencia fundamental respecto de
+los peces dulceacuícolas estrictos. Tal pudo ser el caso de
+\emph{Aplochiton} spp. y \emph{Galaxias maculatus}, cuyas historias de
+vida permiten explicar distribuciones amplias en sistemas costeros,
+insulares y archipelágicos donde la conectividad fluvial continental
+habría sido intermitente o inexistente durante gran parte del
+Pleistoceno.
+
+A pesar del aumento sustancial en cobertura logrado por este trabajo,
+persisten vacíos geográficos importantes. La brecha más evidente se
+encuentra en la Patagonia suroccidental, especialmente en sistemas
+costeros, archipiélagos, fiordos, penínsulas e islas expuestas a
+condiciones hiperhúmedas y de difícil acceso. Sectores como los
+archipiélagos de los Chonos, Wellington, Madre de Dios, Hanover y Reina
+Adelaida, entre otros sistemas costeros y lacustres asociados,
+permanecen escasamente documentados. Esta carencia limita nuestra
+capacidad de evaluar la existencia de refugios de biodiversidad,
+poblaciones aisladas, linajes no descritos, rutas de dispersión diádroma
+o áreas todavía poco invadidas por salmónidos. Dado su relativo
+aislamiento, baja densidad humana y gran heterogeneidad ambiental, estos
+territorios deberían constituir una prioridad para futuras prospecciones
+ictiológicas.
+
+El Atlas proporciona una base concreta para avanzar en varias líneas de
+trabajo. En primer lugar, permite generar mapas predictivos de
+distribución y modelos de idoneidad ambiental para especies nativas e
+introducidas. En segundo lugar, ofrece una plataforma para evaluar
+cambios temporales, expansión de salmónidos, reemplazo de especies
+nativas y sesgos espaciales de muestreo. En tercer lugar, puede apoyar
+la priorización de cuencas para conservación dulceacuícola, incorporando
+riqueza de especies, singularidad biogeográfica, presencia de especies
+amenazadas, conectividad diádroma y presión de especies invasoras.
+Finalmente, el Atlas puede orientar un programa de monitoreo más
+focalizado, donde las nuevas prospecciones no solo busquen llenar vacíos
+geográficos, sino también resolver incertidumbres taxonómicas mediante
+evidencia verificable.
+
+En este sentido, las futuras etapas deberían combinar tres enfoques
+complementarios. Primero, prospecciones de campo dirigidas a cuencas y
+archipiélagos submuestreados, especialmente en Patagonia suroccidental.
+Segundo, revisión taxonómica focalizada de grupos problemáticos, apoyada
+por especialistas, vouchers, fotografías diagnósticas y análisis
+moleculares cuando sea necesario. Tercero, actualización continua de la
+base de datos mediante control de versiones, trazabilidad de cambios y
+criterios explícitos para incorporar, corregir o excluir registros. De
+esta forma, el Atlas puede evolucionar desde una base de datos
+consolidada hacia una infraestructura viva de conocimiento para la
+conservación de peces dulceacuícolas y diádromos de la Patagonia.
+
+\section{Conclusión}\label{conclusiuxf3n}
+
+La consolidación del Atlas Ictiogeográfico de la Patagonia Occidental
+demuestra que es posible transformar información dispersa, redundante y
+heterogénea en una base de datos curada, interoperable y útil para la
+investigación y la conservación. El análisis permitió documentar
+patrones generales de distribución, identificar la amplia presencia de
+salmónidos introducidos, destacar la importancia biogeográfica de las
+cuencas transandinas y revelar vacíos críticos de información en la
+Patagonia suroccidental. Al mismo tiempo, el proceso dejó en evidencia
+que la calidad de los datos de ocurrencia depende no solo de la
+existencia de coordenadas y nombres científicos, sino también de la
+trazabilidad, respaldo material y confiabilidad de las identificaciones
+taxonómicas.
+
+Por estas razones, el Atlas debe entenderse como un producto de síntesis
+y como un punto de partida. Su valor inmediato es proporcionar la
+primera base curada de ocurrencias de peces dulceacuícolas, estuarinos y
+diádromos para la Patagonia occidental y cuencas transfronterizas. Su
+valor futuro dependerá de mantenerlo actualizado, fortalecer la
+auditoría taxonómica, incorporar nueva evidencia de campo y usarlo como
+base para análisis predictivos, priorización de conservación y monitoreo
+de largo plazo. En una región donde los ecosistemas dulceacuícolas
+enfrentan amenazas crecientes y donde aún persisten grandes áreas poco
+conocidas, contar con una base de información confiable es una condición
+necesaria para tomar mejores decisiones de conservación.
 
 \section{Información de sesión en
 R}\label{informaciuxf3n-de-sesiuxf3n-en-r}
@@ -7184,6 +7441,7 @@ R}\label{informaciuxf3n-de-sesiuxf3n-en-r}
 ##  units          1.0-0   2025-10-09 [1] CRAN (R 4.4.3)
 ##  urltools       1.7.3.1 2025-06-12 [1] CRAN (R 4.4.3)
 ##  usethis        3.2.1   2025-09-06 [1] CRAN (R 4.4.3)
+##  utf8           1.2.6   2025-06-08 [1] CRAN (R 4.4.3)
 ##  vctrs          0.6.5   2023-12-01 [1] CRAN (R 4.4.3)
 ##  viridisLite    0.4.2   2023-05-02 [1] CRAN (R 4.4.3)
 ##  whisker        0.4.1   2022-12-05 [1] CRAN (R 4.4.3)
