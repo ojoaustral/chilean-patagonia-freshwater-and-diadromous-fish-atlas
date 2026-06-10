@@ -4934,7 +4934,7 @@ identificaron por compartir los mismos valores de
 \end{Shaded}
 
 \begin{verbatim}
-## Process took: 0.451067
+## Process took: 0.41448
 \end{verbatim}
 
 \begin{Shaded}
@@ -5183,8 +5183,8 @@ manual.
 \end{Highlighting}
 \end{Shaded}
 
-Un total de 535 se excluyeron de la base de datos principal, pasando de
-7567 ocurrencias a 7032 ocurrencias.
+Un total de 543 se excluyeron de la base de datos principal, pasando de
+7567 ocurrencias a 7024 ocurrencias.
 
 \textbf{Paso 2: Excluir registros selectos}
 
@@ -5208,7 +5208,7 @@ en la tabla de correcciones con
 \end{Shaded}
 
 Un total de 125 se excluyeron de la base de datos principal, la que
-quedó con 6907 ocurrencias.
+quedó con 6899 ocurrencias.
 
 \textbf{Paso 3: Aplicación de correcciones desde columnas con prefijo
 ``.''}\\
@@ -5463,7 +5463,7 @@ en la tabla de correcciones con
 \end{Shaded}
 
 Un total de 8 se excluyeron de la base de datos principal, la que quedó
-con 6899 ocurrencias.
+con 6891 ocurrencias.
 
 \textbf{Paso 2: Aplicación de correcciones desde columnas con prefijo
 ``.''}\\
@@ -6279,31 +6279,6 @@ estandarizada de cada referencia.
 \end{Highlighting}
 \end{Shaded}
 
-Conformar si todos los valores de \texttt{bibliographicCitation} en la
-base de datos están representados y estandarizados en la tabla recién
-cargada.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{tmp }\OtherTok{\textless{}{-}}\NormalTok{ X.filtered.dedup.revised }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{filter}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{is.na}\NormalTok{(bibliographicCitation), bibliographicCitation }\SpecialCharTok{!=}
-        \StringTok{""}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{distinct}\NormalTok{(bibliographicCitation)}
-
-\FunctionTok{all}\NormalTok{(tmp}\SpecialCharTok{$}\NormalTok{bibliographicCitation }\SpecialCharTok{\%in\%}\NormalTok{ bib}\SpecialCharTok{$}\NormalTok{bibliographicCitation)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [1] FALSE
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{rm}\NormalTok{(tmp)}
-\end{Highlighting}
-\end{Shaded}
-
 La lista de referencias contiene 263 referencias previa estandarización,
 las cuales mapean a 243 referencias estandarizadas.
 
@@ -6425,227 +6400,227 @@ De 254 columnas, se eliminaron 68. La tabla final tiene 186 columnas.
 \endfoot
 \bottomrule
 \endlastfoot
-\cellcolor{gray!10}{prim\_key} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{kept}\\
-\textcolor{gray}{id\_CC} & \textcolor{gray}{6925} & \textcolor{gray}{6925} & \textcolor{gray}{100.0} & \textcolor{gray}{0} & \textcolor{gray}{dropped}\\
-\cellcolor{gray!10}{decimalLatitude} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{kept}\\
-decimalLongitude & 6925 & 6925 & 100.0 & 0 & kept\\
-\cellcolor{gray!10}{canonicalName} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{kept}\\
+\cellcolor{gray!10}{prim\_key} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{kept}\\
+\textcolor{gray}{id\_CC} & \textcolor{gray}{6917} & \textcolor{gray}{6917} & \textcolor{gray}{100.0} & \textcolor{gray}{0} & \textcolor{gray}{dropped}\\
+\cellcolor{gray!10}{decimalLatitude} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{kept}\\
+decimalLongitude & 6917 & 6917 & 100.0 & 0 & kept\\
+\cellcolor{gray!10}{canonicalName} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{kept}\\
 \addlinespace
-occurrenceID & 6925 & 6925 & 100.0 & 0 & kept\\
-\cellcolor{gray!10}{scientificName} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{kept}\\
-\textcolor{gray}{datasetName\_tmp} & \textcolor{gray}{6925} & \textcolor{gray}{6925} & \textcolor{gray}{100.0} & \textcolor{gray}{0} & \textcolor{gray}{dropped}\\
-\cellcolor{gray!10}{data\_source} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{kept}\\
-kingdom & 6925 & 6925 & 100.0 & 0 & kept\\
+occurrenceID & 6917 & 6917 & 100.0 & 0 & kept\\
+\cellcolor{gray!10}{scientificName} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{kept}\\
+\textcolor{gray}{datasetName\_tmp} & \textcolor{gray}{6917} & \textcolor{gray}{6917} & \textcolor{gray}{100.0} & \textcolor{gray}{0} & \textcolor{gray}{dropped}\\
+\cellcolor{gray!10}{data\_source} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{kept}\\
+kingdom & 6917 & 6917 & 100.0 & 0 & kept\\
 \addlinespace
-\cellcolor{gray!10}{phylum} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{kept}\\
-order & 6925 & 6925 & 100.0 & 0 & kept\\
-\cellcolor{gray!10}{taxonRank} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{kept}\\
-taxonID & 6925 & 6925 & 100.0 & 0 & kept\\
-\cellcolor{gray!10}{family} & \cellcolor{gray!10}{6924} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{1} & \cellcolor{gray!10}{kept}\\
+\cellcolor{gray!10}{phylum} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{kept}\\
+order & 6917 & 6917 & 100.0 & 0 & kept\\
+\cellcolor{gray!10}{taxonRank} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{0} & \cellcolor{gray!10}{kept}\\
+taxonID & 6917 & 6917 & 100.0 & 0 & kept\\
+\cellcolor{gray!10}{family} & \cellcolor{gray!10}{6916} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{100.0} & \cellcolor{gray!10}{1} & \cellcolor{gray!10}{kept}\\
 \addlinespace
-genus & 6899 & 6925 & 99.6 & 26 & kept\\
-\textcolor{gray}{\cellcolor{gray!10}{species}} & \textcolor{gray}{\cellcolor{gray!10}{6861}} & \textcolor{gray}{\cellcolor{gray!10}{6925}} & \textcolor{gray}{\cellcolor{gray!10}{99.1}} & \textcolor{gray}{\cellcolor{gray!10}{64}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
-datasetName & 6856 & 6925 & 99.0 & 69 & kept\\
-\textcolor{gray}{\cellcolor{gray!10}{duplicated\_CC}} & \textcolor{gray}{\cellcolor{gray!10}{6770}} & \textcolor{gray}{\cellcolor{gray!10}{6925}} & \textcolor{gray}{\cellcolor{gray!10}{97.8}} & \textcolor{gray}{\cellcolor{gray!10}{155}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
-\textcolor{gray}{spatialClust\_CC} & \textcolor{gray}{6770} & \textcolor{gray}{6925} & \textcolor{gray}{97.8} & \textcolor{gray}{155} & \textcolor{gray}{dropped}\\
+genus & 6891 & 6917 & 99.6 & 26 & kept\\
+\textcolor{gray}{\cellcolor{gray!10}{species}} & \textcolor{gray}{\cellcolor{gray!10}{6853}} & \textcolor{gray}{\cellcolor{gray!10}{6917}} & \textcolor{gray}{\cellcolor{gray!10}{99.1}} & \textcolor{gray}{\cellcolor{gray!10}{64}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
+datasetName & 6848 & 6917 & 99.0 & 69 & kept\\
+\textcolor{gray}{\cellcolor{gray!10}{duplicated\_CC}} & \textcolor{gray}{\cellcolor{gray!10}{6762}} & \textcolor{gray}{\cellcolor{gray!10}{6917}} & \textcolor{gray}{\cellcolor{gray!10}{97.8}} & \textcolor{gray}{\cellcolor{gray!10}{155}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
+\textcolor{gray}{spatialClust\_CC} & \textcolor{gray}{6762} & \textcolor{gray}{6917} & \textcolor{gray}{97.8} & \textcolor{gray}{155} & \textcolor{gray}{dropped}\\
 \addlinespace
-\textcolor{gray}{\cellcolor{gray!10}{rObjectRank\_CC}} & \textcolor{gray}{\cellcolor{gray!10}{6770}} & \textcolor{gray}{\cellcolor{gray!10}{6925}} & \textcolor{gray}{\cellcolor{gray!10}{97.8}} & \textcolor{gray}{\cellcolor{gray!10}{155}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
-\textcolor{gray}{scientificName\_Old} & \textcolor{gray}{6770} & \textcolor{gray}{6925} & \textcolor{gray}{97.8} & \textcolor{gray}{155} & \textcolor{gray}{dropped}\\
-\textcolor{gray}{\cellcolor{gray!10}{IncludePewProAP}} & \textcolor{gray}{\cellcolor{gray!10}{6770}} & \textcolor{gray}{\cellcolor{gray!10}{6925}} & \textcolor{gray}{\cellcolor{gray!10}{97.8}} & \textcolor{gray}{\cellcolor{gray!10}{155}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
-\textcolor{gray}{usageKey} & \textcolor{gray}{6770} & \textcolor{gray}{6925} & \textcolor{gray}{97.8} & \textcolor{gray}{155} & \textcolor{gray}{dropped}\\
-\cellcolor{gray!10}{license} & \cellcolor{gray!10}{6664} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{96.2} & \cellcolor{gray!10}{261} & \cellcolor{gray!10}{kept}\\
+\textcolor{gray}{\cellcolor{gray!10}{rObjectRank\_CC}} & \textcolor{gray}{\cellcolor{gray!10}{6762}} & \textcolor{gray}{\cellcolor{gray!10}{6917}} & \textcolor{gray}{\cellcolor{gray!10}{97.8}} & \textcolor{gray}{\cellcolor{gray!10}{155}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
+\textcolor{gray}{scientificName\_Old} & \textcolor{gray}{6762} & \textcolor{gray}{6917} & \textcolor{gray}{97.8} & \textcolor{gray}{155} & \textcolor{gray}{dropped}\\
+\textcolor{gray}{\cellcolor{gray!10}{IncludePewProAP}} & \textcolor{gray}{\cellcolor{gray!10}{6762}} & \textcolor{gray}{\cellcolor{gray!10}{6917}} & \textcolor{gray}{\cellcolor{gray!10}{97.8}} & \textcolor{gray}{\cellcolor{gray!10}{155}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
+\textcolor{gray}{usageKey} & \textcolor{gray}{6762} & \textcolor{gray}{6917} & \textcolor{gray}{97.8} & \textcolor{gray}{155} & \textcolor{gray}{dropped}\\
+\cellcolor{gray!10}{license} & \cellcolor{gray!10}{6656} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{96.2} & \cellcolor{gray!10}{261} & \cellcolor{gray!10}{kept}\\
 \addlinespace
-verbatimIdentification & 6585 & 6925 & 95.1 & 340 & kept\\
-\cellcolor{gray!10}{bibliographicCitation} & \cellcolor{gray!10}{6519} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{94.1} & \cellcolor{gray!10}{406} & \cellcolor{gray!10}{kept}\\
-year & 6491 & 6925 & 93.7 & 434 & kept\\
-\cellcolor{gray!10}{eventDate} & \cellcolor{gray!10}{6464} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{93.3} & \cellcolor{gray!10}{461} & \cellcolor{gray!10}{kept}\\
-individualCount & 5258 & 6925 & 75.9 & 1667 & kept\\
+verbatimIdentification & 6577 & 6917 & 95.1 & 340 & kept\\
+\cellcolor{gray!10}{bibliographicCitation} & \cellcolor{gray!10}{6511} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{94.1} & \cellcolor{gray!10}{406} & \cellcolor{gray!10}{kept}\\
+year & 6483 & 6917 & 93.7 & 434 & kept\\
+\cellcolor{gray!10}{eventDate} & \cellcolor{gray!10}{6456} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{93.3} & \cellcolor{gray!10}{461} & \cellcolor{gray!10}{kept}\\
+individualCount & 5250 & 6917 & 75.9 & 1667 & kept\\
 \addlinespace
-\cellcolor{gray!10}{accessRights} & \cellcolor{gray!10}{5045} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{72.9} & \cellcolor{gray!10}{1880} & \cellcolor{gray!10}{kept}\\
-samplingProtocol & 4981 & 6925 & 71.9 & 1944 & kept\\
-\cellcolor{gray!10}{locality} & \cellcolor{gray!10}{4497} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{64.9} & \cellcolor{gray!10}{2428} & \cellcolor{gray!10}{kept}\\
-catalogNumber & 4457 & 6925 & 64.4 & 2468 & kept\\
-\cellcolor{gray!10}{locationRemarks} & \cellcolor{gray!10}{4397} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{63.5} & \cellcolor{gray!10}{2528} & \cellcolor{gray!10}{kept}\\
+\cellcolor{gray!10}{accessRights} & \cellcolor{gray!10}{5045} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{72.9} & \cellcolor{gray!10}{1872} & \cellcolor{gray!10}{kept}\\
+samplingProtocol & 4973 & 6917 & 71.9 & 1944 & kept\\
+\cellcolor{gray!10}{locality} & \cellcolor{gray!10}{4489} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{64.9} & \cellcolor{gray!10}{2428} & \cellcolor{gray!10}{kept}\\
+catalogNumber & 4449 & 6917 & 64.3 & 2468 & kept\\
+\cellcolor{gray!10}{locationRemarks} & \cellcolor{gray!10}{4397} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{63.6} & \cellcolor{gray!10}{2520} & \cellcolor{gray!10}{kept}\\
 \addlinespace
-basisOfRecord & 4166 & 6925 & 60.2 & 2759 & kept\\
-\cellcolor{gray!10}{verbatimLatitude} & \cellcolor{gray!10}{3470} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{50.1} & \cellcolor{gray!10}{3455} & \cellcolor{gray!10}{kept}\\
-verbatimLongitude & 3308 & 6925 & 47.8 & 3617 & kept\\
-\cellcolor{gray!10}{month} & \cellcolor{gray!10}{3200} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{46.2} & \cellcolor{gray!10}{3725} & \cellcolor{gray!10}{kept}\\
-verbatimSRS & 2964 & 6925 & 42.8 & 3961 & kept\\
+basisOfRecord & 4158 & 6917 & 60.1 & 2759 & kept\\
+\cellcolor{gray!10}{verbatimLatitude} & \cellcolor{gray!10}{3462} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{50.1} & \cellcolor{gray!10}{3455} & \cellcolor{gray!10}{kept}\\
+verbatimLongitude & 3300 & 6917 & 47.7 & 3617 & kept\\
+\cellcolor{gray!10}{month} & \cellcolor{gray!10}{3200} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{46.3} & \cellcolor{gray!10}{3717} & \cellcolor{gray!10}{kept}\\
+verbatimSRS & 2964 & 6917 & 42.9 & 3953 & kept\\
 \addlinespace
-\cellcolor{gray!10}{associatedReferences} & \cellcolor{gray!10}{2519} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{36.4} & \cellcolor{gray!10}{4406} & \cellcolor{gray!10}{kept}\\
-recordedBy & 2516 & 6925 & 36.3 & 4409 & kept\\
-\cellcolor{gray!10}{eventRemarks} & \cellcolor{gray!10}{1822} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{26.3} & \cellcolor{gray!10}{5103} & \cellcolor{gray!10}{kept}\\
-rightsHolder & 1816 & 6925 & 26.2 & 5109 & kept\\
-\cellcolor{gray!10}{stateProvince} & \cellcolor{gray!10}{1645} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{23.8} & \cellcolor{gray!10}{5280} & \cellcolor{gray!10}{kept}\\
+\cellcolor{gray!10}{associatedReferences} & \cellcolor{gray!10}{2519} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{36.4} & \cellcolor{gray!10}{4398} & \cellcolor{gray!10}{kept}\\
+recordedBy & 2516 & 6917 & 36.4 & 4401 & kept\\
+\cellcolor{gray!10}{eventRemarks} & \cellcolor{gray!10}{1821} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{26.3} & \cellcolor{gray!10}{5096} & \cellcolor{gray!10}{kept}\\
+rightsHolder & 1816 & 6917 & 26.3 & 5101 & kept\\
+\cellcolor{gray!10}{stateProvince} & \cellcolor{gray!10}{1637} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{23.7} & \cellcolor{gray!10}{5280} & \cellcolor{gray!10}{kept}\\
 \addlinespace
-continent & 1622 & 6925 & 23.4 & 5303 & kept\\
-\cellcolor{gray!10}{countryCode} & \cellcolor{gray!10}{1617} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{23.4} & \cellcolor{gray!10}{5308} & \cellcolor{gray!10}{kept}\\
-county & 1617 & 6925 & 23.4 & 5308 & kept\\
-\cellcolor{gray!10}{verbatimEventDate} & \cellcolor{gray!10}{1529} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{22.1} & \cellcolor{gray!10}{5396} & \cellcolor{gray!10}{kept}\\
-references & 1477 & 6925 & 21.3 & 5448 & kept\\
+continent & 1614 & 6917 & 23.3 & 5303 & kept\\
+\cellcolor{gray!10}{countryCode} & \cellcolor{gray!10}{1609} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{23.3} & \cellcolor{gray!10}{5308} & \cellcolor{gray!10}{kept}\\
+county & 1609 & 6917 & 23.3 & 5308 & kept\\
+\cellcolor{gray!10}{verbatimEventDate} & \cellcolor{gray!10}{1521} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{22.0} & \cellcolor{gray!10}{5396} & \cellcolor{gray!10}{kept}\\
+references & 1469 & 6917 & 21.2 & 5448 & kept\\
 \addlinespace
-\cellcolor{gray!10}{specificEpithet} & \cellcolor{gray!10}{1464} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{21.1} & \cellcolor{gray!10}{5461} & \cellcolor{gray!10}{kept}\\
-establishmentMeans & 1458 & 6925 & 21.1 & 5467 & kept\\
-\cellcolor{gray!10}{otherCatalogNumbers} & \cellcolor{gray!10}{1418} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{20.5} & \cellcolor{gray!10}{5507} & \cellcolor{gray!10}{kept}\\
-municipality & 1346 & 6925 & 19.4 & 5579 & kept\\
-\cellcolor{gray!10}{institutionID} & \cellcolor{gray!10}{1279} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{18.5} & \cellcolor{gray!10}{5646} & \cellcolor{gray!10}{kept}\\
+\cellcolor{gray!10}{specificEpithet} & \cellcolor{gray!10}{1456} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{21.0} & \cellcolor{gray!10}{5461} & \cellcolor{gray!10}{kept}\\
+establishmentMeans & 1450 & 6917 & 21.0 & 5467 & kept\\
+\cellcolor{gray!10}{otherCatalogNumbers} & \cellcolor{gray!10}{1418} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{20.5} & \cellcolor{gray!10}{5499} & \cellcolor{gray!10}{kept}\\
+municipality & 1338 & 6917 & 19.3 & 5579 & kept\\
+\cellcolor{gray!10}{institutionID} & \cellcolor{gray!10}{1279} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{18.5} & \cellcolor{gray!10}{5638} & \cellcolor{gray!10}{kept}\\
 \addlinespace
-datasetID & 1196 & 6925 & 17.3 & 5729 & kept\\
-\cellcolor{gray!10}{datasetKey} & \cellcolor{gray!10}{1195} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{17.3} & \cellcolor{gray!10}{5730} & \cellcolor{gray!10}{kept}\\
-vernacularName & 1087 & 6925 & 15.7 & 5838 & kept\\
-\cellcolor{gray!10}{country} & \cellcolor{gray!10}{1071} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{15.5} & \cellcolor{gray!10}{5854} & \cellcolor{gray!10}{kept}\\
-verbatimCoordinateSystem & 925 & 6925 & 13.4 & 6000 & kept\\
+datasetID & 1196 & 6917 & 17.3 & 5721 & kept\\
+\cellcolor{gray!10}{datasetKey} & \cellcolor{gray!10}{1195} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{17.3} & \cellcolor{gray!10}{5722} & \cellcolor{gray!10}{kept}\\
+vernacularName & 1086 & 6917 & 15.7 & 5831 & kept\\
+\cellcolor{gray!10}{country} & \cellcolor{gray!10}{1063} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{15.4} & \cellcolor{gray!10}{5854} & \cellcolor{gray!10}{kept}\\
+verbatimCoordinateSystem & 925 & 6917 & 13.4 & 5992 & kept\\
 \addlinespace
-\cellcolor{gray!10}{class} & \cellcolor{gray!10}{913} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{13.2} & \cellcolor{gray!10}{6012} & \cellcolor{gray!10}{kept}\\
-occurrenceRemarks & 868 & 6925 & 12.5 & 6057 & kept\\
-\cellcolor{gray!10}{institutionCode} & \cellcolor{gray!10}{830} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{12.0} & \cellcolor{gray!10}{6095} & \cellcolor{gray!10}{kept}\\
-samplingEffort & 826 & 6925 & 11.9 & 6099 & kept\\
-\cellcolor{gray!10}{collectionCode} & \cellcolor{gray!10}{820} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{11.8} & \cellcolor{gray!10}{6105} & \cellcolor{gray!10}{kept}\\
+\cellcolor{gray!10}{class} & \cellcolor{gray!10}{905} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{13.1} & \cellcolor{gray!10}{6012} & \cellcolor{gray!10}{kept}\\
+occurrenceRemarks & 860 & 6917 & 12.4 & 6057 & kept\\
+\cellcolor{gray!10}{institutionCode} & \cellcolor{gray!10}{830} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{12.0} & \cellcolor{gray!10}{6087} & \cellcolor{gray!10}{kept}\\
+samplingEffort & 826 & 6917 & 11.9 & 6091 & kept\\
+\cellcolor{gray!10}{collectionCode} & \cellcolor{gray!10}{820} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{11.9} & \cellcolor{gray!10}{6097} & \cellcolor{gray!10}{kept}\\
 \addlinespace
-eventTime & 665 & 6925 & 9.6 & 6260 & kept\\
-\cellcolor{gray!10}{lifeStage} & \cellcolor{gray!10}{643} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{9.3} & \cellcolor{gray!10}{6282} & \cellcolor{gray!10}{kept}\\
-sampleSizeUnit & 621 & 6925 & 9.0 & 6304 & kept\\
-\cellcolor{gray!10}{coordinateUncertaintyInMeters} & \cellcolor{gray!10}{613} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.9} & \cellcolor{gray!10}{6312} & \cellcolor{gray!10}{kept}\\
-waterBody & 596 & 6925 & 8.6 & 6329 & kept\\
+eventTime & 665 & 6917 & 9.6 & 6252 & kept\\
+\cellcolor{gray!10}{lifeStage} & \cellcolor{gray!10}{635} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{9.2} & \cellcolor{gray!10}{6282} & \cellcolor{gray!10}{kept}\\
+sampleSizeUnit & 621 & 6917 & 9.0 & 6296 & kept\\
+\cellcolor{gray!10}{coordinateUncertaintyInMeters} & \cellcolor{gray!10}{613} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.9} & \cellcolor{gray!10}{6304} & \cellcolor{gray!10}{kept}\\
+waterBody & 596 & 6917 & 8.6 & 6321 & kept\\
 \addlinespace
-\cellcolor{gray!10}{collectionID} & \cellcolor{gray!10}{594} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.6} & \cellcolor{gray!10}{6331} & \cellcolor{gray!10}{kept}\\
-disposition & 582 & 6925 & 8.4 & 6343 & kept\\
-\cellcolor{gray!10}{habitat} & \cellcolor{gray!10}{581} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.4} & \cellcolor{gray!10}{6344} & \cellcolor{gray!10}{kept}\\
-taxonKey & 561 & 6925 & 8.1 & 6364 & kept\\
-\cellcolor{gray!10}{typeStatus} & \cellcolor{gray!10}{558} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.1} & \cellcolor{gray!10}{6367} & \cellcolor{gray!10}{kept}\\
+\cellcolor{gray!10}{collectionID} & \cellcolor{gray!10}{594} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.6} & \cellcolor{gray!10}{6323} & \cellcolor{gray!10}{kept}\\
+disposition & 582 & 6917 & 8.4 & 6335 & kept\\
+\cellcolor{gray!10}{habitat} & \cellcolor{gray!10}{581} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.4} & \cellcolor{gray!10}{6336} & \cellcolor{gray!10}{kept}\\
+taxonKey & 561 & 6917 & 8.1 & 6356 & kept\\
+\cellcolor{gray!10}{typeStatus} & \cellcolor{gray!10}{558} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.1} & \cellcolor{gray!10}{6359} & \cellcolor{gray!10}{kept}\\
 \addlinespace
-higherGeography & 558 & 6925 & 8.1 & 6367 & kept\\
-\cellcolor{gray!10}{fieldNumber} & \cellcolor{gray!10}{558} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.1} & \cellcolor{gray!10}{6367} & \cellcolor{gray!10}{kept}\\
-language & 557 & 6925 & 8.0 & 6368 & kept\\
-\cellcolor{gray!10}{modified} & \cellcolor{gray!10}{557} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6368} & \cellcolor{gray!10}{kept}\\
-preparations & 557 & 6925 & 8.0 & 6368 & kept\\
+higherGeography & 558 & 6917 & 8.1 & 6359 & kept\\
+\cellcolor{gray!10}{fieldNumber} & \cellcolor{gray!10}{558} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.1} & \cellcolor{gray!10}{6359} & \cellcolor{gray!10}{kept}\\
+language & 557 & 6917 & 8.1 & 6360 & kept\\
+\cellcolor{gray!10}{modified} & \cellcolor{gray!10}{557} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.1} & \cellcolor{gray!10}{6360} & \cellcolor{gray!10}{kept}\\
+preparations & 557 & 6917 & 8.1 & 6360 & kept\\
 \addlinespace
-\cellcolor{gray!10}{identifiedBy} & \cellcolor{gray!10}{556} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6369} & \cellcolor{gray!10}{kept}\\
-georeferencedBy & 556 & 6925 & 8.0 & 6369 & kept\\
-\cellcolor{gray!10}{georeferenceRemarks} & \cellcolor{gray!10}{556} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6369} & \cellcolor{gray!10}{kept}\\
-recordNumber & 554 & 6925 & 8.0 & 6371 & kept\\
-\cellcolor{gray!10}{higherClassification} & \cellcolor{gray!10}{554} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6371} & \cellcolor{gray!10}{kept}\\
+\cellcolor{gray!10}{identifiedBy} & \cellcolor{gray!10}{556} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6361} & \cellcolor{gray!10}{kept}\\
+georeferencedBy & 556 & 6917 & 8.0 & 6361 & kept\\
+\cellcolor{gray!10}{georeferenceRemarks} & \cellcolor{gray!10}{556} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6361} & \cellcolor{gray!10}{kept}\\
+recordNumber & 554 & 6917 & 8.0 & 6363 & kept\\
+\cellcolor{gray!10}{higherClassification} & \cellcolor{gray!10}{554} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6363} & \cellcolor{gray!10}{kept}\\
 \addlinespace
-dateIdentified & 554 & 6925 & 8.0 & 6371 & kept\\
-\cellcolor{gray!10}{organismQuantityType} & \cellcolor{gray!10}{553} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6372} & \cellcolor{gray!10}{kept}\\
-ownerInstitutionCode & 553 & 6925 & 8.0 & 6372 & kept\\
-\cellcolor{gray!10}{locationID} & \cellcolor{gray!10}{553} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6372} & \cellcolor{gray!10}{kept}\\
-\textcolor{gray}{familyKey} & \textcolor{gray}{553} & \textcolor{gray}{6925} & \textcolor{gray}{8.0} & \textcolor{gray}{6372} & \textcolor{gray}{dropped}\\
+dateIdentified & 554 & 6917 & 8.0 & 6363 & kept\\
+\cellcolor{gray!10}{organismQuantityType} & \cellcolor{gray!10}{553} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6364} & \cellcolor{gray!10}{kept}\\
+ownerInstitutionCode & 553 & 6917 & 8.0 & 6364 & kept\\
+\cellcolor{gray!10}{locationID} & \cellcolor{gray!10}{553} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6364} & \cellcolor{gray!10}{kept}\\
+\textcolor{gray}{familyKey} & \textcolor{gray}{553} & \textcolor{gray}{6917} & \textcolor{gray}{8.0} & \textcolor{gray}{6364} & \textcolor{gray}{dropped}\\
 \addlinespace
-\cellcolor{gray!10}{occurrenceStatus} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6373} & \cellcolor{gray!10}{kept}\\
-verbatimLocality & 552 & 6925 & 8.0 & 6373 & kept\\
-\cellcolor{gray!10}{eventID} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6373} & \cellcolor{gray!10}{kept}\\
-georeferenceVerificationStatus & 552 & 6925 & 8.0 & 6373 & kept\\
-\cellcolor{gray!10}{nomenclaturalCode} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6373} & \cellcolor{gray!10}{kept}\\
+\cellcolor{gray!10}{occurrenceStatus} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365} & \cellcolor{gray!10}{kept}\\
+verbatimLocality & 552 & 6917 & 8.0 & 6365 & kept\\
+\cellcolor{gray!10}{eventID} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365} & \cellcolor{gray!10}{kept}\\
+georeferenceVerificationStatus & 552 & 6917 & 8.0 & 6365 & kept\\
+\cellcolor{gray!10}{nomenclaturalCode} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365} & \cellcolor{gray!10}{kept}\\
 \addlinespace
-georeferencedDate & 552 & 6925 & 8.0 & 6373 & kept\\
-\cellcolor{gray!10}{georeferenceProtocol} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6373} & \cellcolor{gray!10}{kept}\\
-georeferenceSources & 552 & 6925 & 8.0 & 6373 & kept\\
-\cellcolor{gray!10}{dynamicProperties} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6373} & \cellcolor{gray!10}{kept}\\
-island & 552 & 6925 & 8.0 & 6373 & kept\\
+georeferencedDate & 552 & 6917 & 8.0 & 6365 & kept\\
+\cellcolor{gray!10}{georeferenceProtocol} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365} & \cellcolor{gray!10}{kept}\\
+georeferenceSources & 552 & 6917 & 8.0 & 6365 & kept\\
+\cellcolor{gray!10}{dynamicProperties} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365} & \cellcolor{gray!10}{kept}\\
+island & 552 & 6917 & 8.0 & 6365 & kept\\
 \addlinespace
-\cellcolor{gray!10}{verbatimDepth} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6373} & \cellcolor{gray!10}{kept}\\
-footprintWKT & 552 & 6925 & 8.0 & 6373 & kept\\
-\cellcolor{gray!10}{islandGroup} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6373} & \cellcolor{gray!10}{kept}\\
-identificationRemarks & 552 & 6925 & 8.0 & 6373 & kept\\
-\cellcolor{gray!10}{previousIdentifications} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6373} & \cellcolor{gray!10}{kept}\\
+\cellcolor{gray!10}{verbatimDepth} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365} & \cellcolor{gray!10}{kept}\\
+footprintWKT & 552 & 6917 & 8.0 & 6365 & kept\\
+\cellcolor{gray!10}{islandGroup} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365} & \cellcolor{gray!10}{kept}\\
+identificationRemarks & 552 & 6917 & 8.0 & 6365 & kept\\
+\cellcolor{gray!10}{previousIdentifications} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365} & \cellcolor{gray!10}{kept}\\
 \addlinespace
-infraspecificEpithet & 552 & 6925 & 8.0 & 6373 & kept\\
-\cellcolor{gray!10}{materialSampleID} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6373} & \cellcolor{gray!10}{kept}\\
-scientificNameID & 552 & 6925 & 8.0 & 6373 & kept\\
-\cellcolor{gray!10}{originalNameUsage} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6373} & \cellcolor{gray!10}{kept}\\
-associatedSequences & 552 & 6925 & 8.0 & 6373 & kept\\
+infraspecificEpithet & 552 & 6917 & 8.0 & 6365 & kept\\
+\cellcolor{gray!10}{materialSampleID} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365} & \cellcolor{gray!10}{kept}\\
+scientificNameID & 552 & 6917 & 8.0 & 6365 & kept\\
+\cellcolor{gray!10}{originalNameUsage} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365} & \cellcolor{gray!10}{kept}\\
+associatedSequences & 552 & 6917 & 8.0 & 6365 & kept\\
 \addlinespace
-\cellcolor{gray!10}{identificationQualifier} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6373} & \cellcolor{gray!10}{kept}\\
-gbifID & 552 & 6925 & 8.0 & 6373 & kept\\
-\textcolor{gray}{\cellcolor{gray!10}{publisher}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6925}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6373}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
-type & 552 & 6925 & 8.0 & 6373 & kept\\
-\cellcolor{gray!10}{informationWithheld} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6373} & \cellcolor{gray!10}{kept}\\
+\cellcolor{gray!10}{identificationQualifier} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365} & \cellcolor{gray!10}{kept}\\
+gbifID & 552 & 6917 & 8.0 & 6365 & kept\\
+\textcolor{gray}{\cellcolor{gray!10}{publisher}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6917}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6365}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
+type & 552 & 6917 & 8.0 & 6365 & kept\\
+\cellcolor{gray!10}{informationWithheld} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365} & \cellcolor{gray!10}{kept}\\
 \addlinespace
-dataGeneralizations & 552 & 6925 & 8.0 & 6373 & kept\\
-\cellcolor{gray!10}{recordedByID} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6373} & \cellcolor{gray!10}{kept}\\
-\textcolor{gray}{vitality} & \textcolor{gray}{552} & \textcolor{gray}{6925} & \textcolor{gray}{8.0} & \textcolor{gray}{6373} & \textcolor{gray}{dropped}\\
-\cellcolor{gray!10}{organismScope} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6373} & \cellcolor{gray!10}{kept}\\
-organismRemarks & 552 & 6925 & 8.0 & 6373 & kept\\
+dataGeneralizations & 552 & 6917 & 8.0 & 6365 & kept\\
+\cellcolor{gray!10}{recordedByID} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365} & \cellcolor{gray!10}{kept}\\
+\textcolor{gray}{vitality} & \textcolor{gray}{552} & \textcolor{gray}{6917} & \textcolor{gray}{8.0} & \textcolor{gray}{6365} & \textcolor{gray}{dropped}\\
+\cellcolor{gray!10}{organismScope} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365} & \cellcolor{gray!10}{kept}\\
+organismRemarks & 552 & 6917 & 8.0 & 6365 & kept\\
 \addlinespace
-\textcolor{gray}{\cellcolor{gray!10}{verbatimLabel}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6925}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6373}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
-parentEventID & 552 & 6925 & 8.0 & 6373 & kept\\
-\cellcolor{gray!10}{higherGeographyID} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6373} & \cellcolor{gray!10}{kept}\\
-identificationID & 552 & 6925 & 8.0 & 6373 & kept\\
-\cellcolor{gray!10}{identifiedByID} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6373} & \cellcolor{gray!10}{kept}\\
+\textcolor{gray}{\cellcolor{gray!10}{verbatimLabel}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6917}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6365}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
+parentEventID & 552 & 6917 & 8.0 & 6365 & kept\\
+\cellcolor{gray!10}{higherGeographyID} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365} & \cellcolor{gray!10}{kept}\\
+identificationID & 552 & 6917 & 8.0 & 6365 & kept\\
+\cellcolor{gray!10}{identifiedByID} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365} & \cellcolor{gray!10}{kept}\\
 \addlinespace
-acceptedNameUsageID & 552 & 6925 & 8.0 & 6373 & kept\\
-\cellcolor{gray!10}{taxonConceptID} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6373} & \cellcolor{gray!10}{kept}\\
-acceptedNameUsage & 552 & 6925 & 8.0 & 6373 & kept\\
-\cellcolor{gray!10}{nameAccordingTo} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6373} & \cellcolor{gray!10}{kept}\\
-genericName & 552 & 6925 & 8.0 & 6373 & kept\\
+acceptedNameUsageID & 552 & 6917 & 8.0 & 6365 & kept\\
+\cellcolor{gray!10}{taxonConceptID} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365} & \cellcolor{gray!10}{kept}\\
+acceptedNameUsage & 552 & 6917 & 8.0 & 6365 & kept\\
+\cellcolor{gray!10}{nameAccordingTo} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365} & \cellcolor{gray!10}{kept}\\
+genericName & 552 & 6917 & 8.0 & 6365 & kept\\
 \addlinespace
-\cellcolor{gray!10}{taxonomicStatus} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6373} & \cellcolor{gray!10}{kept}\\
-taxonRemarks & 552 & 6925 & 8.0 & 6373 & kept\\
-\textcolor{gray}{\cellcolor{gray!10}{publishingCountry}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6925}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6373}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
-\textcolor{gray}{lastInterpreted} & \textcolor{gray}{552} & \textcolor{gray}{6925} & \textcolor{gray}{8.0} & \textcolor{gray}{6373} & \textcolor{gray}{dropped}\\
-\textcolor{gray}{\cellcolor{gray!10}{issue}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6925}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6373}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
+\cellcolor{gray!10}{taxonomicStatus} & \cellcolor{gray!10}{552} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{8.0} & \cellcolor{gray!10}{6365} & \cellcolor{gray!10}{kept}\\
+taxonRemarks & 552 & 6917 & 8.0 & 6365 & kept\\
+\textcolor{gray}{\cellcolor{gray!10}{publishingCountry}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6917}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6365}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
+\textcolor{gray}{lastInterpreted} & \textcolor{gray}{552} & \textcolor{gray}{6917} & \textcolor{gray}{8.0} & \textcolor{gray}{6365} & \textcolor{gray}{dropped}\\
+\textcolor{gray}{\cellcolor{gray!10}{issue}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6917}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6365}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
 \addlinespace
-\textcolor{gray}{nonTaxonomicIssue} & \textcolor{gray}{552} & \textcolor{gray}{6925} & \textcolor{gray}{8.0} & \textcolor{gray}{6373} & \textcolor{gray}{dropped}\\
-\textcolor{gray}{\cellcolor{gray!10}{mediaType}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6925}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6373}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
-\textcolor{gray}{hasCoordinate} & \textcolor{gray}{552} & \textcolor{gray}{6925} & \textcolor{gray}{8.0} & \textcolor{gray}{6373} & \textcolor{gray}{dropped}\\
-\textcolor{gray}{\cellcolor{gray!10}{hasGeospatialIssues}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6925}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6373}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
-\textcolor{gray}{acceptedTaxonKey} & \textcolor{gray}{552} & \textcolor{gray}{6925} & \textcolor{gray}{8.0} & \textcolor{gray}{6373} & \textcolor{gray}{dropped}\\
+\textcolor{gray}{nonTaxonomicIssue} & \textcolor{gray}{552} & \textcolor{gray}{6917} & \textcolor{gray}{8.0} & \textcolor{gray}{6365} & \textcolor{gray}{dropped}\\
+\textcolor{gray}{\cellcolor{gray!10}{mediaType}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6917}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6365}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
+\textcolor{gray}{hasCoordinate} & \textcolor{gray}{552} & \textcolor{gray}{6917} & \textcolor{gray}{8.0} & \textcolor{gray}{6365} & \textcolor{gray}{dropped}\\
+\textcolor{gray}{\cellcolor{gray!10}{hasGeospatialIssues}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6917}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6365}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
+\textcolor{gray}{acceptedTaxonKey} & \textcolor{gray}{552} & \textcolor{gray}{6917} & \textcolor{gray}{8.0} & \textcolor{gray}{6365} & \textcolor{gray}{dropped}\\
 \addlinespace
-\textcolor{gray}{\cellcolor{gray!10}{kingdomKey}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6925}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6373}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
-\textcolor{gray}{phylumKey} & \textcolor{gray}{552} & \textcolor{gray}{6925} & \textcolor{gray}{8.0} & \textcolor{gray}{6373} & \textcolor{gray}{dropped}\\
-\textcolor{gray}{\cellcolor{gray!10}{orderKey}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6925}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6373}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
-\textcolor{gray}{acceptedScientificName} & \textcolor{gray}{552} & \textcolor{gray}{6925} & \textcolor{gray}{8.0} & \textcolor{gray}{6373} & \textcolor{gray}{dropped}\\
-\textcolor{gray}{\cellcolor{gray!10}{verbatimScientificName}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6925}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6373}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
+\textcolor{gray}{\cellcolor{gray!10}{kingdomKey}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6917}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6365}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
+\textcolor{gray}{phylumKey} & \textcolor{gray}{552} & \textcolor{gray}{6917} & \textcolor{gray}{8.0} & \textcolor{gray}{6365} & \textcolor{gray}{dropped}\\
+\textcolor{gray}{\cellcolor{gray!10}{orderKey}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6917}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6365}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
+\textcolor{gray}{acceptedScientificName} & \textcolor{gray}{552} & \textcolor{gray}{6917} & \textcolor{gray}{8.0} & \textcolor{gray}{6365} & \textcolor{gray}{dropped}\\
+\textcolor{gray}{\cellcolor{gray!10}{verbatimScientificName}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6917}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6365}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
 \addlinespace
-\textcolor{gray}{typifiedName} & \textcolor{gray}{552} & \textcolor{gray}{6925} & \textcolor{gray}{8.0} & \textcolor{gray}{6373} & \textcolor{gray}{dropped}\\
-\textcolor{gray}{\cellcolor{gray!10}{protocol}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6925}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6373}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
-\textcolor{gray}{lastParsed} & \textcolor{gray}{552} & \textcolor{gray}{6925} & \textcolor{gray}{8.0} & \textcolor{gray}{6373} & \textcolor{gray}{dropped}\\
-\textcolor{gray}{\cellcolor{gray!10}{lastCrawled}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6925}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6373}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
-\textcolor{gray}{repatriated} & \textcolor{gray}{552} & \textcolor{gray}{6925} & \textcolor{gray}{8.0} & \textcolor{gray}{6373} & \textcolor{gray}{dropped}\\
+\textcolor{gray}{typifiedName} & \textcolor{gray}{552} & \textcolor{gray}{6917} & \textcolor{gray}{8.0} & \textcolor{gray}{6365} & \textcolor{gray}{dropped}\\
+\textcolor{gray}{\cellcolor{gray!10}{protocol}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6917}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6365}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
+\textcolor{gray}{lastParsed} & \textcolor{gray}{552} & \textcolor{gray}{6917} & \textcolor{gray}{8.0} & \textcolor{gray}{6365} & \textcolor{gray}{dropped}\\
+\textcolor{gray}{\cellcolor{gray!10}{lastCrawled}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6917}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6365}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
+\textcolor{gray}{repatriated} & \textcolor{gray}{552} & \textcolor{gray}{6917} & \textcolor{gray}{8.0} & \textcolor{gray}{6365} & \textcolor{gray}{dropped}\\
 \addlinespace
-\textcolor{gray}{\cellcolor{gray!10}{projectId}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6925}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6373}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
-\textcolor{gray}{isSequenced} & \textcolor{gray}{552} & \textcolor{gray}{6925} & \textcolor{gray}{8.0} & \textcolor{gray}{6373} & \textcolor{gray}{dropped}\\
-\textcolor{gray}{\cellcolor{gray!10}{gbifRegion}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6925}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6373}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
-\textcolor{gray}{publishedByGbifRegion} & \textcolor{gray}{552} & \textcolor{gray}{6925} & \textcolor{gray}{8.0} & \textcolor{gray}{6373} & \textcolor{gray}{dropped}\\
-\textcolor{gray}{\cellcolor{gray!10}{level0Gid}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6925}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6373}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
+\textcolor{gray}{\cellcolor{gray!10}{projectId}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6917}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6365}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
+\textcolor{gray}{isSequenced} & \textcolor{gray}{552} & \textcolor{gray}{6917} & \textcolor{gray}{8.0} & \textcolor{gray}{6365} & \textcolor{gray}{dropped}\\
+\textcolor{gray}{\cellcolor{gray!10}{gbifRegion}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6917}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6365}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
+\textcolor{gray}{publishedByGbifRegion} & \textcolor{gray}{552} & \textcolor{gray}{6917} & \textcolor{gray}{8.0} & \textcolor{gray}{6365} & \textcolor{gray}{dropped}\\
+\textcolor{gray}{\cellcolor{gray!10}{level0Gid}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6917}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6365}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
 \addlinespace
-\textcolor{gray}{level0Name} & \textcolor{gray}{552} & \textcolor{gray}{6925} & \textcolor{gray}{8.0} & \textcolor{gray}{6373} & \textcolor{gray}{dropped}\\
-\textcolor{gray}{\cellcolor{gray!10}{level1Gid}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6925}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6373}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
-\textcolor{gray}{level1Name} & \textcolor{gray}{552} & \textcolor{gray}{6925} & \textcolor{gray}{8.0} & \textcolor{gray}{6373} & \textcolor{gray}{dropped}\\
-\textcolor{gray}{\cellcolor{gray!10}{level2Gid}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6925}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6373}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
-\textcolor{gray}{level2Name} & \textcolor{gray}{552} & \textcolor{gray}{6925} & \textcolor{gray}{8.0} & \textcolor{gray}{6373} & \textcolor{gray}{dropped}\\
+\textcolor{gray}{level0Name} & \textcolor{gray}{552} & \textcolor{gray}{6917} & \textcolor{gray}{8.0} & \textcolor{gray}{6365} & \textcolor{gray}{dropped}\\
+\textcolor{gray}{\cellcolor{gray!10}{level1Gid}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6917}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6365}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
+\textcolor{gray}{level1Name} & \textcolor{gray}{552} & \textcolor{gray}{6917} & \textcolor{gray}{8.0} & \textcolor{gray}{6365} & \textcolor{gray}{dropped}\\
+\textcolor{gray}{\cellcolor{gray!10}{level2Gid}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6917}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6365}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
+\textcolor{gray}{level2Name} & \textcolor{gray}{552} & \textcolor{gray}{6917} & \textcolor{gray}{8.0} & \textcolor{gray}{6365} & \textcolor{gray}{dropped}\\
 \addlinespace
-\textcolor{gray}{\cellcolor{gray!10}{level3Gid}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6925}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6373}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
-\textcolor{gray}{level3Name} & \textcolor{gray}{552} & \textcolor{gray}{6925} & \textcolor{gray}{8.0} & \textcolor{gray}{6373} & \textcolor{gray}{dropped}\\
-\textcolor{gray}{\cellcolor{gray!10}{iucnRedListCategory}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6925}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6373}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
-\textcolor{gray}{genusKey} & \textcolor{gray}{544} & \textcolor{gray}{6925} & \textcolor{gray}{7.9} & \textcolor{gray}{6381} & \textcolor{gray}{dropped}\\
-\textcolor{gray}{\cellcolor{gray!10}{speciesKey}} & \textcolor{gray}{\cellcolor{gray!10}{540}} & \textcolor{gray}{\cellcolor{gray!10}{6925}} & \textcolor{gray}{\cellcolor{gray!10}{7.8}} & \textcolor{gray}{\cellcolor{gray!10}{6385}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
+\textcolor{gray}{\cellcolor{gray!10}{level3Gid}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6917}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6365}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
+\textcolor{gray}{level3Name} & \textcolor{gray}{552} & \textcolor{gray}{6917} & \textcolor{gray}{8.0} & \textcolor{gray}{6365} & \textcolor{gray}{dropped}\\
+\textcolor{gray}{\cellcolor{gray!10}{iucnRedListCategory}} & \textcolor{gray}{\cellcolor{gray!10}{552}} & \textcolor{gray}{\cellcolor{gray!10}{6917}} & \textcolor{gray}{\cellcolor{gray!10}{8.0}} & \textcolor{gray}{\cellcolor{gray!10}{6365}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
+\textcolor{gray}{genusKey} & \textcolor{gray}{544} & \textcolor{gray}{6917} & \textcolor{gray}{7.9} & \textcolor{gray}{6373} & \textcolor{gray}{dropped}\\
+\textcolor{gray}{\cellcolor{gray!10}{speciesKey}} & \textcolor{gray}{\cellcolor{gray!10}{540}} & \textcolor{gray}{\cellcolor{gray!10}{6917}} & \textcolor{gray}{\cellcolor{gray!10}{7.8}} & \textcolor{gray}{\cellcolor{gray!10}{6377}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
 \addlinespace
-day & 515 & 6925 & 7.4 & 6410 & kept\\
-\cellcolor{gray!10}{startDayOfYear} & \cellcolor{gray!10}{426} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{6.2} & \cellcolor{gray!10}{6499} & \cellcolor{gray!10}{kept}\\
-endDayOfYear & 426 & 6925 & 6.2 & 6499 & kept\\
-\cellcolor{gray!10}{geodeticDatum} & \cellcolor{gray!10}{307} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{4.4} & \cellcolor{gray!10}{6618} & \cellcolor{gray!10}{kept}\\
-associatedMedia & 300 & 6925 & 4.3 & 6625 & kept\\
+day & 515 & 6917 & 7.4 & 6402 & kept\\
+\cellcolor{gray!10}{startDayOfYear} & \cellcolor{gray!10}{426} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{6.2} & \cellcolor{gray!10}{6491} & \cellcolor{gray!10}{kept}\\
+endDayOfYear & 426 & 6917 & 6.2 & 6491 & kept\\
+\cellcolor{gray!10}{geodeticDatum} & \cellcolor{gray!10}{307} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{4.4} & \cellcolor{gray!10}{6610} & \cellcolor{gray!10}{kept}\\
+associatedMedia & 300 & 6917 & 4.3 & 6617 & kept\\
 \addlinespace
-\cellcolor{gray!10}{verbatimElevation} & \cellcolor{gray!10}{287} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{4.1} & \cellcolor{gray!10}{6638} & \cellcolor{gray!10}{kept}\\
-sex & 193 & 6925 & 2.8 & 6732 & kept\\
-\textcolor{gray}{\cellcolor{gray!10}{depth}} & \textcolor{gray}{\cellcolor{gray!10}{117}} & \textcolor{gray}{\cellcolor{gray!10}{6925}} & \textcolor{gray}{\cellcolor{gray!10}{1.7}} & \textcolor{gray}{\cellcolor{gray!10}{6808}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
-organismQuantity & 110 & 6925 & 1.6 & 6815 & kept\\
-\textcolor{gray}{\cellcolor{gray!10}{depthAccuracy}} & \textcolor{gray}{\cellcolor{gray!10}{110}} & \textcolor{gray}{\cellcolor{gray!10}{6925}} & \textcolor{gray}{\cellcolor{gray!10}{1.6}} & \textcolor{gray}{\cellcolor{gray!10}{6815}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
+\cellcolor{gray!10}{verbatimElevation} & \cellcolor{gray!10}{287} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{4.1} & \cellcolor{gray!10}{6630} & \cellcolor{gray!10}{kept}\\
+sex & 193 & 6917 & 2.8 & 6724 & kept\\
+\textcolor{gray}{\cellcolor{gray!10}{depth}} & \textcolor{gray}{\cellcolor{gray!10}{117}} & \textcolor{gray}{\cellcolor{gray!10}{6917}} & \textcolor{gray}{\cellcolor{gray!10}{1.7}} & \textcolor{gray}{\cellcolor{gray!10}{6800}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
+organismQuantity & 110 & 6917 & 1.6 & 6807 & kept\\
+\textcolor{gray}{\cellcolor{gray!10}{depthAccuracy}} & \textcolor{gray}{\cellcolor{gray!10}{110}} & \textcolor{gray}{\cellcolor{gray!10}{6917}} & \textcolor{gray}{\cellcolor{gray!10}{1.6}} & \textcolor{gray}{\cellcolor{gray!10}{6807}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
 \addlinespace
-uuid & 104 & 6925 & 1.5 & 6821 & kept\\
-\textcolor{gray}{\cellcolor{gray!10}{Identification}} & \textcolor{gray}{\cellcolor{gray!10}{104}} & \textcolor{gray}{\cellcolor{gray!10}{6925}} & \textcolor{gray}{\cellcolor{gray!10}{1.5}} & \textcolor{gray}{\cellcolor{gray!10}{6821}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
-\textcolor{gray}{elevation} & \textcolor{gray}{101} & \textcolor{gray}{6925} & \textcolor{gray}{1.5} & \textcolor{gray}{6824} & \textcolor{gray}{dropped}\\
-\textcolor{gray}{\cellcolor{gray!10}{elevationAccuracy}} & \textcolor{gray}{\cellcolor{gray!10}{101}} & \textcolor{gray}{\cellcolor{gray!10}{6925}} & \textcolor{gray}{\cellcolor{gray!10}{1.5}} & \textcolor{gray}{\cellcolor{gray!10}{6824}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
-sampleSizeValue & 71 & 6925 & 1.0 & 6854 & kept\\
+uuid & 104 & 6917 & 1.5 & 6813 & kept\\
+\textcolor{gray}{\cellcolor{gray!10}{Identification}} & \textcolor{gray}{\cellcolor{gray!10}{104}} & \textcolor{gray}{\cellcolor{gray!10}{6917}} & \textcolor{gray}{\cellcolor{gray!10}{1.5}} & \textcolor{gray}{\cellcolor{gray!10}{6813}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
+\textcolor{gray}{elevation} & \textcolor{gray}{101} & \textcolor{gray}{6917} & \textcolor{gray}{1.5} & \textcolor{gray}{6816} & \textcolor{gray}{dropped}\\
+\textcolor{gray}{\cellcolor{gray!10}{elevationAccuracy}} & \textcolor{gray}{\cellcolor{gray!10}{101}} & \textcolor{gray}{\cellcolor{gray!10}{6917}} & \textcolor{gray}{\cellcolor{gray!10}{1.5}} & \textcolor{gray}{\cellcolor{gray!10}{6816}} & \textcolor{gray}{\cellcolor{gray!10}{dropped}}\\
+sampleSizeValue & 71 & 6917 & 1.0 & 6846 & kept\\
 \addlinespace
-\cellcolor{gray!10}{coordinatePrecision} & \cellcolor{gray!10}{9} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{0.1} & \cellcolor{gray!10}{6916} & \cellcolor{gray!10}{kept}\\
-scientificNameAuthorship & 4 & 6925 & 0.1 & 6921 & kept\\
-\cellcolor{gray!10}{organismID} & \cellcolor{gray!10}{2} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{6923} & \cellcolor{gray!10}{kept}\\
-maximumDepthInMeters & 1 & 6925 & 0.0 & 6924 & kept\\
-\cellcolor{gray!10}{minimumDepthInMeters} & \cellcolor{gray!10}{1} & \cellcolor{gray!10}{6925} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{6924} & \cellcolor{gray!10}{kept}\\*
+\cellcolor{gray!10}{coordinatePrecision} & \cellcolor{gray!10}{9} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{0.1} & \cellcolor{gray!10}{6908} & \cellcolor{gray!10}{kept}\\
+scientificNameAuthorship & 4 & 6917 & 0.1 & 6913 & kept\\
+\cellcolor{gray!10}{organismID} & \cellcolor{gray!10}{2} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{6915} & \cellcolor{gray!10}{kept}\\
+maximumDepthInMeters & 1 & 6917 & 0.0 & 6916 & kept\\
+\cellcolor{gray!10}{minimumDepthInMeters} & \cellcolor{gray!10}{1} & \cellcolor{gray!10}{6917} & \cellcolor{gray!10}{0.0} & \cellcolor{gray!10}{6916} & \cellcolor{gray!10}{kept}\\*
 \end{longtable}
 \endgroup{}
 
@@ -6684,7 +6659,7 @@ Se aplicó el filtro espacial para extraer las ocurrencias dentro del
 \end{Highlighting}
 \end{Shaded}
 
-Como resultado del filtro espacial, 8 de las 6925 ocurrencias fueron
+Como resultado del filtro espacial, 8 de las 6917 ocurrencias fueron
 excluidas.
 
 \subsection{Respaldo}\label{respaldo-12}
@@ -6711,7 +6686,7 @@ todas los taxa y con solo peces de interés para este estudio.
 \section{Resultados}\label{resultados}
 
 El \emph{Atlas Ictiogeográfico de la Patagonia Occidental} reunió un
-total de 6917 ocurrencias de peces dulceacuícolas, estuarinos y
+total de 6909 ocurrencias de peces dulceacuícolas, estuarinos y
 diádromos, registradas en el período 1833, 2026. No se incluyeron
 registros de peces en cautiverio o siendo liberados, sino solo aquellos
 registrados en libertad en la naturaleza. La información se consolidó a
@@ -7064,10 +7039,10 @@ Es notable la existencia de un único registro de \emph{Olivaichthys
 viedmensis} en la cuenca del río Baker, reportado por
 \citet{arratiaUnderstandingMorphologicalVariability2017} (la Figura
 \ref{fig:catfishplot} muestra la distribución de Siluriformes,
-incluyendo Trichomycteridae y Diplomystidae{]}). Esta especie se
-distribuye ampliamente al este de la cordillera de los Andes, en la
-vertiente atlántica, y su presencia en el Baker podría explicarse por
-procesos de captura hidrográfica ocurridos hacia fines del Pleistoceno
+incluyendo Trichomycteridae y Diplomystidae). Esta especie se distribuye
+ampliamente al este de la cordillera de los Andes, en la vertiente
+atlántica, y su presencia en el Baker podría explicarse por procesos de
+captura hidrográfica ocurridos hacia fines del Pleistoceno
 \citep{arratiaUnderstandingMorphologicalVariability2017}. En particular,
 el sistema del lago General Carrera/Buenos Aires, que originalmente
 drenaba hacia el Atlántico, habría comenzado a drenar hacia el Pacífico,
@@ -7095,13 +7070,13 @@ de un Diplomystidae, sería más probable que se trate de
 Valenciennes, 1846
 
 Dentro del área de estudio, la familia de bagrecitos Trichomycteridae
-tiene una amplia distribución desde la región de Aysén (c.~48°S) hacia
-el norte (la Figura \ref{fig:catfishplot} muestra la distribución de
-Siluriformes, incluyendo Trichomycteridae y Diplomystidae{]}). Las dos
-especies de Trichomycteridae presentaron distribuciones complementarias:
-\emph{Trichomycterus areolatus}, bagrecito común en el centro y
-centro-sur de Chile está presente en el extremo norte del área de
-estudio en la isla de Chiloé, y en el río Petrohé en el continente, y
+tiene una amplia distribución desde la región de Aysén (\emph{c.} 48°S)
+hacia el norte (la Figura \ref{fig:catfishplot} muestra la distribución
+de Siluriformes, incluyendo Trichomycteridae y Diplomystidae{]}). Las
+dos especies de Trichomycteridae presentaron distribuciones
+complementarias: \emph{Trichomycterus areolatus}, bagrecito común en el
+centro y centro-sur de Chile está presente en el extremo norte del área
+de estudio en la isla de Chiloé, y en el río Petrohé en el continente, y
 zonas aledañas. \emph{Hatcheria macraei}, en cambio, posee una clara
 afinidad andina. Se registró desde la cuenca del río Puelo (41.4°S)
 hasta la cuenca del río Baker (47.8°S), siempre en cuencas andinas y
@@ -7110,32 +7085,6 @@ colonización histórica desde Argentina donde posee una amplia
 distribución, mediada por capturas fluviales hacia finales del
 Pleistoceno \citep{unmackPhylogeographyCatfishHatcheria2012}, parecido a
 lo discutido para otros taxa.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{X.filtered.dedup.revised }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{filter}\NormalTok{(canonicalName }\SpecialCharTok{==} \StringTok{"Hatcheria macraei"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{select}\NormalTok{(locality, decimalLatitude) }\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{arrange}\NormalTok{(}\FunctionTok{desc}\NormalTok{(decimalLatitude))}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## # A tibble: 199 x 2
-##    locality                                                      decimalLatitude
-##    <chr>                                                                   <dbl>
-##  1 "Lago Mascardi "                                                        -41.4
-##  2 "Lago Mascardi"                                                         -41.4
-##  3 "Río Manso"                                                             -41.5
-##  4 "Lago Steffen"                                                          -41.5
-##  5 "Río Manso. Cuenca río Puelo (Argentina). Rio Manso entre fr~           -41.5
-##  6 "Río Manso inferior"                                                    -41.6
-##  7 "Río Manso. Rio Manso entre Rio Steffen y Rio Puelo."                   -41.7
-##  8 "Río Manso. Puelo-Pacific. Rio Manso entre Rio Steffen y Rio~           -41.7
-##  9 "Río Epuyén"                                                            -42.1
-## 10 "Río Epuyén"                                                            -42.1
-## # i 189 more rows
-\end{verbatim}
 
 \begin{figure}
 
@@ -7159,6 +7108,8 @@ de peces, quien los identificó y los preservó en su colección
 posteriormente destruida en el incendio de 2007 del ex-Instituto de
 Zoología de la Universidad Austral de Chile, Valdivia (Germán Pequeño,
 com. pers. 2025).
+
+\newpage
 
 \section{Discusión y perspectivas}\label{discusiuxf3n-y-perspectivas}
 
@@ -7298,9 +7249,10 @@ este atlas puede ser un valioso recurso.
 
 Otra línea de evidencia proviene de la mayor riqueza de especies
 observada hacia el extremo norte del área de estudio, especialmente en
-el norte de la isla de Chiloé y en tributarios del Seno de Reloncaví,
-incluyendo el río Petrohué. Esta zona presenta una fauna íctica con
-mayor afinidad con la zona centro-sur de Chile y podría haber
+el norte de la isla de Chiloé
+\citep{camposPresenciaCheirodonAustrale1996} y en tributarios del Seno
+de Reloncaví, incluyendo el río Petrohué. Esta zona presenta una fauna
+íctica con mayor afinidad con la zona centro-sur de Chile y podría haber
 funcionado, al menos parcialmente, como refugio glacial o zona de
 persistencia local para especies dulceacuícolas como \emph{Cheirodon
 australe}, \emph{Trichomycterus areolatus} y \emph{Brachygalaxias
@@ -7316,10 +7268,7 @@ fundamental respecto de los peces dulceacuícolas estrictos. Tal pudo ser
 el caso de \emph{Aplochiton} spp., \emph{Galaxias maculatus}, y
 \emph{Eleginops maclovinus} cuyas historias de vida permiten explicar
 distribuciones más amplias en sistemas costeros e insulares
-{[}\citet{Gorski2018}; \citet{aloOtolithMicrochemistryDiadromy2019};
-\citet{delgadoEffectsDiadromyIts2019};
-\citet{astorgaContrastingPatternsGenetic2022};
-ceballosGeneticRelationshipsAtlantic2015{]}.
+\citep{Gorski2018, aloOtolithMicrochemistryDiadromy2019, delgadoEffectsDiadromyIts2019, astorgaContrastingPatternsGenetic2022, ceballosGeneticRelationshipsAtlantic2015}.
 
 A pesar del aumento sustancial en cobertura logrado por este trabajo,
 persisten vacíos geográficos importantes. La brecha más evidente se
@@ -7361,6 +7310,8 @@ criterios explícitos para incorporar, corregir o excluir registros. De
 esta forma, el atlas puede evolucionar hacia una infraestructura de
 conocimiento para la conservación de peces dulceacuícolas y diádromos de
 la Patagonia.
+
+\newpage
 
 \section{Información de sesión en
 R}\label{informaciuxf3n-de-sesiuxf3n-en-r}
@@ -7474,7 +7425,6 @@ R}\label{informaciuxf3n-de-sesiuxf3n-en-r}
 ##  units          1.0-0   2025-10-09 [1] CRAN (R 4.4.3)
 ##  urltools       1.7.3.1 2025-06-12 [1] CRAN (R 4.4.3)
 ##  usethis        3.2.1   2025-09-06 [1] CRAN (R 4.4.3)
-##  utf8           1.2.6   2025-06-08 [1] CRAN (R 4.4.3)
 ##  vctrs          0.6.5   2023-12-01 [1] CRAN (R 4.4.3)
 ##  viridisLite    0.4.2   2023-05-02 [1] CRAN (R 4.4.3)
 ##  whisker        0.4.1   2022-12-05 [1] CRAN (R 4.4.3)
@@ -7490,6 +7440,8 @@ R}\label{informaciuxf3n-de-sesiuxf3n-en-r}
 ## 
 ## ------------------------------------------------------------------------------
 \end{verbatim}
+
+\newpage
 
 \bibliography{bibliography/Biblio_Atlas_Ictio.bib}
 

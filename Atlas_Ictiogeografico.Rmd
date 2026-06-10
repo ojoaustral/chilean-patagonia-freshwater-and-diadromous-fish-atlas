@@ -5202,16 +5202,18 @@ bib <- read.csv(
   fileEncoding = "UTF-8", header = T)
 ```
 
-Conformar si todos los valores de `bibliographicCitation` en la base de datos están representados y estandarizados en la tabla recién cargada. 
 
-```{r}
+```{r, eval=FALSE, include=FALSE}
+# Conformar si todos los valores de `bibliographicCitation` en la base de datos
+# están representados y estandarizados en la tabla recién cargada. 
+
 tmp <- X.filtered.dedup.revised %>% 
   filter(!is.na(bibliographicCitation), bibliographicCitation != "") %>%
   distinct(bibliographicCitation) 
 
 all(tmp$bibliographicCitation %in% bib$bibliographicCitation)
-rm(tmp)
 
+tmp[!(tmp$bibliographicCitation %in% bib$bibliographicCitation),]
 ```
 
 La lista de referencias contiene `r nrow(bib)`  referencias previa estandarización, las cuales mapean a `r length(unique(bib$bibliographicCitation_standardized))` referencias estandarizadas.  
@@ -5548,7 +5550,10 @@ ggsave("./outputs_global_analyses/assorted_figures/occurrences_map_by_data_sourc
 ## Composición taxonómica  
 
 ```{r}
-species.list <- X.filtered.dedup.revised %>% filter(taxonRank == "SPECIES") %>% count(order, family, scientificName, canonicalName) %>% arrange(desc(n))
+species.list <- X.filtered.dedup.revised %>% 
+  filter(taxonRank == "SPECIES") %>% 
+  count(order, family, scientificName, canonicalName) %>% 
+  arrange(desc(n))
 ```
 
 Se encontraron `r nrow(species.list)` especies pertenecientes a `r length(unique(species.list$family))` familias de peces dulceacuícolas, estuarinos y diádromos. Las especies más frecuentemente reportadas fueron la trucha marrón  *Salmo trutta* y la trucha arcoíris *Oncorhynchus mykiss*, ambas especies  invasivas (Figura \ref{fig:freqplotspecies}). Los peces nativos los más comunes fueron el puye grande *G. platei* y el puye *Galaxias maculatus*. La mayoría de las ocurrencias en los conjuntos de datos fueron identificados a nivel de especie, aunque algunos a nivel de género, familia y orden. Cabe destacar que toda la taxonomía de las ocurrencias fue estandarizada de acuerdo al *GBIF Backbone Taxonomy*.  
@@ -5803,7 +5808,7 @@ ggsave("./outputs_global_analyses/assorted_figures/occurrences_map_Petromyzontif
 
 *Olivaichthys viedmensis* (MacDonagh, 1931)  
 
-Es notable la existencia de un único registro de *Olivaichthys viedmensis* en la cuenca del río Baker, reportado por @arratiaUnderstandingMorphologicalVariability2017 (la Figura \ref{fig:catfishplot} muestra la distribución de Siluriformes, incluyendo Trichomycteridae y Diplomystidae]). Esta especie se distribuye ampliamente al este de la cordillera de los Andes, en la vertiente atlántica, y su presencia en el Baker podría explicarse por procesos de captura hidrográfica ocurridos hacia fines del Pleistoceno [@arratiaUnderstandingMorphologicalVariability2017]. En particular, el sistema del lago General Carrera/Buenos Aires, que originalmente drenaba hacia el Atlántico, habría comenzado a drenar hacia el Pacífico, facilitando la conexión entre faunas ícticas de distintas cuencas.  
+Es notable la existencia de un único registro de *Olivaichthys viedmensis* en la cuenca del río Baker, reportado por @arratiaUnderstandingMorphologicalVariability2017 (la Figura \ref{fig:catfishplot} muestra la distribución de Siluriformes, incluyendo Trichomycteridae y Diplomystidae). Esta especie se distribuye ampliamente al este de la cordillera de los Andes, en la vertiente atlántica, y su presencia en el Baker podría explicarse por procesos de captura hidrográfica ocurridos hacia fines del Pleistoceno [@arratiaUnderstandingMorphologicalVariability2017]. En particular, el sistema del lago General Carrera/Buenos Aires, que originalmente drenaba hacia el Atlántico, habría comenzado a drenar hacia el Pacífico, facilitando la conexión entre faunas ícticas de distintas cuencas.  
 
 Procesos similares de reorganización postglacial del drenaje han afectado otras cuencas patagónicas y podrían explicar distribuciones disyuntas y aparentemente aisladas en Chile, como ocurre con *Odontesthes hatcheri* y *Percichthys trucha*.  
 
@@ -5813,12 +5818,7 @@ Del género *Diplomystes* existe un único registro proveniente de un estudio de
 *Hatcheria macraei (Girard, 1855)*
 *Trichomycterus areolatus* Valenciennes, 1846  
 
-Dentro del área de estudio, la familia de bagrecitos Trichomycteridae tiene una amplia distribución desde la región de Aysén (c. 48°S) hacia el norte (la Figura \ref{fig:catfishplot} muestra la distribución de Siluriformes, incluyendo Trichomycteridae y Diplomystidae]). Las dos especies de Trichomycteridae presentaron distribuciones complementarias:  *Trichomycterus areolatus*, bagrecito común en el centro y centro-sur de Chile está presente en el extremo norte del área de estudio en la isla de Chiloé, y en el río Petrohé en el continente, y zonas aledañas. *Hatcheria macraei*, en cambio, posee una clara afinidad andina. Se registró desde la cuenca del río Puelo (41.4°S) hasta la cuenca del río Baker (47.8°S), siempre en cuencas andinas y transandinas.  Este resultado es consistente con la hipótesis de colonización histórica desde Argentina donde posee una amplia distribución,  mediada por capturas fluviales hacia finales del Pleistoceno [@unmackPhylogeographyCatfishHatcheria2012], parecido a lo discutido para otros taxa.
-
-
-```{r}
-X.filtered.dedup.revised %>% filter(canonicalName == "Hatcheria macraei") %>% select(locality, decimalLatitude) %>% arrange(desc(decimalLatitude))
-```
+Dentro del área de estudio, la familia de bagrecitos Trichomycteridae tiene una amplia distribución desde la región de Aysén (*c.* 48°S) hacia el norte (la Figura \ref{fig:catfishplot} muestra la distribución de Siluriformes, incluyendo Trichomycteridae y Diplomystidae]). Las dos especies de Trichomycteridae presentaron distribuciones complementarias:  *Trichomycterus areolatus*, bagrecito común en el centro y centro-sur de Chile está presente en el extremo norte del área de estudio en la isla de Chiloé, y en el río Petrohé en el continente, y zonas aledañas. *Hatcheria macraei*, en cambio, posee una clara afinidad andina. Se registró desde la cuenca del río Puelo (41.4°S) hasta la cuenca del río Baker (47.8°S), siempre en cuencas andinas y transandinas.  Este resultado es consistente con la hipótesis de colonización histórica desde Argentina donde posee una amplia distribución,  mediada por capturas fluviales hacia finales del Pleistoceno [@unmackPhylogeographyCatfishHatcheria2012], parecido a lo discutido para otros taxa.
 
 
 
@@ -5854,21 +5854,7 @@ ggsave("./outputs_global_analyses/assorted_figures/occurrences_map_Siluriformes.
 Especie eurihalina que habita en las aguas costeras de la mayoría de las regiones tropicales y subtropicales del mundo, encontrándoselo frecuentemente en ambientes estuarinos y de agua dulce. En el área de estudio, existe un único registro: dos ejemplares capturados en Chiloé que le hicieron llegar a Germán Pequeño, autoridad chilena en taxonomía de peces, quien los identificó y los preservó en su colección posteriormente destruida en el incendio de 2007 del ex-Instituto de Zoología de la Universidad Austral de Chile, Valdivia (Germán Pequeño, com. pers. 2025).  
 
 
-<!-- ## Tareas pendientes   -->
-
-<!-- Otros casos indudablemente involucran especies mal identificadas. Por ejemplo, las tres especies de *Aplochiton* están profusamente confundidas en la literatura^[Alò, D., Correa, C., Arias, C., and Cárdenas, L. 2013. Diversity of Aplochiton fishes (Galaxiidea) and the taxonomic resurrection of A. marinus. PLoS ONE 8: e71577. doi: 10.1371/journal.pone.0071577.]. La confusión  también se extiende a la incorrecta identificación de muchos especímenes de museo,  de modo que un número de registros aquí incluidos deben ser corregidos según un estudio en preparación^[Correa and Boisjoly, unpublished). Estas confusiones son relevantes porque las tres especies de Aplochiton difieren en  su historia de vida, nicho ecológico y estructura genética poblacional.      -->
-
-<!-- Los pejerreyes (Atherinopsidae y Atherinidae) y peladillas (Galaxiidae, Aplochiton) son grupos que hay que revisar en detalle, ojalá con la ayuda de expertos en su sistemática. Así, algunas de las ocurrencias reportadas, sobre todo aquellas que poseen respaldo gráfico o material, podrán ser rectificadas en cado de errores de identificación. En algunos casos  será necesario conducir estudios de campo para  delimitar las zonas de distribución de especies. -->
-
-<!-- Por otra parte queda pendiente una evaluación caso a caso de duplicados. -->
-
-
-
-<!-- ## Perspectivas   -->
-
-<!-- Una vez terminado el *Atlas Ictiológico de la Patagonia Occidental*, este servirá para producir mapas predictivos de biodiversidad de peces, examinar  relaciones ecológicas y funcionales incluyendo el impacto de la introducción de los salmónidos, y orientar futuras prospecciones ictiológicas. Por ejemplo, los resultados preliminares revelan una gran brecha de información  sobre biodiversidad en el suroeste del área de estudio. Es urgente explorar este territorio con ríos, lagos y mallines costeros ubicados entre las penínsulas y archipiélagos más lluviosos del mundo. Este es un territorio aún prístino, y nuestro atlas sugiere que aquí podrían existir valiosos refugios de biodiversidad que es preciso documentar y proteger en cuanto antes.   -->
-
-<!-- # New -->
+\newpage 
 
 # Discusión y perspectivas  
 
@@ -5886,9 +5872,9 @@ Un problema adicional surge cuando las ocurrencias provienen de textos, mapas o 
 
 Desde una perspectiva biogeográfica, el atlas puede usarse para estudiar la ictiofauna entre cuencas con drenaje pacífico típico y cuencas transandinas cuya historia hidrográfica ha sido afectada por cambios en el nivel del mar, capturas, reversos de drenaje y reorganización postglacial. La presencia de taxa afines con afinidad atlántica, tales como *Odontesthes hatcheri*, *Percichthys trucha*, *Hatcheria macraei* y *Olivaichthys viedmensis* sugiere que la historia fluvial, incluyendo capturas hidrográficas, es clave para explicar la composición de las comunidades de peces dulceacuícolas en la Patagonia occidental [@ruzzantePhylogeographyPercichthyidaePisces2006; @unmackPhylogeographyCatfishHatcheria2012; @arratiaUnderstandingMorphologicalVariability2017; @Ruzzante2020]. Las cuencas transandinas deben tratarse, por lo tanto, como unidades biogeográficas particulares, donde la historia geomorfológica puede ser tan importante como las condiciones ecológicas contemporáneas. Por otra parte, la escasez de peces dulceacuícolas estrictos y preponderancia de especies diadromas en gran parte del área de estudio, salvo en cuencas transandinas discutidas más arriba, podría servir para estudiar en mayor detalle cómo la expansión glacial habría eliminado o restringido severamente las biotas dulceacuícolas locales, dónde se podrían encontrar refugios glaciales y cómo la dispersión marina/estuarina habría facilitado la recolonización. En los últimos 20 años, estas preguntas han sido sobre todo abordadas desde la perspectiva de la filogeografía molecular, pero no tanto desde la perspectiva de ensambles comunitarios [@cussacDistributionSouthAmerican2004], para lo cual este atlas puede ser un valioso recurso.    
 
-Otra línea de evidencia proviene de la mayor riqueza de especies observada hacia el extremo norte del área de estudio, especialmente en el norte de la isla de Chiloé y en tributarios del Seno de Reloncaví, incluyendo el río Petrohué. Esta zona presenta una fauna íctica con mayor afinidad con la zona centro-sur de Chile y podría haber funcionado, al menos parcialmente, como refugio glacial o zona de persistencia local para especies dulceacuícolas como *Cheirodon australe*, *Trichomycterus areolatus* y *Brachygalaxias bullocki*. Dada la falta de cobertura de datos de ocurrencias en grandes territorios de la Patagonia occidental (ver más abajo), es prematuro descartar que otros refugios glaciales para peces dulceacuícolas puedan descubrirse en el futuro. En este sentido, este atlas puede añadir una capa de información para orientar la búsqueda.    
+Otra línea de evidencia proviene de la mayor riqueza de especies observada hacia el extremo norte del área de estudio, especialmente en el norte de la isla de Chiloé [@camposPresenciaCheirodonAustrale1996] y en tributarios del Seno de Reloncaví, incluyendo el río Petrohué. Esta zona presenta una fauna íctica con mayor afinidad con la zona centro-sur de Chile y podría haber funcionado, al menos parcialmente, como refugio glacial o zona de persistencia local para especies dulceacuícolas como *Cheirodon australe*, *Trichomycterus areolatus* y *Brachygalaxias bullocki*. Dada la falta de cobertura de datos de ocurrencias en grandes territorios de la Patagonia occidental (ver más abajo), es prematuro descartar que otros refugios glaciales para peces dulceacuícolas puedan descubrirse en el futuro. En este sentido, este atlas puede añadir una capa de información para orientar la búsqueda.    
 
-En contraste, las especies diádromas/eurihalinas pudieron recolonizar sistemas remotos de la Patagonia por vía marina, una diferencia fundamental respecto de los peces dulceacuícolas estrictos. Tal pudo ser el caso de *Aplochiton* spp., *Galaxias maculatus*, y *Eleginops maclovinus* cuyas historias de vida permiten explicar distribuciones más amplias en sistemas costeros e insulares [@Gorski2018; @aloOtolithMicrochemistryDiadromy2019; @delgadoEffectsDiadromyIts2019; @astorgaContrastingPatternsGenetic2022; ceballosGeneticRelationshipsAtlantic2015].
+En contraste, las especies diádromas/eurihalinas pudieron recolonizar sistemas remotos de la Patagonia por vía marina, una diferencia fundamental respecto de los peces dulceacuícolas estrictos. Tal pudo ser el caso de *Aplochiton* spp., *Galaxias maculatus*, y *Eleginops maclovinus* cuyas historias de vida permiten explicar distribuciones más amplias en sistemas costeros e insulares [@Gorski2018; @aloOtolithMicrochemistryDiadromy2019; @delgadoEffectsDiadromyIts2019; @astorgaContrastingPatternsGenetic2022; @ceballosGeneticRelationshipsAtlantic2015].
 
 A pesar del aumento sustancial en cobertura logrado por este trabajo, persisten vacíos geográficos importantes. La brecha más evidente se encuentra en la Patagonia suroccidental, especialmente en sistemas costeros, archipiélagos, fiordos, penínsulas e islas expuestas a condiciones hiperhúmedas y de difícil acceso. Sectores como los archipiélagos de los Chonos, Wellington, Madre de Dios, Hanover y Reina Adelaida, entre otros sistemas costeros y lacustres asociados, permanecen escasamente documentados. Esta carencia limita nuestra capacidad de evaluar la existencia de refugios de biodiversidad, poblaciones aisladas, linajes no descritos, rutas de dispersión diádroma o áreas todavía poco invadidas por o propicias para salmónidos invasivos. Dado su relativo aislamiento, baja densidad humana y gran heterogeneidad ambiental, estos territorios deberían constituir una prioridad para futuras prospecciones ictiológicas.
 
@@ -5898,13 +5884,14 @@ En este sentido, las futuras etapas deberían combinar tres enfoques complementa
 
 
 
-
+\newpage 
 # Información de sesión en R  
 
 ```{r, warning=F}
 devtools::session_info()
 ```
 
+\newpage 
 
 
 ```{r, eval=T,include=F}
