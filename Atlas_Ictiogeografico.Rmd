@@ -2576,7 +2576,6 @@ iDigBio_AE <- iDigBio_AE %>%
 
 ### Respaldo   
 
-
 ```{r}
 # Cambiar modo para escribir archivo
 mode(iDigBio_AE) <- "data.frame"
@@ -3594,10 +3593,7 @@ rm(list = ls())
 Se combinaron los distintos conjuntos de datos en una gran tabla, a pesar de las potenciales ocurrencias duplicadas que pudiesen surgir. En el siguiente código se enumera cada conjunto de datos en orden de precedencia. Este orden incide en la remoción masiva de duplicados (ver más abajo). En el proceso se creó la variable ``rObjectRank_CC`` que registró el orden de precedencia \ref{tab:tabpreced}. Por ejemplo, se decidió mover iNaturalist arriba de GBIF: muchos registros de iNaturalit fueron indexados en GBIF también pero los registros originales (iNaturalist) son mas completos incluyendo "locality" y "country", campos que se encontraron vacíos en GBIF.  
 
 
-### Cargar los conjuntos de datos pre-procesados (opcional)  
-
-Para correr el código a partir de este capítulo, es necesario cargar cada uno de los conjuntos de datos procesados anteriormente. 
-
+<!-- Cargar los conjuntos de datos pre-procesados (opcional)   -->
 
 ```{r, include=FALSE, eval=FALSE}
 FishDB_CC.ready <- read.csv("./data_sources/Correa_Boisjoly_Collection/Output_FishDatabase_Correa-Boisjoly.csv", colClasses = "character", fileEncoding = "UTF-8")
@@ -4772,7 +4768,7 @@ X.filtered.dedup.revised <- X.filtered.dedup.revised %>%
 
 ```
 
-***Trichomycterus areolatus*** Robert MacDowell recolectó dos bagres en el sector del lago General Carrera en 1968. Los identificó como *Trichomycterus areolatus* y envió los especímenes preservados al MCZ (MCZ:Ich:98719, MCZ:Ich:98722). Sin embargo, estos registros se encuentran muy por fuera del área de distribución descrita para *T. areolatus*, lo que levantó sospechas sobre la identificación de los especímenes. Para aclarar el asunto, se consultó a Gloria Arratia (University of Kansas), autoridad mundial en evolución de peces teleósteos, especialmente Siluriformes. Ella contactó al museo, consiguió fotografías de los especímenes preservados, y concluyó que los especímenes eran, en realidad, *Hatcheria macraei*.
+***Trichomycterus areolatus*** Robert McDowell recolectó dos bagres en el sector del lago General Carrera en 1968. Los identificó como *Trichomycterus areolatus* y envió los especímenes preservados al MCZ (MCZ:Ich:98719, MCZ:Ich:98722). Sin embargo, estos registros se encuentran muy por fuera del área de distribución descrita para *T. areolatus*, lo que levantó sospechas sobre la identificación de los especímenes. Para aclarar el asunto, se consultó a Gloria Arratia (University of Kansas), autoridad mundial en evolución de peces teleósteos, especialmente Siluriformes. Ella contactó al museo, consiguió fotografías de los especímenes preservados, y concluyó que los especímenes eran, en realidad, *Hatcheria macraei*.
 
 ```{r}
 # Specimens re-identified by Gloria Arratia
@@ -4852,7 +4848,8 @@ rm(idx)
 idx <- X.filtered.dedup.revised$prim_key %in% 
   c("agui | MAguilar.Lit.Review.906")
 # Exclude from database two duplicated and misidentified records
-X.filtered.dedup.revised$verbatimIdentification[idx] <- X.filtered.dedup.revised$scientificName[idx]
+X.filtered.dedup.revised$verbatimIdentification[idx] <-  
+  X.filtered.dedup.revised$scientificName[idx]
 X.filtered.dedup.revised$canonicalName[idx]  <- "Aplochiton marinus"
 X.filtered.dedup.revised$scientificName[idx] <- "Aplochiton marinus Eigenmann, 1928"
 X.filtered.dedup.revised$taxonKey[idx]       <- "2410622" 
@@ -5115,7 +5112,7 @@ rm(list="exclude")
 **Adición de ocurrencias no incluidas anteriormente**  
 
 ```{r}
-MB <- read.csv("./data_sources/Addendum_MBoisjoly/2026-05-31_Addendum_MBoisjoly_ready.csv",
+MB <- read.csv("./data_sources/Addendum_MBoisjoly/2026-06-10_Addendum_MBoisjoly_ready.csv",
                fileEncoding = "UTF-8", na=c("", NA), colClasses = "character")
 
 MB <- MB %>% mutate(decimalLatitude = as.numeric(decimalLatitude), 
@@ -5239,9 +5236,9 @@ X.filtered.dedup.revised <- X.filtered.dedup.revised %>%
 
 ## Manejo de columnas  
 
-### Código identificador taxonómico   
+### Actualización del identificador taxonómico   
 
-Actualizar `taxonRank` y `taxonID` mediante vinculación con la taxonomía backbone de GBIF. Este paso ya había sido realizado en gran medida, pero se repite para asegurar consistencia después de algunas reasignaciones taxonómicas, y se implementa URL.  
+Se actualizó `taxonRank` y `taxonID` mediante vinculación con la taxonomía backbone de GBIF. Este paso ya había sido realizado en gran medida, pero se repite para asegurar consistencia después de algunas reasignaciones taxonómicas, y además se implementa un URL para acceder al registro del taxón en GBIF.  
 
 ```{r}
 taxonomy <- taxonomy %>% filter(IncludePewProAP == 1) %>% 
@@ -5262,9 +5259,12 @@ X.filtered.dedup.revised <- X.filtered.dedup.revised %>%
   bind_cols(tmp) 
 
 rm(tmp)
+
+
 ```
 
-### Diagnóstico y eliminación de columnas vacías   
+
+### Diagnóstico y selección de variables   
 
 Como legado de la juntura de muchas bases de datos, la frecuencia de uso de cada variable (columna) en la base de datos final fue muy variables. Se reordenaron las columnas  según su frecuencia de uso y se eliminaron las columnas vacías, así como la mayoría de las columnas que no corresponden al DwC. En la Tabla \ref{tab:columnUsage} se aprecia la frecuencia de uso de todas las columnas retenidas.      
 
@@ -5302,14 +5302,15 @@ Mantener solo columnas compatibles con DwC, más algunas columnas clave del proy
 keep.cols <- unique(c(
   names(X.filtered.dedup.revised)[names(X.filtered.dedup.revised) %in% DwC$`Darwin Core Terms (DwC)`],
   c("prim_key", "canonicalName", "data_source",
-    "uuid", "gbifID", "datasetKey", "taxonKey")
+    "uuid", "gbifID", "datasetKey", "taxonID")
 ))  
 
 n_before <- ncol(X.filtered.dedup.revised)
 
 # Drop all non-DwC, non-essential columns; any_of() skips already-absent columns
 X.filtered.dedup.revised <- X.filtered.dedup.revised %>%
-  select(any_of(keep.cols))
+  select(any_of(keep.cols)) %>% 
+  relocate(prim_key, data_source, canonicalName, taxonID)
 
 ```
 
