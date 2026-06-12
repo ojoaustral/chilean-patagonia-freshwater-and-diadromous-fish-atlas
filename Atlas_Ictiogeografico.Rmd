@@ -1863,7 +1863,9 @@ SUBPESCA2 <- SUBPESCA2 %>%
 El conjunto de datos presentó `r length(unique(SUBPESCA2$bibliographicCitation))` referencias correspondientes a informes de resultados de pescas de investigación autorizadas por SUBPESCA en el marco del Sistema de Evaluación Ambiental (Tabla \ref{tab:subpescareftable}).  
 
 ```{r subpescareftable, echo=F}  
-SUBPESCA2 %>% select(bibliographicCitation) %>% distinct() %>% arrange() %>% ungroup() %>%
+SUBPESCA2 %>% 
+  select(bibliographicCitation) %>% 
+  distinct() %>% arrange() %>% ungroup() %>%
   mutate(id = row_number()) %>% relocate(id, before = 1) %>% 
   kable(caption = "Lista de referencias en el segundo conjunto de datos de SUBPESCA.", longtable=T) %>%
          kable_styling(bootstrap_options = c("striped", "hover", "condensed"),full_width = F, latex_options = c("hold_position"),font_size = 8) %>% 
@@ -4758,7 +4760,7 @@ rm(list=ls()[!ls()%in%c("DwC",
 
 ## Revisión de taxa improbables o erróneos  
 
-Se revisaron y excluyeron taxa altamente improbables y no confirmados.
+Se revisaron y excluyeron taxa altamente improbables y no confirmados. Notar que muchos otros cambios de cierta forma similares ya se aplicaron en secciones previas.  
 
 ***Galaxias globiceps***  es una especie endémica de la región de Los Lagos y una de las especies con distribución más restringida en Chile. Los especímenes tipo de *G. globiceps* fueron colectados en 1919 entre Puerto Varas y Puerto Montt en la localidad entonces conocida como Abtao, hoy Los Alerces (41°23’S), cuenca del río Maullín (Eigenmann 1928), que está justo al norte de nuestra área de estudios. Más de setenta años más tarde (1992) la especie se documentó nuevamente en tres sitios de la misma cuenca, en tributarios de los ríos Arenas y Negro, y en el río Arenas (Berra y Ruiz 1994). También existe un registro dentro de nuestra área de estudio: un único ejemplar de *G. globiceps* del lago Huelde en Chiloé, sin especificar cómo se identificó ni ofrecer respaldo alguno del ejemplar (Murillo y Ruiz 2002). Debido a la dificultad para diferenciar *G. globiceps* de *G. platei* por la alta variación morfológica de esta última especie, y luego de abundante esfuerzo de pesca y capturas en el mismo lago que rindió decenas de *G. platei* (ver conjunto de datos empíricos de Correa y Boisjoly), concluimos que este registro en Chiloé es improbable y fue removido. En definitiva, no hay registros confirmados de *G. globiceps* dentro del área de estudio.   
 
@@ -4877,6 +4879,20 @@ X.filtered.dedup.revised$taxonKey[idx]       <- "2957"
 
 ```
 
+
+***Atherinopsidae (undetermined species)***
+Se excluyeron tres ocurrencias de pejerreyes identificados a nivel de familia o género que probablemente corresponden a una especie marina. Sus localidades son el mercado (1990) y la playa (1966) de Punta Arenas, y puerto Almanza en el Canal Beagle (1996).  
+
+```{r}
+idx <- c("idig | daaaa010-2911-4dee-90d1-57bb6da0b964", # Punta Arenas, fish market (ex. Coop. Pescadores)
+         "idig | 9dad17d9-752e-4798-a466-3768051e6c41", # Punta Arenas, on beach
+         "gbif | CENPAT-CONICET-CNPICT-CNPICT1996/31")  # Canal Beagle, Almanza (CNPICT1996/31)
+
+X.filtered.dedup.revised <- X.filtered.dedup.revised %>% filter(!(prim_key  %in% idx))
+
+```
+
+
 ***Basilichthys australis*** Los registros identificados originalmente como *Basilichthys australis* fueron actualizados a *Basilichthys microlepidotus* siguiendo la revisión taxonómica de @velizGeneroBasilichthysTeleostei2012. Basándose en evidencia morfológica y genética a lo largo de la distribución chilena del género, estos autores concluyeron que *B. australis* y *B. microlepidotus* no representan especies distintas y deben ser considerados un único taxón. De acuerdo con el principio de prioridad establecido por el Código Internacional de Nomenclatura Zoológica, el nombre válido *Basilichthys microlepidotus* fue adoptado para todos los registros correspondientes en esta base de datos.
 
 ```{r}
@@ -4915,6 +4931,26 @@ X.filtered.dedup.revised$canonicalName[idx]  <-
        "Odontesthes hatcheri"
 X.filtered.dedup.revised$taxonKey[idx]  <- "2412392"
 X.filtered.dedup.revised$usageKey[idx]  <- "2412392"
+
+```
+
+***Petromyzontiformes***  
+Se corrigieron y excluyeron registros de lampreas el  extremo austral: Se encontraron dos registros históricos (previo 2000) de lamprea en el extremo sur del área de estudio. El primero corresponde a una lamprea identificada como *Geotria australis*, recolectada en un pequeño arroyo de Tierra del Fuego y reportada por @Norman1937. Este registro fue citado posteriormente por Neira (1984) e incorporado al conjunto de datos del Ministerio del Medio Ambiente (MMA), pero fue excluido de la presente base de datos debido a la falta de información sobre la cuenca específica del registro.
+
+El segundo registro, reportado por @Sieldfeld1976 para el río San Juan, en la península de Brunswick, corresponde a un ejemplar identificado originalmente como *Exomegas macrostomus*, especie considerada sinónimo de *Geotria australis* según el GBIF backbone taxonomy. @Neira1984 citó posteriormente este registro bajo el nombre *Mordacia lapicida*, sin entregar una justificación explícita, y el MMA lo incorporó luego con esa misma identificación, citando como fuente a @Neira1984.
+
+@Riva-Rossi2020 revisaron la validez taxonómica de diversos registros históricos de lampreas mediante caracteres moleculares y morfológicos. Entre el material examinado incluyeron el ejemplar de Sielfeld (1976), el cual fue reasignado, sobre la base de caracteres morfológicos, a *Geotria macrostoma*, especie reconocida como válida y distinta de *G. australis*. Los autores también reexaminaron ejemplares de las cuencas de los ríos Gallegos y Grande, en Tierra del Fuego, concluyendo que todos corresponden igualmente a *G. macrostoma* [@Riva-Rossi2020].
+
+Estos antecedentes ponen en duda la validez taxonómica del registro de *G. australis* reportado por @Norman1937, especialmente considerando que Correa y Boisjoly recolectaron posteriormente otro ejemplar de lamprea en un tributario de B. Inútil en Tierra del Fuego, identificado por ellos y confirmado por Neira como *G. macrostoma*. Aunque no es posible reevaluar el material original de Norman (1937), la evidencia actualmente disponible sugiere que las lampreas presentes en el extremo austral de Patagonia corresponderían a esta última especie.
+
+En consecuencia, la base de datos fue corregida para reflejar el conocimiento taxonómico actual. El registro de Sielfeld (1976), así como todos los registros derivados de éste, fueron interprtetados  como *Geotria macrostoma* y se conservó el registro original ingresado a  este atlas vía el *Adendum* curado por Maryse Boisjoly (siguiente sección). Por su parte, el registro de Norman (1937) ya fue excluido debido a su baja precisión geográfica (de desconoce la cuenca hidrográfica), y ahora más aún, dado las dudas sobre su identificación taxonómica. De este modo, todos los registros digitalizados de lampreas disponibles para la Región de Magallanes y el extremo austral de Argentina corresponden actualmente a *G. macrostoma*.
+
+```{r}
+
+# Exclude M. lapicida will be re-indexed as G. macrostoma
+X.filtered.dedup.revised <-   X.filtered.dedup.revised %>% 
+  filter( !(prim_key %in% c("mma2 | MMA:ICT:0002795",  
+                           "agui | MAguilar.Lit.Review.960")))
 
 ```
 
@@ -5470,8 +5506,7 @@ El *Atlas Ictiogeográfico de la Patagonia Occidental* reunió un total de `r nr
 
 ## Contribución de los distintos conjuntos de datos  
 
-En cuanto al aporte de los distintos conjuntos de datos, el mayor número de ocurrencias fue aportado por el set de datos de SUBPESCA, incluso después de remover más de la mitad de sus registros debido a repeticiones (Figura \ref{fig:freqperdatasetplot}). Este resultado era de esperarse porque SUBPESCA es la entidad nacional reguladora de los recursos hidrobiológicos de Chile, y es quien emite los permisos de pesca de investigación y recibe los resultados de las pescas realizadas bajo este instrumento. El alto número de ocurrencia duplicadas (y excluidas) de SUBPESCA se debe a que los mismos resultados fueron proporcionados por los autores mediante otras vías, muchas de las cuales hemos favorecido en este trabajo por encontrarse más completas o mejor curadas.  
-
+En cuanto al aporte de los distintos conjuntos de datos, el mayor número de ocurrencias fue aportado por el set de datos de SUBPESCA, incluso después de remover más de la mitad de sus registros debido a repeticiones (Figura \ref{fig:freqperdatasetplot}). Este resultado era de esperarse porque SUBPESCA es la entidad nacional reguladora de los recursos hidrobiológicos de Chile, y es quien emite los permisos de pesca de investigación y recibe los resultados de las pescas realizadas bajo este instrumento. Sin embargo, no todos los datos relacionados a permisos de pesca de investigación durante el período 2012-2023 se encontraron es ese conjunto de datos, y la causa principal del alto número de ocurrencias duplicadas (y excluidas) de SUBPESCA se bebió a datos reportados a nivel individual los cuales aquí se colapsaron a un registro por especie por evento de pesca.  
 
 
 ```{r freqperdatasetplot, echo=F, fig.width=6, warning = FALSE, message = FALSE, fig.align = 'center', fig.cap="Distribución de frecuencia de ocurrencias por conjuto de datos, previo (color claro) y posterior (color oscuro) a excluir duplicados programáticamente."}
@@ -5627,7 +5662,7 @@ ggsave("./outputs_global_analyses/assorted_figures/occurrences_map_by_fish_famil
 *Galaxias maculatus* (Jenyns, 1842)  
 *Galaxias platei* Steindachner, 1898   
 
-Un desglose de la familia Galaxiidae, la familia nativa más ampliamente distribuida en la región, reveló una alta heterogeneidad espacial entre especies con segregación norte-sur y este-oeste  (Figura \ref{fig:occgalaxplot}).  
+Un desglose de la familia Galaxiidae, la familia nativa más ampliamente distribuida en la región, reveló una alta heterogeneidad espacial entre especies con segregación norte-sur y este-oeste (Figura \ref{fig:occgalaxplot}).  
 
 ```{r occgalaxplot, echo=F, fig.width=8, fig.height=8, warning = FALSE, message = FALSE, fig.align = 'center', fig.cap="Distribución de ocurrencias de especies de la familia Galaxiidae. Ocurrencias identificadas a nivel de género y familia fueron excluídas."}
 
@@ -5656,16 +5691,22 @@ ggsave("./outputs_global_analyses/assorted_figures/occurrences_map_Galaxiidae.pn
 ```
 
 
-
+\newpage
 ### Atherinopsidae  
-*Odontesthes bonariensis* (Valenciennes, 1835)  
+*Basilichthys microlepidotus* (Jenyns, 1841)  
 *Odontesthes brevianalis* (Günther, 1880)  
 *Odontesthes hatcheri* (Eigenmann, 1909)  
 *Odontesthes mauleanum* (Steindachner, 1896)  
 
 El pejerrey más característico  de la región transandina de la Patagonia austral fue *O. hatcheri*. Hacemos hincapié en transandino porque solo se encontró en cuencas que han sufrido capturas y reversos históricos en la dirección de flujo de sus aguas. Básicamente es una especie nativa de la vertiente atlántica que incursiona ocasionalmente hacia el pacífico vía cuencas transandinas. Por otra parte, en el extremo norte del área de estudio también se registraron especies típicas de la región centro y centro sur de Chile tales como *Basilichthys microlepidotus*, *Odontesthes brevianalis* y *O. maulaenum* (Figura \ref{fig:atherinplot}). Cabe destacar *B. autralis* se consideró sinónimo de *B. microlepidotus*  en este análisis [@velizGeneroBasilichthysTeleostei2012]. Por último, un raro registro de *O. bonariensis* en la cuenca del río Baker fue considerado improbable (ver *Revisión de taxa improbables o erróneos*) [@Rueda2017].  
 
+Por último notar que en el mapa de distribución a nivel de familia (Figura \ref{fig:occfamplot}), se observan ocurrencias de Atherinopsidae en la región de Magallanes. Estas ocurrencias   
  
+```{r}
+
+```
+
+
 
 ```{r atherinplot, echo=F, fig.width=7, fig.height=7, warning = FALSE, message = FALSE, fig.align = 'center', fig.cap="Distribución de ocurrencias de especies de la familia Atherinopsidae. Ocurrencias identificadas a nivel de género y familia fueron excluídas."}
 
@@ -5768,35 +5809,40 @@ El hallazgo de *Cheirodon interruptus* es particular. Se trata de la única ocur
 
 ### Poeciliidae 
 *Gambusia affinis* (Baird & Girard, 1853)  
-Especie invasiva ausente del área de estudio salvo por un registro en el extremo norte.  
+Especie invasiva ausente del área de estudio salvo por un registro en el extremo norte del área de estudio en el río Petrohué, reportado en un estudio de impacto ambiental.  
+
 
 ### Geotriidae  
 *Geotria australis* Gray, 1851  
 *Geotria macrostoma* (Burmeister, 1868)  
 
-La lamprea de bolsa *Geotria australis* tiene una distribución casi panaustral en Chile, Argentina, Australia y Nueva Zelanda, y dentro del área de estudio en la Patagonia se encontró desde la región de Aysén hacia el norte. En este trabajo reportamos además el primer registro de *Geotria macrostoma* en la vertiente pacífica de Tierra del Fuego, basado en un único individuo (Figura \ref{fig:lampreyplot}). Este ejemplar fue colectado por Cristian Correa y Maryse Boisjoly, identificado siguiendo los criterios morfológicos propuestos por @Riva-Rossi2020, y posteriormente confirmado por Francisco Neira, experto en taxonomía de lampreas australes. El registro es relevante porque *G. macrostoma* se considera endémica de Argentina. Actualmente, el voucher se encuentra en la colección de Correa y Boisjoly.
+La lamprea de bolsa *Geotria australis* tiene una distribución casi panaustral en Chile, Argentina, Australia y Nueva Zelanda, y dentro del área de estudio en la Patagonia se encontró desde la región de Aysén hacia el norte. En este trabajo reportamos además dos registros individuales de *Geotria macrostoma* en Chile. Uno corresponde a el hallazgo de @Sieldfeld1976 en el Río San Juan (ver sección *Revisión de taxa improbables o erróneos*) de la península Brunswick, y el otro colectado por Cristian Correa y Maryse Boisjoly en la vertiente occidental de Tierra del Fuego  (Figura \ref{fig:lampreyplot}). Este último ejemplar fue identificado siguiendo los criterios morfológicos propuestos por @Riva-Rossi2020, y posteriormente confirmado por Francisco Neira, experto en taxonomía de lampreas australes. Estos dos registros cuyos vouchers se conservan son relevantes porque *G. macrostoma* suele considerarse endémica de Argentina. Queda por verificar si los hallazgos de *G. macrostoma* en Chile corresponden a eventos fortuitos o si la especie presenta poblaciones autosustentables en cuencas chilenas que drenan hacia el Pacífico. 
 
-Dado que *G. australis* y *G. macrostoma* pueden distinguirse mediante caracteres externos, incluyendo la disposición de sus aletas [@Riva-Rossi2020], recomendamos prestar especial atención a la correcta identificación de ambas especies en futuros registros. Queda por verificar si el hallazgo de *G. macrostoma* en Chile corresponde a un evento fortuito o si la especie presenta poblaciones autosustentables en cuencas que drenan hacia el Pacífico.
+Los antecedentes expuestos aquí sugieren que el rango de distribución de *G. australis* en Chile es más acotado que lo que se pensaba, mientras que el de *G. macrostoma* es mayor. El registro más austral de *G. australis* sería en el río Baker, en tanto *G. macrostoma* sería la única especie documentada con evidencia material en el sur de la Patagionia tanto en cuencas pacíficas como atlánticas (Figura \ref{fig:lampreyplot}).     
+
+Dado que *G. australis* y *G. macrostoma* pueden distinguirse mediante caracteres externos, incluyendo la disposición de sus aletas [@Riva-Rossi2020], recomendamos prestar especial atención a la correcta identificación de ambas especies en futuros registros. 
 
 ### Mordaciidae  
 *Mordacia lapicida* (Gray, 1851)  
 
-La lamprea chilena *Mordacia lapicida* se distribuye desde el río Aconcagua (32º55’S) hasta la península de Brunswick, en Punta Arenas (53º39’S) [@Neira1984]. Aunque dentro del área de estudio su distribución potencial podría solaparse ampliamente con la de *Geotria spp*, los registros disponibles se concentran en el norte, principalmente en Chiloé y Chiloé continental (Figura \ref{fig:lampreyplot}).
+Si bien @Neira1984 sostiene que la lamprea chilena *Mordacia lapicida* se distribuye desde el río Aconcagua (32º55’S) hasta la península de Brunswick cerca de Punta Arenas (53º39’S), esta última localidad  basada en la lamprea reportada por @Sieldfeld1976 no debe ser considerada por las razones expuestas en la sección *Revisión de taxa improbables o erróneos*.  En breve, el espécimen correspondería a *G. macrostoma* y no a *Mordacia lapicida* ni *G. australis* [@Riva-Rossi2020]. Por lo tanto, hecha esta modificación, el límite sur de la distribución conocida de *M. lapicida* es río Palena (44°S).  Dentro del área de estudio su distribución potencial parece solaparse ampliamente con la de *G. australis*, y los registros disponibles se concentran en el norte, principalmente en Chiloé y Chiloé continental (Figura \ref{fig:lampreyplot}).
 
 Cabe destacar que la mayoría de estos registros, muchos de ellos provenientes de estudios de impacto ambiental, no indican explícitamente el criterio de identificación utilizado ni cuentan con evidencia de respaldo, como secuencias genéticas, fotografías, especímenes de referencia (*vouchers*) o publicaciones revisadas por pares que permitan corroborar su determinación taxonómica. Aunque *M. lapicida*, *G. australis* y *G. macrostoma* pueden distinguirse mediante caracteres diagnósticos externos, incluyendo patrones dentarios y disposición de aletas, las tres especies pueden resultar semejantes para observadores no especializados. Por ello, parece prematuro interpretar patrones aparentes de distribución sin contar con registros de mayor calidad, trazabilidad y respaldo taxonómico.
 
 Esta incertidumbre pone de manifiesto la necesidad de fortalecer la documentación de las lampreas en la región mediante muestreos enfocados, registros verificables, idealmente respaldados por material de referencia, imágenes diagnósticas o datos moleculares. Esto permitiría evaluar con mayor precisión su distribución real y mejorar la confiabilidad de los antecedentes utilizados en estudios biogeográficos y de conservación.
 
-```{r lampreyplot, echo=F, fig.width=4, fig.height=4, warning = FALSE, message = FALSE, fig.align = 'center', fig.cap="Distribución de ocurrencias de especies de lampreas (orden Petromyzontiformes)."}
+```{r lampreyplot, echo=F, fig.width=6, fig.height=6, warning = FALSE, message = FALSE, fig.align = 'center', fig.cap="Distribución de ocurrencias de especies de lampreas (orden Petromyzontiformes)."}
 
 taxa <- species.list %>% filter(order == "Petromyzontiformes") %>%
   pull(canonicalName)
 
 data <- X.filtered.dedup.revised %>% filter(canonicalName %in% taxa) %>% mutate(canonicalName = factor(canonicalName, levels = taxa))
 
-map + geom_point(data = data, aes(x = decimalLongitude, y = decimalLatitude, , color=canonicalName), size = 2, alpha=0.5)+
+map + geom_point(data = data, aes(x = decimalLongitude, y = decimalLatitude), 
+                 size = 2, alpha=0.5, color="red")+
   geom_polygon(data = study.area_coords, 
     aes(x = lon, y = lat), color="black", fill=NA, alpha = 0.5, size=0.15)+
+  facet_wrap(~canonicalName, ncol = 3)+
   scale_x_continuous(breaks = scales::breaks_pretty(n = 3))+
   theme(strip.text = element_text(size = 8))
 
@@ -5813,17 +5859,17 @@ Es notable la existencia de un único registro de *Olivaichthys viedmensis* en l
 
 Procesos similares de reorganización postglacial del drenaje han afectado otras cuencas patagónicas y podrían explicar distribuciones disyuntas y aparentemente aisladas en Chile, como ocurre con *Odontesthes hatcheri* y *Percichthys trucha*.  
 
-Del género *Diplomystes* existe un único registro proveniente de un estudio de impacto ambiental en la cuenca del río Palena. Actualmente, las especies de este género se distribuyen en cuencas de drenaje Pacífico desde la cuenca del río Valdivia hacia el norte [@arratiaUnderstandingMorphologicalVariability2017]. Este registro aislado se encuentra considerablemente fuera del área de distribución conocida para el género, y fue imposible confirmar su correcta identificación por falta de respaldo material. Si efectivamente se trató de un Diplomystidae, sería más probable que se trate de *Olivaichthys viedmensis*.     
+Del género *Diplomystes* existe un único registro proveniente de un estudio de impacto ambiental en la cuenca del río Palena. Actualmente, las especies de este género se distribuyen en cuencas de drenaje Pacífico desde la cuenca del río Valdivia hacia el norte [@arratiaUnderstandingMorphologicalVariability2017]. Este registro aislado se encuentra considerablemente fuera del área de distribución conocida para el género, y fue imposible confirmar su correcta identificación por falta de respaldo material. Si efectivamente se trató de un Diplomystidae, sería más probable que se trate de *Olivaichthys viedmensis*. Este registro no se muestra en la Figura \ref{fig:catfishplot} pero se aprecia en la Figura \ref{fig:occfamplot} a nivel de familia.
 
 ### Trichomycteridae  
-*Hatcheria macraei (Girard, 1855)*
+*Hatcheria macraei* (Girard, 1855)  
 *Trichomycterus areolatus* Valenciennes, 1846  
 
 Dentro del área de estudio, la familia de bagrecitos Trichomycteridae tiene una amplia distribución desde la región de Aysén (*c.* 48°S) hacia el norte (la Figura \ref{fig:catfishplot} muestra la distribución de Siluriformes, incluyendo Trichomycteridae y Diplomystidae]). Las dos especies de Trichomycteridae presentaron distribuciones complementarias:  *Trichomycterus areolatus*, bagrecito común en el centro y centro-sur de Chile está presente en el extremo norte del área de estudio en la isla de Chiloé, y en el río Petrohé en el continente, y zonas aledañas. *Hatcheria macraei*, en cambio, posee una clara afinidad andina. Se registró desde la cuenca del río Puelo (41.4°S) hasta la cuenca del río Baker (47.8°S), siempre en cuencas andinas y transandinas.  Este resultado es consistente con la hipótesis de colonización histórica desde Argentina donde posee una amplia distribución,  mediada por capturas fluviales hacia finales del Pleistoceno [@unmackPhylogeographyCatfishHatcheria2012], parecido a lo discutido para otros taxa.
 
 
 
-```{r catfishplot, echo=F, fig.width=4, fig.height=4, warning = FALSE, message = FALSE, fig.align = 'center', fig.cap="Distribución de ocurrencias de especies de bagres (orden Siluriformes)."}
+```{r catfishplot, echo=F, fig.width=6, fig.height=6, warning = FALSE, message = FALSE, fig.align = 'center', fig.cap="Distribución de ocurrencias de especies de bagres (orden Siluriformes)."}
 
 taxa <- species.list %>% filter(order == "Siluriformes") %>%
   pull(canonicalName)
@@ -5835,11 +5881,12 @@ data <- X.filtered.dedup.revised %>%
 
 map + 
   geom_point(data = data, 
-             aes(x = decimalLongitude, y = decimalLatitude, color = canonicalName), 
-             size = 2, alpha = 0.5) +
+             aes(x = decimalLongitude, y = decimalLatitude), 
+             size = 2, alpha = 0.5, color = "red") +
   geom_polygon(data = study.area_coords, 
                aes(x = lon, y = lat), 
                color = "black", fill = NA, alpha = 0.5, size = 0.15) +
+  facet_wrap(~canonicalName, ncol = 5)+
   scale_x_continuous(breaks = scales::breaks_pretty(n = 3)) +
   theme(strip.text = element_text(size = 8))
 
@@ -5847,6 +5894,11 @@ ggsave("./outputs_global_analyses/assorted_figures/occurrences_map_Siluriformes.
        plot = last_plot(), width = 8, height = 11, dpi = 300)
 
 ```
+
+```{r}
+X.filtered.dedup.revised %>% filter(canonicalName == "Diplomystes") %>% select(order)
+```
+
 
 
 ### Mugilidae  
